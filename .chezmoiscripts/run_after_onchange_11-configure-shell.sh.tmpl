@@ -1,0 +1,41 @@
+#!/bin/sh
+
+# ---------------------------------------------------------------------------- #
+#                          Unofficial Bash Strict Mode                         #
+# ---------------------------------------------------------------------------- #
+# See http://redsymbol.net/articles/unofficial-bash-strict-mode/
+# -e: exit on error
+# -u: exit on unset variables
+# -o pipefail: prevents errors in a pipeline from being masked 
+set -euo pipefail
+# IFS (Internal Field Separator): controls what Bash calls word splitting.
+# When set to a string, each character in the string is considered by Bash to separate words
+IFS=$'\n\t'
+
+# ---------------------------------------------------------------------------- #
+#                               Zsh configuration                              #
+# ---------------------------------------------------------------------------- #
+
+# --------------------------------- Oh-My-Zsh -------------------------------- #
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+# --------------------------- Prompt: Powerlevel10k -------------------------- #
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+
+# ---------------------------------- Plugins --------------------------------- #
+git clone https://github.com/Pilaton/OhMyZsh-full-autoupdate.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/ohmyzsh-full-autoupdate
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+
+
+# Install Antidote (https://getantidote.github.io/)
+git clone --depth=1 https://github.com/mattmc3/antidote.git ${ZDOTDIR:-~}/.antidote
+
+
+# Install FZF's useful key bindings and fuzzy completion
+{{ if eq .chezmoi.os "darwin" -}}
+    $(brew --prefix)/opt/fzf/install
+{{ else if eq .chezmoi.os "linux" -}}
+    # TODO: install fzf on linux
+{{ end -}}

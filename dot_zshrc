@@ -64,7 +64,19 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Standard plugins can be found in $ZSH/plugins/
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git vi-mode zsh-history-substring-search zsh-syntax-highlighting)
+plugins=(
+  git
+  ohmyzsh-full-autoupdate
+  ssh-agent
+  thefuck
+  vi-mode
+  zsh-autosuggestions
+  zsh-history-substring-search
+  zsh-syntax-highlighting
+)
+
+# Add completions to Oh-My-Zsh: see https://github.com/zsh-users/zsh-completions/issues/603
+fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
 
 source $ZSH/oh-my-zsh.sh
 
@@ -76,8 +88,8 @@ source $ZSH/oh-my-zsh.sh
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
-#
-alias vi=vim
+alias vi=nvim
+alias vim=nvim
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -87,5 +99,5 @@ path=(/opt/homebrew/bin $path)
 # Set PATH variable for local binaries
 path=(~/.local/bin $path)
 # Set default editor to VIM
-export EDITOR=vim
+export EDITOR=nvim
 export VISUAL="$EDITOR"

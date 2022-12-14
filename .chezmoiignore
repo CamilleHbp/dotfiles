@@ -1,0 +1,9 @@
+install.sh
+README.md
+vscode_settings.json
+
+{{ if ne .chezmoi.os "darwin" }}
+    .chezmoiscripts/darwin/**
+    private_dot_config/iterm2
+    private_Library
+{{ end }}
