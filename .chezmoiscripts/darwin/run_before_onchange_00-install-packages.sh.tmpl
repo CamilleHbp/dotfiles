@@ -21,7 +21,9 @@ SUDO_USER=$(whoami)
 #                                     XCode                                    #
 # ---------------------------------------------------------------------------- #
 # Install XCode
-xcode-select --install
+if ! chezmoi="$(command -v chezmoi)"; then
+  xcode-select --install
+fi
 # Update XCode CLI tools
 PROD=$(softwareupdate -l | grep "\*.*Command Line" | head -n 1 | awk -F"*" '{print $2}' | sed -e 's/^ *//' | tr -d '\n') || true
 
@@ -45,17 +47,17 @@ brew upgrade && brew upgrade && brew cleanup
 # ------------------------------- Package list ------------------------------- #
 {{ $brews := list
   "docker"
+  "fzf"
   "git"
   "python"
+  "thefuck"
   "zsh"
 -}}
 
 {{ $casks := list
-  "fzf"
   "iterm2"
   "nextcloud"
   "temurin"
-  "thefuck"
   "visual-studio-code"
   "vlc"
 -}}
@@ -66,6 +68,7 @@ brew upgrade && brew upgrade && brew cleanup
     "nvim"
   ) -}}
 
+  # TODO: fix jDownloader's install
   {{ $casks = concat $casks (list
     "1password/tap/1password-cli"
     "alfred"
@@ -73,10 +76,8 @@ brew upgrade && brew upgrade && brew cleanup
     "brave-browser"
     "calibre"
     "c0re100-qbittorrent"
-    "drobox"
-    "fzf"
+    "dropbox"
     "homebrew/cask-drivers/wacom-tablet"
-    "jdownloader"
     "krita"
     "macfuse"
     "onyx"

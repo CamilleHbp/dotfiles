@@ -29,7 +29,7 @@ defaults write com.apple.dock show-recents -bool false
 #                                    iTerm2                                    #
 # ---------------------------------------------------------------------------- #
 # Load iTerm2 settings from the dotfiles folder
-defaults write com.googlecode.iterm2 "PrefsCustomFolder" -string "${~}./config/iterm2"
+defaults write com.googlecode.iterm2 "PrefsCustomFolder" -string "~/.config/iterm2"
 defaults write com.googlecode.iterm2 "LoadPrefsFromCustomFolder" -bool true
 
 # ---------------------------------------------------------------------------- #

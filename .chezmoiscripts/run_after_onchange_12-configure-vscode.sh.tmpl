@@ -12,11 +12,6 @@ set -euo pipefail
 # When set to a string, each character in the string is considered by Bash to separate words
 IFS=$'\n\t'
 
-# --------------- Remove press and hold keys conflict on MacOS --------------- #
-{{ if eq .chezmoi.os "darwin" -}}
-    defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
-{{ end -}}
-
 # ---------------------------------------------------------------------------- #
 #                           Install VSCode extensions                          #
 # ---------------------------------------------------------------------------- #
@@ -28,7 +23,6 @@ IFS=$'\n\t'
         "bungcip.better-toml"
         "christian-kohler.npm-intellisense"
         "christian-kohler.path-intellisense"
-        "cssho.vscode-svgviewer"
         "davidanson.vscode-markdownlint"
         "dbaeumer.vscode-eslint"
         "dsznajder.es7-react-js-snippets"
@@ -38,17 +32,13 @@ IFS=$'\n\t'
         "foxundermoon.shell-format"
         "Gruntfuggly.todo-tree"
         "hediet.vscode-drawio"
+        "jock.svg"
         "meganrogge.template-string-converter"
         "mgmcdermott.vscode-language-babel"
         "mikeburgh.xml-format"
         "mikestead.dotenv"
-        "ms-azuretools.vscode-docker"
-        "ms-python.isort"
         "ms-python.python"
-        "ms-vscode-remote.remote-containers"
-        "ms-vscode-remote.remote-ssh-edit"
         "ms-vscode-remote.remote-ssh"
-        "ms-vscode-remote.vscode-remote-extensionpack"
         "ms-vscode.remote-explorer"
         "ms-vsliveshare.vsliveshare"
         "oouo-diogo-perdigao.docthis"

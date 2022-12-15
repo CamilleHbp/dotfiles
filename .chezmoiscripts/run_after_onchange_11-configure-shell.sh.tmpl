@@ -15,23 +15,16 @@ IFS=$'\n\t'
 # ---------------------------------------------------------------------------- #
 #                               Zsh configuration                              #
 # ---------------------------------------------------------------------------- #
-
-# --------------------------------- Oh-My-Zsh -------------------------------- #
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-
-# --------------------------- Prompt: Powerlevel10k -------------------------- #
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
-
-# ---------------------------------- Plugins --------------------------------- #
-git clone https://github.com/Pilaton/OhMyZsh-full-autoupdate.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/ohmyzsh-full-autoupdate
-git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-
-
-# Install Antidote (https://getantidote.github.io/)
-git clone --depth=1 https://github.com/mattmc3/antidote.git ${ZDOTDIR:-~}/.antidote
-
+# Set Homebrew's zsh as the default. Homebrew's folder is different depending on the architecture (M1 vs Intel)
+# TODO: find a way to prompt to enter a custom folder since promptString is only available in .chezmoi.toml.tmpl
+# $email := promptString "Input your custom homebrew bin folder or leave empty to use the default bin folder"
+# if $email | trim
+    # sudo chsh -s $email `whoami`
+{{ if eq .chezmoi.arch "arm64" -}}
+    sudo chsh -s /opt/homebrew/bin/zsh `whoami`
+{{ else -}}
+    sudo chsh -s /usr/local/bin/zsh `whoami`
+{{ end -}}
 
 # Install FZF's useful key bindings and fuzzy completion
 {{ if eq .chezmoi.os "darwin" -}}
