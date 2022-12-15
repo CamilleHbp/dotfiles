@@ -24,6 +24,9 @@
 {{- $personal := promptBool "Is this a personal computer? (y/n)" false -}}
 {{- $email := promptString "Git email address for the author/committer" }}
 {{- $name := promptString "Git username for the author/committer" }}
+{{- $op_email := promptString "Email address used with 1password" }}
+{{- $op_domain := promptString "Domain used with 1password" }}
+{{- $op_secret := promptString "Your 1password secret (NOT password)" }}
 
 [data]
     email = "{{ $email }}"
@@ -31,4 +34,7 @@
     headless = {{ $headless }}
     hostname = {{ $hostname | quote }}
     name = "{{ $name }}"
+    op_domain = "{{ $op_domain }}"
+    op_email = "{{ $op_email }}"
+    op_secret = "{{ $op_secret }}"
     personal = {{ $personal }}

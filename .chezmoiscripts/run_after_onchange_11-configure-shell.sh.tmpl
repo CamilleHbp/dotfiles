@@ -28,7 +28,7 @@ IFS=$'\n\t'
 
 # Install FZF's useful key bindings and fuzzy completion
 {{ if eq .chezmoi.os "darwin" -}}
-    $(brew --prefix)/opt/fzf/install
+    $(brew --prefix)/opt/fzf/install --key-bindings --completion --no-update-rc --no-bash --no-fish
 {{ else if eq .chezmoi.os "linux" -}}
     # TODO: install fzf on linux
 {{ end -}}
