@@ -1,15 +1,8 @@
 [".oh-my-zsh"]
     type = "archive"
     url = "https://github.com/ohmyzsh/ohmyzsh/archive/master.tar.gz"
-    exact = true
     stripComponents = 1
     refreshPeriod = "168h"
-[".oh-my-zsh/custom/plugins/ohmyzsh-full-autoupdate"]
-    type = "git-repo"
-    url = "https://github.com/Pilaton/OhMyZsh-full-autoupdate.git"
-    refreshPeriod = "168h"
-    [".oh-my-zsh/custom/plugins/ohmyzsh-full-autoupdate".clone]
-        args = ["--depth=1"]
 [".oh-my-zsh/custom/plugins/zsh-autosuggestions"]
     type = "git-repo"
     url = "https://github.com/zsh-users/zsh-autosuggestions.git"
@@ -21,6 +14,12 @@
     url = "https://github.com/zsh-users/zsh-completions.git"
     refreshPeriod = "168h"
     [".oh-my-zsh/custom/plugins/zsh-completions".clone]
+        args = ["--depth=1"]
+[".oh-my-zsh/custom/plugins/zsh-history-substring-search"]
+    type = "git-repo"
+    url = "https://github.com/zsh-users/zsh-history-substring-search.git"
+    refreshPeriod = "168h"
+    [".oh-my-zsh/custom/plugins/zsh-history-substring-search".clone]
         args = ["--depth=1"]
 [".oh-my-zsh/custom/plugins/zsh-syntax-highlighting"]
     type = "git-repo"
