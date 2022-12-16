@@ -22,19 +22,28 @@
 {{- end -}}
 
 {{- $personal := promptBool "Is this a personal computer? (y/n)" false -}}
-{{- $email := promptString "Git email address for the author/committer" }}
-{{- $name := promptString "Git username for the author/committer" }}
+{{- $git_email := promptString "Git email address for the author/committer" }}
+{{- $git_name := promptString "Git username for the author/committer" }}
 {{- $op_email := promptString "Email address used with 1password" }}
 {{- $op_domain := promptString "Domain used with 1password" }}
 {{- $op_secret := promptString "Your 1password secret (NOT password)" }}
 
 [data]
-    email = "{{ $email }}"
     ephemeral = {{ $ephemeral }}
+    git_email = {{ $git_email | quote }}
+    git_name = {{ $git_name | quote }}
     headless = {{ $headless }}
     hostname = {{ $hostname | quote }}
-    name = "{{ $name }}"
-    op_domain = "{{ $op_domain }}"
-    op_email = "{{ $op_email }}"
-    op_secret = "{{ $op_secret }}"
+    op_domain = {{ $op_domain | quote }}
+    op_email = {{ $op_email | quote }}
+    op_secret = {{ $op_secret | quote }}
     personal = {{ $personal }}
+
+[diff]
+    exclude = ["scripts"]
+    pager = "diff-so-fancy"
+
+[[textconv]]
+    pattern = "**/*.plist"
+    command = "plutil"
+    args = ["-convert", "xml1", "-o", "-", "-"]
