@@ -1,0 +1,1 @@
+[".ca", [".cab file", ".catch", ".capitalize python", ".call js", ".caf", ".cat.codes pandas", ".ca", ".ca domain", ".calculator", ".ca meaning"], [], {"google:suggestsubtypes": [[512], [512], [512], [512], [512], [512], [512], [512], [512], [512]], "google:suggesttype": ["QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY"]}]

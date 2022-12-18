@@ -1,0 +1,1 @@
+["F", ["facebook", "fnac", "free mobile", "french to english", "free", "flixbus", "france", "f1", "figma", "food near me"], [], {"google:suggestsubtypes": [[512], [512], [512], [512], [512], [512], [512], [512], [512], [512]], "google:suggesttype": ["QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY"]}]

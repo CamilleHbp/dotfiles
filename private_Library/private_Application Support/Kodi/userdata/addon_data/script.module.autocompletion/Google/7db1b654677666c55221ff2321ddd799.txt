@@ -1,0 +1,1 @@
+["ActivateWindow(Videos,\"plugin://plugin.v", ["activatewindow(videos plugin //plugin.video"], [], {"google:suggestsubtypes": [[160, 10]], "google:suggesttype": ["TAIL"]}]

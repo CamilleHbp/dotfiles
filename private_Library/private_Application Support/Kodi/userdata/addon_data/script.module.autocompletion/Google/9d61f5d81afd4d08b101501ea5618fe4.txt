@@ -1,0 +1,1 @@
+["bl", ["black friday 2022", "black adam", "black panther", "blablacar", "black panther 2", "black market", "blender", "bleach", "blake lively", "blonde"], [], {"google:suggestsubtypes": [[512], [512], [512], [512], [512], [512], [512], [512], [512], [512]], "google:suggesttype": ["QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY"]}]

@@ -1,0 +1,1 @@
+["K", ["kayak", "kanye west", "kahoot", "kiabi", "kim kardashian", "kfc", "kherson", "kylie jenner", "kate middleton", "kooora"], [], {"google:suggestsubtypes": [[512], [512], [512], [512], [512], [512], [512], [512], [512], [512]], "google:suggesttype": ["QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY"]}]

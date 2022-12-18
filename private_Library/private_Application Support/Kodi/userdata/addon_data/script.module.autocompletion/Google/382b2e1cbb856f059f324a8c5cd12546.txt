@@ -1,0 +1,1 @@
+["c", ["carrefour", "canva", "cricbuzz", "cricinfo", "champions league", "cricket live", "cpf", "calculator", "cinema", "cristiano ronaldo"], [], {"google:suggestsubtypes": [[512], [512], [512], [512], [512], [512], [512], [512], [512], [512]], "google:suggesttype": ["QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY"]}]

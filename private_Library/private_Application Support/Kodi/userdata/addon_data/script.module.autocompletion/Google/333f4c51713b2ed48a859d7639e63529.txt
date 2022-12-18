@@ -1,0 +1,1 @@
+["ba", ["basic fit", "backmarket", "bangladesh", "barcelona", "balenciaga", "bangladesh cricket", "barca", "bangla to english", "bash", "bakery near me"], [], {"google:suggestsubtypes": [[512], [512], [512], [512], [512], [512], [512], [512], [512], [512]], "google:suggesttype": ["QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY"]}]

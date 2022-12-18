@@ -1,0 +1,1 @@
+["FUC", ["fuchsia", "fucidine", "fuchsia color", "fucidin cream", "fuchs", "fucidin", "fuchs sport", "fucidine pommade", "fucithalmic", "fucicort"], [], {"google:suggestsubtypes": [[512], [512], [512], [512], [512], [512], [512], [512], [512], [512]], "google:suggesttype": ["QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY"]}]

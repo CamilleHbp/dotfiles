@@ -1,0 +1,1 @@
+["asda", ["asda", "asda george", "asdasd", "asda groceries", "asda mobile", "asda home", "asda near me", "asda paris", "asda air fryer", "asda france"], [], {"google:suggestsubtypes": [[512], [512], [512], [512], [512], [512], [512, 457], [402], [512], [512]], "google:suggesttype": ["QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY"]}]

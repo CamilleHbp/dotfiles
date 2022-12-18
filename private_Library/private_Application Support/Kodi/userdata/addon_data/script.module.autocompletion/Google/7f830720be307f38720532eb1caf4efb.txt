@@ -1,0 +1,1 @@
+["ActivateWindow(Videos,\"plugin://plugin.video.themoviedb.helper/?info=", [], [], {"google:suggesttype": []}]

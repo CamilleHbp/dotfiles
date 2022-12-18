@@ -1,0 +1,1 @@
+["ca", ["carrefour", "caf", "canva", "calculatrice", "calculator", "castorama", "carrefour near me", "cartier", "cafe near me", "carhartt"], [], {"google:suggestsubtypes": [[512], [512], [512], [512], [512], [512], [512], [512], [512], [512]], "google:suggesttype": ["QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY"]}]

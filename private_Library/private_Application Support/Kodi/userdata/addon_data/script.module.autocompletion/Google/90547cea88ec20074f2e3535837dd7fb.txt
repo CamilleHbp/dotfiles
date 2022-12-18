@@ -1,0 +1,1 @@
+[".c", [".com", ".co", ".csv", ".ch", ".com meaning", ".cc", ".com ou .fr", ".csv file", ".co.uk", ".co domain"], [], {"google:suggestsubtypes": [[512], [512], [512], [512], [512], [512], [512], [512], [512], [512]], "google:suggesttype": ["QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY"]}]

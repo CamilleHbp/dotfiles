@@ -1,0 +1,1 @@
+["as", ["asos", "assurance maladie", "asia cup 2022", "asics", "asos france", "asterix", "asia cup 2022 schedule", "asana", "asus", "ashwagandha"], [], {"google:suggestsubtypes": [[512], [512], [512], [512], [512], [512], [512], [512], [512], [512]], "google:suggesttype": ["QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY"]}]
