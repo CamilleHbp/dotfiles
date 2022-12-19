@@ -95,7 +95,7 @@
     <setting id="imdb_lists.sort_direction" default="true">0</setting>
     <setting id="provider.external">true</setting>
     <setting id="open_cocoscrapers" default="true" />
-    <setting id="rd.token">6W7SVN45OSIEDCSFULR5KBOU6MJTMN726HYZ5OUS6VZMJR2YMXKQ</setting>
+    <setting id="rd.token">VFR7V2YHP2KPRDL2WP2VNHCU64S4MATE7RNM3YRCQNJM4CBBMT4Q</setting>
     <setting id="rd.enabled">true</setting>
     <setting id="rd.account_id">CamilleBC</setting>
     <setting id="open_rd_authenticate" default="true" />

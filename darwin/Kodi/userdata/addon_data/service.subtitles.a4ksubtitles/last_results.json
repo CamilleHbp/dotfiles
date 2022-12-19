@@ -1,21 +1,21 @@
 {
-  "hash": "7688ecb636b28199b2fb4e071872e880405a172f19577dd363cbdc915d92e8eb",
-  "timestamp": 1671191613.7660549,
+  "hash": "650c33dc7b5695700db9c982c557dc3551e5be40d902a575d25575e2568d6db4",
+  "timestamp": 1671456395.580689,
   "results": [
     {
       "service_name": "bsplayer",
       "service": "BSPlayer",
       "lang": "English",
-      "name": "Blackadder - S03E05 - Amy and Amiability.sub",
+      "name": "Blackadder - S03E06 - Duel and Duality.srt",
       "rating": 2,
       "lang_code": "en",
       "sync": "true",
       "impaired": "false",
       "color": "gold",
       "action_args": {
-        "url": "http://download.bsplayer-subtitles.com/download/file/6203813/dd6f94a64ee9ea23997567f857e1cd209",
+        "url": "http://download.bsplayer-subtitles.com/download/file/768501/d39d2e592dd8e0a78cf946226f6cbd405",
         "lang": "English",
-        "filename": "Blackadder S03E05 Amy and Amiability-eng.sub",
+        "filename": "Blackadder - S03E06 - Duel and Duality [digitaldistractions].srt",
         "gzip": true
       }
     },
@@ -23,16 +23,16 @@
       "service_name": "bsplayer",
       "service": "BSPlayer",
       "lang": "English",
-      "name": "Blackadder - S03E05 - Amy and Amiability.sub",
+      "name": "Blackadder - S03E06 - Duel and Duality.sub",
       "rating": 2,
       "lang_code": "en",
       "sync": "true",
       "impaired": "false",
       "color": "gold",
       "action_args": {
-        "url": "http://download.bsplayer-subtitles.com/download/file/3531504/dd6f94a64ee9ea23997567f857e1cd209",
+        "url": "http://download.bsplayer-subtitles.com/download/file/10368037/d39d2e592dd8e0a78cf946226f6cbd405",
         "lang": "English",
-        "filename": "Blackadder - S03E05 - Amy and Amiability-eng.sub",
+        "filename": "Blackadder - 3.06 - Duel and Duality (EN).sub",
         "gzip": true
       }
     },
@@ -40,16 +40,16 @@
       "service_name": "bsplayer",
       "service": "BSPlayer",
       "lang": "English",
-      "name": "Blackadder - S03E05 - Amy and Amiability.srt",
-      "rating": 1,
+      "name": "Blackadder - S03E06 - Duel and Duality.sub",
+      "rating": 2,
       "lang_code": "en",
       "sync": "true",
       "impaired": "false",
       "color": "gold",
       "action_args": {
-        "url": "http://download.bsplayer-subtitles.com/download/file/36398072/dd6f94a64ee9ea23997567f857e1cd209",
+        "url": "http://download.bsplayer-subtitles.com/download/file/3102716/d39d2e592dd8e0a78cf946226f6cbd405",
         "lang": "English",
-        "filename": "Blackadder - S03E05 - Amy and Amiability.en.srt",
+        "filename": "Blackadder - S03E06 - Duel and Duality.ENG.sub",
         "gzip": true
       }
     },
@@ -57,16 +57,33 @@
       "service_name": "bsplayer",
       "service": "BSPlayer",
       "lang": "English",
-      "name": "Blackadder - S03E05 - Amy and Amiability.srt",
+      "name": "Blackadder - S03E06 - Duel and Duality.sub",
+      "rating": 2,
+      "lang_code": "en",
+      "sync": "true",
+      "impaired": "false",
+      "color": "gold",
+      "action_args": {
+        "url": "http://download.bsplayer-subtitles.com/download/file/2042658/d39d2e592dd8e0a78cf946226f6cbd405",
+        "lang": "English",
+        "filename": "Black Adder - 3x06 - Duel And Duality.EN.sub",
+        "gzip": true
+      }
+    },
+    {
+      "service_name": "bsplayer",
+      "service": "BSPlayer",
+      "lang": "English",
+      "name": "Blackadder - S03E06 - Duel and Duality.srt",
       "rating": 0,
       "lang_code": "en",
       "sync": "true",
       "impaired": "false",
       "color": "gold",
       "action_args": {
-        "url": "http://download.bsplayer-subtitles.com/download/file/15060600/dd6f94a64ee9ea23997567f857e1cd209",
+        "url": "http://download.bsplayer-subtitles.com/download/file/28697608/d39d2e592dd8e0a78cf946226f6cbd405",
         "lang": "English",
-        "filename": "blackadder - s02e03 - potato [digitaldistractions].srt",
+        "filename": "Blackadder - S03E06 - Duel and Duality-eng.srt",
         "gzip": true
       }
     },
@@ -74,16 +91,16 @@
       "service_name": "bsplayer",
       "service": "BSPlayer",
       "lang": "English",
-      "name": "Blackadder - S03E05 - Amy and Amiability.sub",
+      "name": "Blackadder - S03E06 - Duel and Duality.srt",
       "rating": 0,
       "lang_code": "en",
       "sync": "true",
       "impaired": "false",
       "color": "gold",
       "action_args": {
-        "url": "http://download.bsplayer-subtitles.com/download/file/15724004/dd6f94a64ee9ea23997567f857e1cd209",
+        "url": "http://download.bsplayer-subtitles.com/download/file/31603020/d39d2e592dd8e0a78cf946226f6cbd405",
         "lang": "English",
-        "filename": "Blackadder - S03E05 - Amy and Amiability-eng(2).sub",
+        "filename": "Blackadder - S03E06 - Duel and Duality-eng.srt",
         "gzip": true
       }
     },
@@ -91,16 +108,16 @@
       "service_name": "bsplayer",
       "service": "BSPlayer",
       "lang": "English",
-      "name": "Blackadder - S03E05 - Amy and Amiability.sub",
+      "name": "Blackadder - S03E06 - Duel and Duality.srt",
       "rating": 0,
       "lang_code": "en",
       "sync": "true",
       "impaired": "false",
       "color": "gold",
       "action_args": {
-        "url": "http://download.bsplayer-subtitles.com/download/file/17551478/dd6f94a64ee9ea23997567f857e1cd209",
+        "url": "http://download.bsplayer-subtitles.com/download/file/36400150/d39d2e592dd8e0a78cf946226f6cbd405",
         "lang": "English",
-        "filename": "Blackadder - S03E05 - Amy and Amiability_en.sub",
+        "filename": "Blackadder - S03E06 - Duel and Duality.en.srt",
         "gzip": true
       }
     },
@@ -108,16 +125,16 @@
       "service_name": "bsplayer",
       "service": "BSPlayer",
       "lang": "English",
-      "name": "Blackadder - S03E05 - Amy and Amiability.sub",
+      "name": "Blackadder - S03E06 - Duel and Duality.srt",
       "rating": 0,
       "lang_code": "en",
       "sync": "true",
       "impaired": "false",
       "color": "gold",
       "action_args": {
-        "url": "http://download.bsplayer-subtitles.com/download/file/21852915/dd6f94a64ee9ea23997567f857e1cd209",
+        "url": "http://download.bsplayer-subtitles.com/download/file/37484220/d39d2e592dd8e0a78cf946226f6cbd405",
         "lang": "English",
-        "filename": "Blackadder - S03E05 - Amy and Amiability-eng(1).sub",
+        "filename": "Blackadder - S03E06 - Duel and Duality-eng.srt",
         "gzip": true
       }
     },
@@ -125,16 +142,16 @@
       "service_name": "bsplayer",
       "service": "BSPlayer",
       "lang": "English",
-      "name": "Blackadder - S03E05 - Amy and Amiability.srt",
+      "name": "Blackadder - S03E06 - Duel and Duality.srt",
       "rating": 0,
       "lang_code": "en",
       "sync": "true",
       "impaired": "false",
       "color": "gold",
       "action_args": {
-        "url": "http://download.bsplayer-subtitles.com/download/file/767478/dd6f94a64ee9ea23997567f857e1cd209",
+        "url": "http://download.bsplayer-subtitles.com/download/file/38633391/d39d2e592dd8e0a78cf946226f6cbd405",
         "lang": "English",
-        "filename": "Blackadder - S03E05 - Amy and Amiability [digitaldistractions].srt",
+        "filename": "Blackadder - S03E06 - Duel and Duality-eng.srt",
         "gzip": true
       }
     },
@@ -142,16 +159,16 @@
       "service_name": "bsplayer",
       "service": "BSPlayer",
       "lang": "English",
-      "name": "Blackadder - S03E05 - Amy and Amiability.sub",
+      "name": "Blackadder - S03E06 - Duel and Duality.srt",
       "rating": 0,
       "lang_code": "en",
       "sync": "true",
       "impaired": "false",
       "color": "gold",
       "action_args": {
-        "url": "http://download.bsplayer-subtitles.com/download/file/45989169/dd6f94a64ee9ea23997567f857e1cd209",
+        "url": "http://download.bsplayer-subtitles.com/download/file/38988594/d39d2e592dd8e0a78cf946226f6cbd405",
         "lang": "English",
-        "filename": "Blackadder - S03E05 - Amy and Amiability-eng.sub",
+        "filename": "Blackadder - S03E06 - Duel and Duality-eng.srt",
         "gzip": true
       }
     },
@@ -159,16 +176,16 @@
       "service_name": "bsplayer",
       "service": "BSPlayer",
       "lang": "English",
-      "name": "Blackadder - S03E05 - Amy and Amiability.sub",
+      "name": "Blackadder - S03E06 - Duel and Duality.srt",
       "rating": 0,
       "lang_code": "en",
       "sync": "true",
       "impaired": "false",
       "color": "gold",
       "action_args": {
-        "url": "http://download.bsplayer-subtitles.com/download/file/46001270/dd6f94a64ee9ea23997567f857e1cd209",
+        "url": "http://download.bsplayer-subtitles.com/download/file/40096103/d39d2e592dd8e0a78cf946226f6cbd405",
         "lang": "English",
-        "filename": "Blackadder - S03E05 - Amy and Amiability-eng.sub",
+        "filename": "Blackadder---S03E06---Duel-and-Duality-eng.srt",
         "gzip": true
       }
     },
@@ -176,16 +193,16 @@
       "service_name": "bsplayer",
       "service": "BSPlayer",
       "lang": "English",
-      "name": "Blackadder - S03E05 - Amy and Amiability.sub",
+      "name": "Blackadder - S03E06 - Duel and Duality.srt",
       "rating": 0,
       "lang_code": "en",
       "sync": "true",
       "impaired": "false",
       "color": "gold",
       "action_args": {
-        "url": "http://download.bsplayer-subtitles.com/download/file/14992429/dd6f94a64ee9ea23997567f857e1cd209",
+        "url": "http://download.bsplayer-subtitles.com/download/file/40420234/d39d2e592dd8e0a78cf946226f6cbd405",
         "lang": "English",
-        "filename": "Blackadder - S03E05 - Amy and Amiability-eng.sub",
+        "filename": "Blackadder - S03E06 - Duel and Duality-eng.srt",
         "gzip": true
       }
     },
@@ -193,16 +210,16 @@
       "service_name": "bsplayer",
       "service": "BSPlayer",
       "lang": "English",
-      "name": "Blackadder - S03E05 - Amy and Amiability.sub",
+      "name": "Blackadder - S03E06 - Duel and Duality.srt",
       "rating": 0,
       "lang_code": "en",
       "sync": "true",
       "impaired": "false",
       "color": "gold",
       "action_args": {
-        "url": "http://download.bsplayer-subtitles.com/download/file/14796491/dd6f94a64ee9ea23997567f857e1cd209",
+        "url": "http://download.bsplayer-subtitles.com/download/file/26044087/d39d2e592dd8e0a78cf946226f6cbd405",
         "lang": "English",
-        "filename": "Blackadder - S03E05 - Amy and Amiability-eng(8).sub",
+        "filename": "Blackadder - S03E06 - Duel and Duality-eng.srt",
         "gzip": true
       }
     },
@@ -210,16 +227,16 @@
       "service_name": "bsplayer",
       "service": "BSPlayer",
       "lang": "English",
-      "name": "Blackadder - S03E05 - Amy and Amiability.sub",
+      "name": "Blackadder - S03E06 - Duel and Duality.srt",
       "rating": 0,
       "lang_code": "en",
       "sync": "true",
       "impaired": "false",
       "color": "gold",
       "action_args": {
-        "url": "http://download.bsplayer-subtitles.com/download/file/13144835/dd6f94a64ee9ea23997567f857e1cd209",
+        "url": "http://download.bsplayer-subtitles.com/download/file/25997329/d39d2e592dd8e0a78cf946226f6cbd405",
         "lang": "English",
-        "filename": "Blackadder - S03E05 - Amy and Amiability-eng.sub",
+        "filename": "Blackadder - S03E06 - Duel and Duality-eng.srt",
         "gzip": true
       }
     },
@@ -227,16 +244,16 @@
       "service_name": "bsplayer",
       "service": "BSPlayer",
       "lang": "English",
-      "name": "Blackadder - S03E05 - Amy and Amiability.sub",
+      "name": "Blackadder - S03E06 - Duel and Duality.sub",
       "rating": 0,
       "lang_code": "en",
       "sync": "true",
       "impaired": "false",
       "color": "gold",
       "action_args": {
-        "url": "http://download.bsplayer-subtitles.com/download/file/12393108/dd6f94a64ee9ea23997567f857e1cd209",
+        "url": "http://download.bsplayer-subtitles.com/download/file/20489117/d39d2e592dd8e0a78cf946226f6cbd405",
         "lang": "English",
-        "filename": "Blackadder - S03E05 - Amy and Amiability-eng.sub",
+        "filename": "Blackadder - S03E06 - Duel and Duality-eng(1).sub",
         "gzip": true
       }
     },
@@ -244,16 +261,16 @@
       "service_name": "bsplayer",
       "service": "BSPlayer",
       "lang": "English",
-      "name": "Blackadder - S03E05 - Amy and Amiability.sub",
+      "name": "Blackadder - S03E06 - Duel and Duality.srt",
       "rating": 0,
       "lang_code": "en",
       "sync": "true",
       "impaired": "false",
       "color": "gold",
       "action_args": {
-        "url": "http://download.bsplayer-subtitles.com/download/file/11861585/dd6f94a64ee9ea23997567f857e1cd209",
+        "url": "http://download.bsplayer-subtitles.com/download/file/7549960/d39d2e592dd8e0a78cf946226f6cbd405",
         "lang": "English",
-        "filename": "Black Adder - 3x05 - Amy and Amiability (eng).sub",
+        "filename": "Blackadder - S03E06 - Duel and Duality.srt",
         "gzip": true
       }
     },
@@ -261,16 +278,16 @@
       "service_name": "bsplayer",
       "service": "BSPlayer",
       "lang": "English",
-      "name": "Blackadder - S03E05 - Amy and Amiability.sub",
+      "name": "Blackadder - S03E06 - Duel and Duality.sub",
       "rating": 0,
       "lang_code": "en",
       "sync": "true",
       "impaired": "false",
       "color": "gold",
       "action_args": {
-        "url": "http://download.bsplayer-subtitles.com/download/file/9838373/dd6f94a64ee9ea23997567f857e1cd209",
+        "url": "http://download.bsplayer-subtitles.com/download/file/8430103/d39d2e592dd8e0a78cf946226f6cbd405",
         "lang": "English",
-        "filename": "Blackadder - 3.05 - Amy and Amiability (EN).sub",
+        "filename": "Blackadder - S03E06 - Duel and Duality-eng.sub",
         "gzip": true
       }
     },
@@ -278,16 +295,16 @@
       "service_name": "bsplayer",
       "service": "BSPlayer",
       "lang": "English",
-      "name": "Blackadder - S03E05 - Amy and Amiability.sub",
+      "name": "Blackadder - S03E06 - Duel and Duality.sub",
       "rating": 0,
       "lang_code": "en",
       "sync": "true",
       "impaired": "false",
       "color": "gold",
       "action_args": {
-        "url": "http://download.bsplayer-subtitles.com/download/file/4516926/dd6f94a64ee9ea23997567f857e1cd209",
+        "url": "http://download.bsplayer-subtitles.com/download/file/9103383/d39d2e592dd8e0a78cf946226f6cbd405",
         "lang": "English",
-        "filename": "Blackadder - S03E05 - Amy and Amiability.sub",
+        "filename": "Blackadder - S03E06 - Duel and Duality-eng.sub",
         "gzip": true
       }
     },
@@ -295,16 +312,16 @@
       "service_name": "bsplayer",
       "service": "BSPlayer",
       "lang": "English",
-      "name": "Blackadder - S03E05 - Amy and Amiability.sub",
+      "name": "Blackadder - S03E06 - Duel and Duality.sub",
       "rating": 0,
       "lang_code": "en",
       "sync": "true",
       "impaired": "false",
       "color": "gold",
       "action_args": {
-        "url": "http://download.bsplayer-subtitles.com/download/file/3102274/dd6f94a64ee9ea23997567f857e1cd209",
+        "url": "http://download.bsplayer-subtitles.com/download/file/12487545/d39d2e592dd8e0a78cf946226f6cbd405",
         "lang": "English",
-        "filename": "Blackadder - S03E05 - Amy and Amiability.ENG.sub",
+        "filename": "Blackadder - S03E06 - Duel and Duality-eng.sub",
         "gzip": true
       }
     },
@@ -312,33 +329,16 @@
       "service_name": "bsplayer",
       "service": "BSPlayer",
       "lang": "English",
-      "name": "Blackadder - S03E05 - Amy and Amiability.srt",
+      "name": "Blackadder - S03E06 - Duel and Duality.srt",
       "rating": 0,
       "lang_code": "en",
       "sync": "true",
       "impaired": "false",
       "color": "gold",
       "action_args": {
-        "url": "http://download.bsplayer-subtitles.com/download/file/2570591/dd6f94a64ee9ea23997567f857e1cd209",
+        "url": "http://download.bsplayer-subtitles.com/download/file/12514035/d39d2e592dd8e0a78cf946226f6cbd405",
         "lang": "English",
-        "filename": "Black Adder [3x05] - Amy and Amiability.srt",
-        "gzip": true
-      }
-    },
-    {
-      "service_name": "bsplayer",
-      "service": "BSPlayer",
-      "lang": "English",
-      "name": "Blackadder - S03E05 - Amy and Amiability.srt",
-      "rating": 0,
-      "lang_code": "en",
-      "sync": "true",
-      "impaired": "false",
-      "color": "gold",
-      "action_args": {
-        "url": "http://download.bsplayer-subtitles.com/download/file/50212480/dd6f94a64ee9ea23997567f857e1cd209",
-        "lang": "English",
-        "filename": "Blackadder - S03E05 - Amy and Amiability.srt",
+        "filename": "Blackadder - S03E06 - Duel and Duality-eng.srt",
         "gzip": true
       }
     }
