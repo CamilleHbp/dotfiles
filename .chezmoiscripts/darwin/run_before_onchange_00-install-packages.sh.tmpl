@@ -21,7 +21,7 @@ SUDO_USER=$(whoami)
 #                                     XCode                                    #
 # ---------------------------------------------------------------------------- #
 # Install XCode
-if ! chezmoi="$(command -v chezmoi)"; then
+if ! xcode="$(command -v xcode-select)"; then
   xcode-select --install
 fi
 # Update XCode CLI tools
@@ -40,6 +40,13 @@ fi
 if test ! $(which brew); then
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
+
+# Set brew in path
+{{ if eq .chezmoi.arch "arm64" -}}
+    eval $(/opt/homebrew/bin/brew shellenv)  
+{{ else -}}
+    eval $(/usr/local/bin/brew shellenv)  
+{{ end -}}
 
 # Update Homebrew
 brew upgrade && brew upgrade && brew cleanup
@@ -61,6 +68,7 @@ brew upgrade && brew upgrade && brew cleanup
   "iterm2"
   "nextcloud"
   "temurin"
+  "the-unarchiver"
   "visual-studio-code"
   "vlc"
 -}}
@@ -81,7 +89,9 @@ brew upgrade && brew upgrade && brew cleanup
     "calibre"
     "c0re100-qbittorrent"
     "dropbox"
+    "freetube"
     "homebrew/cask-drivers/wacom-tablet"
+    "kodi"
     "krita"
     "macfuse"
     "onyx"
