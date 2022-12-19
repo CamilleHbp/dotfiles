@@ -59,6 +59,7 @@ fi
 # shellcheck disable=SC2312
 script_dir="$(cd -P -- "$(dirname -- "$(command -v -- "$0")")" && pwd -P)"
 
+# Use a prompt to ask if init should be run or not
 set -- init --source="${script_dir}"
 
 # --one-shot is the equivalent of --apply, --depth=1, --force, --purge, and --purge-binary.

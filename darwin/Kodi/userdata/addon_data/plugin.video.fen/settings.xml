@@ -7,7 +7,7 @@
     <setting id="use_skin_fonts">true</setting>
     <setting id="trakt.indicators_active" default="true">false</setting>
     <setting id="watched_indicators" default="true">0</setting>
-    <setting id="amble.indicators" default="true" />
+    <setting id="amble.indicators" default="true"></setting>
     <setting id="trakt.sync_interval">30</setting>
     <setting id="trakt.sync_refresh_widgets">true</setting>
     <setting id="datetime.offset" default="true">0</setting>
@@ -22,7 +22,7 @@
     <setting id="rd.refresh">SVJSODKUZOHTVVTJZSH5OIOJ5ELSUDBG6LK23KJHSJEBXXT6BQKQ</setting>
     <setting id="rd.secret">10a62666beedd34dcadfa12ef2568564b3fc343d</setting>
     <setting id="results.sort_order" default="true">1</setting>
-    <setting id="database.maintenance.due">1671473627</setting>
+    <setting id="database.maintenance.due">1671735126</setting>
     <setting id="reuse_language_invoker" default="true">true</setting>
     <setting id="folder1.display_name" default="true">Folder 1</setting>
     <setting id="folder1.movies_directory" default="true">None</setting>
@@ -84,22 +84,22 @@
     <setting id="meta_language" default="true">en</setting>
     <setting id="meta_use_year_in_search">true</setting>
     <setting id="meta_filter">false</setting>
-    <setting id="trakt.user" default="true" />
-    <setting id="open_trakt_authenticate" default="true" />
-    <setting id="open_trakt_de-authenticate" default="true" />
+    <setting id="trakt.user" default="true"></setting>
+    <setting id="open_trakt_authenticate" default="true"></setting>
+    <setting id="open_trakt_de-authenticate" default="true"></setting>
     <setting id="tmdb_api" default="true">b370b60447737762ca38457bd77579b3</setting>
-    <setting id="fanart_amble1" default="true" />
+    <setting id="fanart_amble1" default="true"></setting>
     <setting id="fanart_client_key" default="true">fa836e1c874ba95ab08a14ee88e05565</setting>
-    <setting id="imdb_user" default="true" />
+    <setting id="imdb_user" default="true"></setting>
     <setting id="imdb_lists.sort_type" default="true">0</setting>
     <setting id="imdb_lists.sort_direction" default="true">0</setting>
     <setting id="provider.external">true</setting>
-    <setting id="open_cocoscrapers" default="true" />
+    <setting id="open_cocoscrapers" default="true"></setting>
     <setting id="rd.token">VFR7V2YHP2KPRDL2WP2VNHCU64S4MATE7RNM3YRCQNJM4CBBMT4Q</setting>
     <setting id="rd.enabled">true</setting>
     <setting id="rd.account_id">CamilleBC</setting>
-    <setting id="open_rd_authenticate" default="true" />
-    <setting id="open_rd_de-authenticate" default="true" />
+    <setting id="open_rd_authenticate" default="true"></setting>
+    <setting id="open_rd_de-authenticate" default="true"></setting>
     <setting id="rd.torrent.enabled">true</setting>
     <setting id="rd.hoster.enabled">true</setting>
     <setting id="store_resolved_torrent.real-debrid" default="true">0</setting>
@@ -108,11 +108,11 @@
     <setting id="check.rd_cloud" default="true">false</setting>
     <setting id="results.sort_rdcloud_first">true</setting>
     <setting id="rd.priority">10</setting>
-    <setting id="pm.token" default="true" />
+    <setting id="pm.token" default="true"></setting>
     <setting id="pm.enabled">true</setting>
-    <setting id="pm.account_id" default="true" />
-    <setting id="open_pm_authenticate" default="true" />
-    <setting id="open_pm_de-authenticate" default="true" />
+    <setting id="pm.account_id" default="true"></setting>
+    <setting id="open_pm_authenticate" default="true"></setting>
+    <setting id="open_pm_de-authenticate" default="true"></setting>
     <setting id="pm.torrent.enabled">true</setting>
     <setting id="pm.hoster.enabled">true</setting>
     <setting id="store_resolved_torrent.premiumize.me" default="true">0</setting>
@@ -121,11 +121,11 @@
     <setting id="check.pm_cloud" default="true">false</setting>
     <setting id="results.sort_pmcloud_first">true</setting>
     <setting id="pm.priority">10</setting>
-    <setting id="ad.token" default="true" />
+    <setting id="ad.token" default="true"></setting>
     <setting id="ad.enabled">true</setting>
-    <setting id="ad.account_id" default="true" />
-    <setting id="open_ad_authenticate" default="true" />
-    <setting id="open_ad_de-authenticate" default="true" />
+    <setting id="ad.account_id" default="true"></setting>
+    <setting id="open_ad_authenticate" default="true"></setting>
+    <setting id="open_ad_de-authenticate" default="true"></setting>
     <setting id="ad.torrent.enabled">true</setting>
     <setting id="ad.hoster.enabled">true</setting>
     <setting id="store_resolved_torrent.alldebrid" default="true">0</setting>
@@ -135,15 +135,15 @@
     <setting id="results.sort_adcloud_first">true</setting>
     <setting id="ad.priority">10</setting>
     <setting id="provider.furk" default="true">false</setting>
-    <setting id="furk_login" default="true" />
-    <setting id="furk_password" default="true" />
-    <setting id="furk_api_key" default="true" />
+    <setting id="furk_login" default="true"></setting>
+    <setting id="furk_password" default="true"></setting>
+    <setting id="furk_api_key" default="true"></setting>
     <setting id="furk.title_filter">true</setting>
     <setting id="check.furk" default="true">false</setting>
     <setting id="fu.priority">6</setting>
     <setting id="provider.easynews" default="true">false</setting>
-    <setting id="easynews_user" default="true" />
-    <setting id="easynews_password" default="true" />
+    <setting id="easynews_user" default="true"></setting>
+    <setting id="easynews_password" default="true"></setting>
     <setting id="easynews.use_custom_farm" default="true">False</setting>
     <setting id="easynews.server_name" default="true">Auto:443</setting>
     <setting id="easynews.title_filter">true</setting>
@@ -178,7 +178,7 @@
     <setting id="filter_hdr" default="true">0</setting>
     <setting id="filter_dv" default="true">0</setting>
     <setting id="filter_av1" default="true">0</setting>
-    <setting id="filter_audio" default="true" />
+    <setting id="filter_audio" default="true"></setting>
     <setting id="highlight.type">1</setting>
     <setting id="hoster.identify" default="true">dodgerblue</setting>
     <setting id="torrent.identify" default="true">fuchsia</setting>
