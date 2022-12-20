@@ -1,1 +1,0 @@
-["Your Lists", ["your lists", "list of strings to list of lists", "turn list of lists into list", "list list to list"], [], {"google:suggestsubtypes": [[512], [390], [390], [390]], "google:suggesttype": ["QUERY", "QUERY", "QUERY", "QUERY"]}]

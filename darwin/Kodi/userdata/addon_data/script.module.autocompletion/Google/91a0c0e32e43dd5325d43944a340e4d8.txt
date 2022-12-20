@@ -1,1 +1,0 @@
-["TheMovieDb Helper - Top Rated", ["themoviedb helper - top rated movies", "themoviedb helper - top rated books", "themoviedb helper - top rated series"], [], {"google:suggestsubtypes": [[160], [160], [160]], "google:suggesttype": ["TAIL", "TAIL", "TAIL"]}]

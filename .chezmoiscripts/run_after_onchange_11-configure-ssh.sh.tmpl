@@ -1,8 +1,10 @@
 #!/bin/sh
 
 # ---------------------------------------------------------------------------- #
-#                          Unofficial Bash Strict Mode                         #
+#                               Bash script setup                              #
 # ---------------------------------------------------------------------------- #
+
+# ------------------------ Unofficial Bash Strict Mode ----------------------- #
 # See http://redsymbol.net/articles/unofficial-bash-strict-mode/
 # -e: exit on error
 # -u: exit on unset variables
@@ -12,9 +14,7 @@ set -euo pipefail
 # When set to a string, each character in the string is considered by Bash to separate words
 IFS=$'\n\t'
 
-# ---------------------------------------------------------------------------- #
-#                                     Logs                                     #
-# ---------------------------------------------------------------------------- #
+# ----------------------------------- Logs ----------------------------------- #
 log_color() {
     wait
     color_code="$1"
@@ -45,10 +45,7 @@ log_task "[SSH] SETUP"
     return 0
 {{- end -}}
 
-# ---------------------------------------------------------------------------- #
-#                           1Password account signin                           #
-# ---------------------------------------------------------------------------- #
-# This command can be used with arguments, but we need to figure out how to add them securely (github secrets?)
+# ------------------------- 1Password account signin ------------------------- #
 log_task "[SSH] 1password signin"
 eval $(op signin --account {{ .op_domain }})
 log_success "[SSH] 1password signed in"
@@ -81,9 +78,7 @@ if [ ! -f "id_ed25519_elbowarrior.pub" ]; then
 fi
 log_success "[SSH] SSH keys copied"
 
-# ---------------------------------------------------------------------------- #
-#                           Add ssh keys to ssh-agent                          #
-# ---------------------------------------------------------------------------- #
+# ------------------------- Add ssh keys to ssh-agent ------------------------ #
 log_task "[SSH] Add SSH keys to ssh-agent"
 eval "$(ssh-agent)"
 ssh-add ~/.ssh/id_ed25519

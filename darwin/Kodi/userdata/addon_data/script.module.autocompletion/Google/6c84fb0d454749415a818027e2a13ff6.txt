@@ -1,1 +1,0 @@
-["bab", ["babar azam", "babyliss pro", "baba zulu", "babka", "babbel", "baby shark", "babka zana", "babylon", "babou", "baba au rhum"], [], {"google:suggestsubtypes": [[512], [512], [512], [512], [512], [512], [512], [512], [512], [512]], "google:suggesttype": ["QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY"]}]

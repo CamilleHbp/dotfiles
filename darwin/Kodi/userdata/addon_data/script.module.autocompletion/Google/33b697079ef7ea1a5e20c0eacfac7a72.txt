@@ -1,1 +1,0 @@
-["https://a4k-openproject.github.io/a4kSubtitles/packages/", [], [], {"google:suggesttype": []}]

@@ -1,14 +1,6 @@
 {{/* boolean feature tags */}}
-{{- $ephemeral := false -}}{{/* true if this machine is ephemeral, e.g. a cloud or VM instance */}}
-{{- $headless := false -}}{{/* true if this machine does not have a screen and keyboard */}}
 {{- $personal := false -}}{{/* true if this machine should have personal secrets */}}
 {{- "" -}}
-
-{{/* detect GitHub codespaces, VSCode remote containers, Docker containers, Multipass VMs, and Vagrant boxes */}}
-{{- if or (env "CODESPACES") (env "REMOTE_CONTAINERS_IPC") (eq .chezmoi.username "root" "ubuntu" "vagrant" "vscode") -}}
-{{-   $ephemeral = true -}}
-{{-   $headless = true -}}
-{{- end -}}
 
 {{/* work around unreliable hostname on darwin */}}
 {{- $hostname := .chezmoi.hostname -}}
@@ -22,33 +14,13 @@
 {{- end -}}
 
 {{- $personal := promptBool "Is this a personal computer? (y/n)" false -}}
-{{- $git_email := promptString "Git email address for the author/committer" }}
-{{- $git_name := promptString "Git username for the author/committer" }}
-{{- $nf_dev_dir := promptString "Nos Futurs dev folder (relative to ~)" }}
 {{- $op_email := promptString "Email address used with 1password" }}
 {{- $op_domain := promptString "Domain used with 1password" }}
 {{- $op_secret := promptString "Your 1password secret (NOT password)" }}
 
 [data]
-    nf_dev_dir={{ $nf_dev_dir | quote }}
-    ephemeral = {{ $ephemeral }}
-    git_email = {{ $git_email | quote }}
-    git_name = {{ $git_name | quote }}
-    headless = {{ $headless }}
     hostname = {{ $hostname | quote }}
     op_domain = {{ $op_domain | quote }}
     op_email = {{ $op_email | quote }}
     op_secret = {{ $op_secret | quote }}
     personal = {{ $personal }}
-
-[diff]
-    exclude = ["scripts"]
-    pager = "diff-so-fancy"
-
-[onepassword]
-    prompt = false
-
-[[textconv]]
-    pattern = "**/*.plist"
-    command = "plutil"
-    args = ["-convert", "xml1", "-o", "-", "-"]

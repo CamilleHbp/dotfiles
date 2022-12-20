@@ -1,13 +1,6 @@
 install.sh
 README.md
 
-# Application folders and files
-.oh-my-zsh/cache/**
-private_Library/private_Application Support/Kodi/addons/packages # Ignore addons package artefacts
-vscode_settings.json # vscode_settings.json is used through symlinks
-
 {{ if ne .chezmoi.os "darwin" }}
     .chezmoiscripts/darwin/**
-    private_dot_config/iterm2
-    private_Library
 {{ end }}

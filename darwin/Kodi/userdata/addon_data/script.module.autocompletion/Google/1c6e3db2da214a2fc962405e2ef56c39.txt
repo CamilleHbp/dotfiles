@@ -1,1 +1,0 @@
-["B", ["booking", "bbc news", "black friday", "balenciaga", "bershka", "bbc", "black adam", "blablacar", "bitcoin", "black panther"], [], {"google:suggestsubtypes": [[512], [512], [512], [512], [512], [512], [512], [512], [512], [512]], "google:suggesttype": ["QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY"]}]

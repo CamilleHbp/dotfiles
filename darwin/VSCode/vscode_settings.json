@@ -1,8 +1,0 @@
-{
-    "files.associations": {
-        "*.tmpl": "shellscript"
-    },
-    "[markdown]": {
-        "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
-    }
-}

@@ -1,1 +1,0 @@
-["H", ["hotmail", "house of the dragon", "h&m", "hema", "hermes", "harry styles", "halloween", "habitat", "hsbc", "haaland"], [], {"google:suggestsubtypes": [[512], [512], [512], [512], [512], [512], [512], [512], [512], [512]], "google:suggesttype": ["QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY"]}]

@@ -1,1 +1,0 @@
-["Kod", ["kodawari ramen", "kodak nation", "kodawari", "kodak", "kodawari tsukiji", "kodawari yokocho", "kodak express", "kodak black", "kodiko", "kodaline"], [], {"google:suggestsubtypes": [[512], [512], [512], [512], [512], [512], [512], [512], [512], [512]], "google:suggesttype": ["QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY"]}]

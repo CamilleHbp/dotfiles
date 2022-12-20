@@ -1,1 +1,0 @@
-[".cam", [".cam", ".cam domain", ".camera", ".cam file", ".camp domain", ".cam domain country", ".cam tld", ".cambridge", ".camrec", ".campion"], [], {"google:suggestsubtypes": [[512], [512], [512], [512], [512], [512], [512], [512], [512], [512]], "google:suggesttype": ["QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY"]}]

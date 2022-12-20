@@ -1,1 +1,0 @@
-["Ko", ["kodawari ramen", "kooora", "kong paris", "konbini", "kompromat", "kooples", "kobe bryant", "kookai", "kosovo", "kourtney kardashian"], [], {"google:suggestsubtypes": [[512], [512], [512], [512], [512], [512], [512], [512], [512], [512]], "google:suggesttype": ["QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY"]}]

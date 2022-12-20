@@ -1,1 +1,0 @@
-[".", [".com", ".io", ".net", ".net framework", ".fr", ".net core", ".net 7", "... signification", ".co", ".format python"], [], {"google:suggestsubtypes": [[512], [512], [512], [512], [512], [512], [512], [512], [512], [512]], "google:suggesttype": ["QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY"]}]

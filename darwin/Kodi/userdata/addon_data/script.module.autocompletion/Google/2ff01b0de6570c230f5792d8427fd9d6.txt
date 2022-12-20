@@ -1,1 +1,0 @@
-["ActivateWindow(Videos,\"plugin://p", ["activatewindow(videos plugin //pin.it", "activatewindow(videos plugin //pdf"], [], {"google:suggestsubtypes": [[160], [160]], "google:suggesttype": ["TAIL", "TAIL"]}]

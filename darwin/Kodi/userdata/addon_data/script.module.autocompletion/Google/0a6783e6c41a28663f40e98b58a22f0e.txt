@@ -1,1 +1,0 @@
-["M", ["maps", "mango", "meteo", "moulin rouge", "mbappe", "marilyn monroe", "muji", "messenger", "manchester united", "massimo dutti"], [], {"google:suggestsubtypes": [[512], [512], [512], [512], [512], [512], [512], [512], [512], [512]], "google:suggesttype": ["QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY"]}]

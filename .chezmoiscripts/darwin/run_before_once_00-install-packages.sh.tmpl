@@ -40,14 +40,10 @@ success() { log_success "$@" ; exit 0 ; }
 # ---------------------------------------------------------------------------- #
 log_task "[Packages] SETUP"
 
-########### Tools installation
-
 # Set a SUDO_USER variable, because some of the following installations require sudo
 SUDO_USER=$(whoami)
 
-# ---------------------------------------------------------------------------- #
-#                                     XCode                                    #
-# ---------------------------------------------------------------------------- #
+# ----------------------------------- XCode ---------------------------------- #
 log_task "[Packages] XCode installation and update"
 # Install XCode
 if ! xcode="$(command -v xcode-select)"; then
@@ -63,12 +59,9 @@ if [[ ! -z "$PROD" ]]; then
 fi
 log_success "[Packages] XCode installed and up-to-date"
 
-# ---------------------------------------------------------------------------- #
-#                                   Homebrew                                   #
-# ---------------------------------------------------------------------------- #
+# --------------------------------- Homebrew --------------------------------- #
 
 log_task "[Packages] Homebrew installation"
-# ------------------------------- Installation ------------------------------- #
 # Install Homebrew if not installed
 if test ! $(which brew); then
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -85,64 +78,14 @@ fi
 brew upgrade && brew upgrade && brew cleanup
 log_success "[Packages] Homebrew installed and up-to-date"
 
-# ------------------------------- Package list ------------------------------- #
-{{ $brews := list
-  "diff-so-fancy"
-  "docker"
-  "fzf"
-  "git"
-  "node"
-  "pnpm"
-  "python"
-  "thefuck"
-  "zsh"
--}}
-
+# Package list
 {{ $casks := list
-  "iterm2"
-  "nextcloud"
-  "temurin"
-  "the-unarchiver"
-  "visual-studio-code"
-  "vlc"
+  "1password-cli"
 -}}
 
-# Personal packages
-{{ if .personal -}}
-  {{   $brews = concat $brews (list
-    "nvim"
-  ) -}}
-
-  # TODO: fix jDownloader's install
-    #"1password"
-  {{ $casks = concat $casks (list
-    "1password-cli"
-    "alfred"
-    "appcleaner"
-    "brave-browser"
-    "calibre"
-    "c0re100-qbittorrent"
-    "dropbox"
-    "freetube"
-    "homebrew/cask-drivers/wacom-tablet"
-    "kodi"
-    "krita"
-    "macfuse"
-    "onyx"
-    "path-finder"
-    "protonvpn"
-    "spotify"
-    "steermouse"
-    "vlc"
-  ) -}}
-{{ end -}}
-
-# --------------------------- Package installation --------------------------- #
+# Package installation
 log_task "[Packages] Homebrew packages installation"
 brew bundle --no-lock --file=/dev/stdin <<EOF
-{{ range ($brews | sortAlpha | uniq) -}}
-brew "{{ . }}"
-{{ end -}}
 {{ range ($casks | sortAlpha | uniq) -}}
 cask "{{ . }}"
 {{ end -}}
