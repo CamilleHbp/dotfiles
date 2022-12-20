@@ -24,11 +24,13 @@
 {{- $personal := promptBool "Is this a personal computer? (y/n)" false -}}
 {{- $git_email := promptString "Git email address for the author/committer" }}
 {{- $git_name := promptString "Git username for the author/committer" }}
+{{- $nf_dev_dir := promptString "Nos Futurs dev folder (relative to ~)" }}
 {{- $op_email := promptString "Email address used with 1password" }}
 {{- $op_domain := promptString "Domain used with 1password" }}
 {{- $op_secret := promptString "Your 1password secret (NOT password)" }}
 
 [data]
+    nf_dev_dir={{ $nf_dev_dir | quote }}
     ephemeral = {{ $ephemeral }}
     git_email = {{ $git_email | quote }}
     git_name = {{ $git_name | quote }}
@@ -42,6 +44,9 @@
 [diff]
     exclude = ["scripts"]
     pager = "diff-so-fancy"
+
+[onepassword]
+    prompt = false
 
 [[textconv]]
     pattern = "**/*.plist"

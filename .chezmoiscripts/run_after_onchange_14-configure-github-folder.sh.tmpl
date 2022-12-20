@@ -38,17 +38,19 @@ success() { log_success "$@" ; exit 0 ; }
 # ---------------------------------------------------------------------------- #
 #                                    Script                                    #
 # ---------------------------------------------------------------------------- #
-log_task "[1password] SETUP"
-
-# ------------------ Exit if this is not a personal machine ------------------ #
-{{- if not .personal -}}
-    return 0
-{{- end -}}
+log_task "[Github] SETUP"
 
 # ---------------------------------------------------------------------------- #
-#                        Add 1Password acount and signin                       #
+#                          Clone project repositories                          #
 # ---------------------------------------------------------------------------- #
-op account add --address {{ .op_domain }}.1password.com --email {{ .op_email | quote }} --secret-key {{ .op_secret | quote }}
-eval $(op signin --account {{ .op_domain }})
+log_task "[Github] Clone Nos Futurs repos"
+mkdir -p ~/{{ .nf_dev_dir }} && cd ~/{{ .nf_dev_dir }}
+if [ ! -d "showcase" ]; then
+    git clone git@github.com:Nos-Futurs/showcase.git
+fi
+if [ ! -d "lib-web-ui" ]; then
+    git clone git@github.com:Nos-Futurs/lib-web-ui.git
+fi
+log_success "[Github] Nos Futurs repos cloned"
 
-log_success "[1password] DONE"
+log_success "[Github] DONE"

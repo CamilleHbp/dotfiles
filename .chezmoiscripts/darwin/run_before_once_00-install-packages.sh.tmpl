@@ -12,6 +12,34 @@ set -euo pipefail
 # When set to a string, each character in the string is considered by Bash to separate words
 IFS=$'\n\t'
 
+# ---------------------------------------------------------------------------- #
+#                                     Logs                                     #
+# ---------------------------------------------------------------------------- #
+log_color() {
+    wait
+    color_code="$1"
+    shift
+    printf "\033[${color_code}m%s\033[0m\n" "$*" >&2
+}
+# -------------------------------- Log colours ------------------------------- #
+log_blue() { log_color "0;34" "$@" ; }
+log_green() { log_color "0;32" "$@" ; }
+log_orange() { log_color "0;33" "$@" ; }
+log_red() { log_color "0;31" "$@" ; }
+# --------------------------------- Log state -------------------------------- #
+log_error() { log_red "❌ $@" ; }
+log_success() { log_green "✅ $@" ; }
+log_task() { log_blue "🔃 $@" ; }
+log_warning() { log_orange "⚠️ $@" ; }
+# ---------------------------- Log exit functions ---------------------------- #
+error() { log_error "$@" ; exit 1 ; }
+success() { log_success "$@" ; exit 0 ; }
+
+# ---------------------------------------------------------------------------- #
+#                                    Script                                    #
+# ---------------------------------------------------------------------------- #
+log_task "[Packages] SETUP"
+
 ########### Tools installation
 
 # Set a SUDO_USER variable, because some of the following installations require sudo
@@ -20,8 +48,11 @@ SUDO_USER=$(whoami)
 # ---------------------------------------------------------------------------- #
 #                                     XCode                                    #
 # ---------------------------------------------------------------------------- #
+log_task "[Packages] XCode installation and update"
 # Install XCode
 if ! xcode="$(command -v xcode-select)"; then
+  log_warning "[Packages] The script will fail if you don't have the MacOS command line tools installed."
+  log_warning "[Packages] Please install when prompted and run the chezmoi script again."
   xcode-select --install
 fi
 # Update XCode CLI tools
@@ -30,11 +61,13 @@ PROD=$(softwareupdate -l | grep "\*.*Command Line" | head -n 1 | awk -F"*" '{pri
 if [[ ! -z "$PROD" ]]; then
   softwareupdate -i "$PROD" --verbose
 fi
+log_success "[Packages] XCode installed and up-to-date"
 
 # ---------------------------------------------------------------------------- #
 #                                   Homebrew                                   #
 # ---------------------------------------------------------------------------- #
 
+log_task "[Packages] Homebrew installation"
 # ------------------------------- Installation ------------------------------- #
 # Install Homebrew if not installed
 if test ! $(which brew); then
@@ -50,6 +83,7 @@ fi
 
 # Update Homebrew
 brew upgrade && brew upgrade && brew cleanup
+log_success "[Packages] Homebrew installed and up-to-date"
 
 # ------------------------------- Package list ------------------------------- #
 {{ $brews := list
@@ -80,9 +114,9 @@ brew upgrade && brew upgrade && brew cleanup
   ) -}}
 
   # TODO: fix jDownloader's install
+    #"1password"
   {{ $casks = concat $casks (list
     "1password-cli"
-    "1password"
     "alfred"
     "appcleaner"
     "brave-browser"
@@ -104,6 +138,7 @@ brew upgrade && brew upgrade && brew cleanup
 {{ end -}}
 
 # --------------------------- Package installation --------------------------- #
+log_task "[Packages] Homebrew packages installation"
 brew bundle --no-lock --file=/dev/stdin <<EOF
 {{ range ($brews | sortAlpha | uniq) -}}
 brew "{{ . }}"
@@ -112,3 +147,6 @@ brew "{{ . }}"
 cask "{{ . }}"
 {{ end -}}
 EOF
+log_success "[Packages] Homebrew packages installed"
+
+log_success "[Packages] DONE"
