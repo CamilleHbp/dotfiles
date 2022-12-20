@@ -38,17 +38,29 @@ success() { log_success "$@" ; exit 0 ; }
 # ---------------------------------------------------------------------------- #
 #                                    Script                                    #
 # ---------------------------------------------------------------------------- #
-log_task "[1password] SETUP"
-
-# ------------------ Exit if this is not a personal machine ------------------ #
-{{- if not .personal -}}
-    return 0
-{{- end -}}
+log_task "[Shell] SETUP"
 
 # ---------------------------------------------------------------------------- #
-#                        Add 1Password acount and signin                       #
+#                               Zsh configuration                              #
 # ---------------------------------------------------------------------------- #
-op account add --address {{ .op_domain }}.1password.com --email {{ .op_email | quote }} --secret-key {{ .op_secret | quote }}
-eval $(op signin --account {{ .op_domain }})
 
-log_success "[1password] DONE"
+# ----------------------------- Change user shell ---------------------------- #
+# Set Homebrew's zsh as the default. Homebrew's folder is different depending on the architecture (M1 vs Intel)
+log_task "[Shell] Change shell to ZSH"
+{{ if eq .chezmoi.arch "arm64" -}}
+    sudo chsh -s /opt/homebrew/bin/zsh `whoami`
+{{ else -}}
+    sudo chsh -s /usr/local/bin/zsh `whoami`
+{{ end -}}
+log_success "[Shell] User shell changed"
+
+ # ---------- Install FZF's useful key bindings and fuzzy completion ---------- #
+log_task "[Shell] FZF installation"
+{{ if eq .chezmoi.os "darwin" -}}
+    $(brew --prefix)/opt/fzf/install --key-bindings --completion --no-update-rc --no-bash --no-fish
+{{ else if eq .chezmoi.os "linux" -}}
+    # TODO: install fzf on linux
+{{ end -}}
+log_task "[Shell] FZF installed"
+
+log_success "[Shell] DONE"

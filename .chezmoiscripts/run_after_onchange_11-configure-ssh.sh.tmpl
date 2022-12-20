@@ -38,7 +38,7 @@ success() { log_success "$@" ; exit 0 ; }
 # ---------------------------------------------------------------------------- #
 #                                    Script                                    #
 # ---------------------------------------------------------------------------- #
-log_task "[1password] SETUP"
+log_task "[SSH] SETUP"
 
 # ------------------ Exit if this is not a personal machine ------------------ #
 {{- if not .personal -}}
@@ -46,9 +46,48 @@ log_task "[1password] SETUP"
 {{- end -}}
 
 # ---------------------------------------------------------------------------- #
-#                        Add 1Password acount and signin                       #
+#                           1Password account signin                           #
 # ---------------------------------------------------------------------------- #
-op account add --address {{ .op_domain }}.1password.com --email {{ .op_email | quote }} --secret-key {{ .op_secret | quote }}
+# This command can be used with arguments, but we need to figure out how to add them securely (github secrets?)
+log_task "[SSH] 1password signin"
 eval $(op signin --account {{ .op_domain }})
+log_success "[SSH] 1password signed in"
 
-log_success "[1password] DONE"
+log_task "[SSH] Copying SSH keys"
+mkdir -p ~/.ssh
+if [ ! -f "id_ed25519" ]; then
+    {{ with $private_key := (onepasswordDetailsFields "w3rasa7gfmsvb6vkxvufledjny").private_key.value }}
+        touch ~/.ssh/id_ed25519 && chmod 0600 ~/.ssh/id_ed25519
+        echo {{ $private_key | quote }} >> ~/.ssh/id_ed25519
+    {{ end }}
+fi
+if [ ! -f "id_ed25519.pub" ]; then
+    {{ with $public_key := (onepasswordDetailsFields "w3rasa7gfmsvb6vkxvufledjny").public_key.value }}
+        touch ~/.ssh/id_ed25519.pub && chmod 0644 ~/.ssh/id_ed25519.pub
+        echo {{ $public_key | quote }} >> ~/.ssh/id_ed25519.pub
+    {{ end }}
+fi
+if [ ! -f "id_ed25519_elbowarrior" ]; then
+    {{ with $elbo_private_key := (onepasswordDetailsFields "l6nqfvclhwzs3432g3x4ppjrti").private_key.value }}
+        touch ~/.ssh/id_ed25519_elbowarrior && chmod 0600 ~/.ssh/id_ed25519_elbowarrior
+        echo {{ $elbo_private_key | quote }} >> ~/.ssh/id_ed25519_elbowarrior
+    {{ end }}
+fi
+if [ ! -f "id_ed25519_elbowarrior.pub" ]; then
+    {{ with $elbo_public_key := (onepasswordDetailsFields "l6nqfvclhwzs3432g3x4ppjrti").public_key.value }}
+        touch ~/.ssh/id_ed25519_elbowarrior.pub && chmod 0644 ~/.ssh/id_ed25519_elbowarrior.pub
+        echo {{ $elbo_public_key | quote }} >> ~/.ssh/id_ed25519_elbowarrior.pub
+    {{end}}
+fi
+log_success "[SSH] SSH keys copied"
+
+# ---------------------------------------------------------------------------- #
+#                           Add ssh keys to ssh-agent                          #
+# ---------------------------------------------------------------------------- #
+log_task "[SSH] Add SSH keys to ssh-agent"
+eval "$(ssh-agent)"
+ssh-add ~/.ssh/id_ed25519
+ssh-add ~/.ssh/id_ed25519_elbowarrior
+log_success "[SSH] SSH keys added to ssh-agent"
+
+log_success "[SSH] DONE"
