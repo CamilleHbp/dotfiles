@@ -26,7 +26,7 @@
 {{- $git_name := promptString "Git username for the author/committer" }}
 {{- $nf_dev_dir := promptString "Nos Futurs dev folder (relative to ~)" }}
 {{- $op_email := promptString "Email address used with 1password" }}
-{{- $op_domain := promptString "Domain used with 1password" }}
+{{- $op_subdomain := promptString "Subdomain used with 1password (i.e 'my')" }}
 {{- $op_secret := promptString "Your 1password secret (NOT password)" }}
 
 [data]
@@ -36,7 +36,7 @@
     git_name = {{ $git_name | quote }}
     headless = {{ $headless }}
     hostname = {{ $hostname | quote }}
-    op_domain = {{ $op_domain | quote }}
+    op_subdomain = {{ $op_subdomain | quote }}
     op_email = {{ $op_email | quote }}
     op_secret = {{ $op_secret | quote }}
     personal = {{ $personal }}
@@ -46,7 +46,7 @@
     pager = "diff-so-fancy"
 
 [onepassword]
-    prompt = false
+    prompt = true
 
 [[textconv]]
     pattern = "**/*.plist"
