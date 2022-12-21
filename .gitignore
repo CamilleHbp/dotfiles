@@ -1,0 +1,5 @@
+# Ignore Oh-My-ZSH cache
+.oh-my-zsh/cache
+# Ignore Kodi addons package artefacts
+darwin/Kodi/addons/packages 
+darwin/Kodi/userdata/Thumbnails
