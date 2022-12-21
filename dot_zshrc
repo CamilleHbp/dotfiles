@@ -70,7 +70,6 @@ zstyle ':omz:update' mode reminder  # just remind me to update when it's time
 plugins=(
   git
   ssh-agent
-  thefuck
   vi-mode
   zsh-autosuggestions
   zsh-history-substring-search
@@ -82,7 +81,9 @@ fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
 
 source $ZSH/oh-my-zsh.sh
 
-# User configuration
+# ---------------------------------------------------------------------------- #
+#                              User configuration                              #
+# ---------------------------------------------------------------------------- #
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
@@ -100,12 +101,28 @@ alias vim=nvim
 # Source fuzzy completion
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-# Set PATH variable for homebrew
+# ---------------------------- Set PATH variables ---------------------------- #
+# Homebrew
 path=(/opt/homebrew/bin $path)
-# Set PATH variable for local binaries
 path=(~/.local/bin $path)
-# Set default editor to VIM
+# ------------------------- Set default editor to VIM ------------------------ #
 export EDITOR=nvim
 export VISUAL="$EDITOR"
 
-eval $(thefuck --alias)
+# --------------------- Set TheFuck alias and key binding -------------------- #
+# Register alias
+[[ ! -a $ZSH_CACHE_DIR/thefuck ]] && thefuck --alias > $ZSH_CACHE_DIR/thefuck
+source $ZSH_CACHE_DIR/thefuck
+
+fuck-command-line() {
+    # local FUCK="$(THEFUCK_REQUIRE_CONFIRMATION=0 thefuck $(fc -ln -1 | tail -n 1) 2> /dev/null)"
+    local FUCK="$(thefuck)"
+    [[ -z $FUCK ]] && echo -n -e "\a" && return
+    BUFFER=$FUCK
+    zle end-of-line
+}
+zle -N fuck-command-line
+# Defined shortcut keys: [Esc] [Esc]
+bindkey -M emacs '\e\e' fuck-command-line
+bindkey -M vicmd '\e\e' fuck-command-line
+bindkey -M viins '\e\e' fuck-command-line
