@@ -1,345 +1,56 @@
 {
-  "hash": "419c15b6c5da09926c0671d581bdf710bc59992ccefdd69ae8bae0faf001edc4",
-  "timestamp": 1671544128.850587,
+  "hash": "eee1f251ad05a65c9c0113cdd3c8d2c8f175f4b5ccc5c1d7ddfd11fa70f2e3af",
+  "timestamp": 1671613529.891306,
   "results": [
     {
-      "service_name": "bsplayer",
-      "service": "BSPlayer",
+      "service_name": "addic7ed",
+      "service": "Addic7ed",
       "lang": "English",
-      "name": "Blackadder - S04E02 - Corporal Punishment.sub",
-      "rating": 2,
-      "lang_code": "en",
-      "sync": "true",
-      "impaired": "false",
-      "color": "gold",
-      "action_args": {
-        "url": "http://download.bsplayer-subtitles.com/download/file/11733296/d8deb8ebd5fb41e6639a3da080c6f38cf",
-        "lang": "English",
-        "filename": "Blackadder - S04E02 - Corporal Punishment-eng.sub",
-        "gzip": true
-      }
-    },
-    {
-      "service_name": "bsplayer",
-      "service": "BSPlayer",
-      "lang": "English",
-      "name": "Blackadder - S04E02 - Corporal Punishment.srt",
-      "rating": 2,
-      "lang_code": "en",
-      "sync": "true",
-      "impaired": "false",
-      "color": "gold",
-      "action_args": {
-        "url": "http://download.bsplayer-subtitles.com/download/file/6175191/d8deb8ebd5fb41e6639a3da080c6f38cf",
-        "lang": "English",
-        "filename": "02.Corporal.Punsihment[DVDRip]Xvid.MP3-DsG.srt",
-        "gzip": true
-      }
-    },
-    {
-      "service_name": "bsplayer",
-      "service": "BSPlayer",
-      "lang": "English",
-      "name": "Blackadder - S04E02 - Corporal Punishment.sub",
-      "rating": 2,
-      "lang_code": "en",
-      "sync": "true",
-      "impaired": "false",
-      "color": "gold",
-      "action_args": {
-        "url": "http://download.bsplayer-subtitles.com/download/file/1137606/d8deb8ebd5fb41e6639a3da080c6f38cf",
-        "lang": "English",
-        "filename": "Blackadder - S04E02 - Corporal Punishment-eng.sub",
-        "gzip": true
-      }
-    },
-    {
-      "service_name": "bsplayer",
-      "service": "BSPlayer",
-      "lang": "English",
-      "name": "Blackadder - S04E02 - Corporal Punishment.sub",
-      "rating": 2,
-      "lang_code": "en",
-      "sync": "true",
-      "impaired": "false",
-      "color": "gold",
-      "action_args": {
-        "url": "http://download.bsplayer-subtitles.com/download/file/3108738/d8deb8ebd5fb41e6639a3da080c6f38cf",
-        "lang": "English",
-        "filename": "Blackadder - S04E02 - Corporal Punishment.ENG.sub",
-        "gzip": true
-      }
-    },
-    {
-      "service_name": "bsplayer",
-      "service": "BSPlayer",
-      "lang": "English",
-      "name": "Blackadder - S04E02 - Corporal Punishment.srt",
-      "rating": 2,
-      "lang_code": "en",
-      "sync": "true",
-      "impaired": "false",
-      "color": "gold",
-      "action_args": {
-        "url": "http://download.bsplayer-subtitles.com/download/file/1227831/d8deb8ebd5fb41e6639a3da080c6f38cf",
-        "lang": "English",
-        "filename": "Blackadder - S04E02 - Corporal Punishment [digitaldistractions].srt",
-        "gzip": true
-      }
-    },
-    {
-      "service_name": "bsplayer",
-      "service": "BSPlayer",
-      "lang": "English",
-      "name": "Blackadder - S04E02 - Corporal Punishment.srt",
+      "name": "Babylon Berlin.S04E09.WEBRip-ION10.srt",
       "rating": 0,
       "lang_code": "en",
-      "sync": "true",
+      "sync": "false",
       "impaired": "false",
-      "color": "gold",
+      "color": "deepskyblue",
       "action_args": {
-        "url": "http://download.bsplayer-subtitles.com/download/file/38633802/d8deb8ebd5fb41e6639a3da080c6f38cf",
+        "url": "https://www.addic7ed.com/updated/1/179574/0",
         "lang": "English",
-        "filename": "Blackadder - S04E02 - Corporal Punishment-eng.srt",
-        "gzip": true
+        "filename": "Babylon Berlin.S04E09.WEBRip-ION10.srt",
+        "referer": "https://www.addic7ed.com/serie/Babylon_Berlin/4/9/Episode_#4.9",
+        "raw": true
       }
     },
     {
-      "service_name": "bsplayer",
-      "service": "BSPlayer",
+      "service_name": "opensubtitles",
+      "service": "OpenSubtitles",
       "lang": "English",
-      "name": "Blackadder - S04E02 - Corporal Punishment.srt",
+      "name": "Babylon.Berlin.S04E09.720p.HMAX.WEB-DL.DD5.1.H.264-playWEB.srt",
       "rating": 0,
       "lang_code": "en",
-      "sync": "true",
+      "sync": "false",
       "impaired": "false",
-      "color": "gold",
+      "color": "springgreen",
       "action_args": {
-        "url": "http://download.bsplayer-subtitles.com/download/file/37708486/d8deb8ebd5fb41e6639a3da080c6f38cf",
+        "url": "https://dl.opensubtitles.org/en/download/src-api/vrf-f53a0bb5/sub/9302347",
         "lang": "English",
-        "filename": "Blackadder - S04E02 - Corporal Punishment-eng.srt",
-        "gzip": true
+        "filename": "Babylon.Berlin.S04E09.720p.HMAX.WEB-DL.DD5.1.H.264-playWEB.srt"
       }
     },
     {
-      "service_name": "bsplayer",
-      "service": "BSPlayer",
+      "service_name": "subscene",
+      "service": "Subscene",
       "lang": "English",
-      "name": "Blackadder - S04E02 - Corporal Punishment.srt",
+      "name": "Babylon.Berlin.S04E09.Episode.9.1080p.HMAX.WEB-DL.DD5.1.H.264.srt",
       "rating": 0,
       "lang_code": "en",
-      "sync": "true",
+      "sync": "false",
       "impaired": "false",
-      "color": "gold",
+      "color": "dodgerblue",
       "action_args": {
-        "url": "http://download.bsplayer-subtitles.com/download/file/35216901/d8deb8ebd5fb41e6639a3da080c6f38cf",
-        "lang": "English",
-        "filename": "Blackadder - S04E02 - Corporal Punishment-eng.srt",
-        "gzip": true
-      }
-    },
-    {
-      "service_name": "bsplayer",
-      "service": "BSPlayer",
-      "lang": "English",
-      "name": "Blackadder - S04E02 - Corporal Punishment.srt",
-      "rating": 0,
-      "lang_code": "en",
-      "sync": "true",
-      "impaired": "false",
-      "color": "gold",
-      "action_args": {
-        "url": "http://download.bsplayer-subtitles.com/download/file/32704590/d8deb8ebd5fb41e6639a3da080c6f38cf",
-        "lang": "English",
-        "filename": "Blackadder - S04E02 - Corporal Punishment-eng.srt",
-        "gzip": true
-      }
-    },
-    {
-      "service_name": "bsplayer",
-      "service": "BSPlayer",
-      "lang": "English",
-      "name": "Blackadder - S04E02 - Corporal Punishment.srt",
-      "rating": 0,
-      "lang_code": "en",
-      "sync": "true",
-      "impaired": "false",
-      "color": "gold",
-      "action_args": {
-        "url": "http://download.bsplayer-subtitles.com/download/file/31715822/d8deb8ebd5fb41e6639a3da080c6f38cf",
-        "lang": "English",
-        "filename": "Blackadder---S04E02---Corporal-Punishment-eng.srt",
-        "gzip": true
-      }
-    },
-    {
-      "service_name": "bsplayer",
-      "service": "BSPlayer",
-      "lang": "English",
-      "name": "Blackadder - S04E02 - Corporal Punishment.srt",
-      "rating": 0,
-      "lang_code": "en",
-      "sync": "true",
-      "impaired": "false",
-      "color": "gold",
-      "action_args": {
-        "url": "http://download.bsplayer-subtitles.com/download/file/29331155/d8deb8ebd5fb41e6639a3da080c6f38cf",
-        "lang": "English",
-        "filename": "Blackadder - S04E02 - Corporal Punishment-eng.srt",
-        "gzip": true
-      }
-    },
-    {
-      "service_name": "bsplayer",
-      "service": "BSPlayer",
-      "lang": "English",
-      "name": "Blackadder - S04E02 - Corporal Punishment.srt",
-      "rating": 0,
-      "lang_code": "en",
-      "sync": "true",
-      "impaired": "false",
-      "color": "gold",
-      "action_args": {
-        "url": "http://download.bsplayer-subtitles.com/download/file/27211630/d8deb8ebd5fb41e6639a3da080c6f38cf",
-        "lang": "English",
-        "filename": "Blackadder - S04E02 - Corporal Punishment-eng.srt",
-        "gzip": true
-      }
-    },
-    {
-      "service_name": "bsplayer",
-      "service": "BSPlayer",
-      "lang": "English",
-      "name": "Blackadder - S04E02 - Corporal Punishment.srt",
-      "rating": 0,
-      "lang_code": "en",
-      "sync": "true",
-      "impaired": "false",
-      "color": "gold",
-      "action_args": {
-        "url": "http://download.bsplayer-subtitles.com/download/file/26731095/d8deb8ebd5fb41e6639a3da080c6f38cf",
-        "lang": "English",
-        "filename": "Blackadder - S04E02 - Corporal Punishment-eng.srt",
-        "gzip": true
-      }
-    },
-    {
-      "service_name": "bsplayer",
-      "service": "BSPlayer",
-      "lang": "English",
-      "name": "Blackadder - S04E02 - Corporal Punishment.srt",
-      "rating": 0,
-      "lang_code": "en",
-      "sync": "true",
-      "impaired": "false",
-      "color": "gold",
-      "action_args": {
-        "url": "http://download.bsplayer-subtitles.com/download/file/39281290/d8deb8ebd5fb41e6639a3da080c6f38cf",
-        "lang": "English",
-        "filename": "Blackadder - S04E02 - Corporal Punishment-eng.srt",
-        "gzip": true
-      }
-    },
-    {
-      "service_name": "bsplayer",
-      "service": "BSPlayer",
-      "lang": "English",
-      "name": "Blackadder - S04E02 - Corporal Punishment.srt",
-      "rating": 0,
-      "lang_code": "en",
-      "sync": "true",
-      "impaired": "false",
-      "color": "gold",
-      "action_args": {
-        "url": "http://download.bsplayer-subtitles.com/download/file/50352062/d8deb8ebd5fb41e6639a3da080c6f38cf",
-        "lang": "English",
-        "filename": "Blackadder - S04E02 - Corporal Punishment-eng.srt",
-        "gzip": true
-      }
-    },
-    {
-      "service_name": "bsplayer",
-      "service": "BSPlayer",
-      "lang": "English",
-      "name": "Blackadder - S04E02 - Corporal Punishment.srt",
-      "rating": 0,
-      "lang_code": "en",
-      "sync": "true",
-      "impaired": "false",
-      "color": "gold",
-      "action_args": {
-        "url": "http://download.bsplayer-subtitles.com/download/file/46014373/d8deb8ebd5fb41e6639a3da080c6f38cf",
-        "lang": "English",
-        "filename": "Blackadder - S04E02 - Corporal Punishment-eng.srt",
-        "gzip": true
-      }
-    },
-    {
-      "service_name": "bsplayer",
-      "service": "BSPlayer",
-      "lang": "English",
-      "name": "Blackadder - S04E02 - Corporal Punishment.srt",
-      "rating": 0,
-      "lang_code": "en",
-      "sync": "true",
-      "impaired": "false",
-      "color": "gold",
-      "action_args": {
-        "url": "http://download.bsplayer-subtitles.com/download/file/44629926/d8deb8ebd5fb41e6639a3da080c6f38cf",
-        "lang": "English",
-        "filename": "Blackadder - S04E02 - Corporal Punishment-eng.srt",
-        "gzip": true
-      }
-    },
-    {
-      "service_name": "bsplayer",
-      "service": "BSPlayer",
-      "lang": "English",
-      "name": "Blackadder - S04E02 - Corporal Punishment.srt",
-      "rating": 0,
-      "lang_code": "en",
-      "sync": "true",
-      "impaired": "false",
-      "color": "gold",
-      "action_args": {
-        "url": "http://download.bsplayer-subtitles.com/download/file/44532424/d8deb8ebd5fb41e6639a3da080c6f38cf",
-        "lang": "English",
-        "filename": "02.Corporal.Punsihment[DVDRip]Xvid.MP3-DsG-eng.srt",
-        "gzip": true
-      }
-    },
-    {
-      "service_name": "bsplayer",
-      "service": "BSPlayer",
-      "lang": "English",
-      "name": "Blackadder - S04E02 - Corporal Punishment.srt",
-      "rating": 0,
-      "lang_code": "en",
-      "sync": "true",
-      "impaired": "false",
-      "color": "gold",
-      "action_args": {
-        "url": "http://download.bsplayer-subtitles.com/download/file/44362582/d8deb8ebd5fb41e6639a3da080c6f38cf",
-        "lang": "English",
-        "filename": "Blackadder - S04E02 - Corporal Punishment-eng.srt",
-        "gzip": true
-      }
-    },
-    {
-      "service_name": "bsplayer",
-      "service": "BSPlayer",
-      "lang": "English",
-      "name": "Blackadder - S04E02 - Corporal Punishment.srt",
-      "rating": 0,
-      "lang_code": "en",
-      "sync": "true",
-      "impaired": "false",
-      "color": "gold",
-      "action_args": {
-        "url": "http://download.bsplayer-subtitles.com/download/file/40034183/d8deb8ebd5fb41e6639a3da080c6f38cf",
-        "lang": "English",
-        "filename": "Blackadder - S04E02 - Corporal Punishment-eng.srt",
-        "gzip": true
+        "url": "https://subscene.com/subtitles/babylon-berlin-fourth-season/english/2932045",
+        "lang": "english",
+        "filename": "Babylon.Berlin.S04E09.Episode.9.1080p.HMAX.WEB-DL.DD5.1.H.264.srt",
+        "episodeid": "s04e09"
       }
     }
   ]

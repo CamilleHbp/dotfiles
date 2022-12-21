@@ -1,0 +1,1 @@
+["IT", ["italian restaurant near me", "ita airways", "italy", "itunes", "italie", "itineraire", "it", "italian to english", "itineraire ratp", "it ends with us"], [], {"google:suggestsubtypes": [[512], [512], [512], [512], [512], [512], [512], [512], [512], [512]], "google:suggesttype": ["QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY"]}]

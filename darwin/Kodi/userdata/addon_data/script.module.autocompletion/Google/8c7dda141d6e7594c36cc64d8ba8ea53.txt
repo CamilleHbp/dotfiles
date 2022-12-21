@@ -1,0 +1,1 @@
+["cocoscra", ["coco scrabble", "coco scrabble word", "coco scrapers", "coco scratch", "coco scrub", "cocoscrack gmbh"], [], {"google:suggestsubtypes": [[512, 10], [512, 10], [512, 10], [512, 10], [512, 10], [30]], "google:suggesttype": ["QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY"]}]

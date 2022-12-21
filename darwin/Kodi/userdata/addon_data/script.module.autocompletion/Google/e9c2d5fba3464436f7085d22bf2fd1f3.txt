@@ -1,0 +1,1 @@
+["ITA,ITA.ENG,ITA-ENG,Ita,ita", ["ita ita.eng ita-eng ita italia", "ita ita.eng ita-eng ita italie", "ita ita.eng ita-eng ita italiano"], [], {"google:suggestsubtypes": [[160], [160], [160]], "google:suggesttype": ["TAIL", "TAIL", "TAIL"]}]

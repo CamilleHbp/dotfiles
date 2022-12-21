@@ -1,0 +1,1 @@
+["ITA,ITA.E", ["italiano em italiano", "italiano en italiano traductor", "italiano espa\u00f1ol italiano"], [], {"google:suggestsubtypes": [[22, 30], [22, 30], [22, 30]], "google:suggesttype": ["QUERY", "QUERY", "QUERY"]}]

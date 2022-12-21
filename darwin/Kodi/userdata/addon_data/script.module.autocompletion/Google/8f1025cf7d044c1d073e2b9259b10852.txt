@@ -1,0 +1,1 @@
+["ITA,ITA.ENG,ITA-ENG,Ita,ita,R", ["ita ita.eng ita-eng ita ita report", "ita ita.eng ita-eng ita ita ru", "ita ita.eng ita-eng ita ita roma", "ita ita.eng ita-eng ita ita re", "ita ita.eng ita-eng ita ita reunion"], [], {"google:suggestsubtypes": [[160], [160], [160], [160], [21]], "google:suggesttype": ["TAIL", "TAIL", "TAIL", "TAIL", "TAIL"]}]

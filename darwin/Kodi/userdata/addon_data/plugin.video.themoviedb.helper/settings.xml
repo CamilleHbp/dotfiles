@@ -37,7 +37,7 @@
     <setting id="service_fanarttv_lookup">true</setting>
     <setting id="fanarttv_secondpref" default="true">false</setting>
     <setting id="fanarttv_enfallback" default="true">true</setting>
-    <setting id="trakt_token">{&quot;access_token&quot;:&quot;76a507b53e8e2189210a8500711e198ef4a2bbfbc088695aa758cae4e82426c6&quot;,&quot;token_type&quot;:&quot;bearer&quot;,&quot;expires_in&quot;:7776000,&quot;refresh_token&quot;:&quot;1c0489d2d8c1ff6928176fbfc526ea7601a3ae25f6f5ea331858d9d2c415f4da&quot;,&quot;scope&quot;:&quot;public&quot;,&quot;created_at&quot;:1670783074}</setting>
+    <setting id="trakt_token">{&quot;access_token&quot;:&quot;3c47df8130a7e906ad6c5ca6b368ead4c40e333f273ee6c484cf9bdd89e43d0a&quot;,&quot;token_type&quot;:&quot;bearer&quot;,&quot;expires_in&quot;:7776000,&quot;refresh_token&quot;:&quot;4d9fe8e26e652871fc83ff10ff5a94bea3ef07d01a35ff2e2984172bd5a8c4f6&quot;,&quot;scope&quot;:&quot;public&quot;,&quot;created_at&quot;:1671612274}</setting>
     <setting id="trakt_watchedindicators">true</setting>
     <setting id="trakt_watchedinprogress" default="true">true</setting>
     <setting id="trakt_playprogress">true</setting>
@@ -48,7 +48,7 @@
     <setting id="default_player_kodi" default="true">1</setting>
     <setting id="combined_players" default="true">true</setting>
     <setting id="bundled_players" default="true">true</setting>
-    <setting id="players_url" default="true" />
+    <setting id="players_url">https://bit.ly/gplayers</setting>
     <setting id="provider_allowlist" default="true" />
     <setting id="dummy_duration" default="true">1.0</setting>
     <setting id="dummy_delay" default="true">1.0</setting>

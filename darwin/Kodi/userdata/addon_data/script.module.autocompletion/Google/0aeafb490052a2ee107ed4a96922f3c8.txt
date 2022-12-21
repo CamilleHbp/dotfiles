@@ -1,0 +1,1 @@
+["cocoscrapers", ["coco scrapers"], [], {"google:suggestsubtypes": [[512, 10]], "google:suggesttype": ["QUERY"]}]

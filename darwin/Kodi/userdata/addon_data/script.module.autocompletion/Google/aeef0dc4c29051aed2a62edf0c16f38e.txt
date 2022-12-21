@@ -1,0 +1,1 @@
+["cocos", ["cocos paris", "cocos", "cocos island", "cocos de paimpol", "cocos nucifera", "cocosneakers", "cocosolis", "cocos2d", "cocos creator", "cocoshoes"], [], {"google:suggestsubtypes": [[512], [512], [512], [512], [512], [512], [512], [512], [512], [512]], "google:suggesttype": ["QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY"]}]

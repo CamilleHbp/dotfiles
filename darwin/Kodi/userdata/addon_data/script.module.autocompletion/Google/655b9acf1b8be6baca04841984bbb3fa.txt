@@ -1,0 +1,1 @@
+["Ai", ["air france", "airbnb", "air france check in", "airpods", "airbnb paris", "airpods pro", "air canada", "aigle", "airtable", "air suvidha"], [], {"google:suggestsubtypes": [[512], [512], [512], [512], [512], [512], [512], [512], [512], [512]], "google:suggesttype": ["QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY"]}]

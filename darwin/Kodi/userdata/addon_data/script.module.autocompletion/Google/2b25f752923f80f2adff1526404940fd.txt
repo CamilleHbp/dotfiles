@@ -1,0 +1,1 @@
+["coco", ["coco paris", "coco restaurant", "coco restaurant paris", "coco chanel", "coco paris menu", "cocotte", "coco", "cocorico", "cocolis", "cocomelon"], [], {"google:suggestsubtypes": [[512], [512, 457], [402], [512], [512], [512], [512], [512], [512], [512]], "google:suggesttype": ["QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY"]}]
