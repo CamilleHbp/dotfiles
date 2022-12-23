@@ -1,0 +1,1 @@
+["Ye", ["yeezy", "ye", "yellowstone", "yesstyle", "yelp", "yes in french", "yen to euro", "yeezy 700", "yen paris", "yemen"], [], {"google:suggestsubtypes": [[512], [512], [512], [512], [512], [512], [512], [512], [512], [512]], "google:suggesttype": ["QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY"]}]

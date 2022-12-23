@@ -1,0 +1,1 @@
+["Se", ["sephora", "seloger", "sezane", "sephora near me", "selena gomez", "serie a", "secret santa", "septime paris", "sendinblue", "sephora france"], [], {"google:suggestsubtypes": [[512], [512], [512], [512], [512], [512], [512], [512], [512], [512]], "google:suggesttype": ["QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY"]}]

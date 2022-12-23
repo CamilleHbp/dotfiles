@@ -35,7 +35,7 @@
                 <top>22</top>
                 <width max="355">auto</width>
                 <height>20</height>
-                <font>Tiny44</font>
+                <font>font_tiny</font>
                 <textcolor>FFFFFFFF</textcolor>
                 <align>left</align>
                 <aligny>center</aligny>
@@ -67,7 +67,7 @@
                     <left>355</left>
                     <width max="1210">auto</width>
                     <height>30</height>
-                    <font>lyrics7s</font>
+                    <font>font_huge_bold</font>
                     <textcolor>FFCCCCCC</textcolor>
                     <align>center</align>
                     <aligny>top</aligny>
@@ -92,7 +92,7 @@
                     <top>862</top>
                     <width>486</width>
                     <height>188</height>
-                    <font>LabelInfoSub</font>
+                    <font>font_mini</font>
                     <align>justify</align>
                     <aligny>top</aligny>
                     <label>$INFO[Window.Property(plot)]</label>
@@ -133,14 +133,14 @@
                             <left>20</left>
                             <visible>String.IsEmpty(ListItem.Property(perform_full_search))</visible>
                             <control type="label">
-                                <font>Name1</font>
+                                <font>font_midi</font>
                                 <align>left</align>
                                 <aligny>bottom</aligny>
                                 <label>[COLOR $INFO[ListItem.Property(highlight)]][B]$INFO[ListItem.Property(quality)][/B][/COLOR]</label>
                             </control>
                             <control type="label">
                                 <top>35</top>
-                                <font>Tiny44</font>
+                                <font>font_tiny</font>
                                 <align>left</align>
                                 <aligny>top</aligny>
                                 <label>[COLOR $INFO[ListItem.Property(highlight)]][B]$INFO[ListItem.Property(provider)][/B][/COLOR]</label>
@@ -151,7 +151,7 @@
                             <left>210</left>
                             <width max="1070">auto</width>
                             <height>12</height>
-                            <font>LabelInfoSub</font>
+                            <font>font_mini</font>
                             <textcolor>FFCCCCCC</textcolor>
                             <align>left</align>
                             <aligny>center</aligny>
@@ -163,7 +163,7 @@
                             <left>210</left>
                             <width max="1070">auto</width>
                             <height>12</height>
-                            <font>LabelInfoSub</font>
+                            <font>font_mini</font>
                             <textcolor>FFCCCCCC</textcolor>
                             <align>left</align>
                             <aligny>center</aligny>
@@ -175,7 +175,7 @@
                             <left>210</left>
                             <width max="1070">auto</width>
                             <height>12</height>
-                            <font>LabelInfoSub</font>
+                            <font>font_mini</font>
                             <textcolor>FFCCCCCC</textcolor>
                             <align>left</align>
                             <aligny>center</aligny>
@@ -197,7 +197,7 @@
                             <left>210</left>
                             <width max="860">auto</width>
                             <height>40</height>
-                            <font>Name1</font>
+                            <font>font_midi</font>
                             <textcolor>FF9c9a9b</textcolor>
                             <align>center</align>
                             <aligny>center</aligny>
@@ -231,7 +231,7 @@
                                 <left>20</left>
                                 <visible>String.IsEmpty(ListItem.Property(perform_full_search))</visible>
                                 <control type="label">
-                                    <font>Name1</font>
+                                    <font>font_midi</font>
                                     <textcolor>FF4a4347</textcolor>
                                     <align>left</align>
                                     <aligny>bottom</aligny>
@@ -239,7 +239,7 @@
                                 </control>
                                 <control type="label">
                                     <top>35</top>
-                                    <font>Tiny44</font>
+                                    <font>font_tiny</font>
                                     <textcolor>FF4a4347</textcolor>
                                     <align>left</align>
                                     <aligny>top</aligny>
@@ -251,7 +251,7 @@
                                 <left>210</left>
                                 <width max="1070">auto</width>
                                 <height>12</height>
-                                <font>LabelInfoSub</font>
+                                <font>font_mini</font>
                                 <textcolor>FF4a4347</textcolor>
                                 <align>left</align>
                                 <aligny>center</aligny>
@@ -263,7 +263,7 @@
                                 <left>210</left>
                                 <width max="1070">auto</width>
                                 <height>12</height>
-                                <font>LabelInfoSub</font>
+                                <font>font_mini</font>
                                 <textcolor>FF4a4347</textcolor>
                                 <align>left</align>
                                 <aligny>center</aligny>
@@ -275,7 +275,7 @@
                                 <left>210</left>
                                 <width max="1070">auto</width>
                                 <height>12</height>
-                                <font>LabelInfoSub</font>
+                                <font>font_mini</font>
                                 <textcolor>FF4a4347</textcolor>
                                 <align>left</align>
                                 <aligny>center</aligny>
@@ -297,7 +297,7 @@
                                 <left>210</left>
                                 <width max="860">auto</width>
                                 <height>40</height>
-                                <font>Name1</font>
+                                <font>font_midi</font>
                                 <textcolor>FF4a4347</textcolor>
                                 <align>center</align>
                                 <aligny>center</aligny>
@@ -333,7 +333,7 @@
                                 <left>20</left>
                                 <visible>String.IsEmpty(ListItem.Property(perform_full_search))</visible>
                                 <control type="label">
-                                    <font>Name1</font>
+                                    <font>font_midi</font>
                                     <textcolor>FFdedad1</textcolor>
                                     <align>left</align>
                                     <aligny>bottom</aligny>
@@ -341,7 +341,7 @@
                                 </control>
                                 <control type="label">
                                     <top>35</top>
-                                    <font>Tiny44</font>
+                                    <font>font_tiny</font>
                                     <textcolor>FFdedad1</textcolor>
                                     <align>left</align>
                                     <aligny>top</aligny>
@@ -353,7 +353,7 @@
                                 <left>210</left>
                                 <width max="1070">auto</width>
                                 <height>12</height>
-                                <font>LabelInfoSub</font>
+                                <font>font_mini</font>
                                 <textcolor>FFFFFFFF</textcolor>
                                 <align>left</align>
                                 <aligny>center</aligny>
@@ -365,7 +365,7 @@
                                 <left>210</left>
                                 <width max="1070">auto</width>
                                 <height>12</height>
-                                <font>LabelInfoSub</font>
+                                <font>font_mini</font>
                                 <textcolor>FFFFFFFF</textcolor>
                                 <align>left</align>
                                 <aligny>center</aligny>
@@ -377,7 +377,7 @@
                                 <left>210</left>
                                 <width max="1070">auto</width>
                                 <height>12</height>
-                                <font>LabelInfoSub</font>
+                                <font>font_mini</font>
                                 <textcolor>FFFFFFFF</textcolor>
                                 <align>left</align>
                                 <aligny>center</aligny>
@@ -399,7 +399,7 @@
                                 <left>210</left>
                                 <width max="860">auto</width>
                                 <height>40</height>
-                                <font>Name1</font>
+                                <font>font_midi</font>
                                 <textcolor>FFFFFFFF</textcolor>
                                 <align>center</align>
                                 <aligny>center</aligny>
@@ -470,7 +470,7 @@
                     <left>355</left>
                     <width max="1210">auto</width>
                     <height>30</height>
-                    <font>lyrics7s</font>
+                    <font>font_huge_bold</font>
                     <textcolor>FFCCCCCC</textcolor>
                     <align>center</align>
                     <aligny>bottom</aligny>
@@ -519,7 +519,7 @@
                     <control type="label">
                         <width max="750">auto</width>
                         <height>20</height>
-                        <font>LabelInfoSub</font>
+                        <font>font_mini</font>
                         <textcolor>FFCCCCCC</textcolor>
                         <align>left</align>
                         <aligny>center</aligny>
@@ -529,7 +529,7 @@
                         <top>50</top>
                         <width max="750">auto</width>
                         <height>20</height>
-                        <font>LabelInfoSub</font>
+                        <font>font_mini</font>
                         <textcolor>FFCCCCCC</textcolor>
                         <align>left</align>
                         <aligny>center</aligny>
@@ -539,7 +539,7 @@
                         <top>100</top>
                         <width max="750">auto</width>
                         <height>20</height>
-                        <font>LabelInfoSub</font>
+                        <font>font_mini</font>
                         <textcolor>FFCCCCCC</textcolor>
                         <align>left</align>
                         <aligny>center</aligny>
@@ -549,7 +549,7 @@
                         <top>150</top>
                         <width max="750">auto</width>
                         <height>20</height>
-                        <font>LabelInfoSub</font>
+                        <font>font_mini</font>
                         <textcolor>FFCCCCCC</textcolor>
                         <align>left</align>
                         <aligny>center</aligny>
@@ -559,7 +559,7 @@
                         <top>200</top>
                         <width max="750">auto</width>
                         <height>20</height>
-                        <font>LabelInfoSub</font>
+                        <font>font_mini</font>
                         <textcolor>FFCCCCCC</textcolor>
                         <align>left</align>
                         <aligny>center</aligny>
@@ -569,7 +569,7 @@
                         <top>250</top>
                         <width max="750">auto</width>
                         <height>20</height>
-                        <font>LabelInfoSub</font>
+                        <font>font_mini</font>
                         <textcolor>FFCCCCCC</textcolor>
                         <align>left</align>
                         <aligny>center</aligny>
@@ -579,7 +579,7 @@
                         <top>300</top>
                         <width max="750">auto</width>
                         <height>20</height>
-                        <font>LabelInfoSub</font>
+                        <font>font_mini</font>
                         <textcolor>FFCCCCCC</textcolor>
                         <align>left</align>
                         <aligny>center</aligny>
@@ -590,7 +590,7 @@
                         <left>0</left>
                         <width>750</width>
                         <height>97</height>
-                        <font>LabelInfoSub</font>
+                        <font>font_mini</font>
                         <align>left</align>
                         <aligny>top</aligny>
                         <textcolor>FFCCCCCC</textcolor>
@@ -641,14 +641,14 @@
                             <left>20</left>
                             <visible>String.IsEmpty(ListItem.Property(perform_full_search))</visible>
                             <control type="label">
-                                <font>Name1</font>
+                                <font>font_midi</font>
                                 <align>left</align>
                                 <aligny>bottom</aligny>
                                 <label>[COLOR $INFO[ListItem.Property(highlight)]][B]$INFO[ListItem.Property(quality)][/B][/COLOR]</label>
                             </control>
                             <control type="label">
                                 <top>35</top>
-                                <font>Tiny44</font>
+                                <font>font_tiny</font>
                                 <align>left</align>
                                 <aligny>top</aligny>
                                 <label>[COLOR $INFO[ListItem.Property(highlight)]][B]$INFO[ListItem.Property(provider)][/B][/COLOR]</label>
@@ -659,7 +659,7 @@
                             <left>185</left>
                             <width max="835">auto</width>
                             <height>12</height>
-                            <font>Tiny44</font>
+                            <font>font_tiny</font>
                             <textcolor>FFCCCCCC</textcolor>
                             <align>left</align>
                             <aligny>center</aligny>
@@ -671,7 +671,7 @@
                             <left>185</left>
                             <width max="835">auto</width>
                             <height>12</height>
-                            <font>Tiny44</font>
+                            <font>font_tiny</font>
                             <textcolor>FFCCCCCC</textcolor>
                             <align>left</align>
                             <aligny>center</aligny>
@@ -683,7 +683,7 @@
                             <left>185</left>
                             <width max="835">auto</width>
                             <height>12</height>
-                            <font>Tiny44</font>
+                            <font>font_tiny</font>
                             <textcolor>FFCCCCCC</textcolor>
                             <align>left</align>
                             <aligny>center</aligny>
@@ -705,7 +705,7 @@
                             <left>135</left>
                             <width max="860">auto</width>
                             <height>40</height>
-                            <font>Name1</font>
+                            <font>font_midi</font>
                             <textcolor>FF9c9a9b</textcolor>
                             <align>center</align>
                             <aligny>center</aligny>
@@ -739,7 +739,7 @@
                                 <left>20</left>
                                 <visible>String.IsEmpty(ListItem.Property(perform_full_search))</visible>
                                 <control type="label">
-                                    <font>Name1</font>
+                                    <font>font_midi</font>
                                     <textcolor>FF4a4347</textcolor>
                                     <align>left</align>
                                     <aligny>bottom</aligny>
@@ -747,7 +747,7 @@
                                 </control>
                                 <control type="label">
                                     <top>35</top>
-                                    <font>Tiny44</font>
+                                    <font>font_tiny</font>
                                     <textcolor>FF4a4347</textcolor>
                                     <align>left</align>
                                     <aligny>top</aligny>
@@ -759,7 +759,7 @@
                                 <left>185</left>
                                 <width max="835">auto</width>
                                 <height>12</height>
-                                <font>Tiny44</font>
+                                <font>font_tiny</font>
                                 <textcolor>FF4a4347</textcolor>
                                 <align>left</align>
                                 <aligny>center</aligny>
@@ -771,7 +771,7 @@
                                 <left>185</left>
                                 <width max="835">auto</width>
                                 <height>12</height>
-                                <font>Tiny44</font>
+                                <font>font_tiny</font>
                                 <textcolor>FF4a4347</textcolor>
                                 <align>left</align>
                                 <aligny>center</aligny>
@@ -783,7 +783,7 @@
                                 <left>185</left>
                                 <width max="835">auto</width>
                                 <height>12</height>
-                                <font>Tiny44</font>
+                                <font>font_tiny</font>
                                 <textcolor>FF4a4347</textcolor>
                                 <align>left</align>
                                 <aligny>center</aligny>
@@ -805,7 +805,7 @@
                                 <left>135</left>
                                 <width max="860">auto</width>
                                 <height>40</height>
-                                <font>Name1</font>
+                                <font>font_midi</font>
                                 <textcolor>FF4a4347</textcolor>
                                 <align>center</align>
                                 <aligny>center</aligny>
@@ -841,7 +841,7 @@
                                 <left>20</left>
                                 <visible>String.IsEmpty(ListItem.Property(perform_full_search))</visible>
                                 <control type="label">
-                                    <font>Name1</font>
+                                    <font>font_midi</font>
                                     <textcolor>FFdedad1</textcolor>
                                     <align>left</align>
                                     <aligny>bottom</aligny>
@@ -849,7 +849,7 @@
                                 </control>
                                 <control type="label">
                                     <top>35</top>
-                                    <font>Tiny44</font>
+                                    <font>font_tiny</font>
                                     <textcolor>FFdedad1</textcolor>
                                     <align>left</align>
                                     <aligny>top</aligny>
@@ -861,7 +861,7 @@
                                 <left>185</left>
                                 <width max="820">auto</width>
                                 <height>12</height>
-                                <font>Tiny44</font>
+                                <font>font_tiny</font>
                                 <textcolor>FFFFFFFF</textcolor>
                                 <align>left</align>
                                 <aligny>center</aligny>
@@ -873,7 +873,7 @@
                                 <left>185</left>
                                 <width max="820">auto</width>
                                 <height>12</height>
-                                <font>Tiny44</font>
+                                <font>font_tiny</font>
                                 <textcolor>FFFFFFFF</textcolor>
                                 <align>left</align>
                                 <aligny>center</aligny>
@@ -885,7 +885,7 @@
                                 <left>185</left>
                                 <width max="820">auto</width>
                                 <height>12</height>
-                                <font>Tiny44</font>
+                                <font>font_tiny</font>
                                 <textcolor>FFFFFFFF</textcolor>
                                 <align>left</align>
                                 <aligny>center</aligny>
@@ -907,7 +907,7 @@
                                 <left>135</left>
                                 <width max="860">auto</width>
                                 <height>40</height>
-                                <font>Name1</font>
+                                <font>font_midi</font>
                                 <textcolor>FFFFFFFF</textcolor>
                                 <align>center</align>
                                 <aligny>center</aligny>
@@ -979,7 +979,7 @@
                     <left>70</left>
                     <width max="1130">auto</width>
                     <height>30</height>
-                    <font>lyrics7s</font>
+                    <font>font_huge_bold</font>
                     <textcolor>FFCCCCCC</textcolor>
                     <align>center</align>
                     <aligny>bottom</aligny>
@@ -1033,14 +1033,14 @@
                             <left>20</left>
                             <visible>String.IsEmpty(ListItem.Property(perform_full_search))</visible>
                             <control type="label">
-                                <font>Name1</font>
+                                <font>font_midi</font>
                                 <align>left</align>
                                 <aligny>bottom</aligny>
                                 <label>[COLOR $INFO[ListItem.Property(highlight)]][B]$INFO[ListItem.Property(quality)][/B][/COLOR]</label>
                             </control>
                             <control type="label">
                                 <top>35</top>
-                                <font>Tiny44</font>
+                                <font>font_tiny</font>
                                 <align>left</align>
                                 <aligny>top</aligny>
                                 <label>[COLOR $INFO[ListItem.Property(highlight)]][B]$INFO[ListItem.Property(provider)][/B][/COLOR]</label>
@@ -1051,7 +1051,7 @@
                             <left>210</left>
                             <width max="950">auto</width>
                             <height>12</height>
-                            <font>Tiny44</font>
+                            <font>font_tiny</font>
                             <textcolor>FFCCCCCC</textcolor>
                             <align>left</align>
                             <aligny>center</aligny>
@@ -1063,7 +1063,7 @@
                             <left>210</left>
                             <width max="950">auto</width>
                             <height>12</height>
-                            <font>Tiny44</font>
+                            <font>font_tiny</font>
                             <textcolor>FFCCCCCC</textcolor>
                             <align>left</align>
                             <aligny>center</aligny>
@@ -1075,7 +1075,7 @@
                             <left>210</left>
                             <width max="950">auto</width>
                             <height>12</height>
-                            <font>Tiny44</font>
+                            <font>font_tiny</font>
                             <textcolor>FFCCCCCC</textcolor>
                             <align>left</align>
                             <aligny>center</aligny>
@@ -1097,7 +1097,7 @@
                             <left>210</left>
                             <width max="860">auto</width>
                             <height>40</height>
-                            <font>Name1</font>
+                            <font>font_midi</font>
                             <textcolor>FF9c9a9b</textcolor>
                             <align>center</align>
                             <aligny>center</aligny>
@@ -1131,7 +1131,7 @@
                                 <left>20</left>
                                 <visible>String.IsEmpty(ListItem.Property(perform_full_search))</visible>
                                 <control type="label">
-                                    <font>Name1</font>
+                                    <font>font_midi</font>
                                     <textcolor>FF4a4347</textcolor>
                                     <align>left</align>
                                     <aligny>bottom</aligny>
@@ -1139,7 +1139,7 @@
                                 </control>
                                 <control type="label">
                                     <top>35</top>
-                                    <font>Tiny44</font>
+                                    <font>font_tiny</font>
                                     <textcolor>FF4a4347</textcolor>
                                     <align>left</align>
                                     <aligny>top</aligny>
@@ -1151,7 +1151,7 @@
                                 <left>210</left>
                                 <width max="950">auto</width>
                                 <height>12</height>
-                                <font>Tiny44</font>
+                                <font>font_tiny</font>
                                 <textcolor>FF4a4347</textcolor>
                                 <align>left</align>
                                 <aligny>center</aligny>
@@ -1163,7 +1163,7 @@
                                 <left>210</left>
                                 <width max="950">auto</width>
                                 <height>12</height>
-                                <font>Tiny44</font>
+                                <font>font_tiny</font>
                                 <textcolor>FF4a4347</textcolor>
                                 <align>left</align>
                                 <aligny>center</aligny>
@@ -1175,7 +1175,7 @@
                                 <left>210</left>
                                 <width max="950">auto</width>
                                 <height>12</height>
-                                <font>Tiny44</font>
+                                <font>font_tiny</font>
                                 <textcolor>FF4a4347</textcolor>
                                 <align>left</align>
                                 <aligny>center</aligny>
@@ -1197,7 +1197,7 @@
                                 <left>210</left>
                                 <width max="860">auto</width>
                                 <height>40</height>
-                                <font>Name1</font>
+                                <font>font_midi</font>
                                 <textcolor>FF4a4347</textcolor>
                                 <align>center</align>
                                 <aligny>center</aligny>
@@ -1233,7 +1233,7 @@
                                 <left>20</left>
                                 <visible>String.IsEmpty(ListItem.Property(perform_full_search))</visible>
                                 <control type="label">
-                                    <font>Name1</font>
+                                    <font>font_midi</font>
                                     <textcolor>FFdedad1</textcolor>
                                     <align>left</align>
                                     <aligny>bottom</aligny>
@@ -1241,7 +1241,7 @@
                                 </control>
                                 <control type="label">
                                     <top>35</top>
-                                    <font>Tiny44</font>
+                                    <font>font_tiny</font>
                                     <textcolor>FFdedad1</textcolor>
                                     <align>left</align>
                                     <aligny>top</aligny>
@@ -1253,7 +1253,7 @@
                                 <left>210</left>
                                 <width max="950">auto</width>
                                 <height>12</height>
-                                <font>Tiny44</font>
+                                <font>font_tiny</font>
                                 <textcolor>FFFFFFFF</textcolor>
                                 <align>left</align>
                                 <aligny>center</aligny>
@@ -1265,7 +1265,7 @@
                                 <left>210</left>
                                 <width max="950">auto</width>
                                 <height>12</height>
-                                <font>Tiny44</font>
+                                <font>font_tiny</font>
                                 <textcolor>FFFFFFFF</textcolor>
                                 <align>left</align>
                                 <aligny>center</aligny>
@@ -1277,7 +1277,7 @@
                                 <left>210</left>
                                 <width max="950">auto</width>
                                 <height>12</height>
-                                <font>Tiny44</font>
+                                <font>font_tiny</font>
                                 <textcolor>FFFFFFFF</textcolor>
                                 <align>left</align>
                                 <aligny>center</aligny>
@@ -1299,7 +1299,7 @@
                                 <left>210</left>
                                 <width max="860">auto</width>
                                 <height>40</height>
-                                <font>Name1</font>
+                                <font>font_midi</font>
                                 <textcolor>FFFFFFFF</textcolor>
                                 <align>center</align>
                                 <aligny>center</aligny>
@@ -1370,7 +1370,7 @@
                     <left>355</left>
                     <width max="1210">auto</width>
                     <height>30</height>
-                    <font>lyrics7s</font>
+                    <font>font_huge_bold</font>
                     <textcolor>FFCCCCCC</textcolor>
                     <align>center</align>
                     <aligny>bottom</aligny>
@@ -1409,14 +1409,14 @@
                             <left>20</left>
                             <visible>String.IsEmpty(ListItem.Property(perform_full_search))</visible>
                             <control type="label">
-                                <font>Name1</font>
+                                <font>font_midi</font>
                                 <align>left</align>
                                 <aligny>bottom</aligny>
                                 <label>[COLOR $INFO[ListItem.Property(highlight)]][B]$INFO[ListItem.Property(quality)][/B][/COLOR]</label>
                             </control>
                             <control type="label">
                                 <top>35</top>
-                                <font>Tiny44</font>
+                                <font>font_tiny</font>
                                 <align>left</align>
                                 <aligny>top</aligny>
                                 <label>[COLOR $INFO[ListItem.Property(highlight)]][B]$INFO[ListItem.Property(provider)][/B][/COLOR]</label>
@@ -1427,7 +1427,7 @@
                             <left>185</left>
                             <width max="725">auto</width>
                             <height>12</height>
-                            <font>Tiny44</font>
+                            <font>font_tiny</font>
                             <textcolor>FFCCCCCC</textcolor>
                             <align>left</align>
                             <aligny>center</aligny>
@@ -1439,7 +1439,7 @@
                             <left>185</left>
                             <width max="725">auto</width>
                             <height>12</height>
-                            <font>Tiny44</font>
+                            <font>font_tiny</font>
                             <textcolor>FFCCCCCC</textcolor>
                             <align>left</align>
                             <aligny>center</aligny>
@@ -1451,7 +1451,7 @@
                             <left>185</left>
                             <width max="725">auto</width>
                             <height>12</height>
-                            <font>Tiny44</font>
+                            <font>font_tiny</font>
                             <textcolor>FFCCCCCC</textcolor>
                             <align>left</align>
                             <aligny>center</aligny>
@@ -1473,7 +1473,7 @@
                             <left>135</left>
                             <width max="770">auto</width>
                             <height>40</height>
-                            <font>Name1</font>
+                            <font>font_midi</font>
                             <textcolor>FF9c9a9b</textcolor>
                             <align>center</align>
                             <aligny>center</aligny>
@@ -1507,7 +1507,7 @@
                                 <left>20</left>
                                 <visible>String.IsEmpty(ListItem.Property(perform_full_search))</visible>
                                 <control type="label">
-                                    <font>Name1</font>
+                                    <font>font_midi</font>
                                     <textcolor>FF4a4347</textcolor>
                                     <align>left</align>
                                     <aligny>bottom</aligny>
@@ -1515,7 +1515,7 @@
                                 </control>
                                 <control type="label">
                                     <top>35</top>
-                                    <font>Tiny44</font>
+                                    <font>font_tiny</font>
                                     <textcolor>FF4a4347</textcolor>
                                     <align>left</align>
                                     <aligny>top</aligny>
@@ -1527,7 +1527,7 @@
                                 <left>185</left>
                                 <width max="725">auto</width>
                                 <height>12</height>
-                                <font>Tiny44</font>
+                                <font>font_tiny</font>
                                 <textcolor>FF4a4347</textcolor>
                                 <align>left</align>
                                 <aligny>center</aligny>
@@ -1539,7 +1539,7 @@
                                 <left>185</left>
                                 <width max="725">auto</width>
                                 <height>12</height>
-                                <font>Tiny44</font>
+                                <font>font_tiny</font>
                                 <textcolor>FF4a4347</textcolor>
                                 <align>left</align>
                                 <aligny>center</aligny>
@@ -1551,7 +1551,7 @@
                                 <left>185</left>
                                 <width max="725">auto</width>
                                 <height>12</height>
-                                <font>Tiny44</font>
+                                <font>font_tiny</font>
                                 <textcolor>FF4a4347</textcolor>
                                 <align>left</align>
                                 <aligny>center</aligny>
@@ -1573,7 +1573,7 @@
                                 <left>135</left>
                                 <width max="770">auto</width>
                                 <height>40</height>
-                                <font>Name1</font>
+                                <font>font_midi</font>
                                 <textcolor>FF4a4347</textcolor>
                                 <align>center</align>
                                 <aligny>center</aligny>
@@ -1609,7 +1609,7 @@
                                 <left>20</left>
                                 <visible>String.IsEmpty(ListItem.Property(perform_full_search))</visible>
                                 <control type="label">
-                                    <font>Name1</font>
+                                    <font>font_midi</font>
                                     <textcolor>FFdedad1</textcolor>
                                     <align>left</align>
                                     <aligny>bottom</aligny>
@@ -1617,7 +1617,7 @@
                                 </control>
                                 <control type="label">
                                     <top>35</top>
-                                    <font>Tiny44</font>
+                                    <font>font_tiny</font>
                                     <textcolor>FFdedad1</textcolor>
                                     <align>left</align>
                                     <aligny>top</aligny>
@@ -1629,7 +1629,7 @@
                                 <left>185</left>
                                 <width max="725">auto</width>
                                 <height>12</height>
-                                <font>Tiny44</font>
+                                <font>font_tiny</font>
                                 <textcolor>FFFFFFFF</textcolor>
                                 <align>left</align>
                                 <aligny>center</aligny>
@@ -1641,7 +1641,7 @@
                                 <left>185</left>
                                 <width max="725">auto</width>
                                 <height>12</height>
-                                <font>Tiny44</font>
+                                <font>font_tiny</font>
                                 <textcolor>FFFFFFFF</textcolor>
                                 <align>left</align>
                                 <aligny>center</aligny>
@@ -1653,7 +1653,7 @@
                                 <left>185</left>
                                 <width max="725">auto</width>
                                 <height>12</height>
-                                <font>Tiny44</font>
+                                <font>font_tiny</font>
                                 <textcolor>FFFFFFFF</textcolor>
                                 <align>left</align>
                                 <aligny>center</aligny>
@@ -1675,7 +1675,7 @@
                                 <left>135</left>
                                 <width max="770">auto</width>
                                 <height>40</height>
-                                <font>Name1</font>
+                                <font>font_midi</font>
                                 <textcolor>FFFFFFFF</textcolor>
                                 <align>center</align>
                                 <aligny>center</aligny>
@@ -1746,7 +1746,7 @@
                     <left>355</left>
                     <width max="1210">auto</width>
                     <height>30</height>
-                    <font>lyrics7s</font>
+                    <font>font_huge_bold</font>
                     <textcolor>FFCCCCCC</textcolor>
                     <align>center</align>
                     <aligny>bottom</aligny>
@@ -1825,7 +1825,7 @@
                             <left>20</left>
                             <width>340</width>
                             <height>430</height>
-                            <font>Tiny44</font>
+                            <font>font_tiny</font>
                             <textcolor>FFCCCCCC</textcolor>
                             <align>left</align>
                             <aligny>top</aligny>
@@ -1837,7 +1837,7 @@
                             <left>20</left>
                             <width>340</width>
                             <height>185</height>
-                            <font>Name1</font>
+                            <font>font_midi</font>
                             <textcolor>FFCCCCCC</textcolor>
                             <align>center</align>
                             <aligny>top</aligny>
@@ -1891,7 +1891,7 @@
                             <left>20</left>
                             <width>340</width>
                             <height>430</height>
-                            <font>Tiny44</font>
+                            <font>font_tiny</font>
                             <textcolor>FF9c9a9b</textcolor>
                             <align>left</align>
                             <aligny>top</aligny>
@@ -1903,7 +1903,7 @@
                             <left>20</left>
                             <width>340</width>
                             <height>185</height>
-                            <font>Name1</font>
+                            <font>font_midi</font>
                             <textcolor>FF9c9a9b</textcolor>
                             <align>center</align>
                             <aligny>top</aligny>
@@ -1967,7 +1967,7 @@
                                 <left>20</left>
                                 <width>340</width>
                                 <height>430</height>
-                                <font>Tiny44</font>
+                                <font>font_tiny</font>
                                 <textcolor>FF4a4347</textcolor>
                                 <align>left</align>
                                 <aligny>top</aligny>
@@ -1979,7 +1979,7 @@
                                 <left>20</left>
                                 <width>340</width>
                                 <height>185</height>
-                                <font>Name1</font>
+                                <font>font_midi</font>
                                 <textcolor>FF4a4347</textcolor>
                                 <align>center</align>
                                 <aligny>top</aligny>
@@ -2044,7 +2044,7 @@
                                 <left>20</left>
                                 <width>340</width>
                                 <height>430</height>
-                                <font>Tiny44</font>
+                                <font>font_tiny</font>
                                 <textcolor>FFFFFFFF</textcolor>
                                 <align>left</align>
                                 <aligny>top</aligny>
@@ -2056,7 +2056,7 @@
                                 <left>20</left>
                                 <width>340</width>
                                 <height>185</height>
-                                <font>Name1</font>
+                                <font>font_midi</font>
                                 <textcolor>FFFFFFFF</textcolor>
                                 <align>center</align>
                                 <aligny>top</aligny>
@@ -2127,7 +2127,7 @@
                     <left>355</left>
                     <width max="1210">auto</width>
                     <height>30</height>
-                    <font>lyrics7s</font>
+                    <font>font_huge_bold</font>
                     <textcolor>FFCCCCCC</textcolor>
                     <align>center</align>
                     <aligny>bottom</aligny>
@@ -2203,7 +2203,7 @@
                             <left>20</left>
                             <width>380</width>
                             <height>251</height>
-                            <font>Tiny44</font>
+                            <font>font_tiny</font>
                             <textcolor>FFCCCCCC</textcolor>
                             <align>left</align>
                             <aligny>top</aligny>
@@ -2215,7 +2215,7 @@
                             <left>20</left>
                             <width>380</width>
                             <height>185</height>
-                            <font>LabelInfoSub</font>
+                            <font>font_mini</font>
                             <textcolor>FFCCCCCC</textcolor>
                             <align>center</align>
                             <aligny>top</aligny>
@@ -2269,7 +2269,7 @@
                             <left>20</left>
                             <width>380</width>
                             <height>251</height>
-                            <font>Tiny44</font>
+                            <font>font_tiny</font>
                             <textcolor>FF9c9a9b</textcolor>
                             <align>left</align>
                             <aligny>top</aligny>
@@ -2281,7 +2281,7 @@
                             <left>20</left>
                             <width>380</width>
                             <height>185</height>
-                            <font>LabelInfoSub</font>
+                            <font>font_mini</font>
                             <textcolor>FF9c9a9b</textcolor>
                             <align>center</align>
                             <aligny>top</aligny>
@@ -2345,7 +2345,7 @@
                                 <left>20</left>
                                 <width>380</width>
                                 <height>251</height>
-                                <font>Tiny44</font>
+                                <font>font_tiny</font>
                                 <textcolor>FF4a4347</textcolor>
                                 <align>left</align>
                                 <aligny>top</aligny>
@@ -2357,7 +2357,7 @@
                                 <left>20</left>
                                 <width>380</width>
                                 <height>185</height>
-                                <font>LabelInfoSub</font>
+                                <font>font_mini</font>
                                 <textcolor>FF4a4347</textcolor>
                                 <align>center</align>
                                 <aligny>top</aligny>
@@ -2422,7 +2422,7 @@
                                 <left>20</left>
                                 <width>380</width>
                                 <height>251</height>
-                                <font>Tiny44</font>
+                                <font>font_tiny</font>
                                 <textcolor>FFFFFFFF</textcolor>
                                 <align>left</align>
                                 <aligny>top</aligny>
@@ -2434,7 +2434,7 @@
                                 <left>20</left>
                                 <width>380</width>
                                 <height>185</height>
-                                <font>LabelInfoSub</font>
+                                <font>font_mini</font>
                                 <textcolor>FFFFFFFF</textcolor>
                                 <align>center</align>
                                 <aligny>top</aligny>

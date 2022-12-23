@@ -1,0 +1,1 @@
+["Search Animated seri", ["animated series search", "animated series of all time", "what animated series to watch"], [], {"google:suggestsubtypes": [[22, 30], [390], [390]], "google:suggesttype": ["QUERY", "QUERY", "QUERY"]}]

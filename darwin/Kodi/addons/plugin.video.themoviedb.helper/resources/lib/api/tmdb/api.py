@@ -1,7 +1,7 @@
 from xbmcgui import Dialog
 from resources.lib.addon.plugin import ADDONPATH, get_mpaa_prefix, get_language, convert_type, get_setting, get_localized, get_infolabel
-from resources.lib.addon.consts import TMDB_ALL_ITEMS_LISTS, TMDB_PARAMS_SEASONS, TMDB_PARAMS_EPISODES, TMDB_GENRE_IDS, CACHE_SHORT, CACHE_MEDIUM
-from resources.lib.addon.parser import try_int, is_excluded
+from resources.lib.addon.consts import TMDB_ALL_ITEMS_LISTS, TMDB_PARAMS_SEASONS, TMDB_PARAMS_EPISODES, CACHE_SHORT, CACHE_MEDIUM
+from tmdbhelper.parser import try_int
 from resources.lib.addon.window import get_property
 from resources.lib.addon.tmdate import format_date
 from resources.lib.files.futils import use_json_filecache, validify_filename
@@ -28,21 +28,36 @@ class TMDb(RequestAPI):
             self,
             api_key='a07324c669cac4d96789197134ce272b',
             language=get_language(),
-            mpaa_prefix=get_mpaa_prefix(),
-            delay_write=False):
+            mpaa_prefix=get_mpaa_prefix()):
         super(TMDb, self).__init__(
             req_api_name='TMDb',
             req_api_url=API_URL,
-            req_api_key=f'api_key={api_key}',
-            delay_write=delay_write)
+            req_api_key=f'api_key={api_key}')
         self.language = language
         self.iso_language = language[:2]
         self.iso_country = language[-2:]
+        self.iso_region = None if get_setting('ignore_regionreleasefilter') else self.iso_country
         self.req_language = f'{self.iso_language}-{self.iso_country}&include_image_language={self.iso_language},null{",en" if ARTLANG_FALLBACK else ""}&include_video_language={self.iso_language},null,en'
         self.mpaa_prefix = mpaa_prefix
         self.append_to_response = APPEND_TO_RESPONSE
         self.req_strip += [(self.append_to_response, ''), (self.req_language, f'{self.iso_language}{"_en" if ARTLANG_FALLBACK else ""}')]
-        self.mapper = ItemMapper(self.language, self.mpaa_prefix)
+        self.genres = self.get_genres()
+        self.mapper = ItemMapper(self.language, self.mpaa_prefix, self.genres)
+
+    def get_genres(self):
+
+        def _get_genres():
+            genres = []
+            try:
+                genres += self.get_request_lc('genre', 'tv', 'list')['genres']
+                genres += self.get_request_lc('genre', 'movie', 'list')['genres']
+            except (KeyError, TypeError):
+                return genres
+
+            return {i['name']: i['id'] for i in genres}
+
+        cache_name = f'TMDb.GenreLookup.{self.language}'
+        return self._cache.use_cache(_get_genres, cache_name=cache_name)
 
     def get_url_separator(self, separator=None):
         if separator == 'AND':
@@ -89,7 +104,7 @@ class TMDb(RequestAPI):
     def get_tmdb_id(self, tmdb_type=None, imdb_id=None, tvdb_id=None, query=None, year=None, episode_year=None, raw_data=False, **kwargs):
         if not tmdb_type:
             return
-        kwargs['cache_days'] = CACHE_SHORT
+        kwargs['cache_days'] = CACHE_MEDIUM
         kwargs['cache_name'] = 'TMDb.get_tmdb_id.v3'
         kwargs['cache_combine_name'] = True
         return self._cache.use_cache(
@@ -97,12 +112,12 @@ class TMDb(RequestAPI):
             episode_year=episode_year, raw_data=raw_data, **kwargs)
 
     def _get_tmdb_id(self, tmdb_type, imdb_id, tvdb_id, query, year, episode_year, raw_data, **kwargs):
-        func = self.get_request_sc
+        func = self.get_request_lc
         if not tmdb_type:
             return
         request = None
         if tmdb_type == 'genre' and query:
-            return TMDB_GENRE_IDS.get(query, '')
+            return self.genres.get(query, '')
         elif imdb_id:
             request = func('find', imdb_id, language=self.req_language, external_source='imdb_id')
             request = request.get(f'{tmdb_type}_results', [])
@@ -175,6 +190,7 @@ class TMDb(RequestAPI):
             infoproperties = {}
             infoproperties.update(get_episode_to_air(response.get('next_episode_to_air'), 'next_aired'))
             infoproperties.update(get_episode_to_air(response.get('last_episode_to_air'), 'last_aired'))
+            infoproperties['status'] = response.get('status')
             return infoproperties
 
         def _get_formatted():
@@ -487,19 +503,68 @@ class TMDb(RequestAPI):
         kwargs['query'] = quote_plus(query)
         return self.get_basic_list(f'search/{tmdb_type}', tmdb_type, **kwargs)
 
-    def get_basic_list(self, path, tmdb_type, key='results', params=None, base_tmdb_type=None, limit=None, filters={}, **kwargs):
-        response = self.get_request_sc(path, **kwargs)
-        results = response.get(key, []) if response else []
+    def get_basic_list(
+            self, path, tmdb_type, key='results', params=None, base_tmdb_type=None, limit=None, filters={},
+            sort_key=None, stacked=None, **kwargs):
+
+        if kwargs.get('page') == 'random':
+            import random
+
+            def _get_random_page(page_end):
+                kwargs['page'] = random.randint(1, page_end)
+                return self.get_request_sc(path, **kwargs)
+
+            page_end = int(kwargs.get('random_page_limit', 10))
+            response = _get_random_page(page_end)
+
+            if response and not response.get(key) and int(response.get('total_pages') or 1) < page_end:
+                response = _get_random_page(int(response['total_pages'] or 1))
+
+        else:
+            response = self.get_request_sc(path, **kwargs)
+
+        if not response:
+            return []
+
+        try:
+            results = response[key] or []
+        except (KeyError, TypeError):
+            return []
+
+        results = sorted(results, key=lambda i: i.get(sort_key, 0), reverse=True) if sort_key else results
+
+        add_infoproperties = [('total_pages', response.get('total_pages')), ('total_results', response.get('total_results'))]
+
         items = [
-            self.mapper.get_info(i, tmdb_type, definition=params, base_tmdb_type=base_tmdb_type, iso_country=self.iso_country)
+            self.mapper.get_info(i, tmdb_type, definition=params, base_tmdb_type=base_tmdb_type, iso_country=self.iso_country, add_infoproperties=add_infoproperties)
             for i in results if i]
+
         if filters:
+            from resources.lib.items.filters import is_excluded
             items = [i for i in items if not is_excluded(i, **filters)]
+
+        if stacked and items:
+            stacked_list = [items.pop(0)]
+            for i in items:
+                x = len(stacked_list) - 1
+                p = stacked_list[x]
+                if p['unique_ids'].get('tmdb') != i['unique_ids'].get('tmdb'):
+                    stacked_list.append(i)
+                    continue
+                for b, k in stacked:
+                    iv = i[b].get(k)
+                    if iv is None:
+                        continue
+                    pv = p[b].get(k)
+                    p[b][k] = iv if pv is None else f'{pv} / {iv}'
+            items = stacked_list
+
         if try_int(response.get('page', 0)) < try_int(response.get('total_pages', 0)):
             items.append({'next_page': try_int(response.get('page', 0)) + 1})
         elif limit is not None:
             paginated_items = PaginatedItems(items, page=kwargs.get('page', 1), limit=limit)
             return paginated_items.items + paginated_items.next_page
+
         return items
 
     def get_discover_list(self, tmdb_type, **kwargs):
@@ -515,20 +580,20 @@ class TMDb(RequestAPI):
         return self.get_basic_list(path, tmdb_type, **kwargs)
 
     def get_response_json(self, *args, **kwargs):
-        kwargs['region'] = self.iso_country
+        kwargs['region'] = self.iso_region
         kwargs['language'] = self.req_language
         return self.get_api_request_json(self.get_request_url(*args, **kwargs))
 
     def get_request_sc(self, *args, **kwargs):
         """ Get API request using the short cache """
         kwargs['cache_days'] = CACHE_SHORT
-        kwargs['region'] = self.iso_country
+        kwargs['region'] = self.iso_region
         kwargs['language'] = self.req_language
         return self.get_request(*args, **kwargs)
 
     def get_request_lc(self, *args, **kwargs):
         """ Get API request using the long cache """
         kwargs['cache_days'] = CACHE_MEDIUM
-        kwargs['region'] = self.iso_country
+        kwargs['region'] = self.iso_region
         kwargs['language'] = self.req_language
         return self.get_request(*args, **kwargs)

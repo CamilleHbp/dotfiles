@@ -1,0 +1,160 @@
+[
+    [
+        "::PROFILELIST::",
+        [
+            [
+                "/Users/camille/Library/Application Support/Kodi/userdata/",
+                "String.IsEqual(System.ProfileName,Master user)",
+                "Master user"
+            ]
+        ]
+    ],
+    [
+        "::SCRIPTVER::",
+        "2.0.1"
+    ],
+    [
+        "::XBMCVER::",
+        "19"
+    ],
+    [
+        "::HIDEPVR::",
+        "false"
+    ],
+    [
+        "::SHARED::",
+        "true"
+    ],
+    [
+        "::SKINDIR::",
+        "skin.arctic.horizon.2"
+    ],
+    [
+        "::FULLMENU::",
+        "True"
+    ],
+    [
+        "::SKINVER::",
+        "0.7.15"
+    ],
+    [
+        "/Users/camille/Library/Application Support/Kodi/addons/skin.arctic.horizon.2/shortcuts/searchmenu.DATA.xml",
+        "f3ce44af32a8b7ccef6d5dafae266cf1"
+    ],
+    [
+        "/Users/camille/Library/Application Support/Kodi/userdata/addon_data/script.skinshortcuts/skin.arctic.horizon.2.properties",
+        "c46f34a7629c7f734170def81ddf4a54"
+    ],
+    [
+        "/Users/camille/Library/Application Support/Kodi/addons/skin.arctic.horizon.2/shortcuts/template.xml",
+        "bdbd84b74cb2f1d671b6728d1940b798"
+    ],
+    [
+        "/Users/camille/Library/Application Support/Kodi/addons/script.skinshortcuts/resources/shortcuts/livetv.DATA.xml",
+        "3d409a85845a37633a956e43636c0535"
+    ],
+    [
+        "/Users/camille/Library/Application Support/Kodi/userdata/addon_data/script.skinshortcuts/skin.arctic.horizon.2-31085-1.DATA.xml",
+        "4b0498034ad92a0a6bc0b485d704d55f"
+    ],
+    [
+        "/Users/camille/Library/Application Support/Kodi/userdata/addon_data/script.skinshortcuts/skin.arctic.horizon.2-animation-1.DATA.xml",
+        "b28883e8ee5997faf170daf4a937446e"
+    ],
+    [
+        "/Users/camille/Library/Application Support/Kodi/addons/skin.arctic.horizon.2/shortcuts/movies-1.DATA.xml",
+        "635ae939d0b7f4273dfb807b247c96f8"
+    ],
+    [
+        "/Users/camille/Library/Application Support/Kodi/addons/skin.arctic.horizon.2/shortcuts/31085-1.DATA.xml",
+        "1c583541f8e53cc11913ee73674199b3"
+    ],
+    [
+        "/Users/camille/Library/Application Support/Kodi/userdata/addon_data/script.skinshortcuts/skin.arctic.horizon.2-animation.DATA.xml",
+        "fecbba42566fdd0ffdaec29c07be1e12"
+    ],
+    [
+        "/Users/camille/Library/Application Support/Kodi/userdata/addon_data/script.skinshortcuts/skin.arctic.horizon.2-mainmenu.DATA.xml",
+        "37e25f34d2589e88e2cfed4e1d87415f"
+    ],
+    [
+        "/Users/camille/Library/Application Support/Kodi/addons/skin.arctic.horizon.2/shortcuts/mainmenu.DATA.xml",
+        "b191804fe49051325e5a6a380cc3a30d"
+    ],
+    [
+        "/Users/camille/Library/Application Support/Kodi/addons/skin.arctic.horizon.2/shortcuts/tvshows-1.DATA.xml",
+        "c9de3e2c3633b5ca3164779bfa454d87"
+    ],
+    [
+        "/Users/camille/Library/Application Support/Kodi/addons/script.skinshortcuts/resources/shortcuts/tvshows.DATA.xml",
+        "a86ff5cfeb2ecd934ccf77a45b7a0deb"
+    ],
+    [
+        "/Users/camille/Library/Application Support/Kodi/addons/script.skinshortcuts/resources/shortcuts/videos.DATA.xml",
+        "dc44f89b483d572c54e44410e2dfd674"
+    ],
+    [
+        "/Users/camille/Library/Application Support/Kodi/addons/script.skinshortcuts/resources/shortcuts/overrides.xml",
+        "5d367b4cf434ffcb86069273d402dc28"
+    ],
+    [
+        "/Users/camille/Library/Application Support/Kodi/addons/script.skinshortcuts/resources/shortcuts/movies.DATA.xml",
+        "4997634763cceea26b3e7ed557b130e2"
+    ],
+    [
+        "/Users/camille/Library/Application Support/Kodi/userdata/addon_data/script.skinshortcuts/skin.arctic.horizon.2-31085.DATA.xml",
+        "caaf1ed0e3ba5e19b08cef5625c4168a"
+    ],
+    [
+        "/Users/camille/Library/Application Support/Kodi/userdata/addon_data/script.skinshortcuts/skin.arctic.horizon.2-videos-1.DATA.xml",
+        "c6b08e5830f14fdc7200a23fab5c4e20"
+    ],
+    [
+        "/Users/camille/Library/Application Support/Kodi/addons/script.skinshortcuts/resources/shortcuts/mainmenu.DATA.xml",
+        "8523f5b50afc14f67af449ca99ee21f8"
+    ],
+    [
+        "/Users/camille/Library/Application Support/Kodi/addons/skin.arctic.horizon.2/shortcuts/videos-1.DATA.xml",
+        "ea4d00a98ad6f8cd315d3e38a57221f5"
+    ],
+    [
+        "/Users/camille/Library/Application Support/Kodi/addons/skin.arctic.horizon.2/shortcuts/tvshows.DATA.xml",
+        "311df79aa412768392152e2b9e1fe0e8"
+    ],
+    [
+        "/Users/camille/Library/Application Support/Kodi/addons/skin.arctic.horizon.2/shortcuts/movies.DATA.xml",
+        "fe96c71013a28ce4c8b193b3b3a6d925"
+    ],
+    [
+        "/Users/camille/Library/Application Support/Kodi/userdata/addon_data/script.skinshortcuts/skin.arctic.horizon.2-movies.DATA.xml",
+        "bafa70f19491f12731106ecc50adc317"
+    ],
+    [
+        "/Users/camille/Library/Application Support/Kodi/addons/skin.arctic.horizon.2/shortcuts/powermenu.DATA.xml",
+        "f620a1c731775d237771930147537f59"
+    ],
+    [
+        "/Users/camille/Library/Application Support/Kodi/userdata/addon_data/script.skinshortcuts/skin.arctic.horizon.2-tvshows-1.DATA.xml",
+        "2f18dc76d3058bb9a059b936510b4e89"
+    ],
+    [
+        "/Users/camille/Library/Application Support/Kodi/userdata/addon_data/script.skinshortcuts/skin.arctic.horizon.2-movies-1.DATA.xml",
+        "c519fa84d57b326b82af030baf529d8a"
+    ],
+    [
+        "/Users/camille/Library/Application Support/Kodi/addons/skin.arctic.horizon.2/1080i/script-skinshortcuts-includes.xml",
+        "b752c81177b79ad3ee39e78a164d2a27"
+    ],
+    [
+        "/Users/camille/Library/Application Support/Kodi/userdata/addon_data/script.skinshortcuts/skin.arctic.horizon.2-tvshows.DATA.xml",
+        "6690907e1b757d4f0c4704aa34787a0a"
+    ],
+    [
+        "/Users/camille/Library/Application Support/Kodi/userdata/addon_data/script.skinshortcuts/skin.arctic.horizon.2-videos.DATA.xml",
+        "7952d5473128716e63d902d3d65d483d"
+    ],
+    [
+        "/Users/camille/Library/Application Support/Kodi/addons/skin.arctic.horizon.2/shortcuts/overrides.xml",
+        "b4aff68d4b5393ea7ae8d22c097b073c"
+    ]
+]

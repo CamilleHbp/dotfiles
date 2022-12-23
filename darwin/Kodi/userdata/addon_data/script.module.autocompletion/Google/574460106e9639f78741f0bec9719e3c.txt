@@ -1,0 +1,1 @@
+["Search Animation Mov", ["animation movies search", "animation 2020 animated movies", "what is the most popular animation movie"], [], {"google:suggestsubtypes": [[22, 30, 10], [390], [390]], "google:suggesttype": ["QUERY", "QUERY", "QUERY"]}]

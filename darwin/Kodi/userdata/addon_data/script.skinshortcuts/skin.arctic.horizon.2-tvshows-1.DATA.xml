@@ -1,0 +1,26 @@
+<shortcuts>
+	<shortcut>
+		<defaultID>575</defaultID>
+		<label>575</label>
+		<label2 />
+		<icon>DefaultShortcut.png</icon>
+		<thumb />
+		<action>ActivateWindow(Videos,library://video/tvshows/inprogressshows.xml,return)</action>
+		</shortcut>
+	<shortcut>
+		<defaultID>20382</defaultID>
+		<label>20382</label>
+		<label2 />
+		<icon>DefaultShortcut.png</icon>
+		<thumb />
+		<action>ActivateWindow(Videos,/Users/camille/Library/Application Support/Kodi/addons/skin.arctic.horizon.2/extras/playlists/NewEpisodes.xsp,return)</action>
+		</shortcut>
+	<shortcut>
+		<defaultID>590</defaultID>
+		<label>590</label>
+		<label2 />
+		<icon>DefaultShortcut.png</icon>
+		<thumb />
+		<action>ActivateWindow(Videos,/Users/camille/Library/Application Support/Kodi/addons/skin.arctic.horizon.2/extras/playlists/RandomTvShows.xsp,return)</action>
+		</shortcut>
+	</shortcuts>

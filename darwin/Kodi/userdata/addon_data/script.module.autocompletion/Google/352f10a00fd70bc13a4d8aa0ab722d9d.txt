@@ -1,0 +1,1 @@
+["R", ["restaurants near me", "ryanair", "reverso", "restaurant", "ralph lauren", "roblox", "real madrid", "reddit", "revolut", "rakuten"], [], {"google:suggestsubtypes": [[512], [512], [512], [512], [512], [512], [512], [512], [512], [512]], "google:suggesttype": ["QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY"]}]

@@ -1,0 +1,1 @@
+["Search Animated se", ["animated series search"], [], {"google:suggestsubtypes": [[22, 30]], "google:suggesttype": ["QUERY"]}]

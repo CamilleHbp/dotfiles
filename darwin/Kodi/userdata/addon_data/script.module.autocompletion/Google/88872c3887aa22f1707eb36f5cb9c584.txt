@@ -1,0 +1,1 @@
+["Search Animation Movie", ["animation movies search", "what is the most popular animation movie", "what animated movies came out in 2017"], [], {"google:suggestsubtypes": [[22, 30, 10], [390], [390]], "google:suggesttype": ["QUERY", "QUERY", "QUERY"]}]

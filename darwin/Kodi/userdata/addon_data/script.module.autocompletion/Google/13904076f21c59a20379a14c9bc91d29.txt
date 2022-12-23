@@ -1,0 +1,1 @@
+["S", ["skyscanner", "sephora", "spotify", "shein", "sezane", "speed test", "starbucks", "slack", "supermarket near me", "samsung"], [], {"google:suggestsubtypes": [[512], [512], [512], [512], [512], [512], [512], [512], [512], [512]], "google:suggesttype": ["QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY"]}]

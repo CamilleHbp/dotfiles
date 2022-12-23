@@ -116,18 +116,18 @@ def kodi_setting(kodi_setting, **kwargs):
     params = {"setting": kodi_setting}
     response = get_jsonrpc(method, params)
     get_property(
-        name=kwargs.get('property') or 'TMDbHelper.KodiSetting',
+        name=kwargs.get('property') or 'KodiSetting',
         set_property=f'{response.get("result", {}).get("value", "")}')
 
 
 @is_in_kwargs({'tmdb_type': ['movie', 'tv']})
 @get_tmdb_id
-def sync_trakt(tmdb_type=None, tmdb_id=None, season=None, episode=None, **kwargs):
+def sync_trakt(tmdb_type=None, tmdb_id=None, season=None, episode=None, sync_type=None, **kwargs):
     """ Open sync trakt menu for item """
     from resources.lib.script.sync import sync_trakt_item
     from resources.lib.addon.plugin import convert_type
     trakt_type = convert_type(tmdb_type, 'trakt', season=season, episode=episode)
-    sync_trakt_item(trakt_type=trakt_type, unique_id=tmdb_id, season=season, episode=episode, id_type='tmdb')
+    sync_trakt_item(trakt_type=trakt_type, unique_id=tmdb_id, season=season, episode=episode, id_type='tmdb', sync_type=sync_type)
 
 
 @is_in_kwargs({'tmdb_type': True})
@@ -165,9 +165,7 @@ def refresh_details(tmdb_id=None, tmdb_type=None, season=None, episode=None, con
 def related_lists(tmdb_id=None, tmdb_type=None, season=None, episode=None, container_update=True, include_play=False, **kwargs):
     from xbmcgui import Dialog
     from resources.lib.items.basedir import get_basedir_details
-    from resources.lib.addon.plugin import format_folderpath
-    from resources.lib.addon.parser import encode_url
-    from resources.lib.addon.plugin import executebuiltin
+    from resources.lib.addon.plugin import format_folderpath, encode_url, executebuiltin
     items = get_basedir_details(tmdb_type=tmdb_type, tmdb_id=tmdb_id, season=season, episode=episode, include_play=include_play)
     if not items or len(items) <= 1:
         return
@@ -318,6 +316,65 @@ def set_defaultplayer(**kwargs):
     set_setting(setting_name, f'{default_player["file"]} {default_player["mode"]}', 'str')
 
 
+def set_chosenplayer(tmdb_type, tmdb_id, season=None, episode=None, **kwargs):
+    """
+    Prompts user to select (or clear) a default player for a single movie or tvshow
+    """
+    from xbmcgui import Dialog
+    from resources.lib.player.players import Players
+    from resources.lib.addon.consts import PLAYERS_CHOSEN_DEFAULTS_FILENAME
+    from resources.lib.files.futils import get_json_filecache, set_json_filecache
+    from resources.lib.addon.plugin import get_localized
+
+    if tmdb_type not in ['movie', 'tv'] or not tmdb_id:
+        return
+
+    obj = get_json_filecache(PLAYERS_CHOSEN_DEFAULTS_FILENAME) or {}
+    lvl = obj
+    itm = obj.setdefault(tmdb_type, {}).setdefault(tmdb_id, {})
+    nme = kwargs.get('set_chosenplayer') or ''
+    itm['name'] = nme
+
+    # If theres a season/episode value then ask user if want to set for whole tvshow or just season/episode
+    x = 0
+    if season is not None:
+        func = Dialog()
+        opts = {'nolabel': get_localized(20364), 'yeslabel': get_localized(20373)}
+
+        if episode is not None:
+            func = func.yesnocustom
+            opts['customlabel'] = get_localized(20359)
+        else:
+            func = func.yesno
+
+        x = func(f'{tmdb_type} - {tmdb_id}', get_localized(32477), **opts)
+
+        if x == -1:
+            return
+        if x in [1, 2]:
+            lvl = itm.setdefault('season', {})
+            itm = lvl.setdefault(f'{season}', {})
+        if x == 2:
+            lvl = itm.setdefault('episode', {})
+            itm = lvl.setdefault(f'{episode}', {})
+
+    chosen_player = Players(tmdb_type).select_player(detailed=True, clear_player=True)
+    if not chosen_player:
+        return
+
+    if chosen_player.get('file') and chosen_player.get('mode'):
+        itm['file'] = chosen_player["file"]
+        itm['mode'] = chosen_player["mode"]
+        msg = get_localized(32474).format(f"{itm['file']} {itm['mode']}", nme)
+
+    else:
+        obj[tmdb_type].pop(f'{tmdb_id}')
+        msg = get_localized(32475).format(nme)
+
+    set_json_filecache(obj, PLAYERS_CHOSEN_DEFAULTS_FILENAME, 0)
+    Dialog().ok(f'{tmdb_type} - {tmdb_id}', msg)
+
+
 def library_autoupdate(**kwargs):
     from xbmcgui import Dialog
     from resources.lib.update.userlist import library_autoupdate as _library_autoupdate
@@ -345,6 +402,7 @@ def log_request(**kwargs):
     from resources.lib.addon.dialog import BusyDialog
     from resources.lib.api.trakt.api import TraktAPI
     from resources.lib.api.tmdb.api import TMDb
+    from resources.lib.api.tvdb.api import TVDb
     from resources.lib.files.futils import validify_filename
     from resources.lib.files.futils import dumps_to_file
     with BusyDialog():
@@ -355,6 +413,8 @@ def log_request(**kwargs):
             return
         if kwargs.get('log_request').lower() == 'trakt':
             kwargs['response'] = TraktAPI().get_response_json(kwargs['url'])
+        elif kwargs.get('log_request').lower() == 'tvdb':
+            kwargs['response'] = TVDb().get_response_json(kwargs['url'])
         else:
             kwargs['response'] = TMDb().get_response_json(kwargs['url'])
         if not kwargs['response']:
@@ -412,7 +472,7 @@ def play_external(**kwargs):
 def play_using(play_using, mode='play', **kwargs):
     from resources.lib.addon.plugin import get_infolabel
     from resources.lib.files.futils import read_file
-    from resources.lib.addon.parser import parse_paramstring
+    from tmdbhelper.parser import parse_paramstring
 
     def _update_from_listitem(dictionary):
         url = get_infolabel('ListItem.FileNameAndPath') or ''
@@ -452,13 +512,22 @@ def play_using(play_using, mode='play', **kwargs):
 
 def sort_list(**kwargs):
     from xbmcgui import Dialog
-    from resources.lib.addon.parser import encode_url
-    from resources.lib.addon.plugin import executebuiltin, format_folderpath
+    from resources.lib.addon.plugin import executebuiltin, format_folderpath, encode_url
     from resources.lib.api.trakt.api import get_sort_methods
-    sort_methods = get_sort_methods() if kwargs['info'] == 'trakt_userlist' else get_sort_methods(True)
+    sort_methods = get_sort_methods(kwargs['info'])
     x = Dialog().contextmenu([i['name'] for i in sort_methods])
     if x == -1:
         return
     for k, v in sort_methods[x]['params'].items():
         kwargs[k] = v
     executebuiltin(format_folderpath(encode_url(**kwargs)))
+
+
+def wikipedia(wikipedia, tmdb_type=None, match=None, **kwargs):
+    from resources.lib.api.wikipedia.api import WikipediaAPI
+    from xbmcgui import Dialog
+    match = match or ''
+    wiki = WikipediaAPI()
+    name = wiki.get_match(wikipedia, tmdb_type, match)
+    data = wiki.parse_text(wiki.get_section(name, '0'))
+    Dialog().textviewer(f'Wikipedia {wikipedia} {match}', f'[B]{name}[/B]\n{data}')

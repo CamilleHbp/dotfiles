@@ -1,6 +1,7 @@
 <settings version="2">
-    <setting id="mpaa_prefix" default="true">Rated </setting>
+    <setting id="mpaa_prefix">Rated </setting>
     <setting id="language" default="true">18</setting>
+    <setting id="ignore_regionreleasefilter" default="true">false</setting>
     <setting id="local_db">true</setting>
     <setting id="tmdb_details">true</setting>
     <setting id="artwork_quality" default="true">0</setting>
@@ -38,24 +39,33 @@
     <setting id="fanarttv_secondpref" default="true">false</setting>
     <setting id="fanarttv_enfallback" default="true">true</setting>
     <setting id="trakt_token">{&quot;access_token&quot;:&quot;3c47df8130a7e906ad6c5ca6b368ead4c40e333f273ee6c484cf9bdd89e43d0a&quot;,&quot;token_type&quot;:&quot;bearer&quot;,&quot;expires_in&quot;:7776000,&quot;refresh_token&quot;:&quot;4d9fe8e26e652871fc83ff10ff5a94bea3ef07d01a35ff2e2984172bd5a8c4f6&quot;,&quot;scope&quot;:&quot;public&quot;,&quot;created_at&quot;:1671612274}</setting>
+    <setting id="tvdb_token" default="true" />
     <setting id="trakt_watchedindicators">true</setting>
     <setting id="trakt_watchedinprogress" default="true">true</setting>
-    <setting id="trakt_playprogress">true</setting>
-    <setting id="trakt_localhack" default="true">false</setting>
+    <setting id="trakt_sortignorearticle" default="true">false</setting>
     <setting id="trakt_expandedlimit">true</setting>
+    <setting id="trakt_cacheownlists" default="true">true</setting>
+    <setting id="trakt_playprogress">true</setting>
     <setting id="default_player_movies">direct.fen.json play_movie</setting>
     <setting id="default_player_episodes">direct.fen.json play_episode</setting>
+    <setting id="default_player_provider" default="true">true</setting>
     <setting id="default_player_kodi" default="true">1</setting>
     <setting id="combined_players" default="true">true</setting>
     <setting id="bundled_players" default="true">true</setting>
     <setting id="players_url">https://bit.ly/gplayers</setting>
     <setting id="provider_allowlist" default="true" />
+    <setting id="startup_notifications" default="true">true</setting>
+    <setting id="connection_notifications" default="true">true</setting>
     <setting id="dummy_duration" default="true">1.0</setting>
     <setting id="dummy_delay" default="true">1.0</setting>
-    <setting id="force_xbmcplayer" default="true">true</setting>
+    <setting id="dummy_waitresolve" default="true">true</setting>
     <setting id="only_resolve_strm" default="true">false</setting>
+    <setting id="force_xbmcplayer" default="true">true</setting>
+    <setting id="trakt_localhack" default="true">false</setting>
     <setting id="max_threads" default="true">0</setting>
     <setting id="cache_location" default="true" />
+    <setting id="image_location" default="true" />
+    <setting id="use_mem_cache" default="true">false</setting>
     <setting id="timer_reports" default="true">false</setting>
     <setting id="debug_logging" default="true">false</setting>
 </settings>

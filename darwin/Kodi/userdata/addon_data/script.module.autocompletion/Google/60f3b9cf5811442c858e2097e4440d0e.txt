@@ -1,0 +1,1 @@
+["Search Animation ser", ["search animation servicenow", "search animation service", "search animation series"], [], {"google:suggestsubtypes": [[160, 10], [160, 10], [160, 10]], "google:suggesttype": ["TAIL", "TAIL", "TAIL"]}]

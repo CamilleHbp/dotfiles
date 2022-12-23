@@ -1,0 +1,1 @@
+["Search TV Anima", ["anime tv shows word search", "is anime tv legal", "is anime tv free", "where to search anime codes"], [], {"google:suggestsubtypes": [[8, 30, 13], [390], [390], [390]], "google:suggesttype": ["QUERY", "QUERY", "QUERY", "QUERY"]}]

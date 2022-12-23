@@ -81,7 +81,7 @@
                 <top>22</top>
                 <width max="1760">auto</width>
                 <height>20</height>
-                <font>Tiny44</font>
+                <font>font_tiny</font>
                 <textcolor>FFFFFFFF</textcolor>
                 <align>left</align>
                 <aligny>center</aligny>

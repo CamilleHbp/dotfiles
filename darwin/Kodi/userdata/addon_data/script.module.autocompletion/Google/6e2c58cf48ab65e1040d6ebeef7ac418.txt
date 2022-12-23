@@ -1,0 +1,1 @@
+["Y", ["youtube", "yahoo mail", "yahoo", "yalla shoot", "youtube mp3", "ysl", "yves rocher", "youtube music", "yacine tv", "yahoo finance"], [], {"google:suggestsubtypes": [[512], [512], [512], [512], [512], [512], [512], [512], [512], [512]], "google:suggesttype": ["QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY"]}]

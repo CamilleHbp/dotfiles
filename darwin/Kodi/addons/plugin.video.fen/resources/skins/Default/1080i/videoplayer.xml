@@ -25,7 +25,7 @@
                 <control type="label">
                     <width max="1160">auto</width>
                     <height>20</height>
-                    <font>Tiny44</font>
+                    <font>font_tiny</font>
                     <label>[COLOR B3CCCCCC][B]$ADDON[plugin.video.fen 33061][/B][/COLOR]</label>
                 </control>
             </control>

@@ -4,7 +4,7 @@
     <setting id="gamesgeneral.enableautosave" default="true">true</setting>
     <setting id="gamesgeneral.enablerewind" default="true">true</setting>
     <setting id="gamesgeneral.rewindtime" default="true">60</setting>
-    <setting id="lookandfeel.skin">skin.arctic.zephyr.mod</setting>
+    <setting id="lookandfeel.skin">skin.arctic.horizon.2</setting>
     <setting id="lookandfeel.skintheme" default="true">SKINDEFAULT</setting>
     <setting id="lookandfeel.skincolors" default="true">SKINDEFAULT</setting>
     <setting id="lookandfeel.font" default="true">Default</setting>
@@ -16,7 +16,7 @@
     <setting id="locale.charset" default="true">DEFAULT</setting>
     <setting id="locale.keyboardlayouts" default="true">English QWERTY</setting>
     <setting id="locale.activekeyboardlayout" default="true">English QWERTY</setting>
-    <setting id="locale.country" default="true">USA (12h)</setting>
+    <setting id="locale.country">Central Europe</setting>
     <setting id="locale.timezonecountry" default="true">?</setting>
     <setting id="locale.timezone" default="true">Europe/Paris</setting>
     <setting id="locale.shortdateformat" default="true">regional</setting>
@@ -455,7 +455,7 @@
             <level>0</level>
             <showhigherlevels>true</showhigherlevels>
         </eventlog>
-        <systemtotaluptime>1266</systemtotaluptime>
+        <systemtotaluptime>1738</systemtotaluptime>
     </general>
     <resolutions />
     <defaultvideosettings>

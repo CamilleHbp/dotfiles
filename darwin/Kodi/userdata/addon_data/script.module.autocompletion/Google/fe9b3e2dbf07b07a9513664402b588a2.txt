@@ -1,0 +1,1 @@
+["Animes", ["animesuge", "animes", "animesaturn", "anime store", "anime store paris", "animesam", "animes to watch", "animest", "animeseries", "animesa"], [], {"google:suggestsubtypes": [[512], [512], [512], [512, 457, 10], [402], [512], [512], [512], [512], [512]], "google:suggesttype": ["QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY"]}]

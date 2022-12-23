@@ -4,7 +4,7 @@ from resources.lib.items.container import Container
 
 
 class ListBasic(Container):
-    def get_items(self, info, tmdb_type, tmdb_id=None, page=None, limit=None, **kwargs):
+    def get_items(self, info, tmdb_type, tmdb_id=None, page=None, limit=None, sort_key=None, **kwargs):
         info_model = TMDB_BASIC_LISTS.get(info)
         info_tmdb_type = info_model.get('tmdb_type') or tmdb_type
         self.tmdb_api.mapper.imagepath_quality = info_model.get('imagepath_quality', 'IMAGEPATH_ORIGINAL')
@@ -14,6 +14,8 @@ class ListBasic(Container):
                 tmdb_id=tmdb_id,
                 iso_country=self.tmdb_api.iso_country,
                 **kwargs),
+            sort_key=sort_key or info_model.get('sort_key'),
+            stacked=info_model.get('stacked'),
             tmdb_type=info_tmdb_type,
             base_tmdb_type=tmdb_type,
             key=info_model.get('key', 'results'),
@@ -24,6 +26,7 @@ class ListBasic(Container):
         if 'tmdb_cache_only' in info_model:
             self.tmdb_cache_only = info_model['tmdb_cache_only']
         self.kodi_db = self.get_kodi_database(info_tmdb_type)
+        self.sort_by_dbid = True if self.kodi_db and info_model.get('dbid_sorting') else False
         self.library = convert_type(info_tmdb_type, 'library')
         self.container_content = convert_type(info_tmdb_type, 'container')
         self.plugin_category = get_plugin_category(info_model, convert_type(info_tmdb_type, 'plural'))

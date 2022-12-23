@@ -64,7 +64,7 @@
                 <control type="label">
                     <width max="1275">auto</width>
                     <height>20</height>
-                    <font>Name1</font>
+                    <font>font_midi</font>
                     <textcolor>FFCCCCCC</textcolor>
                     <align>left</align>
                     <aligny>center</aligny>
@@ -74,7 +74,7 @@
                     <top>50</top>
                     <width max="1275">auto</width>
                     <height>20</height>
-                    <font>Name1</font>
+                    <font>font_midi</font>
                     <textcolor>FFCCCCCC</textcolor>
                     <align>left</align>
                     <aligny>center</aligny>
@@ -84,7 +84,7 @@
                     <top>100</top>
                     <width max="1275">auto</width>
                     <height>20</height>
-                    <font>Name1</font>
+                    <font>font_midi</font>
                     <textcolor>FFCCCCCC</textcolor>
                     <align>left</align>
                     <aligny>center</aligny>
@@ -94,7 +94,7 @@
                     <top>150</top>
                     <width max="1275">auto</width>
                     <height>20</height>
-                    <font>Name1</font>
+                    <font>font_midi</font>
                     <textcolor>FFCCCCCC</textcolor>
                     <align>left</align>
                     <aligny>center</aligny>
@@ -104,7 +104,7 @@
                     <top>200</top>
                     <width max="1275">auto</width>
                     <height>20</height>
-                    <font>Name1</font>
+                    <font>font_midi</font>
                     <textcolor>FFCCCCCC</textcolor>
                     <align>left</align>
                     <aligny>center</aligny>
@@ -114,7 +114,7 @@
                     <top>250</top>
                     <width max="1275">auto</width>
                     <height>20</height>
-                    <font>Name1</font>
+                    <font>font_midi</font>
                     <textcolor>FFCCCCCC</textcolor>
                     <align>left</align>
                     <aligny>center</aligny>
@@ -124,7 +124,7 @@
                     <top>300</top>
                     <width max="1275">auto</width>
                     <height>20</height>
-                    <font>Name1</font>
+                    <font>font_midi</font>
                     <textcolor>FFCCCCCC</textcolor>
                     <align>left</align>
                     <aligny>center</aligny>
@@ -134,7 +134,7 @@
                     <top>350</top>
                     <width max="1275">auto</width>
                     <height>20</height>
-                    <font>Name1</font>
+                    <font>font_midi</font>
                     <textcolor>FFCCCCCC</textcolor>
                     <align>left</align>
                     <aligny>center</aligny>

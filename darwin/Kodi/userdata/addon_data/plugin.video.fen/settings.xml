@@ -1,5 +1,5 @@
 <settings version="2">
-    <setting id="auto_start_fen">true</setting>
+    <setting id="auto_start_fen" default="true">false</setting>
     <setting id="kodi_menu_cache" default="true">false</setting>
     <setting id="limit_concurrent_threads">true</setting>
     <setting id="max_threads">60</setting>
@@ -22,7 +22,7 @@
     <setting id="rd.refresh">SVJSODKUZOHTVVTJZSH5OIOJ5ELSUDBG6LK23KJHSJEBXXT6BQKQ</setting>
     <setting id="rd.secret">10a62666beedd34dcadfa12ef2568564b3fc343d</setting>
     <setting id="results.sort_order" default="true">1</setting>
-    <setting id="database.maintenance.due">1671735126</setting>
+    <setting id="database.maintenance.due">1672041091</setting>
     <setting id="reuse_language_invoker" default="true">true</setting>
     <setting id="folder1.display_name" default="true">Folder 1</setting>
     <setting id="folder1.movies_directory" default="true">None</setting>
@@ -44,11 +44,11 @@
     <setting id="version_number">3.0.32</setting>
     <setting id="extras.enabled_menus" default="true">2050,2051,2052,2053,2054,2055,2056,2057,2058,2059,2060,2061,2062</setting>
     <setting id="fen.highlight" default="true">dodgerblue</setting>
-    <setting id="sort.progress" default="true">0</setting>
+    <setting id="sort.progress">1</setting>
     <setting id="sort.watched" default="true">0</setting>
     <setting id="sort.collection" default="true">0</setting>
     <setting id="sort.watchlist" default="true">0</setting>
-    <setting id="ignore_articles">true</setting>
+    <setting id="ignore_articles">false</setting>
     <setting id="paginate.lists" default="true">false</setting>
     <setting id="paginate.limit">40</setting>
     <setting id="paginate.reference" default="true">0</setting>
@@ -77,7 +77,7 @@
     <setting id="nextep.include_unwatched" default="true">false</setting>
     <setting id="widget_hide_watched" default="true">false</setting>
     <setting id="widget_hide_next_page" default="true">false</setting>
-    <setting id="get_fanart_data" default="true">false</setting>
+    <setting id="get_fanart_data">true</setting>
     <setting id="fanarttv.default" default="true">false</setting>
     <setting id="image_resolutions">2</setting>
     <setting id="meta_language_display" default="true">English</setting>
@@ -95,7 +95,7 @@
     <setting id="imdb_lists.sort_direction" default="true">0</setting>
     <setting id="provider.external">true</setting>
     <setting id="open_cocoscrapers" default="true"></setting>
-    <setting id="rd.token">VHJXEGFNNKEBO6PWGVKZYJKKWH7HVW3GHK637TMEXZSMWUQSL7PA</setting>
+    <setting id="rd.token">LSAS4MB65YXUUMF2VOMFQHGH2IVSSKZARK4737FTJHLMD3WP55VA</setting>
     <setting id="rd.enabled">true</setting>
     <setting id="rd.account_id">CamilleBC</setting>
     <setting id="open_rd_authenticate" default="true"></setting>
@@ -203,7 +203,7 @@
     <setting id="results_quality_episode" default="true">SD, 720p, 1080p, 4K</setting>
     <setting id="autoplay_quality_episode" default="true">SD, 720p, 1080p, 4K</setting>
     <setting id="autoplay_next_episode">true</setting>
-    <setting id="autoplay_alert_method" default="true">0</setting>
+    <setting id="autoplay_alert_method">1</setting>
     <setting id="autoplay_default_action" default="true">0</setting>
     <setting id="autoplay_next_window_percentage">95</setting>
     <setting id="autoscrape_next_episode" default="true">false</setting>

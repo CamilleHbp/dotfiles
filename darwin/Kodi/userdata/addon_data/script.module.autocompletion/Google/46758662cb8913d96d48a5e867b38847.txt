@@ -1,0 +1,1 @@
+["Search Animation Movies", ["search anime movies", "best war animation movies", "most popular animated movies"], [], {"google:suggestsubtypes": [[22, 30], [390], [390]], "google:suggesttype": ["QUERY", "QUERY", "QUERY"]}]

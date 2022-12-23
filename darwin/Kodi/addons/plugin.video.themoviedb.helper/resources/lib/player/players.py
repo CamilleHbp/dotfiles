@@ -5,16 +5,18 @@ from xbmcplugin import setResolvedUrl
 from xbmcaddon import Addon as KodiAddon
 from resources.lib.addon.window import get_property
 from resources.lib.addon.plugin import ADDONPATH, PLUGINPATH, format_folderpath, get_localized, get_setting, executebuiltin, get_infolabel
-from resources.lib.addon.parser import try_int, try_float
-from resources.lib.addon.consts import PLAYERS_PRIORITY
+from tmdbhelper.parser import try_int, try_float
+from resources.lib.addon.consts import PLAYERS_PRIORITY, PLAYERS_CHOSEN_DEFAULTS_FILENAME
 from resources.lib.addon.dialog import BusyDialog, ProgressDialog
 from resources.lib.items.listitem import ListItem
 from resources.lib.files.futils import read_file, normalise_filesize
 from resources.lib.api.kodi.rpc import get_directory, KodiLibrary
-from resources.lib.player.details import get_item_details, get_detailed_item, get_playerstring, get_language_details, get_next_episodes
+from resources.lib.player.details import get_item_details, set_detailed_item, get_playerstring, get_language_details, get_next_episodes, get_external_ids
 from resources.lib.player.inputter import KeyboardInputter
 from resources.lib.player.putils import get_players_from_file, make_playlist, make_upnext
+from resources.lib.files.futils import get_json_filecache
 from resources.lib.addon.logger import kodi_log
+from threading import Thread
 
 
 def string_format_map(fmt, d):
@@ -70,7 +72,7 @@ def resolve_to_dummy(handle=None, stop_after=1, delay_wait=0):
         return -1
 
     # Wait for our file to stop before continuing
-    if wait_for_player() <= 0:
+    if stop_after and wait_for_player() <= 0:
         kodi_log(['lib.player.players - stopping dummy file timeout\n', path], 1)
         return -1
 
@@ -83,30 +85,64 @@ def resolve_to_dummy(handle=None, stop_after=1, delay_wait=0):
 
 
 class Players(object):
-    def __init__(self, tmdb_type, tmdb_id=None, season=None, episode=None, ignore_default=False, islocal=False, player=None, mode=None, **kwargs):
+    def __init__(self, tmdb_type, tmdb_id=None, season=None, episode=None, ignore_default='', islocal=False, player=None, mode=None, **kwargs):
         with ProgressDialog('TMDbHelper', f'{get_localized(32374)}...', total=3) as _p_dialog:
             self.action_log = []
             self.api_language = None
+            self.tmdb_type, self.tmdb_id, self.season, self.episode = tmdb_type, tmdb_id, season, episode
             self.players = get_players_from_file()
 
             _p_dialog.update(f'{get_localized(32375)}...')
+            self._thread_ext_ids = Thread(target=self._get_external_ids, args=[tmdb_type, tmdb_id, season, episode])
+            self._thread_ext_ids.start()  # We thread this lookup and rejoin later as Trakt is slow
             self.details = get_item_details(tmdb_type, tmdb_id, season, episode)
-            self.item = get_detailed_item(tmdb_type, tmdb_id, season, episode, details=self.details) or {}
+            self.item = set_detailed_item(tmdb_type, tmdb_id, season, episode, details=self.details) or {}
 
             _p_dialog.update(f'{get_localized(32376)}...')
             self._set_provider_priority()
             self.playerstring = get_playerstring(tmdb_type, tmdb_id, season, episode, details=self.details)
             self.dialog_players = self._get_players_for_dialog(tmdb_type)
 
+            self.chosen_default = self._get_chosen_default()
             self.default_player = get_setting('default_player_movies', 'str') if tmdb_type == 'movie' else get_setting('default_player_episodes', 'str')
-            self.ignore_default = f'{player} {mode or "play"}_{"movie" if tmdb_type == "movie" else "episode"}' if player else ignore_default or ''
-            self.tmdb_type, self.tmdb_id, self.season, self.episode = tmdb_type, tmdb_id, season, episode
+            self.forced_default = f'{player} {mode or "play"}_{"movie" if tmdb_type == "movie" else "episode"}' if player else ''
+            self.ignore_default = ignore_default.lower() == 'true'
+
             self.dummy_duration = try_float(get_setting('dummy_duration', 'str')) or 1.0
             self.dummy_delay = try_float(get_setting('dummy_delay', 'str')) or 1.0
+            self.dummy_waitresolve = get_setting('dummy_waitresolve')
             self.force_xbmcplayer = get_setting('force_xbmcplayer')
-            self.is_strm = islocal
             self.combined_players = get_setting('combined_players')
+
+            self.is_strm = islocal
             self.current_player = {}
+
+    def _get_chosen_default(self):
+        """
+        Check if chosen item has a specific default player and return it as 'filename mode'
+        """
+        cd = get_json_filecache(PLAYERS_CHOSEN_DEFAULTS_FILENAME)
+        if not cd:
+            return
+        try:
+            if self.tmdb_type == 'movie':
+                cd = cd['movie'][f'{self.tmdb_id}']
+                return f"{cd['file']} {cd['mode']}"
+            cd = cd['tv'][f'{self.tmdb_id}']
+            cd = cd.get('season', {}).get(f'{self.season}') or cd
+            cd = cd.get('episode', {}).get(f'{self.episode}') or cd
+            return f"{cd['file']} {cd['mode']}"
+        except KeyError:
+            return
+
+    def _get_external_ids(self, tmdb_type, tmdb_id, season, episode):
+        self.details_ext_ids = get_external_ids(tmdb_type, tmdb_id, season=season, episode=episode)
+
+    def _set_external_ids(self, tmdb_type, tmdb_id, season, episode, details, required=True):
+        if required and details:
+            self._thread_ext_ids.join()
+            details.set_details(details=self.details_ext_ids, reverse=True)
+        return set_detailed_item(tmdb_type, tmdb_id, season, episode, details=details) or {}
 
     def _set_provider_priority(self):
         try:  # Check if players are listed in providers and bump priority if found
@@ -117,6 +153,7 @@ class Players(object):
                     v['priority'] = v.get('priority', PLAYERS_PRIORITY) + 100  # Increase priority baseline by 100 to prevent other players displaying above providers
                     continue
                 v['priority'] = providers.index(v['provider']) + 1  # Add 1 because sorted() puts 0 index last
+                v['is_provider'] = True
         except (KeyError, AttributeError):
             pass
 
@@ -143,7 +180,9 @@ class Players(object):
         return {
             'file': file, 'mode': mode,
             'is_folder': is_folder,
+            'is_provider': value.get('is_provider') if not is_folder else False,
             'is_resolvable': value.get('is_resolvable'),
+            'requires_ids': value.get('requires_ids', False),
             'make_playlist': value.get('make_playlist'),
             'api_language': value.get('api_language'),
             'language': value.get('language'),
@@ -180,7 +219,8 @@ class Players(object):
         return file
 
     def _get_local_movie(self):
-        dbid = KodiLibrary(dbtype='movie').get_info(
+        k_db = KodiLibrary(dbtype='movie')
+        dbid = k_db.get_info(
             'dbid', fuzzy_match=False,
             tmdb_id=self.item.get('tmdb'),
             imdb_id=self.item.get('imdb'))
@@ -188,9 +228,13 @@ class Players(object):
             return
         if self.details:  # Add dbid to details to update our local progress.
             self.details.infolabels['dbid'] = dbid
-        return self._get_local_file(KodiLibrary(dbtype='movie').get_info('file', fuzzy_match=False, dbid=dbid))
+        return self._get_local_file(k_db.get_info('file', fuzzy_match=False, dbid=dbid))
 
     def _get_local_episode(self):
+        # Note: Don't forget about libraries that need TVDB ids from Trakt!!! Need to join ID lookup thread here!!!
+        self.item = self._set_external_ids(
+            self.tmdb_type, self.tmdb_id, self.season, self.episode,
+            details=self.details, required=True)
         dbid = KodiLibrary(dbtype='tvshow').get_info(
             'dbid', fuzzy_match=False,
             tmdb_id=self.item.get('tmdb'),
@@ -204,7 +248,8 @@ class Players(object):
             return []
         dialog_play = self._get_local_item(tmdb_type)
         dialog_search = []
-        for k, v in sorted(self.players.items(), key=lambda i: try_int(i[1].get('priority')) or PLAYERS_PRIORITY):
+        items = sorted(self.players.items(), key=lambda i: int(i[1].get('priority') or 0) or PLAYERS_PRIORITY)
+        for k, v in items:
             if v.get('disabled', '').lower() == 'true':
                 continue  # Skip disabled players
             if tmdb_type == 'movie':
@@ -486,17 +531,40 @@ class Players(object):
 
     def get_default_player(self):
         """ Returns default player """
-        if self.ignore_default:
-            if self.ignore_default.lower() == 'true':
-                return
-            self.default_player = self.ignore_default
-        elif self.dialog_players[0].get('is_local') and get_setting('default_player_kodi', 'int') == 1:
-            player = self.dialog_players[0]
-            player['idx'] = 0
-            return player
 
-        # No default player setting or no players left
-        if not self.default_player or not self.dialog_players:
+        if self.ignore_default:
+            return
+
+        if not self.dialog_players:
+            return
+
+        if self.forced_default:
+            return self._get_player_or_fallback(self.forced_default)
+
+        if self.chosen_default:
+            return self._get_player_or_fallback(self.chosen_default)
+
+        x = 0
+
+        if self.dialog_players[x].get('is_local'):
+            if get_setting('default_player_kodi', 'int') == 1:
+                player = self.dialog_players[x]
+                player['idx'] = x
+                player['fallback'] = player.get('fallback') or self.default_player or ''  # Use default_player if this one fails
+                return player
+
+            if len(self.dialog_players) > 1:
+                x = 1
+
+        if self.dialog_players[x].get('is_provider'):
+            if get_setting('default_player_provider'):
+                player = self.dialog_players[x]
+                player['idx'] = x
+                player['fallback'] = player.get('fallback') or self.default_player or ''  # Use default_player if this one fails
+                return player
+
+        # No default player setting
+        if not self.default_player:
             return
 
         return self._get_player_or_fallback(self.default_player)
@@ -514,6 +582,9 @@ class Players(object):
             if not player:
                 return
 
+        # Update item from external ID thread
+        self.item = self._set_external_ids(self.tmdb_type, self.tmdb_id, self.season, self.episode, details=self.details, required=player.get('requires_ids', False)) or {}
+
         # Log details
         self.action_log += (
             'PLAYER: ', player.get('file'), ' ', player.get('mode'), ' ', player.get('is_resolvable'), '\n',
@@ -525,7 +596,7 @@ class Players(object):
         if player.get('api_language', None) != self.api_language:
             self.api_language = player.get('api_language', None)
             self.details = get_item_details(self.tmdb_type, self.tmdb_id, self.season, self.episode, language=self.api_language)
-            self.item = get_detailed_item(self.tmdb_type, self.tmdb_id, self.season, self.episode, details=self.details) or {}
+            self.item = self._set_external_ids(self.tmdb_type, self.tmdb_id, self.season, self.episode, details=self.details, required=player.get('requires_ids')) or {}
             self.action_log += ('APILAN: ', self.api_language, '\n')
 
         # Allow for a separate translation language to add "{de_title}" keys ("de" is iso language code)
@@ -654,11 +725,13 @@ class Players(object):
         # Set our playerstring for player monitor to update kodi watched status
         if self.playerstring:
             get_property('PlayerInfoString', set_property=self.playerstring)
+        else:
+            get_property('PlayerInfoString', clear_property=True)
 
         # If PlayMedia method chosen re-route to Player() unless expert settings on
         if action:
             if self.is_strm or not get_setting('only_resolve_strm'):
-                resolve_to_dummy(handle, self.dummy_duration, self.dummy_delay)  # If we're calling external we need to resolve to dummy
+                resolve_to_dummy(handle, self.dummy_duration if self.dummy_waitresolve else 0, self.dummy_delay)  # If we're calling external we need to resolve to dummy
             Player().play(action, listitem) if self.force_xbmcplayer else executebuiltin(f'PlayMedia({action})')
             kodi_log([
                 f'lib.player - playing path with {"Player()" if self.force_xbmcplayer else "PlayMedia"}\n',

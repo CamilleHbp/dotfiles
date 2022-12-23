@@ -1,0 +1,1 @@
+["Re", ["restaurants near me", "reverso", "restaurant", "reddit", "revolut", "real madrid", "renault", "reims", "reformation", "resident advisor"], [], {"google:suggestsubtypes": [[512], [512], [512], [512], [512], [512], [512], [512], [512], [512]], "google:suggesttype": ["QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY"]}]

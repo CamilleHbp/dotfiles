@@ -1,0 +1,1 @@
+["Search TV An", ["find tv antenna signal", "google search android tv", "search and tv", "how to search tv channel", "how to get google search on tv"], [], {"google:suggestsubtypes": [[22, 30], [22, 30], [22, 30], [390], [390]], "google:suggesttype": ["QUERY", "QUERY", "QUERY", "QUERY", "QUERY"]}]
