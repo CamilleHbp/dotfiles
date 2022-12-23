@@ -133,6 +133,11 @@ bindkey -M viins '\e\e' fuck-command-line
 
 # --------------------------- Add pyenv to the path -------------------------- #
 # Like thefuck, the plugin doesn't seem to function when pyenv is installed through Homebrew
+# If we need python in a login but non-interactive shell, we should add this to .zprofile!
+# Warning for MacOS :
+#   Apple does things a little differently so it's best to be aware of this.
+#   Specifically, Terminal initially opens both a login and interactive shell even though you don't authenticate (enter login credentials).
+#   However, any subsequent shells that are opened are only interactive.
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init --path)"
