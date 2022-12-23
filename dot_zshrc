@@ -91,7 +91,7 @@ source $ZSH/oh-my-zsh.sh
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
-alias nf='cd ~/Dev/Nos Futurs'
+alias nf='cd ~/Dev/NosFuturs'
 alias dev='cd ~/Dev/Personal'
 alias vi=nvim
 alias vim=nvim
@@ -110,6 +110,8 @@ export EDITOR=nvim
 export VISUAL="$EDITOR"
 
 # --------------------- Set TheFuck alias and key binding -------------------- #
+# The plugin doesn't seem to function when thefuck is installed through Homebrew
+# This reproduce the plugin's behaviour
 # Register alias
 [[ ! -a $ZSH_CACHE_DIR/thefuck ]] && thefuck --alias > $ZSH_CACHE_DIR/thefuck
 source $ZSH_CACHE_DIR/thefuck
@@ -128,3 +130,9 @@ zle -N fuck-command-line
 bindkey -M emacs '\e\e' fuck-command-line
 bindkey -M vicmd '\e\e' fuck-command-line
 bindkey -M viins '\e\e' fuck-command-line
+
+# --------------------------- Add pyenv to the path -------------------------- #
+# Like thefuck, the plugin doesn't seem to function when pyenv is installed through Homebrew
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init --path)"
