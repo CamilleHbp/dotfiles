@@ -4,5 +4,6 @@
     },
     "[markdown]": {
         "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
-    }
+    },
+    "vim.smartRelativeLine": true
 }
