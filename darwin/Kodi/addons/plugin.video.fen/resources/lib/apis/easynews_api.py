@@ -79,10 +79,11 @@ class EasyNewsAPI:
 					result = {'name': post_title,
 							  'size': size,
 							  'rawSize': item['rawSize'],
+							  'width': int(item['width']),
+							  'runtime': int(item['runtime']/60.0),
 							  'url_dl': file_dl,
 							  'version': 'version2',
 							  'short_vid': short_vid,
-							  'full_item': item,
 							  'language': language,
 							  'thumbnail': thumbnail}
 					yield result
@@ -115,11 +116,12 @@ class EasyNewsAPI:
 					thumbnail = 'https://th.easynews.com/thumbnails-%s/pr-%s.jpg' % (post_hash[0:3], post_hash)
 					result = {'name': post_title,
 							  'size': size,
+							  'rawSize': item['rawSize'],
+							  'width': int(item['width']),
 							  'rawSize': size,
 							  'url_dl': url_dl,
 							  'version': 'version3',
 							  'short_vid': short_vid,
-							  'full_item': item,
 							  'language': language,
 							  'thumbnail': thumbnail}
 					yield result

@@ -2,6 +2,8 @@
 from windows import BaseDialog
 # from modules.kodi_utils import logger
 
+youtube_check = 'plugin.video.youtube'
+
 class VideoPlayer(BaseDialog):
 	def __init__(self, *args, **kwargs):
 		BaseDialog.__init__(self, args)
@@ -12,6 +14,7 @@ class VideoPlayer(BaseDialog):
 		self.monitor()
 
 	def run(self):
+		if not self.youtube_installed_check(): return self.notification('Youtube Plugin needed for playback')
 		self.doModal()
 		self.clearProperties()
 		self.clear_modals()
@@ -41,3 +44,7 @@ class VideoPlayer(BaseDialog):
 	def exit(self):
 		self.sleep(500)
 		self.close()
+
+	def youtube_installed_check(self):
+		if youtube_check in self.video and not self.addon_installed(youtube_check): return False
+		return True

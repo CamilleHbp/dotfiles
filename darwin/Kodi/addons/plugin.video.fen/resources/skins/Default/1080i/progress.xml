@@ -26,7 +26,7 @@
                     <left>0</left>
                     <width>1035</width>
                     <height>5</height>
-                    <font>font_tiny</font>
+                    <font>font_tiny</font> <!-- FEN_21 -->
                     <align>left</align>
                     <aligny>bottom</aligny>
                     <label>[COLOR B3CCCCCC][B]$ADDON[plugin.video.fen 33061][/B][/COLOR]</label>
@@ -68,17 +68,18 @@
                     <top>12</top>
                     <left>80</left>
                     <height>20</height>
-                    <font>font_mini</font>
+                    <font>font_mini</font> <!-- FEN_26 -->
                     <textcolor>FFFFFFFF</textcolor>
                     <align>center</align>
                 </control>
                 <control type="textbox" id="2001">
-                    <top>190</top>
+                    <top>100</top>
                     <left>20</left>
                     <width>600</width>
-                    <height>180</height>
-                    <font>font_mini</font>
+                    <height>250</height>
+                    <font>font_mini</font> <!-- FEN_26 -->
                     <align>center</align>
+                    <aligny>center</aligny>
                     <textcolor>FFB7B4BB</textcolor>
                 </control>
                 <control type="progress" id="5000">

@@ -9,7 +9,7 @@ def routing():
 	if 'navigator.' in mode:
 		from indexers.navigator import Navigator
 		exec('Navigator(params).%s()' % mode.split('.')[1])
-	elif 'menu_editor' in mode:
+	elif 'menu_editor.' in mode:
 		from modules.menu_editor import MenuEditor
 		exec('MenuEditor(params).%s()' % mode.split('.')[1])
 	elif 'discover.' in mode:
@@ -34,11 +34,11 @@ def routing():
 	elif 'easynews.' in mode:
 		from indexers import easynews
 		exec('easynews.%s(params)' % mode.split('.')[1])
-	elif '_play' in mode or 'play_' in mode:
-		if mode == 'play_media':
+	elif 'playback.' in mode:
+		if mode == 'playback.media':
 			from modules.sources import Sources
 			Sources().playback_prep(params)
-		elif mode == 'media_play':
+		elif mode == 'playback.video':
 			from modules.player import FenPlayer
 			FenPlayer().run(_get('url', None), _get('obj', None))
 	elif 'choice' in mode:
@@ -112,33 +112,33 @@ def routing():
 		elif mode == 'imdb_build_keyword_results':
 			from indexers.imdb import imdb_build_keyword_results
 			imdb_build_keyword_results(_get('media_type'), _get('query'))
-	elif 'watched_unwatched' in mode:
-		if mode == 'mark_as_watched_unwatched_episode':
-			from modules.watched_status import mark_as_watched_unwatched_episode
-			mark_as_watched_unwatched_episode(params)
-		elif mode == 'mark_as_watched_unwatched_season':
-			from modules.watched_status import mark_as_watched_unwatched_season
-			mark_as_watched_unwatched_season(params)
-		elif mode == 'mark_as_watched_unwatched_tvshow':
-			from modules.watched_status import mark_as_watched_unwatched_tvshow
-			mark_as_watched_unwatched_tvshow(params)
-		elif mode == 'mark_as_watched_unwatched_movie':
-			from modules.watched_status import mark_as_watched_unwatched_movie
-			mark_as_watched_unwatched_movie(params)
-		elif mode == 'watched_unwatched_erase_bookmark':
+	elif 'watched_status.' in mode:
+		if mode == 'watched_status.mark_episode':
+			from modules.watched_status import mark_episode
+			mark_episode(params)
+		elif mode == 'watched_status.mark_season':
+			from modules.watched_status import mark_season
+			mark_season(params)
+		elif mode == 'watched_status.mark_tvshow':
+			from modules.watched_status import mark_tvshow
+			mark_tvshow(params)
+		elif mode == 'watched_status.mark_movie':
+			from modules.watched_status import mark_movie
+			mark_movie(params)
+		elif mode == 'watched_status.erase_bookmark':
 			from modules.watched_status import erase_bookmark
 			erase_bookmark(_get('media_type'), _get('tmdb_id'), _get('season', ''), _get('episode', ''), _get('refresh', 'false'))
-	elif 'history' in mode:
-		if mode == 'search_history':
+	elif 'history.' in mode:
+		if mode == 'history.search':
 			from indexers.history import search_history
 			search_history(params)
-		elif mode == 'clear_search_history':
+		elif mode == 'history.clear_search':
 			from modules.history import clear_search_history
 			clear_search_history()
-		elif mode == 'remove_from_history':
+		elif mode == 'history.remove':
 			from modules.history import remove_from_search_history
 			remove_from_search_history(params)
-		elif mode == 'clear_all_history':
+		elif mode == 'history.clear_all':
 			from modules.history import clear_all_history
 			clear_all_history(_get('setting_id'), _get('refresh', 'false'))
 	elif 'real_debrid' in mode:
@@ -157,9 +157,6 @@ def routing():
 		elif mode == 'real_debrid.rd_account_info':
 			from indexers.real_debrid import rd_account_info
 			rd_account_info()
-		elif mode == 'real_debrid.delete':
-			from indexers.real_debrid import rd_delete
-			rd_delete(_get('id'), _get('cache_type'))
 		elif mode == 'real_debrid.authenticate':
 			from apis.real_debrid_api import RealDebridAPI
 			RealDebridAPI().auth()
@@ -176,12 +173,6 @@ def routing():
 		elif mode == 'premiumize.pm_account_info':
 			from indexers.premiumize import pm_account_info
 			pm_account_info()
-		elif mode == 'premiumize.rename':
-			from indexers.premiumize import pm_rename
-			pm_rename(_get('file_type'), _get('id'), _get('name'))
-		elif mode == 'premiumize.delete':
-			from indexers.premiumize import pm_delete
-			pm_delete(_get('file_type'), _get('id'))
 		elif mode == 'premiumize.authenticate':
 			from apis.premiumize_api import PremiumizeAPI
 			PremiumizeAPI().auth()

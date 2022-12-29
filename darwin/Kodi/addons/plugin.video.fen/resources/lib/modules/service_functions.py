@@ -15,10 +15,11 @@ get_window_id, clean_settings, Thread, make_window_properties = kodi_utils.get_w
 get_setting, set_setting, make_settings_dict, external_browse = kodi_utils.get_setting, kodi_utils.set_setting, kodi_utils.make_settings_dict, kodi_utils.external_browse
 logger, json, run_addon, confirm_dialog, close_dialog = kodi_utils.logger, kodi_utils.json, kodi_utils.run_addon, kodi_utils.confirm_dialog, kodi_utils.close_dialog
 get_property, set_property, clear_property, get_visibility = kodi_utils.get_property, kodi_utils.set_property, kodi_utils.clear_property, kodi_utils.get_visibility
-make_directories, kodi_refresh, list_dirs, delete_file = kodi_utils.make_directories, kodi_utils.kodi_refresh, kodi_utils.list_dirs, kodi_utils.delete_file
 trakt_sync_interval, trakt_sync_refresh_widgets, auto_start_fen = settings.trakt_sync_interval, settings.trakt_sync_refresh_widgets, settings.auto_start_fen
-media_windows = (10000, 10025)
+make_directories, kodi_refresh, list_dirs, delete_file = kodi_utils.make_directories, kodi_utils.kodi_refresh, kodi_utils.list_dirs, kodi_utils.delete_file
+current_skin_prop, use_skin_fonts_prop = kodi_utils.current_skin_prop, kodi_utils.use_skin_fonts_prop
 fen_str, window_top_str, listitem_property_str = ls(32036).upper(), 'Window.IsTopMost(%s)', 'ListItem.Property(%s)'
+media_windows = (10000, 10025)
 movieinformation_str, contextmenu_str = 'movieinformation', 'contextmenu'
 
 class InitializeDatabases:
@@ -193,10 +194,12 @@ class CustomFonts:
 		logger(fen_str, 'CustomFonts Service Starting')
 		monitor, player = xbmc_monitor(), xbmc_player()
 		wait_for_abort, is_playing = monitor.waitForAbort, player.isPlayingVideo
+		for item in (current_skin_prop, use_skin_fonts_prop): clear_property(item)
 		font_utils = FontUtils()
 		while not monitor.abortRequested():
-			try: font_utils.execute_custom_fonts()
-			except: pass
+			# try: font_utils.execute_custom_fonts()
+			# except: pass
+			font_utils.execute_custom_fonts()
 			if get_property(pause_services_prop) == 'true' or is_playing(): sleep = 20
 			else: sleep = 10
 			wait_for_abort(sleep)

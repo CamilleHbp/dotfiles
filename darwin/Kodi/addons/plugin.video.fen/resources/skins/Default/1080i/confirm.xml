@@ -42,7 +42,7 @@
                 <top>35</top>
                 <left>110</left>
                 <height>20</height>
-                <font>font_mini</font>
+                <font>font_mini</font> <!-- FEN_26 -->
                 <textcolor>FFFFFFFF</textcolor>
                 <align>center</align>
                 <label>[UPPERCASE][B]$INFO[Window.Property(heading)][/B][/UPPERCASE]</label>
@@ -51,11 +51,11 @@
                 <left>40</left>
                 <top>130</top>
                 <width>720</width>
-                <height>210</height>
-                <font>font_mini</font>
+                <height>195</height>
+                <font>font_mini</font> <!-- FEN_26 -->
                 <textcolor>FFB7B4BB</textcolor>
-                <align>left</align>
-                <aligny>top</aligny>
+                <align>center</align>
+                <aligny>center</aligny>
                 <label>$INFO[Window.Property(text)]</label>
             </control>
             <control type="button" id="10">
@@ -67,7 +67,7 @@
                 <onleft>11</onleft>
                 <onright>11</onright>
                 <label>[B]$INFO[Window.Property(ok_label)][/B]</label>
-                <font>font_mini</font>
+                <font>font_mini</font> <!-- FEN_26 -->
                 <textcolor>FFB7B4BB</textcolor>
                 <focusedcolor>$INFO[Window(10000).Property(fen.highlight)]</focusedcolor>
                 <texturefocus colordiffuse="FFCCCCCC">common/white.png</texturefocus>
@@ -83,7 +83,7 @@
                 <onleft>10</onleft>
                 <onright>10</onright>
                 <label>[B]$INFO[Window.Property(cancel_label)][/B]</label>
-                <font>font_mini</font>
+                <font>font_mini</font> <!-- FEN_26 -->
                 <textcolor>FFB7B4BB</textcolor>
                 <focusedcolor>$INFO[Window(10000).Property(fen.highlight)]</focusedcolor>
                 <texturefocus colordiffuse="FFCCCCCC">common/white.png</texturefocus>

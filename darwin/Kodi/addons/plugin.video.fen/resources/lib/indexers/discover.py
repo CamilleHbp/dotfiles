@@ -101,9 +101,9 @@ class Discover:
 			else: rootname = title
 			if item.get('poster_path'): icon = 'https://image.tmdb.org/t/p/w780%s' % item['poster_path']
 			else: icon = get_icon(default_poster)
-			append({'line1': rootname, 'line2': item['overview'], 'icon': icon, 'rootname': rootname, 'tmdb_id': str(item['id'])})
+			append({'line1': rootname, 'icon': icon, 'rootname': rootname, 'tmdb_id': str(item['id'])})
 		heading = heading_base % ('%s %s' % (ls(32193), ls(32228)))
-		kwargs = {'items': json.dumps(choice_list), 'heading': heading, 'enumerate': 'false', 'multi_choice': 'false', 'multi_line': 'true'}
+		kwargs = {'items': json.dumps(choice_list), 'heading': heading}
 		values = select_dialog([(i['tmdb_id'], i['rootname']) for i in choice_list], **kwargs)
 		if values == None: return
 		self._process(key, values)
@@ -247,7 +247,7 @@ class Discover:
 		if self._action(key) in ('clear', None): return
 		network_list = []
 		append = network_list.append
-		networks = sorted(networks, key=lambda k: k['name'])
+		networks_info = sorted(networks, key=lambda k: k['name'])
 		for item in networks:
 			name = item['name']
 			append({'line1': name, 'icon': item['logo'], 'name': name, 'id': item['id']})

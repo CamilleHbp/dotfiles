@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 from datetime import datetime
-from apis.trakt_api import trakt_watched_unwatched, trakt_official_status, trakt_progress, trakt_get_hidden_items
+from apis.trakt_api import trakt_watched_status_mark, trakt_official_status, trakt_progress, trakt_get_hidden_items
 from caches.trakt_cache import clear_trakt_collection_watchlist_data
 from modules import kodi_utils, settings, metadata
 from modules.utils import get_datetime, adjust_premiered_date, sort_for_article, make_thread_list, paginate_list
@@ -251,7 +251,7 @@ def get_watched_status_episode(watched_info, tmdb_id, season='', episode=''):
 		else: return 0, 4
 	except: return 0, 4
 
-def mark_as_watched_unwatched_movie(params):
+def mark_movie(params):
 	action, media_type = params.get('action'), 'movie'
 	refresh, from_playback = params.get('refresh', 'true') == 'true', params.get('from_playback', 'false') == 'true'
 	if from_playback: refresh = False
@@ -259,19 +259,19 @@ def mark_as_watched_unwatched_movie(params):
 	watched_indicators = watched_indicators_function()
 	if watched_indicators == 1:
 		if from_playback == 'true' and trakt_official_status(media_type) == False: sleep(1000)
-		elif not trakt_watched_unwatched(action, 'movies', tmdb_id): return notification(32574)
+		elif not trakt_watched_status_mark(action, 'movies', tmdb_id): return notification(32574)
 		clear_trakt_collection_watchlist_data('watchlist', media_type)
-	mark_as_watched_unwatched(watched_indicators, media_type, tmdb_id, action, title=title)
+	watched_status_mark(watched_indicators, media_type, tmdb_id, action, title=title)
 	refresh_container(refresh)
 
-def mark_as_watched_unwatched_tvshow(params):
+def mark_tvshow(params):
 	action, tmdb_id = params.get('action'), params.get('tmdb_id')
 	try: tvdb_id = int(params.get('tvdb_id', '0'))
 	except: tvdb_id = 0
 	watched_indicators = watched_indicators_function()
 	progressDialogBG.create(ls(32577), '')
 	if watched_indicators == 1:
-		if not trakt_watched_unwatched(action, 'shows', tmdb_id, tvdb_id): return notification(32574)
+		if not trakt_watched_status_mark(action, 'shows', tmdb_id, tvdb_id): return notification(32574)
 		clear_trakt_collection_watchlist_data('watchlist', 'tvshow')
 	data_base = get_database(watched_indicators)
 	title, year = params.get('title', ''), params.get('year', '')
@@ -295,11 +295,11 @@ def mark_as_watched_unwatched_tvshow(params):
 			episode_date, premiered = adjust_premiered_date(ep['premiered'], date_offset())
 			if not episode_date or current_date < episode_date: continue
 			insert_append(make_batch_insert(action, 'episode', tmdb_id, season_number, ep_number, last_played, title))
-	batch_mark_as_watched_unwatched(watched_indicators, insert_list, action)
+	batch_watched_status_mark(watched_indicators, insert_list, action)
 	progressDialogBG.close()
 	refresh_container()
 
-def mark_as_watched_unwatched_season(params):
+def mark_season(params):
 	season = int(params.get('season'))
 	if season == 0: return notification(32490)
 	action, title, year, tmdb_id = params.get('action'), params.get('title'), params.get('year'), params.get('tmdb_id')
@@ -310,7 +310,7 @@ def mark_as_watched_unwatched_season(params):
 	insert_append = insert_list.append
 	progressDialogBG.create(ls(32577), '')
 	if watched_indicators == 1:
-		if not trakt_watched_unwatched(action, 'season', tmdb_id, tvdb_id, season): return notification(32574)
+		if not trakt_watched_status_mark(action, 'season', tmdb_id, tvdb_id, season): return notification(32574)
 		clear_trakt_collection_watchlist_data('watchlist', 'tvshow')
 	data_base = get_database(watched_indicators)
 	meta_user_info = metadata_user_info()
@@ -326,11 +326,11 @@ def mark_as_watched_unwatched_season(params):
 		if not episode_date or current_date < episode_date: continue
 		progressDialogBG.update(int(float(count) / float(len(ep_data)) * 100), ls(32577), '%s' % display)
 		insert_append(make_batch_insert(action, 'episode', tmdb_id, season_number, ep_number, last_played, title))
-	batch_mark_as_watched_unwatched(watched_indicators, insert_list, action)
+	batch_watched_status_mark(watched_indicators, insert_list, action)
 	progressDialogBG.close()
 	refresh_container()
 
-def mark_as_watched_unwatched_episode(params):
+def mark_episode(params):
 	action, media_type = params.get('action'), 'episode'
 	refresh, from_playback = params.get('refresh', 'true') == 'true', params.get('from_playback', 'false') == 'true'
 	if from_playback: refresh = False
@@ -342,12 +342,12 @@ def mark_as_watched_unwatched_episode(params):
 	if season == 0: notification(32490); return
 	if watched_indicators == 1:
 		if from_playback == 'true' and trakt_official_status(media_type) == False: sleep(1000)
-		elif not trakt_watched_unwatched(action, media_type, tmdb_id, tvdb_id, season, episode): return notification(32574)
+		elif not trakt_watched_status_mark(action, media_type, tmdb_id, tvdb_id, season, episode): return notification(32574)
 		clear_trakt_collection_watchlist_data('watchlist', 'tvshow')
-	mark_as_watched_unwatched(watched_indicators, media_type, tmdb_id, action, season, episode, title)
+	watched_status_mark(watched_indicators, media_type, tmdb_id, action, season, episode, title)
 	refresh_container(refresh)
 
-def mark_as_watched_unwatched(watched_indicators, media_type='', tmdb_id='', action='', season='', episode='', title=''):
+def watched_status_mark(watched_indicators, media_type='', tmdb_id='', action='', season='', episode='', title=''):
 	try:
 		data_base = get_database(watched_indicators)
 		last_played = get_last_played_value(data_base)
@@ -360,7 +360,7 @@ def mark_as_watched_unwatched(watched_indicators, media_type='', tmdb_id='', act
 		erase_bookmark(media_type, tmdb_id, season, episode)
 	except: notification(32574)
 
-def batch_mark_as_watched_unwatched(watched_indicators, insert_list, action):
+def batch_watched_status_mark(watched_indicators, insert_list, action):
 	try:
 		dbcon = make_database_connection(get_database(watched_indicators))
 		dbcur = set_PRAGMAS(dbcon)

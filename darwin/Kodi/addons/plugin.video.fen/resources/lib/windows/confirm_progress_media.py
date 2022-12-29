@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 from windows import BaseDialog
-from modules.settings import get_art_provider
+from modules.settings import get_art_provider, suppress_episode_plot
 from modules.kodi_utils import Thread, get_visibility, hide_busy_dialog, empty_poster, addon_fanart
 # from modules.kodi_utils import logger
 
@@ -13,6 +13,7 @@ class ConfirmProgressMedia(BaseDialog):
 		self.resolver_enabled = False
 		self.selected = None
 		self.meta = kwargs['meta']
+		self.meta_get = self.meta.get
 		self.text = kwargs.get('text', '')
 		self.enable_buttons = kwargs.get('enable_buttons', False)
 		if self.enable_buttons: self.true_button, self.false_button, self.focus_button = kwargs.get('true_button', ''), kwargs.get('false_button', ''), kwargs.get('focus_button', 10)
@@ -66,15 +67,18 @@ class ConfirmProgressMedia(BaseDialog):
 
 	def make_text(self):
 		self.poster_main, self.poster_backup, self.fanart_main, self.fanart_backup, self.clearlogo_main, self.clearlogo_backup = get_art_provider()
-		self.title = self.meta['title']
-		self.year = str(self.meta['year'])
-		self.poster = self.meta.get('custom_poster') or self.meta.get(self.poster_main) or self.meta.get(self.poster_backup) or empty_poster
-		self.fanart = self.meta.get('custom_fanart') or self.meta.get(self.fanart_main) or self.meta.get(self.fanart_backup) or addon_fanart
-		self.clearlogo = self.meta.get('custom_clearlogo') or self.meta.get(self.clearlogo_main) or self.meta.get(self.clearlogo_backup) or ''
+		self.title = self.meta_get('title')
+		self.year = str(self.meta_get('year'))
+		self.poster = self.meta_get('custom_poster') or self.meta_get(self.poster_main) or self.meta_get(self.poster_backup) or empty_poster
+		self.fanart = self.meta_get('custom_fanart') or self.meta_get(self.fanart_main) or self.meta_get(self.fanart_backup) or addon_fanart
+		self.clearlogo = self.meta_get('custom_clearlogo') or self.meta_get(self.clearlogo_main) or self.meta_get(self.clearlogo_backup) or ''
 
 	def make_resolver_text(self):
-		if self.meta['media_type'] == 'movie': self.text = self.meta['plot']
-		else: self.text = '[B]%02dx%02d - %s[/B][CR][CR]%s' % (self.meta['season'], self.meta['episode'], self.meta.get('ep_name', 'N/A').upper(), self.meta['plot'])
+		if self.meta_get('media_type') == 'movie': self.text = self.meta_get('plot')
+		else:
+			if suppress_episode_plot(): plot = self.meta_get('tvshow_plot') or '* Hidden to Prevent Spoilers *'
+			else: plot = self.meta_get('plot', '') or self.meta_get('tvshow_plot', '')
+			self.text = '[B]%02dx%02d - %s[/B][CR][CR]%s' % (self.meta_get('season'), self.meta_get('episode'), self.meta_get('ep_name', 'N/A').upper(), plot)
 
 	def set_properties(self):
 		if self.enable_buttons:

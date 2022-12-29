@@ -11,6 +11,7 @@ ls, sys, make_listitem, build_url, Thread, add_items = kodi_utils.local_string, 
 add_dir, external_browse, dialog, sleep, json, get_icon = kodi_utils.add_dir, kodi_utils.external_browse, kodi_utils.dialog, kodi_utils.sleep, kodi_utils.json, kodi_utils.get_icon
 trakt_icon, fanart, fen_clearlogo, add_item, build_content = get_icon('trakt'), kodi_utils.addon_fanart, kodi_utils.addon_clearlogo, kodi_utils.add_item, kodi_utils.build_content
 set_content, set_sort_method, set_view_mode, end_directory = kodi_utils.set_content, kodi_utils.set_sort_method, kodi_utils.set_view_mode, kodi_utils.end_directory
+make_placeholder = kodi_utils.make_placeholder_listitem
 trakt_fetch_collection_watchlist, get_trakt_list_contents = trakt_api.trakt_fetch_collection_watchlist, trakt_api.get_trakt_list_contents
 trakt_trending_popular_lists, trakt_get_lists = trakt_api.trakt_trending_popular_lists, trakt_api.trakt_get_lists
 trakt_search_lists, trakt_fetch_movie_sets = trakt_api.trakt_search_lists, trakt_api.trakt_fetch_movie_sets
@@ -30,7 +31,7 @@ def search_trakt_lists(params):
 				if not slug: continue
 				cm = []
 				cm_append = cm.append
-				display = '[B]%s[/B] | [I]%s (x%s)[/I]' % (name.upper(), user, str(item_count))
+				display = '%s | [I]%s (x%s)[/I]' % (name.upper(), user, str(item_count))
 				editor_display = '%s | %s' % (name.upper(), user)
 				url = build_url({'mode': 'trakt.list.build_trakt_list', 'user': user, 'slug': slug, 'list_type': 'user_lists'})
 				cm_append((add2menu_str,'RunPlugin(%s)' % build_url({'mode': 'menu_editor.add_external', 'name': editor_display, 'iconImage': 'trakt'})))
@@ -55,6 +56,7 @@ def search_trakt_lists(params):
 		if pages > page:
 			new_page = str(int(page) + 1)
 			add_dir({'mode': mode, 'query': search_title, 'new_page': new_page}, nextpage_str % new_page, handle, 'item_next')
+	else: add_items(handle, make_placeholder())
 	set_content(handle, 'files')
 	end_directory(handle)
 	if not external_browse(): set_view_mode('view.main')
@@ -66,20 +68,25 @@ def get_trakt_lists(params):
 				if list_type == 'liked_lists': item = item['list']
 				cm = []
 				cm_append = cm.append
-				name, user, slug = item['name'], item['user']['ids']['slug'], item['ids']['slug']
+				name, user, slug, item_count = item['name'], item['user']['ids']['slug'], item['ids']['slug'], item['item_count']
 				url = build_url({'mode': 'trakt.list.build_trakt_list', 'user': user, 'slug': slug, 'list_type': list_type})
-				cm_append((add2menu_str,'RunPlugin(%s)' % build_url({'mode': 'menu_editor.add_external', 'name': name, 'iconImage': 'trakt'})))
-				cm_append((add2folder_str,'RunPlugin(%s)' % build_url({'mode': 'menu_editor.shortcut_folder_add_item', 'name': name, 'iconImage': 'trakt'})))
-				if list_type == 'liked_lists': cm_append((unlikelist_str,'RunPlugin(%s)' % build_url({'mode': 'trakt.trakt_unlike_a_list', 'user': user, 'list_slug': slug})))
+				if list_type == 'liked_lists':
+					display = '%s | [I]%s (x%s)[/I]' % (name.upper(), user, str(item_count))
+					editor_display = '%s | %s' % (name.upper(), user)
+					cm_append((unlikelist_str,'RunPlugin(%s)' % build_url({'mode': 'trakt.trakt_unlike_a_list', 'user': user, 'list_slug': slug})))
 				else:
+					display = '%s [I](x%s)[/I]' % (name.upper(), str(item_count))
+					editor_display = name
 					cm_append((newlist_str,'RunPlugin(%s)' % build_url({'mode': 'trakt.make_new_trakt_list'})))
 					cm_append((deletelist_str,'RunPlugin(%s)' % build_url({'mode': 'trakt.delete_trakt_list', 'user': user, 'list_slug': slug})))
+				cm_append((add2menu_str,'RunPlugin(%s)' % build_url({'mode': 'menu_editor.add_external', 'name': editor_display, 'iconImage': 'trakt'})))
+				cm_append((add2folder_str,'RunPlugin(%s)' % build_url({'mode': 'menu_editor.shortcut_folder_add_item', 'name': editor_display, 'iconImage': 'trakt'})))
 				listitem = make_listitem()
-				listitem.setLabel(name)
+				listitem.setLabel(display)
 				listitem.setArt({'icon': trakt_icon, 'poster': trakt_icon, 'thumb': trakt_icon, 'fanart': fanart, 'banner': trakt_icon, 'clearlogo': fen_clearlogo})
 				listitem.setInfo('video', {'plot': ' '})
 				listitem.addContextMenuItems(cm)
-				listitem.setProperty('fen.context_main_menu_params', build_url({'mode': 'menu_editor.edit_menu_external', 'name': name, 'iconImage': 'trakt'}))
+				listitem.setProperty('fen.context_main_menu_params', build_url({'mode': 'menu_editor.edit_menu_external', 'name': editor_display, 'iconImage': 'trakt'}))
 				yield (url, listitem, True)
 			except: pass
 	handle = int(sys.argv[1])
@@ -87,6 +94,7 @@ def get_trakt_lists(params):
 		list_type = params['list_type']
 		lists = trakt_get_lists(list_type)
 		add_items(handle, list(_process()))
+	else: add_items(handle, make_placeholder())
 	set_content(handle, 'files')
 	set_sort_method(handle, 'label')
 	end_directory(handle)
@@ -99,23 +107,26 @@ def get_trakt_trending_popular_lists(params):
 				cm = []
 				cm_append = cm.append
 				item = _list['list']
-				if item['user']['private'] or item.get('item_count', None) == 0: continue
+				item_count = item.get('item_count', 0)
+				if item['user']['private'] or item_count == 0: continue
 				name, user, slug = item['name'], item['user']['ids']['slug'], item['ids']['slug']
 				if not slug: continue
 				if item['type'] == 'official': user = 'Trakt Official'
 				if not user: continue
+				display = '%s | [I]%s (x%s)[/I]' % (name.upper(), user, str(item_count))
+				editor_display = '%s | %s' % (name.upper(), user)
 				url = build_url({'mode': 'trakt.list.build_trakt_list', 'user': user, 'slug': slug, 'list_type': 'user_lists'})
 				listitem = make_listitem()
-				cm_append((add2menu_str,'RunPlugin(%s)' % build_url({'mode': 'menu_editor.add_external', 'name': name, 'iconImage': 'trakt'})))
-				cm_append((add2folder_str,'RunPlugin(%s)' % build_url({'mode': 'menu_editor.shortcut_folder_add_item', 'name': name, 'iconImage': 'trakt'})))
+				cm_append((add2menu_str,'RunPlugin(%s)' % build_url({'mode': 'menu_editor.add_external', 'name': editor_display, 'iconImage': 'trakt'})))
+				cm_append((add2folder_str,'RunPlugin(%s)' % build_url({'mode': 'menu_editor.shortcut_folder_add_item', 'name': editor_display, 'iconImage': 'trakt'})))
 				if not user == 'Trakt Official':
 					cm_append((likelist_str,'RunPlugin(%s)' % build_url({'mode': 'trakt.trakt_like_a_list', 'user': user, 'list_slug': slug})))
 					cm_append((unlikelist_str,'RunPlugin(%s)' % build_url({'mode': 'trakt.trakt_unlike_a_list', 'user': user, 'list_slug': slug})))
 				listitem.addContextMenuItems(cm)
-				listitem.setLabel(name)
+				listitem.setLabel(display)
 				listitem.setArt({'icon': trakt_icon, 'poster': trakt_icon, 'thumb': trakt_icon, 'fanart': fanart, 'banner': trakt_icon, 'clearlogo': fen_clearlogo})
 				listitem.setInfo('video', {'plot': ' '})
-				listitem.setProperty('fen.context_main_menu_params', build_url({'mode': 'menu_editor.edit_menu_external', 'name': name, 'iconImage': 'trakt'}))
+				listitem.setProperty('fen.context_main_menu_params', build_url({'mode': 'menu_editor.edit_menu_external', 'name': editor_display, 'iconImage': 'trakt'}))
 				yield (url, listitem, True)
 			except: pass
 	handle = int(sys.argv[1])
@@ -123,6 +134,7 @@ def get_trakt_trending_popular_lists(params):
 		list_type = params['list_type']
 		lists = trakt_trending_popular_lists(list_type)
 		add_items(handle, list(_process()))
+	else: add_items(handle, make_placeholder())
 	set_content(handle, 'files')
 	end_directory(handle)
 	if not external_browse(): set_view_mode('view.main')
@@ -160,6 +172,7 @@ def build_trakt_list(params):
 		if total_pages > page_no:
 			new_page = str(page_no + 1)
 			add_dir({'mode': 'trakt.list.build_trakt_list', 'user': user, 'slug': slug, 'new_page': new_page, 'list_type': list_type}, nextpage_str % new_page, handle, 'item_next')
+	else: add_items(handle, make_placeholder())
 	set_content(handle, content)
 	end_directory(handle, False if is_widget else None)
 	if params.get('refreshed') == 'true': sleep(1000)
@@ -170,6 +183,7 @@ def build_trakt_movie_sets(params):
 	if build_content():
 		collection_info = sort_for_article(trakt_fetch_movie_sets(), 'title', ignore_articles())
 		add_items(handle, Movies({'list': [i['id'] for i in collection_info]}).movie_sets_worker())
+	else: add_items(handle, make_placeholder())
 	set_content(handle, content)
 	end_directory(handle, False if is_widget else None)
 	if not is_widget: set_view_mode('view.%s' % content, content)

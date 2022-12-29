@@ -325,8 +325,8 @@ def release_info_format(release_title):
 	try:
 		release_title = url_strip(release_title)
 		release_title = release_title.lower().replace("'", "").lstrip('.').rstrip('.')
-		fmt = '.%s.' % re.sub(r'[^a-z0-9-~]+', '.', release_title).replace('.-.', '.').replace('-.', '.').replace('.-', '.').replace('--', '.')
-		return fmt
+		title = '.%s.' % re.sub(r'[^a-z0-9-~]+', '.', release_title).replace('.-.', '.').replace('-.', '.').replace('.-', '.').replace('--', '.')
+		return title
 	except:
 		return release_title.lower()
 
@@ -342,6 +342,27 @@ def clean_title(title):
 	except: pass
 	return title
 
+def url_strip(url):
+	try:
+		url = unquote_plus(url)
+		if 'magnet:' in url: url = url.split('&dn=')[1]
+		url = url.lower().replace("'", "").lstrip('.').rstrip('.')
+		title = re.sub(r'[^a-z0-9]+', ' ', url)
+		if 'http' in title: return None
+		if title == '': return None
+		return title
+	except: return None
+
+def get_file_info(name_info=None, url=None, default_quality='SD'):
+	# thanks 123Venom and gaiaaaiaai, whom I knicked most of this code from. :)
+	title = None
+	if name_info: title = name_info
+	elif url: title = url_strip(url)
+	if not title: return 'SD', ''
+	quality = get_release_quality(title) or default_quality
+	info = get_info(title)
+	return quality, info
+
 def get_release_quality(release_info):
 	if any(i in release_info for i in SCR): return 'SCR'
 	if any(i in release_info for i in CAM): return 'CAM'
@@ -349,75 +370,57 @@ def get_release_quality(release_info):
 	if any(i in release_info for i in RES_4K): return '4K'
 	if any(i in release_info for i in RES_1080): return '1080p'
 	if any(i in release_info for i in RES_720): return '720p'
-	return 'SD'
-
-def url_strip(url):
-	try:
-		url = unquote_plus(url)
-		if 'magnet:' in url: url = url.split('&dn=')[1]
-		url = url.lower().replace("'", "").lstrip('.').rstrip('.')
-		fmt = re.sub(r'[^a-z0-9]+', ' ', url)
-		if 'http' in fmt: return None
-		if fmt == '': return None
-		return fmt
-	except: return None
-
-def get_file_info(name_info=None, url=None):
-	# thanks 123Venom and gaiaaaiaai, whom I knicked most of this code from. :)
-	fmt = None
+	return None
+	
+def get_info(title):
 	info = []
 	info_append = info.append
-	if name_info: fmt = name_info
-	elif url: fmt = url_strip(url)
-	if not fmt: return ''
-	quality = get_release_quality(fmt)
-	if any(i in fmt for i in VIDEO_3D):  info_append('[B]3D[/B]')
-	if '.sdr' in fmt: info_append('SDR')
-	elif any(i in fmt for i in DOLBY_VISION): info_append('[B]D/VISION[/B]')
-	elif any(i in fmt for i in HDR): info_append('[B]HDR[/B]')
-	elif all(i in fmt for i in ('2160p', 'remux')): info_append('[B]HDR[/B]')
+	if any(i in title for i in VIDEO_3D):  info_append('[B]3D[/B]')
+	if '.sdr' in title: info_append('SDR')
+	elif any(i in title for i in DOLBY_VISION): info_append('[B]D/VISION[/B]')
+	elif any(i in title for i in HDR): info_append('[B]HDR[/B]')
+	elif all(i in title for i in ('2160p', 'remux')): info_append('[B]HDR[/B]')
 	if '[B]D/VISION[/B]' in info:
-		if any(i in fmt for i in HDR_TRUE) or 'hybrid' in fmt: info_append('[B]HDR[/B]')
+		if any(i in title for i in HDR_TRUE) or 'hybrid' in title: info_append('[B]HDR[/B]')
 		if '[B]HDR[/B]' in info: info_append('[B]HYBRID[/B]')
-	if any(i in fmt for i in CODEC_H264): info_append('AVC')
-	elif '.av1.' in fmt: info_append('[B]AV1[/B]')
-	elif any(i in fmt for i in CODEC_H265): info_append('[B]HEVC[/B]')
+	if any(i in title for i in CODEC_H264): info_append('AVC')
+	elif '.av1.' in title: info_append('[B]AV1[/B]')
+	elif any(i in title for i in CODEC_H265): info_append('[B]HEVC[/B]')
 	elif any(i in info for i in ('[B]HDR[/B]', '[B]D/VISION[/B]')): info_append('[B]HEVC[/B]')
-	elif any(i in fmt for i in CODEC_XVID): info_append('XVID')
-	elif any(i in fmt for i in CODEC_DIVX): info_append('DIVX')
-	if any(i in fmt for i in REMUX): info_append('REMUX')
-	if any(i in fmt for i in BLURAY): info_append('BLURAY')
-	elif any(i in fmt for i in DVD): info_append('DVD')
-	elif any(i in fmt for i in WEB): info_append('WEB')
-	elif 'hdtv' in fmt: info_append('HDTV')
-	elif 'pdtv' in fmt: info_append('PDTV')
-	elif any(i in fmt for i in HDRIP): info_append('HDRIP')
-	if 'atmos' in fmt: info_append('ATMOS')
-	if any(i in fmt for i in DOLBY_TRUEHD): info_append('TRUEHD')
-	if any(i in fmt for i in DOLBY_DIGITALPLUS): info_append('DD+')
-	elif any(i in fmt for i in DOLBY_DIGITALEX): info_append('DD-EX')
-	elif any(i in fmt for i in DOLBYDIGITAL): info_append('DD')
-	if 'aac' in fmt: info_append('AAC')
-	elif 'mp3' in fmt: info_append('MP3')
-	elif '.flac.' in fmt: info_append('FLAC')
-	elif 'opus' in fmt and not fmt.endswith('opus.'): info_append('OPUS')
-	if any(i in fmt for i in DTSX): info_append('DTS-X')
-	elif any(i in fmt for i in DTS_HDMA): info_append('DTS-HD MA')
-	elif any(i in fmt for i in DTS_HD): info_append('DTS-HD')
-	elif '.dts' in fmt: info_append('DTS')
-	if any(i in fmt for i in AUDIO_8CH): info_append('8CH')
-	elif any(i in fmt for i in AUDIO_7CH): info_append('7CH')
-	elif any(i in fmt for i in AUDIO_6CH): info_append('6CH')
-	elif any(i in fmt for i in AUDIO_2CH): info_append('2CH')
-	if '.wmv' in fmt: info_append('WMV')
-	elif any(i in fmt for i in CODEC_MPEG): info_append('MPEG')
-	elif '.avi' in fmt: info_append('AVI')
-	elif any(i in fmt for i in CODEC_MKV): info_append('MKV')
-	if any(i in fmt for i in MULTI_LANG): info_append('MULTI-LANG')
-	if any(i in fmt for i in ADS): info_append('ADS')
-	if any(i in fmt for i in SUBS): info_append('SUBS')
-	info = ' | '.join(filter(None, info))
-	return quality, info
+	elif any(i in title for i in CODEC_XVID): info_append('XVID')
+	elif any(i in title for i in CODEC_DIVX): info_append('DIVX')
+	if any(i in title for i in REMUX): info_append('REMUX')
+	if any(i in title for i in BLURAY): info_append('BLURAY')
+	elif any(i in title for i in DVD): info_append('DVD')
+	elif any(i in title for i in WEB): info_append('WEB')
+	elif 'hdtv' in title: info_append('HDTV')
+	elif 'pdtv' in title: info_append('PDTV')
+	elif any(i in title for i in HDRIP): info_append('HDRIP')
+	if 'atmos' in title: info_append('ATMOS')
+	if any(i in title for i in DOLBY_TRUEHD): info_append('TRUEHD')
+	if any(i in title for i in DOLBY_DIGITALPLUS): info_append('DD+')
+	elif any(i in title for i in DOLBY_DIGITALEX): info_append('DD-EX')
+	elif any(i in title for i in DOLBYDIGITAL): info_append('DD')
+	if 'aac' in title: info_append('AAC')
+	elif 'mp3' in title: info_append('MP3')
+	elif '.flac.' in title: info_append('FLAC')
+	elif 'opus' in title and not title.endswith('opus.'): info_append('OPUS')
+	if any(i in title for i in DTSX): info_append('DTS-X')
+	elif any(i in title for i in DTS_HDMA): info_append('DTS-HD MA')
+	elif any(i in title for i in DTS_HD): info_append('DTS-HD')
+	elif '.dts' in title: info_append('DTS')
+	if any(i in title for i in AUDIO_8CH): info_append('8CH')
+	elif any(i in title for i in AUDIO_7CH): info_append('7CH')
+	elif any(i in title for i in AUDIO_6CH): info_append('6CH')
+	elif any(i in title for i in AUDIO_2CH): info_append('2CH')
+	if '.wmv' in title: info_append('WMV')
+	elif any(i in title for i in CODEC_MPEG): info_append('MPEG')
+	elif '.avi' in title: info_append('AVI')
+	elif any(i in title for i in CODEC_MKV): info_append('MKV')
+	if any(i in title for i in MULTI_LANG): info_append('MULTI-LANG')
+	if any(i in title for i in ADS): info_append('ADS')
+	if any(i in title for i in SUBS): info_append('SUBS')
+	return ' | '.join(filter(None, info))
 
 def get_cache_expiry(media_type, meta, season):
 	try:

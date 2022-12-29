@@ -9,8 +9,8 @@ from modules.utils import imdb_sort_list, remove_accents, replace_html_codes, st
 headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'}
 base_url = 'https://www.imdb.com/%s'
 watchlist_url = 'user/ur%s/watchlist'
-user_list_movies_url = 'list/%s/?view=detail&sort=%s&title_type=movie&start=1&page=%s'
-user_list_tvshows_url = 'list/%s/?view=detail&sort=%s&title_type=tvSeries&start=1&page=%s'
+user_list_movies_url = 'list/%s/?view=detail&sort=%s&title_type=movie,short,video,tvShort,tvMovie,tvSpecial&start=1&page=%s'
+user_list_tvshows_url = 'list/%s/?view=detail&sort=%s&title_type=tvSeries,tvMiniSeries&start=1&page=%s'
 keywords_movies_url = 'search/keyword/?keywords=%s&sort=moviemeter,asc&title_type=movie&page=%s'
 keywords_tvshows_url = 'search/keyword/?keywords=%s&sort=moviemeter,asc&title_type=tvSeries&page=%s'
 lists_link = 'user/ur%s/lists?tab=all&sort=mdfd&order=desc&filter=titles'

@@ -24,18 +24,18 @@ class source:
 			cached_files = [i for i in files if i.get('type') not in ('default', 'audio', '') and i.get('is_ready') == '1']
 			aliases = get_aliases_titles(info.get('aliases', []))
 			def _process():
-				for i in cached_files:
+				for item in cached_files:
 					try:
 						if self.media_type == 'movie': files_num_video = 1
-						else: files_num_video = int(i['files_num_video'])
-						if files_num_video > 3: package, season_compare, size = 'true', 'pack', float(round(float(int(i['size']))/1073741824, 2))/files_num_video
-						else: package, season_compare, size = 'false', self.season, round(float(int(i['size']))/1073741824, 2)
-						file_name = normalize(i['name'])
+						else: files_num_video = int(item['files_num_video'])
+						if files_num_video > 3: package, season_compare, size = 'true', 'pack', float(round(float(int(item['size']))/1073741824, 2))/files_num_video
+						else: package, season_compare, size = 'false', self.season, round(float(int(item['size']))/1073741824, 2)
+						file_name = normalize(item['name'])
 						if any(x in file_name.lower() for x in extras): continue
 						if filter_title and not check_title(title, file_name, aliases, self.year, season_compare, self.episode): continue
 						display_name = clean_file_name(file_name).replace('html', ' ').replace('+', ' ').replace('-', ' ')
-						file_id, file_dl = i['id'], i['url_dl']
-						video_quality, details = get_file_info(name_info=release_info_format(file_name))
+						file_id, file_dl = item['id'], item['url_dl']
+						video_quality, details = get_file_info(name_info=release_info_format(file_name), default_quality=self._quality_estimate(int(item.get('width', 0))))
 						source_item = {'name': file_name, 'display_name': display_name, 'quality': video_quality, 'size': size, 'size_label': '%.2f GB' % size,
 									'extraInfo': details, 'url_dl': file_dl, 'id': file_id, 'local': False, 'direct': True, 'package': package, 'source': self.scrape_provider,
 									'scrape_provider': self.scrape_provider}
@@ -49,6 +49,12 @@ class source:
 			logger('FEN furk scraper Exception', str(e))
 		internal_results(self.scrape_provider, self.sources)
 		return self.sources
+
+	def _quality_estimate(self, width):
+		if width > 1920: return '4K'
+		if 1280 < width <= 1920: return '1080p'
+		if 720 < width <= 1280: return '720p'
+		return 'SD'
 
 	def _search_name(self):
 		if self.media_type == 'movie': return '@name+%s+%d+|+%d+|+%d' % (self.search_title, self.year-1, self.year, self.year+1)

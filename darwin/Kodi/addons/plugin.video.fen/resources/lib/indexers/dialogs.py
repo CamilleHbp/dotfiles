@@ -24,8 +24,8 @@ extras_open_action, get_art_provider, fanarttv_default, ignore_articles = settin
 toggle_all, enable_disable, set_default_scrapers = source_utils.toggle_all, source_utils.enable_disable, source_utils.set_default_scrapers
 clear_scrapers_cache, get_aliases_titles, make_alias_dict = source_utils.clear_scrapers_cache, source_utils.get_aliases_titles, source_utils.make_alias_dict
 closing_options = (None, 'trakt_manager', 'favorites_choice', 'playback_choice', 'clear_media_cache', 'set_media_artwork', 'clear_scrapers_cache', 'open_external_scrapers_choice',
-					'open_fen_settings', 'browse', 'browse_season', 'nextep_manager', 'recommended', 'random', 'playback', 'extras', 'mark_watched_unwatched_movie',
-					'mark_watched_unwatched_episode', 'mark_watched_tvshow', 'mark_unwatched_tvshow', 'mark_watched_season', 'mark_unwatched_season', 'clear_progress',
+					'open_fen_settings', 'browse', 'browse_season', 'nextep_manager', 'recommended', 'random', 'playback', 'extras', 'mark_movie',
+					'mark_episode', 'mark_watched_tvshow', 'mark_unwatched_tvshow', 'mark_watched_season', 'mark_unwatched_season', 'clear_progress',
 					'refresh_widgets', 'exit_menu')
 
 def audio_filters_choice():
@@ -70,11 +70,12 @@ def movie_sets_to_collection_choice(collection_id):
 	movies_to_add = len(selection)
 	movies_added = result['added']['movies']
 	if movies_added:
-		ok_dialog(text=ls(33084) % movies_added, top_space=True)
+		ok_dialog(text=ls(33084) % movies_added)
 		trakt_sync_activities()
 	else:
-		if 'existing' in result and result['existing']['movies'] == movies_to_add: ok_dialog(text=32765, top_space=True)
-		else: ok_dialog(text=33047, top_space=True)
+		if 'existing' in result and result['existing']['movies'] == movies_to_add: text = 32765
+		else: text = 33047
+		ok_dialog(text=text)
 
 def link_folders_choice(service, folder_id, action):
 	from caches.main_cache import main_cache
@@ -88,7 +89,7 @@ def link_folders_choice(service, folder_id, action):
 	current_link = main_cache.get(string)
 	if action == 'remove':
 		if not current_link: return
-		if not confirm_dialog(text=ls(33075) % current_link['rootname'], top_space=True): return
+		if not confirm_dialog(text=ls(33075) % current_link['rootname']): return
 		dbcon = database.connect(maincache_db)
 		dbcur = dbcon.cursor()
 		dbcur.execute("DELETE FROM maincache WHERE id=?", (string,))
@@ -96,7 +97,7 @@ def link_folders_choice(service, folder_id, action):
 		dbcon.close()
 		clear_property(string)
 		kodi_refresh()
-		return ok_dialog(text=32576, top_space=True)
+		return ok_dialog(text=32576)
 	if current_link:
 		if not confirm_dialog(text=ls(33076) % (current_link['media_type'].upper(), current_link['rootname'])): return
 	media_type = _get_media_type()
@@ -108,7 +109,7 @@ def link_folders_choice(service, folder_id, action):
 	if year: query = '%s|%s' % (query, year)
 	function = tmdb_movies_search if media_type == 'movie' else tmdb_tv_search
 	results = function(query, 1)['results']
-	if len(results) == 0: return ok_dialog(text=32490, top_space=True)
+	if len(results) == 0: return ok_dialog(text=32490)
 	name_key = 'title' if media_type == 'movie' else 'name'
 	released_key = 'release_date' if media_type == 'movie' else 'first_air_date'
 	tmdb_image_base = 'https://image.tmdb.org/t/p/w300%s'
@@ -137,7 +138,7 @@ def link_folders_choice(service, folder_id, action):
 	data = {'media_type': 'episode' if media_type == 'tvshow' else media_type, 'rootname': chosen['rootname'], 'tmdb_id': str(chosen['tmdb_id'])}
 	main_cache.set(string, data, expiration=timedelta(days=3650))
 	kodi_refresh()
-	return ok_dialog(text=32576, top_space=True)
+	return ok_dialog(text=32576)
 
 def navigate_to_page_choice(params):
 	def _builder():
@@ -193,12 +194,21 @@ def trailer_choice(media_type, poster, tmdb_id, trailer_url, all_trailers=[]):
 		except: pass
 		hide_busy_dialog()
 	if all_trailers:
-		from modules.utils import clean_file_name
 		if len(all_trailers) == 1: video_id = all_trailers[0].get('key')
 		else:
-			list_items = [{'line1': clean_file_name(i['name']), 'icon': poster} for i in all_trailers]
+			from modules.utils import clean_file_name
+			def _sort_trailers():
+				official_trailers = [i for i in all_trailers if i['type'] == 'Trailer' and i['name'].lower() == 'official trailer']
+				other_official_trailers = [i for i in all_trailers if i['type'] == 'Trailer' and 'official' in i['name'].lower() and not i in official_trailers]
+				other_trailers = [i for i in all_trailers if i['type'] == 'Trailer' and not i in official_trailers  and not i in other_official_trailers]
+				teaser_trailers = [i for i in all_trailers if i['type'] == 'Teaser']
+				full_trailers = official_trailers + other_official_trailers + other_trailers + teaser_trailers
+				features = [i for i in all_trailers if not i in full_trailers]
+				return full_trailers + features
+			sorted_trailers = _sort_trailers()
+			list_items = [{'line1': clean_file_name(i['name']), 'icon': poster} for i in sorted_trailers]
 			kwargs = {'items': json.dumps(list_items), 'window_xml': 'media_select.xml'}
-			video_id = select_dialog([i['key'] for i in all_trailers], **kwargs)
+			video_id = select_dialog([i['key'] for i in sorted_trailers], **kwargs)
 			if video_id == None: return 'canceled'
 		trailer_url = 'plugin://plugin.video.youtube/play/?video_id=%s' % video_id
 	return trailer_url
@@ -249,13 +259,12 @@ def imdb_videos_choice(videos, poster):
 def random_choice(params):
 	meta, poster, return_choice, window_xml = params.get('meta'), params.get('poster'), params.get('return_choice', 'false'), params.get('window_xml', 'select.xml')
 	meta = params.get('meta', None)	
-	# list_items = [{'line1': ls(32541), 'icon': poster}, {'line1': ls(32542), 'icon': poster}]
-	# choices = ['play_random', 'play_random_continual']
-	# kwargs = {'items': json.dumps(list_items), 'heading': ls(32540), 'window_xml': window_xml}
-	# choice = select_dialog(choices, **kwargs)
-	# if return_choice == 'true': return choice
-	# if choice == None: return
-	choice = 'play_random'
+	list_items = [{'line1': ls(32541), 'icon': poster}, {'line1': ls(32542), 'icon': poster}]
+	choices = ['play_random', 'play_random_continual']
+	kwargs = {'items': json.dumps(list_items), 'heading': ls(32540), 'window_xml': window_xml}
+	choice = select_dialog(choices, **kwargs)
+	if return_choice == 'true': return choice
+	if choice == None: return
 	from modules.episode_tools import EpisodeTools
 	exec('EpisodeTools(meta).%s()' % choice)
 
@@ -290,22 +299,22 @@ def playback_choice(media_type, poster, meta, season, episode, window_xml):
 		deleted = ExternalProvidersCache().delete_cache_single(media_type, str(meta['tmdb_id']))
 		hide_busy_dialog()
 		if not deleted: return notification(32574)
-		if media_type == 'movie': play_params = {'mode': 'play_media', 'media_type': 'movie', 'tmdb_id': meta['tmdb_id'], 'autoplay': 'false'}
-		else: play_params = {'mode': 'play_media', 'media_type': 'episode', 'tmdb_id': meta['tmdb_id'], 'season': season, 'episode': episode, 'autoplay': 'false'}
+		if media_type == 'movie': play_params = {'mode': 'playback.media', 'media_type': 'movie', 'tmdb_id': meta['tmdb_id'], 'autoplay': 'false'}
+		else: play_params = {'mode': 'playback.media', 'media_type': 'episode', 'tmdb_id': meta['tmdb_id'], 'season': season, 'episode': episode, 'autoplay': 'false'}
 	elif choice == 'scrape_with_default':
-		if media_type == 'movie': play_params = {'mode': 'play_media', 'media_type': 'movie', 'tmdb_id': meta['tmdb_id'],
+		if media_type == 'movie': play_params = {'mode': 'playback.media', 'media_type': 'movie', 'tmdb_id': meta['tmdb_id'],
 												'default_ext_only': 'true', 'prescrape': 'false', 'autoplay': 'false'}
-		else: play_params = {'mode': 'play_media', 'media_type': 'episode', 'tmdb_id': meta['tmdb_id'], 'season': season,
+		else: play_params = {'mode': 'playback.media', 'media_type': 'episode', 'tmdb_id': meta['tmdb_id'], 'season': season,
 							'episode': episode, 'default_ext_only': 'true', 'prescrape': 'false', 'autoplay': 'false'}
 	elif choice == 'scrape_with_disabled':
-		if media_type == 'movie': play_params = {'mode': 'play_media', 'media_type': 'movie', 'tmdb_id': meta['tmdb_id'],
+		if media_type == 'movie': play_params = {'mode': 'playback.media', 'media_type': 'movie', 'tmdb_id': meta['tmdb_id'],
 												'disabled_ext_ignored': 'true', 'prescrape': 'false', 'autoplay': 'false'}
-		else: play_params = {'mode': 'play_media', 'media_type': 'episode', 'tmdb_id': meta['tmdb_id'], 'season': season,
+		else: play_params = {'mode': 'playback.media', 'media_type': 'episode', 'tmdb_id': meta['tmdb_id'], 'season': season,
 							'episode': episode, 'disabled_ext_ignored': 'true', 'prescrape': 'false', 'autoplay': 'false'}
 	elif choice == 'scrape_with_filters_ignored':
-		if media_type == 'movie': play_params = {'mode': 'play_media', 'media_type': 'movie', 'tmdb_id': meta['tmdb_id'],
+		if media_type == 'movie': play_params = {'mode': 'playback.media', 'media_type': 'movie', 'tmdb_id': meta['tmdb_id'],
 												'ignore_scrape_filters': 'true', 'prescrape': 'false', 'autoplay': 'false'}
-		else: play_params = {'mode': 'play_media', 'media_type': 'episode', 'tmdb_id': meta['tmdb_id'], 'season': season,
+		else: play_params = {'mode': 'playback.media', 'media_type': 'episode', 'tmdb_id': meta['tmdb_id'], 'season': season,
 							'episode': episode, 'ignore_scrape_filters': 'true', 'prescrape': 'false', 'autoplay': 'false'}
 		set_property('fs_filterless_search', 'true')
 	elif choice == 'scrape_with_aliases':
@@ -319,16 +328,16 @@ def playback_choice(media_type, poster, meta, season, episode, window_xml):
 			if custom_title == None: return notification(32736, 2500)
 		custom_title = dialog.input(ls(32228), defaultt=custom_title)
 		if not custom_title: return notification(32736, 2500)
-		if media_type in ('movie', 'movies'): play_params = {'mode': 'play_media', 'media_type': 'movie', 'tmdb_id': meta['tmdb_id'],
+		if media_type in ('movie', 'movies'): play_params = {'mode': 'playback.media', 'media_type': 'movie', 'tmdb_id': meta['tmdb_id'],
 						'custom_title': custom_title, 'prescrape': 'false'}
-		else: play_params = {'mode': 'play_media', 'media_type': 'episode', 'tmdb_id': meta['tmdb_id'], 'season': season, 'episode': episode,
+		else: play_params = {'mode': 'playback.media', 'media_type': 'episode', 'tmdb_id': meta['tmdb_id'], 'season': season, 'episode': episode,
 							'custom_title': custom_title, 'prescrape': 'false'}
 	else:
 		default_title, default_year = meta['title'], str(meta['year'])
 		allscrapers_str, def_scrapers_str = '%s?' % ls(32006), '%s?' % ls(32185)
 		title_str, year_str, season_str, episode_str = ls(32228), ls(32543), ls(32537), ls(32203).lower().capitalize()
-		if media_type in ('movie', 'movies'): play_params = {'mode': 'play_media', 'media_type': 'movie', 'tmdb_id': meta['tmdb_id'], 'prescrape': 'false'}
-		else: play_params = {'mode': 'play_media', 'media_type': 'episode', 'tmdb_id': meta['tmdb_id'], 'season': season, 'episode': episode, 'prescrape': 'false'}
+		if media_type in ('movie', 'movies'): play_params = {'mode': 'playback.media', 'media_type': 'movie', 'tmdb_id': meta['tmdb_id'], 'prescrape': 'false'}
+		else: play_params = {'mode': 'playback.media', 'media_type': 'episode', 'tmdb_id': meta['tmdb_id'], 'season': season, 'episode': episode, 'prescrape': 'false'}
 		if aliases:
 			poster_main, poster_backup = get_art_provider()[0:2]
 			poster = meta.get('custom_poster') or meta.get(poster_main) or meta.get(poster_backup) or poster_empty
@@ -679,7 +688,7 @@ def options_menu(params, meta=None):
 			if menu_type == 'movie':
 				if playcount: watched_action, watchedstr = 'mark_as_unwatched', strip_bold(ls(32643)).replace(' %s', '')
 				else: watched_action, watchedstr = 'mark_as_watched', strip_bold(ls(32642)).replace(' %s', '')
-				listing_append((watchedstr, '', 'mark_watched_unwatched_movie'))
+				listing_append((watchedstr, '', 'mark_movie'))
 				if progress: listing_append((strip_bold(ls(32651)), '', 'clear_progress'))
 			else:
 				if not playcount: listing_append((strip_bold(ls(32642)).replace(' %s', ''), '', 'mark_watched_tvshow'))
@@ -692,7 +701,7 @@ def options_menu(params, meta=None):
 			else:
 				if playcount: watched_action, watchedstr = 'mark_as_unwatched', strip_bold(ls(32643)).replace(' %s', '')
 				else: watched_action, watchedstr = 'mark_as_watched', strip_bold(ls(32642)).replace(' %s', '')
-				listing_append((watchedstr, '', 'mark_watched_unwatched_episode'))
+				listing_append((watchedstr, '', 'mark_episode'))
 				if progress: listing_append((strip_bold(ls(32651)), '', 'clear_progress'))
 		if is_widget: listing_append((ls(32611), '', 'refresh_widgets'))
 	if menu_type in ('movie', 'episode') or menu_type in single_ep_list:
@@ -749,26 +758,26 @@ def options_menu(params, meta=None):
 	if choice in closing_options: unpause_settings_change()
 	if choice == None: return
 	elif choice == 'playback':
-		return run_plugin({'mode': 'play_media', 'media_type': 'movie', 'tmdb_id': tmdb_id})
+		return run_plugin({'mode': 'playback.media', 'media_type': 'movie', 'tmdb_id': tmdb_id})
 	elif choice == 'extras':
 		return extras_menu({'tmdb_id': tmdb_id, 'media_type': content, 'is_widget': str(is_widget)})
-	elif choice == 'mark_watched_unwatched_movie':
-		return run_plugin({'mode': 'mark_as_watched_unwatched_movie', 'action': watched_action, 'title': title, 'year': year, 'tmdb_id': tmdb_id})
-	elif choice == 'mark_watched_unwatched_episode':
-		return run_plugin({'mode': 'mark_as_watched_unwatched_episode', 'action': watched_action, 'title': title, 'year': year, 'tmdb_id': tmdb_id,
+	elif choice == 'mark_movie':
+		return run_plugin({'mode': 'watched_status.mark_movie', 'action': watched_action, 'title': title, 'year': year, 'tmdb_id': tmdb_id})
+	elif choice == 'mark_episode':
+		return run_plugin({'mode': 'watched_status.mark_episode', 'action': watched_action, 'title': title, 'year': year, 'tmdb_id': tmdb_id,
 							'tvdb_id': tvdb_id, 'season': season, 'episode': episode})
 	elif choice == 'mark_watched_tvshow':
-		return run_plugin({'mode': 'mark_as_watched_unwatched_tvshow', 'action': 'mark_as_watched', 'title': title, 'year': year, 'tmdb_id': tmdb_id, 'tvdb_id': tvdb_id})
+		return run_plugin({'mode': 'watched_status.mark_tvshow', 'action': 'mark_as_watched', 'title': title, 'year': year, 'tmdb_id': tmdb_id, 'tvdb_id': tvdb_id})
 	elif choice == 'mark_unwatched_tvshow':
-		return run_plugin({'mode': 'mark_as_watched_unwatched_tvshow', 'action': 'mark_as_unwatched', 'title': title, 'year': year, 'tmdb_id': tmdb_id, 'tvdb_id': tvdb_id})
+		return run_plugin({'mode': 'watched_status.mark_tvshow', 'action': 'mark_as_unwatched', 'title': title, 'year': year, 'tmdb_id': tmdb_id, 'tvdb_id': tvdb_id})
 	elif choice == 'mark_watched_season':
-		return run_plugin({'mode': 'mark_as_watched_unwatched_season', 'action': 'mark_as_watched', 'title': title, 'year': year, 'tmdb_id': tmdb_id,
+		return run_plugin({'mode': 'watched_status.mark_season', 'action': 'mark_as_watched', 'title': title, 'year': year, 'tmdb_id': tmdb_id,
 							'tvdb_id': tvdb_id, 'season': season})
 	elif choice == 'mark_unwatched_season':
-		return run_plugin({'mode': 'mark_as_watched_unwatched_season', 'action': 'mark_as_unwatched', 'title': title, 'year': year, 'tmdb_id': tmdb_id,
+		return run_plugin({'mode': 'watched_status.mark_season', 'action': 'mark_as_unwatched', 'title': title, 'year': year, 'tmdb_id': tmdb_id,
 							'tvdb_id': tvdb_id, 'season': season})
 	elif choice == 'clear_progress':
-		return run_plugin({'mode': 'watched_unwatched_erase_bookmark', 'media_type': content, 'tmdb_id': tmdb_id, 'season': season, 'episode': episode, 'refresh': 'true'})
+		return run_plugin({'mode': 'watched_status.erase_bookmark', 'media_type': content, 'tmdb_id': tmdb_id, 'season': season, 'episode': episode, 'refresh': 'true'})
 	elif choice == 'refresh_widgets':
 		return kodi_refresh()
 	elif choice == 'clear_media_cache':

@@ -2,6 +2,28 @@
 from modules.kodi_utils import translate_path, get_property, tmdb_default_api, fanarttv_default_api, get_setting
 # from modules.kodi_utils import logger
 
+download_directories_dict = {'movie': 'movie_download_directory', 'episode': 'tvshow_download_directory', 'thumb_url': 'image_download_directory',
+							'image_url': 'image_download_directory','image': 'image_download_directory', 'premium': 'premium_download_directory',
+							None: 'premium_download_directory', 'None': False}
+results_style_dict = {'true': 'contrast', 'false': 'non_contrast'}
+results_window_numbers_dict = {'list': 2000, 'infolist': 2001, 'medialist': 2002, 'rows': 2003, 'shift': 2004, 'thumbs': 2005}
+year_in_title_dict = {'movie': (1, 3), 'tvshow': (2, 3)}
+default_action_dict = {0: 'play', 1: 'cancel'}
+extras_open_action_dict = {'movie': (1, 3), 'tvshow': (2, 3)}
+prescrape_scrapers_tuple = ('furk', 'easynews', 'rd_cloud', 'pm_cloud', 'ad_cloud')
+sort_to_top_dict = {'folders': 'results.sort_folders_first', 'rd_cloud': 'results.sort_rdcloud_first',
+					'pm_cloud': 'results.sort_pmcloud_first', 'ad_cloud': 'results.sort_adcloud_first'}
+internal_scrapers_clouds_list = [('rd', 'provider.rd_cloud'), ('pm', 'provider.pm_cloud'), ('ad', 'provider.ad_cloud')]
+single_ep_format_dict = {0: '%d-%m-%Y', 1: '%Y-%m-%d', 2: '%m-%d-%Y'}
+default_art_provider_tuple = ('poster', 'poster2', 'fanart', 'fanart2', 'clearlogo', 'clearlogo2')
+art_provider_dict = {True: ('poster2', 'poster', 'fanart2', 'fanart', 'clearlogo2', 'clearlogo'), False: ('poster', 'poster2', 'fanart', 'fanart2', 'clearlogo2', 'clearlogo')}
+resolution_tuple = (
+	{'poster': 'w185', 'fanart': 'w300', 'still': 'w185', 'profile': 'w185', 'clearlogo': 'original'},
+	{'poster': 'w342', 'fanart': 'w780', 'still': 'w300', 'profile': 'w342', 'clearlogo': 'original'},
+	{'poster': 'w780', 'fanart': 'w1280', 'still': 'original', 'profile': 'h632', 'clearlogo': 'original'},
+	{'poster': 'original', 'fanart': 'original', 'still': 'original', 'profile': 'original', 'clearlogo': 'original'})
+
+
 def skin_location():
 	return translate_path('special://home/addons/plugin.video.fen')
 
@@ -15,11 +37,11 @@ def results_format():
 	return str(get_setting('results.format', 'List').lower())
 
 def results_style():
-	return {'true': 'contrast', 'false': 'non_contrast'}[get_setting('results.use_contrast', 'true')]
+	return results_style_dict[get_setting('results.use_contrast', 'true')]
 
 def results_xml_window_number(window_format=None):
 	if not window_format: window_format = results_format()
-	return {'list': 2000, 'infolist': 2001, 'medialist': 2002, 'rows': 2003, 'shift': 2004, 'thumbs': 2005}[window_format.split(' ')[0]]
+	return results_window_numbers_dict[window_format.split(' ')[0]]
 
 def store_resolved_torrent_to_cloud(debrid_service, pack):
 	setting_value = int(get_setting('store_resolved_torrent.%s' % debrid_service.lower(), '0'))
@@ -30,8 +52,14 @@ def enabled_debrids_check(debrid_service):
 	if get_setting('%s.token' % debrid_service) in (None, ''): return False
 	return True
 
+def limit_resolve():
+	return get_setting('playback.limit_resolve', 'false') == 'true'
+
 def disable_content_lookup():
 	return get_setting('playback.disable_content_lookup') == 'true'
+
+def widget_load_empty():
+	return get_setting('playback.widget_load_empty', 'true') == 'true'
 
 def display_sleep_time():
 	return 100
@@ -41,6 +69,10 @@ def show_specials():
 
 def show_unaired_watchlist():
 	return get_setting('show_unaired_watchlist', 'false') == 'true'
+
+def include_year_in_title(media_type):
+	setting = int(get_setting('include_year_in_title', '0'))
+	return setting in year_in_title_dict[media_type]
 	
 def movies_directory():
 	return translate_path(get_setting('movies_directory'))
@@ -49,14 +81,15 @@ def tv_show_directory():
 	return translate_path(get_setting('tv_shows_directory'))
 
 def download_directory(media_type):
-	return translate_path(get_setting({'movie': 'movie_download_directory', 'episode': 'tvshow_download_directory', 'thumb_url': 'image_download_directory',
-									'image_url': 'image_download_directory', 'image': 'image_download_directory', 'premium': 'premium_download_directory',
-									None: 'premium_download_directory', 'None': False}[media_type]))
+	return translate_path(get_setting(download_directories_dict[media_type]))
 
 def source_folders_directory(media_type, source):
 	setting = '%s.movies_directory' % source if media_type == 'movie' else '%s.tv_shows_directory' % source
 	if get_setting(setting) not in ('', 'None', None): return translate_path( get_setting(setting))
 	else: return False
+
+def suppress_episode_plot():
+	return get_setting('suppress_episode_plot', 'false') == 'true'
 
 def paginate():
 	return get_setting('paginate.lists', 'false') == 'true'
@@ -102,7 +135,7 @@ def auto_nextep_settings():
 	scraper_time = int(get_setting('results.timeout', '60')) + 20
 	window_percentage = 100 - int(get_setting('autoplay_next_window_percentage', '95'))
 	alert_method = int(get_setting('autoplay_alert_method', '0'))
-	default_action = {0: 'play', 1: 'cancel'}[int(get_setting('autoplay_default_action', '1'))] if alert_method == 0 else 'cancel'
+	default_action = default_action_dict[int(get_setting('autoplay_default_action', '1'))] if alert_method == 0 else 'cancel'
 	return {'scraper_time': scraper_time, 'window_percentage': window_percentage, 'alert_method': alert_method, 'default_action': default_action}
 
 def filter_status(filter_type):
@@ -150,7 +183,7 @@ def watched_indicators():
 	return int(get_setting('watched_indicators','0'))
 
 def max_threads():
-	if not get_setting('limit_concurrent_threads', 'false') == 'true': return 1000
+	if not get_setting('limit_concurrent_threads', 'false') == 'true': return 60
 	return int(get_setting('max_threads', '60'))
 
 def widget_hide_next_page():
@@ -160,7 +193,7 @@ def widget_hide_watched():
 	return get_setting('widget_hide_watched', 'false') == 'true'
 
 def extras_open_action(media_type):
-	return int(get_setting('extras.open_action', '0')) in {'movie': (1, 3), 'tvshow': (2, 3)}[media_type]
+	return int(get_setting('extras.open_action', '0')) in extras_open_action_dict[media_type]
 
 def extras_enable_scrollbars():
 	return get_setting('extras.enable_scrollbars', 'true')
@@ -177,7 +210,7 @@ def extras_enabled_menus():
 	return [int(i) for i in setting.split(',')]
 
 def check_prescrape_sources(scraper):
-	if scraper in ('furk', 'easynews', 'rd_cloud', 'pm_cloud', 'ad_cloud'): return get_setting('check.%s' % scraper) == 'true'
+	if scraper in prescrape_scrapers_tuple: return get_setting('check.%s' % scraper) == 'true'
 	if get_setting('check.%s' % scraper) == 'true' and get_setting('auto_play') != 'true': return True
 	else: return False
 
@@ -203,10 +236,9 @@ def results_sort_order():
 			)[int(get_setting('results.sort_order', '1'))]
 
 def active_internal_scrapers():
-	clouds = [('rd', 'provider.rd_cloud'), ('pm', 'provider.pm_cloud'), ('ad', 'provider.ad_cloud')]
 	settings = ['provider.external', 'provider.furk', 'provider.easynews', 'provider.folders']
 	settings_append = settings.append
-	for item in clouds:
+	for item in internal_scrapers_clouds_list:
 		if enabled_debrids_check(item[0]): settings_append(item[1])
 	active = [i.split('.')[1] for i in settings if get_setting(i) == 'true']
 	return active
@@ -221,8 +253,7 @@ def provider_sort_ranks():
 			'rd_cloud': rd_priority, 'pm_cloud': pm_priority, 'ad_cloud': ad_priority, 'folders': 0}
 
 def sort_to_top(provider):
-	return get_setting({'folders': 'results.sort_folders_first', 'rd_cloud': 'results.sort_rdcloud_first', 'pm_cloud': 'results.sort_pmcloud_first',
-						'ad_cloud': 'results.sort_adcloud_first'}[provider]) == 'true'
+	return get_setting(sort_to_top_dict[provider]) == 'true'
 
 def auto_resume(media_type):
 	auto_resume = get_setting('auto_resume_%s' % media_type)
@@ -237,7 +268,7 @@ def show_unaired():
 	return get_setting('show_unaired', 'true') == 'true'
 
 def single_ep_format():
-	return {0: '%d-%m-%Y', 1: '%Y-%m-%d', 2: '%m-%d-%Y'}[int(get_setting('single_ep_format', '1'))]
+	return single_ep_format_dict[int(get_setting('single_ep_format', '1'))]
 
 def single_ep_display_title():
 	return int(get_setting('single_ep_display', '0'))
@@ -247,12 +278,12 @@ def nextep_display_settings():
 	return {'unaired_color': 'red', 'unwatched_color': 'darkgoldenrod', 'include_airdate': include_airdate}
 
 def nextep_content_settings():
-	sort_type = int(get_setting('nextep.sort_type'))
-	sort_order = int(get_setting('nextep.sort_order'))
+	sort_type = int(get_setting('nextep.sort_type', '0'))
+	sort_order = int(get_setting('nextep.sort_order', '0'))
 	sort_direction = sort_order == 0
 	sort_key = 'fen.last_played' if sort_type == 0 else 'fen.first_aired' if sort_type == 1 else 'fen.name'
 	include_unaired = get_setting('nextep.include_unaired') == 'true'
-	include_unwatched = get_setting('nextep.include_unwatched') == 'true'
+	include_unwatched = int(get_setting('nextep.include_unwatched', '0'))
 	sort_airing_today_to_top = get_setting('nextep.sort_airing_today_to_top', 'false') == 'true'
 	return {'sort_key': sort_key, 'sort_direction': sort_direction, 'sort_type': sort_type, 'sort_order':sort_order,
 			'include_unaired': include_unaired, 'include_unwatched': include_unwatched, 'sort_airing_today_to_top': sort_airing_today_to_top}
@@ -296,20 +327,14 @@ def fanarttv_default():
 	return get_setting('fanarttv.default', 'false') == 'true'
 
 def get_resolution():
-	return (
-			{'poster': 'w185', 'fanart': 'w300', 'still': 'w185', 'profile': 'w185', 'clearlogo': 'original'},
-			{'poster': 'w342', 'fanart': 'w780', 'still': 'w300', 'profile': 'w342', 'clearlogo': 'original'},
-			{'poster': 'w780', 'fanart': 'w1280', 'still': 'original', 'profile': 'h632', 'clearlogo': 'original'},
-			{'poster': 'original', 'fanart': 'original', 'still': 'original', 'profile': 'original', 'clearlogo': 'original'}
-			)[int(get_setting('image_resolutions', '2'))]
+	return resolution_tuple[int(get_setting('image_resolutions', '2'))]
 
 def get_language():
 	return get_setting('meta_language', 'en')
 
 def get_art_provider():
-	if not get_fanart_data(): return ('poster', 'poster2', 'fanart', 'fanart2', 'clearlogo', 'clearlogo2')
-	return {True: ('poster2', 'poster', 'fanart2', 'fanart', 'clearlogo2', 'clearlogo'),
-			False: ('poster', 'poster2', 'fanart', 'fanart2', 'clearlogo2', 'clearlogo')}[fanarttv_default()]
+	if not get_fanart_data(): return default_art_provider_tuple
+	return art_provider_dict[fanarttv_default()]
 
 def metadata_user_info():
 	tmdb_api = tmdb_api_key()

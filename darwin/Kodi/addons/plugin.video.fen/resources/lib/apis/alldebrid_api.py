@@ -11,7 +11,7 @@ progress_dialog, notification, kodi_utils.hide_busy_dialog, monitor = kodi_utils
 ls, get_setting, set_setting, sleep, ok_dialog = kodi_utils.local_string, kodi_utils.get_setting, kodi_utils.set_setting, kodi_utils.sleep, kodi_utils.ok_dialog
 set_temp_highlight, restore_highlight, make_settings_dict = kodi_utils.set_temp_highlight, kodi_utils.restore_highlight, kodi_utils.make_settings_dict
 pause_settings_change, unpause_settings_change = kodi_utils.pause_settings_change, kodi_utils.unpause_settings_change
-path_exists, maincache_db, requests = kodi_utils.path_exists, kodi_utils.maincache_db, kodi_utils.requests
+path_exists, maincache_db, requests, Thread = kodi_utils.path_exists, kodi_utils.maincache_db, kodi_utils.requests, kodi_utils.Thread
 base_url = 'https://api.alldebrid.com/v4/'
 user_agent = 'fen_for_kodi'
 timeout = 20.0
@@ -141,7 +141,7 @@ class AllDebridAPI:
 											for x in EXTRAS)][0]
 						except: media_id = None
 				else: media_id = max(valid_results, key=lambda x: x.get('size')).get('link', None)
-			if not store_to_cloud: self.delete_transfer(transfer_id)
+			if not store_to_cloud: Thread(target=self.delete_transfer, args=(transfer_id,)).start()
 			if media_id:
 				file_url = self.unrestrict_link(media_id)
 				if not any(file_url.lower().endswith(x) for x in extensions): file_url = None
@@ -190,7 +190,7 @@ class AllDebridAPI:
 		if pack:
 			self.clear_cache(clear_hashes=False)
 			hide_busy_dialog()
-			ok_dialog(text=ls(32732) % ls(32063), top_space=False)
+			ok_dialog(text=ls(32732) % ls(32063))
 			return True
 		interval = 5
 		line = '%s[CR]%s[CR]%s'
@@ -269,7 +269,7 @@ class AllDebridAPI:
 	def revoke_auth(self):
 		set_setting('ad.account_id', '')
 		set_setting('ad.token', '')
-		ok_dialog(heading=32063, text='%s %s' % (ls(32059), ls(32576)), top_space=False)
+		ok_dialog(heading=32063, text='%s %s' % (ls(32059), ls(32576)))
 
 	def clear_cache(self, clear_hashes=True):
 		try:

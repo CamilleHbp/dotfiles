@@ -299,7 +299,7 @@ msgid "Include Unaired Episodes When Available"
 msgstr ""
 
 msgctxt "#32074"
-msgid "Include Trakt Watchlist"
+msgid "Include Trakt Watchlist/Fen Favorites"
 msgstr ""
 
 msgctxt "#32075"
@@ -2186,7 +2186,7 @@ msgid "[B]Download File[/B]"
 msgstr ""
 
 msgctxt "#32748"
-msgid "[B]Rename %s[/B]"
+msgid "Search Cloud Storage"
 msgstr ""
 
 msgctxt "#32749"
@@ -3592,6 +3592,22 @@ msgstr ""
 
 msgctxt "#33099"
 msgid "Resync Internal (mins)"
+msgstr ""
+
+msgctxt "#33100"
+msgid "Suppress Episode Plot in Fen Custom Windows"
+msgstr ""
+
+msgctxt "#33101"
+msgid "Include Year in Title"
+msgstr ""
+
+msgctxt "#33102"
+msgid "Limit Resolve Attempts to Selected Result Only"
+msgstr ""
+
+msgctxt "#33103"
+msgid "Load Empty Widget Container on Playback Start"
 msgstr ""
 
 msgctxt "#40001"

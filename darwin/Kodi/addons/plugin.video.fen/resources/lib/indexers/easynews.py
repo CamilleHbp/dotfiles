@@ -29,17 +29,15 @@ def easynews_file_browser(files, handle):
 			try:
 				cm = []
 				item_get = item.get
-				
-				height = int(item_get('full_item')['height'])
-				if 1200 < height > 2100: display_res = '4K'
-				elif 1000 < height < 1200: display_res = '1080P'
-				elif 680 < height < 1000: display_res = '720P'
+				width = item_get('width', 0)
+				if width > 1920: display_res = '4K'
+				elif 1280 < width <= 1920: display_res = '1080P'
+				elif 720 < width <= 1280: display_res = '720P'
 				else: display_res = 'SD'
-				
 				name = clean_file_name(item_get('name')).upper()
 				url_dl = item_get('url_dl')
 				size = str(round(float(int(item_get('rawSize')))/1048576000, 1))
-				length = int(item_get('full_item')['runtime']/60.0)
+				length = item_get('runtime', '0')
 				display = '%02d | [B]%s[/B] | [B]%sGB | %sMINS | [/B][I]%s [/I]' % (count, display_res, size, length, name)
 				url_params = {'mode': 'easynews.resolve_easynews', 'url_dl': url_dl, 'play': 'true'}
 				url = build_url(url_params)
@@ -51,6 +49,8 @@ def easynews_file_browser(files, handle):
 				thumbnail = item_get('thumbnail', default_easynews_icon)
 				listitem.setArt({'icon': thumbnail, 'poster': thumbnail, 'thumb': thumbnail, 'fanart': fanart, 'banner': default_easynews_icon, 'clearlogo': fen_clearlogo})
 				listitem.setInfo('video', {'plot': ' '})
+				listitem.setProperty('fen.context_main_menu_params', build_url({'mode': 'menu_editor.edit_menu_external', 'name': name, 'iconImage': default_easynews_icon,
+									'action': 'cloud.easynews_direct'}))
 				yield (url, listitem, False)
 			except: pass
 	add_items(handle, list(_builder()))

@@ -1,4 +1,4 @@
-<addon id="plugin.video.fen" name="Fen" provider-name="Tikipeter" version="3.0.32">
+<addon id="plugin.video.fen" name="Fen" provider-name="Tikipeter" version="3.0.33">
     <requires>
         <import addon="xbmc.python" version="3.0.0" />
         <import addon="script.module.requests" version="2.19.1" />
@@ -17,15 +17,15 @@
             </item>
             <item library="resources/contextmenu/mark_watched.py">
                 <label>40003</label>
-                <visible>[String.IsEqual(ListItem.dbtype,movie) | String.IsEqual(ListItem.dbtype,episode)] + String.IsEqual(ListItem.Property(fen_widget),true) + String.IsEqual(ListItem.Property(fen.playcount),0)</visible>
+                <visible>[String.IsEqual(ListItem.dbtype,movie) | String.IsEqual(ListItem.dbtype,episode)] + String.IsEqual(ListItem.Property(fen.widget),true) + String.IsEqual(ListItem.Property(fen.playcount),0)</visible>
             </item>
             <item library="resources/contextmenu/mark_unwatched.py">
                 <label>40004</label>
-                <visible>[String.IsEqual(ListItem.dbtype,movie) | String.IsEqual(ListItem.dbtype,episode)] + String.IsEqual(ListItem.Property(fen_widget),true) + String.IsEqual(ListItem.Property(fen.playcount),1)</visible>
+                <visible>[String.IsEqual(ListItem.dbtype,movie) | String.IsEqual(ListItem.dbtype,episode)] + String.IsEqual(ListItem.Property(fen.widget),true) + String.IsEqual(ListItem.Property(fen.playcount),1)</visible>
             </item>
             <item library="resources/contextmenu/clear_progress.py">
                 <label>40009</label>
-                <visible>[String.IsEqual(ListItem.dbtype,movie) | String.IsEqual(ListItem.dbtype,episode)] + String.IsEqual(ListItem.Property(fen_widget),true) + String.IsEqual(ListItem.Property(fen.in_progress),true)</visible>
+                <visible>[String.IsEqual(ListItem.dbtype,movie) | String.IsEqual(ListItem.dbtype,episode)] + String.IsEqual(ListItem.Property(fen.widget),true) + String.IsEqual(ListItem.Property(fen.in_progress),true)</visible>
             </item>
             <item library="resources/contextmenu/options.py">
                 <label>40007</label>

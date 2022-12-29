@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 import os
-from caches.main_cache import cache_object
+from caches.main_cache import cache_object#, main_cache
 from modules import source_utils
 from modules.kodi_utils import list_dirs, open_file, urlparse
 from modules.utils import clean_file_name, normalize, make_thread_list
@@ -24,6 +24,7 @@ class source:
 			self.folder_path = source_folders_directory(self.media_type, self.scrape_provider)
 			if not self.folder_path: return internal_results(self.scraper_name, self.sources)
 			self.season, self.episode = info.get('season'), info.get('episode')
+			self.tmdb_id = info.get('tmdb_id')
 			self.title_query = clean_title(normalize(title))
 			self.folder_query = self._season_query_list() if self.media_type == 'episode' else self._year_query_list()
 			self._scrape_directory(self.folder_path)
@@ -51,6 +52,14 @@ class source:
 		internal_results(self.scraper_name, self.sources)
 		return self.sources
 
+	# def _assigned_content(self, folder_id):
+	# 	try:
+	# 		string = 'FEN_FOLDERS_%s_%s' % (self.scrape_provider, folder_id)
+	# 		result = main_cache.get(string)
+	# 		if self.media_type == result.get('media_type') and self.tmdb_id == result.get('tmdb_id'): return True
+	# 		return False
+	# 	except: return False
+
 	def _make_dirs(self, folder_name):
 		folder_files = []
 		folder_files_append = folder_files.append
@@ -70,9 +79,11 @@ class source:
 					if self.media_type == 'episode' and not seas_ep_filter(self.season, self.episode, normalized): return
 					url_path = self.url_path(folder_name, item[0])
 					size = self._get_size(url_path)
-					scrape_results_append((item[0], url_path, size)) 
-			elif self.title_query in item_name or any(x in item_name for x in self.folder_query):
-				folder_results_append(os.path.join(folder_name, item[0]))
+					scrape_results_append((item[0], url_path, size))
+			else:
+				# assigned_content = self._assigned_content(item[0])
+				if self.title_query in item_name or any(x in item_name for x in self.folder_query):
+					folder_results_append(os.path.join(folder_name, item[0]))
 		folder_results = []
 		scrape_results_append = self.scrape_results.append
 		folder_results_append = folder_results.append

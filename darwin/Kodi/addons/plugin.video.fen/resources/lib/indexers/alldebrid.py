@@ -33,7 +33,7 @@ def ad_torrent_cloud(folder_id=None):
 				linked_folder = assigned_content(folder_id)
 				if linked_folder: display = '%02d | [B]%s | [COLOR limegreen]%s | %s[/B][/COLOR] | [I]%s[/I]' % (count, folder_str, linked_str, linked_folder, clean_folder_name)
 				else: display = '%02d | [B]%s[/B] | [I]%s [/I]' % (count, folder_str, clean_folder_name)
-				url_params = {'mode': 'alldebrid.browse_ad_cloud', 'folder': json.dumps(item['links'])}
+				url_params = {'mode': 'alldebrid.browse_ad_cloud', 'id': folder_id, 'folder': json.dumps(item['links'])}
 				link_folders_add = {'mode': 'link_folders_choice', 'service': 'AD', 'folder_id': folder_id, 'action': 'add'}
 				link_folders_remove = {'mode': 'link_folders_choice', 'service': 'AD', 'folder_id': folder_id, 'action': 'remove'}
 				url = build_url(url_params)
@@ -45,6 +45,8 @@ def ad_torrent_cloud(folder_id=None):
 				listitem.setArt({'icon': default_ad_icon, 'poster': default_ad_icon, 'thumb': default_ad_icon, 'fanart': fanart,
 								'banner': default_ad_icon, 'clearlogo': fen_clearlogo})
 				listitem.setInfo('video', {'plot': ' '})
+				listitem.setProperty('fen.context_main_menu_params', build_url({'mode': 'menu_editor.edit_menu_external', 'name': clean_folder_name, 'iconImage': default_ad_icon,
+									'service': 'AD'}))
 				yield (url, listitem, True)
 			except: pass
 	try: cloud_dict = [i for i in AllDebrid.user_cloud()['magnets'] if i['statusCode'] == 4]
@@ -75,6 +77,8 @@ def browse_ad_cloud(folder):
 				listitem.setArt({'icon': default_ad_icon, 'poster': default_ad_icon, 'thumb': default_ad_icon, 'fanart': fanart,
 								'banner': default_ad_icon, 'clearlogo': fen_clearlogo})
 				listitem.setInfo('video', {'plot': ' '})
+				listitem.setProperty('fen.context_main_menu_params', build_url({'mode': 'menu_editor.edit_menu_external', 'name': name, 'iconImage': default_ad_icon,
+									'action': 'cloud.alldebrid'}))
 				yield (url, listitem, False)
 			except: pass
 	try: links = [i for i in json.loads(folder) if i['filename'].lower().endswith(tuple(extensions))]

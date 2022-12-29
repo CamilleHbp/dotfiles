@@ -66,7 +66,7 @@
                         <width max="480">auto</width>
                         <left>40</left>
                         <height>90</height>
-                        <font>font_mini</font>
+                        <font>font_mini</font> <!-- FEN_26 -->
                         <textcolor>FFCCCCCC</textcolor>
                         <align>left</align>
                         <aligny>center</aligny>
@@ -92,7 +92,7 @@
                         <left>40</left>
                         <width max="480">auto</width>
                         <height>90</height>
-                        <font>font_mini</font>
+                        <font>font_mini</font> <!-- FEN_26 -->
                         <textcolor>FF4a4347</textcolor>
                         <align>left</align>
                         <aligny>center</aligny>

@@ -11,10 +11,10 @@ progress_percent_function, get_watched_function, get_watched_info_function = get
 set_content, end_directory, set_view_mode, get_infolabel = kodi_utils.set_content, kodi_utils.end_directory, kodi_utils.set_view_mode, kodi_utils.get_infolabel
 string, ls, sys, external_browse, add_items, add_dir = str, kodi_utils.local_string, kodi_utils.sys, kodi_utils.external_browse, kodi_utils.add_items, kodi_utils.add_dir
 make_listitem, build_url, remove_keys, dict_removals = kodi_utils.make_listitem, kodi_utils.build_url, kodi_utils.remove_keys, kodi_utils.movie_dict_removals
-poster_empty, fanart_empty, build_content = kodi_utils.empty_poster, kodi_utils.addon_fanart, kodi_utils.build_content
+poster_empty, fanart_empty, build_content, make_placeholder = kodi_utils.empty_poster, kodi_utils.addon_fanart, kodi_utils.build_content, kodi_utils.make_placeholder_listitem
 metadata_user_info, watched_indicators, page_reference, date_offset = settings.metadata_user_info, settings.watched_indicators, settings.page_reference, settings.date_offset
 sleep, extras_open_action, get_art_provider, get_resolution = kodi_utils.sleep, settings.extras_open_action, settings.get_art_provider, settings.get_resolution
-max_threads, widget_hide_next_page = settings.max_threads, settings.widget_hide_next_page
+max_threads, widget_hide_next_page, include_year_in_title = settings.max_threads, settings.widget_hide_next_page, settings.include_year_in_title
 fen_str, trakt_str, watched_str, unwatched_str, extras_str, options_str = ls(32036), ls(32037), ls(32642), ls(32643), ls(32645), ls(32646)
 hide_str, exit_str, clearprog_str, nextpage_str, jumpto_str, play_str = ls(32648), ls(32649), ls(32651), ls(32799), ls(32964), '[B]%s...[/B]' % ls(32174)
 addmenu_str, addshortcut_str, add_coll_str = ls(32730), ls(32731), ls(33081)
@@ -114,6 +114,7 @@ class Movies:
 					self.new_page.update({'mode': mode, 'action': self.action, 'exit_list_params': self.exit_list_params})
 					add_dir(self.new_page, nextpage_str % self.new_page['new_page'], handle, 'item_next')
 			except: pass
+		else: add_items(handle, make_placeholder())
 		set_content(handle, content_type)
 		end_directory(handle, False if self.is_widget else None)
 		if self.params_get('refreshed') == 'true': sleep(1000)
@@ -130,8 +131,8 @@ class Movies:
 			cm_append = cm.append
 			listitem = make_listitem()
 			set_properties = listitem.setProperties
-			clearprog_params, watched_unwatched_params = '', ''
-			title, year = meta_get('title'), meta_get('year')
+			clearprog_params, watched_status_params = '', ''
+			rootname, title, year = meta_get('rootname'), meta_get('title'), meta_get('year')
 			tmdb_id, imdb_id = meta_get('tmdb_id'), meta_get('imdb_id')
 			poster = meta_get('custom_poster') or meta_get(self.poster_main) or meta_get(self.poster_backup) or poster_empty
 			fanart = meta_get('custom_fanart') or meta_get(self.fanart_main) or meta_get(self.fanart_backup) or fanart_empty
@@ -146,8 +147,8 @@ class Movies:
 				if self.widget_hide_watched: return
 				watched_action, watchedstr = 'mark_as_unwatched', unwatched_str
 			else: watched_action, watchedstr = 'mark_as_watched', watched_str
-			watched_unwatched_params = build_url({'mode': 'mark_as_watched_unwatched_movie', 'action': watched_action, 'tmdb_id': tmdb_id, 'title': title, 'year': year})
-			play_params = build_url({'mode': 'play_media', 'media_type': 'movie', 'tmdb_id': tmdb_id})
+			watched_status_params = build_url({'mode': 'watched_status.mark_movie', 'action': watched_action, 'tmdb_id': tmdb_id, 'title': title, 'year': year})
+			play_params = build_url({'mode': 'playback.media', 'media_type': 'movie', 'tmdb_id': tmdb_id})
 			extras_params = build_url({'mode': 'extras_menu_choice', 'tmdb_id': tmdb_id, 'media_type': 'movie', 'is_widget': self.is_widget})
 			options_params = build_url({'mode': 'options_menu_choice', 'content': 'movie', 'tmdb_id': tmdb_id, 'poster': poster, 'playcount': playcount,
 										'progress': progress, 'exit_menu': self.exit_list_params, 'is_widget': self.is_widget})
@@ -159,12 +160,12 @@ class Movies:
 				cm_append((extras_str, run_plugin % extras_params))
 			cm_append((options_str, run_plugin % options_params))
 			if progress:
-				clearprog_params = build_url({'mode': 'watched_unwatched_erase_bookmark', 'media_type': 'movie', 'tmdb_id': tmdb_id, 'refresh': 'true'})
+				clearprog_params = build_url({'mode': 'watched_status.erase_bookmark', 'media_type': 'movie', 'tmdb_id': tmdb_id, 'refresh': 'true'})
 				set_properties({'WatchedProgress': progress, 'resumetime': progress, 'fen.in_progress': 'true'})
 				cm_append((clearprog_str, run_plugin % clearprog_params))
-			cm_append((watchedstr % self.watched_title, run_plugin % watched_unwatched_params))
+			cm_append((watchedstr % self.watched_title, run_plugin % watched_status_params))
 			cm_append((exit_str, container_refresh % self.exit_list_params))
-			listitem.setLabel(title)
+			listitem.setLabel(rootname if self.include_year else title)
 			listitem.addContextMenuItems(cm)
 			listitem.setCast(meta_get('cast', []))
 			listitem.setUniqueIDs({'imdb': imdb_id, 'tmdb': string(tmdb_id)})
@@ -172,14 +173,14 @@ class Movies:
 							'clearlogo': clearlogo, 'landscape': landscape, 'thumb': landscape, 'discart': discart, 'keyart': keyart})
 			listitem.setInfo('video', remove_keys(meta, dict_removals))
 			set_properties({'fen.sort_order': string(item_position), 'fen.playcount': string(playcount), 'fen.extras_params': extras_params, 'fen.clearprog_params': clearprog_params,
-							'fen.options_params': options_params, 'fen.unwatched_params': watched_unwatched_params, 'fen.watched_params': watched_unwatched_params})
+							'fen.options_params': options_params, 'fen.unwatched_params': watched_status_params, 'fen.watched_params': watched_status_params})
 			if self.is_widget: set_properties({'fen.widget': 'true'})
 			self.append((url, listitem, False))
 		except: pass
 
 	def worker(self):
 		self.current_date, self.current_time = get_datetime_function(), get_current_timestamp()
-		self.meta_user_info, self.watched_indicators = metadata_user_info(), watched_indicators()
+		self.meta_user_info, self.watched_indicators, self.include_year = metadata_user_info(), watched_indicators(), include_year_in_title('movie')
 		self.watched_info, self.bookmarks = get_watched_info_function(self.watched_indicators), get_bookmarks(self.watched_indicators, 'movie')
 		self.open_extras, self.watched_title = extras_open_action('movie'), trakt_str if self.watched_indicators == 1 else fen_str
 		self.fanart_enabled, self.widget_hide_watched = self.meta_user_info['extra_fanart_enabled'], self.is_widget and self.meta_user_info['widget_hide_watched']

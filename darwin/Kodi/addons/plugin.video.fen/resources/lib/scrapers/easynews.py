@@ -34,7 +34,7 @@ class source:
 						if filter_lang and not any(i in lang_filters for i in item['language']) : continue
 						display_name = clean_file_name(file_name).replace('html', ' ').replace('+', ' ').replace('-', ' ')
 						url_dl, size = item['url_dl'], round(float(int(item['rawSize']))/1073741824, 2)
-						video_quality, details = get_file_info(name_info=release_info_format(file_name))
+						video_quality, details = get_file_info(name_info=release_info_format(file_name), default_quality=self._quality_estimate(int(item.get('width', 0))))
 						source_item = {'name': file_name, 'display_name': display_name, 'quality': video_quality, 'size': size, 'size_label': '%.2f GB' % size,
 									'extraInfo': details, 'url_dl': url_dl, 'id': url_dl, 'local': False, 'direct': True, 'source': self.scrape_provider,
 									'scrape_provider': self.scrape_provider}
@@ -48,6 +48,12 @@ class source:
 			logger('FEN easynews scraper Exception', str(e))
 		internal_results(self.scrape_provider, self.sources)
 		return self.sources
+
+	def _quality_estimate(self, width):
+		if width > 1920: return '4K'
+		if 1280 < width <= 1920: return '1080p'
+		if 720 < width <= 1280: return '720p'
+		return 'SD'
 
 	def _search_name(self):
 		if self.media_type == 'movie': return '%s %d' % (self.search_title, self.year)

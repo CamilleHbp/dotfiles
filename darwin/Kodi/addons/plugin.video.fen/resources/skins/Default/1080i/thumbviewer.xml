@@ -35,7 +35,7 @@
                 <top>22</top>
                 <width max="250">auto</width>
                 <height>20</height>
-                <font>font_tiny</font>
+                <font>font_tiny</font> <!-- FEN_21 -->
                 <textcolor>FFFFFFFF</textcolor>
                 <align>left</align>
                 <aligny>center</aligny>
@@ -46,7 +46,7 @@
                 <top>37</top>
                 <width max="1220">auto</width>
                 <height>20</height>
-                <font>font_tiny</font>
+                <font>font_tiny</font> <!-- FEN_21 -->
                 <textcolor>FFFFFFFF</textcolor>
                 <align>center</align>
                 <aligny>center</aligny>
@@ -78,7 +78,7 @@
                     <top>295</top>
                     <width max="310">auto</width>
                     <height>20</height>
-                    <font>font_tiny</font>
+                    <font>font_tiny</font> <!-- FEN_21 -->
                     <textcolor>FFB7B4BB</textcolor>
                     <align>center</align>
                     <aligny>center</aligny>
@@ -108,7 +108,7 @@
                         <top>295</top>
                         <width max="290">auto</width>
                         <height>20</height>
-                        <font>font_tiny</font>
+                        <font>font_tiny</font> <!-- FEN_21 -->
                         <textcolor>FF302F2F</textcolor>
                         <align>center</align>
                         <aligny>center</aligny>

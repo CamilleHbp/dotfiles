@@ -87,7 +87,7 @@ def get_title(meta):
 	else:
 		if get_setting('meta_language') == 'en': title = meta['title']
 		else:
-			english_title = self.meta.get('english_title')
+			english_title = meta.get('english_title')
 			if english_title: title = english_title
 			else:
 				try:
@@ -351,8 +351,7 @@ class Downloader:
 			playing = player.isPlaying()
 			if downloaded: text = '[B]%s[/B] : %s' % (title, '[COLOR forestgreen]%s %s[/COLOR]' % (ls(32107), ls(32576)))
 			else: text = '[B]%s[/B] : %s' % (title, '[COLOR red]%s %s[/COLOR]' % (ls(32107), ls(32490)))
-			if not downloaded or not playing: 
-				ok_dialog(text=text, top_space=False)
+			if not downloaded or not playing: ok_dialog(text=text)
 
 	def confirm_download(self):
 		choice = True
@@ -360,7 +359,7 @@ class Downloader:
 			text = '%s[CR]%s' % (ls(32688) % self.mb, ls(32689))
 			if self.action == 'meta.single':
 				choice = confirm_progress_media(meta=self.meta, text=text, enable_buttons=True, focus_button=10)
-			else: choice = confirm_dialog(text=text, top_space=False)
+			else: choice = confirm_dialog(text=text)
 		return choice
 
 	def return_notification(self, _notification=None, _ok_dialog=None):

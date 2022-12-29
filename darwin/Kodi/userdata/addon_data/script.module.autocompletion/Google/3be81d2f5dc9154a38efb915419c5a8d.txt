@@ -1,0 +1,1 @@
+["sa", ["sainte chapelle", "sacre coeur", "sandro", "samsung", "saint laurent", "salesforce", "sam bankman-fried", "salomon", "sandro paris", "saudi arabia"], [], {"google:suggestsubtypes": [[512], [512], [512], [512], [512], [512], [512], [512], [512], [512]], "google:suggesttype": ["QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY", "QUERY"]}]

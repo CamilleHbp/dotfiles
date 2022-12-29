@@ -88,7 +88,7 @@ class EpisodeTools:
 			except: premiered = chosen_episode['premiered']
 			self.meta.update({'media_type': 'episode', 'rootname': display_name, 'season': season, 'ep_name': ep_name,
 							'episode': episode, 'premiered': premiered, 'plot': plot})
-			url_params = {'mode': 'play_media', 'media_type': 'episode', 'tmdb_id': tmdb_id, 'tvshowtitle': self.meta_get('rootname'), 'season': season, 'episode': episode,
+			url_params = {'mode': 'playback.media', 'media_type': 'episode', 'tmdb_id': tmdb_id, 'tvshowtitle': self.meta_get('rootname'), 'season': season, 'episode': episode,
 						'autoplay': 'true', 'meta': json.dumps(self.meta)}
 			if continual: url_params['random_continual'] = 'true'
 			else: url_params['random'] = 'true'

@@ -1,0 +1,22 @@
+{
+    "my_object": {
+        "version": 3,
+        "name": "Taboo",
+        "skipped": [],
+        "episodes": [
+            "S01E01 - Episode 1",
+            "S01E02 - Episode 2",
+            "S01E03 - Episode 3",
+            "S01E04 - Episode 4",
+            "S01E05 - Episode 5",
+            "S01E06 - Episode 6",
+            "S01E07 - Episode 7",
+            "S01E08 - Episode 8"
+        ],
+        "latest_season": 1,
+        "next_check": "2023-01-03",
+        "last_check": "2022-12-27",
+        "log_msg": "Show last aired more than 3 months ago and no next aired date set"
+    },
+    "expires": "2023-04-26T18:44:40"
+}

@@ -6,20 +6,19 @@ from modules import debrid, kodi_utils, settings, metadata
 from modules.player import FenPlayer
 from modules.source_utils import internal_sources, external_sources, internal_folders_import, scraper_names, get_cache_expiry, make_alias_dict
 from modules.utils import clean_file_name, string_to_float, safe_string, remove_accents, get_datetime, manual_function_import
-logger = kodi_utils.logger
+# logger = kodi_utils.logger
 
 json, show_busy_dialog, hide_busy_dialog, confirm_progress_media = kodi_utils.json, kodi_utils.show_busy_dialog, kodi_utils.hide_busy_dialog, kodi_utils.confirm_progress_media
 select_dialog, confirm_dialog, get_setting, close_all_dialog = kodi_utils.select_dialog, kodi_utils.confirm_dialog, kodi_utils.get_setting, kodi_utils.close_all_dialog
 ls, get_icon, notification, sleep, execute_builtin = kodi_utils.local_string, kodi_utils.get_icon, kodi_utils.notification, kodi_utils.sleep, kodi_utils.execute_builtin
 Thread, get_property, set_property, clear_property = kodi_utils.Thread, kodi_utils.get_property, kodi_utils.set_property, kodi_utils.clear_property
-build_content_prop = kodi_utils.build_content_prop
 auto_play, active_internal_scrapers, provider_sort_ranks, audio_filters = settings.auto_play, settings.active_internal_scrapers, settings.provider_sort_ranks, settings.audio_filters
 display_sleep_time, scraping_settings, include_prerelease_results = settings.display_sleep_time, settings.scraping_settings, settings.include_prerelease_results
-ignore_results_filter, filter_status, results_sort_order = settings.ignore_results_filter, settings.filter_status, settings.results_sort_order
-metadata_user_info, quality_filter, sort_to_top  = settings.metadata_user_info, settings.quality_filter, settings.sort_to_top
-display_uncached_torrents, check_prescrape_sources = settings.display_uncached_torrents, settings.check_prescrape_sources
-autoplay_next_episode, autoscrape_next_episode = settings.autoplay_next_episode, settings.autoscrape_next_episode
+autoplay_next_episode, autoscrape_next_episode, limit_resolve = settings.autoplay_next_episode, settings.autoscrape_next_episode, settings.limit_resolve
 results_format, results_style, results_xml_window_number = settings.results_format, settings.results_style, settings.results_xml_window_number
+ignore_results_filter, filter_status, results_sort_order = settings.ignore_results_filter, settings.filter_status, settings.results_sort_order
+metadata_user_info, quality_filter, sort_to_top = settings.metadata_user_info, settings.quality_filter, settings.sort_to_top
+display_uncached_torrents, check_prescrape_sources = settings.display_uncached_torrents, settings.check_prescrape_sources
 debrid_enabled, debrid_type_enabled, debrid_valid_hosts = debrid.debrid_enabled, debrid.debrid_type_enabled, debrid.debrid_valid_hosts
 rd_info, pm_info, ad_info = ('apis.real_debrid_api', 'RealDebridAPI'), ('apis.premiumize_api', 'PremiumizeAPI'), ('apis.alldebrid_api', 'AllDebridAPI')
 debrids = {'Real-Debrid': rd_info, 'rd_cloud': rd_info, 'rd_browse': rd_info, 'Premiumize.me': pm_info, 'pm_cloud': pm_info, 'pm_browse': pm_info,
@@ -50,18 +49,10 @@ class Sources():
 		self.play_type, self.background, self.prescrape = params_get('play_type', ''), params_get('background', 'false') == 'true', params_get('prescrape', self.prescrape) == 'true'
 		self.random, self.random_continual = params_get('random', 'false') == 'true', params_get('random_continual', 'false') == 'true'
 		if self.play_type:
-			if self.play_type == 'autoplay_nextep':
-				self.autoplay_nextep = True
-				self.autoscrape_nextep = False
-			# elif self.playtype == 'random_continual':
-			# 	self.autoplay_nextep = False
-			# 	self.autoscrape_nextep = False
-			else:
-				self.autoplay_nextep = False
-				self.autoscrape_nextep = True
-		else:
-			self.autoplay_nextep = autoplay_next_episode()
-			self.autoscrape_nextep = autoscrape_next_episode()
+			if self.play_type == 'autoplay_nextep': self.autoplay_nextep, self.autoscrape_nextep = True, False
+			elif self.play_type == 'random_continual': self.autoplay_nextep, self.autoscrape_nextep = False, False
+			else: self.autoplay_nextep, self.autoscrape_nextep = False, True
+		else: self.autoplay_nextep, self.autoscrape_nextep = autoplay_next_episode(), autoscrape_next_episode()
 		self.autoscrape = self.autoscrape_nextep and self.background
 		self.nextep_settings, self.disable_autoplay_next_episode = params_get('nextep_settings', {}), params_get('disable_autoplay_next_episode', 'false') == 'true'
 		self.ignore_scrape_filters = params_get('ignore_scrape_filters', 'false') == 'true'
@@ -83,7 +74,7 @@ class Sources():
 		if not 'external' in self.active_internal_scrapers and (self.disabled_ext_ignored or self.default_ext_only): self.active_internal_scrapers.append('external')
 		self.active_external = 'external' in self.active_internal_scrapers
 		self.provider_sort_ranks, self.sleep_time, self.scraper_settings = provider_sort_ranks(), display_sleep_time(), scraping_settings()
-		self.include_prerelease_results, self.ignore_results_filter = include_prerelease_results(), ignore_results_filter()
+		self.include_prerelease_results, self.ignore_results_filter, self.limit_resolve = include_prerelease_results(), ignore_results_filter(), limit_resolve()
 		self.filter_hevc, self.filter_hdr = filter_status('hevc'), filter_status('hdr')
 		self.filter_dv, self.filter_av1, self.filter_audio = filter_status('dv'), filter_status('av1'), 3
 		self.hevc_filter_key, self.hdr_filter_key, self.dolby_vision_filter_key, self.av1_filter_key = '[B]HEVC[/B]', '[B]HDR[/B]', '[B]D/VISION[/B]', '[B]AV1[/B]'
@@ -462,6 +453,7 @@ class Sources():
 			episodes_data = metadata.episodes_meta(self.season, self.meta, meta_user_info)
 			try:
 				episode_data = [i for i in episodes_data if i['episode'] == self.episode][0]
+				self.meta['tvshow_plot'] = self.meta['plot']
 				self.meta.update({'media_type': 'episode', 'season': episode_data['season'], 'episode': episode_data['episode'], 'premiered': episode_data['premiered'],
 								'ep_name': episode_data['title'], 'plot': episode_data['plot']})
 			except: pass
@@ -542,13 +534,15 @@ class Sources():
 			if self.autoplay:
 				items = [i for i in results if not 'Uncached' in i.get('cache_provider', '')]
 			elif source:
-				results = [i for i in results if not 'Uncached' in i.get('cache_provider', '') or i == source]
-				source_index = results.index(source)
-				leading_index = max(source_index-3, 0)
-				items_prev = results[leading_index:source_index]
-				trailing_index = 7 - len(items_prev)
-				items_next = results[source_index+1:source_index+trailing_index]
-				items = [source] + items_next + items_prev
+				items = [source]
+				if not self.limit_resolve: 
+					results = [i for i in results if not 'Uncached' in i.get('cache_provider', '') or i == source]
+					source_index = results.index(source)
+					leading_index = max(source_index-3, 0)
+					items_prev = results[leading_index:source_index]
+					trailing_index = 7 - len(items_prev)
+					items_next = results[source_index+1:source_index+trailing_index]
+					items = items + items_next + items_prev
 			else: items = results
 			first_item = items[0]
 			if 'Uncached' in first_item.get('cache_provider', ''):
@@ -663,9 +657,7 @@ class Sources():
 				else:
 					notification(33091, 3000)
 					while self.player.isPlayingVideo(): sleep(100)
-				set_property(build_content_prop, 'false')
 				self.display_results(results)
-				set_property(build_content_prop, 'true')
 		else: return
 
 	def resolve_sources(self, item, meta=None):

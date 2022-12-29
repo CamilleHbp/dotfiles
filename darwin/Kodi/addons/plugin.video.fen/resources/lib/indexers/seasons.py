@@ -5,12 +5,12 @@ from modules.utils import adjust_premiered_date, get_datetime
 from modules.watched_status import get_watched_info_tv, get_watched_status_season
 # logger = kodi_utils.logger
 
-make_listitem, build_url, external_browse, ls, ts = kodi_utils.make_listitem, kodi_utils.build_url, kodi_utils.external_browse, kodi_utils.local_string, kodi_utils.translate_path
+make_listitem, build_url, external_browse, ls = kodi_utils.make_listitem, kodi_utils.build_url, kodi_utils.external_browse, kodi_utils.local_string
 sys, add_items, set_content, end_directory, set_view_mode = kodi_utils.sys, kodi_utils.add_items, kodi_utils.set_content, kodi_utils.end_directory, kodi_utils.set_view_mode
 adjust_premiered_date_function, get_datetime_function, get_watched_status, get_watched_info = adjust_premiered_date, get_datetime, get_watched_status_season, get_watched_info_tv
 metadata_user_info, watched_indicators_info, show_unaired_info = settings.metadata_user_info, settings.watched_indicators, settings.show_unaired
 get_art_provider, show_specials, use_season_title_info = settings.get_art_provider, settings.show_specials, settings.use_season_title
-poster_empty, fanart_empty, build_content = kodi_utils.empty_poster, kodi_utils.addon_fanart, kodi_utils.build_content
+poster_empty, fanart_empty, build_content, make_placeholder = kodi_utils.empty_poster, kodi_utils.addon_fanart, kodi_utils.build_content, kodi_utils.make_placeholder_listitem
 fen_str, trakt_str, season_str, watched_str, unwatched_str, extras_str, options_str = ls(32036), ls(32037), ls(32537), ls(32642), ls(32643), ls(32645), ls(32646)
 string, run_plugin, unaired_label, tmdb_poster_prefix = str, 'RunPlugin(%s)', '[COLOR red][I]%s[/I][/COLOR]', 'https://image.tmdb.org/t/p/'
 view_mode, content_type = 'view.seasons', 'seasons'
@@ -64,12 +64,12 @@ def build_season_list(params):
 				cm_append((extras_str, run_plugin % extras_params))
 				cm_append((options_str, run_plugin % options_params))
 				if not playcount:
-					watched_params = build_url({'mode': 'mark_as_watched_unwatched_season', 'action': 'mark_as_watched', 'title': show_title, 'year': show_year,
+					watched_params = build_url({'mode': 'watched_status.mark_season', 'action': 'mark_as_watched', 'title': show_title, 'year': show_year,
 														  'tmdb_id': tmdb_id, 'tvdb_id': tvdb_id, 'season': season_number})
 					cm_append((watched_str % watched_title, run_plugin % watched_params))
 				if progress:
 					if hide_watched: continue
-					unwatched_params = build_url({'mode': 'mark_as_watched_unwatched_season', 'action': 'mark_as_unwatched', 'title': show_title, 'year': show_year,
+					unwatched_params = build_url({'mode': 'watched_status.mark_season', 'action': 'mark_as_unwatched', 'title': show_title, 'year': show_year,
 															'tmdb_id': tmdb_id, 'tvdb_id': tvdb_id, 'season': season_number})
 					cm_append((unwatched_str % watched_title, run_plugin % unwatched_params))
 				listitem.setLabel(title)
@@ -114,6 +114,7 @@ def build_season_list(params):
 		season_data.sort(key=lambda k: k['season_number'])
 		watched_title = trakt_str if watched_indicators == 1 else fen_str
 		add_items(handle, list(_process()))
+	else: add_items(handle, make_placeholder())
 	set_content(handle, content_type)
 	end_directory(handle, False if is_widget else None)
 	if not is_widget: set_view_mode(view_mode, content_type)

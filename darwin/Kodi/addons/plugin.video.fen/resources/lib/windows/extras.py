@@ -12,7 +12,7 @@ from modules.utils import get_datetime, change_image_resolution
 from modules.meta_lists import networks
 from modules.metadata import movieset_meta
 from modules.episode_tools import EpisodeTools
-# logger = kodi_utils.logger
+logger = kodi_utils.logger
 
 json, Thread, get_icon, close_all_dialog, ok_dialog = kodi_utils.json, kodi_utils.Thread, kodi_utils.get_icon, kodi_utils.close_all_dialog, kodi_utils.ok_dialog
 addon_icon, ls, get_icon, backup_cast_thumbnail = kodi_utils.addon_icon, kodi_utils.local_string, kodi_utils.get_icon, get_icon('genre_family')
@@ -55,7 +55,7 @@ class Extras(BaseDialog):
 					self.make_videos, self.make_year, self.make_genres, self.make_network, self.make_posters, self.make_fanart, self.make_collection)
 
 	def onInit(self):
-		[Thread(target=i).start() for i in self.tasks]
+		for i in self.tasks: Thread(target=i).start()
 		try:self.setFocusId(10)
 		except: self.close()
 
@@ -69,7 +69,7 @@ class Extras(BaseDialog):
 		if controlID in button_ids:
 			if controlID == playbrowse_id:
 				if self.media_type == 'movie':
-					url_params = {'mode': 'play_media', 'media_type': 'movie', 'tmdb_id': self.tmdb_id}
+					url_params = {'mode': 'playback.media', 'media_type': 'movie', 'tmdb_id': self.tmdb_id}
 					Sources().playback_prep(url_params)
 				else:
 					close_all_dialog()
@@ -138,11 +138,15 @@ class Extras(BaseDialog):
 		if action in self.selection_actions:
 			try: chosen_var = self.get_listitem(self.control_id).getProperty(self.item_action_dict[self.control_id])
 			except: return
-			if self.control_id == cast_id:
-				return person_data_dialog({'query': chosen_var})
-			elif self.control_id in tmdb_list_ids:
+			if self.control_id in tmdb_list_ids:
 				params = {'tmdb_id': chosen_var, 'media_type': self.media_type}
 				return extras_menu(params)
+			elif self.control_id == cast_id:
+				return person_data_dialog({'query': chosen_var})
+			elif self.control_id == videos_id:
+				chosen = imdb_videos_choice(self.get_attribute(self, chosen_var)[self.get_position(self.control_id)]['videos'], self.poster)
+				if not chosen: return
+				self.open_window(('windows.videoplayer', 'VideoPlayer'), 'videoplayer.xml', meta=self.meta, video=chosen)
 			elif self.control_id in imdb_list_ids:
 				if self.control_id == parentsguide_id:
 					if not chosen_var: return
@@ -153,10 +157,6 @@ class Extras(BaseDialog):
 			elif self.control_id in art_ids:
 				end_index = _images.run({'mode': 'slideshow_image', 'all_images': self.get_attribute(self, chosen_var), 'current_index': self.get_position(self.control_id)})
 				self.getControl(self.control_id).selectItem(end_index)
-			elif self.control_id == videos_id:
-				chosen = imdb_videos_choice(self.get_attribute(self, chosen_var)[self.get_position(self.control_id)]['videos'], self.poster)
-				if not chosen: return
-				self.open_window(('windows.videoplayer', 'VideoPlayer'), 'videoplayer.xml', meta=self.meta, video=chosen)
 			else: return
 
 	def make_cast(self):
@@ -367,7 +367,7 @@ class Extras(BaseDialog):
 			item_list = list(self.make_tmdb_listitems(sorted(data['parts'], key=lambda k: k['release_date'] or '2050')))
 			self.setProperty('more_from_collection.name', data['title'])
 			self.setProperty('more_from_collection.overview', data['plot'] or data['title'])
-			self.setProperty('more_from_collection.poster', data['poster'])
+			self.setProperty('more_from_collection.poster', data['poster'] or empty_poster)
 			self.setProperty('more_from_collection.number', count_insert % len(item_list))
 			self.item_action_dict[collection_id] = 'tmdb_id'
 			self.add_items(collection_id, item_list)
@@ -540,8 +540,7 @@ class Extras(BaseDialog):
 		self.poster = self.original_poster()
 		self.fanart = self.original_fanart()
 		self.clearlogo = self.meta_get('custom_clearlogo') or self.meta_get(self.clearlogo_main) or self.meta_get(self.clearlogo_backup) or ''
-		self.plot = self.meta_get('tvshow_plot') if 'tvshow_plot' in self.meta else self.meta_get('plot')
-		if not self.plot: self.plot = ''
+		self.plot = self.meta_get('tvshow_plot', '') or self.meta_get('plot', '')
 		self.rating = str(round(self.meta_get('rating'), 1))
 		self.mpaa = self.meta_get('mpaa')
 		self.status = self.extra_info_get('status', '').replace('Series', '')

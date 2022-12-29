@@ -12,8 +12,9 @@ string, ls, sys, external_browse, add_items, add_dir = str, kodi_utils.local_str
 make_listitem, build_url, remove_keys, dict_removals = kodi_utils.make_listitem, kodi_utils.build_url, kodi_utils.remove_keys, kodi_utils.tvshow_dict_removals
 metadata_user_info, watched_indicators, page_reference = settings.metadata_user_info, settings.watched_indicators, settings.page_reference
 sleep, extras_open_action, get_art_provider, default_all_episodes = kodi_utils.sleep, settings.extras_open_action, settings.get_art_provider, settings.default_all_episodes
-poster_empty, fanart_empty, build_content = kodi_utils.empty_poster, kodi_utils.addon_fanart, kodi_utils.build_content
+poster_empty, fanart_empty, build_content, include_year_in_title = kodi_utils.empty_poster, kodi_utils.addon_fanart, kodi_utils.build_content, settings.include_year_in_title
 max_threads, widget_hide_next_page, fen_clearlogo = settings.max_threads, settings.widget_hide_next_page, kodi_utils.addon_clearlogo
+make_placeholder = kodi_utils.make_placeholder_listitem
 fen_str, trakt_str, watched_str, unwatched_str, exit_str, nextpage_str, browse_str, jumpto_str = ls(32036), ls(32037), ls(32642), ls(32643), ls(32650), ls(32799), ls(32652), ls(32964)
 extras_str, options_str = ls(32645), ls(32646)
 run_plugin, container_update, container_refresh = 'RunPlugin(%s)', 'Container.Update(%s)', 'Container.Refresh(%s)'
@@ -106,6 +107,7 @@ class TVShows:
 						self.new_page.update({'mode': mode, 'action': self.action, 'exit_list_params': self.exit_list_params})
 						add_dir(self.new_page, nextpage_str % self.new_page['new_page'], handle, 'item_next')
 			except: pass
+		else: add_items(handle, make_placeholder())
 		set_content(handle, content_type)
 		end_directory(handle, False if self.is_widget else None)
 		if self.params_get('refreshed') == 'true': sleep(1000)
@@ -125,7 +127,7 @@ class TVShows:
 			cm_append = cm.append
 			listitem = make_listitem()
 			set_properties = listitem.setProperties
-			title, year, trailer = meta_get('title'), meta_get('year'), meta_get('trailer')
+			rootname, title, year, trailer = meta_get('rootname'), meta_get('title'), meta_get('year'), meta_get('trailer')
 			tvdb_id, imdb_id = meta_get('tvdb_id'), meta_get('imdb_id')
 			poster = meta_get('custom_poster') or meta_get(self.poster_main) or meta_get(self.poster_backup) or poster_empty
 			fanart = meta_get('custom_fanart') or meta_get(self.fanart_main) or meta_get(self.fanart_backup) or fanart_empty
@@ -147,16 +149,16 @@ class TVShows:
 			else: cm_append((extras_str, run_plugin % extras_params))
 			cm_append((options_str, run_plugin % options_params))
 			if not playcount:
-				watched_params = build_url({'mode': 'mark_as_watched_unwatched_tvshow', 'action': 'mark_as_watched', 'title': title, 'year': year,
+				watched_params = build_url({'mode': 'watched_status.mark_tvshow', 'action': 'mark_as_watched', 'title': title, 'year': year,
 													'tmdb_id': tmdb_id, 'tvdb_id': tvdb_id})
 				cm_append((watched_str % self.watched_title, run_plugin % watched_params))
 			elif self.widget_hide_watched: return
 			if progress:
-				unwatched_params = build_url({'mode': 'mark_as_watched_unwatched_tvshow', 'action': 'mark_as_unwatched', 'title': title, 'year': year,
+				unwatched_params = build_url({'mode': 'watched_status.mark_tvshow', 'action': 'mark_as_unwatched', 'title': title, 'year': year,
 													'tmdb_id': tmdb_id, 'tvdb_id': tvdb_id})
 				cm_append((unwatched_str % self.watched_title, run_plugin % unwatched_params))
 			cm_append((exit_str, container_refresh % self.exit_list_params))
-			listitem.setLabel(title)
+			listitem.setLabel(rootname if self.include_year else title)
 			listitem.addContextMenuItems(cm)
 			listitem.setCast(meta_get('cast', []))
 			listitem.setUniqueIDs({'imdb': imdb_id, 'tmdb': string(tmdb_id), 'tvdb': string(tvdb_id)})
@@ -172,7 +174,7 @@ class TVShows:
 
 	def worker(self):
 		self.current_date, self.current_time = get_datetime_function(), get_current_timestamp()
-		self.meta_user_info, self.watched_indicators = metadata_user_info(), watched_indicators()
+		self.meta_user_info, self.watched_indicators, self.include_year = metadata_user_info(), watched_indicators(), include_year_in_title('tvshow')
 		self.watched_info, self.all_episodes, self.open_extras = get_watched_info_function(self.watched_indicators), default_all_episodes(), extras_open_action('tvshow')
 		self.fanart_enabled, self.widget_hide_watched = self.meta_user_info['extra_fanart_enabled'], self.is_widget and self.meta_user_info['widget_hide_watched']
 		self.is_folder, self.watched_title = False if self.open_extras else True, trakt_str if self.watched_indicators == 1 else fen_str

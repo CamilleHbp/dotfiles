@@ -2,12 +2,27 @@
 
 [B]Please utilize Fen Tips (Tools->Tips for Fen Use) to catch up on any important new features. New features will be highlighted with a [COLOR chartreuse]NEW!!![/COLOR] label.[/B]
 
+[COLOR dodgerblue][B]Version 3.0.33[/B][/COLOR]
+- Added "Suppress Episode Plot in Fen Custom Windows" to Settings->Navigation->Content. Fen will use the TV Show overview rather than the episode's plotline (avoids spoilers). OFF by default.
+- Added "Limit Resolve Attempts to Selected Result Only" to Settings->Playback->Playback Utilities. Enable this and Fen will only attempt to resolve the selected source for playback. When OFF, Fen will continue to attempt resolves for the 7 sources closest to the chosen source up until a successful resolve occurs. OFF by default.
+- Added "Load Empty Widget Container on Playback Start" to Settings->Playback->Playback Utilities. Gives users the option of whether to load an empty widget list when playback starts. ON by default.
+- Added ability to access first episode of items in Fen TVShow Favorites in the Next Episodes list. For those who don't use Trakt.
+- Re-added "Include Year in Title" to Settings->Navigation->Content. Choose None/Movies/TV Shows/Both. Will display year alongside title with supporting skins. None by default.
+- Couple of changes for Furk and Easynews video quality detection. Now has a fallback based on width of video if resolution not in filename.
+- Fixed "Continual Random Play". It has been re-activated as an option.
+- Fixed downloading of PACK results when native language isn't English.
+- Fixed Watched items not showing on Fen Widget content menu.
+- Converted Fen's settings.xml to new format. Unfortunately. Horrible.
+- Reverted IMDb's user list urls to previous as they have fixed the issue on their end.
+- Removed debrid cloud actions like "Delete", "Rename". I want the cloud items to be purely read only moving forward. You must visit your debrid's website to delete/rename etc debrid cloud objects now.
+- Other changes/fixes.
+
 [COLOR dodgerblue][B]Version 3.0.31/32[/B][/COLOR]
 - A couple of quick fixes.
 
 [COLOR dodgerblue][B]Version 3.0.30[/B][/COLOR]
 - Added custom font naming support from current skin.
-- Qucik fix for a couple of source sorting issues.
+- Quick fix for a couple of source sorting issues.
 - "Continual Random Play" not working correctly. Has been disabled until next update when I have more time to fix it. 
 
 [COLOR dodgerblue][B]Version 3.0.29[/B][/COLOR]

@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+import re
 import xml.etree.ElementTree as ET
 from modules import kodi_utils
 from modules.settings import skin_location, use_skin_fonts
@@ -9,10 +10,10 @@ build_url, execute_builtin, set_property, get_property, sleep = kodi_utils.build
 left_action, right_action, info_action, open_file = kodi_utils.window_xml_left_action, kodi_utils.window_xml_right_action, kodi_utils.window_xml_info_action, kodi_utils.open_file
 closing_actions, selection_actions, context_actions = kodi_utils.window_xml_closing_actions, kodi_utils.window_xml_selection_actions, kodi_utils.window_xml_context_actions
 translate_path, get_infolabel, list_dirs, current_skin = kodi_utils.translate_path, kodi_utils.get_infolabel, kodi_utils.list_dirs, kodi_utils.current_skin
-current_skin_prop, use_skin_fonts_prop = kodi_utils.current_skin_prop, kodi_utils.use_skin_fonts_prop
+current_skin_prop, use_skin_fonts_prop, addon_installed = kodi_utils.current_skin_prop, kodi_utils.use_skin_fonts_prop, kodi_utils.addon_installed
 extras_keys, folder_options = ('upper', 'uppercase', 'italic', 'capitalize', 'black', 'mono', 'symbol'), ('xml', '1080', '720', '1080p', '720p', '1080i', '720i', '16x9')
-addon_skin_files_location = 'special://home/addons/plugin.video.fen/resources/skins/Default/%s/'
-addon_skins_folder, template_skins_folder = addon_skin_files_location % '1080i', addon_skin_files_location % 'template_xmls'
+needed_font_values = ((21, False, 'font10'), (26, False, 'font12'), (30, False, 'font13'), (33, False, 'font14'), (60, True, 'font60'))
+addon_skins_folder = 'special://home/addons/plugin.video.fen/resources/skins/Default/1080i/'
 
 def open_window(import_info, skin_xml, **kwargs):
 	'''
@@ -99,6 +100,12 @@ class BaseDialog(window_xml_dialog):
 		try: del self.player
 		except: pass
 
+	def notification(self, text, duration=3000):
+		return notification(text, duration)
+
+	def addon_installed(self, addon_id):
+		return addon_installed(addon_id)
+
 class FontUtils:
 	def skin_change_check(self):
 		self.current_skin, self.use_skin_fonts = current_skin(), use_skin_fonts()
@@ -108,39 +115,28 @@ class FontUtils:
 
 	def execute_custom_fonts(self):
 		if not self.skin_change_check(): return
-		self.skin_font_xml = self.get_skin_font_xml()
+		self.replacement_values = []
+		self.replacement_values_append = self.replacement_values.append
+		try: self.skin_font_xml = translate_path('special://skin/%s/Font.xml' % [i for i in list_dirs(translate_path('special://skin'))[0] if i in folder_options][0])
+		except: self.skin_font_xml = None
 		self.all_addon_xmls = list_dirs(translate_path(addon_skins_folder))[1]
 		if self.use_skin_fonts == 'true': self.skin_font_info = self.get_font_info() or self.default_font_info()
 		else: self.skin_font_info = self.default_font_info()
-		self.get_font_values()
+		for item in needed_font_values: self.replacement_values_append(self.match_font(*item))
 		for item in self.all_addon_xmls: self.replace_font(item)
-		set_property(current_skin_prop, self.current_skin)
-		set_property(use_skin_fonts_prop, self.use_skin_fonts)
+		for item in ((current_skin_prop, self.current_skin), (use_skin_fonts_prop, self.use_skin_fonts)): set_property(*item)
 
-	def match_font(self, size, bold=False, fallback=None):
+	def match_font(self, size, bold, fallback):
+		font_tag = 'FEN_%s%s' % (size, '_BOLD' if bold else '')
 		size_range = range(int(size * 0.75), int(size * 1.25))
 		compatibility_range = range(int(size * 0.50), int(size * 1.50))
 		compatibility_fonts = [i['name'] for i in self.skin_font_info if i['name'] == fallback and i['size'] in compatibility_range]
-		if compatibility_fonts: return compatibility_fonts[0]
+		if compatibility_fonts: return (font_tag, compatibility_fonts[0])
 		sized_fonts = [i for i in self.skin_font_info if i['size'] in size_range]
 		if not sized_fonts: return fallback
 		fonts = [i for i in sized_fonts if i['bold'] == bold and not i['extra_styles']] or [i for i in sized_fonts if i['bold'] == bold] \
 				or [i for i in sized_fonts if not i['extra_styles']] or sized_fonts
-		return [i['name'] for i in fonts if i['size'] == min([i['size'] for i in fonts], key=lambda k: abs(k-size))][0]
-
-	def get_skin_font_xml(self):
-		try:
-			skin_xml_dir = [i for i in list_dirs(translate_path('special://skin'))[0] if i in folder_options][0]
-			return translate_path('special://skin/%s/Font.xml' % skin_xml_dir)
-		except: return None
-
-	def get_font_values(self):
-		self.FEN_21 = self.match_font(21, bold=False, fallback='font10')
-		self.FEN_26 = self.match_font(26, bold=False, fallback='font12')
-		self.FEN_30 = self.match_font(30, bold=False, fallback='font13')
-		self.FEN_33 = self.match_font(33, bold=False, fallback='font14')
-		self.FEN_60_BOLD = self.match_font(60, bold=True, fallback='font60')
-		self.replace_list = [('[FEN_21]', self.FEN_21), ('[FEN_26]', self.FEN_26), ('[FEN_30]', self.FEN_30), ('[FEN_33]', self.FEN_33), ('[FEN_60_BOLD]', self.FEN_60_BOLD)]
+		return (font_tag, [i['name'] for i in fonts if i['size'] == min([i['size'] for i in fonts], key=lambda k: abs(k-size))][0])
 
 	def get_font_info(self):
 		results = []
@@ -165,8 +161,12 @@ class FontUtils:
 		return results
 
 	def replace_font(self, window):
-		with open_file(translate_path(template_skins_folder + window)) as f: new_content = self.replace_font_values(f.read())
-		with open_file(translate_path(addon_skins_folder + window), 'w') as f: f.write(new_content)
+		file = translate_path(addon_skins_folder + window)
+		with open_file(file) as f: content = f.read()
+		for item in self.replacement_values:
+			try: content = re.sub(r'<font>(.*?)</font> <\!-- %s -->' % item[0], '<font>%s</font> <!-- %s -->' % (item[1], item[0]), content)
+			except: pass
+		with open_file(translate_path(file), 'w') as f: f.write(content)
 
 	def default_font_info(self):
 		return [{'name': 'font10', 'size': 21, 'bold': False, 'extra_styles': False},
@@ -174,7 +174,3 @@ class FontUtils:
 				{'name': 'font13', 'size': 30, 'bold': False, 'extra_styles': False},
 				{'name': 'font14', 'size': 33, 'bold': False, 'extra_styles': False},
 				{'name': 'font60', 'size': 60, 'bold': False, 'extra_styles': False}]
-
-	def replace_font_values(self, text):
-		for item in self.replace_list: text = text.replace(*item)
-		return text

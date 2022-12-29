@@ -50,23 +50,24 @@ def furk_folder_browser(files, display_mode, handle):
 				duration = int(int(item['duration'])/60.0)
 				header, footer = ('[COLOR=green]', '[/COLOR]') if is_protected == '1' else ('', '')
 				display = '%02d %s| [B]%sGB | %s %s | %sMINS | %s[/B][I]%s[/I]' % (count, header, display_size, files_num_video, files_str, duration, footer, name)
+				download_archive = build_url({'mode': 'downloader', 'name': name, 'url': url_dl, 'action': 'archive', 'image': furk_icon})
 				add_to_files = build_url({'mode': 'furk.add_to_files', 'item_id': item_id})
 				remove_files = build_url({'mode': 'furk.remove_from_files', 'item_id': item_id})
-				download_archive = build_url({'mode': 'downloader', 'name': name, 'url': url_dl, 'action': 'archive', 'image': furk_icon})
-				if display_mode == 'search': cm_append((add_str,'RunPlugin(%s)' % add_to_files))
-				cm_append((remove_str, 'RunPlugin(%s)' % remove_files))
+				url = build_url({'mode': 'furk.furk_t_file_browser', 'name': name, 'url': url_dl, 'item_id': item_id})
 				cm_append((down_str, 'RunPlugin(%s)' % download_archive))
+				if display_mode == 'search': cm_append((add_str,'RunPlugin(%s)' % add_to_files))
+				else: cm_append((remove_str, 'RunPlugin(%s)' % remove_files))
 				if is_protected == '0':
 					cm_append((prot_str, 'RunPlugin(%s)' % build_url({'mode': 'furk.myfiles_protect_unprotect', 'action': 'protect', 'name': name, 'item_id': item_id})))
 				elif is_protected == '1':
 					cm_append((unprot_str, 'RunPlugin(%s)' % build_url({'mode': 'furk.myfiles_protect_unprotect', 'action': 'unprotect', 'name': name, 'item_id': item_id})))
-				url_params = {'mode': 'furk.furk_t_file_browser', 'name': name, 'item_id': item_id}
-				url = build_url(url_params)
 				listitem = make_listitem()
 				listitem.setLabel(display)
 				listitem.addContextMenuItems(cm)
 				listitem.setArt({'icon': thumb, 'poster': thumb, 'thumb': thumb, 'fanart': fanart, 'banner': furk_icon, 'clearlogo': fen_clearlogo})
 				listitem.setInfo('video', {'plot': ' '})
+				listitem.setProperty('fen.context_main_menu_params', build_url({'mode': 'menu_editor.edit_menu_external', 'name': name, 'iconImage': furk_icon,
+									'action': 'archive', 'display_mode': display_mode, 'is_protected': is_protected}))
 				yield (url, listitem, True)
 			except: pass
 	add_items(handle, list(_builder()))
@@ -76,13 +77,13 @@ def furk_t_file_browser(params):
 		for count, item in enumerate(t_files, 1):
 			try:
 				cm = []
-				url_params = {'mode': 'media_play', 'url': item['url_dl'], 'obj': 'video'}
+				url_params = {'mode': 'playback.video', 'url': item['url_dl'], 'obj': 'video'}
 				url = build_url(url_params)
 				name = clean_file_name(item['name']).upper()
-				height = int(item['height'])
-				if 1200 < height > 2100: display_res = '4K'
-				elif 1000 < height < 1200: display_res = '1080P'
-				elif 680 < height < 1000: display_res = '720P'
+				width = int(item.get('width', 0))
+				if width > 1920: display_res = '4K'
+				elif 1280 < width <= 1920: display_res = '1080P'
+				elif 720 < width <= 1280: display_res = '720P'
 				else: display_res = 'SD'
 				display_name = '%02d | [B]%s[/B] | [B]%.2fGB | %sMINS | [/B][I]%s[/I]' % (count, display_res, float(item['size'])/1048576000, int(int(item['length'])/60.0), name)
 				listitem = make_listitem()
@@ -92,6 +93,8 @@ def furk_t_file_browser(params):
 				listitem.addContextMenuItems(cm)
 				listitem.setArt({'icon': furk_icon, 'poster': furk_icon, 'thumb': furk_icon, 'fanart': fanart, 'banner': furk_icon, 'clearlogo': fen_clearlogo})
 				listitem.setInfo('video', {'plot': ' '})
+				listitem.setProperty('fen.context_main_menu_params', build_url({'mode': 'menu_editor.edit_menu_external', 'name': name, 'iconImage': furk_icon,
+									'action': 'cloud.furk_direct'}))
 				yield (url, listitem, False)
 			except: pass
 	handle = int(sys.argv[1])

@@ -293,13 +293,13 @@ def get_dates(days, reverse=True):
 	else: new_date = (current_date + datetime.timedelta(days=days)).strftime('%Y-%m-%d')
 	return str(current_date), new_date
 
-def get_tmdb_api(tmdb_api=None):
-	return tmdb_api or tmdb_api_key()
-
 def get_data(url):
 	data = get_tmdb(url).json()
 	data['results'] = [remove_keys(i, data_dict_removals) for i in data['results']]
 	return data
+
+def get_tmdb_api(tmdb_api=None):
+	return tmdb_api or tmdb_api_key()
 
 def get_tmdb(url):
 	response = None

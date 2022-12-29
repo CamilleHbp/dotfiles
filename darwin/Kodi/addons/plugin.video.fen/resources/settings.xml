@@ -1,318 +1,2884 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<settings>
-    <!-- General -->
-    <category label="32001">
-        <!-- General -->
-        <setting label="32001" type="lsep" />
-        <setting id="auto_start_fen" type="bool" label="32017" default="false" />
-        <setting id="kodi_menu_cache" type="bool" label="32539" default="false" />
-        <setting id="limit_concurrent_threads" type="bool" label="32744" default="true" />
-        <setting id="max_threads" label="32745" type="slider" range="10,5,500" option="int" default="60" subsetting="true" visible="eq(-1,true)" />
-        <setting id="fen.highlight_name" type="action" label="32124" default="[COLOR=dodgerblue]dodgerblue[/COLOR]" action="RunPlugin(plugin://plugin.video.fen/?mode=highlight_choice)" />
-        <setting id="use_skin_fonts" type="bool" label="32047" default="true" />
-        <!-- Watched Indicators -->
-        <setting label="32034" type="lsep" />
-        <setting id="trakt.indicators_active" type="text" default="false" visible="false" />
-        <setting id="watched_indicators" type="enum" lvalues="32036|32037" label="32035" default="0" visible="eq(-1,true)" />
-        <setting id="amble.indicators" label="32039" type="text" default="" enable="false" visible="eq(-2,false)" />
-        <!-- Trakt Cache -->
-        <setting label="32087" type="lsep" />
-        <setting id="trakt.sync_interval" label="33099" type="slider" range="5,5,600" option="int" default="30" />
-        <setting id="trakt.sync_refresh_widgets" label="32048" type="bool" default="false" />
-        <!-- UTC Time Offset -->
-        <setting label="32101" type="lsep" />
-        <setting id="datetime.offset" label="32045" type="slider" default="0" range="-15,1,15" option="int" />
-        <!--Downloads -->
-        <setting label="32107" type="lsep" />
-        <setting id="movie_download_directory" type="folder" label="32116" default="special://profile/addon_data/plugin.video.fen/Movies Downloads/" />
-        <setting id="tvshow_download_directory" type="folder" label="32117" default="special://profile/addon_data/plugin.video.fen/TV Show Downloads/" />
-        <setting id="premium_download_directory" type="folder" label="32210" default="special://profile/addon_data/plugin.video.fen/Premium Downloads/" />
-        <setting id="image_download_directory" type="folder" label="33005" default="special://profile/addon_data/plugin.video.fen/Image Downloads/" />
-        <!-- Hidden -->
-        <setting id="trakt.expires" type="text" default="0" visible="false" />
-        <setting id="trakt.refresh" type="text" default="0" visible="false" />
-        <setting id="trakt.token" type="text" default="0" visible="false" />
-        <setting id="rd.client_id" label="rd client_id" type = "text" visible="false" />
-        <setting id="rd.refresh" label="rd refresh" type = "text" visible="false" />
-        <setting id="rd.secret" label="rd secret" type = "text" visible="false" />
-        <setting id="results.sort_order" type="text" default="1" visible="hidden" />
-        <setting id="database.maintenance.due" type="text" default="0" visible="hidden" />
-        <setting id="reuse_language_invoker" type="text" default="true" visible="hidden" />
-        <setting id="folder1.display_name" type="text" default="Folder 1" visible="false" />
-        <setting id="folder1.movies_directory" type="text" default="None" visible="false" />
-        <setting id="folder1.tv_shows_directory" type="text" default="None" visible="false" />
-        <setting id="folder2.display_name" type="text" default="Folder 2" visible="false" />
-        <setting id="folder2.movies_directory" type="text" default="None" visible="false" />
-        <setting id="folder2.tv_shows_directory" type="text" default="None" visible="false" />
-        <setting id="folder3.display_name" type="text" default="Folder 3" visible="false" />
-        <setting id="folder3.movies_directory" type="text" default="None" visible="false" />
-        <setting id="folder3.tv_shows_directory" type="text" default="None" visible="false" />
-        <setting id="folder4.display_name" type="text" default="Folder 4" visible="false" />
-        <setting id="folder4.movies_directory" type="text" default="None" visible="false" />
-        <setting id="folder4.tv_shows_directory" type="text" default="None" visible="false" />
-        <setting id="folder5.display_name" type="text" default="Folder 5" visible="false" />
-        <setting id="folder5.movies_directory" type="text" default="None" visible="false" />
-        <setting id="folder5.tv_shows_directory" type="text" default="None" visible="false" />
-        <setting id="easynews.farm" type="text" default="auto" visible="false" />
-        <setting id="easynews.port" type="text" default="443" visible="false" />
-        <setting id="version_number" type="text" default="0" visible="false" />
-        <setting id="extras.enabled_menus" type="text" default="2050,2051,2052,2053,2054,2055,2056,2057,2058,2059,2060,2061,2062" visible="false" />
-        <setting id="fen.highlight" type="text" default="dodgerblue" visible="false" />
-        <!-- <setting id="filter_audio" type="text" default="" visible="false" /> -->
-    </category>
-    <!-- Navigation -->
-    <category label="32492">
-        <!-- Sorting -->
-        <setting label="32694" type="lsep" />
-        <setting id="sort.progress" type="enum" label="$ADDON[plugin.video.fen 32476] $ADDON[plugin.video.fen 32066]" default="0" lvalues="32228|32226" />
-        <setting id="sort.watched" type="enum" label="$ADDON[plugin.video.fen 32475] $ADDON[plugin.video.fen 32066]" default="0" lvalues="32228|32226" />
-        <setting id="sort.collection" type="enum" label="$ADDON[plugin.video.fen 32499] $ADDON[plugin.video.fen 32066]" default="0" lvalues="32228|32223|32221" />
-        <setting id="sort.watchlist" type="enum" label="$ADDON[plugin.video.fen 32500] $ADDON[plugin.video.fen 32066]" default="0" lvalues="32228|32223|32221" />
-        <setting id="ignore_articles" type="bool" label="32025" default="true" />
-        <!-- Content -->
-        <setting label="32693" type="lsep" />
-        <setting id="paginate.lists" type="bool" label="32019" default="false" />
-        <setting id="paginate.limit" label="32020" type="number" default="40" subsetting="true" visible="eq(-1,true)" />
-        <setting id="paginate.reference" label="32585" type="enum" default="0" subsetting="true" visible="eq(-2,true)" lvalues="32978|32979|32030|32027" />
-        <setting id="show_specials" type="bool" label="32008" default="false" />
-        <setting id="use_season_title" type="bool" label="32010" default="false" />
-        <setting id="show_unaired" type="bool" label="32073" default="true" />
-        <setting id="show_unaired_watchlist" type="bool" label="32525" default="true" />
-        <setting id="default_all_episodes" label="32009" type="enum" default="0" lvalues="32013|32032|32033" />
-        <setting id="single_ep_display" type="enum" label="32194" default="0" lvalues="32201|32202|32203" />
-        <setting id="single_ep_format" label="32077" type="enum" default="0" lvalues="32229|32230|32231" />
-        <!-- Extras -->
-        <setting label="33038" type="lsep" />
-        <setting id="extras.open_action" label="32026" type="enum" default="0" lvalues="32965|32028|32029|32030" />
-        <setting id="extras.manage" type="action" label="32046" default="$ADDON[plugin.video.fen 32652]" action="RunPlugin(plugin://plugin.video.fen/?mode=extras_lists_choice)" />
-        <setting id="extras.enable_scrollbars" type="bool" label="32846" default="false" />
-        <setting id="extras.exclude_non_acting_roles" type="bool" label="33040" default="true" />
-        <!-- Custom Actions -->
-        <setting label="33098" type="lsep" />
-        <setting id="custom_context_main_menu" type="bool" label="33097" default="false" />
-        <setting id="custom_context_menu" type="bool" label="32788" default="false" />
-        <setting id="custom_info_dialog" type="bool" label="32980" default="false" />
-        <!-- Trakt Calendar -->
-        <setting label="32081" type="lsep" />
-        <setting id="trakt.calendar_sort_order" label="32067" type="enum" default="0" lvalues="32225|32224" />
-        <setting id="trakt.calendar_previous_days" label="32083" type="slider" range="0,1,30" option="int" default="0" />
-        <setting id="trakt.calendar_future_days" label="32084" type="slider" range="0,1,30" option="int" default="7" />
-        <!-- Next Episodes -->
-        <setting label="32483" type="lsep" />
-        <setting id="nextep.sort_type" label="32066" type="enum" default="0" lvalues="32226|32227|32228" />
-        <setting id="nextep.sort_order" label="32067" type="enum" default="0" lvalues="32225|32224" />
-        <setting id="nextep.sort_airing_today_to_top" label="32819" type="bool" default="false" />
-        <setting id="nextep.include_airdate" label="32076" type="bool" default="false" />
-        <setting id="nextep.include_unaired" label="32073" type="bool" default="false" />
-        <setting id="nextep.include_unwatched" label="32074" type="bool" default="false" />
-        <!-- Widgets -->
-        <setting label="32085" type="lsep" />
-        <setting id="widget_hide_watched" type="bool" label="32465" default="false" />
-        <setting id="widget_hide_next_page" type="bool" label="32746" default="false" />
-    </category>
-    <!-- Metadata -->
-    <category label="32146">
-        <!-- Fanart -->
-        <setting type="lsep" label="32147" default="" />
-        <setting id="get_fanart_data" label="32148" type="bool" default="false" />
-        <setting id="fanarttv.default" label="32012" type="bool" default="false" subsetting="true" visible="eq(-1,true)" />
-        <!-- Image Resolution -->
-        <setting type="lsep" label="32149" default="" />
-        <setting id="image_resolutions" label="32170" type="enum" default="1" lvalues="32163|32164|32165|32166" />
-        <!-- Language -->
-        <setting type="lsep" label="32658" default="" />
-        <setting id="meta_language_display" type="action" label="32145" default="English" action="RunPlugin(plugin://plugin.video.fen/?mode=meta_language_choice)" />
-        <setting id="meta_language" label="meta_language" type="text" default="en" visible="hidden" />
-        <!-- Search -->
-        <setting type="lsep" label="32450" default="" />
-        <setting id="meta_use_year_in_search" label="33095" type="bool" default="false" />
-        <!-- Filter -->
-        <setting type="lsep" label="32670" default="" />
-        <setting id="meta_filter" label="32142" type="bool" default="true" />
-    </category>
-    <!-- Meta Accounts -->
-    <category label="32684">
-        <!-- Trakt -->
-        <setting label="32037" type="lsep" />
-        <setting id="trakt.user" label="32056" type="text" default="" enable="false" />
-        <setting id="open_trakt_authenticate" type="action" label="32057" visible="eq(-1,)" option="close" action="RunPlugin(plugin://plugin.video.fen/?mode=trakt.trakt_authenticate)" />
-        <setting id="open_trakt_de-authenticate" type="action" label="32059" visible="!eq(-2,)" option="close" action="RunPlugin(plugin://plugin.video.fen/?mode=trakt.trakt_revoke_authentication)" />
-        <!-- TMDb -->
-        <setting label="32068" type="lsep" />
-        <setting id="tmdb_api" type="text" label="32053" default="b370b60447737762ca38457bd77579b3" />
-        <!-- Fanart.tv -->
-        <setting label="32173" type="lsep" />
-        <setting id="fanart_amble1" label="32180" type="text" default="" enable="false" />
-        <setting id="fanart_client_key" type="text" label="32053" default="fa836e1c874ba95ab08a14ee88e05565" />
-        <!-- IMDb -->
-        <setting label="32064" type="lsep" />
-        <setting id="imdb_user" label="32065" type="text" default="" />
-        <setting id="imdb_lists.sort_type" label="32066" type="enum" default="0" lvalues="32215|32216|32217|32218|32219|32220|32221|32222|32223" visible="!eq(-1,)" />
-        <setting id="imdb_lists.sort_direction" label="32067" type="enum" default="0" lvalues="32224|32225" visible="!eq(-2,)" />
-    </category>
-    <!-- Provider Accounts -->
-    <category label="32685">
-        <!-- External Scrapers -->
-        <setting label="32079" type="lsep" />
-        <setting id="provider.external" type="bool" label="32055" default="true" />
-        <setting id="open_cocoscrapers" type="action" label="32093" visible="eq(-1,true)" option="close" action="RunPlugin(plugin://plugin.video.fen/?mode=open_settings&amp;addon=script.module.cocoscrapers)" />
-        <!-- Real Debrid -->
-        <setting label="32054" type="lsep" />
-        <setting id="rd.token" label="rd token" type="text" default="" visible="hidden" />
-        <setting id="rd.enabled" type="bool" label="32055" default="true" visible="!eq(-1,)" />
-        <setting id="rd.account_id" label="32056" type="text" default="" enable="false" visible="!eq(-2,)+eq(-1,true)" />
-        <setting id="open_rd_authenticate" type="action" label="32057" visible="eq(-3,)" option="close" action="RunPlugin(plugin://plugin.video.fen/?mode=real_debrid.authenticate)" />
-        <setting id="open_rd_de-authenticate" type="action" label="32059" visible="!eq(-4,)+eq(-3,true)" option="close" action="RunPlugin(plugin://plugin.video.fen/?mode=real_debrid.revoke_authentication)" />
-        <setting id="rd.torrent.enabled" type="bool" label="33015" default="true" visible="!eq(-5,)+eq(-4,true)" />
-        <setting id="rd.hoster.enabled" type="bool" label="33016" default="true" visible="!eq(-6,)+eq(-5,true)" />
-        <setting id="store_resolved_torrent.real-debrid" label="32060" type="enum" default="0" lvalues="32965|32129|32078" visible="!eq(-7,)+eq(-6,true)" />
-        <setting id="provider.rd_cloud" type="bool" label="$ADDON[plugin.video.fen 32450] $ADDON[plugin.video.fen 32098]" default="false" visible="!eq(-8,)+eq(-7,true)" />
-        <setting id="rd_cloud.title_filter" type="bool" label="32172" default="true" subsetting="true" visible="!eq(-9,)+eq(-8,true)+eq(-1,true)" />
-        <setting id="check.rd_cloud" type="bool" label="32104" default="false" subsetting="true" visible="!eq(-10,)+eq(-9,true)+eq(-2,true)" />
-        <setting id="results.sort_rdcloud_first" type="bool" label="32103" default="true" subsetting="true" visible="!eq(-11,)+eq(-10,true)+eq(-3,true)" />
-        <setting id="rd.priority" label="32011" type="slider" range="1,1,10" option="int" default="10" visible="!eq(-12,)+eq(-11,true)" />
-        <!-- Premiumize -->
-        <setting label="32061" type="lsep" />
-        <setting id="pm.token" label="pm token" type="text" default="" visible="hidden" />
-        <setting id="pm.enabled" type="bool" label="32055" default="true" visible="!eq(-1,)" />
-        <setting id="pm.account_id" label="32056" type="text" default="" enable="false" visible="!eq(-2,)+eq(-1,true)" />
-        <setting id="open_pm_authenticate" type="action" label="32057" visible="eq(-3,)" option="close" action="RunPlugin(plugin://plugin.video.fen/?mode=premiumize.authenticate)" />
-        <setting id="open_pm_de-authenticate" type="action" label="32059" visible="!eq(-4,)+eq(-3,true)" option="close" action="RunPlugin(plugin://plugin.video.fen/?mode=premiumize.revoke_authentication)" />
-        <setting id="pm.torrent.enabled" type="bool" label="33015" default="true" visible="!eq(-5,)+eq(-4,true)" />
-        <setting id="pm.hoster.enabled" type="bool" label="33016" default="true" visible="!eq(-6,)+eq(-5,true)" />
-        <setting id="store_resolved_torrent.premiumize.me" label="32060" type="enum" default="0" lvalues="32965|32129|32078" visible="!eq(-7,)+eq(-6,true)" />
-        <setting id="provider.pm_cloud" type="bool" label="$ADDON[plugin.video.fen 32450] $ADDON[plugin.video.fen 32097]" default="false" visible="!eq(-8,)+eq(-7,true)" />
-        <setting id="pm_cloud.title_filter" type="bool" label="32172" default="true" subsetting="true" visible="!eq(-9,)+eq(-8,true)+eq(-1,true)" />
-        <setting id="check.pm_cloud" type="bool" label="32104" default="false" subsetting="true" visible="!eq(-10,)+eq(-9,true)+eq(-2,true)" />
-        <setting id="results.sort_pmcloud_first" type="bool" label="32103" default="true" subsetting="true" visible="!eq(-11,)+eq(-10,true)+eq(-3,true)" />
-        <setting id="pm.priority" label="32011" type="slider" range="1,1,10" option="int" default="10" visible="!eq(-12,)+eq(-11,true)" />
-        <!-- All Debrid -->
-        <setting label="32063" type="lsep" />
-        <setting id="ad.token" label="ad token" type="text" default="" visible="hidden" />
-        <setting id="ad.enabled" type="bool" label="32055" default="true" visible="!eq(-1,)" />
-        <setting id="ad.account_id" label="32056" type="text" default="" enable="false" visible="!eq(-2,)+eq(-1,true)" />
-        <setting id="open_ad_authenticate" type="action" label="32057" visible="eq(-3,)" option="close" action="RunPlugin(plugin://plugin.video.fen/?mode=alldebrid.authenticate)" />
-        <setting id="open_ad_de-authenticate" type="action" label="32059" visible="!eq(-4,)+eq(-3,true)" option="close" action="RunPlugin(plugin://plugin.video.fen/?mode=alldebrid.revoke_authentication)" />
-        <setting id="ad.torrent.enabled" type="bool" label="33015" default="true" visible="!eq(-5,)+eq(-4,true)" />
-        <setting id="ad.hoster.enabled" type="bool" label="33016" default="true" visible="!eq(-6,)+eq(-5,true)" />
-        <setting id="store_resolved_torrent.alldebrid" label="32060" type="enum" default="0" lvalues="32965|32129|32078" visible="!eq(-7,)+eq(-6,true)" />
-        <setting id="provider.ad_cloud" type="bool" label="$ADDON[plugin.video.fen 32450] $ADDON[plugin.video.fen 32099]" default="false" visible="!eq(-8,)+eq(-7,true)" />
-        <setting id="ad_cloud.title_filter" type="bool" label="32172" default="true" subsetting="true" visible="!eq(-9,)+eq(-8,true)+eq(-1,true)" />
-        <setting id="check.ad_cloud" type="bool" label="32104" default="false" subsetting="true" visible="!eq(-10,)+eq(-9,true)+eq(-2,true)" />
-        <setting id="results.sort_adcloud_first" type="bool" label="32103" default="true" subsetting="true" visible="!eq(-11,)+eq(-10,true)+eq(-3,true)" />
-        <setting id="ad.priority" label="32011" type="slider" range="1,1,10" option="int" default="10" visible="!eq(-12,)+eq(-11,true)" />
-        <!-- Furk -->
-        <setting label="32069" type="lsep" />
-        <setting id="provider.furk" type="bool" label="32055" default="false" />
-        <setting id="furk_login" type="text" label="32051" default="" visible="eq(-1,true)" />
-        <setting id="furk_password" type="text" label="32052" default="" visible="eq(-2,true)" />
-        <setting id="furk_api_key" type="text" label="32053" default="" visible="eq(-3,true)" />
-        <setting id="furk.title_filter" type="bool" label="32172" default="true" visible="eq(-4,true)+!eq(-3,)|!eq(-1,)" />
-        <setting id="check.furk" type="bool" label="32104" default="false" visible="eq(-5,true)+!eq(-4,)|!eq(-2,)" />
-        <setting id="fu.priority" label="32011" type="slider" range="1,1,10" option="int" default="6" visible="eq(-6,true)+!eq(-5,)|!eq(-3,)" />
-        <!-- Easynews -->
-        <setting label="32070" type="lsep" />
-        <setting id="provider.easynews" type="bool" label="32055" default="false" />
-        <setting id="easynews_user" type="text" label="32051" default="" visible="eq(-1,true)" />
-        <setting id="easynews_password" type="text" label="32052" default="" visible="eq(-2,true)" />
-        <setting id="easynews.use_custom_farm" type="action" label="32119" default="False" visible="eq(-3,true)+!eq(-1,)" action="RunPlugin(plugin://plugin.video.fen/?mode=easynews_use_custom_farm_choice)" />
-        <setting id="easynews.server_name" type="action" label="32696" default="Auto:443" subsetting="true" visible="eq(-4,true)+!eq(-2,)+eq(-1,True)" action="RunPlugin(plugin://plugin.video.fen/?mode=easynews_server_choice)" />
-        <setting id="easynews.title_filter" type="bool" label="32172" default="true" visible="eq(-5,true)+!eq(-3,)" />
-        <setting id="easynews.filter_lang" type="bool" label="32835" default="false" visible="eq(-6,true)+!eq(-4,)" />
-        <setting id="easynews.lang_filters" type="action" label="32836" default="eng" action="RunPlugin(plugin://plugin.video.fen/?mode=set_language_filter_choice&amp;filter_setting=easynews.lang_filters)" subsetting="true" visible="eq(-7,true)+!eq(-5,)+eq(-1,true)" />
-        <setting id="check.easynews" type="bool" label="32104" default="false" visible="eq(-8,true)+!eq(-6,)" />
-        <setting id="en.priority" label="32011" type="slider" range="1,1,10" option="int" default="7" visible="eq(-9,true)+!eq(-7,)" />
-        <!--setting id="easynews.api_version" label="33007" type="enum" default="0" lvalues="33008|33009" visible="eq(-10,true)+!eq(-8,)" /-->
-        <!-- Folders 1-5 -->
-        <setting label="32108" type="lsep" />
-        <setting id="provider.folders" type="bool" label="32055" default="false" />
-        <setting id="browse.folders" label="32511" type="action" default="$ADDON[plugin.video.fen 32652]" option="close" action="ActivateWindow(Videos,plugin://plugin.video.fen/?mode=navigator.sources_folders,return)" visible="eq(-1,true)" />
-        <setting id="folders.title_filter" type="bool" label="32172" default="true" visible="eq(-2,true)" />
-        <setting id="check.folders" type="bool" label="32104" default="false" visible="eq(-3,true)" />
-        <setting id="results.sort_folders_first" type="bool" label="32103" default="true" visible="eq(-4,true)" />
-        <setting id="results.folders_ignore_filters" type="bool" label="33042" default="false" visible="eq(-5,true)" />
-    </category>
-    <!-- Results -->
-    <category label="32139">
-        <!-- Display -->
-        <setting label="32140" type="lsep" />
-        <setting id="results.timeout" label="32141" type="number" default="20" />
-        <setting id="results.format" type="action" label="32102" default="List" action="RunPlugin(plugin://plugin.video.fen/?mode=results_format_choice)" />
-        <setting id="results.use_contrast" type="bool" label="33093" default="true" />
-        <!--General -->
-        <setting label="32001" type="lsep" />
-        <setting id="search.enable.yearcheck" type="bool" label="33006" default="false" />
-        <setting id="search.finish.early" type="bool" label="32120" default="false" />
-        <setting id="torrent.display.uncached" type="bool" label="32160" default="false" />
-        <setting id="results.ignore_filter" label="32050" type="enum" default="0" lvalues="32027|32192|32521" />
-        <!-- Sorting and Filtering -->
-        <setting label="32150" type="lsep" />
-        <setting id="results.sort_order_display" type="action" label="32151" default="$ADDON[plugin.video.fen 32582]" action="RunPlugin(plugin://plugin.video.fen/?mode=results_sorting_choice)" />
-        <setting id="results.size_sort_direction" label="32782" type="enum" default="0" lvalues="32225|32224" />
-        <setting id="results.filter_size_method" type="enum" lvalues="32027|32125|32126" label="32161" default="0" />
-        <setting id="results.size.auto" type="number" label="32123" default="20" subsetting="true" visible="eq(-1,1)" />
-        <setting id="results.size.manual" type="number" label="32023" default="10000" subsetting="true" visible="eq(-2,2)" />
-        <setting id="results.include.unknown.size" type="bool" label="32162" default="true" subsetting="true" visible="eq(-2,true)" />
-        <setting id="include_prerelease_results" type="bool" label="32155" default="true" />
-        <setting id="include_3d_results" type="bool" label="32156" default="true" />
-        <setting id="filter_hevc" type="enum" lvalues="32188|32189|32190" label="32177" default="0" />
-        <setting id="filter_hevc.max_quality" type="select" label="32981" values="4K|1080p|720p|SD" default="4K" subsetting="true" visible="eq(-1,0)|eq(-1,2)" />
-        <setting id="filter_hevc.max_autoplay_quality" type="select" label="32988" values="4K|1080p|720p|SD" default="4K" subsetting="true" visible="eq(-2,0)|eq(-2,2)" />
-        <setting id="filter_hdr" type="enum" lvalues="32188|32189|32190" label="32158" default="0" />
-        <setting id="filter_dv" type="enum" lvalues="32188|32189|32190" label="32159" default="0" />
-        <setting id="filter_av1" type="enum" lvalues="32188|32189|32190" label="32038" default="0" />
-        <setting id="filter_audio" type="action" label="32002" default="" action="RunPlugin(plugin://plugin.video.fen/?mode=audio_filters_choice)" />
-        <!-- Results Color Highlights -->
-        <setting label="32138" type="lsep" />
-        <setting id="highlight.type" label="32204" type="enum" default="1" lvalues="32240|32583|32241" />
-        <setting id="hoster.identify" type="action" label="32127" default="dodgerblue" action="RunPlugin(plugin://plugin.video.fen/?mode=scraper_color_choice&amp;setting=hoster)" visible="eq(-1,0)" subsetting="true" />
-        <setting id="torrent.identify" type="action" label="32128" default="fuchsia" action="RunPlugin(plugin://plugin.video.fen/?mode=scraper_color_choice&amp;setting=torrent)" visible="eq(-2,0)" subsetting="true" />
-        <setting id="provider.rd_colour" type="action" label="32206" default="seagreen" action="RunPlugin(plugin://plugin.video.fen/?mode=scraper_color_choice&amp;setting=rd)" visible="eq(-3,1)" subsetting="true" />
-        <setting id="provider.pm_colour" type="action" label="32207" default="orangered" action="RunPlugin(plugin://plugin.video.fen/?mode=scraper_color_choice&amp;setting=pm)" visible="eq(-4,1)" subsetting="true" />
-        <setting id="provider.ad_colour" type="action" label="32208" default="goldenrod" action="RunPlugin(plugin://plugin.video.fen/?mode=scraper_color_choice&amp;setting=ad)" visible="eq(-5,1)" subsetting="true" />
-        <setting id="provider.furk_colour" type="action" label="32235" default="crimson" action="RunPlugin(plugin://plugin.video.fen/?mode=scraper_color_choice&amp;setting=furk)" visible="eq(-6,0)|eq(-6,1)" subsetting="true" />
-        <setting id="provider.easynews_colour" type="action" label="32236" default="darkturquoise" action="RunPlugin(plugin://plugin.video.fen/?mode=scraper_color_choice&amp;setting=easynews)" subsetting="true" visible="eq(-7,0)|eq(-7,1)" />
-        <setting id="provider.debrid_cloud_colour" type="action" label="32244" default="darkviolet" action="RunPlugin(plugin://plugin.video.fen/?mode=scraper_color_choice&amp;setting=debrid_cloud)" subsetting="true" visible="eq(-8,0)|eq(-8,1)" />
-        <setting id="provider.folders_colour" type="action" label="32519" default="darkgoldenrod" action="RunPlugin(plugin://plugin.video.fen/?mode=scraper_color_choice&amp;setting=folders)" subsetting="true" visible="eq(-9,0)|eq(-9,1)" />
-        <setting id="scraper_4k_highlight" type="action" label="32520" default="fuchsia" action="RunPlugin(plugin://plugin.video.fen/?mode=scraper_quality_color_choice&amp;setting=scraper_4k_highlight)" subsetting="true" visible="eq(-10,2)" />
-        <setting id="scraper_1080p_highlight" type="action" label="32523" default="goldenrod" action="RunPlugin(plugin://plugin.video.fen/?mode=scraper_quality_color_choice&amp;setting=scraper_1080p_highlight)" subsetting="true" visible="eq(-11,2)" />
-        <setting id="scraper_720p_highlight" type="action" label="32618" default="seagreen" action="RunPlugin(plugin://plugin.video.fen/?mode=scraper_quality_color_choice&amp;setting=scraper_720p_highlight)" subsetting="true" visible="eq(-12,2)" />
-        <setting id="scraper_SD_highlight" type="action" label="32647" default="dodgerblue" action="RunPlugin(plugin://plugin.video.fen/?mode=scraper_quality_color_choice&amp;setting=scraper_SD_highlight)" subsetting="true" visible="eq(-13,2)" />
-        <!-- Progress Color Highlights -->
-        <setting label="32209" type="lsep" />
-        <setting id="int_dialog_highlight" type="action" label="32167" default="lightgray" action="RunPlugin(plugin://plugin.video.fen/?mode=scraper_dialog_color_choice&amp;setting=internal)" />
-        <setting id="ext_dialog_highlight" type="action" label="32168" default="lightgray" action="RunPlugin(plugin://plugin.video.fen/?mode=scraper_dialog_color_choice&amp;setting=external)" />
-    </category>
-    <!-- Playback -->
-    <category label="32174">
-        <!-- Playback -->
-        <setting label="32028" type="lsep" />
-        <setting id="auto_play_movie" type="bool" label="32175" default="false" />
-        <setting id="results_quality_movie" type="action" label="32176" default="SD, 720p, 1080p, 4K" action="RunPlugin(plugin://plugin.video.fen/?mode=set_quality_choice&amp;quality_setting=results_quality_movie)" visible="eq(-1,false)" />
-        <setting id="autoplay_quality_movie" type="action" label="32834" default="SD, 720p, 1080p, 4K" action="RunPlugin(plugin://plugin.video.fen/?mode=set_quality_choice&amp;quality_setting=autoplay_quality_movie)" visible="eq(-2,true)" />
-        <setting id="auto_resume_movie" type="enum" lvalues="32013|32015|32191" label="32181" default="0" />
-        <setting label="32506" type="lsep" />
-        <setting id="auto_play_episode" type="bool" label="32175" default="false" />
-        <setting id="results_quality_episode" type="action" label="32176" default="SD, 720p, 1080p, 4K" action="RunPlugin(plugin://plugin.video.fen/?mode=set_quality_choice&amp;quality_setting=results_quality_episode)" visible="eq(-1,false)" />
-        <setting id="autoplay_quality_episode" type="action" label="32834" default="SD, 720p, 1080p, 4K" action="RunPlugin(plugin://plugin.video.fen/?mode=set_quality_choice&amp;quality_setting=autoplay_quality_episode)" visible="eq(-2,true)" />
-        <setting id="autoplay_next_episode" type="bool" label="32178" default="false" visible="eq(-3,true)" />
-        <setting id="autoplay_alert_method" type="enum" lvalues="33094|33087" label="33088" default="0" subsetting="true" visible="eq(-4,true)+eq(-1,true)" />
-        <setting id="autoplay_default_action" type="enum" lvalues="32764|32840" label="33089" default="0" subsetting="true" visible="eq(-5,true)+eq(-2,true)+eq(-1,0)" />
-        <setting id="autoplay_next_window_percentage" label="32005" type="slider" default="95" range="75,1,99" option="int" subsetting="true" visible="eq(-6,true)+eq(-3,true)" />
-        <setting id="autoscrape_next_episode" type="bool" label="33086" default="false" visible="eq(-7,false)" />
-        <setting id="auto_resume_episode" type="enum" lvalues="32013|32015|32191" label="32181" default="0" />
-        <!-- Playback Utilities -->
-        <setting label="32122" type="lsep" />
-        <setting id="playback.watched_percent" label="33072" type="slider" range="65,1,95" option="int" default="90" />
-        <setting id="playback.resume_percent" label="33073" type="slider" range="1,1,35" option="int" default="5" />
-        <setting id="playback.disable_content_lookup" type="bool" label="32171" default="false" />
-        <setting id="playback.volumecheck_enabled" type="bool" label="33064" default="false" />
-        <setting id="playback.volumecheck_percent" label="33065" type="slider" range="1,1,100" option="int" default="50" subsetting="true" visible="eq(-1,true)" />
-        <!-- Subtitles -->
-        <setting label="32182" type="lsep" />
-        <setting id="subtitles.subs_action" type="enum" label="32183" default="2" lvalues="32192|32193|32027" />
-        <setting id="subtitles.language" type="select" label="32184" values="Afrikaans|Albanian|Arabic|Armenian|Basque|Bengali|Bosnian|Breton|Bulgarian|Burmese|Catalan|Chinese|Croatian|Czech|Danish|Dutch|English|Esperanto|Estonian|Finnish|French|Galician|Georgian|German|Greek|Hebrew|Hindi|Hungarian|Icelandic|Indonesian|Italian|Japanese|Kazakh|Khmer|Korean|Latvian|Lithuanian|Luxembourgish|Macedonian|Malay|Malayalam|Manipuri|Mongolian|Montenegrin|Norwegian|Occitan|Persian|Polish|Portuguese|Portuguese(Brazil)|Romanian|Russian|Serbian|Sinhalese|Slovak|Slovenian|Spanish|Swahili|Swedish|Syriac|Tagalog|Tamil|Telugu|Thai|Turkish|Ukrainian|Urdu|Vietnamese" default="English" subsetting="true" visible="!eq(-1,2)" />
-        <setting id="subtitles.secondary_language" type="select" label="32466" values="None|Afrikaans|Albanian|Arabic|Armenian|Basque|Bengali|Bosnian|Breton|Bulgarian|Burmese|Catalan|Chinese|Croatian|Czech|Danish|Dutch|English|Esperanto|Estonian|Finnish|French|Galician|Georgian|German|Greek|Hebrew|Hindi|Hungarian|Icelandic|Indonesian|Italian|Japanese|Kazakh|Khmer|Korean|Latvian|Lithuanian|Luxembourgish|Macedonian|Malay|Malayalam|Manipuri|Mongolian|Montenegrin|Norwegian|Occitan|Persian|Polish|Portuguese|Portuguese(Brazil)|Romanian|Russian|Serbian|Sinhalese|Slovak|Slovenian|Spanish|Swahili|Swedish|Syriac|Tagalog|Tamil|Telugu|Thai|Turkish|Ukrainian|Urdu|Vietnamese" default="None" subsetting="true" visible="!eq(-2,2)" />
-        <setting id="subtitles.auto_enable" type="bool" label="32186" visible="!eq(-3,2)" default="true" subsetting="true" />
-    </category>
+<?xml version="1.0" ?>
+<settings version="1">
+	<section id="plugin.video.fen">
+		<!-- General -->
+		<category id="general" label="32001" help="">
+			<!-- General -->
+			<group id="1" label="32001">
+				<setting id="auto_start_fen" type="boolean" label="32017" help="">
+					<level>0</level>
+					<default>false</default>
+					<control type="toggle"/>
+				</setting>
+				<setting id="kodi_menu_cache" type="boolean" label="32539" help="">
+					<level>0</level>
+					<default>false</default>
+					<control type="toggle"/>
+				</setting>
+				<setting id="limit_concurrent_threads" type="boolean" label="32744" help="">
+					<level>0</level>
+					<default>true</default>
+					<control type="toggle"/>
+				</setting>
+				<setting id="max_threads" type="integer" label="32745" help="" parent="limit_concurrent_threads">
+					<level>0</level>
+					<default>60</default>
+					<constraints>
+						<minimum>10</minimum>
+						<step>5</step>
+						<maximum>500</maximum>
+					</constraints>
+					<dependencies>
+						<dependency type="visible">
+							<condition operator="is" setting="limit_concurrent_threads">true</condition>
+						</dependency>
+					</dependencies>
+					<control type="slider" format="integer">
+						<popup>false</popup>
+					</control>
+				</setting>
+				<setting id="fen.highlight_name" type="string" label="32124" help="">
+					<level>0</level>
+					<default>[COLOR=dodgerblue]dodgerblue[/COLOR]</default>
+					<control type="button" format="action">
+						<data>RunPlugin(plugin://plugin.video.fen/?mode=highlight_choice)</data>
+					</control>
+				</setting>
+				<setting id="use_skin_fonts" type="boolean" label="32047" help="">
+					<level>0</level>
+					<default>true</default>
+					<control type="toggle"/>
+				</setting>
+			</group>
+			<!-- Watched Indicators -->
+			<group id="2" label="32034">
+				<setting id="trakt.indicators_active" type="string" help="">
+					<level>0</level>
+					<default>false</default>
+					<dependencies>
+						<dependency type="visible">
+							<condition on="property" name="InfoBool">false</condition>
+						</dependency>
+					</dependencies>
+					<control type="edit" format="string">
+						<heading/>
+					</control>
+				</setting>
+				<setting id="watched_indicators" type="integer" label="32035" help="">
+					<level>0</level>
+					<default>0</default>
+					<constraints>
+						<options>
+							<option label="32036">0</option>
+							<option label="32037">1</option>
+						</options>
+					</constraints>
+					<dependencies>
+						<dependency type="visible">
+							<condition operator="is" setting="trakt.indicators_active">true</condition>
+						</dependency>
+					</dependencies>
+					<control type="spinner" format="string"/>
+				</setting>
+				<setting id="amble.indicators" type="string" label="32039" help="">
+					<level>0</level>
+					<default/>
+					<constraints>
+						<allowempty>true</allowempty>
+					</constraints>
+					<dependencies>
+						<dependency type="enable">
+							<condition on="property" name="InfoBool">false</condition>
+						</dependency>
+						<dependency type="visible">
+							<condition operator="is" setting="trakt.indicators_active">false</condition>
+						</dependency>
+					</dependencies>
+					<control type="edit" format="string">
+						<heading>32039</heading>
+					</control>
+				</setting>
+			</group>
+			<!-- Trakt Cache -->
+			<group id="3" label="32087">
+				<setting id="trakt.sync_interval" type="integer" label="33099" help="">
+					<level>0</level>
+					<default>30</default>
+					<constraints>
+						<minimum>5</minimum>
+						<step>5</step>
+						<maximum>600</maximum>
+					</constraints>
+					<control type="slider" format="integer">
+						<popup>false</popup>
+					</control>
+				</setting>
+				<setting id="trakt.sync_refresh_widgets" type="boolean" label="32048" help="">
+					<level>0</level>
+					<default>false</default>
+					<control type="toggle"/>
+				</setting>
+			</group>
+			<!-- UTC Time Offset -->
+			<group id="4" label="32101">
+				<setting id="datetime.offset" type="integer" label="32045" help="">
+					<level>0</level>
+					<default>0</default>
+					<constraints>
+						<minimum>-15</minimum>
+						<step>1</step>
+						<maximum>15</maximum>
+					</constraints>
+					<control type="slider" format="integer">
+						<popup>false</popup>
+					</control>
+				</setting>
+			</group>
+			<!--Downloads -->
+			<group id="5" label="32107">
+				<setting id="movie_download_directory" type="path" label="32116" help="">
+					<level>0</level>
+					<default>special://profile/addon_data/plugin.video.fen/Movies Downloads/</default>
+					<constraints>
+						<writable>false</writable>
+					</constraints>
+					<control type="button" format="path">
+						<heading>32116</heading>
+					</control>
+				</setting>
+				<setting id="tvshow_download_directory" type="path" label="32117" help="">
+					<level>0</level>
+					<default>special://profile/addon_data/plugin.video.fen/TV Show Downloads/</default>
+					<constraints>
+						<writable>false</writable>
+					</constraints>
+					<control type="button" format="path">
+						<heading>32117</heading>
+					</control>
+				</setting>
+				<setting id="premium_download_directory" type="path" label="32210" help="">
+					<level>0</level>
+					<default>special://profile/addon_data/plugin.video.fen/Premium Downloads/</default>
+					<constraints>
+						<writable>false</writable>
+					</constraints>
+					<control type="button" format="path">
+						<heading>32210</heading>
+					</control>
+				</setting>
+				<setting id="image_download_directory" type="path" label="33005" help="">
+					<level>0</level>
+					<default>special://profile/addon_data/plugin.video.fen/Image Downloads/</default>
+					<constraints>
+						<writable>false</writable>
+					</constraints>
+					<control type="button" format="path">
+						<heading>33005</heading>
+					</control>
+				</setting>
+				<setting id="trakt.expires" type="string" help="">
+					<level>0</level>
+					<default>0</default>
+					<dependencies>
+						<dependency type="visible">
+							<condition on="property" name="InfoBool">false</condition>
+						</dependency>
+					</dependencies>
+					<control type="edit" format="string">
+						<heading/>
+					</control>
+				</setting>
+				<setting id="trakt.refresh" type="string" help="">
+					<level>0</level>
+					<default>0</default>
+					<dependencies>
+						<dependency type="visible">
+							<condition on="property" name="InfoBool">false</condition>
+						</dependency>
+					</dependencies>
+					<control type="edit" format="string">
+						<heading/>
+					</control>
+				</setting>
+				<setting id="trakt.token" type="string" help="">
+					<level>0</level>
+					<default>0</default>
+					<dependencies>
+						<dependency type="visible">
+							<condition on="property" name="InfoBool">false</condition>
+						</dependency>
+					</dependencies>
+					<control type="edit" format="string">
+						<heading/>
+					</control>
+				</setting>
+				<setting id="rd.client_id" type="string" label="rd client_id" help="">
+					<level>0</level>
+					<default/>
+					<constraints>
+						<allowempty>true</allowempty>
+					</constraints>
+					<dependencies>
+						<dependency type="visible">
+							<condition on="property" name="InfoBool">false</condition>
+						</dependency>
+					</dependencies>
+					<control type="edit" format="string">
+						<heading>rd client_id</heading>
+					</control>
+				</setting>
+				<setting id="rd.refresh" type="string" label="rd refresh" help="">
+					<level>0</level>
+					<default/>
+					<constraints>
+						<allowempty>true</allowempty>
+					</constraints>
+					<dependencies>
+						<dependency type="visible">
+							<condition on="property" name="InfoBool">false</condition>
+						</dependency>
+					</dependencies>
+					<control type="edit" format="string">
+						<heading>rd refresh</heading>
+					</control>
+				</setting>
+				<setting id="rd.secret" type="string" label="rd secret" help="">
+					<level>0</level>
+					<default/>
+					<constraints>
+						<allowempty>true</allowempty>
+					</constraints>
+					<dependencies>
+						<dependency type="visible">
+							<condition on="property" name="InfoBool">false</condition>
+						</dependency>
+					</dependencies>
+					<control type="edit" format="string">
+						<heading>rd secret</heading>
+					</control>
+				</setting>
+				<setting id="results.sort_order" type="string" help="">
+					<level>0</level>
+					<default>1</default>
+					<dependencies>
+						<dependency type="visible">
+							<condition on="property" name="InfoBool">hidden</condition>
+						</dependency>
+					</dependencies>
+					<control type="edit" format="string">
+						<heading/>
+					</control>
+				</setting>
+				<setting id="database.maintenance.due" type="string" help="">
+					<level>0</level>
+					<default>0</default>
+					<dependencies>
+						<dependency type="visible">
+							<condition on="property" name="InfoBool">hidden</condition>
+						</dependency>
+					</dependencies>
+					<control type="edit" format="string">
+						<heading/>
+					</control>
+				</setting>
+				<setting id="reuse_language_invoker" type="string" help="">
+					<level>0</level>
+					<default>true</default>
+					<dependencies>
+						<dependency type="visible">
+							<condition on="property" name="InfoBool">hidden</condition>
+						</dependency>
+					</dependencies>
+					<control type="edit" format="string">
+						<heading/>
+					</control>
+				</setting>
+				<setting id="folder1.display_name" type="string" help="">
+					<level>0</level>
+					<default>Folder 1</default>
+					<dependencies>
+						<dependency type="visible">
+							<condition on="property" name="InfoBool">false</condition>
+						</dependency>
+					</dependencies>
+					<control type="edit" format="string">
+						<heading/>
+					</control>
+				</setting>
+				<setting id="folder1.movies_directory" type="string" help="">
+					<level>0</level>
+					<default>None</default>
+					<dependencies>
+						<dependency type="visible">
+							<condition on="property" name="InfoBool">false</condition>
+						</dependency>
+					</dependencies>
+					<control type="edit" format="string">
+						<heading/>
+					</control>
+				</setting>
+				<setting id="folder1.tv_shows_directory" type="string" help="">
+					<level>0</level>
+					<default>None</default>
+					<dependencies>
+						<dependency type="visible">
+							<condition on="property" name="InfoBool">false</condition>
+						</dependency>
+					</dependencies>
+					<control type="edit" format="string">
+						<heading/>
+					</control>
+				</setting>
+				<setting id="folder2.display_name" type="string" help="">
+					<level>0</level>
+					<default>Folder 2</default>
+					<dependencies>
+						<dependency type="visible">
+							<condition on="property" name="InfoBool">false</condition>
+						</dependency>
+					</dependencies>
+					<control type="edit" format="string">
+						<heading/>
+					</control>
+				</setting>
+				<setting id="folder2.movies_directory" type="string" help="">
+					<level>0</level>
+					<default>None</default>
+					<dependencies>
+						<dependency type="visible">
+							<condition on="property" name="InfoBool">false</condition>
+						</dependency>
+					</dependencies>
+					<control type="edit" format="string">
+						<heading/>
+					</control>
+				</setting>
+				<setting id="folder2.tv_shows_directory" type="string" help="">
+					<level>0</level>
+					<default>None</default>
+					<dependencies>
+						<dependency type="visible">
+							<condition on="property" name="InfoBool">false</condition>
+						</dependency>
+					</dependencies>
+					<control type="edit" format="string">
+						<heading/>
+					</control>
+				</setting>
+				<setting id="folder3.display_name" type="string" help="">
+					<level>0</level>
+					<default>Folder 3</default>
+					<dependencies>
+						<dependency type="visible">
+							<condition on="property" name="InfoBool">false</condition>
+						</dependency>
+					</dependencies>
+					<control type="edit" format="string">
+						<heading/>
+					</control>
+				</setting>
+				<setting id="folder3.movies_directory" type="string" help="">
+					<level>0</level>
+					<default>None</default>
+					<dependencies>
+						<dependency type="visible">
+							<condition on="property" name="InfoBool">false</condition>
+						</dependency>
+					</dependencies>
+					<control type="edit" format="string">
+						<heading/>
+					</control>
+				</setting>
+				<setting id="folder3.tv_shows_directory" type="string" help="">
+					<level>0</level>
+					<default>None</default>
+					<dependencies>
+						<dependency type="visible">
+							<condition on="property" name="InfoBool">false</condition>
+						</dependency>
+					</dependencies>
+					<control type="edit" format="string">
+						<heading/>
+					</control>
+				</setting>
+				<setting id="folder4.display_name" type="string" help="">
+					<level>0</level>
+					<default>Folder 4</default>
+					<dependencies>
+						<dependency type="visible">
+							<condition on="property" name="InfoBool">false</condition>
+						</dependency>
+					</dependencies>
+					<control type="edit" format="string">
+						<heading/>
+					</control>
+				</setting>
+				<setting id="folder4.movies_directory" type="string" help="">
+					<level>0</level>
+					<default>None</default>
+					<dependencies>
+						<dependency type="visible">
+							<condition on="property" name="InfoBool">false</condition>
+						</dependency>
+					</dependencies>
+					<control type="edit" format="string">
+						<heading/>
+					</control>
+				</setting>
+				<setting id="folder4.tv_shows_directory" type="string" help="">
+					<level>0</level>
+					<default>None</default>
+					<dependencies>
+						<dependency type="visible">
+							<condition on="property" name="InfoBool">false</condition>
+						</dependency>
+					</dependencies>
+					<control type="edit" format="string">
+						<heading/>
+					</control>
+				</setting>
+				<setting id="folder5.display_name" type="string" help="">
+					<level>0</level>
+					<default>Folder 5</default>
+					<dependencies>
+						<dependency type="visible">
+							<condition on="property" name="InfoBool">false</condition>
+						</dependency>
+					</dependencies>
+					<control type="edit" format="string">
+						<heading/>
+					</control>
+				</setting>
+				<setting id="folder5.movies_directory" type="string" help="">
+					<level>0</level>
+					<default>None</default>
+					<dependencies>
+						<dependency type="visible">
+							<condition on="property" name="InfoBool">false</condition>
+						</dependency>
+					</dependencies>
+					<control type="edit" format="string">
+						<heading/>
+					</control>
+				</setting>
+				<setting id="folder5.tv_shows_directory" type="string" help="">
+					<level>0</level>
+					<default>None</default>
+					<dependencies>
+						<dependency type="visible">
+							<condition on="property" name="InfoBool">false</condition>
+						</dependency>
+					</dependencies>
+					<control type="edit" format="string">
+						<heading/>
+					</control>
+				</setting>
+				<setting id="easynews.farm" type="string" help="">
+					<level>0</level>
+					<default>auto</default>
+					<dependencies>
+						<dependency type="visible">
+							<condition on="property" name="InfoBool">false</condition>
+						</dependency>
+					</dependencies>
+					<control type="edit" format="string">
+						<heading/>
+					</control>
+				</setting>
+				<setting id="easynews.port" type="string" help="">
+					<level>0</level>
+					<default>443</default>
+					<dependencies>
+						<dependency type="visible">
+							<condition on="property" name="InfoBool">false</condition>
+						</dependency>
+					</dependencies>
+					<control type="edit" format="string">
+						<heading/>
+					</control>
+				</setting>
+				<setting id="version_number" type="string" help="">
+					<level>0</level>
+					<default>0</default>
+					<dependencies>
+						<dependency type="visible">
+							<condition on="property" name="InfoBool">false</condition>
+						</dependency>
+					</dependencies>
+					<control type="edit" format="string">
+						<heading/>
+					</control>
+				</setting>
+				<setting id="extras.enabled_menus" type="string" help="">
+					<level>0</level>
+					<default>2050,2051,2052,2053,2054,2055,2056,2057,2058,2059,2060,2061,2062</default>
+					<dependencies>
+						<dependency type="visible">
+							<condition on="property" name="InfoBool">false</condition>
+						</dependency>
+					</dependencies>
+					<control type="edit" format="string">
+						<heading/>
+					</control>
+				</setting>
+				<setting id="fen.highlight" type="string" help="">
+					<level>0</level>
+					<default>dodgerblue</default>
+					<dependencies>
+						<dependency type="visible">
+							<condition on="property" name="InfoBool">false</condition>
+						</dependency>
+					</dependencies>
+					<control type="edit" format="string">
+						<heading/>
+					</control>
+				</setting>
+			</group>
+		</category>
+		<!-- Navigation -->
+		<category id="navigation" label="32492" help="">
+			<!-- Sorting -->
+			<group id="1" label="32694">
+				<setting id="sort.progress" type="integer" label="32476" help="">
+					<level>0</level>
+					<default>0</default>
+					<constraints>
+						<options>
+							<option label="32228">0</option>
+							<option label="32226">1</option>
+						</options>
+					</constraints>
+					<control type="spinner" format="string"/>
+				</setting>
+				<setting id="sort.watched" type="integer" label="32475" help="">
+					<level>0</level>
+					<default>0</default>
+					<constraints>
+						<options>
+							<option label="32228">0</option>
+							<option label="32226">1</option>
+						</options>
+					</constraints>
+					<control type="spinner" format="string"/>
+				</setting>
+				<setting id="sort.collection" type="integer" label="32499" help="">
+					<level>0</level>
+					<default>0</default>
+					<constraints>
+						<options>
+							<option label="32228">0</option>
+							<option label="32223">1</option>
+							<option label="32221">2</option>
+						</options>
+					</constraints>
+					<control type="spinner" format="string"/>
+				</setting>
+				<setting id="sort.watchlist" type="integer" label="32500" help="">
+					<level>0</level>
+					<default>0</default>
+					<constraints>
+						<options>
+							<option label="32228">0</option>
+							<option label="32223">1</option>
+							<option label="32221">2</option>
+						</options>
+					</constraints>
+					<control type="spinner" format="string"/>
+				</setting>
+				<setting id="ignore_articles" type="boolean" label="32025" help="">
+					<level>0</level>
+					<default>true</default>
+					<control type="toggle"/>
+				</setting>
+			</group>
+			<!-- Content -->
+			<group id="2" label="32693">
+				<setting id="paginate.lists" type="boolean" label="32019" help="">
+					<level>0</level>
+					<default>false</default>
+					<control type="toggle"/>
+				</setting>
+				<setting id="paginate.limit" type="integer" label="32020" help="" parent="paginate.lists">
+					<level>0</level>
+					<default>40</default>
+					<dependencies>
+						<dependency type="visible">
+							<condition operator="is" setting="paginate.lists">true</condition>
+						</dependency>
+					</dependencies>
+					<control type="edit" format="integer">
+						<heading>32020</heading>
+					</control>
+				</setting>
+				<setting id="paginate.reference" type="integer" label="32585" help="" parent="paginate.lists">
+					<level>0</level>
+					<default>0</default>
+					<constraints>
+						<options>
+							<option label="32978">0</option>
+							<option label="32979">1</option>
+							<option label="32030">2</option>
+							<option label="32027">3</option>
+						</options>
+					</constraints>
+					<dependencies>
+						<dependency type="visible">
+							<condition operator="is" setting="paginate.lists">true</condition>
+						</dependency>
+					</dependencies>
+					<control type="spinner" format="string"/>
+				</setting>
+				<setting id="show_specials" type="boolean" label="32008" help="">
+					<level>0</level>
+					<default>false</default>
+					<control type="toggle"/>
+				</setting>
+				<setting id="use_season_title" type="boolean" label="32010" help="">
+					<level>0</level>
+					<default>false</default>
+					<control type="toggle"/>
+				</setting>
+				<setting id="show_unaired" type="boolean" label="32073" help="">
+					<level>0</level>
+					<default>true</default>
+					<control type="toggle"/>
+				</setting>
+				<setting id="suppress_episode_plot" type="boolean" label="33100" help="">
+					<level>0</level>
+					<default>false</default>
+					<control type="toggle"/>
+				</setting>
+				<setting id="show_unaired_watchlist" type="boolean" label="32525" help="">
+					<level>0</level>
+					<default>true</default>
+					<control type="toggle"/>
+				</setting>
+				<setting id="include_year_in_title" type="integer" label="33101" help="">
+					<level>0</level>
+					<default>0</default>
+					<constraints>
+						<options>
+							<option label="32013">0</option>
+							<option label="32028">1</option>
+							<option label="32029">2</option>
+							<option label="32030">3</option>
+						</options>
+					</constraints>
+					<control type="spinner" format="string"/>
+				</setting>
+				<setting id="default_all_episodes" type="integer" label="32009" help="">
+					<level>0</level>
+					<default>0</default>
+					<constraints>
+						<options>
+							<option label="32013">0</option>
+							<option label="32032">1</option>
+							<option label="32033">2</option>
+						</options>
+					</constraints>
+					<control type="spinner" format="string"/>
+				</setting>
+				<setting id="single_ep_display" type="integer" label="32194" help="">
+					<level>0</level>
+					<default>0</default>
+					<constraints>
+						<options>
+							<option label="32201">0</option>
+							<option label="32202">1</option>
+							<option label="32203">2</option>
+						</options>
+					</constraints>
+					<control type="spinner" format="string"/>
+				</setting>
+				<setting id="single_ep_format" type="integer" label="32077" help="">
+					<level>0</level>
+					<default>0</default>
+					<constraints>
+						<options>
+							<option label="32229">0</option>
+							<option label="32230">1</option>
+							<option label="32231">2</option>
+						</options>
+					</constraints>
+					<control type="spinner" format="string"/>
+				</setting>
+			</group>
+			<!-- Extras -->
+			<group id="3" label="33038">
+				<setting id="extras.open_action" type="integer" label="32026" help="">
+					<level>0</level>
+					<default>0</default>
+					<constraints>
+						<options>
+							<option label="32965">0</option>
+							<option label="32028">1</option>
+							<option label="32029">2</option>
+							<option label="32030">3</option>
+						</options>
+					</constraints>
+					<control type="spinner" format="string"/>
+				</setting>
+				<setting id="extras.manage" type="string" label="32046" help="">
+					<level>0</level>
+					<default>$ADDON[plugin.video.fen 32652]</default>
+					<constraints>
+						<allowempty>true</allowempty>
+					</constraints>
+					<control type="button" format="action">
+						<data>RunPlugin(plugin://plugin.video.fen/?mode=extras_lists_choice)</data>
+					</control>
+				</setting>
+				<setting id="extras.enable_scrollbars" type="boolean" label="32846" help="">
+					<level>0</level>
+					<default>false</default>
+					<control type="toggle"/>
+				</setting>
+				<setting id="extras.exclude_non_acting_roles" type="boolean" label="33040" help="">
+					<level>0</level>
+					<default>true</default>
+					<control type="toggle"/>
+				</setting>
+			</group>
+			<!-- Custom Actions -->
+			<group id="4" label="33098">
+				<setting id="custom_context_main_menu" type="boolean" label="33097" help="">
+					<level>0</level>
+					<default>false</default>
+					<control type="toggle"/>
+				</setting>
+				<setting id="custom_context_menu" type="boolean" label="32788" help="">
+					<level>0</level>
+					<default>false</default>
+					<control type="toggle"/>
+				</setting>
+				<setting id="custom_info_dialog" type="boolean" label="32980" help="">
+					<level>0</level>
+					<default>false</default>
+					<control type="toggle"/>
+				</setting>
+			</group>
+			<!-- Trakt Calendar -->
+			<group id="5" label="32081">
+				<setting id="trakt.calendar_sort_order" type="integer" label="32067" help="">
+					<level>0</level>
+					<default>0</default>
+					<constraints>
+						<options>
+							<option label="32225">0</option>
+							<option label="32224">1</option>
+						</options>
+					</constraints>
+					<control type="spinner" format="string"/>
+				</setting>
+				<setting id="trakt.calendar_previous_days" type="integer" label="32083" help="">
+					<level>0</level>
+					<default>0</default>
+					<constraints>
+						<minimum>0</minimum>
+						<step>1</step>
+						<maximum>30</maximum>
+					</constraints>
+					<control type="slider" format="integer">
+						<popup>false</popup>
+					</control>
+				</setting>
+				<setting id="trakt.calendar_future_days" type="integer" label="32084" help="">
+					<level>0</level>
+					<default>7</default>
+					<constraints>
+						<minimum>0</minimum>
+						<step>1</step>
+						<maximum>30</maximum>
+					</constraints>
+					<control type="slider" format="integer">
+						<popup>false</popup>
+					</control>
+				</setting>
+			</group>
+			<!-- Next Episodes -->
+			<group id="6" label="32483">
+				<setting id="nextep.sort_type" type="integer" label="32066" help="">
+					<level>0</level>
+					<default>0</default>
+					<constraints>
+						<options>
+							<option label="32226">0</option>
+							<option label="32227">1</option>
+							<option label="32228">2</option>
+						</options>
+					</constraints>
+					<control type="spinner" format="string"/>
+				</setting>
+				<setting id="nextep.sort_order" type="integer" label="32067" help="">
+					<level>0</level>
+					<default>0</default>
+					<constraints>
+						<options>
+							<option label="32225">0</option>
+							<option label="32224">1</option>
+						</options>
+					</constraints>
+					<control type="spinner" format="string"/>
+				</setting>
+				<setting id="nextep.sort_airing_today_to_top" type="boolean" label="32819" help="">
+					<level>0</level>
+					<default>false</default>
+					<control type="toggle"/>
+				</setting>
+				<setting id="nextep.include_airdate" type="boolean" label="32076" help="">
+					<level>0</level>
+					<default>false</default>
+					<control type="toggle"/>
+				</setting>
+				<setting id="nextep.include_unaired" type="boolean" label="32073" help="">
+					<level>0</level>
+					<default>false</default>
+					<control type="toggle"/>
+				</setting>
+				<setting id="nextep.include_unwatched" type="integer" label="32074" help="">
+					<level>0</level>
+					<default>0</default>
+					<constraints>
+						<options>
+							<option label="32965">0</option>
+							<option label="32500">1</option>
+							<option label="32453">2</option>
+							<option label="32030">3</option>
+						</options>
+					</constraints>
+					<control type="spinner" format="string"/>
+				</setting>
+			</group>
+			<!-- Widgets -->
+			<group id="7" label="32085">
+				<setting id="widget_hide_watched" type="boolean" label="32465" help="">
+					<level>0</level>
+					<default>false</default>
+					<control type="toggle"/>
+				</setting>
+				<setting id="widget_hide_next_page" type="boolean" label="32746" help="">
+					<level>0</level>
+					<default>false</default>
+					<control type="toggle"/>
+				</setting>
+			</group>
+		</category>
+		<!-- Metadata -->
+		<category id="metadata" label="32146" help="">
+			<!-- Fanart -->
+			<group id="1" label="32147">
+				<setting id="get_fanart_data" type="boolean" label="32148" help="">
+					<level>0</level>
+					<default>false</default>
+					<control type="toggle"/>
+				</setting>
+				<setting id="fanarttv.default" type="boolean" label="32012" help="" parent="get_fanart_data">
+					<level>0</level>
+					<default>false</default>
+					<dependencies>
+						<dependency type="visible">
+							<condition operator="is" setting="get_fanart_data">true</condition>
+						</dependency>
+					</dependencies>
+					<control type="toggle"/>
+				</setting>
+			</group>
+			<!-- Image Resolution -->
+			<group id="2" label="32149">
+				<setting id="image_resolutions" type="integer" label="32170" help="">
+					<level>0</level>
+					<default>1</default>
+					<constraints>
+						<options>
+							<option label="32163">0</option>
+							<option label="32164">1</option>
+							<option label="32165">2</option>
+							<option label="32166">3</option>
+						</options>
+					</constraints>
+					<control type="spinner" format="string"/>
+				</setting>
+			</group>
+			<!-- Language -->
+			<group id="3" label="32658">
+				<setting id="meta_language_display" type="string" label="32145" help="">
+					<level>0</level>
+					<default>English</default>
+					<control type="button" format="action">
+						<data>RunPlugin(plugin://plugin.video.fen/?mode=meta_language_choice)</data>
+					</control>
+				</setting>
+				<setting id="meta_language" type="string" label="meta_language" help="">
+					<level>0</level>
+					<default>en</default>
+					<dependencies>
+						<dependency type="visible">
+							<condition on="property" name="InfoBool">hidden</condition>
+						</dependency>
+					</dependencies>
+					<control type="edit" format="string">
+						<heading>meta_language</heading>
+					</control>
+				</setting>
+			</group>
+			<!-- Search -->
+			<group id="4" label="32450">
+				<setting id="meta_use_year_in_search" type="boolean" label="33095" help="">
+					<level>0</level>
+					<default>false</default>
+					<control type="toggle"/>
+				</setting>
+			</group>
+			<!-- Filter -->
+			<group id="5" label="32670">
+				<setting id="meta_filter" type="boolean" label="32142" help="">
+					<level>0</level>
+					<default>true</default>
+					<control type="toggle"/>
+				</setting>
+			</group>
+		</category>
+		<!-- Meta Accounts -->
+		<category id="meta accounts" label="32684" help="">
+			<!-- Trakt -->
+			<group id="1" label="32037">
+				<setting id="trakt.user" type="string" label="32056" help="">
+					<level>0</level>
+					<default/>
+					<constraints>
+						<allowempty>true</allowempty>
+					</constraints>
+					<dependencies>
+						<dependency type="enable">
+							<condition on="property" name="InfoBool">false</condition>
+						</dependency>
+					</dependencies>
+					<control type="edit" format="string">
+						<heading>32056</heading>
+					</control>
+				</setting>
+				<setting id="open_trakt_authenticate" type="action" label="32057" help="">
+					<level>0</level>
+					<data>RunPlugin(plugin://plugin.video.fen/?mode=trakt.trakt_authenticate)</data>
+					<constraints>
+						<allowempty>true</allowempty>
+					</constraints>
+					<dependencies>
+						<dependency type="visible">
+							<condition operator="is" setting="trakt.user"/>
+						</dependency>
+					</dependencies>
+					<control type="button" format="action">
+						<close>true</close>
+					</control>
+				</setting>
+				<setting id="open_trakt_de-authenticate" type="action" label="32059" help="">
+					<level>0</level>
+					<data>RunPlugin(plugin://plugin.video.fen/?mode=trakt.trakt_revoke_authentication)</data>
+					<constraints>
+						<allowempty>true</allowempty>
+					</constraints>
+					<dependencies>
+						<dependency type="visible">
+							<condition operator="!is" setting="trakt.user"/>
+						</dependency>
+					</dependencies>
+					<control type="button" format="action">
+						<close>true</close>
+					</control>
+				</setting>
+			</group>
+			<!-- TMDb -->
+			<group id="2" label="32068">
+				<setting id="tmdb_api" type="string" label="32053" help="">
+					<level>0</level>
+					<default>b370b60447737762ca38457bd77579b3</default>
+					<control type="edit" format="string">
+						<heading>32053</heading>
+					</control>
+				</setting>
+			</group>
+			<!-- Fanart.tv -->
+			<group id="3" label="32173">
+				<setting id="fanart_amble1" type="string" label="32180" help="">
+					<level>0</level>
+					<default/>
+					<constraints>
+						<allowempty>true</allowempty>
+					</constraints>
+					<dependencies>
+						<dependency type="enable">
+							<condition on="property" name="InfoBool">false</condition>
+						</dependency>
+					</dependencies>
+					<control type="edit" format="string">
+						<heading>32180</heading>
+					</control>
+				</setting>
+				<setting id="fanart_client_key" type="string" label="32053" help="">
+					<level>0</level>
+					<default>fa836e1c874ba95ab08a14ee88e05565</default>
+					<control type="edit" format="string">
+						<heading>32053</heading>
+					</control>
+				</setting>
+			</group>
+			<!-- IMDb -->
+			<group id="4" label="32064">
+				<setting id="imdb_user" type="string" label="32065" help="">
+					<level>0</level>
+					<default/>
+					<constraints>
+						<allowempty>true</allowempty>
+					</constraints>
+					<control type="edit" format="string">
+						<heading>32065</heading>
+					</control>
+				</setting>
+				<setting id="imdb_lists.sort_type" type="integer" label="32066" help="">
+					<level>0</level>
+					<default>0</default>
+					<constraints>
+						<options>
+							<option label="32215">0</option>
+							<option label="32216">1</option>
+							<option label="32217">2</option>
+							<option label="32218">3</option>
+							<option label="32219">4</option>
+							<option label="32220">5</option>
+							<option label="32221">6</option>
+							<option label="32222">7</option>
+							<option label="32223">8</option>
+						</options>
+					</constraints>
+					<dependencies>
+						<dependency type="visible">
+							<condition operator="!is" setting="imdb_user"/>
+						</dependency>
+					</dependencies>
+					<control type="spinner" format="string"/>
+				</setting>
+				<setting id="imdb_lists.sort_direction" type="integer" label="32067" help="">
+					<level>0</level>
+					<default>0</default>
+					<constraints>
+						<options>
+							<option label="32224">0</option>
+							<option label="32225">1</option>
+						</options>
+					</constraints>
+					<dependencies>
+						<dependency type="visible">
+							<condition operator="!is" setting="imdb_user"/>
+						</dependency>
+					</dependencies>
+					<control type="spinner" format="string"/>
+				</setting>
+			</group>
+		</category>
+		<!-- Provider Accounts -->
+		<category id="provider accounts" label="32685" help="">
+			<!-- External Scrapers -->
+			<group id="1" label="32079">
+				<setting id="provider.external" type="boolean" label="32055" help="">
+					<level>0</level>
+					<default>true</default>
+					<control type="toggle"/>
+				</setting>
+				<setting id="open_cocoscrapers" type="action" label="32093" help="">
+					<level>0</level>
+					<data>RunPlugin(plugin://plugin.video.fen/?mode=open_settings&amp;addon=script.module.cocoscrapers)</data>
+					<constraints>
+						<allowempty>true</allowempty>
+					</constraints>
+					<dependencies>
+						<dependency type="visible">
+							<condition operator="is" setting="provider.external">true</condition>
+						</dependency>
+					</dependencies>
+					<control type="button" format="action">
+						<close>true</close>
+					</control>
+				</setting>
+			</group>
+			<!-- Real Debrid -->
+			<group id="2" label="32054">
+				<setting id="rd.token" type="string" label="rd token" help="">
+					<level>0</level>
+					<default/>
+					<constraints>
+						<allowempty>true</allowempty>
+					</constraints>
+					<dependencies>
+						<dependency type="visible">
+							<condition on="property" name="InfoBool">hidden</condition>
+						</dependency>
+					</dependencies>
+					<control type="edit" format="string">
+						<heading>rd token</heading>
+					</control>
+				</setting>
+				<setting id="rd.enabled" type="boolean" label="32055" help="">
+					<level>0</level>
+					<default>true</default>
+					<dependencies>
+						<dependency type="visible">
+							<condition operator="!is" setting="rd.token"/>
+						</dependency>
+					</dependencies>
+					<control type="toggle"/>
+				</setting>
+				<setting id="rd.account_id" type="string" label="32056" help="">
+					<level>0</level>
+					<default/>
+					<constraints>
+						<allowempty>true</allowempty>
+					</constraints>
+					<dependencies>
+						<dependency type="enable">
+							<condition on="property" name="InfoBool">false</condition>
+						</dependency>
+						<dependency type="visible">
+							<and>
+								<condition operator="!is" setting="rd.token"/>
+								<condition operator="is" setting="rd.enabled">true</condition>
+							</and>
+						</dependency>
+					</dependencies>
+					<control type="edit" format="string">
+						<heading>32056</heading>
+					</control>
+				</setting>
+				<setting id="open_rd_authenticate" type="action" label="32057" help="">
+					<level>0</level>
+					<data>RunPlugin(plugin://plugin.video.fen/?mode=real_debrid.authenticate)</data>
+					<constraints>
+						<allowempty>true</allowempty>
+					</constraints>
+					<dependencies>
+						<dependency type="visible">
+							<condition operator="is" setting="rd.token"/>
+						</dependency>
+					</dependencies>
+					<control type="button" format="action">
+						<close>true</close>
+					</control>
+				</setting>
+				<setting id="open_rd_de-authenticate" type="action" label="32059" help="">
+					<level>0</level>
+					<data>RunPlugin(plugin://plugin.video.fen/?mode=real_debrid.revoke_authentication)</data>
+					<constraints>
+						<allowempty>true</allowempty>
+					</constraints>
+					<dependencies>
+						<dependency type="visible">
+							<and>
+								<condition operator="!is" setting="rd.token"/>
+								<condition operator="is" setting="rd.enabled">true</condition>
+							</and>
+						</dependency>
+					</dependencies>
+					<control type="button" format="action">
+						<close>true</close>
+					</control>
+				</setting>
+				<setting id="rd.torrent.enabled" type="boolean" label="33015" help="">
+					<level>0</level>
+					<default>true</default>
+					<dependencies>
+						<dependency type="visible">
+							<and>
+								<condition operator="!is" setting="rd.token"/>
+								<condition operator="is" setting="rd.enabled">true</condition>
+							</and>
+						</dependency>
+					</dependencies>
+					<control type="toggle"/>
+				</setting>
+				<setting id="rd.hoster.enabled" type="boolean" label="33016" help="">
+					<level>0</level>
+					<default>true</default>
+					<dependencies>
+						<dependency type="visible">
+							<and>
+								<condition operator="!is" setting="rd.token"/>
+								<condition operator="is" setting="rd.enabled">true</condition>
+							</and>
+						</dependency>
+					</dependencies>
+					<control type="toggle"/>
+				</setting>
+				<setting id="store_resolved_torrent.real-debrid" type="integer" label="32060" help="">
+					<level>0</level>
+					<default>0</default>
+					<constraints>
+						<options>
+							<option label="32965">0</option>
+							<option label="32129">1</option>
+							<option label="32078">2</option>
+						</options>
+					</constraints>
+					<dependencies>
+						<dependency type="visible">
+							<and>
+								<condition operator="!is" setting="rd.token"/>
+								<condition operator="is" setting="rd.enabled">true</condition>
+							</and>
+						</dependency>
+					</dependencies>
+					<control type="spinner" format="string"/>
+				</setting>
+				<setting id="provider.rd_cloud" type="boolean" label="32748" help="">
+					<level>0</level>
+					<default>false</default>
+					<dependencies>
+						<dependency type="visible">
+							<and>
+								<condition operator="!is" setting="rd.token"/>
+								<condition operator="is" setting="rd.enabled">true</condition>
+							</and>
+						</dependency>
+					</dependencies>
+					<control type="toggle"/>
+				</setting>
+				<setting id="rd_cloud.title_filter" type="boolean" label="32172" help="" parent="provider.rd_cloud">
+					<level>0</level>
+					<default>true</default>
+					<dependencies>
+						<dependency type="visible">
+							<and>
+								<condition operator="!is" setting="rd.token"/>
+								<condition operator="is" setting="rd.enabled">true</condition>
+								<condition operator="is" setting="provider.rd_cloud">true</condition>
+							</and>
+						</dependency>
+					</dependencies>
+					<control type="toggle"/>
+				</setting>
+				<setting id="check.rd_cloud" type="boolean" label="32104" help="" parent="provider.rd_cloud">
+					<level>0</level>
+					<default>false</default>
+					<dependencies>
+						<dependency type="visible">
+							<and>
+								<condition operator="!is" setting="rd.token"/>
+								<condition operator="is" setting="rd.enabled">true</condition>
+								<condition operator="is" setting="provider.rd_cloud">true</condition>
+							</and>
+						</dependency>
+					</dependencies>
+					<control type="toggle"/>
+				</setting>
+				<setting id="results.sort_rdcloud_first" type="boolean" label="32103" help="" parent="provider.rd_cloud">
+					<level>0</level>
+					<default>true</default>
+					<dependencies>
+						<dependency type="visible">
+							<and>
+								<condition operator="!is" setting="rd.token"/>
+								<condition operator="is" setting="rd.enabled">true</condition>
+								<condition operator="is" setting="provider.rd_cloud">true</condition>
+							</and>
+						</dependency>
+					</dependencies>
+					<control type="toggle"/>
+				</setting>
+				<setting id="rd.priority" type="integer" label="32011" help="">
+					<level>0</level>
+					<default>10</default>
+					<constraints>
+						<minimum>1</minimum>
+						<step>1</step>
+						<maximum>10</maximum>
+					</constraints>
+					<dependencies>
+						<dependency type="visible">
+							<and>
+								<condition operator="!is" setting="rd.token"/>
+								<condition operator="is" setting="rd.enabled">true</condition>
+							</and>
+						</dependency>
+					</dependencies>
+					<control type="slider" format="integer">
+						<popup>false</popup>
+					</control>
+				</setting>
+			</group>
+			<!-- Premiumize -->
+			<group id="3" label="32061">
+				<setting id="pm.token" type="string" label="pm token" help="">
+					<level>0</level>
+					<default/>
+					<constraints>
+						<allowempty>true</allowempty>
+					</constraints>
+					<dependencies>
+						<dependency type="visible">
+							<condition on="property" name="InfoBool">hidden</condition>
+						</dependency>
+					</dependencies>
+					<control type="edit" format="string">
+						<heading>pm token</heading>
+					</control>
+				</setting>
+				<setting id="pm.enabled" type="boolean" label="32055" help="">
+					<level>0</level>
+					<default>true</default>
+					<dependencies>
+						<dependency type="visible">
+							<condition operator="!is" setting="pm.token"/>
+						</dependency>
+					</dependencies>
+					<control type="toggle"/>
+				</setting>
+				<setting id="pm.account_id" type="string" label="32056" help="">
+					<level>0</level>
+					<default/>
+					<constraints>
+						<allowempty>true</allowempty>
+					</constraints>
+					<dependencies>
+						<dependency type="enable">
+							<condition on="property" name="InfoBool">false</condition>
+						</dependency>
+						<dependency type="visible">
+							<and>
+								<condition operator="!is" setting="pm.token"/>
+								<condition operator="is" setting="pm.enabled">true</condition>
+							</and>
+						</dependency>
+					</dependencies>
+					<control type="edit" format="string">
+						<heading>32056</heading>
+					</control>
+				</setting>
+				<setting id="open_pm_authenticate" type="action" label="32057" help="">
+					<level>0</level>
+					<data>RunPlugin(plugin://plugin.video.fen/?mode=premiumize.authenticate)</data>
+					<constraints>
+						<allowempty>true</allowempty>
+					</constraints>
+					<dependencies>
+						<dependency type="visible">
+							<condition operator="is" setting="pm.token"/>
+						</dependency>
+					</dependencies>
+					<control type="button" format="action">
+						<close>true</close>
+					</control>
+				</setting>
+				<setting id="open_pm_de-authenticate" type="action" label="32059" help="">
+					<level>0</level>
+					<data>RunPlugin(plugin://plugin.video.fen/?mode=premiumize.revoke_authentication)</data>
+					<constraints>
+						<allowempty>true</allowempty>
+					</constraints>
+					<dependencies>
+						<dependency type="visible">
+							<and>
+								<condition operator="!is" setting="pm.token"/>
+								<condition operator="is" setting="pm.enabled">true</condition>
+							</and>
+						</dependency>
+					</dependencies>
+					<control type="button" format="action">
+						<close>true</close>
+					</control>
+				</setting>
+				<setting id="pm.torrent.enabled" type="boolean" label="33015" help="">
+					<level>0</level>
+					<default>true</default>
+					<dependencies>
+						<dependency type="visible">
+							<and>
+								<condition operator="!is" setting="pm.token"/>
+								<condition operator="is" setting="pm.enabled">true</condition>
+							</and>
+						</dependency>
+					</dependencies>
+					<control type="toggle"/>
+				</setting>
+				<setting id="pm.hoster.enabled" type="boolean" label="33016" help="">
+					<level>0</level>
+					<default>true</default>
+					<dependencies>
+						<dependency type="visible">
+							<and>
+								<condition operator="!is" setting="pm.token"/>
+								<condition operator="is" setting="pm.enabled">true</condition>
+							</and>
+						</dependency>
+					</dependencies>
+					<control type="toggle"/>
+				</setting>
+				<setting id="store_resolved_torrent.premiumize.me" type="integer" label="32060" help="">
+					<level>0</level>
+					<default>0</default>
+					<constraints>
+						<options>
+							<option label="32965">0</option>
+							<option label="32129">1</option>
+							<option label="32078">2</option>
+						</options>
+					</constraints>
+					<dependencies>
+						<dependency type="visible">
+							<and>
+								<condition operator="!is" setting="pm.token"/>
+								<condition operator="is" setting="pm.enabled">true</condition>
+							</and>
+						</dependency>
+					</dependencies>
+					<control type="spinner" format="string"/>
+				</setting>
+				<setting id="provider.pm_cloud" type="boolean" label="32748" help="">
+					<level>0</level>
+					<default>false</default>
+					<dependencies>
+						<dependency type="visible">
+							<and>
+								<condition operator="!is" setting="pm.token"/>
+								<condition operator="is" setting="pm.enabled">true</condition>
+							</and>
+						</dependency>
+					</dependencies>
+					<control type="toggle"/>
+				</setting>
+				<setting id="pm_cloud.title_filter" type="boolean" label="32172" help="" parent="provider.pm_cloud">
+					<level>0</level>
+					<default>true</default>
+					<dependencies>
+						<dependency type="visible">
+							<and>
+								<condition operator="!is" setting="pm.token"/>
+								<condition operator="is" setting="pm.enabled">true</condition>
+								<condition operator="is" setting="provider.pm_cloud">true</condition>
+							</and>
+						</dependency>
+					</dependencies>
+					<control type="toggle"/>
+				</setting>
+				<setting id="check.pm_cloud" type="boolean" label="32104" help="" parent="provider.pm_cloud">
+					<level>0</level>
+					<default>false</default>
+					<dependencies>
+						<dependency type="visible">
+							<and>
+								<condition operator="!is" setting="pm.token"/>
+								<condition operator="is" setting="pm.enabled">true</condition>
+								<condition operator="is" setting="provider.pm_cloud">true</condition>
+							</and>
+						</dependency>
+					</dependencies>
+					<control type="toggle"/>
+				</setting>
+				<setting id="results.sort_pmcloud_first" type="boolean" label="32103" help="" parent="provider.pm_cloud">
+					<level>0</level>
+					<default>true</default>
+					<dependencies>
+						<dependency type="visible">
+							<and>
+								<condition operator="!is" setting="pm.token"/>
+								<condition operator="is" setting="pm.enabled">true</condition>
+								<condition operator="is" setting="provider.pm_cloud">true</condition>
+							</and>
+						</dependency>
+					</dependencies>
+					<control type="toggle"/>
+				</setting>
+				<setting id="pm.priority" type="integer" label="32011" help="">
+					<level>0</level>
+					<default>10</default>
+					<constraints>
+						<minimum>1</minimum>
+						<step>1</step>
+						<maximum>10</maximum>
+					</constraints>
+					<dependencies>
+						<dependency type="visible">
+							<and>
+								<condition operator="!is" setting="pm.token"/>
+								<condition operator="is" setting="pm.enabled">true</condition>
+							</and>
+						</dependency>
+					</dependencies>
+					<control type="slider" format="integer">
+						<popup>false</popup>
+					</control>
+				</setting>
+			</group>
+			<!-- All Debrid -->
+			<group id="4" label="32063">
+				<setting id="ad.token" type="string" label="ad token" help="">
+					<level>0</level>
+					<default/>
+					<constraints>
+						<allowempty>true</allowempty>
+					</constraints>
+					<dependencies>
+						<dependency type="visible">
+							<condition on="property" name="InfoBool">hidden</condition>
+						</dependency>
+					</dependencies>
+					<control type="edit" format="string">
+						<heading>ad token</heading>
+					</control>
+				</setting>
+				<setting id="ad.enabled" type="boolean" label="32055" help="">
+					<level>0</level>
+					<default>true</default>
+					<dependencies>
+						<dependency type="visible">
+							<condition operator="!is" setting="ad.token"/>
+						</dependency>
+					</dependencies>
+					<control type="toggle"/>
+				</setting>
+				<setting id="ad.account_id" type="string" label="32056" help="">
+					<level>0</level>
+					<default/>
+					<constraints>
+						<allowempty>true</allowempty>
+					</constraints>
+					<dependencies>
+						<dependency type="enable">
+							<condition on="property" name="InfoBool">false</condition>
+						</dependency>
+						<dependency type="visible">
+							<and>
+								<condition operator="!is" setting="ad.token"/>
+								<condition operator="is" setting="ad.enabled">true</condition>
+							</and>
+						</dependency>
+					</dependencies>
+					<control type="edit" format="string">
+						<heading>32056</heading>
+					</control>
+				</setting>
+				<setting id="open_ad_authenticate" type="action" label="32057" help="">
+					<level>0</level>
+					<data>RunPlugin(plugin://plugin.video.fen/?mode=alldebrid.authenticate)</data>
+					<constraints>
+						<allowempty>true</allowempty>
+					</constraints>
+					<dependencies>
+						<dependency type="visible">
+							<condition operator="is" setting="ad.token"/>
+						</dependency>
+					</dependencies>
+					<control type="button" format="action">
+						<close>true</close>
+					</control>
+				</setting>
+				<setting id="open_ad_de-authenticate" type="action" label="32059" help="">
+					<level>0</level>
+					<data>RunPlugin(plugin://plugin.video.fen/?mode=alldebrid.revoke_authentication)</data>
+					<constraints>
+						<allowempty>true</allowempty>
+					</constraints>
+					<dependencies>
+						<dependency type="visible">
+							<and>
+								<condition operator="!is" setting="ad.token"/>
+								<condition operator="is" setting="ad.enabled">true</condition>
+							</and>
+						</dependency>
+					</dependencies>
+					<control type="button" format="action">
+						<close>true</close>
+					</control>
+				</setting>
+				<setting id="ad.torrent.enabled" type="boolean" label="33015" help="">
+					<level>0</level>
+					<default>true</default>
+					<dependencies>
+						<dependency type="visible">
+							<and>
+								<condition operator="!is" setting="ad.token"/>
+								<condition operator="is" setting="ad.enabled">true</condition>
+							</and>
+						</dependency>
+					</dependencies>
+					<control type="toggle"/>
+				</setting>
+				<setting id="ad.hoster.enabled" type="boolean" label="33016" help="">
+					<level>0</level>
+					<default>true</default>
+					<dependencies>
+						<dependency type="visible">
+							<and>
+								<condition operator="!is" setting="ad.token"/>
+								<condition operator="is" setting="ad.enabled">true</condition>
+							</and>
+						</dependency>
+					</dependencies>
+					<control type="toggle"/>
+				</setting>
+				<setting id="store_resolved_torrent.alldebrid" type="integer" label="32060" help="">
+					<level>0</level>
+					<default>0</default>
+					<constraints>
+						<options>
+							<option label="32965">0</option>
+							<option label="32129">1</option>
+							<option label="32078">2</option>
+						</options>
+					</constraints>
+					<dependencies>
+						<dependency type="visible">
+							<and>
+								<condition operator="!is" setting="ad.token"/>
+								<condition operator="is" setting="ad.enabled">true</condition>
+							</and>
+						</dependency>
+					</dependencies>
+					<control type="spinner" format="string"/>
+				</setting>
+				<setting id="provider.ad_cloud" type="boolean" label="32748" help="">
+					<level>0</level>
+					<default>false</default>
+					<dependencies>
+						<dependency type="visible">
+							<and>
+								<condition operator="!is" setting="ad.token"/>
+								<condition operator="is" setting="ad.enabled">true</condition>
+							</and>
+						</dependency>
+					</dependencies>
+					<control type="toggle"/>
+				</setting>
+				<setting id="ad_cloud.title_filter" type="boolean" label="32172" help="" parent="provider.ad_cloud">
+					<level>0</level>
+					<default>true</default>
+					<dependencies>
+						<dependency type="visible">
+							<and>
+								<condition operator="!is" setting="ad.token"/>
+								<condition operator="is" setting="ad.enabled">true</condition>
+								<condition operator="is" setting="provider.ad_cloud">true</condition>
+							</and>
+						</dependency>
+					</dependencies>
+					<control type="toggle"/>
+				</setting>
+				<setting id="check.ad_cloud" type="boolean" label="32104" help="" parent="provider.ad_cloud">
+					<level>0</level>
+					<default>false</default>
+					<dependencies>
+						<dependency type="visible">
+							<and>
+								<condition operator="!is" setting="ad.token"/>
+								<condition operator="is" setting="ad.enabled">true</condition>
+								<condition operator="is" setting="provider.ad_cloud">true</condition>
+							</and>
+						</dependency>
+					</dependencies>
+					<control type="toggle"/>
+				</setting>
+				<setting id="results.sort_adcloud_first" type="boolean" label="32103" help="" parent="provider.ad_cloud">
+					<level>0</level>
+					<default>true</default>
+					<dependencies>
+						<dependency type="visible">
+							<and>
+								<condition operator="!is" setting="ad.token"/>
+								<condition operator="is" setting="ad.enabled">true</condition>
+								<condition operator="is" setting="provider.ad_cloud">true</condition>
+							</and>
+						</dependency>
+					</dependencies>
+					<control type="toggle"/>
+				</setting>
+				<setting id="ad.priority" type="integer" label="32011" help="">
+					<level>0</level>
+					<default>10</default>
+					<constraints>
+						<minimum>1</minimum>
+						<step>1</step>
+						<maximum>10</maximum>
+					</constraints>
+					<dependencies>
+						<dependency type="visible">
+							<and>
+								<condition operator="!is" setting="ad.token"/>
+								<condition operator="is" setting="ad.enabled">true</condition>
+							</and>
+						</dependency>
+					</dependencies>
+					<control type="slider" format="integer">
+						<popup>false</popup>
+					</control>
+				</setting>
+			</group>
+			<!-- Furk -->
+			<group id="5" label="32069">
+				<setting id="provider.furk" type="boolean" label="32055" help="">
+					<level>0</level>
+					<default>false</default>
+					<control type="toggle"/>
+				</setting>
+				<setting id="furk_login" type="string" label="32051" help="">
+					<level>0</level>
+					<default/>
+					<constraints>
+						<allowempty>true</allowempty>
+					</constraints>
+					<dependencies>
+						<dependency type="visible">
+							<condition operator="is" setting="provider.furk">true</condition>
+						</dependency>
+					</dependencies>
+					<control type="edit" format="string">
+						<heading>32051</heading>
+					</control>
+				</setting>
+				<setting id="furk_password" type="string" label="32052" help="">
+					<level>0</level>
+					<default/>
+					<constraints>
+						<allowempty>true</allowempty>
+					</constraints>
+					<dependencies>
+						<dependency type="visible">
+							<condition operator="is" setting="provider.furk">true</condition>
+						</dependency>
+					</dependencies>
+					<control type="edit" format="string">
+						<heading>32052</heading>
+					</control>
+				</setting>
+				<setting id="furk_api_key" type="string" label="32053" help="">
+					<level>0</level>
+					<default/>
+					<constraints>
+						<allowempty>true</allowempty>
+					</constraints>
+					<dependencies>
+						<dependency type="visible">
+							<condition operator="is" setting="provider.furk">true</condition>
+						</dependency>
+					</dependencies>
+					<control type="edit" format="string">
+						<heading>32053</heading>
+					</control>
+				</setting>
+				<setting id="furk.title_filter" type="boolean" label="32172" help="">
+					<level>0</level>
+					<default>true</default>
+					<dependencies>
+						<dependency type="visible">
+							<and>
+								<condition operator="is" setting="provider.furk">true</condition>
+								<condition operator="!is" setting="furk_login"/>
+							</and>
+						</dependency>
+					</dependencies>
+					<control type="toggle"/>
+				</setting>
+				<setting id="check.furk" type="boolean" label="32104" help="">
+					<level>0</level>
+					<default>false</default>
+					<dependencies>
+						<dependency type="visible">
+							<and>
+								<condition operator="is" setting="provider.furk">true</condition>
+								<condition operator="!is" setting="furk_login"/>
+							</and>
+						</dependency>
+					</dependencies>
+					<control type="toggle"/>
+				</setting>
+				<setting id="fu.priority" type="integer" label="32011" help="">
+					<level>0</level>
+					<default>6</default>
+					<constraints>
+						<minimum>1</minimum>
+						<step>1</step>
+						<maximum>10</maximum>
+					</constraints>
+					<dependencies>
+						<dependency type="visible">
+							<and>
+								<condition operator="is" setting="provider.furk">true</condition>
+								<condition operator="!is" setting="furk_login"/>
+							</and>
+						</dependency>
+					</dependencies>
+					<control type="slider" format="integer">
+						<popup>false</popup>
+					</control>
+				</setting>
+			</group>
+			<!-- Easynews -->
+			<group id="6" label="32070">
+				<setting id="provider.easynews" type="boolean" label="32055" help="">
+					<level>0</level>
+					<default>false</default>
+					<control type="toggle"/>
+				</setting>
+				<setting id="easynews_user" type="string" label="32051" help="">
+					<level>0</level>
+					<default/>
+					<constraints>
+						<allowempty>true</allowempty>
+					</constraints>
+					<dependencies>
+						<dependency type="visible">
+							<condition operator="is" setting="provider.easynews">true</condition>
+						</dependency>
+					</dependencies>
+					<control type="edit" format="string">
+						<heading>32051</heading>
+					</control>
+				</setting>
+				<setting id="easynews_password" type="string" label="32052" help="">
+					<level>0</level>
+					<default/>
+					<constraints>
+						<allowempty>true</allowempty>
+					</constraints>
+					<dependencies>
+						<dependency type="visible">
+							<condition operator="is" setting="provider.easynews">true</condition>
+						</dependency>
+					</dependencies>
+					<control type="edit" format="string">
+						<heading>32052</heading>
+					</control>
+				</setting>
+				<setting id="easynews.use_custom_farm" type="string" label="32119" help="">
+					<level>0</level>
+					<default>False</default>
+					<dependencies>
+						<dependency type="visible">
+							<and>
+								<condition operator="is" setting="provider.easynews">true</condition>
+								<condition operator="!is" setting="easynews_password"/>
+							</and>
+						</dependency>
+					</dependencies>
+					<control type="button" format="action">
+						<data>RunPlugin(plugin://plugin.video.fen/?mode=easynews_use_custom_farm_choice)</data>
+					</control>
+				</setting>
+				<setting id="easynews.server_name" type="string" label="32696" help="" parent="easynews.use_custom_farm">
+					<level>0</level>
+					<default>Auto:443</default>
+					<dependencies>
+						<dependency type="visible">
+							<and>
+								<condition operator="is" setting="provider.easynews">true</condition>
+								<condition operator="!is" setting="easynews_password"/>
+								<condition operator="is" setting="easynews.use_custom_farm">True</condition>
+							</and>
+						</dependency>
+					</dependencies>
+					<control type="button" format="action">
+						<data>RunPlugin(plugin://plugin.video.fen/?mode=easynews_server_choice)</data>
+					</control>
+				</setting>
+				<setting id="easynews.title_filter" type="boolean" label="32172" help="">
+					<level>0</level>
+					<default>true</default>
+					<dependencies>
+						<dependency type="visible">
+							<and>
+								<condition operator="is" setting="provider.easynews">true</condition>
+								<condition operator="!is" setting="easynews_password"/>
+							</and>
+						</dependency>
+					</dependencies>
+					<control type="toggle"/>
+				</setting>
+				<setting id="easynews.filter_lang" type="boolean" label="32835" help="">
+					<level>0</level>
+					<default>false</default>
+					<dependencies>
+						<dependency type="visible">
+							<and>
+								<condition operator="is" setting="provider.easynews">true</condition>
+								<condition operator="!is" setting="easynews_password"/>
+							</and>
+						</dependency>
+					</dependencies>
+					<control type="toggle"/>
+				</setting>
+				<setting id="easynews.lang_filters" type="string" label="32836" help="" parent="easynews.filter_lang">
+					<level>0</level>
+					<default>eng</default>
+					<dependencies>
+						<dependency type="visible">
+							<and>
+								<condition operator="is" setting="provider.easynews">true</condition>
+								<condition operator="!is" setting="easynews_password"/>
+								<condition operator="is" setting="easynews.filter_lang">true</condition>
+							</and>
+						</dependency>
+					</dependencies>
+					<control type="button" format="action">
+						<data>RunPlugin(plugin://plugin.video.fen/?mode=set_language_filter_choice&amp;filter_setting=easynews.lang_filters)</data>
+					</control>
+				</setting>
+				<setting id="check.easynews" type="boolean" label="32104" help="">
+					<level>0</level>
+					<default>false</default>
+					<dependencies>
+						<dependency type="visible">
+							<and>
+								<condition operator="is" setting="provider.easynews">true</condition>
+								<condition operator="!is" setting="easynews_password"/>
+							</and>
+						</dependency>
+					</dependencies>
+					<control type="toggle"/>
+				</setting>
+				<setting id="en.priority" type="integer" label="32011" help="">
+					<level>0</level>
+					<default>7</default>
+					<constraints>
+						<minimum>1</minimum>
+						<step>1</step>
+						<maximum>10</maximum>
+					</constraints>
+					<dependencies>
+						<dependency type="visible">
+							<and>
+								<condition operator="is" setting="provider.easynews">true</condition>
+								<condition operator="!is" setting="easynews_password"/>
+							</and>
+						</dependency>
+					</dependencies>
+					<control type="slider" format="integer">
+						<popup>false</popup>
+					</control>
+				</setting>
+			</group>
+			<!-- Folders 1-5 -->
+			<group id="7" label="32108">
+				<setting id="provider.folders" type="boolean" label="32055" help="">
+					<level>0</level>
+					<default>false</default>
+					<control type="toggle"/>
+				</setting>
+				<setting id="browse.folders" type="string" label="32511" help="">
+					<level>0</level>
+					<default>$ADDON[plugin.video.fen 32652]</default>
+					<constraints>
+						<allowempty>true</allowempty>
+					</constraints>
+					<control type="button" format="action">
+						<close>true</close>
+						<data>ActivateWindow(Videos,plugin://plugin.video.fen/?mode=navigator.sources_folders,return)</data>
+					</control>
+				</setting>
+				<setting id="folders.title_filter" type="boolean" label="32172" help="">
+					<level>0</level>
+					<default>true</default>
+					<dependencies>
+						<dependency type="visible">
+							<condition operator="is" setting="provider.folders">true</condition>
+						</dependency>
+					</dependencies>
+					<control type="toggle"/>
+				</setting>
+				<setting id="check.folders" type="boolean" label="32104" help="">
+					<level>0</level>
+					<default>false</default>
+					<dependencies>
+						<dependency type="visible">
+							<condition operator="is" setting="provider.folders">true</condition>
+						</dependency>
+					</dependencies>
+					<control type="toggle"/>
+				</setting>
+				<setting id="results.sort_folders_first" type="boolean" label="32103" help="">
+					<level>0</level>
+					<default>true</default>
+					<dependencies>
+						<dependency type="visible">
+							<condition operator="is" setting="provider.folders">true</condition>
+						</dependency>
+					</dependencies>
+					<control type="toggle"/>
+				</setting>
+				<setting id="results.folders_ignore_filters" type="boolean" label="33042" help="">
+					<level>0</level>
+					<default>false</default>
+					<dependencies>
+						<dependency type="visible">
+							<condition operator="is" setting="provider.folders">true</condition>
+						</dependency>
+					</dependencies>
+					<control type="toggle"/>
+				</setting>
+			</group>
+		</category>
+		<!-- Results -->
+		<category id="results" label="32139" help="">
+			<!-- Display -->
+			<group id="1" label="32140">
+				<setting id="results.timeout" type="integer" label="32141" help="">
+					<level>0</level>
+					<default>20</default>
+					<control type="edit" format="integer">
+						<heading>32141</heading>
+					</control>
+				</setting>
+				<setting id="results.format" type="string" label="32102" help="">
+					<level>0</level>
+					<default>List</default>
+					<control type="button" format="action">
+						<data>RunPlugin(plugin://plugin.video.fen/?mode=results_format_choice)</data>
+					</control>
+				</setting>
+				<setting id="results.use_contrast" type="boolean" label="33093" help="">
+					<level>0</level>
+					<default>true</default>
+					<control type="toggle"/>
+				</setting>
+			</group>
+			<!--General -->
+			<group id="2" label="32001">
+				<setting id="search.enable.yearcheck" type="boolean" label="33006" help="">
+					<level>0</level>
+					<default>false</default>
+					<control type="toggle"/>
+				</setting>
+				<setting id="search.finish.early" type="boolean" label="32120" help="">
+					<level>0</level>
+					<default>false</default>
+					<control type="toggle"/>
+				</setting>
+				<setting id="torrent.display.uncached" type="boolean" label="32160" help="">
+					<level>0</level>
+					<default>false</default>
+					<control type="toggle"/>
+				</setting>
+				<setting id="results.ignore_filter" type="integer" label="32050" help="">
+					<level>0</level>
+					<default>0</default>
+					<constraints>
+						<options>
+							<option label="32027">0</option>
+							<option label="32192">1</option>
+							<option label="32521">2</option>
+						</options>
+					</constraints>
+					<control type="spinner" format="string"/>
+				</setting>
+			</group>
+			<!-- Sorting and Filtering -->
+			<group id="3" label="32150">
+				<setting id="results.sort_order_display" type="string" label="32151" help="">
+					<level>0</level>
+					<default>$ADDON[plugin.video.fen 32582]</default>
+					<constraints>
+						<allowempty>true</allowempty>
+					</constraints>
+					<control type="button" format="action">
+						<data>RunPlugin(plugin://plugin.video.fen/?mode=results_sorting_choice)</data>
+					</control>
+				</setting>
+				<setting id="results.size_sort_direction" type="integer" label="32782" help="">
+					<level>0</level>
+					<default>0</default>
+					<constraints>
+						<options>
+							<option label="32225">0</option>
+							<option label="32224">1</option>
+						</options>
+					</constraints>
+					<control type="spinner" format="string"/>
+				</setting>
+				<setting id="results.filter_size_method" type="integer" label="32161" help="">
+					<level>0</level>
+					<default>0</default>
+					<constraints>
+						<options>
+							<option label="32027">0</option>
+							<option label="32125">1</option>
+							<option label="32126">2</option>
+						</options>
+					</constraints>
+					<control type="spinner" format="string"/>
+				</setting>
+				<setting id="results.size.auto" type="integer" label="32123" help="" parent="results.filter_size_method">
+					<level>0</level>
+					<default>20</default>
+					<dependencies>
+						<dependency type="visible">
+							<condition operator="is" setting="results.filter_size_method">1</condition>
+						</dependency>
+					</dependencies>
+					<control type="edit" format="integer">
+						<heading>32123</heading>
+					</control>
+				</setting>
+				<setting id="results.size.manual" type="integer" label="32023" help="" parent="results.filter_size_method">
+					<level>0</level>
+					<default>10000</default>
+					<dependencies>
+						<dependency type="visible">
+							<condition operator="is" setting="results.filter_size_method">2</condition>
+						</dependency>
+					</dependencies>
+					<control type="edit" format="integer">
+						<heading>32023</heading>
+					</control>
+				</setting>
+				<setting id="results.include.unknown.size" type="boolean" label="32162" help="" parent="results.filter_size_method">
+					<level>0</level>
+					<default>true</default>
+					<dependencies>
+						<dependency type="visible">
+							<condition operator="is" setting="results.size.auto">true</condition>
+						</dependency>
+					</dependencies>
+					<control type="toggle"/>
+				</setting>
+				<setting id="include_prerelease_results" type="boolean" label="32155" help="">
+					<level>0</level>
+					<default>true</default>
+					<control type="toggle"/>
+				</setting>
+				<setting id="include_3d_results" type="boolean" label="32156" help="">
+					<level>0</level>
+					<default>true</default>
+					<control type="toggle"/>
+				</setting>
+				<setting id="filter_hevc" type="integer" label="32177" help="">
+					<level>0</level>
+					<default>0</default>
+					<constraints>
+						<options>
+							<option label="32188">0</option>
+							<option label="32189">1</option>
+							<option label="32190">2</option>
+						</options>
+					</constraints>
+					<control type="spinner" format="string"/>
+				</setting>
+				<setting id="filter_hevc.max_quality" type="string" label="32981" help="" parent="filter_hevc">
+					<level>0</level>
+					<default>4K</default>
+					<constraints>
+						<options>
+							<option>4K</option>
+							<option>1080p</option>
+							<option>720p</option>
+							<option>SD</option>
+						</options>
+					</constraints>
+					<dependencies>
+						<dependency type="visible">
+							<or>
+								<condition operator="is" setting="filter_hevc">0</condition>
+								<condition operator="is" setting="filter_hevc">2</condition>
+							</or>
+						</dependency>
+					</dependencies>
+					<control type="list" format="string">
+						<heading>32981</heading>
+					</control>
+				</setting>
+				<setting id="filter_hevc.max_autoplay_quality" type="string" label="32988" help="" parent="filter_hevc">
+					<level>0</level>
+					<default>4K</default>
+					<constraints>
+						<options>
+							<option>4K</option>
+							<option>1080p</option>
+							<option>720p</option>
+							<option>SD</option>
+						</options>
+					</constraints>
+					<dependencies>
+						<dependency type="visible">
+							<or>
+								<condition operator="is" setting="filter_hevc">0</condition>
+								<condition operator="is" setting="filter_hevc">2</condition>
+							</or>
+						</dependency>
+					</dependencies>
+					<control type="list" format="string">
+						<heading>32988</heading>
+					</control>
+				</setting>
+				<setting id="filter_hdr" type="integer" label="32158" help="">
+					<level>0</level>
+					<default>0</default>
+					<constraints>
+						<options>
+							<option label="32188">0</option>
+							<option label="32189">1</option>
+							<option label="32190">2</option>
+						</options>
+					</constraints>
+					<control type="spinner" format="string"/>
+				</setting>
+				<setting id="filter_dv" type="integer" label="32159" help="">
+					<level>0</level>
+					<default>0</default>
+					<constraints>
+						<options>
+							<option label="32188">0</option>
+							<option label="32189">1</option>
+							<option label="32190">2</option>
+						</options>
+					</constraints>
+					<control type="spinner" format="string"/>
+				</setting>
+				<setting id="filter_av1" type="integer" label="32038" help="">
+					<level>0</level>
+					<default>0</default>
+					<constraints>
+						<options>
+							<option label="32188">0</option>
+							<option label="32189">1</option>
+							<option label="32190">2</option>
+						</options>
+					</constraints>
+					<control type="spinner" format="string"/>
+				</setting>
+				<setting id="filter_audio" type="string" label="32002" help="">
+					<level>0</level>
+					<default/>
+					<constraints>
+						<allowempty>true</allowempty>
+					</constraints>
+					<control type="button" format="action">
+						<data>RunPlugin(plugin://plugin.video.fen/?mode=audio_filters_choice)</data>
+					</control>
+				</setting>
+			</group>
+			<!-- Results Color Highlights -->
+			<group id="4" label="32138">
+				<setting id="highlight.type" type="integer" label="32204" help="">
+					<level>0</level>
+					<default>1</default>
+					<constraints>
+						<options>
+							<option label="32240">0</option>
+							<option label="32583">1</option>
+							<option label="32241">2</option>
+						</options>
+					</constraints>
+					<control type="spinner" format="string"/>
+				</setting>
+				<setting id="hoster.identify" type="string" label="32127" help="" parent="highlight.type">
+					<level>0</level>
+					<default>dodgerblue</default>
+					<dependencies>
+						<dependency type="visible">
+							<condition operator="is" setting="highlight.type">0</condition>
+						</dependency>
+					</dependencies>
+					<control type="button" format="action">
+						<data>RunPlugin(plugin://plugin.video.fen/?mode=scraper_color_choice&amp;setting=hoster)</data>
+					</control>
+				</setting>
+				<setting id="torrent.identify" type="string" label="32128" help="" parent="highlight.type">
+					<level>0</level>
+					<default>fuchsia</default>
+					<dependencies>
+						<dependency type="visible">
+							<condition operator="is" setting="highlight.type">0</condition>
+						</dependency>
+					</dependencies>
+					<control type="button" format="action">
+						<data>RunPlugin(plugin://plugin.video.fen/?mode=scraper_color_choice&amp;setting=torrent)</data>
+					</control>
+				</setting>
+				<setting id="provider.rd_colour" type="string" label="32206" help="" parent="highlight.type">
+					<level>0</level>
+					<default>seagreen</default>
+					<dependencies>
+						<dependency type="visible">
+							<condition operator="is" setting="highlight.type">1</condition>
+						</dependency>
+					</dependencies>
+					<control type="button" format="action">
+						<data>RunPlugin(plugin://plugin.video.fen/?mode=scraper_color_choice&amp;setting=rd)</data>
+					</control>
+				</setting>
+				<setting id="provider.pm_colour" type="string" label="32207" help="" parent="highlight.type">
+					<level>0</level>
+					<default>orangered</default>
+					<dependencies>
+						<dependency type="visible">
+							<condition operator="is" setting="highlight.type">1</condition>
+						</dependency>
+					</dependencies>
+					<control type="button" format="action">
+						<data>RunPlugin(plugin://plugin.video.fen/?mode=scraper_color_choice&amp;setting=pm)</data>
+					</control>
+				</setting>
+				<setting id="provider.ad_colour" type="string" label="32208" help="" parent="highlight.type">
+					<level>0</level>
+					<default>goldenrod</default>
+					<dependencies>
+						<dependency type="visible">
+							<condition operator="is" setting="highlight.type">1</condition>
+						</dependency>
+					</dependencies>
+					<control type="button" format="action">
+						<data>RunPlugin(plugin://plugin.video.fen/?mode=scraper_color_choice&amp;setting=ad)</data>
+					</control>
+				</setting>
+				<setting id="provider.furk_colour" type="string" label="32235" help="" parent="highlight.type">
+					<level>0</level>
+					<default>crimson</default>
+					<dependencies>
+						<dependency type="visible">
+							<or>
+								<condition operator="is" setting="highlight.type">0</condition>
+								<condition operator="is" setting="highlight.type">1</condition>
+							</or>
+						</dependency>
+					</dependencies>
+					<control type="button" format="action">
+						<data>RunPlugin(plugin://plugin.video.fen/?mode=scraper_color_choice&amp;setting=furk)</data>
+					</control>
+				</setting>
+				<setting id="provider.easynews_colour" type="string" label="32236" help="" parent="highlight.type">
+					<level>0</level>
+					<default>darkturquoise</default>
+					<dependencies>
+						<dependency type="visible">
+							<or>
+								<condition operator="is" setting="highlight.type">0</condition>
+								<condition operator="is" setting="highlight.type">1</condition>
+							</or>
+						</dependency>
+					</dependencies>
+					<control type="button" format="action">
+						<data>RunPlugin(plugin://plugin.video.fen/?mode=scraper_color_choice&amp;setting=easynews)</data>
+					</control>
+				</setting>
+				<setting id="provider.debrid_cloud_colour" type="string" label="32244" help="" parent="highlight.type">
+					<level>0</level>
+					<default>darkviolet</default>
+					<dependencies>
+						<dependency type="visible">
+							<or>
+								<condition operator="is" setting="highlight.type">0</condition>
+								<condition operator="is" setting="highlight.type">1</condition>
+							</or>
+						</dependency>
+					</dependencies>
+					<control type="button" format="action">
+						<data>RunPlugin(plugin://plugin.video.fen/?mode=scraper_color_choice&amp;setting=debrid_cloud)</data>
+					</control>
+				</setting>
+				<setting id="provider.folders_colour" type="string" label="32519" help="" parent="highlight.type">
+					<level>0</level>
+					<default>darkgoldenrod</default>
+					<dependencies>
+						<dependency type="visible">
+							<or>
+								<condition operator="is" setting="highlight.type">0</condition>
+								<condition operator="is" setting="highlight.type">1</condition>
+							</or>
+						</dependency>
+					</dependencies>
+					<control type="button" format="action">
+						<data>RunPlugin(plugin://plugin.video.fen/?mode=scraper_color_choice&amp;setting=folders)</data>
+					</control>
+				</setting>
+				<setting id="scraper_4k_highlight" type="string" label="32520" help="" parent="highlight.type">
+					<level>0</level>
+					<default>fuchsia</default>
+					<dependencies>
+						<dependency type="visible">
+							<condition operator="is" setting="highlight.type">2</condition>
+						</dependency>
+					</dependencies>
+					<control type="button" format="action">
+						<data>RunPlugin(plugin://plugin.video.fen/?mode=scraper_quality_color_choice&amp;setting=scraper_4k_highlight)</data>
+					</control>
+				</setting>
+				<setting id="scraper_1080p_highlight" type="string" label="32523" help="" parent="highlight.type">
+					<level>0</level>
+					<default>goldenrod</default>
+					<dependencies>
+						<dependency type="visible">
+							<condition operator="is" setting="highlight.type">2</condition>
+						</dependency>
+					</dependencies>
+					<control type="button" format="action">
+						<data>RunPlugin(plugin://plugin.video.fen/?mode=scraper_quality_color_choice&amp;setting=scraper_1080p_highlight)</data>
+					</control>
+				</setting>
+				<setting id="scraper_720p_highlight" type="string" label="32618" help="" parent="highlight.type">
+					<level>0</level>
+					<default>seagreen</default>
+					<dependencies>
+						<dependency type="visible">
+							<condition operator="is" setting="highlight.type">2</condition>
+						</dependency>
+					</dependencies>
+					<control type="button" format="action">
+						<data>RunPlugin(plugin://plugin.video.fen/?mode=scraper_quality_color_choice&amp;setting=scraper_720p_highlight)</data>
+					</control>
+				</setting>
+				<setting id="scraper_SD_highlight" type="string" label="32647" help="" parent="highlight.type">
+					<level>0</level>
+					<default>dodgerblue</default>
+					<dependencies>
+						<dependency type="visible">
+							<condition operator="is" setting="highlight.type">2</condition>
+						</dependency>
+					</dependencies>
+					<control type="button" format="action">
+						<data>RunPlugin(plugin://plugin.video.fen/?mode=scraper_quality_color_choice&amp;setting=scraper_SD_highlight)</data>
+					</control>
+				</setting>
+			</group>
+			<!-- Progress Color Highlights -->
+			<group id="5" label="32209">
+				<setting id="int_dialog_highlight" type="string" label="32167" help="">
+					<level>0</level>
+					<default>lightgray</default>
+					<control type="button" format="action">
+						<data>RunPlugin(plugin://plugin.video.fen/?mode=scraper_dialog_color_choice&amp;setting=internal)</data>
+					</control>
+				</setting>
+				<setting id="ext_dialog_highlight" type="string" label="32168" help="">
+					<level>0</level>
+					<default>lightgray</default>
+					<control type="button" format="action">
+						<data>RunPlugin(plugin://plugin.video.fen/?mode=scraper_dialog_color_choice&amp;setting=external)</data>
+					</control>
+				</setting>
+			</group>
+		</category>
+		<!-- Playback -->
+		<category id="playback" label="32174" help="">
+			<!-- Playback Movies -->
+			<group id="1" label="32028">
+				<setting id="auto_play_movie" type="boolean" label="32175" help="">
+					<level>0</level>
+					<default>false</default>
+					<control type="toggle"/>
+				</setting>
+				<setting id="results_quality_movie" type="string" label="32176" help="">
+					<level>0</level>
+					<default>SD, 720p, 1080p, 4K</default>
+					<dependencies>
+						<dependency type="visible">
+							<condition operator="is" setting="auto_play_movie">false</condition>
+						</dependency>
+					</dependencies>
+					<control type="button" format="action">
+						<data>RunPlugin(plugin://plugin.video.fen/?mode=set_quality_choice&amp;quality_setting=results_quality_movie)</data>
+					</control>
+				</setting>
+				<setting id="autoplay_quality_movie" type="string" label="32834" help="">
+					<level>0</level>
+					<default>SD, 720p, 1080p, 4K</default>
+					<dependencies>
+						<dependency type="visible">
+							<condition operator="is" setting="auto_play_movie">true</condition>
+						</dependency>
+					</dependencies>
+					<control type="button" format="action">
+						<data>RunPlugin(plugin://plugin.video.fen/?mode=set_quality_choice&amp;quality_setting=autoplay_quality_movie)</data>
+					</control>
+				</setting>
+				<setting id="auto_resume_movie" type="integer" label="32181" help="">
+					<level>0</level>
+					<default>0</default>
+					<constraints>
+						<options>
+							<option label="32013">0</option>
+							<option label="32015">1</option>
+							<option label="32191">2</option>
+						</options>
+					</constraints>
+					<control type="spinner" format="string"/>
+				</setting>
+			</group>
+			<!-- Playback Episodes -->
+			<group id="2" label="32506">
+				<setting id="auto_play_episode" type="boolean" label="32175" help="">
+					<level>0</level>
+					<default>false</default>
+					<control type="toggle"/>
+				</setting>
+				<setting id="results_quality_episode" type="string" label="32176" help="">
+					<level>0</level>
+					<default>SD, 720p, 1080p, 4K</default>
+					<dependencies>
+						<dependency type="visible">
+							<condition operator="is" setting="auto_play_episode">false</condition>
+						</dependency>
+					</dependencies>
+					<control type="button" format="action">
+						<data>RunPlugin(plugin://plugin.video.fen/?mode=set_quality_choice&amp;quality_setting=results_quality_episode)</data>
+					</control>
+				</setting>
+				<setting id="autoplay_quality_episode" type="string" label="32834" help="">
+					<level>0</level>
+					<default>SD, 720p, 1080p, 4K</default>
+					<dependencies>
+						<dependency type="visible">
+							<condition operator="is" setting="auto_play_episode">true</condition>
+						</dependency>
+					</dependencies>
+					<control type="button" format="action">
+						<data>RunPlugin(plugin://plugin.video.fen/?mode=set_quality_choice&amp;quality_setting=autoplay_quality_episode)</data>
+					</control>
+				</setting>
+				<setting id="autoplay_next_episode" type="boolean" label="32178" help="">
+					<level>0</level>
+					<default>false</default>
+					<dependencies>
+						<dependency type="visible">
+							<condition operator="is" setting="auto_play_episode">true</condition>
+						</dependency>
+					</dependencies>
+					<control type="toggle"/>
+				</setting>
+				<setting id="autoplay_alert_method" type="integer" label="33088" help="" parent="autoplay_next_episode">
+					<level>0</level>
+					<default>0</default>
+					<constraints>
+						<options>
+							<option label="33094">0</option>
+							<option label="33087">1</option>
+						</options>
+					</constraints>
+					<dependencies>
+						<dependency type="visible">
+							<and>
+								<condition operator="is" setting="auto_play_episode">true</condition>
+								<condition operator="is" setting="autoplay_next_episode">true</condition>
+							</and>
+						</dependency>
+					</dependencies>
+					<control type="spinner" format="string"/>
+				</setting>
+				<setting id="autoplay_default_action" type="integer" label="33089" help="" parent="autoplay_next_episode">
+					<level>0</level>
+					<default>0</default>
+					<constraints>
+						<options>
+							<option label="32764">0</option>
+							<option label="32840">1</option>
+						</options>
+					</constraints>
+					<dependencies>
+						<dependency type="visible">
+							<and>
+								<condition operator="is" setting="auto_play_episode">true</condition>
+								<condition operator="is" setting="autoplay_next_episode">true</condition>
+								<condition operator="is" setting="autoplay_alert_method">0</condition>
+							</and>
+						</dependency>
+					</dependencies>
+					<control type="spinner" format="string"/>
+				</setting>
+				<setting id="autoplay_next_window_percentage" type="integer" label="32005" help="" parent="autoplay_next_episode">
+					<level>0</level>
+					<default>95</default>
+					<constraints>
+						<minimum>75</minimum>
+						<step>1</step>
+						<maximum>99</maximum>
+					</constraints>
+					<dependencies>
+						<dependency type="visible">
+							<and>
+								<condition operator="is" setting="auto_play_episode">true</condition>
+								<condition operator="is" setting="autoplay_next_episode">true</condition>
+							</and>
+						</dependency>
+					</dependencies>
+					<control type="slider" format="integer">
+						<popup>false</popup>
+					</control>
+				</setting>
+				<setting id="autoscrape_next_episode" type="boolean" label="33086" help="">
+					<level>0</level>
+					<default>false</default>
+					<dependencies>
+						<dependency type="visible">
+							<condition operator="is" setting="auto_play_episode">false</condition>
+						</dependency>
+					</dependencies>
+					<control type="toggle"/>
+				</setting>
+				<setting id="auto_resume_episode" type="integer" label="32181" help="">
+					<level>0</level>
+					<default>0</default>
+					<constraints>
+						<options>
+							<option label="32013">0</option>
+							<option label="32015">1</option>
+							<option label="32191">2</option>
+						</options>
+					</constraints>
+					<control type="spinner" format="string"/>
+				</setting>
+			</group>
+			<!-- Playback Utilities -->
+			<group id="3" label="32122">
+				<setting id="playback.watched_percent" type="integer" label="33072" help="">
+					<level>0</level>
+					<default>90</default>
+					<constraints>
+						<minimum>65</minimum>
+						<step>1</step>
+						<maximum>95</maximum>
+					</constraints>
+					<control type="slider" format="integer">
+						<popup>false</popup>
+					</control>
+				</setting>
+				<setting id="playback.resume_percent" type="integer" label="33073" help="">
+					<level>0</level>
+					<default>5</default>
+					<constraints>
+						<minimum>1</minimum>
+						<step>1</step>
+						<maximum>35</maximum>
+					</constraints>
+					<control type="slider" format="integer">
+						<popup>false</popup>
+					</control>
+				</setting>
+				<setting id="playback.widget_load_empty" type="boolean" label="33103" help="">
+					<level>0</level>
+					<default>true</default>
+					<control type="toggle"/>
+				</setting>
+				<setting id="playback.limit_resolve" type="boolean" label="33102" help="">
+					<level>0</level>
+					<default>false</default>
+					<control type="toggle"/>
+				</setting>
+				<setting id="playback.disable_content_lookup" type="boolean" label="32171" help="">
+					<level>0</level>
+					<default>false</default>
+					<control type="toggle"/>
+				</setting>
+				<setting id="playback.volumecheck_enabled" type="boolean" label="33064" help="">
+					<level>0</level>
+					<default>false</default>
+					<control type="toggle"/>
+				</setting>
+				<setting id="playback.volumecheck_percent" type="integer" label="33065" help="" parent="playback.volumecheck_enabled">
+					<level>0</level>
+					<default>50</default>
+					<constraints>
+						<minimum>1</minimum>
+						<step>1</step>
+						<maximum>100</maximum>
+					</constraints>
+					<dependencies>
+						<dependency type="visible">
+							<condition operator="is" setting="playback.volumecheck_enabled">true</condition>
+						</dependency>
+					</dependencies>
+					<control type="slider" format="integer">
+						<popup>false</popup>
+					</control>
+				</setting>
+			</group>
+			<!-- Subtitles -->
+			<group id="4" label="32182">
+				<setting id="subtitles.subs_action" type="integer" label="32183" help="">
+					<level>0</level>
+					<default>2</default>
+					<constraints>
+						<options>
+							<option label="32192">0</option>
+							<option label="32193">1</option>
+							<option label="32027">2</option>
+						</options>
+					</constraints>
+					<control type="spinner" format="string"/>
+				</setting>
+				<setting id="subtitles.language" type="string" label="32184" help="" parent="subtitles.subs_action">
+					<level>0</level>
+					<default>English</default>
+					<constraints>
+						<options>
+							<option>Afrikaans</option>
+							<option>Albanian</option>
+							<option>Arabic</option>
+							<option>Armenian</option>
+							<option>Basque</option>
+							<option>Bengali</option>
+							<option>Bosnian</option>
+							<option>Breton</option>
+							<option>Bulgarian</option>
+							<option>Burmese</option>
+							<option>Catalan</option>
+							<option>Chinese</option>
+							<option>Croatian</option>
+							<option>Czech</option>
+							<option>Danish</option>
+							<option>Dutch</option>
+							<option>English</option>
+							<option>Esperanto</option>
+							<option>Estonian</option>
+							<option>Finnish</option>
+							<option>French</option>
+							<option>Galician</option>
+							<option>Georgian</option>
+							<option>German</option>
+							<option>Greek</option>
+							<option>Hebrew</option>
+							<option>Hindi</option>
+							<option>Hungarian</option>
+							<option>Icelandic</option>
+							<option>Indonesian</option>
+							<option>Italian</option>
+							<option>Japanese</option>
+							<option>Kazakh</option>
+							<option>Khmer</option>
+							<option>Korean</option>
+							<option>Latvian</option>
+							<option>Lithuanian</option>
+							<option>Luxembourgish</option>
+							<option>Macedonian</option>
+							<option>Malay</option>
+							<option>Malayalam</option>
+							<option>Manipuri</option>
+							<option>Mongolian</option>
+							<option>Montenegrin</option>
+							<option>Norwegian</option>
+							<option>Occitan</option>
+							<option>Persian</option>
+							<option>Polish</option>
+							<option>Portuguese</option>
+							<option>Portuguese(Brazil)</option>
+							<option>Romanian</option>
+							<option>Russian</option>
+							<option>Serbian</option>
+							<option>Sinhalese</option>
+							<option>Slovak</option>
+							<option>Slovenian</option>
+							<option>Spanish</option>
+							<option>Swahili</option>
+							<option>Swedish</option>
+							<option>Syriac</option>
+							<option>Tagalog</option>
+							<option>Tamil</option>
+							<option>Telugu</option>
+							<option>Thai</option>
+							<option>Turkish</option>
+							<option>Ukrainian</option>
+							<option>Urdu</option>
+							<option>Vietnamese</option>
+						</options>
+					</constraints>
+					<dependencies>
+						<dependency type="visible">
+							<condition operator="!is" setting="subtitles.subs_action">2</condition>
+						</dependency>
+					</dependencies>
+					<control type="list" format="string">
+						<heading>32184</heading>
+					</control>
+				</setting>
+				<setting id="subtitles.secondary_language" type="string" label="32466" help="" parent="subtitles.subs_action">
+					<level>0</level>
+					<default>None</default>
+					<constraints>
+						<options>
+							<option>None</option>
+							<option>Afrikaans</option>
+							<option>Albanian</option>
+							<option>Arabic</option>
+							<option>Armenian</option>
+							<option>Basque</option>
+							<option>Bengali</option>
+							<option>Bosnian</option>
+							<option>Breton</option>
+							<option>Bulgarian</option>
+							<option>Burmese</option>
+							<option>Catalan</option>
+							<option>Chinese</option>
+							<option>Croatian</option>
+							<option>Czech</option>
+							<option>Danish</option>
+							<option>Dutch</option>
+							<option>English</option>
+							<option>Esperanto</option>
+							<option>Estonian</option>
+							<option>Finnish</option>
+							<option>French</option>
+							<option>Galician</option>
+							<option>Georgian</option>
+							<option>German</option>
+							<option>Greek</option>
+							<option>Hebrew</option>
+							<option>Hindi</option>
+							<option>Hungarian</option>
+							<option>Icelandic</option>
+							<option>Indonesian</option>
+							<option>Italian</option>
+							<option>Japanese</option>
+							<option>Kazakh</option>
+							<option>Khmer</option>
+							<option>Korean</option>
+							<option>Latvian</option>
+							<option>Lithuanian</option>
+							<option>Luxembourgish</option>
+							<option>Macedonian</option>
+							<option>Malay</option>
+							<option>Malayalam</option>
+							<option>Manipuri</option>
+							<option>Mongolian</option>
+							<option>Montenegrin</option>
+							<option>Norwegian</option>
+							<option>Occitan</option>
+							<option>Persian</option>
+							<option>Polish</option>
+							<option>Portuguese</option>
+							<option>Portuguese(Brazil)</option>
+							<option>Romanian</option>
+							<option>Russian</option>
+							<option>Serbian</option>
+							<option>Sinhalese</option>
+							<option>Slovak</option>
+							<option>Slovenian</option>
+							<option>Spanish</option>
+							<option>Swahili</option>
+							<option>Swedish</option>
+							<option>Syriac</option>
+							<option>Tagalog</option>
+							<option>Tamil</option>
+							<option>Telugu</option>
+							<option>Thai</option>
+							<option>Turkish</option>
+							<option>Ukrainian</option>
+							<option>Urdu</option>
+							<option>Vietnamese</option>
+						</options>
+					</constraints>
+					<dependencies>
+						<dependency type="visible">
+							<condition operator="!is" setting="subtitles.subs_action">2</condition>
+						</dependency>
+					</dependencies>
+					<control type="list" format="string">
+						<heading>32466</heading>
+					</control>
+				</setting>
+				<setting id="subtitles.auto_enable" type="boolean" label="32186" help="" parent="subtitles.subs_action">
+					<level>0</level>
+					<default>true</default>
+					<dependencies>
+						<dependency type="visible">
+							<condition operator="!is" setting="subtitles.subs_action">2</condition>
+						</dependency>
+					</dependencies>
+					<control type="toggle"/>
+				</setting>
+			</group>
+		</category>
+	</section>
 </settings>

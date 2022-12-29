@@ -14,9 +14,9 @@ Thread, json, ls, xbmc_player, translate_path, execute_builtin, sleep = ku.Threa
 make_listitem, volume_checker, list_dirs, get_setting, confirm_progress_media = ku.make_listitem, ku.volume_checker, ku.list_dirs, ku.get_setting, ku.confirm_progress_media
 close_all_dialog, notification, select_dialog, poster_empty, fanart_empty = ku.close_all_dialog, ku.notification, ku.select_dialog, ku.empty_poster, ku.addon_fanart
 get_art_provider, get_fanart_data, watched_indicators, auto_resume = st.get_art_provider, st.get_fanart_data, st.watched_indicators, st.auto_resume
-auto_nextep_settings, disable_content_lookup = st.auto_nextep_settings, st.disable_content_lookup
+auto_nextep_settings, disable_content_lookup, widget_load_empty = st.auto_nextep_settings, st.disable_content_lookup, st.widget_load_empty
 get_progress_percent, get_bookmarks, erase_bookmark, clear_local_bookmarks = ws.get_progress_percent, ws.get_bookmarks, ws.erase_bookmark, ws.clear_local_bookmarks
-set_bookmark, mark_as_watched_unwatched_movie, mark_as_watched_unwatched_episode = ws.set_bookmark, ws.mark_as_watched_unwatched_movie, ws.mark_as_watched_unwatched_episode
+set_bookmark, mark_movie, mark_episode = ws.set_bookmark, ws.mark_movie, ws.mark_episode
 build_content_prop = ku.build_content_prop
 
 class FenPlayer(xbmc_player):
@@ -35,16 +35,16 @@ class FenPlayer(xbmc_player):
 			hide_busy_dialog()
 			ensure_dialog_dead, bookmark_set = False, False
 			if self.media_type == 'episode':
-				play_random_continual = self.sources.random_continual
-				play_random = self.sources.random
-				disable_autoplay_next_episode = self.sources.disable_autoplay_next_episode
+				play_random_continual = self.sources_object.random_continual
+				play_random = self.sources_object.random
+				disable_autoplay_next_episode = self.sources_object.disable_autoplay_next_episode
 				if disable_autoplay_next_episode: notification('%s - %s %s' % (ls(32135), ls(32178), ls(32736)), 4500)
 				if any((play_random_continual, play_random, disable_autoplay_next_episode)):
 					self.autoplay_nextep = False
 					self.autoscrape_nextep = False
 				else:
-					self.autoplay_nextep = self.sources.autoplay_nextep
-					self.autoscrape_nextep = self.sources.autoscrape_nextep
+					self.autoplay_nextep = self.sources_object.autoplay_nextep
+					self.autoscrape_nextep = self.sources_object.autoscrape_nextep
 			else: play_random_continual, self.autoplay_nextep, self.autoscrape_nextep = False, False, False
 			sleep(1000)
 			while self.isPlayingVideo():
@@ -130,7 +130,7 @@ class FenPlayer(xbmc_player):
 
 	def play_video(self, url, obj):
 		self.set_constants(url, obj)
-		self.suppress_widget_reload()
+		self.suppress_widget_content()
 		self.play(self.url, self.make_listing())
 		if not self.is_generic:
 			self.playback_successful = self.check_playback_start()
@@ -144,8 +144,8 @@ class FenPlayer(xbmc_player):
 		self.media_marked = True
 		try:
 			if self.current_point >= self.set_watched:
-				if self.media_type == 'movie': watched_function = mark_as_watched_unwatched_movie
-				else: watched_function = mark_as_watched_unwatched_episode
+				if self.media_type == 'movie': watched_function = mark_movie
+				else: watched_function = mark_episode
 				watched_params = {'action': 'mark_as_watched', 'tmdb_id': self.tmdb_id, 'title': self.title, 'year': self.year, 'season': self.season, 'episode': self.episode,
 									'tvdb_id': self.tvdb_id, 'from_playback': 'true'}
 				Thread(target=self.run_media_progress, args=(watched_function, watched_params)).start()
@@ -185,11 +185,11 @@ class FenPlayer(xbmc_player):
 			current_time = time.time()
 			hide_busy_dialog()
 			if self.isPlayingVideo(): return True
-			if self.sources.progress_dialog.iscanceled() or self.kodi_monitor.abortRequested():
+			if self.sources_object.progress_dialog.iscanceled() or self.kodi_monitor.abortRequested():
 				self.set_build_content('true')
 				self.stop()
 				return False
-			if self.sources.progress_dialog.skip_resolved():
+			if self.sources_object.progress_dialog.skip_resolved():
 				self.stop()
 				return False
 			if get_visibility('Window.IsTopMost(okdialog)'):
@@ -199,8 +199,8 @@ class FenPlayer(xbmc_player):
 			sleep(100)
 		return False
 
-	def suppress_widget_reload(self):
-		Thread(target=self.set_suppress).start()
+	def suppress_widget_content(self):
+		if widget_load_empty(): Thread(target=self.set_suppress).start()
 
 	def start_monitor(self):
 		Thread(target=self.monitor).start()
@@ -246,7 +246,7 @@ class FenPlayer(xbmc_player):
 		except: pass
 
 	def kill_dialog(self):
-		try: self.sources._kill_progress_dialog()
+		try: self.sources_object._kill_progress_dialog()
 		except: close_all_dialog()
 
 	def onPlayBackEnded(self):
@@ -260,11 +260,11 @@ class FenPlayer(xbmc_player):
 
 	def set_constants(self, url, obj):
 		self.url = url
-		self.sources = obj
+		self.sources_object = obj
 		self.disable_lookup = disable_content_lookup()
-		self.is_generic = self.sources == 'video'
+		self.is_generic = self.sources_object == 'video'
 		if not self.is_generic:
-			self.meta = self.sources.meta
+			self.meta = self.sources_object.meta
 			self.meta_get = self.meta.get
 			self.kodi_monitor = ku.monitor
 			self.media_marked, self.subs_searched, self.nextep_info_gathered = False, False, False

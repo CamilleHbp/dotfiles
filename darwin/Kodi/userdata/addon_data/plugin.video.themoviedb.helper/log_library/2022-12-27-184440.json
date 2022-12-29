@@ -1,0 +1,44 @@
+{
+  "tv": {
+    "65708": {
+      "seasons": {
+        "1": {
+          "episodes": {
+            "1": {
+              "log_msg": "added strm file",
+              "path": "special://profile/addon_data/plugin.video.themoviedb.helper/tvshows/Taboo (2017)/Season 1/S01E01 - Episode 1.strm"
+            },
+            "2": {
+              "log_msg": "added strm file",
+              "path": "special://profile/addon_data/plugin.video.themoviedb.helper/tvshows/Taboo (2017)/Season 1/S01E02 - Episode 2.strm"
+            },
+            "3": {
+              "log_msg": "added strm file",
+              "path": "special://profile/addon_data/plugin.video.themoviedb.helper/tvshows/Taboo (2017)/Season 1/S01E03 - Episode 3.strm"
+            },
+            "4": {
+              "log_msg": "added strm file",
+              "path": "special://profile/addon_data/plugin.video.themoviedb.helper/tvshows/Taboo (2017)/Season 1/S01E04 - Episode 4.strm"
+            },
+            "5": {
+              "log_msg": "added strm file",
+              "path": "special://profile/addon_data/plugin.video.themoviedb.helper/tvshows/Taboo (2017)/Season 1/S01E05 - Episode 5.strm"
+            },
+            "6": {
+              "log_msg": "added strm file",
+              "path": "special://profile/addon_data/plugin.video.themoviedb.helper/tvshows/Taboo (2017)/Season 1/S01E06 - Episode 6.strm"
+            },
+            "7": {
+              "log_msg": "added strm file",
+              "path": "special://profile/addon_data/plugin.video.themoviedb.helper/tvshows/Taboo (2017)/Season 1/S01E07 - Episode 7.strm"
+            },
+            "8": {
+              "log_msg": "added strm file",
+              "path": "special://profile/addon_data/plugin.video.themoviedb.helper/tvshows/Taboo (2017)/Season 1/S01E08 - Episode 8.strm"
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -11,6 +11,7 @@ add_item, set_content, end_directory_function, set_view_mode, add_items, get_set
 json, external_browse, close_all_dialog, sleep, execute_builtin, external_browse = k.json, k.external_browse, k.close_all_dialog, k.sleep, k.execute_builtin, k.external_browse
 download_directory, furk_active, easynews_active, source_folders_directory, get_icon = s.download_directory, s.furk_active, s.easynews_active, s.source_folders_directory, k.get_icon
 get_shortcut_folders, currently_used_list, get_shortcut_folder_contents, fanart = nc.get_shortcut_folders, nc.currently_used_list, nc.get_shortcut_folder_contents, k.addon_fanart
+set_sort_method = k.set_sort_method
 vid_str, fl_str, se_str, acc_str, dl_str, people_str, keywords_str = ls(32491), ls(32493), ls(32450), ls(32494), ls(32107), ls(32507), ls(32092)
 tools_str, manager_str, changelog_str, ext_str, short_str, source_str, cl_dbs_str, langinv_str = ls(32456), ls(32513), ls(32508), ls(32118), ls(32514), ls(32515), ls(32512), ls(33017)
 user_str, ml_str, ll_str, rec_str, cal_str, lv_str, lu_str, k_str, genre_select_str = ls(32065), ls(32454), ls(32502), ls(32503), ls(32081), ls(32509), ls(32853), ls(32538), ls(32847)
@@ -18,8 +19,8 @@ recent_added_str, recently_aired_str, random_str, episodes_str, settings_str, mu
 log_utils_str, tips_use_str, views_str, updates_str, fen_str, all_str, cache_str, clean_str = ls(32777), ls(32518), ls(32510), ls(32196), ls(32036), ls(32129), ls(32524), ls(32526)
 discover_str, history_str, help_str, furk_str, easy_str, rd_str, pm_str, ad_str = ls(32451), ls(32486), ls(32487), ls(32069), ls(32070), ls(32054), ls(32061), ls(32063)
 cloud_str, clca_str, trakt_str, imdb_str, coll_str, wlist_str, ls_str, fav_str = ls(32496), ls(32497), ls(32037), ls(32064), ls(32499), ls(32500), ls(32501), ls(32453)
+root_str, season_str, images_str, make_short_str, delete_str, mcol_str, brow_str = ls(32457), ls(32537), ls(32798), ls(32702), ls(32703), ls(33080), ls(32652)
 _in_str, mov_str, tv_str, edit_str, add_menu_str, s_folder_str, mset_str = ls(32484), ls(32028), ls(32029), ls(32705), ls(32730), ls(32731), ls(33080)
-root_str, season_str, images_str, make_short_str, delete_str, mcol_str = ls(32457), ls(32537), ls(32798), ls(32702), ls(32703), ls(33080)
 new_str, spot_str, tips_str = ls(32857).upper(), ls(32858).upper(), ls(32546).upper()
 clean_set_cache_str, search_str = '[B]%s:[/B] %s %s %s' % (settings_str.upper(), clean_str, settings_str, cache_str), '%s %s' % (se_str, history_str)
 clear_all_str, clear_meta_str, clear_list_str, clear_trakt_str = clca_str % all_str, clca_str % ls(32527), clca_str % ls_str, clca_str % trakt_str
@@ -60,8 +61,9 @@ class Navigator:
 		self.list_name = self.params_get('action', 'RootList')
 
 	def main(self):
-		add_items(int(sys.argv[1]), list(self.build_main_list(currently_used_list(self.list_name))))
-		self.end_directory()
+		handle = int(sys.argv[1])
+		add_items(handle, list(self.build_main_list(currently_used_list(self.list_name))))
+		self.end_directory(handle)
 
 	def discover_main(self):
 		self.add({'mode': 'discover.movie', 'media_type': 'movie'}, discover_main_ins % mov_str, 'discover')
@@ -81,13 +83,13 @@ class Navigator:
 		self.end_directory()
 
 	def furk(self):
-		self.add({'mode': 'search_history', 'action': 'furk_video'}, furk_ins % (se_str, ''), 'search')
+		self.add({'mode': 'history.search', 'action': 'furk_video'}, furk_ins % (se_str, ''), 'search')
 		self.add({'mode': 'furk.my_furk_files'}, furk_ins % (vid_str, fl_str), 'furk')
 		self.add({'mode': 'furk.account_info'}, furk_ins % (acc_str, ''), 'furk', False)
 		self.end_directory()
 
 	def easynews(self):
-		self.add({'mode': 'search_history', 'action': 'easynews_video'}, easynews_ins % se_str, 'search')
+		self.add({'mode': 'history.search', 'action': 'easynews_video'}, easynews_ins % se_str, 'search')
 		self.add({'mode': 'easynews.account_info'}, easynews_ins % acc_str, 'easynews', False)
 		self.end_directory()
 
@@ -171,12 +173,12 @@ class Navigator:
 		self.end_directory()
 
 	def search(self):
-		self.add({'mode': 'search_history', 'action': 'movie'}, _in_str % (se_str.upper(), mov_str), 'search_movie')
-		self.add({'mode': 'search_history', 'action': 'tvshow'}, _in_str % (se_str.upper(), tv_str), 'search_tv')
-		self.add({'mode': 'search_history', 'action': 'people'}, _in_str % (se_str.upper(), people_str), 'search_people')
-		self.add({'mode': 'search_history', 'action': 'tmdb_movie_sets'}, _in_str % (se_str.upper(), mset_str), 'search_tmdb')
-		self.add({'mode': 'search_history', 'action': 'imdb_keyword_movie'}, _in_str % (se_str.upper(), kw_mov), 'search_imdb')
-		self.add({'mode': 'search_history', 'action': 'imdb_keyword_tvshow'}, _in_str % (se_str.upper(), kw_tv), 'search_imdb')
+		self.add({'mode': 'history.search', 'action': 'movie'}, _in_str % (se_str.upper(), mov_str), 'search_movie')
+		self.add({'mode': 'history.search', 'action': 'tvshow'}, _in_str % (se_str.upper(), tv_str), 'search_tv')
+		self.add({'mode': 'history.search', 'action': 'people'}, _in_str % (se_str.upper(), people_str), 'search_people')
+		self.add({'mode': 'history.search', 'action': 'tmdb_movie_sets'}, _in_str % (se_str.upper(), mset_str), 'search_tmdb')
+		self.add({'mode': 'history.search', 'action': 'imdb_keyword_movie'}, _in_str % (se_str.upper(), kw_mov), 'search_imdb')
+		self.add({'mode': 'history.search', 'action': 'imdb_keyword_tvshow'}, _in_str % (se_str.upper(), kw_tv), 'search_imdb')
 		self.end_directory()
 
 	def downloads(self):
@@ -206,7 +208,7 @@ class Navigator:
 		self.add({'mode': 'check_corrupt_databases_cache'}, clear_info_ins % corrupt_databases_str, 'settings2', False)
 		self.add({'mode': 'clear_all_cache'}, clear_all, 'settings2', False)
 		self.add({'mode': 'clear_favorites_choice'}, clear_info_ins % clear_fav_str, 'settings2', False)
-		self.add({'mode': 'clear_search_history'}, clear_info_ins % clear_search_str, 'settings2', False)
+		self.add({'mode': 'history.clear_search'}, clear_info_ins % clear_search_str, 'settings2', False)
 		self.add({'mode': 'clear_cache', 'cache': 'meta'}, clear_info_ins % clear_meta_str, 'settings2', False)
 		self.add({'mode': 'clear_cache', 'cache': 'list'}, clear_info_ins % clear_list_str, 'settings2', False)
 		self.add({'mode': 'clear_cache', 'cache': 'trakt'}, clear_info_ins % clear_trakt_str, 'settings2', False)
@@ -219,13 +221,13 @@ class Navigator:
 		self.end_directory()
 
 	def set_view_modes(self):
-		self.add({'mode': 'choose_view', 'view_type': 'view.main', 'content': ''},set_view_modes_ins % root_str, 'settings', external=False)
-		self.add({'mode': 'choose_view', 'view_type': 'view.movies', 'content': 'movies'},set_view_modes_ins % mov_str, 'settings', external=False)
-		self.add({'mode': 'choose_view', 'view_type': 'view.tvshows', 'content': 'tvshows'},set_view_modes_ins % tv_str, 'settings', external=False)
-		self.add({'mode': 'choose_view', 'view_type': 'view.seasons', 'content': 'seasons'},set_view_modes_ins % season_str, 'settings', external=False)
-		self.add({'mode': 'choose_view', 'view_type': 'view.episodes', 'content': 'episodes'},set_view_modes_ins % episodes_str, 'settings', external=False)
-		self.add({'mode': 'choose_view', 'view_type': 'view.episode_lists', 'content': 'episodes'},set_view_modes_ins % ep_lists_str, 'settings', external=False)
-		self.add({'mode': 'choose_view', 'view_type': 'view.premium', 'content': 'files'},set_view_modes_ins % premium_files_str, 'settings', external=False)
+		self.add({'mode': 'choose_view', 'view_type': 'view.main', 'content': ''},set_view_modes_ins % root_str, 'settings', contextmenu_edit=False)
+		self.add({'mode': 'choose_view', 'view_type': 'view.movies', 'content': 'movies'},set_view_modes_ins % mov_str, 'settings', contextmenu_edit=False)
+		self.add({'mode': 'choose_view', 'view_type': 'view.tvshows', 'content': 'tvshows'},set_view_modes_ins % tv_str, 'settings', contextmenu_edit=False)
+		self.add({'mode': 'choose_view', 'view_type': 'view.seasons', 'content': 'seasons'},set_view_modes_ins % season_str, 'settings', contextmenu_edit=False)
+		self.add({'mode': 'choose_view', 'view_type': 'view.episodes', 'content': 'episodes'},set_view_modes_ins % episodes_str, 'settings', contextmenu_edit=False)
+		self.add({'mode': 'choose_view', 'view_type': 'view.episode_lists', 'content': 'episodes'},set_view_modes_ins % ep_lists_str, 'settings', contextmenu_edit=False)
+		self.add({'mode': 'choose_view', 'view_type': 'view.premium', 'content': 'files'},set_view_modes_ins % premium_files_str, 'settings', contextmenu_edit=False)
 		self.end_directory()
 
 	def changelog(self):
@@ -298,26 +300,90 @@ class Navigator:
 			sleep(50)
 			execute_builtin(activate_window % build_url(url))
 		return execute_builtin(container_update % build_url(url))
+
+	def folder_navigator(self):
+		import os
+		from modules.utils import clean_file_name, normalize
+		# from caches.main_cache import main_cache
+		# def assigned_content(link_id):
+		# 	try:
+		# 		string = 'FEN_FOLDERS_%s' % link_id
+		# 		result = main_cache.get(string)
+		# 		return result.get('rootname').upper()
+		# 	except: return None
+		def _process():
+			for info in results:
+				try:
+					cm = []
+					cm_append = cm.append
+					path = info[0]
+					link_id = '%s_%s' % (folder_id, path)
+					clean_title = clean_file_name(normalize(path))
+					# linked_folder = assigned_content(link_id)
+					# if linked_folder: display = '%s [COLOR limegreen]| %s | %s[/COLOR]' % (clean_title, ls(33074).upper(), linked_folder)
+					# else: display = clean_title
+					display = clean_title
+					# link_folders_add = {'mode': 'link_folders_choice', 'service': 'FOLDERS', 'folder_id': link_id, 'action': 'add'}
+					# link_folders_remove = {'mode': 'link_folders_choice', 'service': 'FOLDERS', 'folder_id': link_id, 'action': 'remove'}
+					# cm_append((ls(33078),'RunPlugin(%s)' % build_url(link_folders_add)))
+					# cm_append((ls(33079),'RunPlugin(%s)' % build_url(link_folders_remove)))
+					url = os.path.join(folder_path, path)
+					listitem = make_listitem()
+					listitem.addContextMenuItems(cm)
+					listitem.setLabel(display)
+					listitem.setArt({'fanart': fanart, 'clearlogo': fen_clearlogo})
+					listitem.setInfo('video', {'plot': ' '})
+					# listitem.setProperty('fen.context_main_menu_params', build_url({'mode': 'menu_editor.edit_menu_external',
+					# 						'name': clean_title, 'iconImage': icon, 'folder_id': link_id}))
+					yield (url, listitem, info[1])
+				except: pass
+		handle = int(sys.argv[1])
+		folder_path = self.params_get('folder_path')
+		media_type = self.params_get('media_type')
+		folder_id = self.params_get('folder_id')
+		icon = get_icon('folder')
+		dirs, files = list_dirs(folder_path)
+		results = [(i, True) for i in dirs] + [(i, False) for i in files]
+		item_list = list(_process())
+		add_items(handle, item_list)
+		set_sort_method(handle, 'files')
+		set_content(handle, '')
+		end_directory_function(handle)
+		if not external_browse(): set_view_mode('view.main', '')
 	
 	def sources_folders(self):
-		for item in folder_info:
-			for media_type in ('movie', 'tvshow'):
-				setting_id, default_name = item[0], item[1]
-				folder_path = source_folders_directory(media_type, setting_id) or ''
-				display_name = get_setting('%s.display_name' % setting_id)
-				if display_name == 'None': display_name = ''
-				if folder_path: folder_display, color = folder_path, 'green'
-				else: folder_display, color = 'Not Set', 'red'
-				display = sources_folders_str % (item[1].upper(), media_type.upper(), display_name.upper(), color, folder_display)
-				self.add({'mode': 'folder_scraper_manager_choice','setting_id': setting_id, 'media_type': media_type, 'folder_path': folder_path, 'display_name': display_name,
-						'default_name': default_name}, display, isFolder=False, external=False)
-		self.end_directory()
+		def _builder():
+			for item in folder_info:
+				for media_type in ('movie', 'tvshow'):
+					listitem = make_listitem()
+					setting_id, default_name = item[0], item[1]
+					folder_path = source_folders_directory(media_type, setting_id) or ''
+					display_name = get_setting('%s.display_name' % setting_id)
+					if display_name == 'None': display_name = ''
+					if folder_path: folder_display, color = folder_path, 'green'
+					else: folder_display, color = 'Not Set', 'red'
+					display = sources_folders_str % (item[1].upper(), media_type.upper(), display_name.upper(), color, folder_display)
+					url = build_url({'mode': 'folder_scraper_manager_choice', 'setting_id': setting_id, 'media_type': media_type, 'folder_path': folder_path,
+									'display_name': display_name, 'default_name': default_name})
+					if folder_path:
+						cm = [(brow_str, container_update % build_url({'mode': 'navigator.folder_navigator', 'folder_path': folder_path,
+																		'media_type': media_type, 'folder_id': setting_id}))]
+						listitem.addContextMenuItems(cm)
+					listitem.setLabel(display)
+					listitem.setArt({'icon': icon, 'poster': icon, 'thumb': icon, 'fanart': fanart, 'banner': icon, 'landscape': icon, 'clearlogo': fen_clearlogo})
+					listitem.setInfo('video', {'plot': ' '})
+					listitem.setProperty('fen.context_main_menu_params', build_url({'mode': 'menu_editor.edit_menu_external',
+											'name': display_name, 'iconImage': icon}))
+					yield (url, listitem, False)
+		icon = get_icon('folder')
+		handle = int(sys.argv[1])
+		add_items(handle, list(_builder()))
+		self.end_directory(handle)
 
 	def shortcut_folders(self):
 		def _make_new_item():
 			icon = get_icon('new')
-			url_params = {'mode': 'menu_editor.shortcut_folder_make'}
-			url = build_url(url_params)
+			url = build_url({'mode': 'menu_editor.shortcut_folder_make'})
 			listitem = make_listitem()
 			listitem.setLabel('[I]%s...[/I]' % make_short_str)
 			listitem.setArt({'icon': icon, 'poster': icon, 'thumb': icon, 'fanart': fanart, 'banner': icon, 'clearlogo': fen_clearlogo})
@@ -329,10 +395,9 @@ class Navigator:
 				try:
 					cm = []
 					name = i[0]
-					url_params = {'mode': 'navigator.build_shortcut_folder_list', 'name': name, 'iconImage': 'folder', 'shortcut_folder': 'True', 'external_list_item': 'True'}
-					url = build_url(url_params)
 					listitem = make_listitem()
-					cm.append((delete_str, run_plugin % build_url({'mode': 'menu_editor.shortcut_folder_delete'})))#, 'list_name': name})))
+					url = build_url({'mode': 'navigator.build_shortcut_folder_list', 'name': name, 'iconImage': 'folder', 'shortcut_folder': 'True', 'external_list_item': 'True'})
+					cm.append((delete_str, run_plugin % build_url({'mode': 'menu_editor.shortcut_folder_delete'})))
 					listitem.addContextMenuItems(cm)
 					listitem.setLabel('[B]%s : [/B] %s ' % (short_str.upper(), name))
 					listitem.setArt({'icon': icon, 'poster': icon, 'thumb': icon, 'fanart': fanart, 'banner': icon, 'clearlogo': fen_clearlogo})
@@ -344,7 +409,7 @@ class Navigator:
 		_make_new_item()
 		folders = get_shortcut_folders()
 		if folders: add_items(handle, list(_builder()))
-		self.end_directory()
+		self.end_directory(handle)
 
 	def tips(self):
 		tips_location = 'special://home/addons/plugin.video.fen/resources/text/tips'
@@ -372,9 +437,9 @@ class Navigator:
 		for item in recently_watched:
 			if media_type == 'movie': name, tmdb_id = because_str % item['title'], item['media_id']
 			else: name, tmdb_id = because_str % '%s - %sx%s' % (item['title'], str(item['season']), str(item['episode'])), item['media_ids']['tmdb']
-			self.add({'mode': mode, 'action': action, 'tmdb_id': tmdb_id}, name, 'because_you_watched')
+			self.add({'mode': mode, 'action': action, 'tmdb_id': tmdb_id}, name, 'because_you_watched', contextmenu_edit=False)
 		self.end_directory()
-	
+
 	def build_shortcut_folder_list(self):
 		def _process():
 			for item_position, item in enumerate(contents):
@@ -399,7 +464,7 @@ class Navigator:
 		list_name = self.params_get('name')
 		contents = get_shortcut_folder_contents(list_name)
 		add_items(handle, list(_process()))
-		self.end_directory()
+		self.end_directory(handle)
 
 	def build_main_list(self, list_items):
 		for item_position, item in enumerate(list_items):
@@ -419,7 +484,7 @@ class Navigator:
 				yield (build_url(item), listitem, item_get('mode', '') not in non_folder_items)
 			except: pass
 
-	def add(self, url_params, list_name, iconImage='folder', isFolder=True, external=True):
+	def add(self, url_params, list_name, iconImage='folder', isFolder=True, contextmenu_edit=True):
 		icon = get_icon(iconImage)
 		url_params['iconImage'] = icon
 		url = build_url(url_params)
@@ -427,16 +492,17 @@ class Navigator:
 		listitem.setLabel(list_name)
 		listitem.setArt({'icon': icon, 'poster': icon, 'thumb': icon, 'fanart': fanart, 'banner': icon, 'landscape': icon, 'clearlogo': fen_clearlogo})
 		listitem.setInfo('video', {'plot': ' '})
-		if external:
+		if contextmenu_edit:
 			cm = []
-			cm.append((add_menu_str, run_plugin % build_url({'mode': 'menu_editor.add_external', 'name': list_name, 'iconImage': iconImage})))
-			cm.append((s_folder_str, run_plugin % build_url({'mode': 'menu_editor.shortcut_folder_add_item', 'name': list_name, 'iconImage': iconImage})))
+			cm_append = cm.append
+			cm_append((add_menu_str, run_plugin % build_url({'mode': 'menu_editor.add_external', 'name': list_name, 'iconImage': iconImage})))
+			cm_append((s_folder_str, run_plugin % build_url({'mode': 'menu_editor.shortcut_folder_add_item', 'name': list_name, 'iconImage': iconImage})))
 			listitem.addContextMenuItems(cm)
 			listitem.setProperty('fen.context_main_menu_params', build_url({'mode': 'menu_editor.edit_menu_external', 'name': list_name, 'iconImage': iconImage}))
 		add_item(int(sys.argv[1]), url, listitem, isFolder)
 
-	def end_directory(self):
-		handle = int(sys.argv[1])
+	def end_directory(self, handle=None):
+		handle = handle or int(sys.argv[1])
 		set_content(handle, '')
 		end_directory_function(handle)
 		if not external_browse(): set_view_mode('view.main', '')

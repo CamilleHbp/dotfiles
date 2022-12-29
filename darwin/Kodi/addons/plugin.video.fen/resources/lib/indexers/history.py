@@ -29,8 +29,8 @@ def search_history(params):
 				if '|' in query: display = history_str % '%s (%s)' % tuple(query.split('|'))
 				else: display = history_str % query
 				url = build_url(url_params)
-				cm.append((remove_str, 'RunPlugin(%s)' % build_url({'mode': 'remove_from_history', 'setting_id':setting_id, 'query': query})))
-				cm.append((remove_all_str, 'RunPlugin(%s)' % build_url({'mode': 'clear_all_history', 'setting_id':setting_id, 'refresh': 'true'})))
+				cm.append((remove_str, 'RunPlugin(%s)' % build_url({'mode': 'history.remove', 'setting_id':setting_id, 'query': query})))
+				cm.append((remove_all_str, 'RunPlugin(%s)' % build_url({'mode': 'history.clear_all', 'setting_id':setting_id, 'refresh': 'true'})))
 				listitem = make_listitem()
 				listitem.setLabel(display)
 				listitem.addContextMenuItems(cm)

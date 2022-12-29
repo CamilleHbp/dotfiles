@@ -6,8 +6,8 @@ from modules import kodi_utils
 from caches.main_cache import cache_object
 # logger = kodi_utils.logger
 
-pause_settings_change, unpause_settings_change = kodi_utils.pause_settings_change, kodi_utils.unpause_settings_change
 json, sleep, confirm_dialog, ok_dialog = kodi_utils.json, kodi_utils.sleep, kodi_utils.confirm_dialog, kodi_utils.ok_dialog
+pause_settings_change, unpause_settings_change, Thread = kodi_utils.pause_settings_change, kodi_utils.unpause_settings_change, kodi_utils.Thread
 set_temp_highlight, restore_highlight, make_settings_dict = kodi_utils.set_temp_highlight, kodi_utils.restore_highlight, kodi_utils.make_settings_dict
 monitor, progress_dialog, dialog, urlencode, get_icon = kodi_utils.monitor, kodi_utils.progress_dialog, kodi_utils.dialog, kodi_utils.urlencode, kodi_utils.get_icon
 ls, notification, get_setting, set_setting, requests = kodi_utils.local_string, kodi_utils.notification, kodi_utils.get_setting, kodi_utils.set_setting, kodi_utils.requests
@@ -89,12 +89,6 @@ class PremiumizeAPI:
 		cache_info = self.check_cache(hash_string)['response']
 		return cache_info[0]
 
-	def zip_folder(self, folder_id):
-		url = 'zip/generate'
-		data = {'folders[]': folder_id}
-		response = self._post(url, data)
-		return response
-
 	def unrestrict_link(self, link):
 		data = {'src': link}
 		url = 'transfer/directdl'
@@ -128,23 +122,9 @@ class PremiumizeAPI:
 				file_url = max(valid_results, key=lambda x: int(x.get('size'))).get('link', None)
 				if not any(file_url.lower().endswith(x) for x in extensions): file_url = None
 			if file_url:
-				if store_to_cloud: self.create_transfer(magnet_url)
+				if store_to_cloud: Thread(target=self.create_transfer, args=(magnet_url,)).start()
 				return self.add_headers_to_url(file_url)
 		except: return None
-
-	def download_link_magnet_zip(self, magnet_url, info_hash):
-		try:
-			result = self.create_transfer(magnet_url)
-			if not 'status' in result or result['status'] != 'success': return None
-			transfer_id = result['id']
-			transfers = self.transfers_list()['transfers']
-			folder_id = [i['folder_id'] for i in transfers if i['id'] == transfer_id][0]
-			result = self.zip_folder(folder_id)
-			if result['status'] == 'success':
-				return result['location']
-			else: return None
-		except:
-			pass
 
 	def display_magnet_pack(self, magnet_url, info_hash):
 		from modules.source_utils import supported_video_extensions
@@ -180,9 +160,9 @@ class PremiumizeAPI:
 			hide_busy_dialog()
 			sleep(500)
 			if cancelled:
-				if confirm_dialog(heading=32733, text=32044): ok_dialog(heading=32733, text=ls(32732) % ls(32061), top_space=False)
+				if confirm_dialog(heading=32733, text=32044): ok_dialog(heading=32733, text=ls(32732) % ls(32061))
 				else: self.delete_transfer(transfer_id)
-			else: ok_dialog(heading=32733, text=message, top_space=False)
+			else: ok_dialog(heading=32733, text=message)
 			return False
 		show_busy_dialog()
 		extensions = supported_video_extensions()
@@ -195,7 +175,7 @@ class PremiumizeAPI:
 		if pack:
 			self.clear_cache(clear_hashes=False)
 			hide_busy_dialog()
-			ok_dialog(text=ls(32732) % ls(32061), top_space=False)
+			ok_dialog(text=ls(32732) % ls(32061))
 			return True
 		interval = 5
 		line = '%s[CR]%s[CR]%s'
@@ -247,13 +227,6 @@ class PremiumizeAPI:
 		url = 'transfer/directdl'
 		data = {'src': magnet_url}
 		return self._post(url, data)
-
-	def rename_cache_item(self, file_type, file_id, new_name):
-		if file_type == 'folder': url = 'folder/rename'
-		else: url = 'item/rename'
-		data = {'id': file_id , 'name': new_name}
-		response = self._post(url, data)
-		return response['status']
 
 	def create_transfer(self, magnet):
 		data = {'src': magnet, 'folder_id': 0}
@@ -317,7 +290,7 @@ class PremiumizeAPI:
 	def revoke_auth(self):
 		set_setting('pm.account_id', '')
 		set_setting('pm.token', '')
-		ok_dialog(heading=32061, text='%s %s' % (ls(32059), ls(32576)), top_space=False)
+		ok_dialog(heading=32061, text='%s %s' % (ls(32059), ls(32576)))
 
 	def clear_cache(self, clear_hashes=True):
 		try:

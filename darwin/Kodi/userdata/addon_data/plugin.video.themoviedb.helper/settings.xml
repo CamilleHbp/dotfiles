@@ -28,7 +28,7 @@
     <setting id="last_autoupdate" default="true" />
     <setting id="ignore_folderchecking" default="true">false</setting>
     <setting id="alternative_nfo" default="true">false</setting>
-    <setting id="legacy_conversion" default="true">false</setting>
+    <setting id="legacy_conversion">true</setting>
     <setting id="update_skinshortcuts">true</setting>
     <setting id="omdb_apikey">bf06cb66</setting>
     <setting id="mdblist_apikey">y0mbyh55yzoctedmqpz3tm315</setting>

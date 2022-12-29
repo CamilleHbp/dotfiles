@@ -40,7 +40,7 @@
                         <left>0</left>
                         <width>1035</width>
                         <height>5</height>
-                        <font>font_tiny</font>
+                        <font>font_tiny</font> <!-- FEN_21 -->
                         <align>left</align>
                         <aligny>bottom</aligny>
                         <label>[COLOR B3CCCCCC][B]$ADDON[plugin.video.fen 33061][/B][/COLOR]</label>
@@ -88,7 +88,7 @@
                         <height>20</height>
                         <aligny>bottom</aligny>
                         <align>center</align>
-                        <font>font_huge_bold</font>
+                        <font>font_huge_bold</font> <!-- FEN_60_BOLD -->
                         <label>[B]$INFO[Window.Property(title)][/B]</label>
                         <visible>String.IsEmpty(Window.Property(clearlogo))</visible>
                     </control>
@@ -97,7 +97,7 @@
                         <left>20</left>
                         <width>740</width>
                         <height>180</height>
-                        <font>font_mini</font>
+                        <font>font_mini</font> <!-- FEN_26 -->
                         <align>center</align>
                         <textcolor>FFB7B4BB</textcolor>
                     </control>
@@ -112,7 +112,7 @@
                             <onleft>11</onleft>
                             <onright>11</onright>
                             <label>[B]$INFO[Window.Property(true_button)][/B]</label>
-                            <font>font_mini</font>
+                            <font>font_mini</font> <!-- FEN_26 -->
                             <textcolor>FFB7B4BB</textcolor>
                             <focusedcolor>FF302F2F</focusedcolor>
                             <texturefocus colordiffuse="FFCCCCCC">common/white.png</texturefocus>
@@ -127,7 +127,7 @@
                             <onleft>10</onleft>
                             <onright>10</onright>
                             <label>[B]$INFO[Window.Property(false_button)][/B]</label>
-                            <font>font_mini</font>
+                            <font>font_mini</font> <!-- FEN_26 -->
                             <textcolor>FFB7B4BB</textcolor>
                             <focusedcolor>FF302F2F</focusedcolor>
                             <texturefocus colordiffuse="FFCCCCCC">common/white.png</texturefocus>
@@ -175,7 +175,7 @@
                     <top>18</top>
                     <width max="1160">auto</width>
                     <height>20</height>
-                    <font>font_tiny</font>
+                    <font>font_tiny</font> <!-- FEN_21 -->
                     <label>[COLOR B3CCCCCC][B]$ADDON[plugin.video.fen 33061][/B][/COLOR]</label>
                     <visible>!String.IsEqual(Window.Property(enable_resolver),true)</visible>
                 </control>
@@ -184,7 +184,7 @@
                     <top>18</top>
                     <width max="1160">auto</width>
                     <height>20</height>
-                    <font>font_tiny</font>
+                    <font>font_tiny</font> <!-- FEN_21 -->
                     <label>[COLOR B3CCCCCC][B]$ADDON[plugin.video.fen 33061][/B][/COLOR] | [COLOR B3CCCCCC][B]$ADDON[plugin.video.fen 33050][/B][/COLOR]</label>
                     <visible>String.IsEqual(Window.Property(enable_resolver),true)</visible>
                 </control>
@@ -210,7 +210,7 @@
                         <top>200</top>
                         <width max="1920">auto</width>
                         <height>30</height>
-                        <font>font_huge_bold</font>
+                        <font>font_huge_bold</font> <!-- FEN_60_BOLD -->
                         <textcolor>FFCCCCCC</textcolor>
                         <align>center</align>
                         <aligny>bottom</aligny>
@@ -396,7 +396,7 @@
                         <top>30</top>
                         <width max="495">auto</width>
                         <height>20</height>
-                        <font>font_mini</font>
+                        <font>font_mini</font> <!-- FEN_26 -->
                         <align>center</align>
                         <aligny>bottom</aligny>
                         <textcolor>FFCCCCCC</textcolor>
@@ -572,7 +572,7 @@
                     <top>90</top>
                     <width>740</width>
                     <height>180</height>
-                    <font>font_mini</font>
+                    <font>font_mini</font> <!-- FEN_26 -->
                     <align>center</align>
                     <textcolor>FFB7B4BB</textcolor>
                 </control>
@@ -597,7 +597,7 @@
                         <top>100</top>
                         <width>820</width>
                         <height>368</height>
-                        <font>font_mini</font>
+                        <font>font_mini</font> <!-- FEN_26 -->
                         <align>center</align>
                         <textcolor>FFB7B4BB</textcolor>
                         <label>$INFO[Window.Property(text)]</label>
@@ -608,7 +608,7 @@
                     <top>970</top>
                     <width>1880</width>
                     <height>75</height>
-                    <font>font_mini</font>
+                    <font>font_mini</font> <!-- FEN_26 -->
                     <align>center</align>
                     <textcolor>FFB7B4BB</textcolor>
                 </control>

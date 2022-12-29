@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 from apis.trakt_api import trakt_fetch_collection_watchlist, trakt_get_hidden_items, trakt_get_my_calendar
+from caches.favorites import favorites
 from modules import kodi_utils, settings, watched_status as ws
 from modules.metadata import tvshow_meta, episodes_meta, all_episodes_meta
 from modules.utils import jsondate_to_datetime, adjust_premiered_date, make_day, get_datetime, title_key, date_difference, make_thread_list_enumerate
@@ -19,7 +20,7 @@ date_difference_function, make_day_function, title_key_function, get_datetime_fu
 get_progress_percent, get_watched_status, get_watched_info, get_bookmarks = ws.get_progress_percent, ws.get_watched_status_episode, ws.get_watched_info_tv, ws.get_bookmarks
 get_in_progress_episodes, get_next_episodes, get_recently_watched = ws.get_in_progress_episodes, ws.get_next_episodes, ws.get_recently_watched
 string, fen_str, trakt_str, watched_str, unwatched_str, extras_str, options_str, clearprog_str = str, ls(32036), ls(32037), ls(32642), ls(32643), ls(32645), ls(32646), ls(32651)
-build_content, poster_empty, fanart_empty = kodi_utils.build_content, kodi_utils.empty_poster, kodi_utils.addon_fanart
+build_content, poster_empty, fanart_empty, make_placeholder = kodi_utils.build_content, kodi_utils.empty_poster, kodi_utils.addon_fanart, kodi_utils.make_placeholder_listitem
 run_plugin, unaired_label, tmdb_poster_prefix = 'RunPlugin(%s)', '[COLOR red][I]%s[/I][/COLOR]', 'https://image.tmdb.org/t/p/'
 upper = string.upper
 view_mode, content_type = 'view.episodes', 'episodes'
@@ -48,7 +49,7 @@ def build_episode_list(params):
 				options_params = build_url({'mode': 'options_menu_choice', 'content': 'episode', 'tmdb_id': tmdb_id, 'season': season, 'episode': episode,
 											'poster': show_poster, 'playcount': playcount, 'progress': progress, 'is_widget': is_widget})
 				extras_params = build_url({'mode': 'extras_menu_choice', 'tmdb_id': tmdb_id, 'media_type': 'episode', 'is_widget': is_widget})
-				url_params = build_url({'mode': 'play_media', 'media_type': 'episode', 'tmdb_id': tmdb_id, 'season': season, 'episode': episode})
+				url_params = build_url({'mode': 'playback.media', 'media_type': 'episode', 'tmdb_id': tmdb_id, 'season': season, 'episode': episode})
 				if not episode_date or current_date < episode_date:
 					if not show_unaired: continue
 					if season != 0:
@@ -61,23 +62,23 @@ def build_episode_list(params):
 				if not unaired:
 					if playcount:
 						if hide_watched: continue
-						unwatched_params = build_url({'mode': 'mark_as_watched_unwatched_episode', 'action': 'mark_as_unwatched', 'tmdb_id': tmdb_id,
+						unwatched_params = build_url({'mode': 'watched_status.mark_episode', 'action': 'mark_as_unwatched', 'tmdb_id': tmdb_id,
 													'tvdb_id': tvdb_id, 'season': season, 'episode': episode,  'title': title, 'year': year})
 						cm_append((unwatched_str % watched_title, run_plugin % unwatched_params))
 					else:
-						watched_params = build_url({'mode': 'mark_as_watched_unwatched_episode', 'action': 'mark_as_watched', 'tmdb_id': tmdb_id,
+						watched_params = build_url({'mode': 'watched_status.mark_episode', 'action': 'mark_as_watched', 'tmdb_id': tmdb_id,
 													'tvdb_id': tvdb_id, 'season': season, 'episode': episode,  'title': title, 'year': year})
 						cm_append((watched_str % watched_title, run_plugin % watched_params))
 					if progress:
-						clearprog_params = build_url({'mode': 'watched_unwatched_erase_bookmark', 'media_type': 'episode', 'tmdb_id': tmdb_id,
+						clearprog_params = build_url({'mode': 'watched_status.erase_bookmark', 'media_type': 'episode', 'tmdb_id': tmdb_id,
 													'season': season, 'episode': episode, 'refresh': 'true'})
 						cm_append((clearprog_str, run_plugin % clearprog_params))
 						set_properties({'watchedprogress': progress, 'resumetime': progress, 'fen.in_progress': 'true'})
 				listitem.setLabel(display)
 				listitem.addContextMenuItems(cm)
-				listitem.setArt({'poster': show_poster, 'fanart': show_fanart, 'thumb': thumb, 'icon':thumb, 'banner': show_banner, 'clearart': show_clearart, 'clearlogo': show_clearlogo,
-								'landscape': show_landscape, 'season.poster': season_poster, 'tvshow.poster': show_poster, 'tvshow.clearart': show_clearart,
-								'tvshow.clearlogo': show_clearlogo, 'tvshow.landscape': show_landscape, 'tvshow.banner': show_banner})
+				listitem.setArt({'poster': show_poster, 'fanart': show_fanart, 'thumb': thumb, 'icon':thumb, 'banner': show_banner, 'clearart': show_clearart,
+								'clearlogo': show_clearlogo, 'landscape': show_landscape, 'season.poster': season_poster, 'tvshow.poster': show_poster,
+								'tvshow.clearart': show_clearart, 'tvshow.clearlogo': show_clearlogo, 'tvshow.landscape': show_landscape, 'tvshow.banner': show_banner})
 				listitem.setCast(cast + item_get('guest_stars', []))
 				listitem.setUniqueIDs({'imdb': imdb_id, 'tmdb': string(tmdb_id), 'tvdb': string(tvdb_id)})
 				listitem.setInfo('video', remove_keys(item, dict_removals))
@@ -124,6 +125,7 @@ def build_episode_list(params):
 			else: season_poster = tmdb_poster
 		add_items(handle, list(_process()))
 		set_sort_method(handle, content_type)
+	else: add_items(handle, make_placeholder())
 	set_content(handle, content_type)
 	end_directory(handle, False if is_widget else None)
 	if not is_widget: set_view_mode(view_mode, content_type)
@@ -216,22 +218,22 @@ def build_single_episode(list_type, params={}):
 			options_params = build_url({'mode': 'options_menu_choice', 'content': list_type, 'tmdb_id': tmdb_id, 'season': season, 'episode': episode,
 										'poster': show_poster, 'playcount': playcount, 'progress': progress, 'is_widget': is_widget})
 			extras_params = build_url({'mode': 'extras_menu_choice', 'tmdb_id': tmdb_id, 'media_type': 'tvshow', 'is_widget': is_widget})
-			url_params = build_url({'mode': 'play_media', 'media_type': 'episode', 'tmdb_id': tmdb_id, 'season': season, 'episode': episode})
+			url_params = build_url({'mode': 'playback.media', 'media_type': 'episode', 'tmdb_id': tmdb_id, 'season': season, 'episode': episode})
 			cm_append((extras_str, run_plugin % extras_params))
 			cm_append((options_str, run_plugin % options_params))
 			clearprog_params, unwatched_params, watched_params = '', '', ''
 			if not unaired:
 				if playcount:
 					if hide_watched: return
-					unwatched_params = build_url({'mode': 'mark_as_watched_unwatched_episode', 'action': 'mark_as_unwatched', 'tmdb_id': tmdb_id,
+					unwatched_params = build_url({'mode': 'watched_status.mark_episode', 'action': 'mark_as_unwatched', 'tmdb_id': tmdb_id,
 												'tvdb_id': tvdb_id, 'season': season, 'episode': episode,  'title': title, 'year': year})
 					cm_append((unwatched_str % watched_title, run_plugin % unwatched_params))
 				else:
-					watched_params = build_url({'mode': 'mark_as_watched_unwatched_episode', 'action': 'mark_as_watched', 'tmdb_id': tmdb_id,
+					watched_params = build_url({'mode': 'watched_status.mark_episode', 'action': 'mark_as_watched', 'tmdb_id': tmdb_id,
 												'tvdb_id': tvdb_id, 'season': season, 'episode': episode,  'title': title, 'year': year})
 					cm_append((watched_str % watched_title, run_plugin % watched_params))
 				if progress:
-					clearprog_params = build_url({'mode': 'watched_unwatched_erase_bookmark', 'media_type': 'episode', 'tmdb_id': tmdb_id,
+					clearprog_params = build_url({'mode': 'watched_status.erase_bookmark', 'media_type': 'episode', 'tmdb_id': tmdb_id,
 												'season': season, 'episode': episode, 'refresh': 'true'})
 					cm_append((clearprog_str, run_plugin % clearprog_params))
 					set_properties({'WatchedProgress': progress, 'resumetime': progress, 'fen.in_progress': 'true'})
@@ -277,9 +279,16 @@ def build_single_episode(list_type, params={}):
 					data = [i for i in data if not i['media_ids']['tmdb'] in hidden_data]
 				except: pass
 			else: list_type = 'episode.next_fen'
-			if include_unwatched:
-				try: unwatched = [{'media_ids': i['media_ids'], 'season': 1, 'episode': 0, 'unwatched': True} for i in trakt_fetch_collection_watchlist('watchlist', 'tvshow')]
-				except: unwatched = []
+			if include_unwatched != 0:
+				unwatched = []
+				if include_unwatched in (1, 3):
+					try: unwatched.extend([{'media_ids': i['media_ids'], 'season': 1, 'episode': 0, 'unwatched': True, 'title': i['title']} \
+									for i in trakt_fetch_collection_watchlist('watchlist', 'tvshow')])
+					except: pass
+				if include_unwatched in (2, 3):
+					try: unwatched.extend([{'media_ids': {'tmdb': int(i['tmdb_id'])}, 'season': 1, 'episode': 0, 'unwatched': True, 'title': i['title']} \
+										for i in favorites.get_favorites('tvshow') if not int(i['tmdb_id']) in [x['media_ids']['tmdb'] for x in data]])
+					except: pass
 				data += unwatched
 		else:#episode.trakt
 			recently_aired = params.get('recently_aired', None)
@@ -326,6 +335,7 @@ def build_single_episode(list_type, params={}):
 				item_list.sort(key=lambda k: int(k[1].getProperty('fen.sort_order')))
 				item_list = sorted(item_list, key=lambda i: i[1].getProperty('fen.first_aired'), reverse=reverse)
 		add_items(handle, item_list)
+	else: add_items(handle, make_placeholder())
 	set_content(handle, content_type)
 	end_directory(handle, cacheToDisc=False)
 	if not is_widget: set_view_mode(view_mode, content_type)

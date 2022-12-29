@@ -111,6 +111,7 @@ class FurkAPI:
 		return result.json()
 
 def clear_media_results_database():
+	results = []
 	dbcon = database.connect(maincache_db, timeout=40.0, isolation_level=None)
 	dbcur = dbcon.cursor()
 	dbcur.execute('''PRAGMA synchronous = OFF''')
@@ -118,8 +119,17 @@ def clear_media_results_database():
 	dbcur.execute("SELECT id FROM maincache WHERE id LIKE 'fen_FURK_SEARCH_%'")
 	try:
 		furk_results = [str(i[0]) for i in dbcur.fetchall()]
-		if not furk_results: return 'success'
+		if not furk_results: results.append('success')
 		dbcur.execute("DELETE FROM maincache WHERE id LIKE 'fen_FURK_SEARCH_%'")
 		for i in furk_results: clear_property(i)
-		return 'success'
-	except: return 'failed'
+		results.append('success')
+	except: results.append('failed')
+	dbcur.execute("SELECT id FROM maincache WHERE id LIKE 'fen_FURK_SEARCH_DIRECT_%'")
+	try:
+		furk_results = [str(i[0]) for i in dbcur.fetchall()]
+		if not furk_results: results.append('success')
+		dbcur.execute("DELETE FROM maincache WHERE id LIKE 'fen_FURK_SEARCH_DIRECT_%'")
+		for i in furk_results: clear_property(i)
+		results.append('success')
+	except: results.append('failed')
+	return 'failed' if 'failed' in results else 'success'

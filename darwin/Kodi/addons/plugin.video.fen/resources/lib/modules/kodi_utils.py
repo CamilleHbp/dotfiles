@@ -93,6 +93,13 @@ def add_dir(url_params, list_name, handle, iconImage='folder', fanartImage=None,
 	listitem.setInfo('video', {'plot': ' '})
 	add_item(handle, url, listitem, isFolder)
 
+def make_placeholder_listitem():
+	listitem = make_listitem()
+	listitem.setLabel('Placeholder')
+	listitem.setArt({'poster': empty_poster})
+	listitem.setInfo('video', {'plot': 'this is a placeholder'})
+	return [('', listitem, False)]
+
 def make_listitem():
 	return ListItem(offscreen=True)
 
@@ -281,24 +288,22 @@ def progress_dialog(heading=32036, icon=addon_icon):
 	Thread(target=progress_dialog.run).start()
 	return progress_dialog
 
-def ok_dialog(heading=32036, text='', ok_label=32839, top_space=True):
+def ok_dialog(heading=32036, text='', ok_label=32839):
 	from windows import open_window
 	if isinstance(heading, int): heading = local_string(heading)
 	if isinstance(text, int): text = local_string(text)
 	if isinstance(ok_label, int): ok_label = local_string(ok_label)
 	if not text: text = '[CR][CR]%s' % local_string(32760)
-	elif top_space: text = '[CR][CR]%s' % text
 	kwargs = {'heading': heading, 'text': text, 'ok_label': ok_label}
 	return open_window(('windows.select_ok', 'OK'), 'ok.xml', **kwargs)
 
-def confirm_dialog(heading=32036, text='', ok_label=32839, cancel_label=32840, top_space=True, default_control=11):
+def confirm_dialog(heading=32036, text='', ok_label=32839, cancel_label=32840, default_control=11):
 	from windows import open_window
 	if isinstance(heading, int): heading = local_string(heading)
 	if isinstance(text, int): text = local_string(text)
 	if isinstance(ok_label, int): ok_label = local_string(ok_label)
 	if isinstance(cancel_label, int): cancel_label = local_string(cancel_label)
 	if not text: text = '[CR][CR]%s' % local_string(32580)
-	elif top_space: text = '[CR][CR]%s' % text
 	kwargs = {'heading': heading, 'text': text, 'ok_label': ok_label, 'cancel_label': cancel_label, 'default_control': default_control}
 	return open_window(('windows.select_ok', 'Confirm'), 'confirm.xml', **kwargs)
 
@@ -439,7 +444,7 @@ def toggle_language_invoker():
 	addon_xml = translate_path('special://home/addons/plugin.video.fen/addon.xml')
 	current_addon_setting = get_setting('reuse_language_invoker', 'true')
 	new_value = 'false' if current_addon_setting == 'true' else 'true'
-	if not confirm_dialog(text=local_string(33018) % (current_addon_setting.upper(), new_value.upper()), top_space=False): return
+	if not confirm_dialog(text=local_string(33018) % (current_addon_setting.upper(), new_value.upper())): return
 	if new_value == 'true' and not confirm_dialog(text=33019): return
 	tree = ET.parse(addon_xml)
 	root = tree.getroot()
@@ -493,13 +498,15 @@ def clean_settings(silent=False):
 				elif 'default' in item: content += '%s<setting id="%s" default="%s"></setting>' % (new_line, _id, item['default'])
 				elif 'value' in item: content += '%s<setting id="%s">%s</setting>' % (new_line, _id, item['value'])
 				else: content += '%s<setting id="%s"></setting>' % new_line
+				content = content.replace('></setting>', ' />')
+			else: removed_settings_append(item)
 		content += '\n</settings>'
 		return content
 	close_all_dialog()
-	active_settings, current_user_settings = [], []
-	active_append, current_append = active_settings.append, current_user_settings.append
+	active_settings, current_user_settings, removed_settings = [], [], []
+	active_append, current_append, removed_settings_append = active_settings.append, current_user_settings.append, removed_settings.append
 	root = ET.parse(addon_settings).getroot()
-	for i in root.findall('./category/setting'):
+	for i in root.findall('./section/category/group/setting'):
 		setting_id = i.get('id')
 		if setting_id: active_append(setting_id)
 	root = ET.parse(user_settings).getroot()
@@ -515,7 +522,7 @@ def clean_settings(silent=False):
 	new_content = _make_content(current_user_settings)
 	with open_file(user_settings, 'w') as f: f.write(new_content)
 	if not silent:
-		removed = str(len(root) - len(active_settings))
+		removed = len(removed_settings)
 		notification('%s - Removed %s %s' % (local_string(32576), removed, 'Setting' if removed == '1' else 'Settings'), 2500)
 
 def set_setting(setting_id, value):

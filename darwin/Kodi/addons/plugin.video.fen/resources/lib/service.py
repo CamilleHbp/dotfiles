@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 from modules import service_functions
 from modules.kodi_utils import Thread, xbmc_monitor, logger, local_string as ls
+# from modules.kodi_utils import set_property, execute_builtin
 
 fen_str = ls(32036).upper()
 OnNotificationActions = service_functions.OnNotificationActions()
@@ -12,6 +13,11 @@ class FenMonitor(xbmc_monitor):
 		self.startUpServices()
 	
 	def startUpServices(self):
+		# set_property('fen.test_property_include_content1', 'WidgetListPoster')
+		# set_property('fen.test_property_path1',
+		# 			'plugin://plugin.video.fen/?list_type=liked_lists&mode=trakt.list.build_trakt_list&slug=james-bond&user=any')
+		# set_property('fen.test_property_header1', 'James Bond')
+		# execute_builtin('ReloadSkin')
 		try: service_functions.InitializeDatabases().run()
 		except: pass
 		Thread(target=service_functions.DatabaseMaintenance().run).start()

@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 from windows import BaseDialog
-from modules.settings import get_art_provider, provider_sort_ranks, get_fanart_data
+from modules.settings import get_art_provider, provider_sort_ranks, get_fanart_data, suppress_episode_plot
 from modules.kodi_utils import json, Thread, dialog, select_dialog, ok_dialog, hide_busy_dialog, addon_fanart, empty_poster, fetch_kodi_imagecache, get_icon, local_string as ls
 # from modules.kodi_utils import logger
 
@@ -174,7 +174,9 @@ class SourceResults(BaseDialog):
 		self.setProperty('fanart', self.original_fanart())
 		self.setProperty('clearlogo', self.meta_get('custom_clearlogo') or self.meta_get(self.clearlogo_main) or self.meta_get(self.clearlogo_backup) or '')
 		self.setProperty('title', self.meta_get('title'))
-		self.setProperty('plot', self.meta_get('plot'))
+		if self.meta_get('media_type') == 'episode' and suppress_episode_plot(): plot = self.meta_get('tvshow_plot') or '* Hidden to Prevent Spoilers *'
+		else: plot = self.meta_get('plot', '') or self.meta_get('tvshow_plot', '')
+		self.setProperty('plot', plot)
 		self.setProperty('total_results', self.total_results)
 		self.setProperty('filters_ignored', self.filters_ignored)
 

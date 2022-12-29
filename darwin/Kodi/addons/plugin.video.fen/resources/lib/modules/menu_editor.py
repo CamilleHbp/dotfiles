@@ -13,14 +13,15 @@ fen_str, pos_str, top_pos_str, top_str, exists_str, addq_str = ls(32036), ls(327
 move_str, remove_str, add_org_str, fol_add_str, orig_add_str, fol_menu_str, trak_add_str = ls(32716), ls(32717), ls(32718), ls(32719), ls(32721), ls(32725), ls(32720)
 res_str, brws_str, upd_str, reload_str, emove_str, eremove_str, eclear_str = ls(32722), ls(32706), ls(32723), ls(32724), ls(32712), ls(32713), '%s %s' % (ls(32671), ls(32129))
 eedelete_str, eeremove_str, eeclear_str, eefadd_str, eefadde_str, eesets_str, trlike_str = ls(32703), ls(32786), ls(32699), ls(32731), ls(32730), ls(33081), ls(32776)
-trunlike_str, trnew_str, trdel_str, eerem_disc_str, _str, _str, _str = ls(32783), ls(32780), ls(32781), ls(32698), ls(0), ls(0), ls(0)
+trunlike_str, trnew_str, trdel_str, eerem_disc_str, down_str, furk_add_str, furk_remove_str = ls(32783), ls(32780), ls(32781), ls(32698), ls(32747), ls(32769), ls(32766)
+furk_p_str, furk_up_str, cloud_link_str, cloud_unlink_str, brow_str = ls(32767), ls(32768), ls(33078), ls(33079), ls(32652)
 
 class MenuEditor:
 	def __init__(self, params):
 		self.params = params
 		self.params_get = self.params.get
 		if 'menu_item' in self.params: self.menu_item = json.loads(self.params.get('menu_item'))
-		else: self.menu_item = dict(parse_qsl(get_infolabel("ListItem.FileNameAndPath").replace('plugin://plugin.video.fen/?','')))
+		else: self.menu_item = dict(parse_qsl(get_infolabel('ListItem.FileNameAndPath').replace('plugin://plugin.video.fen/?','')))
 		self.menu_item_get = self.menu_item.get
 		self.icon = get_icon('edit')
 
@@ -66,6 +67,17 @@ class MenuEditor:
 			listing = [(self.remove_bold(eedelete_str), self.shortcut_folder_delete)]
 		elif mode == 'get_search_term':
 			listing = [(self.remove_bold(eeremove_str), self.remove_search_history), (self.remove_bold(eeclear_str), self.clear_search_history)]
+		elif mode in ('playback.video', 'real_debrid.resolve_rd', 'alldebrid.resolve_ad', 'easynews.resolve_easynews', 'cloud.furk_direct', 'furk.furk_t_file_browser'):
+			listing = [(self.remove_bold(down_str), self.premium_file_download)]
+			if mode == 'furk.furk_t_file_browser':
+				if self.params_get('display_mode') == 'search': listing.append((self.remove_bold(furk_add_str), self.furk_add_file))
+				else:
+					listing.append((self.remove_bold(furk_remove_str), self.furk_remove_file))
+					if self.params_get('is_protected') == '0': listing.append((self.remove_bold(furk_p_str), self.furk_protect_file))
+					elif self.params_get('is_protected') == '1': listing.append((self.remove_bold(furk_up_str), self.furk_unprotect_file))
+		elif mode in ('real_debrid.browse_rd_cloud', 'alldebrid.browse_ad_cloud'):
+			listing = [(self.remove_bold(cloud_link_str), self.add_link_to_debrid_folders), (self.remove_bold(cloud_unlink_str), self.remove_link_to_debrid_folders)]
+		elif mode == 'folder_scraper_manager_choice': listing = [(self.remove_bold(brow_str), self.browse_folder_scraper)]
 		else:
 			listing = [(self.remove_bold(eefadde_str), self.add_external), (self.remove_bold(eefadd_str), self.shortcut_folder_add_item)]
 			if action == 'tmdb_movies_sets': listing.append((self.remove_bold(eesets_str), self.movie_sets_to_collection))
@@ -184,7 +196,7 @@ class MenuEditor:
 		if default == new_contents: return notification(32983, 1500)
 		new_entry = [i for i in new_contents if not i in default][0]
 		new_entry_translated_name = ls(new_entry.get('name'))
-		if not confirm_dialog(text='%s[CR]%s' % (exists_str % new_entry_translated_name, addq_str), top_space=False): return notification(32736, 1500)
+		if not confirm_dialog(text='%s[CR]%s' % (exists_str % new_entry_translated_name, addq_str)): return notification(32736, 1500)
 		item_position = self._menu_select(current_list, new_entry_translated_name, position_list=True)
 		if item_position == None: return notification(32736, 1500)
 		current_list.insert(item_position, new_entry)
@@ -393,6 +405,41 @@ class MenuEditor:
 	def remove_all_discover_history(self):
 		from indexers.discover import Discover
 		Discover(self.menu_item).remove_all_history()
+
+	def furk_add_file(self):
+		from indexers.furk import add_to_files
+		add_to_files(self.menu_item_get('item_id'))
+
+	def furk_remove_file(self):
+		from indexers.furk import remove_from_files
+		remove_from_files(self.menu_item_get('item_id'))
+
+	def furk_protect_file(self):
+		from indexers.furk import myfiles_protect_unprotect
+		myfiles_protect_unprotect('protect', self.menu_item_get('name'), self.menu_item_get('item_id'))
+
+	def furk_unprotect_file(self):
+		from indexers.furk import myfiles_protect_unprotect
+		myfiles_protect_unprotect('unprotect', self.menu_item_get('name'), self.menu_item_get('item_id'))
+
+	def add_link_to_debrid_folders(self):
+		from indexers.dialogs import link_folders_choice
+		link_folders_choice(self.params_get('service'), self.menu_item_get('id'), 'add')
+
+	def remove_link_to_debrid_folders(self):
+		from indexers.dialogs import link_folders_choice
+		link_folders_choice(self.params_get('service'), self.menu_item_get('id'), 'remove')
+
+	def premium_file_download(self):
+		from modules.downloader import runner
+		params = {'mode': 'downloader', 'name': self.menu_item_get('name'), 'url': self.menu_item_get('url') or self.menu_item_get('url_dl'),
+					'action': self.params_get('action'), 'image': self.params_get('iconImage')}
+		runner(params)
+
+	def browse_folder_scraper(self):
+		params = {'mode': 'navigator.folder_navigator', 'folder_path': self.menu_item_get('folder_path'), 'media_type': self.menu_item_get('media_type'),
+					'folder_id': self.menu_item_get('setting_id')}
+		execute_builtin('Container.Update(%s)' % build_url(params))
 
 	def remove_bold(self, _str):
 		return _str.replace('[B]', '').replace('[/B]', '')

@@ -1,22 +1,38 @@
 {
-  "hash": "eee1f251ad05a65c9c0113cdd3c8d2c8f175f4b5ccc5c1d7ddfd11fa70f2e3af",
-  "timestamp": 1671613529.891306,
+  "hash": "e6d95770834a3292c2732028709a4de73d19d67ac21b0b359e9b706d7b7b7a7f",
+  "timestamp": 1672341225.720553,
   "results": [
+    {
+      "service_name": "opensubtitles",
+      "service": "OpenSubtitles",
+      "lang": "English",
+      "name": "Samurai.Champloo.2004.E01.720p.BDRip.XviD.AC3-ViSiON.srt",
+      "rating": 0,
+      "lang_code": "en",
+      "sync": "false",
+      "impaired": "false",
+      "color": "springgreen",
+      "action_args": {
+        "url": "https://dl.opensubtitles.org/en/download/src-api/vrf-f53f0bb9/sub/4349129",
+        "lang": "English",
+        "filename": "Samurai.Champloo.2004.E01.720p.BDRip.XviD.AC3-ViSiON.srt"
+      }
+    },
     {
       "service_name": "addic7ed",
       "service": "Addic7ed",
       "lang": "English",
-      "name": "Babylon Berlin.S04E09.WEBRip-ION10.srt",
+      "name": "Samurai Champloo.S01E01.720p BDRip ViSiON.srt",
       "rating": 0,
       "lang_code": "en",
       "sync": "false",
       "impaired": "false",
       "color": "deepskyblue",
       "action_args": {
-        "url": "https://www.addic7ed.com/updated/1/179574/0",
+        "url": "https://www.addic7ed.com/updated/1/30691/0",
         "lang": "English",
-        "filename": "Babylon Berlin.S04E09.WEBRip-ION10.srt",
-        "referer": "https://www.addic7ed.com/serie/Babylon_Berlin/4/9/Episode_#4.9",
+        "filename": "Samurai Champloo.S01E01.720p BDRip ViSiON.srt",
+        "referer": "https://www.addic7ed.com/serie/Samurai_Champloo/1/1/Shipp_dot",
         "raw": true
       }
     },
@@ -24,33 +40,16 @@
       "service_name": "opensubtitles",
       "service": "OpenSubtitles",
       "lang": "English",
-      "name": "Babylon.Berlin.S04E09.720p.HMAX.WEB-DL.DD5.1.H.264-playWEB.srt",
+      "name": "a-s._samurai_champloo_-_13_-_misguided_miscreants_part_1__rs2_.1080p_bd-rip.B372C4A5.srt",
       "rating": 0,
       "lang_code": "en",
       "sync": "false",
       "impaired": "false",
       "color": "springgreen",
       "action_args": {
-        "url": "https://dl.opensubtitles.org/en/download/src-api/vrf-f53a0bb5/sub/9302347",
+        "url": "https://dl.opensubtitles.org/en/download/src-api/vrf-f52e0bb2/sub/7313227",
         "lang": "English",
-        "filename": "Babylon.Berlin.S04E09.720p.HMAX.WEB-DL.DD5.1.H.264-playWEB.srt"
-      }
-    },
-    {
-      "service_name": "subscene",
-      "service": "Subscene",
-      "lang": "English",
-      "name": "Babylon.Berlin.S04E09.Episode.9.1080p.HMAX.WEB-DL.DD5.1.H.264.srt",
-      "rating": 0,
-      "lang_code": "en",
-      "sync": "false",
-      "impaired": "false",
-      "color": "dodgerblue",
-      "action_args": {
-        "url": "https://subscene.com/subtitles/babylon-berlin-fourth-season/english/2932045",
-        "lang": "english",
-        "filename": "Babylon.Berlin.S04E09.Episode.9.1080p.HMAX.WEB-DL.DD5.1.H.264.srt",
-        "episodeid": "s04e09"
+        "filename": "a-s._samurai_champloo_-_13_-_misguided_miscreants_part_1__rs2_.1080p_bd-rip.B372C4A5.srt"
       }
     }
   ]

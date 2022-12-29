@@ -8,7 +8,7 @@ from caches.main_cache import cache_object
 
 requests, sleep, confirm_dialog, ok_dialog, monitor = kodi_utils.requests, kodi_utils.sleep, kodi_utils.confirm_dialog, kodi_utils.ok_dialog, kodi_utils.monitor
 progress_dialog, dialog, get_icon, notification, ls = kodi_utils.progress_dialog, kodi_utils.dialog, kodi_utils.get_icon, kodi_utils.notification, kodi_utils.local_string
-get_setting, set_setting = kodi_utils.get_setting, kodi_utils.set_setting
+get_setting, set_setting, Thread = kodi_utils.get_setting, kodi_utils.set_setting, kodi_utils.Thread
 set_temp_highlight, restore_highlight, make_settings_dict = kodi_utils.set_temp_highlight, kodi_utils.restore_highlight, kodi_utils.make_settings_dict
 pause_settings_change, unpause_settings_change = kodi_utils.pause_settings_change, kodi_utils.unpause_settings_change
 
@@ -195,12 +195,6 @@ class RealDebridAPI:
 		response = requests.delete(base_url + url, timeout=timeout)
 		return response
 
-	def delete_download(self, download_id):
-		if self.token == '': return None
-		url = 'downloads/delete/%s&auth_token=%s' % (download_id, self.token)
-		response = requests.delete(base_url + url, timeout=timeout)
-		return response
-
 	def get_hosts(self):
 		string = 'fen_rd_valid_hosts'
 		url = 'hosts/domains'
@@ -236,8 +230,8 @@ class RealDebridAPI:
 						item_values = self.sort_cache_list([(i['filename'], i['filesize']) for i in item.values()])
 						for value in item_values:
 							filename = re.sub(r'[^A-Za-z0-9-]+', '.', value.replace('\'', '').replace('&', 'and').replace('%', '.percent')).lower()
-							filename_info = filename.replace(compare_title, '') 
-							if any(x in filename for x in EXTRAS): continue
+							filename_info = filename.replace(compare_title, '')
+							if any(x in filename_info for x in EXTRAS): continue
 					torrent_keys = item.keys()
 					if len(torrent_keys) == 0: continue
 					torrent_keys = ','.join(torrent_keys)
@@ -264,7 +258,8 @@ class RealDebridAPI:
 						match = False
 						for value in selected_files:
 							filename = re.sub(r'[^A-Za-z0-9-]+', '.', value[1]['path'].rsplit('/', 1)[1].replace('\'', '').replace('&', 'and').replace('%', '.percent')).lower()
-							if any(x in filename for x in EXTRAS): continue
+							filename_info = filename.replace(compare_title, '')
+							if any(x in filename_info for x in EXTRAS): continue
 							match, index = True, value[0]; break
 						if match: break
 				except: pass
@@ -273,9 +268,9 @@ class RealDebridAPI:
 				file_url = self.unrestrict_link(rd_link)
 				if file_url.endswith('rar'): file_url = None
 				if not any(file_url.lower().endswith(x) for x in extensions): file_url = None
-				if not store_to_cloud: self.delete_torrent(torrent_id)
+				if not store_to_cloud: Thread(target=self.delete_torrent, args=(torrent_id,)).start()
 				return file_url
-			self.delete_torrent(torrent_id)
+			else: self.delete_torrent(torrent_id)
 		except:
 			if torrent_id: self.delete_torrent(torrent_id)
 			return None
@@ -345,9 +340,9 @@ class RealDebridAPI:
 			hide_busy_dialog()
 			sleep(500)
 			if cancelled:
-				if confirm_dialog(text=32044): ok_dialog(heading=32733, text=ls(32732) % ls(32054), top_space=False)
+				if confirm_dialog(text=32044): ok_dialog(heading=32733, text=ls(32732) % ls(32054))
 				else: self.delete_torrent(torrent_id)
-			else: ok_dialog(heading=32733, text=message, top_space=False)
+			else: ok_dialog(heading=32733, text=message)
 			return False
 		show_busy_dialog()
 		try:
@@ -412,7 +407,7 @@ class RealDebridAPI:
 					if not torrent_keys: return _return_failed(ls(32736))
 					torrent_keys = ','.join(torrent_keys)
 					self.add_torrent_select(torrent_id, torrent_keys)
-					ok_dialog(text=ls(32732) % ls(32054), top_space=False)
+					ok_dialog(text=ls(32732) % ls(32054))
 					hide_busy_dialog()
 					return True
 				except Exception:

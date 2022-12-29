@@ -6,12 +6,12 @@ from modules.source_utils import supported_video_extensions
 from modules.utils import clean_file_name, normalize, jsondate_to_datetime
 # logger = kodi_utils.logger
 
-confirm_dialog, ok_dialog, kodi_refresh, dialog, notification = kodi_utils.confirm_dialog, kodi_utils.ok_dialog, kodi_utils.kodi_refresh, kodi_utils.dialog, kodi_utils.notification
+ok_dialog, dialog = kodi_utils.ok_dialog, kodi_utils.dialog
 show_busy_dialog, hide_busy_dialog, show_text, set_view_mode = kodi_utils.show_busy_dialog, kodi_utils.hide_busy_dialog, kodi_utils.show_text, kodi_utils.set_view_mode
 add_items, set_content, end_directory, external_browse = kodi_utils.add_items, kodi_utils.set_content, kodi_utils.end_directory, kodi_utils.external_browse
 default_rd_icon, fanart, fen_clearlogo = kodi_utils.get_icon('realdebrid'), kodi_utils.addon_fanart, kodi_utils.addon_clearlogo
 ls, sys, make_listitem, build_url = kodi_utils.local_string, kodi_utils.sys, kodi_utils.make_listitem, kodi_utils.build_url
-folder_str, file_str, delete_str, down_str = ls(32742).upper(), ls(32743).upper(), ls(32785), ls(32747)
+folder_str, file_str, down_str = ls(32742).upper(), ls(32743).upper(), ls(32747)
 linked_str, addlink_str, clearlink_str = ls(33074).upper(), ls(33078), ls(33079)
 extensions = supported_video_extensions()
 RealDebrid = RealDebridAPI()
@@ -35,19 +35,19 @@ def rd_torrent_cloud():
 				if linked_folder: display = '%02d | [B]%s | [COLOR limegreen]%s | %s[/B][/COLOR] | [I]%s[/I]' % (count, folder_str, linked_str, linked_folder, clean_folder_name)
 				else: display = '%02d | [B]%s[/B] | [I]%s [/I]' % (count, folder_str, clean_folder_name)
 				url_params = {'mode': 'real_debrid.browse_rd_cloud', 'id': folder_id}
-				delete_params = {'mode': 'real_debrid.delete', 'id': folder_id, 'cache_type': 'torrent'}
 				link_folders_add = {'mode': 'link_folders_choice', 'service': 'RD', 'folder_id': folder_id, 'action': 'add'}
 				link_folders_remove = {'mode': 'link_folders_choice', 'service': 'RD', 'folder_id': folder_id, 'action': 'remove'}
 				url = build_url(url_params)
 				cm_append((addlink_str,'RunPlugin(%s)' % build_url(link_folders_add)))
 				cm_append((clearlink_str,'RunPlugin(%s)' % build_url(link_folders_remove)))
-				cm_append(('[B]%s %s[/B]' % (delete_str, folder_str.capitalize()),'RunPlugin(%s)' % build_url(delete_params)))
 				listitem = make_listitem()
 				listitem.setLabel(display)
 				listitem.addContextMenuItems(cm)
 				listitem.setArt({'icon': default_rd_icon, 'poster': default_rd_icon, 'thumb': default_rd_icon, 'fanart': fanart,
 								'banner': default_rd_icon, 'clearlogo': fen_clearlogo})
 				listitem.setInfo('video', {'plot': ' '})
+				listitem.setProperty('fen.context_main_menu_params', build_url({'mode': 'menu_editor.edit_menu_external', 'name': clean_folder_name, 'iconImage': default_rd_icon,
+									'service': 'RD'}))
 				yield (url, listitem, True)
 			except: pass
 	try: cloud_files = [i for i in RealDebrid.user_cloud() if i['status'] == 'downloaded']
@@ -69,11 +69,9 @@ def rd_downloads():
 				name = clean_file_name(filename).upper()
 				display = '%02d | %.2f GB | %s  | [I]%s [/I]' % (count, size, datetime_object, name)
 				url_link = item['download']
-				url_params = {'mode': 'media_play', 'url': url_link, 'obj': 'video'}
+				url_params = {'mode': 'playback.video', 'url': url_link, 'obj': 'video'}
 				down_file_params = {'mode': 'downloader', 'name': name, 'url': url_link, 'action': 'cloud.realdebrid_direct', 'image': default_rd_icon}
-				delete_params = {'mode': 'real_debrid.delete', 'id': item['id'], 'cache_type': 'download'}
 				cm_append((down_str,'RunPlugin(%s)' % build_url(down_file_params)))
-				cm_append(('[B]%s %s[/B]' % (delete_str, file_str.capitalize()),'RunPlugin(%s)' % build_url(delete_params)))
 				url = build_url(url_params)
 				listitem = make_listitem()
 				listitem.setLabel(display)
@@ -81,6 +79,8 @@ def rd_downloads():
 				listitem.setArt({'icon': default_rd_icon, 'poster': default_rd_icon, 'thumb': default_rd_icon, 'fanart': fanart,
 								'banner': default_rd_icon, 'clearlogo': fen_clearlogo})
 				listitem.setInfo('video', {'plot': ' '})
+				listitem.setProperty('fen.context_main_menu_params', build_url({'mode': 'menu_editor.edit_menu_external', 'name': name, 'iconImage': default_rd_icon,
+									'action': 'cloud.realdebrid_direct'}))
 				yield (url, listitem, True)
 			except: pass
 	try: downloads = [i for i in RealDebrid.downloads() if i['download'].lower().endswith(tuple(extensions))]
@@ -111,6 +111,8 @@ def browse_rd_cloud(folder_id):
 				listitem.setArt({'icon': default_rd_icon, 'poster': default_rd_icon, 'thumb': default_rd_icon, 'fanart': fanart,
 								'banner': default_rd_icon, 'clearlogo': fen_clearlogo})
 				listitem.setInfo('video', {'plot': ' '})
+				listitem.setProperty('fen.context_main_menu_params', build_url({'mode': 'menu_editor.edit_menu_external', 'name': name, 'iconImage': default_rd_icon,
+									'action': 'cloud.realdebrid'}))
 				yield (url, listitem, False)
 			except: pass
 	handle = int(sys.argv[1])
@@ -122,14 +124,6 @@ def browse_rd_cloud(folder_id):
 	set_content(handle, 'files')
 	end_directory(handle, False)
 	if not external_browse(): set_view_mode('view.premium')
-
-def rd_delete(file_id, cache_type):
-	if not confirm_dialog(): return
-	if cache_type == 'torrent': result = RealDebrid.delete_torrent(file_id)
-	else: result = RealDebrid.delete_download(file_id) # cache_type: 'download'
-	if result.status_code in (401, 403, 404): return notification(32574)
-	RealDebrid.clear_cache()
-	kodi_refresh()
 
 def resolve_rd(params):
 	url = params['url']
