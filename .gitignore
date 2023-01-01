@@ -3,3 +3,4 @@
 # Ignore Kodi addons package artefacts
 darwin/Kodi/addons/packages 
 darwin/Kodi/userdata/Thumbnails
+darwin/Kodi/userdata/addon_data/service.subtitles.a4ksubtitles/temp
