@@ -94,7 +94,7 @@
     <setting id="imdb_lists.sort_type" default="true">0</setting>
     <setting id="imdb_lists.sort_direction" default="true">0</setting>
     <setting id="provider.external" default="true">true</setting>
-    <setting id="rd.token">NWFBUE3G4YBWPPNMJPT5G7JLZVN6OIXITZEEXVKTBQFNQNRO7JZA</setting>
+    <setting id="rd.token">YNHHQU32I52S3DNYNHKY7HG7ZHMP5XX7D65SMHAXKBBW27K3LLXQ</setting>
     <setting id="rd.enabled" default="true">true</setting>
     <setting id="rd.account_id">CamilleBC</setting>
     <setting id="rd.torrent.enabled" default="true">true</setting>

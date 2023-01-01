@@ -4,11 +4,11 @@
     <setting id="info.disablecrew" type="bool">false</setting>
     <setting id="info.disableyoutube" type="bool">false</setting>
     <setting id="info.disableupnext" type="bool">false</setting>
+    <setting id="ratings.disableimdb" type="bool">false</setting>
     <setting id="disableimdbrating" type="bool">false</setting>
     <setting id="dialoginfo.focusbuttons" type="bool">false</setting>
     <setting id="ratings.disablerottentomatoescritic" type="bool">false</setting>
     <setting id="ratings.hideall" type="bool">false</setting>
-    <setting id="ratings.disableimdb" type="bool">false</setting>
     <setting id="tmdbhelper.disableratings" type="bool">false</setting>
     <setting id="touchmode" type="bool">false</setting>
     <setting id="invertselectedtext" type="bool">false</setting>
@@ -72,11 +72,11 @@
     <setting id="codecs.usefilenameinfo" type="bool">false</setting>
     <setting id="startup.plugininit" type="bool">false</setting>
     <setting id="furniture.disableleftheader" type="bool">false</setting>
+    <setting id="widgets.fullscreencontext" type="bool">false</setting>
     <setting id="tmdbhelper.enableblur" type="bool">false</setting>
     <setting id="indicator.disableprogress" type="bool">false</setting>
-    <setting id="videoinfo.fullscreentrailer" type="bool">false</setting>
     <setting id="tmdbhelper.disableartwork" type="bool">false</setting>
-    <setting id="widgets.fullscreencontext" type="bool">false</setting>
+    <setting id="videoinfo.fullscreentrailer" type="bool">false</setting>
     <setting id="infoline.enableendtime" type="bool">false</setting>
     <setting id="home.iconicmenu" type="bool">false</setting>
     <setting id="ratings.enableuserrating" type="bool">false</setting>
@@ -112,31 +112,31 @@
     <setting id="info.disablefanart" type="bool">false</setting>
     <setting id="info.disablereviews" type="bool">false</setting>
     <setting id="recommendations.expandplot" type="bool">false</setting>
-    <setting id="TMDbHelper.MonitorContainer" type="string">99950</setting>
-    <setting id="BackgroundInterval" type="string"></setting>
     <setting id="TMDbHelper.Date.Format" type="string"></setting>
-    <setting id="BlurContainer" type="string"></setting>
-    <setting id="script-skinviewtypes-hash" type="string">d6a86c1ca136bd3c1d899bbf773fdf99</setting>
-    <setting id="homemenu.onup" type="string"></setting>
     <setting id="gradientcolor.name" type="string"></setting>
-    <setting id="focuscolor.name" type="string"></setting>
-    <setting id="skinshortcuts-sharedmenu" type="string">true</setting>
     <setting id="rows.ondown" type="string"></setting>
     <setting id="startup.imagefolder" type="string"></setting>
+    <setting id="script-skinviewtypes-hash" type="string">d6a86c1ca136bd3c1d899bbf773fdf99</setting>
+    <setting id="skinshortcuts-sharedmenu" type="string">true</setting>
+    <setting id="BackgroundInterval" type="string"></setting>
+    <setting id="BlurContainer" type="string"></setting>
+    <setting id="homemenu.onup" type="string"></setting>
+    <setting id="TMDbHelper.MonitorContainer" type="string">99950</setting>
+    <setting id="focuscolor.name" type="string"></setting>
     <setting id="TMDbHelper.AutoUpdate.LastTime" type="string"></setting>
-    <setting id="foregroundstyle" type="string">None</setting>
     <setting id="weatherclock" type="string"></setting>
     <setting id="OSD_Timeout" type="string"></setting>
+    <setting id="foregroundstyle" type="string">None</setting>
     <setting id="watchedprogresscolor.name" type="string"></setting>
-    <setting id="mpaa_country" type="string"></setting>
-    <setting id="skinshortcuts-widget-1" type="string">Addon</setting>
     <setting id="ServiceInterval" type="string"></setting>
+    <setting id="mpaa_country" type="string"></setting>
     <setting id="script-skinviewtypes-checksum" type="string">f4884878fe2c6bdc970153b971d86588</setting>
-    <setting id="BlurSaturation" type="string"></setting>
     <setting id="backgroundstyle" type="string">Fanart</setting>
-    <setting id="autoscrolltime" type="string"></setting>
-    <setting id="pvr.onback" type="string"></setting>
-    <setting id="skinshortcuts-widget-2" type="string">Addon</setting>
     <setting id="BlurRadius" type="string"></setting>
     <setting id="skinshortcuts-widget-3" type="string">Addon</setting>
+    <setting id="skinshortcuts-widget-1" type="string">Addon</setting>
+    <setting id="BlurSaturation" type="string"></setting>
+    <setting id="pvr.onback" type="string"></setting>
+    <setting id="autoscrolltime" type="string"></setting>
+    <setting id="skinshortcuts-widget-2" type="string">Addon</setting>
 </settings>
