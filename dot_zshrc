@@ -92,9 +92,12 @@ source $ZSH/oh-my-zsh.sh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 alias nf='cd ~/Dev/NosFuturs'
+alias nfshowcase='nf && cd ./showcase'
+alias nfui='nf && cd lib-web-ui'
 alias dev='cd ~/Dev/Personal'
 alias vi=nvim
 alias vim=nvim
+alias wishlist='dev && cd wishlist'
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -141,3 +144,4 @@ bindkey -M viins '\e\e' fuck-command-line
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init --path)"
+

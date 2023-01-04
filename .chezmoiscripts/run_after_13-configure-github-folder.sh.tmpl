@@ -46,7 +46,7 @@ log_task "[Github] SETUP"
 log_task "[Github] Clone Nos Futurs repos"
 mkdir -p ~/{{ .nf_dev_dir }} && cd ~/{{ .nf_dev_dir }}
 if [ ! -d "showcase" ]; then
-    git clone git@github.com:Nos-Futurs/showcase.git
+    git clone --recurse-submodules git@github.com:Nos-Futurs/showcase.git
 fi
 if [ ! -d "lib-web-ui" ]; then
     git clone git@github.com:Nos-Futurs/lib-web-ui.git
