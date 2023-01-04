@@ -1,2 +1,11 @@
 {"_id":"bounds","value":{"x":464,"y":258,"width":1200,"height":800,"maximized":true,"fullScreen":true}}
+{"_id":"defaultInvidiousInstance","value":"https://inv.odyssey346.dev"}
+{"_id":"useSponsorBlock","value":true}
+{"_id":"sponsorBlockRecap","value":{"color":"Orange","skip":"autoSkip"}}
+{"_id":"sponsorBlockRecap","value":{"color":"Orange","skip":"doNothing"}}
+{"_id":"baseTheme","value":"dark"}
+{"_id":"baseTheme","value":"black"}
+{"_id":"baseTheme","value":"dracula"}
+{"_id":"baseTheme","value":"catppuccinMocha"}
+{"_id":"defaultProfile","value":"7TUZDMSvMFtS3OZK"}
 {"_id":"bounds","value":{"x":464,"y":258,"width":1200,"height":800,"maximized":true,"fullScreen":true}}
