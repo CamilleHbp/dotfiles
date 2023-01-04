@@ -1,6 +1,7 @@
 # Ignore Oh-My-ZSH cache
 .oh-my-zsh/cache
 # Ignore Kodi addons package artefacts
+darwin/Kodi/**/__pycache__
 darwin/Kodi/addons/packages 
 darwin/Kodi/userdata/Thumbnails
 darwin/Kodi/userdata/addon_data/service.subtitles.a4ksubtitles/temp

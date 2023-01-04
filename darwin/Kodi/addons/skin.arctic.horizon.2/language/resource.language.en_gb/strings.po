@@ -1814,3 +1814,38 @@ msgstr ""
 msgctxt "#31360"
 msgid "Disable all ratings"
 msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31361"
+msgid "Customise background image"
+msgstr ""
+
+#: /1080i/Custom_1112_Backgrounds.xml
+msgctxt "#31362"
+msgid "Media Info Basic"
+msgstr ""
+
+#: /1080i/Includes_Views_List.xml
+msgctxt "#31363"
+msgid "Media Info Playlist"
+msgstr ""
+
+#: /1080i/script-skinshortcuts.xml
+msgctxt "#31364"
+msgid "Hub fullscreen widget"
+msgstr ""
+
+#: /1080i/script-skinshortcuts.xml
+msgctxt "#31365"
+msgid "Hub submenu node"
+msgstr ""
+
+#: /1080i/script-skinshortcuts.xml
+msgctxt "#31366"
+msgid "Hub widget nodes"
+msgstr ""
+
+#: /shortcuts/overrides.xml
+msgctxt "#31367"
+msgid "Hub - Custom"
+msgstr ""

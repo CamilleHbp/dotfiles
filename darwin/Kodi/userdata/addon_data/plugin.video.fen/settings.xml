@@ -22,7 +22,7 @@
     <setting id="rd.refresh">SVJSODKUZOHTVVTJZSH5OIOJ5ELSUDBG6LK23KJHSJEBXXT6BQKQ</setting>
     <setting id="rd.secret">10a62666beedd34dcadfa12ef2568564b3fc343d</setting>
     <setting id="results.sort_order" default="true">1</setting>
-    <setting id="database.maintenance.due">1672599539</setting>
+    <setting id="database.maintenance.due">1672862219</setting>
     <setting id="reuse_language_invoker" default="true">true</setting>
     <setting id="folder1.display_name" default="true">Folder 1</setting>
     <setting id="folder1.movies_directory" default="true">None</setting>
@@ -94,7 +94,7 @@
     <setting id="imdb_lists.sort_type" default="true">0</setting>
     <setting id="imdb_lists.sort_direction" default="true">0</setting>
     <setting id="provider.external" default="true">true</setting>
-    <setting id="rd.token">YNHHQU32I52S3DNYNHKY7HG7ZHMP5XX7D65SMHAXKBBW27K3LLXQ</setting>
+    <setting id="rd.token">5T55SEIQFNA3RRVM63L2CQWNVZDCJ4YJE4KIMZTIENAWN2BJNYOQ</setting>
     <setting id="rd.enabled" default="true">true</setting>
     <setting id="rd.account_id">CamilleBC</setting>
     <setting id="rd.torrent.enabled" default="true">true</setting>

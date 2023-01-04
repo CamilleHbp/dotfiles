@@ -897,6 +897,8 @@
 			<property name="isSubmenu">True</property>
 			</item>
 		</include>
+	<include />
+	<include name="skinshortcuts-submenu-2" />
 	<include name="skinshortcuts-group-movies">
 		<item id="1">
 			<property name="id">$NUMBER[1]</property>
@@ -2760,6 +2762,12 @@
 				</control>
 			</include>
 		</include>
+	<include name="skinshortcuts-group-movies-2">
+		<description>No items</description>
+		</include>
+	<include name="skinshortcuts-group-alt-movies-2">
+		<description>No items</description>
+		</include>
 	<include name="skinshortcuts-group-tvshows">
 		<item id="1">
 			<property name="id">$NUMBER[1]</property>
@@ -3030,6 +3038,12 @@
 			<property name="isSubmenu">True</property>
 			</item>
 		</include>
+	<include name="skinshortcuts-group-tvshows-2">
+		<description>No items</description>
+		</include>
+	<include name="skinshortcuts-group-alt-tvshows-2">
+		<description>No items</description>
+		</include>
 	<include name="skinshortcuts-group-animation">
 		<item id="1">
 			<property name="id">$NUMBER[1]</property>
@@ -3141,6 +3155,12 @@
 			<property name="group">animation.1</property>
 			<property name="isSubmenu">True</property>
 			</item>
+		</include>
+	<include name="skinshortcuts-group-animation-2">
+		<description>No items</description>
+		</include>
+	<include name="skinshortcuts-group-alt-animation-2">
+		<description>No items</description>
 		</include>
 	<include name="skinshortcuts-group-num-31085">
 		<item id="1">
@@ -3390,6 +3410,12 @@
 			<property name="isSubmenu">True</property>
 			</item>
 		</include>
+	<include name="skinshortcuts-group-num-31085-2">
+		<description>No items</description>
+		</include>
+	<include name="skinshortcuts-group-alt-num-31085-2">
+		<description>No items</description>
+		</include>
 	<include name="skinshortcuts-group-videos">
 		<item id="1">
 			<property name="id">$NUMBER[1]</property>
@@ -3597,6 +3623,12 @@
 			<property name="group">videos.1</property>
 			<property name="isSubmenu">True</property>
 			</item>
+		</include>
+	<include name="skinshortcuts-group-videos-2">
+		<description>No items</description>
+		</include>
+	<include name="skinshortcuts-group-alt-videos-2">
+		<description>No items</description>
 		</include>
 	<include name="skinshortcuts-group-powermenu">
 		<item id="1">
@@ -3879,6 +3911,12 @@
 		<description>No items</description>
 		</include>
 	<include name="skinshortcuts-group-alt-powermenu-1">
+		<description>No items</description>
+		</include>
+	<include name="skinshortcuts-group-powermenu-2">
+		<description>No items</description>
+		</include>
+	<include name="skinshortcuts-group-alt-powermenu-2">
 		<description>No items</description>
 		</include>
 	<include name="skinshortcuts-group-searchmenu">
@@ -4802,6 +4840,12 @@
 		<description>No items</description>
 		</include>
 	<include name="skinshortcuts-group-alt-searchmenu-1">
+		<description>No items</description>
+		</include>
+	<include name="skinshortcuts-group-searchmenu-2">
+		<description>No items</description>
+		</include>
+	<include name="skinshortcuts-group-alt-searchmenu-2">
 		<description>No items</description>
 		</include>
 	<include name="skinshortcuts-template-wallfade-top-visible">
