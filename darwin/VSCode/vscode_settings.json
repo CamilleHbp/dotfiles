@@ -45,4 +45,5 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "git.confirmSync": false,
+  "editor.wordWrap": "on",
 }
