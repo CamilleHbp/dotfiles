@@ -1,0 +1,218 @@
+{
+  "action-layout-toolbar": [
+    "Add Books",
+    "Edit Metadata",
+    null,
+    "Convert Books",
+    "View",
+    null,
+    "Choose Library",
+    "Donate",
+    null,
+    "Fetch News",
+    "Store",
+    "Save To Disk",
+    "Connect Share",
+    null,
+    "Remove Books",
+    "Tweak ePub",
+    "FanFicFare"
+  ],
+  "action-layout-toolbar-device": [
+    "Add Books",
+    "Edit Metadata",
+    null,
+    "Convert Books",
+    "View",
+    "Send To Device",
+    null,
+    null,
+    "Location Manager",
+    null,
+    null,
+    "Fetch News",
+    "Store",
+    "Save To Disk",
+    "Connect Share",
+    null,
+    "Remove Books",
+    "FanFicFare"
+  ],
+  "book_details_splitter_horizontal_state": [
+    true,
+    200
+  ],
+  "book_list_pin_splitter_state": {
+    "__class__": "bytearray",
+    "__value__": "AAAA/wAAAAEAAAACAAABAAAAAEYA/////wEAAAABAA=="
+  },
+  "cover_browser_splitter_vertical_state": [
+    false,
+    300
+  ],
+  "geometry-of-Plugin Updater plugin:plugin updater dialog": {
+    "frame_geometry": {
+      "height": 525,
+      "width": 930,
+      "x": 389,
+      "y": 289
+    },
+    "full_screened": false,
+    "geometry": {
+      "height": 497,
+      "width": 930,
+      "x": 389,
+      "y": 317
+    },
+    "maximized": false,
+    "normal_geometry": {
+      "height": 497,
+      "width": 930,
+      "x": 389,
+      "y": 317
+    },
+    "qt": {
+      "__class__": "bytearray",
+      "__value__": "AdnQywADAAAAAAGFAAABIQAABSYAAAMtAAABhQAAAT0AAAUmAAADLQAAAAAAAAAABsAAAAGFAAABPQAABSYAAAMt"
+    },
+    "screen": {
+      "depth": 24,
+      "device_pixel_ratio": 2.0,
+      "geometry_in_logical_pixels": {
+        "height": 1117,
+        "width": 1728,
+        "x": 0,
+        "y": 0
+      },
+      "index_in_screens_list": 0,
+      "manufacturer": "",
+      "model": "",
+      "name": "",
+      "serial": "",
+      "size_in_logical_pixels": {
+        "height": 1117,
+        "width": 1728
+      },
+      "virtual_geometry": {
+        "height": 1117,
+        "width": 1728,
+        "x": 0,
+        "y": 0
+      }
+    }
+  },
+  "geometry-of-calibre_main_window_geometry": {
+    "frame_geometry": {
+      "height": 1080,
+      "width": 1728,
+      "x": 0,
+      "y": 37
+    },
+    "full_screened": true,
+    "geometry": {
+      "height": 1080,
+      "width": 1728,
+      "x": 0,
+      "y": 37
+    },
+    "maximized": false,
+    "normal_geometry": {
+      "height": 1080,
+      "width": 1728,
+      "x": 0,
+      "y": 37
+    },
+    "qt": {
+      "__class__": "bytearray",
+      "__value__": "AdnQywADAAAAAAAAAAAAJQAABr8AAARcAAAAAAAAACUAAAa/AAAEXAAAAAAABAAABsAAAAAAAAAAJQAABr8AAARc"
+    },
+    "screen": {
+      "depth": 24,
+      "device_pixel_ratio": 2.0,
+      "geometry_in_logical_pixels": {
+        "height": 1117,
+        "width": 1728,
+        "x": 0,
+        "y": 0
+      },
+      "index_in_screens_list": 0,
+      "manufacturer": "",
+      "model": "",
+      "name": "",
+      "serial": "",
+      "size_in_logical_pixels": {
+        "height": 1117,
+        "width": 1728
+      },
+      "virtual_geometry": {
+        "height": 1117,
+        "width": 1728,
+        "x": 0,
+        "y": 0
+      }
+    }
+  },
+  "geometry-of-preferences dialog geometry": {
+    "frame_geometry": {
+      "height": 748,
+      "width": 930,
+      "x": 389,
+      "y": 177
+    },
+    "full_screened": false,
+    "geometry": {
+      "height": 720,
+      "width": 930,
+      "x": 389,
+      "y": 205
+    },
+    "maximized": false,
+    "normal_geometry": {
+      "height": 720,
+      "width": 930,
+      "x": 389,
+      "y": 205
+    },
+    "qt": {
+      "__class__": "bytearray",
+      "__value__": "AdnQywADAAAAAAGFAAAAsQAABSYAAAOcAAABhQAAAM0AAAUmAAADnAAAAAAAAAAABsAAAAGFAAAAzQAABSYAAAOc"
+    },
+    "screen": {
+      "depth": 24,
+      "device_pixel_ratio": 2.0,
+      "geometry_in_logical_pixels": {
+        "height": 1117,
+        "width": 1728,
+        "x": 0,
+        "y": 0
+      },
+      "index_in_screens_list": 0,
+      "manufacturer": "",
+      "model": "",
+      "name": "",
+      "serial": "",
+      "size_in_logical_pixels": {
+        "height": 1117,
+        "width": 1728
+      },
+      "virtual_geometry": {
+        "height": 1117,
+        "width": 1728,
+        "x": 0,
+        "y": 0
+      }
+    }
+  },
+  "grid view visible": false,
+  "library_usage_stats": {
+    "/Users/camille/Library/CloudStorage/Dropbox/Calibre": 6
+  },
+  "quick_start_guide_added": true,
+  "quickview visible": false,
+  "search bar visible": true,
+  "tag browser search box visible": false,
+  "tag_browser_splitter_horizontal_state": [
+    true,
+    200
+  ]
+}
