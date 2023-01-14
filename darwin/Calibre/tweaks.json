@@ -1,0 +1,17 @@
+{
+  "save_template_title_series_sorting": "strictly_alphabetic",
+  "sort_columns_at_startup": [
+    [
+      "authors",
+      0
+    ],
+    [
+      "series",
+      0
+    ],
+    [
+      "title",
+      0
+    ]
+  ]
+}

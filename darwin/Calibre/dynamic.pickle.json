@@ -1,5 +1,36 @@
 {
-  "database location dialog": "/Users/camille/Library/CloudStorage/Dropbox/Calibre",
+  "add books dialog dir": "/Users/camillebaillat/Movies/Tutorials/600+ Nude Poses - A Complete Reference Book for Photographers, Models and Artists",
+  "add books dialog dir-last-used-filter-spec-all-files": false,
+  "add formats dialog": "/Users/camillebaillat/Dropbox/Epub Edit/Virtuoso - RainTemple",
+  "add formats dialog-last-used-filter-spec-all-files": false,
+  "catalogs_to_be_synced": {
+    "__class__": "set",
+    "__value__": []
+  },
+  "change cover dialog": "/Users/camillebaillat/Downloads",
+  "choose calibre library": "/Users/camille/Library/CloudStorage/Dropbox/Calibre",
+  "choose library location": "/Users/camillebaillat/Documents/eBooks/Calibre-ASSTR",
+  "choose_library_icon": "/Users/camillebaillat/Documents/Pictures",
+  "database location dialog": "/Users/camillebaillat/Dropbox/Calibre",
+  "notified-version-updates": {
+    "__class__": "set",
+    "__value__": [
+      "5.43",
+      "5.41",
+      "5.36",
+      "6.9",
+      "6.1",
+      "5.38",
+      "5.39",
+      "6.0",
+      "6.2",
+      "6.3",
+      "5.37",
+      "6.11"
+    ]
+  },
+  "s_r_search_mode": 0,
+  "save to disk dialog": "/Users/camillebaillat/Documents/eBooks",
   "sort_history": [
     [
       "authors",
