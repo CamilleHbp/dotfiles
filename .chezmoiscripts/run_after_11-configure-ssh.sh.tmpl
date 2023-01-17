@@ -48,28 +48,28 @@ log_task "[SSH] SETUP"
 # --------------------- Copy ssh keys to the user folder --------------------- #
 log_task "[SSH] Copying SSH keys"
 mkdir -p ~/.ssh
-if [ ! -f "id_ed25519" ]; then
+if [ ! -f "~/.ssh/id_ed25519" ]; then
     {{ with $private_key := (onepasswordDetailsFields "w3rasa7gfmsvb6vkxvufledjny").private_key.value }}
         touch ~/.ssh/id_ed25519 && chmod 0600 ~/.ssh/id_ed25519
-        echo {{ $private_key | quote }} >> ~/.ssh/id_ed25519
+        echo {{ $private_key | quote }} > ~/.ssh/id_ed25519
     {{ end }}
 fi
-if [ ! -f "id_ed25519.pub" ]; then
+if [ ! -f "~/.ssh/id_ed25519.pub" ]; then
     {{ with $public_key := (onepasswordDetailsFields "w3rasa7gfmsvb6vkxvufledjny").public_key.value }}
         touch ~/.ssh/id_ed25519.pub && chmod 0644 ~/.ssh/id_ed25519.pub
-        echo {{ $public_key | quote }} >> ~/.ssh/id_ed25519.pub
+        echo {{ $public_key | quote }} > ~/.ssh/id_ed25519.pub
     {{ end }}
 fi
-if [ ! -f "id_ed25519_elbowarrior" ]; then
+if [ ! -f "~/.ssh/id_ed25519_elbowarrior" ]; then
     {{ with $elbo_private_key := (onepasswordDetailsFields "l6nqfvclhwzs3432g3x4ppjrti").private_key.value }}
         touch ~/.ssh/id_ed25519_elbowarrior && chmod 0600 ~/.ssh/id_ed25519_elbowarrior
-        echo {{ $elbo_private_key | quote }} >> ~/.ssh/id_ed25519_elbowarrior
+        echo {{ $elbo_private_key | quote }} > ~/.ssh/id_ed25519_elbowarrior
     {{ end }}
 fi
-if [ ! -f "id_ed25519_elbowarrior.pub" ]; then
+if [ ! -f "~/.ssh/id_ed25519_elbowarrior.pub" ]; then
     {{ with $elbo_public_key := (onepasswordDetailsFields "l6nqfvclhwzs3432g3x4ppjrti").public_key.value }}
         touch ~/.ssh/id_ed25519_elbowarrior.pub && chmod 0644 ~/.ssh/id_ed25519_elbowarrior.pub
-        echo {{ $elbo_public_key | quote }} >> ~/.ssh/id_ed25519_elbowarrior.pub
+        echo {{ $elbo_public_key | quote }} > ~/.ssh/id_ed25519_elbowarrior.pub
     {{end}}
 fi
 log_success "[SSH] SSH keys copied"
