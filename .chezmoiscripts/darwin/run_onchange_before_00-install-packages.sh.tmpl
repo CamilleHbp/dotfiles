@@ -122,8 +122,8 @@ log_success "[Packages] Homebrew installed and up-to-date"
   ) -}}
 
   # TODO: fix jDownloader's install
-    #"1password"
   {{ $casks = concat $casks (list
+    "1password"
     "1password-cli"
     "alfred"
     "appcleaner"
@@ -141,6 +141,7 @@ log_success "[Packages] Homebrew installed and up-to-date"
     "protonvpn"
     "spotify"
     "steermouse"
+    "todoist"
     "vlc"
   ) -}}
 {{ end -}}
