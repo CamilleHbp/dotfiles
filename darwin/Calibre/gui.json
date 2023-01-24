@@ -53,7 +53,7 @@
   },
   "book_details_splitter_horizontal_state": [
     true,
-    200
+    194
   ],
   "book_info_dialog_layout": [
     {
@@ -236,7 +236,7 @@
   },
   "fff:add new dialog": {
     "__class__": "bytearray",
-    "__value__": "AdnQywADAAAAAALgAAABjAAABNQAAANVAAAC4AAAAagAAATUAAADVQAAAAAAAAAABwAAAALgAAABqAAABNQAAANV"
+    "__value__": "AdnQywADAAAAAALgAAABjAAABNQAAANVAAAC4AAAAagAAATUAAADVQAAAAAAAAAABsAAAALgAAABqAAABNQAAANV"
   },
   "fff:add new/update dialogs:show_download_options": true,
   "fff:get story urls": {
@@ -245,7 +245,7 @@
   },
   "fff:personal.ini": {
     "__class__": "bytearray",
-    "__value__": "AdnQywADAAAAAAMlAAAB0AAABkwAAARBAAADJQAAAewAAAZMAAAEQQAAAAAAAAAABwAAAAMlAAAB7AAABkwAAARB"
+    "__value__": "AdnQywADAAAAAAAAAAAAIAAABr8AAARcAAADJQAAAewAAAZMAAAEQQAAAAACAAAABsAAAAAAAAAAPAAABr8AAARc"
   },
   "fff:showcalcols": {
     "__class__": "bytearray",
@@ -262,6 +262,57 @@
   "fts_search_splitter_state": {
     "__class__": "bytearray",
     "__value__": "AAAA/wAAAAEAAAAC//////////8A/////wEAAAABAA=="
+  },
+  "geometry-of-FanFicFare log viewer": {
+    "frame_geometry": {
+      "height": 654,
+      "width": 1177,
+      "x": 536,
+      "y": 270
+    },
+    "full_screened": false,
+    "geometry": {
+      "height": 626,
+      "width": 1177,
+      "x": 536,
+      "y": 298
+    },
+    "maximized": false,
+    "normal_geometry": {
+      "height": 626,
+      "width": 1177,
+      "x": 536,
+      "y": 298
+    },
+    "qt": {
+      "__class__": "bytearray",
+      "__value__": "AdnQywADAAAAAAIYAAABDgAABrAAAAObAAACGAAAASoAAAawAAADmwAAAAAAAAAABsAAAAIYAAABKgAABrAAAAOb"
+    },
+    "screen": {
+      "depth": 24,
+      "device_pixel_ratio": 2.0,
+      "geometry_in_logical_pixels": {
+        "height": 1117,
+        "width": 1728,
+        "x": 0,
+        "y": 0
+      },
+      "index_in_screens_list": 0,
+      "manufacturer": "",
+      "model": "",
+      "name": "",
+      "serial": "",
+      "size_in_logical_pixels": {
+        "height": 1117,
+        "width": 1728
+      },
+      "virtual_geometry": {
+        "height": 1117,
+        "width": 1728,
+        "x": 0,
+        "y": 0
+      }
+    }
   },
   "geometry-of-Plugin Updater plugin:plugin updater dialog": {
     "frame_geometry": {
@@ -330,14 +381,14 @@
     },
     "maximized": false,
     "normal_geometry": {
-      "height": 1080,
+      "height": 1051,
       "width": 1728,
       "x": 0,
-      "y": 37
+      "y": 66
     },
     "qt": {
       "__class__": "bytearray",
-      "__value__": "AdnQywADAAAAAAAAAAAAJQAABr8AAARcAAAAAAAAACUAAAa/AAAEXAAAAAAABAAABsAAAAAAAAAAJQAABr8AAARc"
+      "__value__": "AdnQywADAAAAAAAAAAAAJQAABr8AAARcAAAAAAAAAEIAAAa/AAAEXAAAAAAABAAABsAAAAAAAAAAJQAABr8AAARc"
     },
     "screen": {
       "depth": 24,
@@ -471,48 +522,48 @@
     "frame_geometry": {
       "height": 570,
       "width": 633,
-      "x": 570,
-      "y": 275
+      "x": 547,
+      "y": 261
     },
     "full_screened": false,
     "geometry": {
       "height": 542,
       "width": 633,
-      "x": 570,
-      "y": 303
+      "x": 547,
+      "y": 289
     },
     "maximized": false,
     "normal_geometry": {
       "height": 542,
       "width": 633,
-      "x": 570,
-      "y": 303
+      "x": 547,
+      "y": 289
     },
     "qt": {
       "__class__": "bytearray",
-      "__value__": "AdnQywADAAAAAAI6AAABEwAABLIAAANMAAACOgAAAS8AAASyAAADTAAAAAAAAAAABwAAAAI6AAABLwAABLIAAANM"
+      "__value__": "AdnQywADAAAAAAIjAAABBQAABJsAAAM+AAACIwAAASEAAASbAAADPgAAAAAAAAAABsAAAAIjAAABIQAABJsAAAM+"
     },
     "screen": {
       "depth": 24,
       "device_pixel_ratio": 2.0,
       "geometry_in_logical_pixels": {
-        "height": 1120,
-        "width": 1792,
+        "height": 1117,
+        "width": 1728,
         "x": 0,
         "y": 0
       },
       "index_in_screens_list": 0,
       "manufacturer": "",
       "model": "",
-      "name": "Color LCD",
+      "name": "",
       "serial": "",
       "size_in_logical_pixels": {
-        "height": 1120,
-        "width": 1792
+        "height": 1117,
+        "width": 1728
       },
       "virtual_geometry": {
-        "height": 1120,
-        "width": 1792,
+        "height": 1117,
+        "width": 1728,
         "x": 0,
         "y": 0
       }
@@ -620,6 +671,57 @@
       }
     }
   },
+  "geometry-of-plugin config dialog:User interface action:FanFicFare": {
+    "frame_geometry": {
+      "height": 713,
+      "width": 1028,
+      "x": 578,
+      "y": 282
+    },
+    "full_screened": false,
+    "geometry": {
+      "height": 685,
+      "width": 1028,
+      "x": 578,
+      "y": 310
+    },
+    "maximized": false,
+    "normal_geometry": {
+      "height": 685,
+      "width": 1028,
+      "x": 578,
+      "y": 310
+    },
+    "qt": {
+      "__class__": "bytearray",
+      "__value__": "AdnQywADAAAAAAJCAAABGgAABkUAAAPiAAACQgAAATYAAAZFAAAD4gAAAAAAAAAABsAAAAJCAAABNgAABkUAAAPi"
+    },
+    "screen": {
+      "depth": 24,
+      "device_pixel_ratio": 2.0,
+      "geometry_in_logical_pixels": {
+        "height": 1117,
+        "width": 1728,
+        "x": 0,
+        "y": 0
+      },
+      "index_in_screens_list": 0,
+      "manufacturer": "",
+      "model": "",
+      "name": "",
+      "serial": "",
+      "size_in_logical_pixels": {
+        "height": 1117,
+        "width": 1728
+      },
+      "virtual_geometry": {
+        "height": 1117,
+        "width": 1728,
+        "x": 0,
+        "y": 0
+      }
+    }
+  },
   "geometry-of-preferences dialog geometry": {
     "frame_geometry": {
       "height": 1079,
@@ -684,7 +786,7 @@
     "__value__": "AdnQywADAAAAAAI6AAABEwAABLIAAANMAAACOgAAAS8AAASyAAADTAAAAAAAAAAABwAAAAI6AAABLwAABLIAAANM"
   },
   "library_usage_stats": {
-    "/Users/camille/Library/CloudStorage/Dropbox/Calibre": 9,
+    "/Users/camille/Library/CloudStorage/Dropbox/Calibre": 19,
     "/Users/camillebaillat/Documents/eBooks/Calibre-ASSTR": 5,
     "/Users/camillebaillat/Documents/ebooks/Calibre-RPG": 37,
     "/Users/camillebaillat/Dropbox/Calibre": 197
@@ -783,10 +885,10 @@
     "authors": true,
     "last_modified": false,
     "ondevice": false,
-    "series": 1,
+    "series": true,
     "size": false,
     "timestamp": false,
-    "title": 1
+    "title": true
   },
   "quality check plugin:cover options dialog": {
     "__class__": "bytearray",

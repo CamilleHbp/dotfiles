@@ -47,6 +47,12 @@
   "jobs_search_history": [],
   "lrf_viewer_search_history": [],
   "main_search_history": [
+    "horcrux",
+    "Gor",
+    "kuang",
+    "katarhoi",
+    "not tags:\"=completed\"",
+    "The Perfect Run",
     "identifiers:\"=url:\"",
     "identifiers:\"=url\"",
     "identifiers:\"=url:storiesonline\"",
@@ -65,13 +71,7 @@
     "tags:\"=fanfiction\"",
     "authors:\"=megamatt09\"",
     "read:\"yese\"",
-    "read:\"yes\"",
-    "read:\"true\"",
-    "ondevice:\"false\"",
-    "ondevice:\"true\"",
-    "the most ancient",
-    "literalsin",
-    "literasin"
+    "read:\"yes\""
   ],
   "main_window_geometry": {
     "__class__": "bytearray",

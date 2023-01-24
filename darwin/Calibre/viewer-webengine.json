@@ -1,50 +1,50 @@
 {
   "geometry-of-main_window_geometry": {
     "frame_geometry": {
-      "height": 774,
-      "width": 597,
-      "x": 576,
-      "y": 277
+      "height": 772,
+      "width": 576,
+      "x": 544,
+      "y": 310
     },
     "full_screened": false,
     "geometry": {
-      "height": 746,
-      "width": 597,
-      "x": 576,
-      "y": 305
+      "height": 744,
+      "width": 576,
+      "x": 544,
+      "y": 338
     },
     "maximized": false,
     "normal_geometry": {
-      "height": 746,
-      "width": 597,
-      "x": 576,
-      "y": 305
+      "height": 744,
+      "width": 576,
+      "x": 544,
+      "y": 338
     },
     "qt": {
       "__class__": "bytearray",
-      "__value__": "AdnQywADAAAAAAJAAAABFQAABJQAAAQaAAACQAAAATEAAASUAAAEGgAAAAAAAAAABwAAAAJAAAABMQAABJQAAAQa"
+      "__value__": "AdnQywADAAAAAAIgAAABNgAABF8AAAQ5AAACIAAAAVIAAARfAAAEOQAAAAAAAAAABsAAAAIgAAABUgAABF8AAAQ5"
     },
     "screen": {
       "depth": 24,
       "device_pixel_ratio": 2.0,
       "geometry_in_logical_pixels": {
-        "height": 1120,
-        "width": 1792,
+        "height": 1117,
+        "width": 1728,
         "x": 0,
         "y": 0
       },
       "index_in_screens_list": 0,
       "manufacturer": "",
       "model": "",
-      "name": "Color LCD",
+      "name": "",
       "serial": "",
       "size_in_logical_pixels": {
-        "height": 1120,
-        "width": 1792
+        "height": 1117,
+        "width": 1728
       },
       "virtual_geometry": {
-        "height": 1120,
-        "width": 1792,
+        "height": 1117,
+        "width": 1728,
         "x": 0,
         "y": 0
       }
@@ -56,7 +56,7 @@
   },
   "main_window_state": {
     "__class__": "bytearray",
-    "__value__": "AAAA/wAAAAH9AAAAAgAAAAAAAAEOAAAC6vwCAAAAAvsAAAAQAHQAbwBjAC0AZABvAGMAawIAAACfAAAA9AAAAQAAAALq+wAAABYAcwBlAGEAcgBjAGgALQBkAG8AYwBrAAAAAAAAAALqAAAAlQD///8AAAABAAACTwAAAur8AgAAAAT7AAAAFgBsAG8AbwBrAHUAcAAtAGQAbwBjAGsAAAAAAP////8AAAB9AP////sAAAAcAGIAbwBvAGsAbQBhAHIAawBzAC0AZABvAGMAawAAAAAA/////wAAAOcA////+wAAABwAaQBuAHMAcABlAGMAdABvAHIALQBkAG8AYwBrAAAAAAAAAALqAAAAEwD////7AAAAHgBoAGkAZwBoAGwAaQBnAGgAdABzAC0AZABvAGMAawAAAAAA/////wAAAMkA////AAACVQAAAuoAAAAEAAAABAAAAAgAAAAI/AAAAAEAAAAAAAAAAQAAAB4AYQBjAHQAaQBvAG4AcwBfAHQAbwBvAGwAYgBhAHICAAAAAP////8AAAAAAAAAAA=="
+    "__value__": "AAAA/wAAAAH9AAAAAgAAAAAAAAEOAAAC6vwCAAAAAvsAAAAQAHQAbwBjAC0AZABvAGMAawIAAACfAAAA9AAAAQAAAALq+wAAABYAcwBlAGEAcgBjAGgALQBkAG8AYwBrAAAAAAAAAALqAAAAlQD///8AAAABAAACTwAAAur8AgAAAAT7AAAAFgBsAG8AbwBrAHUAcAAtAGQAbwBjAGsAAAAAAP////8AAAB9AP////sAAAAcAGIAbwBvAGsAbQBhAHIAawBzAC0AZABvAGMAawAAAAAA/////wAAAOcA////+wAAABwAaQBuAHMAcABlAGMAdABvAHIALQBkAG8AYwBrAAAAAAAAAALqAAAAEwD////7AAAAHgBoAGkAZwBoAGwAaQBnAGgAdABzAC0AZABvAGMAawAAAAAA/////wAAAMkA////AAACQAAAAugAAAAEAAAABAAAAAgAAAAI/AAAAAEAAAAAAAAAAQAAAB4AYQBjAHQAaQBvAG4AcwBfAHQAbwBvAGwAYgBhAHICAAAAAP////8AAAAAAAAAAA=="
   },
   "old_prefs_migrated": true,
   "saved-search-settings": {
@@ -83,6 +83,15 @@
       "singleinstance": false
     },
     "standalone_recently_opened": [
+      {
+        "authors": [
+          "R. F. Kuang"
+        ],
+        "key": "/Users/camille/Library/CloudStorage/Dropbox/Calibre/R. F. Kuang/The Dragon Republic (3197)/The Dragon Republic - R. F. Kuang.epub",
+        "pathtoebook": "/Users/camille/Library/CloudStorage/Dropbox/Calibre/R. F. Kuang/The Dragon Republic (3197)/The Dragon Republic - R. F. Kuang.epub",
+        "timestamp": "2023-01-14T09:37:50.220Z",
+        "title": "The Dragon Republic"
+      },
       {
         "authors": [
           "Johnny Ranger McCoy"
@@ -296,15 +305,6 @@
         "key": "/Users/camillebaillat/Downloads/IRC/Adrian Tchaikovsky - (Shadows of the Apt 06) - The Sea Watch.epub",
         "pathtoebook": "/Users/camillebaillat/Downloads/IRC/Adrian Tchaikovsky - (Shadows of the Apt 06) - The Sea Watch.epub",
         "timestamp": "2022-06-09T14:04:32.807Z",
-        "title": "The Sea Watch"
-      },
-      {
-        "authors": [
-          "Adrian Tchaikovsky"
-        ],
-        "key": "/Users/camillebaillat/Downloads/IRC/Adrian Tchaikovsky - (Shadows of the Apt 06) - The Sea Watch (src).epub",
-        "pathtoebook": "/Users/camillebaillat/Downloads/IRC/Adrian Tchaikovsky - (Shadows of the Apt 06) - The Sea Watch (src).epub",
-        "timestamp": "2022-06-09T14:04:23.320Z",
         "title": "The Sea Watch"
       }
     ]
