@@ -1,4 +1,13 @@
-Host *.github.com
+Host github.com
+  HostName github.com
   AddKeysToAgent yes
   UseKeychain yes
   IdentityFile ~/.ssh/id_ed25519
+  IdentitiesOnly yes
+
+Host github-elboWarrior
+  HostName github.com
+  AddKeysToAgent yes
+  UseKeychain yes
+  IdentityFile ~/.ssh/id_ed25519_elbowarrior
+  IdentitiesOnly yes
