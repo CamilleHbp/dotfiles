@@ -94,15 +94,23 @@ git_list_files() {
   done <<< "$(git rev-list --all --objects | awk '{print $1}' | git cat-file --batch-check | sort -k3nr | head -n 20)"
 }
 
+pipuninstall () 
+{ 
+    pip install -q pipdeptree
+    pipdeptree -p$1 -fj | jq ".[] | .package.key" | xargs pip uninstall -y
+}
+
 # ---------------------------------- Aliases --------------------------------- #
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
+alias dev='cd ~/Dev/Personal'
 alias nf='cd ~/Dev/NosFuturs'
+alias nfprojectx='nf && cd ./projectx'
 alias nfshowcase='nf && cd ./showcase'
 alias nfui='nf && cd lib-web-ui'
-alias dev='cd ~/Dev/Personal'
+alias renpy='personal && cd "Renpy Projects"'
 alias vi=nvim
 alias vim=nvim
 alias wishlist='dev && cd wishlist'

@@ -1,9 +1,9 @@
 {"_id":"baseTheme","value":"catppuccinMocha"}
-{"_id":"bounds","value":{"x":464,"y":259,"width":800,"height":600,"maximized":true,"fullScreen":false}}
+{"_id":"bounds","value":{"x":464,"y":259,"width":800,"height":600,"maximized":true,"fullScreen":true}}
+{"_id":"defaultCaptionSettings","value":"{\"backgroundColor\":\"#000\",\"backgroundOpacity\":\"1\",\"color\":\"#FFF\",\"fontFamily\":\"proportionalSansSerif\",\"textOpacity\":\"1\",\"windowColor\":\"#000\",\"windowOpacity\":\"0\"}"}
 {"_id":"defaultInvidiousInstance","value":"https://inv.odyssey346.dev"}
 {"_id":"defaultProfile","value":"7TUZDMSvMFtS3OZK"}
-{"_id":"playNextVideo","value":true}
+{"_id":"playNextVideo","value":false}
 {"_id":"sponsorBlockRecap","value":{"color":"Orange","skip":"doNothing"}}
 {"_id":"useSponsorBlock","value":true}
-{"_id":"bounds","value":{"x":464,"y":259,"width":800,"height":600,"maximized":true,"fullScreen":false}}
-{"_id":"bounds","value":{"x":464,"y":259,"width":800,"height":600,"maximized":true,"fullScreen":false}}
+{"_id":"bounds","value":{"x":464,"y":259,"width":800,"height":600,"maximized":true,"fullScreen":true}}

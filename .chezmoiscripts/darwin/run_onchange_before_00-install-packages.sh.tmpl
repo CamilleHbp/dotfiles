@@ -118,6 +118,7 @@ log_success "[Packages] Homebrew installed and up-to-date"
 # Personal packages
 {{ if .personal -}}
   {{   $brews = concat $brews (list
+    "jq"
     "nvim"
   ) -}}
 

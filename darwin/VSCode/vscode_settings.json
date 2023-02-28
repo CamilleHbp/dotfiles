@@ -1,14 +1,26 @@
 {
-  "editor.codeActionsOnSave": {
-    "source.organizeImports": false
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "files.associations": {
-    "*.tmpl": "shellscript"
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[markdown]": {
     "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
   },
-  "vim.smartRelativeLine": true,
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": false
+  },
+  "editor.wordWrap": "on",
   "evenBetterToml.formatter.alignComments": true,
   "evenBetterToml.formatter.alignEntries": true,
   "evenBetterToml.formatter.arrayTrailingComma": true,
@@ -21,29 +33,65 @@
   "evenBetterToml.formatter.indentString": "  ",
   "evenBetterToml.formatter.columnWidth": 120,
   "evenBetterToml.formatter.allowedBlankLines": 1,
-  "[toml]": {},
-  "redhat.telemetry.enabled": false,
-  "[typescriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  "files.associations": {
+    "*.tmpl": "shellscript"
   },
-  "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "workbench.iconTheme": "material-icon-theme",
   "git.autofetch": true,
-  "javascript.updateImportsOnFileMove.enabled": "always",
-  "typescript.updateImportsOnFileMove.enabled": "always",
-  "[jsonc]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "security.workspace.trust.untrustedFiles": "newWindow",
-  "[json]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "omnisharp.useModernNet": false,
-  "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
   "git.confirmSync": false,
-  "editor.wordWrap": "on"
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "markdown.extension.toc.levels": "2..6",
+  "omnisharp.useModernNet": false,
+  "redhat.telemetry.enabled": false,
+  "security.workspace.trust.untrustedFiles": "newWindow",
+  "todohighlight.keywords": [
+    {
+      "text": "INFO:", // without a defined regex pattern this is the string that will be matched
+      "color": "green",
+      "backgroundColor": "rgba(0,0,0,0)", // INFO: setting the last parameter to zero (alpha channel) disables the background colour
+      "border": "none",
+      "isWholeLine": false
+  },
+    {
+      "text": "DEBUG:",
+      "before": {
+        "contentText": "🚧️" // adds text before the highlight
+      },
+      "after": {
+        "contentText": "🚧️" // adds text after the highlight
+      },
+      "color": "orange",
+      "border": "1px solid orange",
+      "borderRadius": "2px", // NOTE: use borderRadius along with `border` or you will see nothing change
+      "backgroundColor": "rgba(0,0,0,.2)",
+      "diagnosticSeverity": "information", // Set diagnostic severity to `none`, `information`, `warning` or `error`
+      "isWholeLine": true
+    },
+    {
+      "text": "WARNING:",
+      "before": {
+        "contentText": "🚨️" // adds text before the highlight
+      },
+      "after": {
+        "contentText": "🚨️" // adds text after the highlight
+      },
+      "color": "red",
+      "border": "1px solid red",
+      "borderRadius": "2px", // NOTE: use borderRadius along with `border` or you will see nothing change
+      "backgroundColor": "rgba(0,0,0,.2)",
+      "diagnosticSeverity": "warning", // Set diagnostic severity to `none`, `information`, `warning` or `error`
+      "isWholeLine": true
+    }
+  ],
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "vim.normalModeKeyBindingsNonRecursive": [
+    // FIX https://github.com/VSCodeVim/Vim/issues/8157#issuecomment-1426704638
+    // Wait for new release, else we should migrate to using vscode-neovim extension
+    { "before": ["u"], "commands": ["undo"] },
+    { "before": ["c-r"], "commands": ["redo"] }
+  ],
+  "vim.smartRelativeLine": true,
+  "workbench.iconTheme": "material-icon-theme",
+  "[python]": {
+    "editor.formatOnType": true
+  }
 }
