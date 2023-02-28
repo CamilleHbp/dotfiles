@@ -82,6 +82,15 @@
       "isWholeLine": true
     }
   ],
+  "todo-tree.general.tags": [
+    "BUG",
+    "DEBUG",
+    "FIXME",
+    "HACK",
+    "INFO",
+    "TODO",
+    "XXX"
+  ],
   "typescript.updateImportsOnFileMove.enabled": "always",
   "vim.normalModeKeyBindingsNonRecursive": [
     // FIX https://github.com/VSCodeVim/Vim/issues/8157#issuecomment-1426704638
