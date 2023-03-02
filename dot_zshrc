@@ -69,7 +69,6 @@ zstyle ':omz:update' mode disabled  # The oh-my-zsh folder is not a git folder b
 # thefuck
 plugins=(
   git
-  ssh-agent
   vi-mode
   zsh-autosuggestions
   zsh-history-substring-search
@@ -107,7 +106,7 @@ pipuninstall ()
 # For a full list of active aliases, run `alias`.
 alias dev='cd ~/Dev/Personal'
 alias nf='cd ~/Dev/NosFuturs'
-alias nfprojectx='nf && cd ./projectx'
+alias nfprojectx='nf && cd ./project-x'
 alias nfshowcase='nf && cd ./showcase'
 alias nfui='nf && cd lib-web-ui'
 alias renpy='personal && cd "Renpy Projects"'
