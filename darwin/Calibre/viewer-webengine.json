@@ -36,7 +36,7 @@
       "index_in_screens_list": 0,
       "manufacturer": "",
       "model": "",
-      "name": "",
+      "name": "Built-in Retina Display",
       "serial": "",
       "size_in_logical_pixels": {
         "height": 1117,
@@ -83,6 +83,15 @@
       "singleinstance": false
     },
     "standalone_recently_opened": [
+      {
+        "authors": [
+          "nobody103"
+        ],
+        "key": "/Users/camille/Library/CloudStorage/Dropbox/Calibre/Domagoj Kurmaic/Mother of Learning (3341)/Mother of Learning - Domagoj Kurmaic.epub",
+        "pathtoebook": "/Users/camille/Library/CloudStorage/Dropbox/Calibre/Domagoj Kurmaic/Mother of Learning (3341)/Mother of Learning - Domagoj Kurmaic.epub",
+        "timestamp": "2023-03-19T15:57:39.116Z",
+        "title": "Mother of Learning"
+      },
       {
         "authors": [
           "R. F. Kuang"
@@ -297,15 +306,6 @@
         "pathtoebook": "/Users/camillebaillat/Documents/ebooks/Calibre-RPG/Call of Chtuluh/Cthulhu Mythos Encyclopedia (3513)/Cthulhu Mythos Encyclopedia - Call of Chtuluh.epub",
         "timestamp": "2022-07-27T05:33:11.615Z",
         "title": "Cthulhu Mythos Encyclopedia"
-      },
-      {
-        "authors": [
-          "Tchaikovsky, Adrian"
-        ],
-        "key": "/Users/camillebaillat/Downloads/IRC/Adrian Tchaikovsky - (Shadows of the Apt 06) - The Sea Watch.epub",
-        "pathtoebook": "/Users/camillebaillat/Downloads/IRC/Adrian Tchaikovsky - (Shadows of the Apt 06) - The Sea Watch.epub",
-        "timestamp": "2022-06-09T14:04:32.807Z",
-        "title": "The Sea Watch"
       }
     ]
   },

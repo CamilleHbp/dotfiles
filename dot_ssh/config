@@ -11,3 +11,17 @@ Host github-elboWarrior
   UseKeychain yes
   IdentityFile ~/.ssh/id_ed25519_elbowarrior
   IdentitiesOnly yes
+
+Host ovh
+  HostName 141.95.160.182
+  AddKeysToAgent yes
+  UseKeychain yes
+  IdentityFile ~/.ssh/id_ed25519
+  IdentitiesOnly yes
+
+Host ovh-ca
+  HostName 37.187.87.120
+  AddKeysToAgent yes
+  UseKeychain yes
+  IdentityFile ~/.ssh/id_ed25519
+  IdentitiesOnly yes

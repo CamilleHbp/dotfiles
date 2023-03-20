@@ -102,5 +102,8 @@
   "workbench.iconTheme": "material-icon-theme",
   "[python]": {
     "editor.formatOnType": true
-  }
+  },
+  "workbench.colorTheme": "Rosé Pine Moon",
+  "editor.fontFamily": "'Cartograph CF', Menlo, Monaco, 'Courier New', monospace",
+  "gitlens.plusFeatures.enabled": false
 }

@@ -1,14 +1,14 @@
-AlsoSaveAsKra=false
+AlsoSaveAsKra=true
 AntialiasSelectionOutline=false
 ArtColorSel.ColorSpace=0
 ArtColorSel.InversedSaturation=false
-ArtColorSel.Light=0.29192915291491833
+ArtColorSel.Light=0.7277070265249456
 ArtColorSel.LightPieces=11
 ArtColorSel.NumRings=7
 ArtColorSel.RingPieces=12
 ArtColorSel.SelColorH=0
 ArtColorSel.SelColorS=0
-ArtColorSel.SelColorX=0.29192915291491833
+ArtColorSel.SelColorX=0.7277070265249456
 ArtColorSel.defaultHueSteps=12
 ArtColorSel.defaultSaturationSteps=7
 ArtColorSel.defaultValueScaleSteps=11
@@ -21,10 +21,14 @@ ArtColorSel.showBgColor=true
 ArtColorSel.showValueScale=false
 AutoSaveInterval=420
 CanvasOnlyActive=false
+CanvasSize/ConstrainProportions=false
+CanvasSize/KeepAspectRatio=false
 ColorManagement/UseSystemMonitorProfile=false
 ConvertToImageColorSpaceOnImport=false
 CreateBackupFile=true
 ExportConfiguration-image/jpeg=<!DOCTYPE params>\n<params>\n <param type="internal" name="baseline">true</param>\n <param type="internal" name="exif">true</param>\n <param type="string" name="filters"><![CDATA[]]></param>\n <param type="internal" name="forceSRGB">false</param>\n <param type="internal" name="iptc">true</param>\n <param type="internal" name="optimize">true</param>\n <param type="internal" name="progressive">false</param>\n <param type="internal" name="quality">90</param>\n <param type="internal" name="saveProfile">true</param>\n <param type="internal" name="smoothing">0</param>\n <param type="internal" name="storeAuthor">false</param>\n <param type="internal" name="storeMetaData">false</param>\n <param type="internal" name="subsampling">0</param>\n <param type="color" name="transparencyFillcolor"><![CDATA[<!DOCTYPE color>\n<color>\n <RGB space="sRGB-elle-V2-g10.icc" r="1" b="1" g="1"/>\n</color>\n]]></param>\n <param type="internal" name="xmp">true</param>\n</params>\n
+ExportConfiguration-image/png=<!DOCTYPE params>\n<params>\n <param name="alpha" type="internal">true</param>\n <param name="compression" type="internal">9</param>\n <param name="downsample" type="internal">false</param>\n <param name="forceSRGB" type="internal">true</param>\n <param name="indexed" type="internal">false</param>\n <param name="interlaced" type="internal">false</param>\n <param name="saveAsHDR" type="internal">false</param>\n <param name="saveSRGBProfile" type="internal">false</param>\n <param name="storeAuthor" type="internal">false</param>\n <param name="storeMetaData" type="internal">false</param>\n <param name="transparencyFillcolor" type="color"><![CDATA[<!DOCTYPE color>\n<color>\n <RGB b="1" space="sRGB-elle-V2-g10.icc" g="1" r="1"/>\n</color>\n]]></param>\n</params>\n
+ExportConfiguration-image/webp=<!DOCTYPE params>\n<params>\n <param name="alpha_compression" type="internal">1</param>\n <param name="alpha_filtering" type="internal">1</param>\n <param name="alpha_quality" type="internal">100</param>\n <param name="autofilter" type="internal">false</param>\n <param name="dithering" type="internal">true</param>\n <param name="emulate_jpeg_size" type="internal">false</param>\n <param name="exact" type="internal">false</param>\n <param name="filter_sharpness" type="internal">0</param>\n <param name="filter_strength" type="internal">60</param>\n <param name="filter_type" type="internal">1</param>\n <param name="lossless" type="internal">true</param>\n <param name="low_memory" type="internal">false</param>\n <param name="method" type="internal">6</param>\n <param name="near_lossless" type="internal">100</param>\n <param name="partition_limit" type="internal">0</param>\n <param name="partitions" type="internal">0</param>\n <param name="pass" type="internal">1</param>\n <param name="preprocessing" type="internal">0</param>\n <param name="preset" type="internal">0</param>\n <param name="qmax" type="internal">100</param>\n <param name="qmin" type="internal">0</param>\n <param name="quality" type="internal">92</param>\n <param name="segments" type="internal">4</param>\n <param name="show_compressed" type="internal">false</param>\n <param name="sns_strength" type="internal">50</param>\n <param name="target_PSNR" type="internal">0</param>\n <param name="target_size" type="internal">0</param>\n <param name="thread_level" type="internal">true</param>\n <param name="use_sharp_yuv" type="internal">false</param>\n</params>\n
 FilterSelector/LastUsedFilter=hsvadjustment
 GamutMasks.viewMode=0
 KineticScrollingEnabled=true
@@ -41,10 +45,10 @@ Krita/Ocio/OcioConfigPath=
 Krita/Ocio/OcioLockColorVisualRepresentation=false
 Krita/Ocio/OcioLutPath=
 Krita/Ocio/UseOcio=false
-LastBackGroundColor=<!DOCTYPE LastBackGroundColor>\n<LastBackGroundColor>\n <RGB r="0" b="0" space="sRGB-elle-V2-srgbtrc.icc" g="0"/>\n</LastBackGroundColor>\n
-LastForeGroundColor=<!DOCTYPE LastForeGroundColor>\n<LastForeGroundColor>\n <Gray space="Gray-D50-elle-V2-srgbtrc.icc" g="0.286274522542953"/>\n</LastForeGroundColor>\n
-LastPreset=f) Bristles-4 Glaze
-LastPreset_-1=f) Bristles-4 Glaze
+LastBackGroundColor=<!DOCTYPE LastBackGroundColor>\n<LastBackGroundColor>\n <RGB b="0" space="sRGB-elle-V2-srgbtrc.icc" g="0" r="0"/>\n</LastBackGroundColor>\n
+LastForeGroundColor=<!DOCTYPE LastForeGroundColor>\n<LastForeGroundColor>\n <Gray space="Gray-D50-elle-V2-srgbtrc.icc" g="0.733333349227905"/>\n</LastForeGroundColor>\n
+LastPreset=h) Chalk Soft
+LastPreset_-1=h) Chalk Soft
 LineSmoothingDelayDistance=50
 LineSmoothingDistance=50
 LineSmoothingFinishStabilizedCurve=true
@@ -55,6 +59,7 @@ LineSmoothingTailAggressiveness=0.15
 LineSmoothingType=1
 LineSmoothingUseDelayDistance=true
 OpenGLFilterMode=3
+PinnedFonts=.AppleSystemUIFont,Cartograph CF,Al Bayan,Academy Engraved LET
 ResourceDirectory=/Users/camille/Library/Application Support/krita
 ShowEraserOutlineWhilePainting=true
 ShowOutlineWhilePainting=true
@@ -81,6 +86,10 @@ brushHudSettings=<!DOCTYPE hud_properties>\n<hud_properties>\n <version value="1
 calculateAnimationCacheInBackground=true
 canvasBorderColor=128,128,128
 canvasState=OPENGL_SUCCESS
+canvasizedlg_heightunit=px
+canvasizedlg_widthunit=px
+canvasizedlg_xoffsetunit=px
+canvasizedlg_yoffsetunit=px
 checkerscolor=220,220,220
 checkerscolor2=255,255,255
 checksize=32
@@ -158,8 +167,8 @@ memoryPoolLimitPercent=0
 memorySoftLimitPercent=2
 monitorProfile=sRGB-elle-V2-srgbtrc.icc
 monitorProfile/OverrideX11=false
-moveToolChangedValueX=433
-moveToolChangedValueY=646
+moveToolChangedValueX=60
+moveToolChangedValueY=154
 moveToolUnit=0
 needsPixmapCacheWorkaround=false
 newCursorStyle=4
@@ -222,7 +231,7 @@ popuppalette/showRotationTrack=true
 popuppalette/size=385
 popuppalette/useDynamicSlotCount=true
 popuppalette/usevisualcolorselector=false
-presethistory=b) Basic-5 Size Opacity,c) Pencil-2,c) Pencil-5 Tilted,f) Bristles-4 Glaze
+presethistory=b) Basic-5 Size Opacity,c) Pencil-2,c) Pencil-5 Tilted,f) Bristles-4 Glaze,f) Bristles-3 Large Smooth,h) Chalk Soft
 renderIntent=0
 saveSessionOnQuit=false
 scratchpadVisible=true
@@ -259,8 +268,8 @@ zoomMarginSize=0
 
 [File Dialogs]
 DontUseNativeFileDialog=false
-OpenDocument=/Users/camille/Pictures/Photos Koji
-SaveAs=/Users/camille/Pictures/Photos Koji
+OpenDocument=/Users/camille/Dev/Personal/InvokeAI/prompts
+SaveAs=/Users/camille/Dev/Personal/InvokeAI/prompts
 
 [GradientChooser]
 global/itemSize=medium
@@ -576,17 +585,35 @@ pinControls=true
 
 [RecentFiles]
 File1[$e]=$HOME/Pictures/20221229 - Proko - Gestures 45secs.jpeg
+File10[$e]=$HOME/Dev/Personal/InvokeAI/outputs/000036.6461c335.4175315498.postprocessed-inpainting.kra
+File11[$e]=$HOME/Dev/Personal/InvokeAI/prompts/female.png
+File12[$e]=$HOME/Dev/Personal/InvokeAI/prompts/nun.jpeg
+File13[$e]=$HOME/Dev/Personal/InvokeAI/prompts/nun.kra
+File14[$e]=$HOME/Dev/Personal/InvokeAI/prompts/nun-face.png
+File15[$e]=$HOME/Dev/Personal/InvokeAI/prompts/nun-face.kra
 File2[$e]=$HOME/Pictures/20221229 - Proko - Gestures 2mn.jpeg
 File3[$e]=$HOME/Pictures/IMG_3327.jpg
 File4[$e]=$HOME/Pictures/Photos Koji/Camille Baillat-36_YSCORPORATE.jpg
 File5[$e]=$HOME/Pictures/Photos Koji/Camille Baillat-36_YSCORPORATE.kra
 File6[$e]=$HOME/Dev/Personal/Renpy Projects/hogwarts-unleashed/research/[GUI] Visual Novel GUI Pack 018/assets/screen/Background.png
+File7[$e]=$HOME/Pictures/bg unleashed.png
+File8[$e]=$HOME/Games/Cheats/RenPy_universal_transparent_textbox_mod_v2.6.3_by_Penfold_Mole/game/gui/textbox.png
+File9[$e]=$HOME/Dev/Personal/InvokeAI/outputs/000036.6461c335.4175315498.postprocessed-inpainting.png
 Name1=20221229 - Proko - Gestures 45secs.jpeg
+Name10=000036.6461c335.4175315498.postprocessed-inpainting.kra
+Name11=female.png
+Name12=nun.jpeg
+Name13=nun.kra
+Name14=nun-face.png
+Name15=nun-face.kra
 Name2=20221229 - Proko - Gestures 2mn.jpeg
 Name3=IMG_3327.jpg
 Name4=Camille Baillat-36_YSCORPORATE.jpg
 Name5=Camille Baillat-36_YSCORPORATE.kra
 Name6=Background.png
+Name7=bg unleashed.png
+Name8=textbox.png
+Name9=000036.6461c335.4175315498.postprocessed-inpainting.png
 maxRecentFileItems=100
 
 [SelectedTags]
@@ -602,6 +629,10 @@ workspaces=All
 
 [SvgSymbolCollection]
 currentCollection=0
+
+[SvgTextTool]
+Geometry=AdnQywADAAAAAAGWAAABOQAABhUAAAQmAAABlgAAAVUAAAYVAAAEJgAAAAAAAAAABsAAAAGWAAABVQAABhUAAAQm
+windowState=AAAA/wAAAAD9AAAAAAAABIAAAAJPAAAABAAAAAQAAAAIAAAACPwAAAADAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgEAAAAA/////wAAAAAAAAAAAAAAAgAAAAEAAAAYAGYAbwBuAHQAUwBlAHQAdABpAG4AZwBzAQAAAAD/////AAAAAAAAAAAAAAACAAAAAQAAABQAZgBvAHIAbQBhAHQAdABpAG4AZwEAAAAA/////wAAAAAAAAAA
 
 [advancedColorSelector]
 customSelectorBackgroundColor=160,160,164

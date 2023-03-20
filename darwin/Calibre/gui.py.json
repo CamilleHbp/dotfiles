@@ -47,6 +47,7 @@
   "jobs_search_history": [],
   "lrf_viewer_search_history": [],
   "main_search_history": [
+    "Mother of Learning",
     "horcrux",
     "Gor",
     "kuang",
@@ -70,8 +71,7 @@
     "author:\"=Bernard Cornwell\"",
     "tags:\"=fanfiction\"",
     "authors:\"=megamatt09\"",
-    "read:\"yese\"",
-    "read:\"yes\""
+    "read:\"yese\""
   ],
   "main_window_geometry": {
     "__class__": "bytearray",

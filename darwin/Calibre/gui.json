@@ -381,14 +381,14 @@
     },
     "maximized": false,
     "normal_geometry": {
-      "height": 1051,
+      "height": 1080,
       "width": 1728,
       "x": 0,
-      "y": 66
+      "y": 37
     },
     "qt": {
       "__class__": "bytearray",
-      "__value__": "AdnQywADAAAAAAAAAAAAJQAABr8AAARcAAAAAAAAAEIAAAa/AAAEXAAAAAAABAAABsAAAAAAAAAAJQAABr8AAARc"
+      "__value__": "AdnQywADAAAAAAAAAAAAJQAABr8AAARcAAAAAAAAACUAAAa/AAAEXAAAAAAABAAABsAAAAAAAAAAJQAABr8AAARc"
     },
     "screen": {
       "depth": 24,
@@ -402,7 +402,7 @@
       "index_in_screens_list": 0,
       "manufacturer": "",
       "model": "",
-      "name": "",
+      "name": "Built-in Retina Display",
       "serial": "",
       "size_in_logical_pixels": {
         "height": 1117,
@@ -786,7 +786,7 @@
     "__value__": "AdnQywADAAAAAAI6AAABEwAABLIAAANMAAACOgAAAS8AAASyAAADTAAAAAAAAAAABwAAAAI6AAABLwAABLIAAANM"
   },
   "library_usage_stats": {
-    "/Users/camille/Library/CloudStorage/Dropbox/Calibre": 19,
+    "/Users/camille/Library/CloudStorage/Dropbox/Calibre": 21,
     "/Users/camillebaillat/Documents/eBooks/Calibre-ASSTR": 5,
     "/Users/camillebaillat/Documents/ebooks/Calibre-RPG": 37,
     "/Users/camillebaillat/Dropbox/Calibre": 197

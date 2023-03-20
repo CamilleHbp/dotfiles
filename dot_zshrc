@@ -105,6 +105,8 @@ pipuninstall ()
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 alias dev='cd ~/Dev/Personal'
+alias invoke="invokeai && source .venv/bin/activate"
+alias invokeai="dev && cd InvokeAI"
 alias nf='cd ~/Dev/NosFuturs'
 alias nfprojectx='nf && cd ./project-x'
 alias nfshowcase='nf && cd ./showcase'
