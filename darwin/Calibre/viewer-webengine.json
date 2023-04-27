@@ -1,17 +1,17 @@
 {
   "geometry-of-main_window_geometry": {
     "frame_geometry": {
-      "height": 772,
-      "width": 576,
-      "x": 544,
-      "y": 310
+      "height": 1080,
+      "width": 1728,
+      "x": 0,
+      "y": 37
     },
-    "full_screened": false,
+    "full_screened": true,
     "geometry": {
-      "height": 744,
-      "width": 576,
-      "x": 544,
-      "y": 338
+      "height": 1080,
+      "width": 1728,
+      "x": 0,
+      "y": 37
     },
     "maximized": false,
     "normal_geometry": {
@@ -22,7 +22,7 @@
     },
     "qt": {
       "__class__": "bytearray",
-      "__value__": "AdnQywADAAAAAAIgAAABNgAABF8AAAQ5AAACIAAAAVIAAARfAAAEOQAAAAAAAAAABsAAAAIgAAABUgAABF8AAAQ5"
+      "__value__": "AdnQywADAAAAAAAAAAAAJQAABr8AAARcAAACIAAAAVIAAARfAAAEOQAAAAAABAAABsAAAAAAAAAAJQAABr8AAARc"
     },
     "screen": {
       "depth": 24,
@@ -56,7 +56,7 @@
   },
   "main_window_state": {
     "__class__": "bytearray",
-    "__value__": "AAAA/wAAAAH9AAAAAgAAAAAAAAEOAAAC6vwCAAAAAvsAAAAQAHQAbwBjAC0AZABvAGMAawIAAACfAAAA9AAAAQAAAALq+wAAABYAcwBlAGEAcgBjAGgALQBkAG8AYwBrAAAAAAAAAALqAAAAlQD///8AAAABAAACTwAAAur8AgAAAAT7AAAAFgBsAG8AbwBrAHUAcAAtAGQAbwBjAGsAAAAAAP////8AAAB9AP////sAAAAcAGIAbwBvAGsAbQBhAHIAawBzAC0AZABvAGMAawAAAAAA/////wAAAOcA////+wAAABwAaQBuAHMAcABlAGMAdABvAHIALQBkAG8AYwBrAAAAAAAAAALqAAAAEwD////7AAAAHgBoAGkAZwBoAGwAaQBnAGgAdABzAC0AZABvAGMAawAAAAAA/////wAAAMkA////AAACQAAAAugAAAAEAAAABAAAAAgAAAAI/AAAAAEAAAAAAAAAAQAAAB4AYQBjAHQAaQBvAG4AcwBfAHQAbwBvAGwAYgBhAHICAAAAAP////8AAAAAAAAAAA=="
+    "__value__": "AAAA/wAAAAH9AAAAAgAAAAAAAAEOAAAC6vwCAAAAAvsAAAAQAHQAbwBjAC0AZABvAGMAawIAAACfAAAA9AAAAQAAAALq+wAAABYAcwBlAGEAcgBjAGgALQBkAG8AYwBrAAAAAAAAAALqAAAAlQD///8AAAABAAACTwAABDj8AgAAAAT7AAAAFgBsAG8AbwBrAHUAcAAtAGQAbwBjAGsAAAAAAP////8AAAB9AP////sAAAAcAGIAbwBvAGsAbQBhAHIAawBzAC0AZABvAGMAawAAAAAA/////wAAAOcA////+wAAABwAaQBuAHMAcABlAGMAdABvAHIALQBkAG8AYwBrAAAAAAAAAAQ4AAAAEwD////7AAAAHgBoAGkAZwBoAGwAaQBnAGgAdABzAC0AZABvAGMAawAAAAAA/////wAAAMkA////AAAGwAAABDgAAAAEAAAABAAAAAgAAAAI/AAAAAEAAAAAAAAAAQAAAB4AYQBjAHQAaQBvAG4AcwBfAHQAbwBvAGwAYgBhAHICAAAAAP////8AAAAAAAAAAA=="
   },
   "old_prefs_migrated": true,
   "saved-search-settings": {
@@ -74,15 +74,35 @@
     }
   },
   "session_data": {
+    "base_font_size": 19,
     "controls_help_shown_count": 2,
+    "current_color_scheme": "*Rosé Pine",
+    "hide_tooltips": null,
+    "max_text_height": 800,
+    "max_text_width": 1500,
+    "override_book_colors": "never",
+    "read_mode": "flow",
     "standalone_font_settings": {},
-    "standalone_misc_settings": {
-      "remember_last_read": true,
-      "remember_window_geometry": false,
-      "save_annotations_in_ebook": true,
-      "singleinstance": false
-    },
+    "standalone_misc_settings": {},
     "standalone_recently_opened": [
+      {
+        "authors": [
+          "Graham McNeill"
+        ],
+        "key": "/Users/camille/Library/CloudStorage/Dropbox/Calibre/Graham McNeill/False Gods (2841)/False Gods - Graham McNeill.epub",
+        "pathtoebook": "/Users/camille/Library/CloudStorage/Dropbox/Calibre/Graham McNeill/False Gods (2841)/False Gods - Graham McNeill.epub",
+        "timestamp": "2023-03-27T11:12:24.579Z",
+        "title": "False Gods"
+      },
+      {
+        "authors": [
+          "Randy Ingermanson"
+        ],
+        "key": "/Users/camille/Library/CloudStorage/Dropbox/Calibre/Randy Ingermanson/How to Write a Novel Using the Snow (3019)/How to Write a Novel Using the - Randy Ingermanson.epub",
+        "pathtoebook": "/Users/camille/Library/CloudStorage/Dropbox/Calibre/Randy Ingermanson/How to Write a Novel Using the Snow (3019)/How to Write a Novel Using the - Randy Ingermanson.epub",
+        "timestamp": "2023-03-23T18:42:17.580Z",
+        "title": "How to Write a Novel Using the Snowflake Method"
+      },
       {
         "authors": [
           "nobody103"
@@ -288,26 +308,17 @@
         "pathtoebook": "/Users/camillebaillat/Dropbox/Calibre/Noble, Gordon; Evans, Nicholas;/The King in the North (3499)/The King in the North - Noble, Gordon; Evans, Nicholas;.epub",
         "timestamp": "2022-07-28T06:40:24.934Z",
         "title": "The King in the North"
-      },
-      {
-        "authors": [
-          "Noble, Gordon; Evans, Nicholas;"
-        ],
-        "key": "/Users/camillebaillat/Dropbox/Calibre/Gordon Noble/The King in the North (3488)/The King in the North - Gordon Noble.epub",
-        "pathtoebook": "/Users/camillebaillat/Dropbox/Calibre/Gordon Noble/The King in the North (3488)/The King in the North - Gordon Noble.epub",
-        "timestamp": "2022-07-27T08:12:45.399Z",
-        "title": "The King in the North"
-      },
-      {
-        "authors": [
-          "Daniel Harms"
-        ],
-        "key": "/Users/camillebaillat/Documents/ebooks/Calibre-RPG/Call of Chtuluh/Cthulhu Mythos Encyclopedia (3513)/Cthulhu Mythos Encyclopedia - Call of Chtuluh.epub",
-        "pathtoebook": "/Users/camillebaillat/Documents/ebooks/Calibre-RPG/Call of Chtuluh/Cthulhu Mythos Encyclopedia (3513)/Cthulhu Mythos Encyclopedia - Call of Chtuluh.epub",
-        "timestamp": "2022-07-27T05:33:11.615Z",
-        "title": "Cthulhu Mythos Encyclopedia"
       }
-    ]
+    ],
+    "user_color_schemes": {
+      "*Rosé Pine": {
+        "background": "#232136",
+        "foreground": "#e0def4",
+        "link": "#c4a7e7",
+        "name": "Rosé Pine"
+      }
+    },
+    "user_stylesheet": ":root {\n  --base: #232136;\n  --surface: #2a273f;\n  --overlay: #393552;\n  --muted: #6e6a86;\n  --subtle: #908caa;\n  --text: #e0def4;\n  --love: #eb6f92;\n  --gold: #f6c177;\n  --rose: #ea9a97;\n  --pine: #3e8fb0;\n  --foam: #9ccfd8;\n  --iris: #c4a7e7;\n  --highlight-low: #2a283e;\n  --highlight-med: #44415a;\n  --highlight-high: #56526e;\n}\n\n[hidden] {\n  display: none;\n}\n\na {\n  color: var(--pine);\n}\n\na:active,\na:hover {\n  outline: 0;\n}\n\na:focus {\n  outline: thin dotted;\n}\n\na:hover {\n  color: var(--foam);\n}\n\na:visited {\n  color: var(--iris);\n}\n\nabbr[title] {\n  border-bottom: 1px dotted;\n}\n\narticle,\naside,\ndetails,\nfigcaption,\nfigure,\nfooter,\nheader,\nhgroup,\nnav,\nsection,\nsummary {\n  display: block;\n}\n\naudio,\ncanvas,\nvideo {\n  display: inline-block;\n}\n\naudio:not([controls]) {\n  display: none;\n  height: 0;\n}\n\nb,\nstrong {\n  font-weight: bold;\n}\n\nbody {\n  font-family: 'Cartograph CF';\n  background-color: var(--base);\n  color: var(--text);\n  padding: 10px;\n  word-wrap: break-word;\n  margin: 0 auto;\n  border: 1pt solid var(--highlight-high);\n  padding: 1em;\n}\n\n\nbutton,\nhtml input[type=\\\"button\\\"],\ninput[type=\\\"reset\\\"],\ninput[type=\\\"submit\\\"] {\n  -webkit-appearance: button;\n  cursor: pointer;\n}\n\nbutton,\ninput {\n  line-height: normal;\n}\n\nbutton,\ninput,\nselect,\ntextarea {\n  font-family: inherit;\n  font-size: 100%;\n  margin: 0;\n}\n\nbutton::-moz-focus-inner,\ninput::-moz-focus-inner {\n  border: 0;\n  padding: 0;\n}\n\nbutton[disabled],\ninput[disabled] {\n  cursor: default;\n}\n\ncode {\n  background-color: #073642;\n  padding: 2px;\n}\n\ncode,\nkbd,\npre,\nsamp {\n  font-family: monospace, serif;\n}\n\ndfn {\n  font-style: italic;\n}\n\nfieldset {\n  border: 1px solid #c0c0c0;\n  margin: 0 2px;\n  padding: 0.35em 0.625em 0.75em;\n}\n\nfigure {\n  margin: 0;\n}\n\nh1 {\n  font-size: 2.8em;\n}\n\nh1 {\n  font-size: 2em;\n}\n\nh1,\nh2,\nh3,\nh4,\nh5,\nh6 {\n  font-family: 'Cartograph CF';\n  text-align: center;\n  color: var(--rose);\n  font-weight: 400;\n}\n\nh2 {\n  font-size: 2.4em;\n}\n\nh3 {\n  font-size: 1.8em;\n}\n\nh4 {\n  font-size: 1.4em;\n}\n\nh5 {\n  font-size: 1.3em;\n}\n\nh6 {\n  font-size: 1.15em;\n}\n\nhtml {\n  background-color: var(--base);\n  color: var(--text);\n}\n\nimg {\n  border: 0;\n}\n\ninput[type=\\\"checkbox\\\"],\ninput[type=\\\"radio\\\"] {\n  box-sizing: border-box;\n  padding: 0;\n}\n\ninput[type=\\\"search\\\"] {\n  -webkit-appearance: textfield;\n  -moz-box-sizing: content-box;\n  -webkit-box-sizing: content-box;\n  box-sizing: content-box;\n}\n\ninput[type=\\\"search\\\"]::-webkit-search-cancel-button,\ninput[type=\\\"search\\\"]::-webkit-search-decoration {\n  -webkit-appearance: none;\n}\n\nlegend {\n  border: 0;\n  padding: 0;\n}\n\nmark {\n  background: #ff0;\n  color: #000;\n}\n\npre code {\n  background-color: #002b36;\n}\n\npre {\n  background-color: #002b36;\n  color: #839496;\n  border: 1pt solid #586e75;\n  padding: 1em;\n  box-shadow: 5pt 5pt 8pt #073642;\n}\n\npre {\n  white-space: pre-wrap;\n  word-wrap: break-word;\n}\n\npre,\ncode {\n  font-family: 'Cartograph CF', sans-serif;\n}\n\nq {\n  quotes: \\\"\\\\201C\\\" \\\"\\\\201D\\\" \\\"\\\\2018\\\" \\\"\\\\2019\\\";\n}\n\nsmall {\n  font-size: 80%;\n}\n\nsub {\n  bottom: -0.25em;\n}\n\nsub,\nsup {\n  font-size: 75%;\n  line-height: 0;\n  position: relative;\n  vertical-align: baseline;\n}\n\nsup {\n  top: -0.5em;\n}\n\nsvg:not(:root) {\n  overflow: hidden;\n}\n\ntable {\n  border-collapse: collapse;\n  border-spacing: 0;\n}\n\ntextarea {\n  overflow: auto;\n  vertical-align: top;\n}\n\n.ACTIVE {\n  -webkit-border-radius: 0.2em;\n  -moz-border-radius: 0.2em;\n  border-radius: 0.2em;\n  background-color: #268bd2;\n}\n\n.CANCELLED {\n  -webkit-border-radius: 0.2em;\n  -moz-border-radius: 0.2em;\n  border-radius: 0.2em;\n  background-color: #859900;\n}\n\n.DONE {\n  -webkit-border-radius: 0.2em;\n  -moz-border-radius: 0.2em;\n  border-radius: 0.2em;\n  background-color: #859900;\n}\n\n.HOLD {\n  -webkit-border-radius: 0.2em;\n  -moz-border-radius: 0.2em;\n  border-radius: 0.2em;\n  background-color: #d33682;\n}\n\n.NEXT {\n  -webkit-border-radius: 0.2em;\n  -moz-border-radius: 0.2em;\n  border-radius: 0.2em;\n  background-color: #268bd2;\n}\n\n.NOTE {\n  -webkit-border-radius: 0.2em;\n  -moz-border-radius: 0.2em;\n  border-radius: 0.2em;\n  background-color: #d33682;\n}\n\n.TODO {\n  -webkit-border-radius: 0.2em;\n  -moz-border-radius: 0.2em;\n  border-radius: 0.2em;\n  background-color: #2aa198;\n}\n\n.WAITING {\n  -webkit-border-radius: 0.2em;\n  -moz-border-radius: 0.2em;\n  border-radius: 0.2em;\n  background-color: #cb4b16;\n}\n\n.calibre4 {\n    font-size: 0.80em;\n}\n\n.tag {\n  -webkit-border-radius: 0.35em;\n  -moz-border-radius: 0.35em;\n  border-radius: 0.35em;\n}\n\n.tag {\n  background-color: #073642;\n  color: #d33682;\n  padding: 0 0.2em;\n}\n\n.todo,\n.next,\n.done {\n  color: #002b36;\n  background-color: #dc322f;\n  padding: 0 0.2em;\n}\n"
   },
   "viewer-search-case-sensitive": false,
   "viewer-search-mode": "normal"

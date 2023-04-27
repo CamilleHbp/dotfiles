@@ -109,14 +109,6 @@
         true
       ],
       [
-        "authors",
-        false
-      ],
-      [
-        "title",
-        true
-      ],
-      [
         "inlibrary",
         false
       ],
@@ -154,14 +146,6 @@
       [
         "authors",
         true
-      ],
-      [
-        "title",
-        true
-      ],
-      [
-        "authors",
-        false
       ],
       [
         "title",
@@ -351,7 +335,7 @@
       "index_in_screens_list": 0,
       "manufacturer": "",
       "model": "",
-      "name": "",
+      "name": "Built-in Retina Display",
       "serial": "",
       "size_in_logical_pixels": {
         "height": 1117,
@@ -367,17 +351,17 @@
   },
   "geometry-of-calibre_main_window_geometry": {
     "frame_geometry": {
-      "height": 1080,
+      "height": 1079,
       "width": 1728,
       "x": 0,
-      "y": 37
+      "y": 38
     },
     "full_screened": true,
     "geometry": {
-      "height": 1080,
+      "height": 1051,
       "width": 1728,
       "x": 0,
-      "y": 37
+      "y": 66
     },
     "maximized": false,
     "normal_geometry": {
@@ -388,7 +372,7 @@
     },
     "qt": {
       "__class__": "bytearray",
-      "__value__": "AdnQywADAAAAAAAAAAAAJQAABr8AAARcAAAAAAAAACUAAAa/AAAEXAAAAAAABAAABsAAAAAAAAAAJQAABr8AAARc"
+      "__value__": "AdnQywADAAAAAAAAAAAAJgAABr8AAARcAAAAAAAAACUAAAa/AAAEXAAAAAAABAAABsAAAAAAAAAAQgAABr8AAARc"
     },
     "screen": {
       "depth": 24,
@@ -738,14 +722,14 @@
     },
     "maximized": true,
     "normal_geometry": {
-      "height": 1057,
+      "height": 1051,
       "width": 1728,
       "x": 0,
-      "y": 60
+      "y": 66
     },
     "qt": {
       "__class__": "bytearray",
-      "__value__": "AdnQywADAAAAAAAAAAAAJgAABr8AAARcAAAAAAAAADwAAAa/AAAEXAAAAAACAAAABsAAAAAAAAAAQgAABr8AAARc"
+      "__value__": "AdnQywADAAAAAAAAAAAAJgAABr8AAARcAAAAAAAAAEIAAAa/AAAEXAAAAAACAAAABsAAAAAAAAAAQgAABr8AAARc"
     },
     "screen": {
       "depth": 24,
@@ -759,7 +743,7 @@
       "index_in_screens_list": 0,
       "manufacturer": "",
       "model": "",
-      "name": "",
+      "name": "Built-in Retina Display",
       "serial": "",
       "size_in_logical_pixels": {
         "height": 1117,
@@ -786,7 +770,7 @@
     "__value__": "AdnQywADAAAAAAI6AAABEwAABLIAAANMAAACOgAAAS8AAASyAAADTAAAAAAAAAAABwAAAAI6AAABLwAABLIAAANM"
   },
   "library_usage_stats": {
-    "/Users/camille/Library/CloudStorage/Dropbox/Calibre": 21,
+    "/Users/camille/Library/CloudStorage/Dropbox/Calibre": 30,
     "/Users/camillebaillat/Documents/eBooks/Calibre-ASSTR": 5,
     "/Users/camillebaillat/Documents/ebooks/Calibre-RPG": 37,
     "/Users/camillebaillat/Dropbox/Calibre": 197
@@ -825,14 +809,6 @@
     "languages_injected": true,
     "last_modified_injected": true,
     "sort_history": [
-      [
-        "authors",
-        true
-      ],
-      [
-        "title",
-        true
-      ],
       [
         "authors",
         false

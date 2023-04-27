@@ -108,8 +108,11 @@ alias dev='cd ~/Dev/Personal'
 alias invoke="invokeai && source .venv/bin/activate"
 alias invokeai="dev && cd InvokeAI"
 alias nf='cd ~/Dev/NosFuturs'
-alias nfprojectx='nf && cd ./project-x'
-alias nfshowcase='nf && cd ./showcase'
+alias nf-zeus='nf && cd ./zeus'
+alias nf-zeus-front='nf-zeus && cd ./apps/frontend-web'
+alias nf-zeus-back='nf-zeus && cd ./apps/services'
+alias nf-zeus-pr='nf && cd ./zeus-pr'
+alias nf-showcase='nf && cd ./showcase'
 alias nfui='nf && cd lib-web-ui'
 alias renpy='personal && cd "Renpy Projects"'
 alias vi=nvim
@@ -124,6 +127,7 @@ alias wishlist='dev && cd wishlist'
 # ---------------------------- Set PATH variables ---------------------------- #
 # Homebrew
 path=(/opt/homebrew/bin $path)
+path=(/opt/homebrew/sbin $path)
 path=(~/.local/bin $path)
 # ------------------------- Set default editor to VIM ------------------------ #
 export EDITOR=nvim

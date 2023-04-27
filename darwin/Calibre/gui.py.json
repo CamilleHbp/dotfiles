@@ -47,6 +47,8 @@
   "jobs_search_history": [],
   "lrf_viewer_search_history": [],
   "main_search_history": [
+    "tags:\"=warhammer-40k\"",
+    "snowflake",
     "Mother of Learning",
     "horcrux",
     "Gor",
@@ -69,9 +71,7 @@
     "worm",
     "tags:\"=history\"",
     "author:\"=Bernard Cornwell\"",
-    "tags:\"=fanfiction\"",
-    "authors:\"=megamatt09\"",
-    "read:\"yese\""
+    "tags:\"=fanfiction\""
   ],
   "main_window_geometry": {
     "__class__": "bytearray",

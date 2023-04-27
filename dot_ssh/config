@@ -13,6 +13,7 @@ Host github-elboWarrior
   IdentitiesOnly yes
 
 Host ovh
+  User debian
   HostName 141.95.160.182
   Port 49999
   AddKeysToAgent yes
@@ -21,6 +22,7 @@ Host ovh
   IdentitiesOnly yes
 
 Host ovh-ca
+  User ubuntu
   HostName 37.187.87.120
   Port 49999
   AddKeysToAgent yes

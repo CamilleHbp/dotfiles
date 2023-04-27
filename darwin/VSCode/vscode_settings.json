@@ -34,7 +34,8 @@
   "evenBetterToml.formatter.columnWidth": 120,
   "evenBetterToml.formatter.allowedBlankLines": 1,
   "files.associations": {
-    "*.tmpl": "shellscript"
+    "*.tmpl": "shellscript",
+    "*.scss": "scss"
   },
   "git.autofetch": true,
   "git.confirmSync": false,
@@ -50,7 +51,7 @@
       "backgroundColor": "rgba(0,0,0,0)", // INFO: setting the last parameter to zero (alpha channel) disables the background colour
       "border": "none",
       "isWholeLine": false
-  },
+    },
     {
       "text": "DEBUG:",
       "before": {
@@ -105,5 +106,9 @@
   },
   "workbench.colorTheme": "Rosé Pine Moon",
   "editor.fontFamily": "'Cartograph CF', Menlo, Monaco, 'Courier New', monospace",
-  "gitlens.plusFeatures.enabled": false
+  "gitlens.plusFeatures.enabled": false,
+  "editor.formatOnSave": true,
+  "[scss]": {
+    "editor.defaultFormatter": "sibiraj-s.vscode-scss-formatter"
+  }
 }

@@ -1,5 +1,5 @@
 {
-  "add books dialog dir": "/Users/camillebaillat/Movies/Tutorials/600+ Nude Poses - A Complete Reference Book for Photographers, Models and Artists",
+  "add books dialog dir": "/Users/camille/Documents/Warhammer",
   "add books dialog dir-last-used-filter-spec-all-files": false,
   "add formats dialog": "/Users/camillebaillat/Dropbox/Epub Edit/Virtuoso - RainTemple",
   "add formats dialog-last-used-filter-spec-all-files": false,
@@ -15,23 +15,28 @@
   "notified-version-updates": {
     "__class__": "set",
     "__value__": [
-      "6.1",
-      "5.36",
-      "6.11",
-      "6.9",
-      "6.0",
-      "6.2",
       "5.41",
+      "6.16",
+      "6.9",
       "5.38",
+      "5.36",
+      "5.37",
       "5.43",
-      "5.39",
       "6.3",
-      "5.37"
+      "6.0",
+      "6.1",
+      "5.39",
+      "6.11",
+      "6.2"
     ]
   },
   "s_r_search_mode": 0,
   "save to disk dialog": "/Users/camillebaillat/Documents/eBooks",
   "sort_history": [
+    [
+      "ondevice",
+      false
+    ],
     [
       "authors",
       true
