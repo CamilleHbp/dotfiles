@@ -2,7 +2,11 @@
   "save_template_title_series_sorting": "strictly_alphabetic",
   "sort_columns_at_startup": [
     [
-      "authors",
+      "#rpg_rulesystem",
+      0
+    ],
+    [
+      "#rpg_edition",
       0
     ],
     [

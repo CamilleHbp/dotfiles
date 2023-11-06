@@ -49,11 +49,11 @@
   ],
   "basic_metadata_widget_splitter_state": {
     "__class__": "bytearray",
-    "__value__": "AAAA/wAAAAEAAAADAAAA7wAAAWMAAAEKAf////8BAAAAAQA="
+    "__value__": "AAAA/wAAAAEAAAADAAAA7wAAAXYAAAEKAf////8BAAAAAQA="
   },
   "book_details_splitter_horizontal_state": [
     true,
-    194
+    404
   ],
   "book_info_dialog_layout": [
     {
@@ -96,14 +96,13 @@
       "timestamp": 70,
       "title": 57
     },
+    "formats_injected": true,
     "hidden_columns": [],
+    "id_injected": true,
     "languages_injected": true,
     "last_modified_injected": true,
+    "path_injected": true,
     "sort_history": [
-      [
-        "authors",
-        true
-      ],
       [
         "title",
         true
@@ -139,14 +138,13 @@
       "timestamp": 70,
       "title": 57
     },
+    "formats_injected": true,
     "hidden_columns": [],
+    "id_injected": true,
     "languages_injected": true,
     "last_modified_injected": true,
+    "path_injected": true,
     "sort_history": [
-      [
-        "authors",
-        true
-      ],
       [
         "title",
         true
@@ -185,6 +183,12 @@
     false,
     0
   ],
+  "cover_grid_color": [
+    80,
+    80,
+    80
+  ],
+  "cover_grid_texture": null,
   "custcol-prefs-table-geometry": [
     56,
     181,
@@ -193,6 +197,7 @@
     435,
     60
   ],
+  "default_author_link": null,
   "diff_dialog_geom": {
     "__class__": "bytearray",
     "__value__": "AdnQywADAAAAAAGbAAAAMQAABVAAAAQvAAABmwAAAE0AAAVQAAAELwAAAAAAAAAABwAAAAGbAAAATQAABVAAAAQv"
@@ -216,7 +221,7 @@
   },
   "epubmerge:update list dialog": {
     "__class__": "bytearray",
-    "__value__": "AdnQywADAAAAAALMAAABlQAABCsAAALKAAACzAAAAbEAAAQrAAACygAAAAAAAAAABwAAAALMAAABsQAABCsAAALK"
+    "__value__": "AdnQywADAAAAAALMAAABlQAABRIAAAO5AAACzAAAAbEAAAUSAAADuQAAAAAAAAAABsAAAALMAAABsQAABRIAAAO5"
   },
   "fff:add new dialog": {
     "__class__": "bytearray",
@@ -229,7 +234,7 @@
   },
   "fff:personal.ini": {
     "__class__": "bytearray",
-    "__value__": "AdnQywADAAAAAAAAAAAAIAAABr8AAARcAAADJQAAAewAAAZMAAAEQQAAAAACAAAABsAAAAAAAAAAPAAABr8AAARc"
+    "__value__": "AdnQywADAAAAAAAAAAAAJgAABr8AAARcAAADJQAAAewAAAZMAAAEQQAAAAACAAAABsAAAAAAAAAAQgAABr8AAARc"
   },
   "fff:showcalcols": {
     "__class__": "bytearray",
@@ -247,6 +252,7 @@
     "__class__": "bytearray",
     "__value__": "AAAA/wAAAAEAAAAC//////////8A/////wEAAAABAA=="
   },
+  "general_category_editor_row_height": 30,
   "geometry-of-FanFicFare log viewer": {
     "frame_geometry": {
       "height": 654,
@@ -284,7 +290,7 @@
       "index_in_screens_list": 0,
       "manufacturer": "",
       "model": "",
-      "name": "",
+      "name": "Built-in Retina Display",
       "serial": "",
       "size_in_logical_pixels": {
         "height": 1117,
@@ -349,19 +355,70 @@
       }
     }
   },
+  "geometry-of-bulk_metadata_window_geometry": {
+    "frame_geometry": {
+      "height": 1042,
+      "width": 1380,
+      "x": 165,
+      "y": 240
+    },
+    "full_screened": false,
+    "geometry": {
+      "height": 1014,
+      "width": 1380,
+      "x": 165,
+      "y": 268
+    },
+    "maximized": false,
+    "normal_geometry": {
+      "height": 1014,
+      "width": 1380,
+      "x": 165,
+      "y": 268
+    },
+    "qt": {
+      "__class__": "bytearray",
+      "__value__": "AdnQywADAAAAAAClAAAA8AAABggAAAUBAAAApQAAAQwAAAYIAAAFAQAAAAAAAAAABsAAAAClAAABDAAABggAAAUB"
+    },
+    "screen": {
+      "depth": 24,
+      "device_pixel_ratio": 2.0,
+      "geometry_in_logical_pixels": {
+        "height": 1117,
+        "width": 1728,
+        "x": 0,
+        "y": 0
+      },
+      "index_in_screens_list": 0,
+      "manufacturer": "",
+      "model": "",
+      "name": "Built-in Retina Display",
+      "serial": "",
+      "size_in_logical_pixels": {
+        "height": 1117,
+        "width": 1728
+      },
+      "virtual_geometry": {
+        "height": 1117,
+        "width": 1728,
+        "x": 0,
+        "y": 0
+      }
+    }
+  },
   "geometry-of-calibre_main_window_geometry": {
     "frame_geometry": {
-      "height": 1079,
+      "height": 1080,
       "width": 1728,
       "x": 0,
-      "y": 38
+      "y": 37
     },
     "full_screened": true,
     "geometry": {
-      "height": 1051,
+      "height": 1080,
       "width": 1728,
       "x": 0,
-      "y": 66
+      "y": 37
     },
     "maximized": false,
     "normal_geometry": {
@@ -372,7 +429,7 @@
     },
     "qt": {
       "__class__": "bytearray",
-      "__value__": "AdnQywADAAAAAAAAAAAAJgAABr8AAARcAAAAAAAAACUAAAa/AAAEXAAAAAAABAAABsAAAAAAAAAAQgAABr8AAARc"
+      "__value__": "AdnQywADAAAAAAAAAAAAJQAABr8AAARcAAAAAAAAACUAAAa/AAAEXAAAAAAABAAABsAAAAAAAAAAJQAABr8AAARc"
     },
     "screen": {
       "depth": 24,
@@ -451,52 +508,205 @@
       }
     }
   },
-  "geometry-of-convert_single_dialog_geom": {
+  "geometry-of-convert_bulk_dialog_geom": {
     "frame_geometry": {
-      "height": 1023,
-      "width": 1722,
+      "height": 1013,
+      "width": 1658,
       "x": 25,
-      "y": 25
+      "y": 45
     },
     "full_screened": false,
     "geometry": {
-      "height": 995,
-      "width": 1722,
+      "height": 985,
+      "width": 1658,
       "x": 25,
-      "y": 53
+      "y": 73
     },
     "maximized": false,
     "normal_geometry": {
-      "height": 995,
-      "width": 1722,
+      "height": 985,
+      "width": 1658,
       "x": 25,
-      "y": 53
+      "y": 73
     },
     "qt": {
       "__class__": "bytearray",
-      "__value__": "AdnQywADAAAAAAAZAAAAGQAABtIAAAQXAAAAGQAAADUAAAbSAAAEFwAAAAAAAAAABwAAAAAZAAAANQAABtIAAAQX"
+      "__value__": "AdnQywADAAAAAAAZAAAALQAABpIAAAQhAAAAGQAAAEkAAAaSAAAEIQAAAAAAAAAABsAAAAAZAAAASQAABpIAAAQh"
     },
     "screen": {
       "depth": 24,
       "device_pixel_ratio": 2.0,
       "geometry_in_logical_pixels": {
-        "height": 1120,
-        "width": 1792,
+        "height": 1117,
+        "width": 1728,
         "x": 0,
         "y": 0
       },
       "index_in_screens_list": 0,
       "manufacturer": "",
       "model": "",
-      "name": "Color LCD",
+      "name": "Built-in Retina Display",
       "serial": "",
       "size_in_logical_pixels": {
-        "height": 1120,
-        "width": 1792
+        "height": 1117,
+        "width": 1728
       },
       "virtual_geometry": {
-        "height": 1120,
-        "width": 1792,
+        "height": 1117,
+        "width": 1728,
+        "x": 0,
+        "y": 0
+      }
+    }
+  },
+  "geometry-of-convert_single_dialog_geom": {
+    "frame_geometry": {
+      "height": 1023,
+      "width": 1722,
+      "x": 3,
+      "y": 35
+    },
+    "full_screened": false,
+    "geometry": {
+      "height": 995,
+      "width": 1722,
+      "x": 3,
+      "y": 63
+    },
+    "maximized": false,
+    "normal_geometry": {
+      "height": 995,
+      "width": 1722,
+      "x": 3,
+      "y": 63
+    },
+    "qt": {
+      "__class__": "bytearray",
+      "__value__": "AdnQywADAAAAAAADAAAAIwAABrwAAAQhAAAAAwAAAD8AAAa8AAAEIQAAAAAAAAAABsAAAAADAAAAPwAABrwAAAQh"
+    },
+    "screen": {
+      "depth": 24,
+      "device_pixel_ratio": 2.0,
+      "geometry_in_logical_pixels": {
+        "height": 1117,
+        "width": 1728,
+        "x": 0,
+        "y": 0
+      },
+      "index_in_screens_list": 0,
+      "manufacturer": "",
+      "model": "",
+      "name": "Built-in Retina Display",
+      "serial": "",
+      "size_in_logical_pixels": {
+        "height": 1117,
+        "width": 1728
+      },
+      "virtual_geometry": {
+        "height": 1117,
+        "width": 1728,
+        "x": 0,
+        "y": 0
+      }
+    }
+  },
+  "geometry-of-duplicates-question-dialog-geometry": {
+    "frame_geometry": {
+      "height": 406,
+      "width": 522,
+      "x": 621,
+      "y": 345
+    },
+    "full_screened": false,
+    "geometry": {
+      "height": 378,
+      "width": 522,
+      "x": 621,
+      "y": 373
+    },
+    "maximized": false,
+    "normal_geometry": {
+      "height": 378,
+      "width": 522,
+      "x": 621,
+      "y": 373
+    },
+    "qt": {
+      "__class__": "bytearray",
+      "__value__": "AdnQywADAAAAAAJtAAABWQAABHYAAALuAAACbQAAAXUAAAR2AAAC7gAAAAAAAAAABsAAAAJtAAABdQAABHYAAALu"
+    },
+    "screen": {
+      "depth": 24,
+      "device_pixel_ratio": 2.0,
+      "geometry_in_logical_pixels": {
+        "height": 1117,
+        "width": 1728,
+        "x": 0,
+        "y": 0
+      },
+      "index_in_screens_list": 0,
+      "manufacturer": "",
+      "model": "",
+      "name": "Built-in Retina Display",
+      "serial": "",
+      "size_in_logical_pixels": {
+        "height": 1117,
+        "width": 1728
+      },
+      "virtual_geometry": {
+        "height": 1117,
+        "width": 1728,
+        "x": 0,
+        "y": 0
+      }
+    }
+  },
+  "geometry-of-job-detail-view-dialog-geometry": {
+    "frame_geometry": {
+      "height": 528,
+      "width": 700,
+      "x": 503,
+      "y": 270
+    },
+    "full_screened": false,
+    "geometry": {
+      "height": 500,
+      "width": 700,
+      "x": 503,
+      "y": 298
+    },
+    "maximized": false,
+    "normal_geometry": {
+      "height": 500,
+      "width": 700,
+      "x": 503,
+      "y": 298
+    },
+    "qt": {
+      "__class__": "bytearray",
+      "__value__": "AdnQywADAAAAAAH3AAABDgAABLIAAAMdAAAB9wAAASoAAASyAAADHQAAAAAAAAAABsAAAAH3AAABKgAABLIAAAMd"
+    },
+    "screen": {
+      "depth": 24,
+      "device_pixel_ratio": 2.0,
+      "geometry_in_logical_pixels": {
+        "height": 1117,
+        "width": 1728,
+        "x": 0,
+        "y": 0
+      },
+      "index_in_screens_list": 0,
+      "manufacturer": "",
+      "model": "",
+      "name": "Built-in Retina Display",
+      "serial": "",
+      "size_in_logical_pixels": {
+        "height": 1117,
+        "width": 1728
+      },
+      "virtual_geometry": {
+        "height": 1117,
+        "width": 1728,
         "x": 0,
         "y": 0
       }
@@ -539,7 +749,7 @@
       "index_in_screens_list": 0,
       "manufacturer": "",
       "model": "",
-      "name": "",
+      "name": "Built-in Retina Display",
       "serial": "",
       "size_in_logical_pixels": {
         "height": 1117,
@@ -608,48 +818,48 @@
     "frame_geometry": {
       "height": 1042,
       "width": 1722,
-      "x": 25,
-      "y": 25
+      "x": 3,
+      "y": 43
     },
     "full_screened": false,
     "geometry": {
       "height": 1014,
       "width": 1722,
-      "x": 25,
-      "y": 53
+      "x": 3,
+      "y": 71
     },
     "maximized": false,
     "normal_geometry": {
       "height": 1014,
       "width": 1722,
-      "x": 25,
-      "y": 53
+      "x": 3,
+      "y": 71
     },
     "qt": {
       "__class__": "bytearray",
-      "__value__": "AdnQywADAAAAAAAZAAAAGQAABtIAAAQqAAAAGQAAADUAAAbSAAAEKgAAAAAAAAAABwAAAAAZAAAANQAABtIAAAQq"
+      "__value__": "AdnQywADAAAAAAADAAAAKwAABrwAAAQ8AAAAAwAAAEcAAAa8AAAEPAAAAAAAAAAABsAAAAADAAAARwAABrwAAAQ8"
     },
     "screen": {
       "depth": 24,
       "device_pixel_ratio": 2.0,
       "geometry_in_logical_pixels": {
-        "height": 1120,
-        "width": 1792,
+        "height": 1117,
+        "width": 1728,
         "x": 0,
         "y": 0
       },
       "index_in_screens_list": 0,
       "manufacturer": "",
       "model": "",
-      "name": "Color LCD",
+      "name": "Built-in Retina Display",
       "serial": "",
       "size_in_logical_pixels": {
-        "height": 1120,
-        "width": 1792
+        "height": 1117,
+        "width": 1728
       },
       "virtual_geometry": {
-        "height": 1120,
-        "width": 1792,
+        "height": 1117,
+        "width": 1728,
         "x": 0,
         "y": 0
       }
@@ -692,7 +902,7 @@
       "index_in_screens_list": 0,
       "manufacturer": "",
       "model": "",
-      "name": "",
+      "name": "Built-in Retina Display",
       "serial": "",
       "size_in_logical_pixels": {
         "height": 1117,
@@ -708,6 +918,57 @@
   },
   "geometry-of-preferences dialog geometry": {
     "frame_geometry": {
+      "height": 811,
+      "width": 1178,
+      "x": 340,
+      "y": 144
+    },
+    "full_screened": false,
+    "geometry": {
+      "height": 783,
+      "width": 1178,
+      "x": 340,
+      "y": 172
+    },
+    "maximized": false,
+    "normal_geometry": {
+      "height": 783,
+      "width": 1178,
+      "x": 340,
+      "y": 172
+    },
+    "qt": {
+      "__class__": "bytearray",
+      "__value__": "AdnQywADAAAAAAFUAAAAkAAABe0AAAO6AAABVAAAAKwAAAXtAAADugAAAAAAAAAABsAAAAFUAAAArAAABe0AAAO6"
+    },
+    "screen": {
+      "depth": 24,
+      "device_pixel_ratio": 2.0,
+      "geometry_in_logical_pixels": {
+        "height": 1117,
+        "width": 1728,
+        "x": 0,
+        "y": 0
+      },
+      "index_in_screens_list": 0,
+      "manufacturer": "",
+      "model": "",
+      "name": "Built-in Retina Display",
+      "serial": "",
+      "size_in_logical_pixels": {
+        "height": 1117,
+        "width": 1728
+      },
+      "virtual_geometry": {
+        "height": 1117,
+        "width": 1728,
+        "x": 0,
+        "y": 0
+      }
+    }
+  },
+  "geometry-of-tag_list_editor_dialog_geometry": {
+    "frame_geometry": {
       "height": 1079,
       "width": 1728,
       "x": 0,
@@ -722,14 +983,65 @@
     },
     "maximized": true,
     "normal_geometry": {
-      "height": 1051,
-      "width": 1728,
-      "x": 0,
-      "y": 66
+      "height": 653,
+      "width": 945,
+      "x": 391,
+      "y": 329
     },
     "qt": {
       "__class__": "bytearray",
-      "__value__": "AdnQywADAAAAAAAAAAAAJgAABr8AAARcAAAAAAAAAEIAAAa/AAAEXAAAAAACAAAABsAAAAAAAAAAQgAABr8AAARc"
+      "__value__": "AdnQywADAAAAAAAAAAAAJgAABr8AAARcAAABhwAAAUkAAAU3AAAD1QAAAAACAAAABsAAAAAAAAAAQgAABr8AAARc"
+    },
+    "screen": {
+      "depth": 24,
+      "device_pixel_ratio": 2.0,
+      "geometry_in_logical_pixels": {
+        "height": 1117,
+        "width": 1728,
+        "x": 0,
+        "y": 0
+      },
+      "index_in_screens_list": 0,
+      "manufacturer": "",
+      "model": "",
+      "name": "Built-in Retina Display",
+      "serial": "",
+      "size_in_logical_pixels": {
+        "height": 1117,
+        "width": 1728
+      },
+      "virtual_geometry": {
+        "height": 1117,
+        "width": 1728,
+        "x": 0,
+        "y": 0
+      }
+    }
+  },
+  "geometry-of-template_editor_dialog_geometry": {
+    "frame_geometry": {
+      "height": 411,
+      "width": 1026,
+      "x": 95,
+      "y": 207
+    },
+    "full_screened": false,
+    "geometry": {
+      "height": 411,
+      "width": 1026,
+      "x": 95,
+      "y": 207
+    },
+    "maximized": false,
+    "normal_geometry": {
+      "height": 0,
+      "width": 0,
+      "x": 0,
+      "y": 0
+    },
+    "qt": {
+      "__class__": "bytearray",
+      "__value__": "AdnQywADAAAAAABfAAAAzwAABGAAAAJpAAAAAAAAAAD//////////wAAAAAAAAAABsAAAABfAAAAzwAABGAAAAJp"
     },
     "screen": {
       "depth": 24,
@@ -763,17 +1075,16 @@
   "grid view visible": false,
   "jobs view column layout3": {
     "__class__": "bytearray",
-    "__value__": "AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAiYAAAAFAQEBAAAAAAAAAAAAAAAAAGT/////AAAAhAAAAAAAAAAFAAAAZAAAAAEAAAAAAAAAZAAAAAEAAAAAAAAAZAAAAAEAAAAAAAAAZAAAAAEAAAAAAAAAlgAAAAEAAAAAAAAD6AAAAAAAAAAAAA=="
+    "__value__": "AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAsQAAAAFAQEBAAAAAAAAAAAAAAAAAGT/////AAAAhAAAAAAAAAAFAAABAgAAAAEAAAAAAAAAZAAAAAEAAAAAAAAAZAAAAAEAAAAAAAAAZAAAAAEAAAAAAAAAlgAAAAEAAAAAAAAD6AAAAAAAAAAAAA=="
   },
   "jobs_dialog_geometry": {
     "__class__": "bytearray",
     "__value__": "AdnQywADAAAAAAI6AAABEwAABLIAAANMAAACOgAAAS8AAASyAAADTAAAAAAAAAAABwAAAAI6AAABLwAABLIAAANM"
   },
   "library_usage_stats": {
-    "/Users/camille/Library/CloudStorage/Dropbox/Calibre": 30,
-    "/Users/camillebaillat/Documents/eBooks/Calibre-ASSTR": 5,
-    "/Users/camillebaillat/Documents/ebooks/Calibre-RPG": 37,
-    "/Users/camillebaillat/Dropbox/Calibre": 197
+    "/Users/camille/Documents/eBooks/Calibre": 102,
+    "/Users/camille/Documents/eBooks/Calibre-RPG": 40,
+    "/Users/camille/pCloud Drive/eBooks/Calibre-RPG": 44
   },
   "manage_authors_dialog_geometry": {
     "__class__": "bytearray",
@@ -805,14 +1116,13 @@
       "timestamp": 96,
       "title": 350
     },
+    "formats_injected": true,
     "hidden_columns": [],
+    "id_injected": true,
     "languages_injected": true,
     "last_modified_injected": true,
+    "path_injected": true,
     "sort_history": [
-      [
-        "authors",
-        false
-      ],
       [
         "title",
         true
@@ -857,12 +1167,15 @@
     "#koreader_reading_status": false,
     "#koreader_review": false,
     "#read": true,
+    "#rpg_edition": true,
+    "#rpg_rulesystem": true,
     "#subseries": true,
     "authors": true,
     "last_modified": false,
-    "ondevice": false,
+    "ondevice": true,
     "series": true,
     "size": false,
+    "tags": true,
     "timestamp": false,
     "title": true
   },
@@ -897,6 +1210,7 @@
   ],
   "search bar visible": true,
   "server3_warning_done": true,
+  "show_emblems": false,
   "single-cover-fetch-dialog-geometry": {
     "__class__": "bytearray",
     "__value__": "AdnQywADAAAAAAHDAAAA6wAABRQAAANeAAABwwAAAQcAAAUUAAADXgAAAAAAAAAABwAAAAHDAAABBwAABRQAAANe"
@@ -910,11 +1224,24 @@
     "__class__": "bytearray",
     "__value__": "AdnQywADAAAAAAI8AAAA1QAABLsAAAOKAAACPAAAAPEAAAS7AAADigAAAAAAAAAABwAAAAI8AAAA8QAABLsAAAOK"
   },
+  "tag_list_editor_table_widths": [
+    202,
+    202,
+    202,
+    202
+  ],
+  "tb_search_order": {
+    "0": 1,
+    "1": 2,
+    "2": 3,
+    "3": 4,
+    "4": 0
+  },
   "template_editor_break_geometry": {
     "__class__": "bytearray",
     "__value__": "AdnQywADAAAAAANvAAABnAAABgQAAANSAAADbwAAAbgAAAYEAAADUgAAAAAAAAAABwAAAANvAAABuAAABgQAAANS"
   },
-  "template_editor_break_on_print": true,
+  "template_editor_break_on_print": false,
   "template_editor_break_table_widths": [
     160,
     100
@@ -925,7 +1252,7 @@
   },
   "template_editor_table_widths": [
     80,
-    510
+    434
   ],
   "template_functions_prefs_st_show_help": true,
   "template_functions_prefs_tf_show_help": true

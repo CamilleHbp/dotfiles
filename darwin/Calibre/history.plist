@@ -4,12 +4,18 @@
 <dict>
 	<key>lineedit_history_choose_library_dialog</key>
 	<array>
+		<string>/Users/camille/Documents/eBooks/Calibre-RPG</string>
+		<string>/Users/camille/Documents/eBooks/Calibre</string>
 		<string>/Users/camillebaillat/Documents/eBooks/Calibre-ASSTR</string>
 		<string>/Users/camillebaillat/Documents/ebooks/Calibre</string>
 		<string>/Users/camillebaillat/Documents/ebooks/Calibre-RPG</string>
 	</array>
 	<key>lineedit_history_manage_authors_search</key>
 	<array/>
+	<key>lineedit_history_tag_list_search_box_Tags</key>
+	<array>
+		<string>fandom</string>
+	</array>
 	<key>lineedit_history_viewer-search-panel-expression</key>
 	<array>
 		<string>sex</string>

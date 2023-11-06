@@ -18,49 +18,49 @@
   "geometry-of-main_window_geometry": {
     "frame_geometry": {
       "height": 1042,
-      "width": 1742,
-      "x": 50,
-      "y": 25
+      "width": 1728,
+      "x": 0,
+      "y": 38
     },
     "full_screened": false,
     "geometry": {
       "height": 1014,
-      "width": 1742,
-      "x": 50,
-      "y": 53
+      "width": 1728,
+      "x": 0,
+      "y": 66
     },
     "maximized": false,
     "normal_geometry": {
       "height": 1014,
-      "width": 1742,
-      "x": 50,
-      "y": 53
+      "width": 1728,
+      "x": 0,
+      "y": 66
     },
     "qt": {
       "__class__": "bytearray",
-      "__value__": "AdnQywADAAAAAAAyAAAAGQAABv8AAAQqAAAAMgAAADUAAAb/AAAEKgAAAAAAAAAABwAAAAAyAAAANQAABv8AAAQq"
+      "__value__": "AdnQywADAAAAAAAAAAAAJgAABr8AAAQ3AAAAAAAAAEIAAAa/AAAENwAAAAAAAAAABsAAAAAAAAAAQgAABr8AAAQ3"
     },
     "screen": {
       "depth": 24,
       "device_pixel_ratio": 2.0,
       "geometry_in_logical_pixels": {
-        "height": 1120,
-        "width": 1792,
+        "height": 1117,
+        "width": 1728,
         "x": 0,
         "y": 0
       },
       "index_in_screens_list": 0,
       "manufacturer": "",
       "model": "",
-      "name": "Color LCD",
+      "name": "Built-in Retina Display",
       "serial": "",
       "size_in_logical_pixels": {
-        "height": 1120,
-        "width": 1792
+        "height": 1117,
+        "width": 1728
       },
       "virtual_geometry": {
-        "height": 1120,
-        "width": 1792,
+        "height": 1117,
+        "width": 1728,
         "x": 0,
         "y": 0
       }
@@ -80,9 +80,11 @@
   },
   "main_window_state": {
     "__class__": "bytearray",
-    "__value__": "AAAA/wAAAAD9AAAABAAAAAAAAAEAAAADufwCAAAABfsAAAAkAGYAaQBsAGUAcwAtAGIAcgBvAHcAcwBlAHIALQBkAG8AYwBrAQAAACcAAAO5AAAAWQD////7AAAAHgB0AG8AYwAtAHYAaQBlAHcAZQByAC0AZABvAGMAawAAAAAA/////wAAAFkA////+wAAACAAdABlAHgAdAAtAHMAZQBhAHIAYwBoAC0AZABvAGMAawAAAAAA/////wAAAHkA////+wAAACAAYwBoAGUAYwBrAHAAbwBpAG4AdABzAC0AZABvAGMAawAAAAAA/////wAAAIkA////+wAAACYAcwBhAHYAZQBkAC0AcwBlAGEAcgBjAGgAZQBzAC0AZABvAGMAawAAAAAA/////wAAAfkA////AAAAAQAAAlUAAAO5/AIAAAAC+wAAABgAcAByAGUAdgBpAGUAdwAtAGQAbwBjAGsBAAAAJwAAA7kAAABQAP////sAAAAaAGwAaQB2AGUALQBjAHMAcwAtAGQAbwBjAGsAAAAAAP////8AAABZAP///wAAAAIAAAAAAAAAAPwBAAAAAfsAAAAeAGMAaABlAGMAawAtAGIAbwBvAGsALQBkAG8AYwBrAAAAAAD/////AAAAkAD///8AAAADAAAAAAAAAAD8AQAAAAH7AAAAHABpAG4AcwBwAGUAYwB0AG8AcgAtAGQAbwBjAGsAAAAAAP////8AAAA6AP///wAAA20AAAO5AAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAMAAAAUAGcAbABvAGIAYQBsAC0AYgBhAHIBAAAAAP////8AAAAAAAAAAAAAABIAdABvAG8AbABzAC0AYgBhAHIBAAABJv////8AAAAAAAAAAAAAABYAcABsAHUAZwBpAG4AcwAtAGIAYQByAAAAAAD/////AAAAAAAAAAA="
+    "__value__": "AAAA/wAAAAD9AAAABAAAAAAAAAEAAAADufwCAAAABfsAAAAkAGYAaQBsAGUAcwAtAGIAcgBvAHcAcwBlAHIALQBkAG8AYwBrAQAAACcAAAO5AAAAWQD////7AAAAHgB0AG8AYwAtAHYAaQBlAHcAZQByAC0AZABvAGMAawAAAAAA/////wAAAFkA////+wAAACAAdABlAHgAdAAtAHMAZQBhAHIAYwBoAC0AZABvAGMAawAAAAAA/////wAAAHkA////+wAAACAAYwBoAGUAYwBrAHAAbwBpAG4AdABzAC0AZABvAGMAawAAAAAA/////wAAAIkA////+wAAACYAcwBhAHYAZQBkAC0AcwBlAGEAcgBjAGgAZQBzAC0AZABvAGMAawAAAAAA/////wAAAfkA////AAAAAQAAAlUAAAO5/AIAAAAC+wAAABgAcAByAGUAdgBpAGUAdwAtAGQAbwBjAGsBAAAAJwAAA7kAAABQAP////sAAAAaAGwAaQB2AGUALQBjAHMAcwAtAGQAbwBjAGsAAAAAAP////8AAABZAP///wAAAAIAAAAAAAAAAPwBAAAAAfsAAAAeAGMAaABlAGMAawAtAGIAbwBvAGsALQBkAG8AYwBrAAAAAAD/////AAAAkAD///8AAAADAAAAAAAAAAD8AQAAAAH7AAAAHABpAG4AcwBwAGUAYwB0AG8AcgAtAGQAbwBjAGsAAAAAAP////8AAAA6AP///wAAA18AAAO5AAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAMAAAAUAGcAbABvAGIAYQBsAC0AYgBhAHIBAAAAAP////8AAAAAAAAAAAAAABIAdABvAG8AbABzAC0AYgBhAHIBAAABJv////8AAAAAAAAAAAAAABYAcABsAHUAZwBpAG4AcwAtAGIAYQByAAAAAAD/////AAAAAAAAAAA="
   },
   "recent-books": [
+    "/Users/camille/Documents/eBooks/Calibre/Shaun/The Wheel Turns Anew - book 1 (3559)/The Wheel Turns Anew - book 1 - Shaun.epub",
+    "/Users/camille/Documents/eBooks/Calibre-RPG/Unknown/Symbaroum (3598)/Symbaroum - Unknown.epub",
     "/Users/camillebaillat/Dropbox/Calibre/Simon Walden/600_ Nude Poses_ A Complete Reference Book for Photographers, Models and Artists_ How to Pose N (3518)/600_ Nude Poses_ A Complete Reference Book - Simon Walden.epub",
     "/Users/camillebaillat/Dropbox/Calibre/Gu Zhen Ren/Reverend Insanity (3399)/Reverend Insanity - Gu Zhen Ren.epub",
     "/Users/camillebaillat/Dropbox/Calibre/selenepotter/ClanLuna (3390)/ClanLuna - selenepotter.epub",

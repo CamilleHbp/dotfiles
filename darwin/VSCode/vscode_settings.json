@@ -1,9 +1,12 @@
 {
+  "[dockerfile]": {
+    "editor.defaultFormatter": "ms-azuretools.vscode-docker"
+  },
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[json]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "vscode.json-language-features"
   },
   "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -11,78 +14,50 @@
   "[markdown]": {
     "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
   },
-  "[typescriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  "[python]": {
+    "editor.formatOnType": true
+  },
+  "[scss]": {
+    "editor.defaultFormatter": "sibiraj-s.vscode-scss-formatter"
   },
   "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "editor.codeActionsOnSave": {
     "source.organizeImports": false
   },
+  "editor.fontFamily": "'Cartograph CF', Menlo, Monaco, 'Courier New', monospace",
+  "editor.formatOnSave": true,
   "editor.wordWrap": "on",
+  "eslint.format.enable": true,
   "evenBetterToml.formatter.alignComments": true,
   "evenBetterToml.formatter.alignEntries": true,
-  "evenBetterToml.formatter.arrayTrailingComma": true,
-  "evenBetterToml.formatter.arrayAutoExpand": true,
-  "evenBetterToml.formatter.indentEntries": true,
-  "evenBetterToml.formatter.reorderKeys": true,
-  "evenBetterToml.formatter.reorderArrays": true,
-  "evenBetterToml.formatter.inlineTableExpand": true,
-  "evenBetterToml.formatter.indentTables": true,
-  "evenBetterToml.formatter.indentString": "  ",
-  "evenBetterToml.formatter.columnWidth": 120,
   "evenBetterToml.formatter.allowedBlankLines": 1,
+  "evenBetterToml.formatter.arrayAutoExpand": true,
+  "evenBetterToml.formatter.arrayTrailingComma": true,
+  "evenBetterToml.formatter.columnWidth": 120,
+  "evenBetterToml.formatter.indentEntries": true,
+  "evenBetterToml.formatter.indentString": "  ",
+  "evenBetterToml.formatter.indentTables": true,
+  "evenBetterToml.formatter.inlineTableExpand": true,
+  "evenBetterToml.formatter.reorderArrays": true,
+  "evenBetterToml.formatter.reorderKeys": true,
   "files.associations": {
-    "*.tmpl": "shellscript",
-    "*.scss": "scss"
+    "*.scss": "scss",
+    "*.tmpl": "shellscript"
   },
   "git.autofetch": true,
   "git.confirmSync": false,
+  "git.defaultBranchName": "trunk",
+  "git.openRepositoryInParentFolders": "never",
+  "gitlens.plusFeatures.enabled": false,
   "javascript.updateImportsOnFileMove.enabled": "always",
   "markdown.extension.toc.levels": "2..6",
-  "omnisharp.useModernNet": false,
   "redhat.telemetry.enabled": false,
   "security.workspace.trust.untrustedFiles": "newWindow",
-  "todohighlight.keywords": [
-    {
-      "text": "INFO:", // without a defined regex pattern this is the string that will be matched
-      "color": "green",
-      "backgroundColor": "rgba(0,0,0,0)", // INFO: setting the last parameter to zero (alpha channel) disables the background colour
-      "border": "none",
-      "isWholeLine": false
-    },
-    {
-      "text": "DEBUG:",
-      "before": {
-        "contentText": "🚧️" // adds text before the highlight
-      },
-      "after": {
-        "contentText": "🚧️" // adds text after the highlight
-      },
-      "color": "orange",
-      "border": "1px solid orange",
-      "borderRadius": "2px", // NOTE: use borderRadius along with `border` or you will see nothing change
-      "backgroundColor": "rgba(0,0,0,.2)",
-      "diagnosticSeverity": "information", // Set diagnostic severity to `none`, `information`, `warning` or `error`
-      "isWholeLine": true
-    },
-    {
-      "text": "WARNING:",
-      "before": {
-        "contentText": "🚨️" // adds text before the highlight
-      },
-      "after": {
-        "contentText": "🚨️" // adds text after the highlight
-      },
-      "color": "red",
-      "border": "1px solid red",
-      "borderRadius": "2px", // NOTE: use borderRadius along with `border` or you will see nothing change
-      "backgroundColor": "rgba(0,0,0,.2)",
-      "diagnosticSeverity": "warning", // Set diagnostic severity to `none`, `information`, `warning` or `error`
-      "isWholeLine": true
-    }
-  ],
   "todo-tree.general.tags": [
     "BUG",
     "DEBUG",
@@ -92,23 +67,65 @@
     "TODO",
     "XXX"
   ],
+  "todohighlight.keywords": [
+    {
+      "backgroundColor": "rgba(0,0,0,0)", // INFO: setting the last parameter to zero (alpha channel) disables the background colour
+      "border": "none",
+      "color": "green",
+      "isWholeLine": false,
+      "text": "INFO:" // without a defined regex pattern this is the string that will be matched
+    },
+    {
+      "after": {
+        "contentText": "🚧️" // adds text after the highlight
+      },
+      "backgroundColor": "rgba(0,0,0,.2)",
+      "before": {
+        "contentText": "🚧️" // adds text before the highlight
+      },
+      "border": "1px solid orange",
+      "borderRadius": "2px", // NOTE: use borderRadius along with `border` or you will see nothing change
+      "color": "orange",
+      "diagnosticSeverity": "information", // Set diagnostic severity to `none`, `information`, `warning` or `error`
+      "isWholeLine": true,
+      "text": "DEBUG:"
+    },
+    {
+      "after": {
+        "contentText": "🚨️" // adds text after the highlight
+      },
+      "backgroundColor": "rgba(0,0,0,.2)",
+      "before": {
+        "contentText": "🚨️" // adds text before the highlight
+      },
+      "border": "1px solid red",
+      "borderRadius": "2px", // NOTE: use borderRadius along with `border` or you will see nothing change
+      "color": "red",
+      "diagnosticSeverity": "warning", // Set diagnostic severity to `none`, `information`, `warning` or `error`
+      "isWholeLine": true,
+      "text": "WARNING:"
+    }
+  ],
   "typescript.updateImportsOnFileMove.enabled": "always",
+  "vim.handleKeys": {
+    "<C-b>": false
+  },
   "vim.normalModeKeyBindingsNonRecursive": [
     // FIX https://github.com/VSCodeVim/Vim/issues/8157#issuecomment-1426704638
     // Wait for new release, else we should migrate to using vscode-neovim extension
-    { "before": ["u"], "commands": ["undo"] },
-    { "before": ["c-r"], "commands": ["redo"] }
+    {
+      "before": ["u"],
+      "commands": ["undo"]
+    },
+    {
+      "before": ["c-r"],
+      "commands": ["redo"]
+    }
   ],
   "vim.smartRelativeLine": true,
+  "workbench.colorTheme": "Visual Studio Dark",
   "workbench.iconTheme": "material-icon-theme",
-  "[python]": {
-    "editor.formatOnType": true
-  },
-  "workbench.colorTheme": "Rosé Pine Moon",
-  "editor.fontFamily": "'Cartograph CF', Menlo, Monaco, 'Courier New', monospace",
-  "gitlens.plusFeatures.enabled": false,
-  "editor.formatOnSave": true,
-  "[scss]": {
-    "editor.defaultFormatter": "sibiraj-s.vscode-scss-formatter"
-  }
+  "projectManager.tags": ["Personal", "Projets", "AnyType", "Nos Futurs"],
+  "editor.wordBasedSuggestionsMode": "allDocuments",
+  "window.zoomLevel": 1
 }

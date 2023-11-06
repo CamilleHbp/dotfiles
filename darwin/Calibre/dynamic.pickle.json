@@ -1,46 +1,44 @@
 {
-  "add books dialog dir": "/Users/camille/Documents/Warhammer",
+  "add books dialog dir": "/Users/camille/Documents/RPG/Symbaroum",
   "add books dialog dir-last-used-filter-spec-all-files": false,
-  "add formats dialog": "/Users/camillebaillat/Dropbox/Epub Edit/Virtuoso - RainTemple",
+  "add formats dialog": "/Users/camille/Downloads/The-Wheel-Turns-Anew-main/The Wheel Turns Anew - book 8 - Night's Fall",
   "add formats dialog-last-used-filter-spec-all-files": false,
   "catalogs_to_be_synced": {
     "__class__": "set",
     "__value__": []
   },
   "change cover dialog": "/Users/camillebaillat/Downloads",
-  "choose calibre library": "/Users/camille/Library/CloudStorage/Dropbox/Calibre",
-  "choose library location": "/Users/camillebaillat/Documents/eBooks/Calibre-ASSTR",
+  "choose calibre library": "/Users/camille/Documents/eBooks/Calibre-RPG",
+  "choose library location": "/Users/camille/Documents/eBooks/Calibre-RPG",
   "choose_library_icon": "/Users/camillebaillat/Documents/Pictures",
   "database location dialog": "/Users/camillebaillat/Dropbox/Calibre",
+  "library moved choose new loc": "/Users/camille/pCloud Drive/eBooks/Calibre-RPG",
   "notified-version-updates": {
     "__class__": "set",
     "__value__": [
-      "5.41",
-      "6.16",
-      "6.9",
-      "5.38",
-      "5.36",
       "5.37",
-      "5.43",
-      "6.3",
+      "6.28",
+      "5.41",
+      "5.38",
+      "6.24",
       "6.0",
+      "6.2",
+      "6.9",
+      "6.11",
       "6.1",
       "5.39",
-      "6.11",
-      "6.2"
+      "6.22",
+      "6.3",
+      "6.26",
+      "5.36",
+      "5.43",
+      "6.16"
     ]
   },
+  "recursive book import root dir dialog": "/Users/camille/Downloads/The-Wheel-Turns-Anew-main",
   "s_r_search_mode": 0,
   "save to disk dialog": "/Users/camillebaillat/Documents/eBooks",
   "sort_history": [
-    [
-      "ondevice",
-      false
-    ],
-    [
-      "authors",
-      true
-    ],
     [
       "series",
       true

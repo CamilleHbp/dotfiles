@@ -12,7 +12,7 @@ Host github-elboWarrior
   IdentityFile ~/.ssh/id_ed25519_elbowarrior
   IdentitiesOnly yes
 
-Host ovh
+Host nf-ovh
   User debian
   HostName 141.95.160.182
   Port 49999
@@ -21,11 +21,27 @@ Host ovh
   IdentityFile ~/.ssh/id_ed25519
   IdentitiesOnly yes
 
-Host ovh-ca
-  User ubuntu
-  HostName 37.187.87.120
-  Port 49999
+Host remarkable
+  User root
+  HostName 192.168.1.30
   AddKeysToAgent yes
   UseKeychain yes
   IdentityFile ~/.ssh/id_ed25519
+  IdentitiesOnly yes
+
+Host remarkable-usb
+  User debian
+  HostName 10.11.99.1
+  AddKeysToAgent yes
+  UseKeychain yes
+  IdentityFile ~/.ssh/id_ed25519
+  IdentitiesOnly yes
+
+Host nf-showcases
+  User debian
+  HostName 195.15.214.30
+  Port 22
+  AddKeysToAgent yes
+  UseKeychain yes
+  IdentityFile ~/.ssh/id_ed25519_nosfuturs
   IdentitiesOnly yes

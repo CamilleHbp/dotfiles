@@ -92,16 +92,18 @@ fi
 brew upgrade && brew upgrade && brew cleanup
 log_success "[Packages] Homebrew installed and up-to-date"
 
+# Create NVM folder to avoid install failure
+ mkdir -p ~/.nvm
+
 # ------------------------------- Package list ------------------------------- #
 {{ $brews := list
   "diff-so-fancy"
   "docker"
   "fzf"
   "git"
-  "node"
+  "nvm"
   "pnpm"
   "poetry"
-  "pyenv"
   "thefuck"
   "zsh"
 -}}
@@ -109,7 +111,6 @@ log_success "[Packages] Homebrew installed and up-to-date"
 {{ $casks := list
   "iterm2"
   "nextcloud"
-  "temurin"
   "the-unarchiver"
   "visual-studio-code"
   "vlc"
@@ -117,34 +118,26 @@ log_success "[Packages] Homebrew installed and up-to-date"
 
 # Personal packages
 {{ if .personal -}}
-  {{   $brews = concat $brews (list
+  {{ $brews = concat $brews ( list
     "jq"
     "nvim"
   ) -}}
 
-  # TODO: fix jDownloader's install
-  {{ $casks = concat $casks (list
-    "1password"
-    "1password-cli"
+  {{ $casks = concat $casks ( list
     "alfred"
     "appcleaner"
-    "brave-browser"
-    "calibre"
     "c0re100-qbittorrent"
-    "dropbox"
+    "calibre"
     "freetube"
     "homebrew/cask-drivers/wacom-tablet"
-    "krita"
+    "iina"
+    "librewolf"
     "lulu"
     "macfuse"
-    "obsidian"
     "onyx"
     "path-finder"
     "protonvpn"
-    "spotify"
     "steermouse"
-    "todoist"
-    "vlc"
   ) -}}
 {{ end -}}
 
@@ -159,5 +152,14 @@ cask "{{ . }}"
 {{ end -}}
 EOF
 log_success "[Packages] Homebrew packages installed"
+
+log_task "[Packages] Custom packages installation"
+# Check how to execute the script
+# bash <(curl -sSL https://spotx-official.github.io/run.sh) -B --installmac
+curl -sSL -O https://spotx-official.github.io/run.sh 
+chmod +x run.sh
+./run.sh -B --installmac
+rm run.sh
+log_success "[Packages] Custom packages installed"
 
 log_success "[Packages] DONE"

@@ -25,9 +25,6 @@
 {{- $git_email := promptString "Git email address for the author/committer" }}
 {{- $git_name := promptString "Git username for the author/committer" }}
 {{- $nf_dev_dir := promptString "Nos Futurs dev folder (relative to ~)" }}
-{{- $op_email := promptString "Email address used with 1password" }}
-{{- $op_subdomain := promptString "Subdomain used with 1password (i.e 'my')" }}
-{{- $op_secret := promptString "Your 1password secret (NOT password)" }}
 
 [data]
     nf_dev_dir={{ $nf_dev_dir | quote }}
@@ -36,9 +33,6 @@
     git_name = {{ $git_name | quote }}
     headless = {{ $headless }}
     hostname = {{ $hostname | quote }}
-    op_subdomain = {{ $op_subdomain | quote }}
-    op_email = {{ $op_email | quote }}
-    op_secret = {{ $op_secret | quote }}
     personal = {{ $personal }}
 
 [diff]

@@ -14,12 +14,13 @@
     "",
     true,
     "75",
-    true,
+    false,
     null,
     "",
     false
   ],
   "format_map": [
+    "pdf",
     "epub",
     "fb2",
     "mobi",
@@ -29,7 +30,6 @@
     "docx",
     "djv",
     "djvu",
-    "pdf",
     "cbz",
     "htm",
     "html",
@@ -43,7 +43,7 @@
     "zip"
   ],
   "read_metadata": true,
-  "save_template": "program: send_to_koreader()",
+  "save_template": "program: \n\tsend_to_koreader()",
   "use_author_sort": false,
   "use_subdirs": true
 }

@@ -69,6 +69,7 @@ zstyle ':omz:update' mode disabled  # The oh-my-zsh folder is not a git folder b
 # thefuck
 plugins=(
   git
+  poetry
   vi-mode
   zsh-autosuggestions
   zsh-history-substring-search
@@ -109,12 +110,17 @@ alias invoke="invokeai && source .venv/bin/activate"
 alias invokeai="dev && cd InvokeAI"
 alias nf='cd ~/Dev/NosFuturs'
 alias nf-zeus='nf && cd ./zeus'
-alias nf-zeus-front='nf-zeus && cd ./apps/frontend-web'
-alias nf-zeus-back='nf-zeus && cd ./apps/services'
+alias nf-zeus-apps='nf-zeus && cd ./apps'
+alias nf-zeus-shared='nf-zeus && cd ./shared'
 alias nf-zeus-pr='nf && cd ./zeus-pr'
 alias nf-showcase='nf && cd ./showcase'
+alias node18='export PATH="/opt/homebrew/opt/node@18/bin:$PATH" && node -v'
+alias node20='export PATH="/opt/homebrew/opt/node@20/bin:$PATH" && node -v'
+alias node21='export PATH="/opt/homebrew/opt/node@18/bin:$PATH" && node -v'
 alias nfui='nf && cd lib-web-ui'
 alias renpy='personal && cd "Renpy Projects"'
+alias spotx-mac='bash <(curl -sSL https://raw.githubusercontent.com/SpotX-CLI/SpotX-Mac/main/install.sh)'
+alias spotx='bash <(curl -sSL https://spotx-official.github.io/run.sh) -c -B --installmac'
 alias vi=nvim
 alias vim=nvim
 alias wishlist='dev && cd wishlist'
@@ -155,17 +161,9 @@ bindkey -M emacs '\e\e' fuck-command-line
 bindkey -M vicmd '\e\e' fuck-command-line
 bindkey -M viins '\e\e' fuck-command-line
 
-# --------------------------- Add pyenv to the path -------------------------- #
-# Like thefuck, the plugin doesn't seem to function when pyenv is installed through Homebrew
-# If we need python in a login but non-interactive shell, we should add this to .zprofile!
-# Warning for MacOS :
-#   Apple does things a little differently so it's best to be aware of this.
-#   Specifically, Terminal initially opens both a login and interactive shell even though you don't authenticate (enter login credentials).
-#   However, any subsequent shells that are opened are only interactive.
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init --path)"
 
-# ----------------------------------- pnpm ----------------------------------- #
-export PNPM_HOME="/Users/camille/Library/pnpm"
-export PATH="$PNPM_HOME:$PATH"
+# NVM
+export NVM_DIR="$HOME/.nvm"
+local brew_prefix=$(brew --prefix)
+[ -s "${brew_prefix}/opt/nvm/nvm.sh" ] && \. "${brew_prefix}/opt/nvm/nvm.sh" # This loads nvm
+[ -s "${brew_prefix}/opt/nvm/etc/bash_completion.d/nvm" ] && \. "${brew_prefix}/opt/nvm/etc/bash_completion.d/nvm" # This loads nvm bash_completion

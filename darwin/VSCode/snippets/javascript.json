@@ -1,0 +1,62 @@
+{
+	"Lexgen Attribute": {
+		"prefix": "lgenatt",
+		"body": [
+			"import { StringFolderAttributeType } from \"@app/modules/folders/common/attribute-types/string.folder-attribute-type\";",
+			"import { FolderAttribute } from \"@app/modules/folders/core/decorators/folder-attribute.decorator\";",
+			"import { BaseFolderAttribute, FolderAttributeHandler } from \"@app/modules/folders/core/models/folder-attribute\";",
+			"",
+			"export const TitleFolderAttribute: BaseFolderAttribute = {",
+			"  name: \"title\",",
+			"  displayName: \"Title\",",
+			"  editable: true,",
+			"  hidden: false,",
+			"  priority:0,",
+			"  type: StringFolderAttributeType,",
+			"  typeOptions: {},",
+			"  volatile: false,",
+			"  category: \"common\",",
+			"};",
+			"",
+			"@FolderAttribute(TitleFolderAttribute)",
+			"export class TitleFolderAttributeHandler implements FolderAttributeHandler<string> {",
+			"  async validate(value: string) {",
+			"    return value;",
+			"  }",
+			"}",
+			"",
+			""
+		],
+		"description": ""
+	},
+	"attribute": {
+		"prefix": "lxatt",
+		"body": [
+			"import { StringFolderAttributeType } from \"@app/modules/folders/common/attribute-types/string.folder-attribute-type\";",
+			"import { FolderAttribute } from \"@app/modules/folders/core/decorators/folder-attribute.decorator\";",
+			"import { BaseFolderAttribute, FolderAttributeHandler } from \"@app/modules/folders/core/models/folder-attribute\";",
+			"",
+			"export const TitleFolderAttribute: BaseFolderAttribute = {",
+			"  name: \"title\",",
+			"  displayName: \"Title\",",
+			"  editable: true,",
+			"  hidden: false,",
+			"  priority:0,",
+			"  type: StringFolderAttributeType,",
+			"  typeOptions: {},",
+			"  volatile: false,",
+			"  category: \"common\",",
+			"};",
+			"",
+			"@FolderAttribute(TitleFolderAttribute)",
+			"export class TitleFolderAttributeHandler implements FolderAttributeHandler<string> {",
+			"  async validate(value: string) {",
+			"    return value;",
+			"  }",
+			"}",
+			"",
+			""
+		],
+		"description": "lxatt"
+	}
+}
