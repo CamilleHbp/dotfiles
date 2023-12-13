@@ -1,0 +1,21 @@
+# Homebrew
+{{ if eq .chezmoi.os "darwin" }}
+# Add homebrew bundle file location to path
+export HOMEBREW_BUNDLE_FILE="$HOME/.config/homebrew/Brewfile"
+# export HOMEBREW_BUNDLE_FILE="$HOME/.config/homebrew/Brewfile_{{ output "scutil" "--get" "ComputerName" | trim }}"
+# Add homebrew to path
+path=(/opt/homebrew/bin $path)
+path=(/opt/homebrew/sbin $path)
+{{- end }}
+
+# CARGO
+source "$HOME/.cargo/env"
+# Local binaries
+path=(~/.local/bin $path)
+# NVM
+export NVM_DIR="$HOME/.nvm"
+# PyEnv
+# Ensure that pyenv is initialized before the oh-my-zsh pyenv plugin is loaded
+export PYENV_ROOT="$HOME/.pyenv"
+path=("$PYENV_ROOT/bin" $path)
+eval "$(pyenv init --path)"

@@ -1,5 +1,5 @@
 {
-  "add books dialog dir": "/Users/camille/Documents/RPG/Symbaroum",
+  "add books dialog dir": "/Users/camille/Documents",
   "add books dialog dir-last-used-filter-spec-all-files": false,
   "add formats dialog": "/Users/camille/Downloads/The-Wheel-Turns-Anew-main/The Wheel Turns Anew - book 8 - Night's Fall",
   "add formats dialog-last-used-filter-spec-all-files": false,
@@ -16,23 +16,25 @@
   "notified-version-updates": {
     "__class__": "set",
     "__value__": [
+      "6.22",
+      "6.16",
+      "6.2",
+      "5.43",
+      "6.11",
       "5.37",
-      "6.28",
-      "5.41",
-      "5.38",
       "6.24",
       "6.0",
-      "6.2",
-      "6.9",
-      "6.11",
-      "6.1",
-      "5.39",
-      "6.22",
+      "7.0",
       "6.3",
+      "6.28",
+      "7.1",
+      "6.1",
+      "5.38",
       "6.26",
+      "5.39",
       "5.36",
-      "5.43",
-      "6.16"
+      "6.9",
+      "5.41"
     ]
   },
   "recursive book import root dir dialog": "/Users/camille/Downloads/The-Wheel-Turns-Anew-main",

@@ -2,7 +2,7 @@
 {"_id":"baseTheme","value":"catppuccinMocha"}
 {"_id":"bounds","value":{"x":218,"y":38,"width":1510,"height":1079,"maximized":true,"fullScreen":true}}
 {"_id":"checkForBlogPosts","value":false}
-{"_id":"defaultCaptionSettings","value":"{\"backgroundColor\":\"#000\",\"backgroundOpacity\":\"1\",\"color\":\"#FFF\",\"fontFamily\":\"proportionalSansSerif\",\"textOpacity\":\"1\",\"windowColor\":\"#000\",\"windowOpacity\":\"0\"}"}
+{"_id":"defaultCaptionSettings","value":"{\"backgroundColor\":\"#000\",\"backgroundOpacity\":\"1\",\"color\":\"#FFF\",\"edgeStyle\":\"raised\",\"fontFamily\":\"proportionalSansSerif\",\"textOpacity\":\"1\",\"windowColor\":\"#000\",\"windowOpacity\":\"0\"}"}
 {"_id":"defaultInvidiousInstance","value":""}
 {"_id":"defaultProfile","value":"MLBF64qX03yNWPic"}
 {"_id":"defaultQuality","value":"1080"}

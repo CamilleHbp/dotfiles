@@ -1,0 +1,131 @@
+#!/bin/sh
+
+# ---------------------------------------------------------------------------- #
+#                          Unofficial Bash Strict Mode                         #
+# ---------------------------------------------------------------------------- #
+# See http://redsymbol.net/articles/unofficial-bash-strict-mode/
+# -e: exit on error
+# -u: exit on unset variables
+# -o pipefail: prevents errors in a pipeline from being masked
+set -euo pipefail
+# IFS (Internal Field Separator): controls what Bash calls word splitting.
+# When set to a string, each character in the string is considered by Bash to separate words
+IFS=$'\n\t'
+
+# ---------------------------------------------------------------------------- #
+#                                     Logs                                     #
+# ---------------------------------------------------------------------------- #
+log_color() {
+    wait
+    color_code="$1"
+    shift
+    printf "\033[${color_code}m%s\033[0m\n" "$*" >&2
+}
+# -------------------------------- Log colours ------------------------------- #
+log_blue() { log_color "0;34" "$@"; }
+log_green() { log_color "0;32" "$@"; }
+log_orange() { log_color "0;33" "$@"; }
+log_red() { log_color "0;31" "$@"; }
+# --------------------------------- Log state -------------------------------- #
+log_error() { log_red "❌ $@"; }
+log_success() { log_green "✅ $@"; }
+log_task() { log_blue "🔃 $@"; }
+log_warning() { log_orange "⚠️ $@"; }
+# ---------------------------- Log exit functions ---------------------------- #
+error() {
+    log_error "$@"
+    exit 1
+}
+success() {
+    log_success "$@"
+    exit 0
+}
+
+# ---------------------------------------------------------------------------- #
+#                                    Script                                    #
+# ---------------------------------------------------------------------------- #
+log_task "[VSCode] Setup"
+
+# ---------------------------------------------------------------------------- #
+#                           Install VSCode extensions                          #
+# ---------------------------------------------------------------------------- #
+{{ if eq .chezmoi.os "darwin" "linux" -}}
+{{ $extensions := list
+"DavidAnson.vscode-markdownlint"
+"EditorConfig.EditorConfig"
+"GitHub.copilot"
+"GitHub.copilot-chat"
+"Gruntfuggly.todo-tree"
+"IronGeek.vscode-env"
+"LuqueDaniel.languague-renpy"
+"PKief.material-icon-theme"
+"Tyriar.sort-lines"
+"aaron-bond.better-comments"
+"af4jm.vscode-icalendar"
+"ajmnz.prisma-import"
+"alefragnani.project-manager"
+"alexcvzz.vscode-sqlite"
+"antfu.unocss"
+"artdiniz.quitcontrol-vscode"
+"astro-build.astro-vscode"
+"christian-kohler.npm-intellisense"
+"christian-kohler.path-intellisense"
+"clinyong.vscode-css-modules"
+"darkriszty.markdown-table-prettify"
+"dbaeumer.vscode-eslint"
+"dnicolson.binary-plist"
+"eamodio.gitlens"
+"fabiospampinato.vscode-diff"
+"foxundermoon.shell-format"
+"github.vscode-github-actions"
+"hashicorp.hcl"
+"hediet.vscode-drawio"
+"jgclark.vscode-todo-highlight"
+"jock.svg"
+"kavish.hex-to-hsl"
+"meganrogge.template-string-converter"
+"mgmcdermott.vscode-language-babel"
+"mikeburgh.xml-format"
+"mikestead.dotenv"
+"mikoz.autoflake-extension"
+"mrmlnc.vscode-scss"
+"mrorz.language-gettext"
+"ms-azuretools.vscode-docker"
+"ms-kubernetes-tools.vscode-kubernetes-tools"
+"ms-python.black-formatter"
+"ms-python.isort"
+"ms-python.python"
+"ms-python.vscode-pylance"
+"ms-vscode-remote.remote-ssh"
+"ms-vscode-remote.remote-ssh-edit"
+"ms-vscode.remote-explorer"
+"ms-vsliveshare.vsliveshare"
+"mvllow.rose-pine"
+"naumovs.color-highlight"
+"redhat.vscode-yaml"
+"richie5um2.vscode-sort-json"
+"rust-lang.rust-analyzer"
+"ryuta46.multi-command"
+"samundrak.esdoc-mdn"
+"shd101wyy.markdown-preview-enhanced"
+"sibiraj-s.vscode-scss-formatter"
+"stackbreak.comment-divider"
+"stkb.rewrap"
+"sumneko.lua"
+"tamasfe.even-better-toml"
+"tauri-apps.tauri-vscode"
+"tomoki1207.pdf"
+"vscodevim.vim"
+"xshrim.txt-syntax"
+"yzane.markdown-pdf"
+"yzhang.markdown-all-in-one"
+"zengxingxin.sort-js-object-keys"
+"zxh404.vscode-proto3"
+-}}
+
+{{ range $extensions -}}
+code --force --install-extension {{ . }}
+{{ end -}}
+{{ end -}}
+
+log_success "[VSCode] Done"

@@ -1,0 +1,98 @@
+#!/bin/sh
+
+# ---------------------------------------------------------------------------- #
+#                          Unofficial Bash Strict Mode                         #
+# ---------------------------------------------------------------------------- #
+# See http://redsymbol.net/articles/unofficial-bash-strict-mode/
+# -e: exit on error
+# -u: exit on unset variables
+# -o pipefail: prevents errors in a pipeline from being masked
+set -euo pipefail
+# IFS (Internal Field Separator): controls what Bash calls word splitting.
+# When set to a string, each character in the string is considered by Bash to separate words
+IFS=$'\n\t'
+
+# ---------------------------------------------------------------------------- #
+#                                     Logs                                     #
+# ---------------------------------------------------------------------------- #
+log_color() {
+  wait
+  color_code="$1"
+  shift
+  printf "\033[${color_code}m%s\033[0m\n" "$*" >&2
+}
+# -------------------------------- Log colours ------------------------------- #
+log_blue() { log_color "0;34" "$@"; }
+log_green() { log_color "0;32" "$@"; }
+log_orange() { log_color "0;33" "$@"; }
+log_red() { log_color "0;31" "$@"; }
+# --------------------------------- Log state -------------------------------- #
+log_error() { log_red "❌ $@"; }
+log_success() { log_green "✅ $@"; }
+log_task() { log_blue "🔃 $@"; }
+log_warning() { log_orange "⚠️ $@"; }
+# ---------------------------- Log exit functions ---------------------------- #
+error() {
+  log_error "$@"
+  exit 1
+}
+success() {
+  log_success "$@"
+  exit 0
+}
+
+# ---------------------------------------------------------------------------- #
+#                                    Script                                    #
+# ---------------------------------------------------------------------------- #
+
+log_task "[Tools Setup] SETUP"
+
+########### Tools installation
+
+# Set a SUDO_USER variable, because some of the following installations require sudo
+SUDO_USER=$(whoami)
+
+# ---------------------------------------------------------------------------- #
+#                                     XCode                                    #
+# ---------------------------------------------------------------------------- #
+log_task "[Tools Setup] XCode installation and update"
+# Install XCode
+if ! xcode="$(command -v xcode-select)"; then
+  log_warning "[Tools Setup] The script will fail if you don't have the MacOS command line tools installed."
+  log_warning "[Tools Setup] Please install when prompted and run the chezmoi script again."
+  xcode-select --install
+fi
+# Update XCode CLI tools
+PROD=$(softwareupdate -l | grep "\*.*Command Line" | head -n 1 | awk -F"*" '{print $2}' | sed -e 's/^ *//' | tr -d '\n') || true
+
+if [[ ! -z "$PROD" ]]; then
+  softwareupdate -i "$PROD" --verbose
+fi
+log_success "[Tools Setup] XCode installed and up-to-date"
+
+# ---------------------------------------------------------------------------- #
+#                                   Homebrew                                   #
+# ---------------------------------------------------------------------------- #
+
+log_task "[Tools Setup] Homebrew installation"
+# ------------------------------- Installation ------------------------------- #
+# Install Homebrew if not installed
+if test ! $(which brew); then
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+fi
+
+# Set brew in path
+{{ if eq .chezmoi.arch "arm64" -}}
+eval $(/opt/homebrew/bin/brew shellenv)
+{{ else -}}
+eval $(/usr/local/bin/brew shellenv)
+{{ end -}}
+
+# Update Homebrew
+brew upgrade && brew upgrade && brew cleanup
+log_success "[Tools Setup] Homebrew installed and up-to-date"
+
+# Create NVM folder to avoid install failure
+log_task "[Tools Setup] Create NVM folder"
+mkdir -p ~/.nvm
+log_success "[Tools Setup] NVM folder created"

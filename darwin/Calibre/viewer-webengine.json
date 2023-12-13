@@ -1,17 +1,17 @@
 {
   "geometry-of-main_window_geometry": {
     "frame_geometry": {
-      "height": 772,
-      "width": 576,
-      "x": 544,
-      "y": 310
+      "height": 1080,
+      "width": 1728,
+      "x": 0,
+      "y": 37
     },
-    "full_screened": false,
+    "full_screened": true,
     "geometry": {
-      "height": 744,
-      "width": 576,
-      "x": 544,
-      "y": 338
+      "height": 1080,
+      "width": 1728,
+      "x": 0,
+      "y": 37
     },
     "maximized": false,
     "normal_geometry": {
@@ -22,7 +22,7 @@
     },
     "qt": {
       "__class__": "bytearray",
-      "__value__": "AdnQywADAAAAAAIgAAABNgAABF8AAAQ5AAACIAAAAVIAAARfAAAEOQAAAAAAAAAABsAAAAIgAAABUgAABF8AAAQ5"
+      "__value__": "AdnQywADAAAAAAAAAAAAJQAABr8AAARcAAACIAAAAVIAAARfAAAEOQAAAAAABAAABsAAAAAAAAAAJQAABr8AAARc"
     },
     "screen": {
       "depth": 24,
@@ -56,7 +56,7 @@
   },
   "main_window_state": {
     "__class__": "bytearray",
-    "__value__": "AAAA/wAAAAH9AAAAAgAAAAAAAAEOAAAC6vwCAAAAAvsAAAAQAHQAbwBjAC0AZABvAGMAawIAAACfAAAA9AAAAQAAAALq+wAAABYAcwBlAGEAcgBjAGgALQBkAG8AYwBrAAAAAAAAAALqAAAAlQD///8AAAABAAACTwAABDj8AgAAAAT7AAAAFgBsAG8AbwBrAHUAcAAtAGQAbwBjAGsAAAAAAP////8AAAB9AP////sAAAAcAGIAbwBvAGsAbQBhAHIAawBzAC0AZABvAGMAawAAAAAA/////wAAAOcA////+wAAABwAaQBuAHMAcABlAGMAdABvAHIALQBkAG8AYwBrAAAAAAAAAAQ4AAAAEwD////7AAAAHgBoAGkAZwBoAGwAaQBnAGgAdABzAC0AZABvAGMAawAAAAAA/////wAAAMkA////AAACQAAAAugAAAAEAAAABAAAAAgAAAAI/AAAAAEAAAAAAAAAAQAAAB4AYQBjAHQAaQBvAG4AcwBfAHQAbwBvAGwAYgBhAHICAAAAAP////8AAAAAAAAAAA=="
+    "__value__": "AAAA/wAAAAH9AAAAAgAAAAAAAAEOAAAC6vwCAAAAAvsAAAAQAHQAbwBjAC0AZABvAGMAawIAAACfAAAA9AAAAQAAAALq+wAAABYAcwBlAGEAcgBjAGgALQBkAG8AYwBrAAAAAAAAAALqAAAAlQD///8AAAABAAACTwAABDj8AgAAAAT7AAAAFgBsAG8AbwBrAHUAcAAtAGQAbwBjAGsAAAAAAP////8AAAB9AP////sAAAAcAGIAbwBvAGsAbQBhAHIAawBzAC0AZABvAGMAawAAAAAA/////wAAAOcA////+wAAABwAaQBuAHMAcABlAGMAdABvAHIALQBkAG8AYwBrAAAAAAAAAAQ4AAAAEwD////7AAAAHgBoAGkAZwBoAGwAaQBnAGgAdABzAC0AZABvAGMAawAAAAAA/////wAAAMkA////AAAGwAAABDgAAAAEAAAABAAAAAgAAAAI/AAAAAEAAAAAAAAAAQAAAB4AYQBjAHQAaQBvAG4AcwBfAHQAbwBvAGwAYgBhAHICAAAAAP////8AAAAAAAAAAA=="
   },
   "old_prefs_migrated": true,
   "saved-search-settings": {
@@ -74,17 +74,26 @@
     }
   },
   "session_data": {
-    "base_font_size": 19,
+    "base_font_size": 15,
     "controls_help_shown_count": 2,
     "current_color_scheme": "*Rosé Pine",
     "hide_tooltips": null,
     "max_text_height": 800,
     "max_text_width": 1500,
     "override_book_colors": "never",
-    "read_mode": "flow",
+    "read_mode": "paged",
     "standalone_font_settings": {},
     "standalone_misc_settings": {},
     "standalone_recently_opened": [
+      {
+        "authors": [
+          "SciFurz"
+        ],
+        "key": "/Users/camille/Documents/eBooks/Calibre/SciFurz/A Monster Life (3285)/A Monster Life - SciFurz.epub",
+        "pathtoebook": "/Users/camille/Documents/eBooks/Calibre/SciFurz/A Monster Life (3285)/A Monster Life - SciFurz.epub",
+        "timestamp": "2023-11-27T21:50:36.842Z",
+        "title": "A Monster Life"
+      },
       {
         "authors": [
           "StarFleet Carl"
@@ -298,15 +307,6 @@
         "pathtoebook": "/Users/camillebaillat/Dropbox/Calibre/Dark_Desires/Malachar's Curse (3509)/Malachar's Curse - Dark_Desires.epub",
         "timestamp": "2022-08-23T17:33:42.769Z",
         "title": "Malachar's Curse"
-      },
-      {
-        "authors": [
-          "Hawkrider"
-        ],
-        "key": "/Users/camillebaillat/Dropbox/Calibre/Hawkrider/A Family Betrayal (3510)/A Family Betrayal - Hawkrider.epub",
-        "pathtoebook": "/Users/camillebaillat/Dropbox/Calibre/Hawkrider/A Family Betrayal (3510)/A Family Betrayal - Hawkrider.epub",
-        "timestamp": "2022-08-23T17:32:00.463Z",
-        "title": "A Family Betrayal"
       }
     ],
     "user_color_schemes": {

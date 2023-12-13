@@ -2,6 +2,9 @@
   "[dockerfile]": {
     "editor.defaultFormatter": "ms-azuretools.vscode-docker"
   },
+  "[dotenv]": {
+    "editor.defaultFormatter": "IronGeek.vscode-env"
+  },
   "[javascript]": {
     "editor.formatOnSave": false,
     "editor.codeActionsOnSave": {
@@ -29,9 +32,11 @@
     "editor.codeActionsOnSave": {
       "source.fixAll.eslint": true
     },
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
   },
+  "editor.wordBasedSuggestionsMode": "allDocuments",
   "editor.codeActionsOnSave": {
-    "source.organizeImports": false
+    "source.organizeImports": "never"
   },
   "editor.fontFamily": "'Cartograph CF', Menlo, Monaco, 'Courier New', monospace",
   "editor.formatOnSave": true,
@@ -50,8 +55,14 @@
   "evenBetterToml.formatter.reorderArrays": true,
   "evenBetterToml.formatter.reorderKeys": true,
   "files.associations": {
+    "*.env*": "env",
+    "*.env.local": "env",
+    "*.env.production": "env",
     "*.scss": "scss",
-    "*.tmpl": "shellscript"
+    "*.tmpl": "shellscript",
+    ".env": "env",
+    ".env.base": "env",
+    ".env*": "dotenv"
   },
   "git.autofetch": true,
   "git.confirmSync": false,
@@ -60,8 +71,33 @@
   "gitlens.plusFeatures.enabled": false,
   "javascript.updateImportsOnFileMove.enabled": "always",
   "markdown.extension.toc.levels": "2..6",
+  "material-icon-theme.files.associations": {
+    "Caddyfile.base": "caddy",
+    "*.env.base": "tune",
+    "*.env.dist": "tune",
+  },
+  "projectManager.tags": [
+    "Nos Futurs - Clients",
+    "Nos Futurs - Internal",
+    "Nos Futurs - Templates & Libraries",
+    "Personal",
+  ],
+  "python.languageServer": "Pylance",
   "redhat.telemetry.enabled": false,
   "security.workspace.trust.untrustedFiles": "newWindow",
+  "sortJSON.orderOverride": [
+    "name",
+    "version",
+    "description",
+    "license",
+    "command",
+    "when"
+  ],
+  "sortJSON.orderUnderride": [
+    "dependencies",
+    "devDependencies",
+    "peerDependencies"
+  ],
   "todo-tree.general.tags": [
     "BUG",
     "DEBUG",
@@ -135,14 +171,41 @@
     }
   ],
   "vim.smartRelativeLine": true,
+  "window.zoomLevel": 1,
   "workbench.colorTheme": "Visual Studio Dark",
   "workbench.iconTheme": "material-icon-theme",
-  "projectManager.tags": [
-    "Personal",
-    "Projets",
-    "AnyType",
-    "Nos Futurs"
-  ],
-  "editor.wordBasedSuggestionsMode": "allDocuments",
-  "window.zoomLevel": 1
+  "autoflake-extension": {
+    "expand-star-imports": true,
+    "remove-duplicate-keys": true,
+    "remove-unused-variables": true,
+  },
+  "material-icon-theme.activeIconPack": "angular_ngrx",
+  "vs-kubernetes": {
+    "vscode-kubernetes.helm-path-mac": "/Users/camille/.vs-kubernetes/tools/helm/darwin-arm64/helm",
+    "vscode-kubernetes.minikube-path-mac": "/Users/camille/.vs-kubernetes/tools/minikube/darwin-arm64/minikube"
+  },
+  "editor.tokenColorCustomizations": {
+    "textMateRules": [
+      {
+        "scope": "keyword.other.dotenv",
+        "settings": {
+          "foreground": "#FF000000"
+        }
+      }
+    ]
+  },
+  "[html]": {
+    "editor.suggest.insertMode": "replace",
+    "editor.formatOnType": false,
+    "editor.formatOnSave": false,
+  },
+  "[javascript][typescript]": {
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": "explicit"
+    }
+  },
+  "terminal.integrated.env.osx": {
+    "CW_NEW_SESSION": "1"
+  },
+  "editor.accessibilitySupport": "off",
 }
