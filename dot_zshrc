@@ -35,8 +35,8 @@ ZSH_CUSTOM=$HOME/.config/oh-my-zsh
 # much, much faster.
 # DISABLE_UNTRACKED_FILES_DIRTY="true"
 
+# Set fzf-tab last for compatibility with other completions. See: https://github.com/Aloxaf/fzf-tab#compatibility-with-other-plugins
 plugins=(
-  fzf-tab
   git
   my-functions
   poetry
@@ -46,6 +46,7 @@ plugins=(
   zsh-autosuggestions
   zsh-history-substring-search
   zsh-syntax-highlighting
+  fzf-tab
 )
 
 # Add completions to Oh-My-Zsh: see https://github.com/zsh-users/zsh-completions/issues/603

@@ -172,7 +172,7 @@
   ],
   "vim.smartRelativeLine": true,
   "window.zoomLevel": 1,
-  "workbench.colorTheme": "Visual Studio Dark",
+  "workbench.colorTheme": "Bearded Theme Solarized Light",
   "workbench.iconTheme": "material-icon-theme",
   "autoflake-extension": {
     "expand-star-imports": true,
