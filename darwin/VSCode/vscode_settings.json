@@ -76,11 +76,15 @@
     "*.env.base": "tune",
     "*.env.dist": "tune",
   },
+  "material-icon-theme.folders.associations": {
+    "packages": "Packages",
+  },
   "projectManager.tags": [
     "Nos Futurs - Clients",
     "Nos Futurs - Internal",
     "Nos Futurs - Templates & Libraries",
     "Personal",
+    "Personal - Libs"
   ],
   "python.languageServer": "Pylance",
   "redhat.telemetry.enabled": false,
@@ -208,4 +212,7 @@
     "CW_NEW_SESSION": "1"
   },
   "editor.accessibilitySupport": "off",
+  "yaml.schemas": {
+    // "https://raw.githubusercontent.com/argoproj/argo-workflows/main/api/jsonschema/schema.json": "/Users/camille/Dev/NosFuturs/internal/main-cluster/**/*.yaml"
+  },
 }

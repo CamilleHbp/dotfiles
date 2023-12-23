@@ -35,18 +35,21 @@ ZSH_CUSTOM=$HOME/.config/oh-my-zsh
 # much, much faster.
 # DISABLE_UNTRACKED_FILES_DIRTY="true"
 
-# Set fzf-tab last for compatibility with other completions. See: https://github.com/Aloxaf/fzf-tab#compatibility-with-other-plugins
+# fzf-tab needs to be loaded after compinit, but before other zsh-auto-suggestions. See: https://github.com/Aloxaf/fzf-tab#install
+autoload -Uz compinit && compinit
 plugins=(
+  argocd
   git
+  kubectl
   my-functions
   poetry
   poetry-env
   pyenv
   vi-mode
+  fzf-tab
   zsh-autosuggestions
   zsh-history-substring-search
   zsh-syntax-highlighting
-  fzf-tab
 )
 
 # Add completions to Oh-My-Zsh: see https://github.com/zsh-users/zsh-completions/issues/603
