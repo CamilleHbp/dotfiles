@@ -1883,6 +1883,35 @@
 	</dict>
 	<key>Print In Black And White</key>
 	<true/>
+	<key>ShowFullScreenTabBar</key>
+	<true/>
+	<key>Snippets</key>
+	<array>
+		<dict>
+			<key>guid</key>
+			<string>C971BC46-26D4-42E2-8189-31F3CB4EAF6E</string>
+			<key>title</key>
+			<string>│     Last Transition Time:  2024-02-27T11:11:26Z                                                                                                                                            │
+│     Message:               Infisical controller has located the Infisical token in provided Kubernetes secret                                                                              │
+│     Reason:                OK                                                                                                                                                              │
+│     Status:                True                                                                                                                                                            │
+│     Type:                  secrets.infisical.com/LoadedInfisicalToken                                                                                                                      │
+│     Last Transition Time:  2024-02-27T11:11:28Z                                                                                                                                            │
+│     Message:               Failed to sync secrets. This can be caused by invalid service token or an invalid API host that is set. Check operator logs for more info                       │
+│     Reason:                Error                                                                                                                                                           │
+│     Status:                False                                                                                                                                                           │
+│     Type:                  secrets.infisical.com/ReadyToSyncSecrets                                                                                                                        │
+│     Last Transition Time:  2024-02-27T11:11:28Z                                                                                                                                            │
+│     Message:               Auto redeployment has been stopped because the operator failed to sync secrets                                                                                  │
+│     Reason:                Stopped                                                                                                                                                         │
+│     Status:                False                                                                                                                                                           │
+│     Type:                  secrets.infisical.com/AutoRedeployReady</string>
+			<key>value</key>
+			<string>│     Last Transition Time:  2024-02-27T11:11:26Z                                                                                                                                            │\n│     Message:               Infisical controller has located the Infisical token in provided Kubernetes secret                                                                              │\n│     Reason:                OK                                                                                                                                                              │\n│     Status:                True                                                                                                                                                            │\n│     Type:                  secrets.infisical.com/LoadedInfisicalToken                                                                                                                      │\n│     Last Transition Time:  2024-02-27T11:11:28Z                                                                                                                                            │\n│     Message:               Failed to sync secrets. This can be caused by invalid service token or an invalid API host that is set. Check operator logs for more info                       │\n│     Reason:                Error                                                                                                                                                           │\n│     Status:                False                                                                                                                                                           │\n│     Type:                  secrets.infisical.com/ReadyToSyncSecrets                                                                                                                        │\n│     Last Transition Time:  2024-02-27T11:11:28Z                                                                                                                                            │\n│     Message:               Auto redeployment has been stopped because the operator failed to sync secrets                                                                                  │\n│     Reason:                Stopped                                                                                                                                                         │\n│     Status:                False                                                                                                                                                           │\n│     Type:                  secrets.infisical.com/AutoRedeployReady</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+	</array>
 	<key>SoundForEsc</key>
 	<false/>
 	<key>TabStyleWithAutomaticOption</key>

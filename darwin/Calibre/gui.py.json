@@ -47,6 +47,15 @@
   "jobs_search_history": [],
   "lrf_viewer_search_history": [],
   "main_search_history": [
+    "realm of monsters",
+    "tags:\"=\"",
+    "tags:\"=!non-fiction\"",
+    "realm",
+    "tags:\"=web-serial\"",
+    "tags:\"=protagonist.villain\" AND tags:\"sex.heavy\"",
+    "tags:\"=protagonist.villain\"",
+    "tags:\"=mc.villain\"",
+    "when things change",
     "a monster life",
     "worm",
     "tags:\"=superheroes\"",
@@ -62,16 +71,7 @@
     "series:\"=Thayvian Tales\"",
     "practical",
     "sanguine",
-    "tags:\"=fanfiction\"",
-    "Isekai",
-    "isekai",
-    "dreadwolf",
-    "series:\"=Breaking Ground\"",
-    "tags:\"=warhammer-40k\"",
-    "snowflake",
-    "Mother of Learning",
-    "horcrux",
-    "Gor"
+    "tags:\"=fanfiction\""
   ],
   "main_window_geometry": {
     "__class__": "bytearray",

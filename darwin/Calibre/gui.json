@@ -408,19 +408,19 @@
   },
   "geometry-of-calibre_main_window_geometry": {
     "frame_geometry": {
-      "height": 1080,
+      "height": 1079,
       "width": 1728,
       "x": 0,
-      "y": 37
+      "y": 38
     },
-    "full_screened": true,
+    "full_screened": false,
     "geometry": {
-      "height": 1080,
+      "height": 1051,
       "width": 1728,
       "x": 0,
-      "y": 37
+      "y": 66
     },
-    "maximized": false,
+    "maximized": true,
     "normal_geometry": {
       "height": 1080,
       "width": 1728,
@@ -429,7 +429,7 @@
     },
     "qt": {
       "__class__": "bytearray",
-      "__value__": "AdnQywADAAAAAAAAAAAAJQAABr8AAARcAAAAAAAAACUAAAa/AAAEXAAAAAAABAAABsAAAAAAAAAAJQAABr8AAARc"
+      "__value__": "AdnQywADAAAAAAAAAAAAJgAABr8AAARcAAAAAAAAACUAAAa/AAAEXAAAAAACAAAABsAAAAAAAAAAQgAABr8AAARc"
     },
     "screen": {
       "depth": 24,
@@ -1082,9 +1082,38 @@
     "__value__": "AdnQywADAAAAAAI6AAABEwAABLIAAANMAAACOgAAAS8AAASyAAADTAAAAAAAAAAABwAAAAI6AAABLwAABLIAAANM"
   },
   "library_usage_stats": {
-    "/Users/camille/Documents/eBooks/Calibre": 110,
+    "/Users/camille/Documents/eBooks/Calibre": 128,
     "/Users/camille/Documents/eBooks/Calibre-RPG": 40,
     "/Users/camille/pCloud Drive/eBooks/Calibre-RPG": 44
+  },
+  "main_window_central_widget_state": {
+    "layout": "wide",
+    "narrow_desires": {
+      "book_details_height": 0.23094170403587444,
+      "cover_browser_width": 0.34953703703703703,
+      "quick_view_height": 0.2563527653213752,
+      "tag_browser_width": 0.25
+    },
+    "narrow_visibility": {
+      "book_details": true,
+      "book_list": true,
+      "cover_browser": false,
+      "quick_view": false,
+      "tag_browser": true
+    },
+    "wide_desires": {
+      "book_details_width": 0.2337962962962963,
+      "cover_browser_height": 0.4,
+      "quick_view_height": 0.3333333333333333,
+      "tag_browser_width": 0.11574074074074074
+    },
+    "wide_visibility": {
+      "book_details": true,
+      "book_list": true,
+      "cover_browser": false,
+      "quick_view": false,
+      "tag_browser": true
+    }
   },
   "manage_authors_dialog_geometry": {
     "__class__": "bytearray",
@@ -1191,6 +1220,7 @@
   "quality check plugin:cover options dialog:last_width": 300,
   "quick_start_guide_added": true,
   "quickview visible": false,
+  "qv_open_at_shutdown": false,
   "recently_used_languages": [
     "English",
     "E",

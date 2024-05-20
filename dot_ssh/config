@@ -45,3 +45,12 @@ Host nf-showcases
   UseKeychain yes
   IdentityFile ~/.ssh/id_ed25519_nosfuturs
   IdentitiesOnly yes
+
+Host jbi
+  User root
+  HostName 212.132.105.242
+  Port 22
+  AddKeysToAgent yes
+  UseKeychain yes
+  IdentityFile ~/.ssh/id_ed25519_nosfuturs
+  IdentitiesOnly yes

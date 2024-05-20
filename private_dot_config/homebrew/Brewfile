@@ -1,9 +1,13 @@
+tap "derailed/k9s"
 tap "dotenv-org/brew"
 tap "homebrew/bundle"
 tap "homebrew/services"
+tap "infisical/get-cli"
 tap "lyraphase/pcloud"
 tap "spicetify/tap"
 tap "yqrashawn/goku"
+# Run your GitHub Actions locally
+brew "act"
 # GitOps Continuous Delivery for Kubernetes
 brew "argocd"
 # Download with resuming and segmented downloading
@@ -13,9 +17,13 @@ brew "diff-so-fancy"
 # Lightweight DNS forwarder and DHCP server
 brew "dnsmasq", restart_service: true
 # Pack, ship and run any application as a lightweight container
-brew "docker"
+brew "docker", link: false
+# Command-line tool to interact with exercism.io
+brew "exercism"
 # Command-line fuzzy finder written in Go
 brew "fzf"
+# GitHub command-line tool
+brew "gh"
 # Distributed revision control system
 brew "git"
 # Quickly rewrite git repository history
@@ -24,16 +32,26 @@ brew "git-filter-repo"
 brew "git-lfs"
 # Kubernetes package manager
 brew "helm"
+# API Support for your favorite torrent trackers
+brew "jackett", restart_service: true
 # Lightweight and flexible command-line JSON processor
 brew "jq"
+# Postgres C API library
+brew "libpq", link: true
 # Library for USB device access
 brew "libusb"
+# Replacement for ls, cp and other commands for object storage
+brew "minio-mc"
+# Modern Linker
+brew "mold"
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
 # Manage multiple Node.js versions
 brew "nvm"
 # Execute binaries from Python packages in isolated environments
 brew "pipx"
+# Package management made easy
+brew "pixi"
 # Manage compile and link flags for libraries
 brew "pkg-config"
 # Python package management tool
@@ -44,27 +62,35 @@ brew "pyenv"
 brew "python@3.10"
 # Rust toolchain installer
 brew "rustup-init"
+# Cross-shell prompt for astronauts
+brew "starship"
 # Programmatically correct mistyped console commands
 brew "thefuck"
 # Library to create, extract, and modify Windows Imaging files
 brew "wimlib"
 # UNIX shell (command interpreter)
 brew "zsh"
+# Kubernetes CLI To Manage Your Clusters In Style!
+brew "derailed/k9s/k9s"
 # Sync .env files
 brew "dotenv-org/brew/dotenv-vault"
+# The official Infisical CLI
+brew "infisical/get-cli/infisical"
 # Application launcher and productivity software
 cask "alfred"
 # Local-first and end-to-end encrypted notes app
 cask "anytype"
 # Application uninstaller
 cask "appcleaner"
+# Manage team projects and tasks
+cask "asana"
 # Web browser focusing on privacy
 cask "brave-browser"
 # Bittorrent client
 cask "c0re100-qbittorrent"
 # E-books management software
 cask "calibre"
-# App to build and share containerized applications and microservices
+# App to build and share containerised applications and microservices
 cask "docker"
 # Online diagram software
 cask "drawio"
@@ -92,14 +118,16 @@ cask "pcloud-drive"
 cask "protonvpn"
 # Instant messaging application focusing on security
 cask "signal"
-# Knowledge management for organizations
+# Knowledge management for organisations
 cask "slab"
-# Customize mouse buttons, wheels and cursor speed
+# Customise mouse buttons, wheels and cursor speed
 cask "steermouse"
 # Open-source media center
 cask "stremio"
 # Native GUI tool for relational databases
 cask "tableplus"
+# Remote access and connectivity software focused on security
+cask "teamviewer"
 # Unpacks archive files
 cask "the-unarchiver"
 # Web browser focusing on security
@@ -117,41 +145,46 @@ vscode "amazonwebservices.codewhisperer-for-command-line-companion"
 vscode "antfu.unocss"
 vscode "artdiniz.quitcontrol-vscode"
 vscode "astro-build.astro-vscode"
-vscode "BattleBas.kivy-vscode"
-vscode "BeardedBear.beardedtheme"
+vscode "battlebas.kivy-vscode"
+vscode "beardedbear.beardedtheme"
 vscode "christian-kohler.npm-intellisense"
 vscode "christian-kohler.path-intellisense"
 vscode "clinyong.vscode-css-modules"
+vscode "cweijan.dbclient-jdbc"
+vscode "cweijan.vscode-database-client2"
 vscode "darkriszty.markdown-table-prettify"
-vscode "DavidAnson.vscode-markdownlint"
+vscode "davidanson.vscode-markdownlint"
 vscode "dbaeumer.vscode-eslint"
 vscode "dnicolson.binary-plist"
 vscode "eamodio.gitlens"
-vscode "EditorConfig.EditorConfig"
+vscode "editorconfig.editorconfig"
 vscode "fabiospampinato.vscode-diff"
 vscode "foxundermoon.shell-format"
-vscode "GitHub.copilot"
-vscode "GitHub.copilot-chat"
+vscode "fredwangwang.vscode-hcl-format"
+vscode "github.copilot"
+vscode "github.copilot-chat"
 vscode "github.vscode-github-actions"
-vscode "Gruntfuggly.todo-tree"
+vscode "gruntfuggly.todo-tree"
 vscode "hashicorp.hcl"
 vscode "hediet.vscode-drawio"
-vscode "IronGeek.vscode-env"
+vscode "irongeek.vscode-env"
 vscode "jgclark.vscode-todo-highlight"
 vscode "jock.svg"
 vscode "kavish.hex-to-hsl"
+vscode "kbysiec.vscode-go-to-mdn"
 vscode "liviuschera.noctis"
-vscode "LuqueDaniel.languague-renpy"
+vscode "luquedaniel.languague-renpy"
 vscode "meganrogge.template-string-converter"
 vscode "mgmcdermott.vscode-language-babel"
 vscode "mikeburgh.xml-format"
 vscode "mikestead.dotenv"
 vscode "mikoz.autoflake-extension"
+vscode "mindaro-dev.file-downloader"
 vscode "mrmlnc.vscode-scss"
 vscode "mrorz.language-gettext"
 vscode "ms-azuretools.vscode-docker"
-vscode "ms-kubernetes-tools.vscode-kubernetes-tools"
 vscode "ms-python.black-formatter"
+vscode "ms-python.debugpy"
 vscode "ms-python.isort"
 vscode "ms-python.python"
 vscode "ms-python.vscode-pylance"
@@ -161,24 +194,26 @@ vscode "ms-vscode.remote-explorer"
 vscode "ms-vsliveshare.vsliveshare"
 vscode "mvllow.rose-pine"
 vscode "naumovs.color-highlight"
-vscode "PKief.material-icon-theme"
+vscode "pkief.material-icon-theme"
 vscode "redhat.vscode-yaml"
 vscode "richie5um2.vscode-sort-json"
 vscode "rust-lang.rust-analyzer"
+vscode "ryu1kn.partial-diff"
 vscode "ryuta46.multi-command"
-vscode "samundrak.esdoc-mdn"
+vscode "serayuzgur.crates"
 vscode "shd101wyy.markdown-preview-enhanced"
 vscode "sibiraj-s.vscode-scss-formatter"
 vscode "stackbreak.comment-divider"
 vscode "stkb.rewrap"
 vscode "sumneko.lua"
+vscode "swellaby.rust-pack"
 vscode "tamasfe.even-better-toml"
 vscode "tauri-apps.tauri-vscode"
 vscode "tomoki1207.pdf"
-vscode "Tyriar.sort-lines"
+vscode "tyriar.sort-lines"
 vscode "vscodevim.vim"
 vscode "xshrim.txt-syntax"
+vscode "yrm.type-challenges"
 vscode "yzane.markdown-pdf"
 vscode "yzhang.markdown-all-in-one"
 vscode "zengxingxin.sort-js-object-keys"
-vscode "zxh404.vscode-proto3"

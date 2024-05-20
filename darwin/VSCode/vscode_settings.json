@@ -8,7 +8,7 @@
   "[javascript]": {
     "editor.formatOnSave": false,
     "editor.codeActionsOnSave": {
-      "source.fixAll.eslint": true
+      "source.fixAll.eslint": "explicit"
     }
   },
   "[json]": {
@@ -30,9 +30,9 @@
   "[typescript]": {
     "editor.formatOnSave": false,
     "editor.codeActionsOnSave": {
-      "source.fixAll.eslint": true
+      "source.fixAll.eslint": "explicit"
     },
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+    "editor.defaultFormatter": "vscode.typescript-language-features",
   },
   "editor.wordBasedSuggestionsMode": "allDocuments",
   "editor.codeActionsOnSave": {
@@ -175,8 +175,6 @@
     }
   ],
   "vim.smartRelativeLine": true,
-  "window.zoomLevel": 1,
-  "workbench.colorTheme": "Bearded Theme Solarized Light",
   "workbench.iconTheme": "material-icon-theme",
   "autoflake-extension": {
     "expand-star-imports": true,
@@ -186,7 +184,8 @@
   "material-icon-theme.activeIconPack": "angular_ngrx",
   "vs-kubernetes": {
     "vscode-kubernetes.helm-path-mac": "/Users/camille/.vs-kubernetes/tools/helm/darwin-arm64/helm",
-    "vscode-kubernetes.minikube-path-mac": "/Users/camille/.vs-kubernetes/tools/minikube/darwin-arm64/minikube"
+    "vscode-kubernetes.minikube-path-mac": "/Users/camille/.vs-kubernetes/tools/minikube/darwin-arm64/minikube",
+    "vs-kubernetes.minikube-show-information-expiration": "2024-10-22T09:04:05.768Z"
   },
   "editor.tokenColorCustomizations": {
     "textMateRules": [
@@ -214,5 +213,29 @@
   "editor.accessibilitySupport": "off",
   "yaml.schemas": {
     // "https://raw.githubusercontent.com/argoproj/argo-workflows/main/api/jsonschema/schema.json": "/Users/camille/Dev/NosFuturs/internal/main-cluster/**/*.yaml"
+  },
+  "database-client.telemetry.usesOnlineServices": false,
+  "workbench.settings.applyToAllProfiles": [
+    "database-client.telemetry.usesOnlineServices"
+  ],
+  "window.zoomLevel": 1,
+  "extensions.ignoreRecommendations": true,
+  "[css]": {
+    "editor.defaultFormatter": "sibiraj-s.vscode-scss-formatter"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "diffEditor.ignoreTrimWhitespace": false,
+  "github.copilot.advanced": {},
+  "github.gitProtocol": "ssh",
+  "workbench.colorTheme": "Default Light Modern",
+  "security.promptForLocalFileProtocolHandling": false,
+  "typeChallenges.workspaceFolder": "/Users/camille/Dev/type-challenges",
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": false,
+    "markdown": false,
+    "scminput": false
   },
 }

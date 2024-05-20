@@ -4,8 +4,9 @@
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 alias invoke="invokeai && source .venv/bin/activate"
-alias spotx-mac='bash <(curl -sSL https://raw.githubusercontent.com/SpotX-CLI/SpotX-Mac/main/install.sh)'
-alias spotx='bash <(curl -sSL https://spotx-official.github.io/run.sh) -c -B --installmac'
+alias spotx='bash <(curl -sSL https://raw.githubusercontent.com/Nuzair46/BlockTheSpot-Mac/main/install.sh) -u'
+# alias spotx-mac='bash <(curl -sSL https://raw.githubusercontent.com/SpotX-CLI/SpotX-Mac/main/install.sh)'
+# alias spotx='bash <(curl -sSL https://spotx-official.github.io/run.sh) -c -B --installmac'
 alias vi=nvim
 alias vim=nvim
 

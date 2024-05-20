@@ -1,6 +1,6 @@
 {
   "fonts": {
-    "/Applications/calibre.app/Contents/Resources/resources/fonts/liberation/LiberationMono-Bold.ttf||304804:1614308916.0": {
+    "/Applications/calibre.app/Contents/Resources/resources/fonts/liberation/LiberationMono-Bold.ttf||307996:1710386566.0": {
       "family_name": "Liberation Mono",
       "font-family": "Liberation Mono",
       "font-stretch": "normal",
@@ -36,7 +36,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/Applications/calibre.app/Contents/Resources/resources/fonts/liberation/LiberationMono-BoldItalic.ttf||281156:1614308916.0": {
+    "/Applications/calibre.app/Contents/Resources/resources/fonts/liberation/LiberationMono-BoldItalic.ttf||284068:1710386566.0": {
       "family_name": "Liberation Mono",
       "font-family": "Liberation Mono",
       "font-stretch": "normal",
@@ -72,7 +72,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/Applications/calibre.app/Contents/Resources/resources/fonts/liberation/LiberationMono-Italic.ttf||278664:1614308916.0": {
+    "/Applications/calibre.app/Contents/Resources/resources/fonts/liberation/LiberationMono-Italic.ttf||281536:1710386566.0": {
       "family_name": "Liberation Mono",
       "font-family": "Liberation Mono",
       "font-stretch": "normal",
@@ -108,7 +108,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/Applications/calibre.app/Contents/Resources/resources/fonts/liberation/LiberationMono-Regular.ttf||316264:1614308916.0": {
+    "/Applications/calibre.app/Contents/Resources/resources/fonts/liberation/LiberationMono-Regular.ttf||319508:1710386566.0": {
       "family_name": "Liberation Mono",
       "font-family": "Liberation Mono",
       "font-stretch": "normal",
@@ -144,7 +144,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/Applications/calibre.app/Contents/Resources/resources/fonts/liberation/LiberationSans-Bold.ttf||412436:1614308916.0": {
+    "/Applications/calibre.app/Contents/Resources/resources/fonts/liberation/LiberationSans-Bold.ttf||414456:1710386566.0": {
       "family_name": "Liberation Sans",
       "font-family": "Liberation Sans",
       "font-stretch": "normal",
@@ -180,7 +180,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/Applications/calibre.app/Contents/Resources/resources/fonts/liberation/LiberationSans-BoldItalic.ttf||407300:1614308916.0": {
+    "/Applications/calibre.app/Contents/Resources/resources/fonts/liberation/LiberationSans-BoldItalic.ttf||408996:1710386566.0": {
       "family_name": "Liberation Sans",
       "font-family": "Liberation Sans",
       "font-stretch": "normal",
@@ -216,7 +216,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/Applications/calibre.app/Contents/Resources/resources/fonts/liberation/LiberationSans-Italic.ttf||413824:1614308916.0": {
+    "/Applications/calibre.app/Contents/Resources/resources/fonts/liberation/LiberationSans-Italic.ttf||415816:1710386566.0": {
       "family_name": "Liberation Sans",
       "font-family": "Liberation Sans",
       "font-stretch": "normal",
@@ -252,7 +252,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/Applications/calibre.app/Contents/Resources/resources/fonts/liberation/LiberationSans-Regular.ttf||408988:1614308916.0": {
+    "/Applications/calibre.app/Contents/Resources/resources/fonts/liberation/LiberationSans-Regular.ttf||410712:1710386566.0": {
       "family_name": "Liberation Sans",
       "font-family": "Liberation Sans",
       "font-stretch": "normal",
@@ -288,7 +288,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/Applications/calibre.app/Contents/Resources/resources/fonts/liberation/LiberationSerif-Bold.ttf||367896:1614308916.0": {
+    "/Applications/calibre.app/Contents/Resources/resources/fonts/liberation/LiberationSerif-Bold.ttf||370096:1710386566.0": {
       "family_name": "Liberation Serif",
       "font-family": "Liberation Serif",
       "font-stretch": "normal",
@@ -324,7 +324,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/Applications/calibre.app/Contents/Resources/resources/fonts/liberation/LiberationSerif-BoldItalic.ttf||374468:1614308916.0": {
+    "/Applications/calibre.app/Contents/Resources/resources/fonts/liberation/LiberationSerif-BoldItalic.ttf||376772:1710386566.0": {
       "family_name": "Liberation Serif",
       "font-family": "Liberation Serif",
       "font-stretch": "normal",
@@ -360,7 +360,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/Applications/calibre.app/Contents/Resources/resources/fonts/liberation/LiberationSerif-Italic.ttf||373340:1614308916.0": {
+    "/Applications/calibre.app/Contents/Resources/resources/fonts/liberation/LiberationSerif-Italic.ttf||375632:1710386566.0": {
       "family_name": "Liberation Serif",
       "font-family": "Liberation Serif",
       "font-stretch": "normal",
@@ -396,7 +396,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/Applications/calibre.app/Contents/Resources/resources/fonts/liberation/LiberationSerif-Regular.ttf||391024:1614308916.0": {
+    "/Applications/calibre.app/Contents/Resources/resources/fonts/liberation/LiberationSerif-Regular.ttf||393576:1710386566.0": {
       "family_name": "Liberation Serif",
       "font-family": "Liberation Serif",
       "font-stretch": "normal",
@@ -9539,6 +9539,42 @@
       "preferred_family_name": "Cartograph CF",
       "preferred_subfamily_name": "Thin Italic",
       "subfamily_name": "Thin Italic",
+      "weight": 400,
+      "width": 5,
+      "wws_family_name": null,
+      "wws_subfamily_name": null
+    },
+    "/Users/camille/Library/Fonts/DejaVuSans.ttf||757076:1469872272.0": {
+      "family_name": "DejaVu Sans",
+      "font-family": "DejaVu Sans",
+      "font-stretch": "normal",
+      "font-style": "normal",
+      "font-weight": "normal",
+      "fs_type": 0,
+      "full_name": "DejaVu Sans",
+      "is_bold": false,
+      "is_italic": false,
+      "is_oblique": false,
+      "is_otf": false,
+      "is_regular": true,
+      "is_wws": false,
+      "os2_version": 1,
+      "panose": [
+        2,
+        11,
+        6,
+        3,
+        3,
+        8,
+        4,
+        2,
+        2,
+        4
+      ],
+      "path": "/Users/camille/Library/Fonts/DejaVuSans.ttf",
+      "preferred_family_name": "DejaVu Sans",
+      "preferred_subfamily_name": "Book",
+      "subfamily_name": "Book",
       "weight": 400,
       "width": 5,
       "wws_family_name": null,
