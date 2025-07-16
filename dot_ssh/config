@@ -1,56 +1,60 @@
 Host github.com
+  User git
   HostName github.com
   AddKeysToAgent yes
-  UseKeychain yes
+  IdentitiesOnly yes
   IdentityFile ~/.ssh/id_ed25519
-  IdentitiesOnly yes
+  StrictHostKeyChecking no
+  UseKeychain yes
 
-Host github-elboWarrior
+Host github_elbowarrior
+  User git
   HostName github.com
   AddKeysToAgent yes
-  UseKeychain yes
-  IdentityFile ~/.ssh/id_ed25519_elbowarrior
   IdentitiesOnly yes
+  IdentityFile ~/.ssh/id_ed25519_elbowarrior
+  StrictHostKeyChecking no
+  UseKeychain yes
 
 Host nf-ovh
   User debian
   HostName 141.95.160.182
   Port 49999
   AddKeysToAgent yes
-  UseKeychain yes
-  IdentityFile ~/.ssh/id_ed25519
   IdentitiesOnly yes
+  IdentityFile ~/.ssh/id_ed25519
+  UseKeychain yes
 
 Host remarkable
   User root
-  HostName 192.168.1.30
+  HostName 192.168.161.54
   AddKeysToAgent yes
-  UseKeychain yes
-  IdentityFile ~/.ssh/id_ed25519
   IdentitiesOnly yes
+  IdentityFile ~/.ssh/id_ed25519
+  UseKeychain yes
 
 Host remarkable-usb
-  User debian
+  User root
   HostName 10.11.99.1
   AddKeysToAgent yes
-  UseKeychain yes
-  IdentityFile ~/.ssh/id_ed25519
   IdentitiesOnly yes
+  IdentityFile ~/.ssh/id_ed25519
+  UseKeychain yes
 
 Host nf-showcases
   User debian
   HostName 195.15.214.30
   Port 22
   AddKeysToAgent yes
-  UseKeychain yes
-  IdentityFile ~/.ssh/id_ed25519_nosfuturs
   IdentitiesOnly yes
+  IdentityFile ~/.ssh/id_ed25519_nosfuturs
+  UseKeychain yes
 
 Host jbi
   User root
   HostName 212.132.105.242
   Port 22
   AddKeysToAgent yes
-  UseKeychain yes
-  IdentityFile ~/.ssh/id_ed25519_nosfuturs
   IdentitiesOnly yes
+  IdentityFile ~/.ssh/id_ed25519_nosfuturs
+  UseKeychain yes

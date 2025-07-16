@@ -1,125 +1,255 @@
+tap "auth0/auth0-cli"
 tap "derailed/k9s"
 tap "dotenv-org/brew"
-tap "homebrew/bundle"
-tap "homebrew/services"
+tap "gromgit/fuse"
 tap "infisical/get-cli"
+tap "localsend/localsend"
 tap "lyraphase/pcloud"
-tap "spicetify/tap"
-tap "yqrashawn/goku"
+tap "oven-sh/bun"
+tap "pikachuexe/freetube"
+tap "timescam/tap"
 # Run your GitHub Actions locally
 brew "act"
 # GitOps Continuous Delivery for Kubernetes
 brew "argocd"
 # Download with resuming and segmented downloading
 brew "aria2"
+# Microsoft Azure CLI 2.0
+brew "azure-cli"
+# Tuned OpenCL BLAS library
+brew "clblast"
+# Cross-platform make
+brew "cmake"
 # Good-lookin' diffs with diff-highlight and more
 brew "diff-so-fancy"
 # Lightweight DNS forwarder and DHCP server
-brew "dnsmasq", restart_service: true
-# Pack, ship and run any application as a lightweight container
-brew "docker", link: false
+brew "dnsmasq", restart_service: :changed
 # Command-line tool to interact with exercism.io
 brew "exercism"
+# Play, record, convert, and stream audio and video
+brew "ffmpeg"
+# Fast and simple Node.js version manager
+brew "fnm"
 # Command-line fuzzy finder written in Go
 brew "fzf"
 # GitHub command-line tool
 brew "gh"
+# Interpreter for PostScript and PDF
+brew "ghostscript"
 # Distributed revision control system
 brew "git"
-# Quickly rewrite git repository history
-brew "git-filter-repo"
 # Git extension for versioning large files
 brew "git-lfs"
+# Audit git repos for secrets
+brew "gitleaks"
+# Open source programming language to build simple/reliable/efficient software
+brew "go"
 # Kubernetes package manager
 brew "helm"
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.13"
+# Client library for huggingface.co hub
+brew "huggingface-cli"
+# Tools and libraries to manipulate images in many formats
+brew "imagemagick"
 # API Support for your favorite torrent trackers
-brew "jackett", restart_service: true
+brew "jackett", restart_service: :changed
 # Lightweight and flexible command-line JSON processor
 brew "jq"
 # Postgres C API library
 brew "libpq", link: true
+# Library for storing/retrieving passwords and other secrets
+brew "libsecret"
 # Library for USB device access
 brew "libusb"
 # Replacement for ls, cp and other commands for object storage
 brew "minio-mc"
-# Modern Linker
-brew "mold"
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
-# Manage multiple Node.js versions
-brew "nvm"
-# Execute binaries from Python packages in isolated environments
-brew "pipx"
 # Package management made easy
 brew "pixi"
-# Manage compile and link flags for libraries
-brew "pkg-config"
-# Python package management tool
-brew "poetry"
-# Python version management
-brew "pyenv"
+# Package compiler and linker metadata toolkit
+brew "pkgconf"
+# Protocol buffers (Google's data interchange format)
+brew "protobuf"
 # Interpreted, interactive, object-oriented programming language
 brew "python@3.10"
+# Search tool like grep and The Silver Searcher
+brew "ripgrep"
 # Rust toolchain installer
-brew "rustup-init"
+brew "rustup"
+# Command-line Interface for Scaleway
+brew "scw"
+# Python 2 and 3 compatibility utilities
+brew "six"
 # Cross-shell prompt for astronauts
 brew "starship"
-# Programmatically correct mistyped console commands
-brew "thefuck"
+# Plugin and runtime library for using protobuf with Swift
+brew "swift-protobuf"
+# Extremely fast Python package installer and resolver, written in Rust
+brew "uv"
 # Library to create, extract, and modify Windows Imaging files
 brew "wimlib"
 # UNIX shell (command interpreter)
 brew "zsh"
+# Build, manage and test your Auth0 integrations from the command line
+brew "auth0/auth0-cli/auth0"
 # Kubernetes CLI To Manage Your Clusters In Style!
 brew "derailed/k9s/k9s"
 # Sync .env files
 brew "dotenv-org/brew/dotenv-vault"
+# FUSE-based file system backed by Amazon S3
+brew "gromgit/fuse/s3fs-mac"
 # The official Infisical CLI
 brew "infisical/get-cli/infisical"
+# Incredibly fast JavaScript runtime, bundler, transpiler and package manager - all in one.
+brew "oven-sh/bun/bun"
+# CLI tool to pay respects
+brew "timescam/tap/pay-respects"
+# Free video downloader
+cask "4k-video-downloader+"
 # Application launcher and productivity software
 cask "alfred"
 # Local-first and end-to-end encrypted notes app
 cask "anytype"
 # Application uninstaller
 cask "appcleaner"
-# Manage team projects and tasks
-cask "asana"
+# Text, code, and markup editor
+cask "bbedit"
 # Web browser focusing on privacy
 cask "brave-browser"
 # Bittorrent client
 cask "c0re100-qbittorrent"
 # E-books management software
 cask "calibre"
-# App to build and share containerised applications and microservices
-cask "docker"
+# Write, edit, and chat about your code with AI
+cask "cursor"
 # Online diagram software
 cask "drawio"
-# YouTube player focusing on privacy
-cask "freetube"
+# Screen colour temperature controller
+cask "flux-app"
+cask "font-0xproto-nerd-font"
+cask "font-3270-nerd-font"
+cask "font-agave-nerd-font"
+cask "font-anonymice-nerd-font"
+cask "font-arimo-nerd-font"
+cask "font-aurulent-sans-mono-nerd-font"
+cask "font-bigblue-terminal-nerd-font"
+cask "font-bitstream-vera-sans-mono-nerd-font"
+cask "font-blex-mono-nerd-font"
+cask "font-caskaydia-cove-nerd-font"
+cask "font-caskaydia-mono-nerd-font"
+cask "font-code-new-roman-nerd-font"
+cask "font-comic-shanns-mono-nerd-font"
+cask "font-commit-mono-nerd-font"
+cask "font-cousine-nerd-font"
+cask "font-d2coding-nerd-font"
+cask "font-daddy-time-mono-nerd-font"
+cask "font-dejavu-sans-mono-nerd-font"
+cask "font-droid-sans-mono-nerd-font"
+cask "font-envy-code-r-nerd-font"
+cask "font-fantasque-sans-mono-nerd-font"
+cask "font-fira-code-nerd-font"
+cask "font-fira-mono-nerd-font"
+cask "font-geist-mono-nerd-font"
+cask "font-go-mono-nerd-font"
+cask "font-gohufont-nerd-font"
+cask "font-hack-nerd-font"
+cask "font-hasklug-nerd-font"
+cask "font-heavy-data-nerd-font"
+cask "font-hurmit-nerd-font"
+cask "font-im-writing-nerd-font"
+cask "font-inconsolata-go-nerd-font"
+cask "font-inconsolata-lgc-nerd-font"
+cask "font-inconsolata-nerd-font"
+cask "font-intone-mono-nerd-font"
+cask "font-iosevka-nerd-font"
+cask "font-iosevka-term-nerd-font"
+cask "font-iosevka-term-slab-nerd-font"
+cask "font-jetbrains-mono-nerd-font"
+cask "font-lekton-nerd-font"
+cask "font-liberation-nerd-font"
+cask "font-lilex-nerd-font"
+cask "font-m+-nerd-font"
+cask "font-martian-mono-nerd-font"
+cask "font-meslo-lg-nerd-font"
+cask "font-monaspace-nerd-font"
+cask "font-monocraft-nerd-font"
+cask "font-monofur-nerd-font"
+cask "font-monoid-nerd-font"
+cask "font-mononoki-nerd-font"
+cask "font-noto-nerd-font"
+cask "font-open-dyslexic-nerd-font"
+cask "font-overpass-nerd-font"
+cask "font-profont-nerd-font"
+cask "font-proggy-clean-tt-nerd-font"
+cask "font-recursive-mono-nerd-font"
+cask "font-roboto-mono-nerd-font"
+cask "font-sauce-code-pro-nerd-font"
+cask "font-shure-tech-mono-nerd-font"
+cask "font-space-mono-nerd-font"
+cask "font-symbols-only-nerd-font"
+cask "font-terminess-ttf-nerd-font"
+cask "font-tinos-nerd-font"
+cask "font-ubuntu-mono-nerd-font"
+cask "font-ubuntu-nerd-font"
+cask "font-ubuntu-sans-nerd-font"
+cask "font-victor-mono-nerd-font"
+cask "font-zed-mono-nerd-font"
+# Free and open-source image editor
+cask "gimp"
+# IRC client
+cask "halloy"
 # Free and open-source media player
 cask "iina"
 # Terminal emulator as alternative to Apple's Terminal app
 cask "iterm2"
+# Open-source epub reader
+cask "koodo-reader"
+# Free and open-source painting and sketching program
+cask "krita"
+# Free cross-platform office suite, fresh version
+cask "libreoffice"
+# Discover, download, and run local LLMs
+cask "lm-studio"
+# An open source cross-platform alternative to AirDrop
+cask "localsend"
 # Open-source firewall to block unknown outgoing connections
 cask "lulu"
 # File system integration
 cask "macfuse"
+# Multi-platform web browser
+cask "microsoft-edge"
+# Online collaborative whiteboard platform
+cask "miro"
 # Desktop sync client for Nextcloud software products
 cask "nextcloud"
+# App to write, plan, collaborate, and get organised
+cask "notion"
 # Simple application that will prevent iTunes or Apple Music from launching
 cask "notunes"
-# Verify system files structure, run miscellaneous maintenance and more
-cask "onyx"
+# Knowledge base that works on top of a local folder of plain text Markdown files
+cask "obsidian"
 # File manager
 cask "path-finder"
 # Client for the pCloud virtual cloud storage service
 cask "pcloud-drive"
+# Full-screen slideshow program
+cask "phoenix-slides"
+# YouTube player focusing on privacy
+cask "pikachuexe-freetube"
+# Client for Proton Mail and Proton Calendar
+cask "proton-mail"
 # VPN client focusing on security
 cask "protonvpn"
 # Instant messaging application focusing on security
 cask "signal"
-# Knowledge management for organisations
-cask "slab"
+# Website downloader tool
+cask "sitesucker-pro"
+# Package manager and inference UI for Stable Diffusion
+cask "stability-matrix"
+# Video game digital distribution service
+cask "steam"
 # Customise mouse buttons, wheels and cursor speed
 cask "steermouse"
 # Open-source media center
@@ -130,64 +260,60 @@ cask "tableplus"
 cask "teamviewer"
 # Unpacks archive files
 cask "the-unarchiver"
+# Flexible level editor
+cask "tiled"
+# To-do list
+cask "todoist-app"
 # Web browser focusing on security
 cask "tor-browser"
-# Open-source code editor
-cask "visual-studio-code"
+# Adaptive AI IDE
+cask "trae"
 # Multimedia player
 cask "vlc"
-vscode "aaron-bond.better-comments"
-vscode "af4jm.vscode-icalendar"
+# Mind mapping and brainstorming tool
+cask "xmind"
 vscode "ajmnz.prisma-import"
 vscode "alefragnani.project-manager"
-vscode "alexcvzz.vscode-sqlite"
-vscode "amazonwebservices.codewhisperer-for-command-line-companion"
-vscode "antfu.unocss"
+vscode "anysphere.pyright"
 vscode "artdiniz.quitcontrol-vscode"
 vscode "astro-build.astro-vscode"
-vscode "battlebas.kivy-vscode"
-vscode "beardedbear.beardedtheme"
+vscode "bierner.markdown-mermaid"
+vscode "bradlc.vscode-tailwindcss"
+vscode "bruno-dias.ink"
+vscode "chaofan.hoi4modutilities"
+vscode "charliermarsh.ruff"
 vscode "christian-kohler.npm-intellisense"
 vscode "christian-kohler.path-intellisense"
 vscode "clinyong.vscode-css-modules"
-vscode "cweijan.dbclient-jdbc"
-vscode "cweijan.vscode-database-client2"
-vscode "darkriszty.markdown-table-prettify"
 vscode "davidanson.vscode-markdownlint"
 vscode "dbaeumer.vscode-eslint"
-vscode "dnicolson.binary-plist"
+vscode "drincs-productions.pixi-vn-ink-vscode"
 vscode "eamodio.gitlens"
 vscode "editorconfig.editorconfig"
-vscode "fabiospampinato.vscode-diff"
+vscode "elagil.pre-commit-helper"
+vscode "esbenp.prettier-vscode"
+vscode "fill-labs.dependi"
 vscode "foxundermoon.shell-format"
-vscode "fredwangwang.vscode-hcl-format"
-vscode "github.copilot"
-vscode "github.copilot-chat"
 vscode "github.vscode-github-actions"
+vscode "github.vscode-pull-request-github"
 vscode "gruntfuggly.todo-tree"
-vscode "hashicorp.hcl"
-vscode "hediet.vscode-drawio"
-vscode "irongeek.vscode-env"
-vscode "jgclark.vscode-todo-highlight"
+vscode "inferrinizzard.prettier-sql-vscode"
 vscode "jock.svg"
 vscode "kavish.hex-to-hsl"
-vscode "kbysiec.vscode-go-to-mdn"
-vscode "liviuschera.noctis"
-vscode "luquedaniel.languague-renpy"
+vscode "mathematic.vscode-pdf"
 vscode "meganrogge.template-string-converter"
-vscode "mgmcdermott.vscode-language-babel"
 vscode "mikeburgh.xml-format"
-vscode "mikestead.dotenv"
 vscode "mikoz.autoflake-extension"
 vscode "mindaro-dev.file-downloader"
-vscode "mrmlnc.vscode-scss"
-vscode "mrorz.language-gettext"
 vscode "ms-azuretools.vscode-docker"
+vscode "ms-dotnettools.vscode-dotnet-runtime"
 vscode "ms-python.black-formatter"
 vscode "ms-python.debugpy"
 vscode "ms-python.isort"
+vscode "ms-python.mypy-type-checker"
 vscode "ms-python.python"
 vscode "ms-python.vscode-pylance"
+vscode "ms-vscode-remote.remote-containers"
 vscode "ms-vscode-remote.remote-ssh"
 vscode "ms-vscode-remote.remote-ssh-edit"
 vscode "ms-vscode.remote-explorer"
@@ -195,25 +321,23 @@ vscode "ms-vsliveshare.vsliveshare"
 vscode "mvllow.rose-pine"
 vscode "naumovs.color-highlight"
 vscode "pkief.material-icon-theme"
+vscode "pomdtr.excalidraw-editor"
 vscode "redhat.vscode-yaml"
 vscode "richie5um2.vscode-sort-json"
 vscode "rust-lang.rust-analyzer"
 vscode "ryu1kn.partial-diff"
 vscode "ryuta46.multi-command"
-vscode "serayuzgur.crates"
+vscode "samueltscott.maximizeterminal"
 vscode "shd101wyy.markdown-preview-enhanced"
-vscode "sibiraj-s.vscode-scss-formatter"
+vscode "simonsiefke.svg-preview"
 vscode "stackbreak.comment-divider"
-vscode "stkb.rewrap"
-vscode "sumneko.lua"
+vscode "stripe.vscode-stripe"
 vscode "swellaby.rust-pack"
 vscode "tamasfe.even-better-toml"
 vscode "tauri-apps.tauri-vscode"
-vscode "tomoki1207.pdf"
 vscode "tyriar.sort-lines"
 vscode "vscodevim.vim"
 vscode "xshrim.txt-syntax"
 vscode "yrm.type-challenges"
-vscode "yzane.markdown-pdf"
 vscode "yzhang.markdown-all-in-one"
 vscode "zengxingxin.sort-js-object-keys"

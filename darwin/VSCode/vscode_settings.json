@@ -1,12 +1,27 @@
 {
+  "[css]": {
+    "editor.defaultFormatter": "vscode.css-language-features"
+  },
   "[dockerfile]": {
     "editor.defaultFormatter": "ms-azuretools.vscode-docker"
   },
   "[dotenv]": {
     "editor.defaultFormatter": "IronGeek.vscode-env"
   },
-  "[javascript]": {
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features",
     "editor.formatOnSave": false,
+    "editor.formatOnType": false,
+    "editor.suggest.insertMode": "replace"
+  },
+  "[javascript]": {
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": "explicit"
+    },
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": false
+  },
+  "[javascript][typescript]": {
     "editor.codeActionsOnSave": {
       "source.fixAll.eslint": "explicit"
     }
@@ -18,30 +33,44 @@
     "editor.defaultFormatter": "vscode.json-language-features"
   },
   "[markdown]": {
-    "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
+    "editor.defaultFormatter": "yzhang.markdown-all-in-one"
   },
   "[python]": {
     "editor.defaultFormatter": "ms-python.black-formatter",
     "editor.formatOnType": true
   },
   "[scss]": {
-    "editor.defaultFormatter": "sibiraj-s.vscode-scss-formatter"
+    "editor.defaultFormatter": "vscode.css-language-features"
   },
   "[typescript]": {
-    "editor.formatOnSave": false,
     "editor.codeActionsOnSave": {
       "source.fixAll.eslint": "explicit"
     },
     "editor.defaultFormatter": "vscode.typescript-language-features",
+    "editor.formatOnSave": false
   },
-  "editor.wordBasedSuggestionsMode": "allDocuments",
-  "editor.codeActionsOnSave": {
-    "source.organizeImports": "never"
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
   },
+  "ck3tiger.ck3.path": "/Users/camille/Library/Application Support/Steam/steamapps/common/Crusader Kings III",
+  "ck3tiger.ck3tiger.path": "/Users/camille/Dev/Personal/ck3-tiger/target/release",
+  "cwtools.cache.ck3": "/Users/camille/Library/Application Support/Steam/steamapps/common/Crusader Kings III/game",
+  "diffEditor.ignoreTrimWhitespace": false,
+  "editor.accessibilitySupport": "off",
   "editor.fontFamily": "'Cartograph CF', Menlo, Monaco, 'Courier New', monospace",
-  "editor.formatOnSave": true,
+  "editor.tokenColorCustomizations": {
+    "textMateRules": [
+      {
+        "scope": "keyword.other.dotenv",
+        "settings": {
+          "foreground": "#FF000000"
+        }
+      }
+    ]
+  },
   "editor.wordWrap": "on",
   "eslint.format.enable": true,
+  "eslint.useFlatConfig": true,
   "evenBetterToml.formatter.alignComments": true,
   "evenBetterToml.formatter.alignEntries": true,
   "evenBetterToml.formatter.allowedBlankLines": 1,
@@ -54,6 +83,8 @@
   "evenBetterToml.formatter.inlineTableExpand": true,
   "evenBetterToml.formatter.reorderArrays": true,
   "evenBetterToml.formatter.reorderKeys": true,
+  "explorer.confirmDragAndDrop": false,
+  "extensions.ignoreRecommendations": true,
   "files.associations": {
     "*.env*": "env",
     "*.env.local": "env",
@@ -61,33 +92,52 @@
     "*.scss": "scss",
     "*.tmpl": "shellscript",
     ".env": "env",
-    ".env.base": "env",
-    ".env*": "dotenv"
+    ".env*": "dotenv",
+    ".env.base": "env"
   },
   "git.autofetch": true,
   "git.confirmSync": false,
   "git.defaultBranchName": "trunk",
   "git.openRepositoryInParentFolders": "never",
+  "github.copilot.advanced": {},
+  "github.copilot.editor.enableAutoCompletions": true,
+  "github.copilot.enable": {
+    "*": true,
+    "markdown": true,
+    "plaintext": false,
+    "scminput": false
+  },
+  "github.gitProtocol": "ssh",
+  "gitlens.experimental.generateCommitMessagePrompt": "Now, please generate a commit message. Ensure that it includes a precise and informative subject line that succinctly summarizes the crux of the changes in under 50 characters. If necessary, follow with an explanatory body providing insight into the nature of the changes, the reasoning behind them, and any significant consequences or considerations arising from them. Conclude with any relevant issue references at the end of the message.  Make sure that the body is separated from the subject line by a blank line.  For more information, refer to the following resources:  - https://chris.beams.io/posts/git-commit/  - https://www.conventionalcommits.org/en/v1.0.0/.  Also, make sure the lengh of each line for the commit message is less than 72 characters.",
   "gitlens.plusFeatures.enabled": false,
   "javascript.updateImportsOnFileMove.enabled": "always",
+  "liveServer.settings.NoBrowser": true,
+  "liveServer.settings.donotShowInfoMsg": true,
+  "liveServer.settings.donotVerifyTags": true,
   "markdown.extension.toc.levels": "2..6",
+  "material-icon-theme.activeIconPack": "angular_ngrx",
   "material-icon-theme.files.associations": {
-    "Caddyfile.base": "caddy",
     "*.env.base": "tune",
     "*.env.dist": "tune",
+    "Caddyfile.base": "caddy"
   },
   "material-icon-theme.folders.associations": {
-    "packages": "Packages",
+    "packages": "Packages"
   },
+  "prettier.printWidth": 120,
   "projectManager.tags": [
+    "CK3",
     "Nos Futurs - Clients",
     "Nos Futurs - Internal",
     "Nos Futurs - Templates & Libraries",
+    "Personal - Libs",
     "Personal",
-    "Personal - Libs"
+    "Simplon"
   ],
   "python.languageServer": "Pylance",
   "redhat.telemetry.enabled": false,
+  "rewrap.autoWrap.enabled": true,
+  "security.promptForLocalFileProtocolHandling": false,
   "security.workspace.trust.untrustedFiles": "newWindow",
   "sortJSON.orderOverride": [
     "name",
@@ -102,54 +152,69 @@
     "devDependencies",
     "peerDependencies"
   ],
+  "svg.preview.mode": "svg",
+  "terminal.integrated.env.osx": {
+    "CW_NEW_SESSION": "1"
+  },
   "todo-tree.general.tags": [
     "BUG",
     "DEBUG",
+    "FIX",
     "FIXME",
-    "HACK",
     "INFO",
     "TODO",
-    "XXX"
-  ],
-  "todohighlight.keywords": [
-    {
-      "backgroundColor": "rgba(0,0,0,0)", // INFO: setting the last parameter to zero (alpha channel) disables the background colour
-      "border": "none",
-      "color": "green",
-      "isWholeLine": false,
-      "text": "INFO:" // without a defined regex pattern this is the string that will be matched
+    "WARNING",
+],
+"todo-tree.general.tagGroups": {
+    "FIXME": [
+        "FIXME",
+        "FIX",
+    ],
+    "INFO": [
+        "DEBUG",
+        "INFO",
+    ],
+    "WARNING": [
+        "BUG",
+        "WARNING",
+    ],
+},
+"todo-tree.highlights.defaultHighlight": {
+    "gutterIcon": true,
+    "opacity": 50,
+    "type": "text-and-comment",
+},
+"todo-tree.highlights.customHighlight": {
+    "FIXME": {
+        "background": "rgba(255, 99, 71, 0.2)", 
+        "foreground": "#cc3300",
+        "icon": "tools",
+        "iconColour": "#ff6347",
+        "gutterIcon": true
     },
-    {
-      "after": {
-        "contentText": "🚧️" // adds text after the highlight
-      },
-      "backgroundColor": "rgba(0,0,0,.2)",
-      "before": {
-        "contentText": "🚧️" // adds text before the highlight
-      },
-      "border": "1px solid orange",
-      "borderRadius": "2px", // NOTE: use borderRadius along with `border` or you will see nothing change
-      "color": "orange",
-      "diagnosticSeverity": "information", // Set diagnostic severity to `none`, `information`, `warning` or `error`
-      "isWholeLine": true,
-      "text": "DEBUG:"
+    "INFO": {
+        "background": "rgba(144, 238, 144, 0.2)",
+        "foreground": "#2e8b57",
+        "icon": "info",
+        "iconColour": "#90ee90",
+        "gutterIcon": true
     },
-    {
-      "after": {
-        "contentText": "🚨️" // adds text after the highlight
-      },
-      "backgroundColor": "rgba(0,0,0,.2)",
-      "before": {
-        "contentText": "🚨️" // adds text before the highlight
-      },
-      "border": "1px solid red",
-      "borderRadius": "2px", // NOTE: use borderRadius along with `border` or you will see nothing change
-      "color": "red",
-      "diagnosticSeverity": "warning", // Set diagnostic severity to `none`, `information`, `warning` or `error`
-      "isWholeLine": true,
-      "text": "WARNING:"
+    "TODO": {
+        "background": "rgba(135, 206, 250, 0.2)",
+        "foreground": "#4682b4",
+        "icon": "checklist",
+        "iconColour": "#87cefa",
+        "gutterIcon": true
+    },
+    "WARNING": {
+        "background": "rgba(255, 165, 0, 0.1)",
+        "foreground": "#d2691e",
+        "icon": "alert",
+        "iconColour": "#ffa500",
+        "gutterIcon": true
     }
-  ],
+},
+  "typeChallenges.workspaceFolder": "/Users/camille/Dev/type-challenges",
   "typescript.updateImportsOnFileMove.enabled": "always",
   "vim.handleKeys": {
     "<C-b>": false
@@ -175,67 +240,16 @@
     }
   ],
   "vim.smartRelativeLine": true,
+  "window.zoomLevel": 1,
+  "workbench.colorTheme": "Default Light Modern",
   "workbench.iconTheme": "material-icon-theme",
-  "autoflake-extension": {
-    "expand-star-imports": true,
-    "remove-duplicate-keys": true,
-    "remove-unused-variables": true,
-  },
-  "material-icon-theme.activeIconPack": "angular_ngrx",
-  "vs-kubernetes": {
-    "vscode-kubernetes.helm-path-mac": "/Users/camille/.vs-kubernetes/tools/helm/darwin-arm64/helm",
-    "vscode-kubernetes.minikube-path-mac": "/Users/camille/.vs-kubernetes/tools/minikube/darwin-arm64/minikube",
-    "vs-kubernetes.minikube-show-information-expiration": "2024-10-22T09:04:05.768Z"
-  },
-  "editor.tokenColorCustomizations": {
-    "textMateRules": [
-      {
-        "scope": "keyword.other.dotenv",
-        "settings": {
-          "foreground": "#FF000000"
-        }
-      }
-    ]
-  },
-  "[html]": {
-    "editor.suggest.insertMode": "replace",
-    "editor.formatOnType": false,
-    "editor.formatOnSave": false,
-  },
-  "[javascript][typescript]": {
-    "editor.codeActionsOnSave": {
-      "source.fixAll.eslint": "explicit"
-    }
-  },
-  "terminal.integrated.env.osx": {
-    "CW_NEW_SESSION": "1"
-  },
-  "editor.accessibilitySupport": "off",
-  "yaml.schemas": {
-    // "https://raw.githubusercontent.com/argoproj/argo-workflows/main/api/jsonschema/schema.json": "/Users/camille/Dev/NosFuturs/internal/main-cluster/**/*.yaml"
-  },
-  "database-client.telemetry.usesOnlineServices": false,
   "workbench.settings.applyToAllProfiles": [
     "database-client.telemetry.usesOnlineServices"
   ],
-  "window.zoomLevel": 1,
-  "extensions.ignoreRecommendations": true,
-  "[css]": {
-    "editor.defaultFormatter": "sibiraj-s.vscode-scss-formatter"
+  "yaml.schemas": {
+    // "https://raw.githubusercontent.com/argoproj/argo-workflows/main/api/jsonschema/schema.json": "/Users/camille/Dev/NosFuturs/internal/main-cluster/**/*.yaml"
   },
-  "[typescriptreact]": {
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
-  },
-  "diffEditor.ignoreTrimWhitespace": false,
-  "github.copilot.advanced": {},
-  "github.gitProtocol": "ssh",
-  "workbench.colorTheme": "Default Light Modern",
-  "security.promptForLocalFileProtocolHandling": false,
-  "typeChallenges.workspaceFolder": "/Users/camille/Dev/type-challenges",
-  "github.copilot.enable": {
-    "*": true,
-    "plaintext": false,
-    "markdown": false,
-    "scminput": false
-  },
+  "workbench.activityBar.location": "top",
+  "maximizeterminal.useAlternativeKeybinding": true,
+  "continue.enableTabAutocomplete": true
 }

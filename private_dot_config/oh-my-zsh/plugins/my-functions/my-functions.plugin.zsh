@@ -45,6 +45,48 @@ function pip_uninstall() {
     pipdeptree -p$1 -fj | jq ".[] | .package.key" | xargs pip uninstall -y
 }
 
+function sillytavern() {
+    emulate -L zsh
+    zmodload zsh/zutil || return
+
+
+    # Load the zsh/mapfile module to use the mapfile to list the models
+
+    # Parse the options
+    local help model
+    zparseopts -D -F -K -- \
+        {h,-help}=help \
+        {m,-model}=model || return
+
+    local koboldcpp_path="$HOME/Dev/Personal/ai/koboldcpp"
+    local models_dir="huggingface"
+    local sillytavern_path="$HOME/Dev/Personal/ai/SillyTavern"
+    # Presence of options can be checked via (( $#option )).
+    if (($#help)); then
+        local models_list=$(find "$koboldcpp_path/$models_dir" -mindepth 1 -maxdepth 1 -type f | awk -F/ '{print $NF}' | sort -V)
+        print -rC1 -- \
+            "$0 [-h|--help]" \
+            "$0 [-m|--model] <huggingface model name...>]"
+        print ""
+        print "Available models:"
+        print $models_list
+        return
+    fi
+
+    local kobold_model="Unholy-v2-13B.i1-Q4_K_M.gguf"
+    if (($#model)); then
+        print -r -- "model: ${(q+)model[-1]}"
+        kobold_model=$model
+    fi
+    print $kobold_model
+
+    # local launch_sillytavern="$sillytavern_path/launcher.sh &"
+    # local launch_koboldcpp="$koboldcpp_path/koboldcpp.py $kobold_model --port 5001 --host 127.0.0.1 &"
+
+    cd $sillytavern_path && ./start.sh &
+    cd $koboldcpp_path && ./koboldcpp.py "$models_dir/$kobold_model" --port 5001 --host 127.0.0.1 &
+}
+
 # Functions will be loaded on-demand when they are first called, rather than at shell startup
 # The -U option prevents alias expansion when loading the function, and the -z option sets the function up for Zsh-style function loading.
 autoload -Uz brew git_list_files pip_uninstall

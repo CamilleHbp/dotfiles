@@ -1,12 +1,17 @@
 {
+  "checkbox_no_sync_if_finished": false,
+  "checkbox_sync_if_more_recent": true,
   "column_bookmarks": "#koreader_bookmarks",
+  "column_date_sidecar_modified": "",
   "column_date_status_modified": "#date_read",
+  "column_date_synced": "",
   "column_last_read_location": "#koreader_location",
-  "column_md5": "#koreader_md5_progress",
+  "column_md5": "#koreader_reading_status",
   "column_percent_read": "#koreader_progress",
   "column_percent_read_int": "#koreader_progress_int",
   "column_rating": "rating",
   "column_review": "#koreader_review",
   "column_sidecar": "#koreader_sidecar",
-  "column_status": "#koreader_reading_status"
+  "column_status": "#koreader_reading_status",
+  "column_status_bool": "#read"
 }

@@ -1,3 +1,4 @@
+{"_id":"allSettingsSectionsExpandedByDefault","value":false}
 {"_id":"backendPreference","value":"invidious"}
 {"_id":"baseTheme","value":"catppuccinMocha"}
 {"_id":"bounds","value":{"x":464,"y":259,"width":800,"height":600,"maximized":false,"fullScreen":true}}
@@ -7,7 +8,12 @@
 {"_id":"defaultProfile","value":"MLBF64qX03yNWPic"}
 {"_id":"defaultQuality","value":"1080"}
 {"_id":"downloadBehavior","value":"open"}
+{"_id":"externalPlayer","value":"vlc"}
+{"_id":"externalPlayerExecutable","value":"/Applications/VLC.app/Contents/MacOS/VLC"}
 {"_id":"playNextVideo","value":true}
 {"_id":"region","value":"gb"}
 {"_id":"sponsorBlockRecap","value":{"color":"Orange","skip":"doNothing"}}
+{"_id":"sponsorBlockSponsor","value":{"color":"Green","skip":"autoSkip"}}
+{"_id":"useDeArrowThumbnails","value":true}
+{"_id":"useDeArrowTitles","value":true}
 {"_id":"useSponsorBlock","value":true}

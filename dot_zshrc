@@ -34,6 +34,18 @@ ZSH_CUSTOM=$HOME/.config/oh-my-zsh
 # much, much faster.
 # DISABLE_UNTRACKED_FILES_DIRTY="true"
 
+# ------------------------------ HISTORY Options ----------------------------- #
+# Deletes old recorded entry if new entry is a duplicate.
+setopt HIST_IGNORE_ALL_DUPS
+# Do not record an entry that was just recorded again.
+setopt HIST_IGNORE_DUPS
+# Do not display duplicates of a line previously found when searching
+setopt HIST_FIND_NO_DUPS
+# Remove superfluous blanks from each command line being added to the history list.
+setopt HIST_REDUCE_BLANKS
+# Beep when accessing non-existent history.
+setopt HIST_BEEP
+
 # fzf-tab needs to be loaded after compinit, but before other zsh-auto-suggestions. See: https://github.com/Aloxaf/fzf-tab#install
 autoload -Uz compinit && compinit
 plugins=(
@@ -41,9 +53,6 @@ plugins=(
   git
   kubectl
   my-functions
-  poetry
-  poetry-env
-  pyenv
   rust
   vi-mode
   fzf-tab
@@ -51,6 +60,9 @@ plugins=(
   zsh-history-substring-search
   zsh-syntax-highlighting
 )
+
+# Add FNM (node manager) to the env
+eval "$(fnm env --use-on-cd --shell zsh)"
 
 # Add completions to Oh-My-Zsh: see https://github.com/zsh-users/zsh-completions/issues/603
 fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
@@ -69,40 +81,10 @@ export LANG=en_GB.UTF-8
 # Source fuzzy completion
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-# ------------------------------------ NVM ----------------------------------- #
-export NVM_DIR="$HOME/.nvm"
-local brew_prefix=$(brew --prefix)
-[ -s "${brew_prefix}/opt/nvm/nvm.sh" ] && \. "${brew_prefix}/opt/nvm/nvm.sh"                                       # This loads nvm
-[ -s "${brew_prefix}/opt/nvm/etc/bash_completion.d/nvm" ] && \. "${brew_prefix}/opt/nvm/etc/bash_completion.d/nvm" # This loads nvm bash_completion
-
-# ------------------------------------ VIM ----------------------------------- #
-# Set default editor to VIM
-export EDITOR=nvim
-export VISUAL="$EDITOR"
-
-# ---------------------------------- TheFuck --------------------------------- #
-# Set TheFuck alias and key binding.
-# The plugin doesn't seem to function when thefuck is installed through Homebrew
-# This reproduce the plugin's behaviour
-# Register alias
-[[ ! -e $ZSH_CACHE_DIR/thefuck ]] && thefuck --alias >$ZSH_CACHE_DIR/thefuck
-source $ZSH_CACHE_DIR/thefuck
-
-fuck-command-line() {
-  local FUCK="$(THEFUCK_REQUIRE_CONFIRMATION=0 thefuck $(fc -ln -1 | tail -n 1) 2>/dev/null)"
-  [[ -z $FUCK ]] && echo -n -e "\a" && return
-  BUFFER=$FUCK
-  zle end-of-line
-}
-
-# Register the function as a widget
-zle -N fuck-command-line
-
-# TheFuck shortcut keys: [Esc] [Esc]
-bindkey -M emacs '\e\e' fuck-command-line
-bindkey -M vicmd '\e\e' fuck-command-line
-bindkey -M viins '\e\e' fuck-command-line
 # ---------------------------------------------------------------------------- #
+#                                   Cursor                                     #
+# ---------------------------------------------------------------------------- #
+export EDITOR="/Applications/Cursor.app/Contents/MacOS/Cursor"
 
 # ---------------------------------------------------------------------------- #
 #                                Docker Desktop                                #
@@ -111,21 +93,47 @@ bindkey -M viins '\e\e' fuck-command-line
 # export DOCKER_DEFAULT_PLATFORM=linux/amd64
 
 # ---------------------------------------------------------------------------- #
+#                                  Homebrew                                    #
+# ---------------------------------------------------------------------------- #
+# Add Homebrew to PATH
+export PATH="/opt/homebrew/bin:$PATH"
+
+# ---------------------------------------------------------------------------- #
+#                                  Pay Respect                                 #
+# ---------------------------------------------------------------------------- #
+# See: https://codeberg.org/iff/pay-respects/
+eval "$(pay-respects zsh --alias)"
+
+
+# ---------------------------------------------------------------------------- #
 #                                   Postgres                                   #
 # ---------------------------------------------------------------------------- #
 # Force libpq in path
 export PATH="/usr/local/opt/libpq/bin:$PATH"
 
 # ---------------------------------------------------------------------------- #
-#                                     PNPM                                     #
-# ---------------------------------------------------------------------------- #
-export PNPM_HOME="/Users/camille/Library/pnpm"
-case ":$PATH:" in
-*":$PNPM_HOME:"*) ;;
-*) export PATH="$PNPM_HOME:$PATH" ;;
-esac
-
-# ---------------------------------------------------------------------------- #
 #                                   Starship                                   #
 # ---------------------------------------------------------------------------- #
 eval "$(starship init zsh)"
+
+# ---------------------------------------------------------------------------- #
+#                        DotNet workaround for Homebrew                        #
+# ---------------------------------------------------------------------------- #
+export DOTNET_ROOT="$(dirname $(which dotnet))"
+
+# ---------------------------------------------------------------------------- #
+#                                   Tweego                                    #
+# ---------------------------------------------------------------------------- #
+export TWEEGO_PATH="$HOME/.tweego/storyformats"
+export PATH="$HOME/.tweego:$PATH"
+
+# ------------------------------------ VIM ----------------------------------- #
+# Set default editor to VIM
+export EDITOR=nvim
+export VISUAL="$EDITOR"
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/Users/camille/.lmstudio/bin"
+
+# Scaleway CLI autocompletion initialization
+eval "$(scw autocomplete script shell=zsh)"

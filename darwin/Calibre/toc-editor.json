@@ -1,0 +1,53 @@
+{
+  "geometry-of-toc_editor_window_geom": {
+    "frame_geometry": {
+      "height": 628,
+      "width": 900,
+      "x": 404,
+      "y": 236
+    },
+    "full_screened": false,
+    "geometry": {
+      "height": 600,
+      "width": 900,
+      "x": 404,
+      "y": 264
+    },
+    "maximized": false,
+    "normal_geometry": {
+      "height": 600,
+      "width": 900,
+      "x": 404,
+      "y": 264
+    },
+    "qt": {
+      "__class__": "bytearray",
+      "__value__": "AdnQywADAAAAAAGUAAAA7AAABRcAAANfAAABlAAAAQgAAAUXAAADXwAAAAAAAAAABsAAAAGUAAABCAAABRcAAANf"
+    },
+    "screen": {
+      "depth": 24,
+      "device_pixel_ratio": 2.0,
+      "geometry_in_logical_pixels": {
+        "height": 1117,
+        "width": 1728,
+        "x": 0,
+        "y": 0
+      },
+      "index_in_screens_list": 0,
+      "manufacturer": "",
+      "model": "",
+      "name": "Built-in Retina Display",
+      "serial": "",
+      "size_in_logical_pixels": {
+        "height": 1117,
+        "width": 1728
+      },
+      "virtual_geometry": {
+        "height": 1117,
+        "width": 1728,
+        "x": 0,
+        "y": 0
+      }
+    }
+  }
+}

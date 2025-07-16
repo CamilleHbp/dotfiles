@@ -75,5 +75,87 @@
   {
     "command": "github.copilot.interactiveEditor.generateDocs",
     "key": "ctrl+shift+d"
-  }
+  },
+  {
+    "key": "cmd+l cmd+o",
+    "command": "-extension.liveServer.goOnline",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "cmd+l cmd+c",
+    "command": "-extension.liveServer.goOffline",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "cmd+l",
+    "command": "-expandLineSelection",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "ctrl+`",
+    "command": "-maximizeterminal.openMinimizedTerminal",
+    "when": "config.maximizeterminal.useAlternativeKeybinding && !activeAuxiliary && !activePanel"
+  },
+  {
+    "key": "ctrl+[IntlBackslash]",
+    "command": "maximizeterminal.closeMaximizedTerminal",
+    "when": "config.maximizeterminal.useAlternativeKeybinding && focusedView == 'terminal'"
+  },
+  {
+    "key": "ctrl+;",
+    "command": "-maximizeterminal.closeMaximizedTerminal",
+    "when": "config.maximizeterminal.useAlternativeKeybinding && focusedView == 'terminal'"
+  },
+  {
+    "key": "ctrl+[IntlBackslash]",
+    "command": "maximizeterminal.openMaximizedTerminal",
+    "when": "config.maximizeterminal.useAlternativeKeybinding && !activeAuxiliary && !activePanel"
+  },
+  {
+    "key": "ctrl+;",
+    "command": "-maximizeterminal.openMaximizedTerminal",
+    "when": "config.maximizeterminal.useAlternativeKeybinding && !activeAuxiliary && !activePanel"
+  },
+  {
+    "key": "ctrl+[IntlBackslash]",
+    "command": "maximizeterminal.closeMaximizedTerminal",
+    "when": "focusedView == 'terminal'"
+  },
+  {
+    "key": "ctrl+`",
+    "command": "-maximizeterminal.closeMaximizedTerminal",
+    "when": "focusedView == 'terminal'"
+  },
+  {
+    "key": "ctrl+[IntlBackslash]",
+    "command": "maximizeterminal.openMaximizedTerminal",
+    "when": "!activeAuxiliary && !activePanel && !config.maximizeterminal.useAlternativeKeybinding"
+  },
+  {
+    "key": "ctrl+`",
+    "command": "-maximizeterminal.openMaximizedTerminal",
+    "when": "!activeAuxiliary && !activePanel && !config.maximizeterminal.useAlternativeKeybinding"
+  },
+  {
+    "key": "ctrl+`",
+    "command": "-workbench.action.terminal.toggleTerminal",
+    "when": "terminal.active"
+  },
+  {
+    "key": "ctrl+`",
+    "command": "workbench.action.closePanel"
+  },
+  {
+    "key": "shift+cmd+r",
+    "command": "workbench.action.reloadWindow"
+  },
+  {
+    "key": "shift+cmd+r",
+    "command": "-workbench.action.reloadWindow",
+    "when": "isDevelopment"
+  },
+  {
+    "key": "cmd+i",
+    "command": "composerMode.agent"
+  },
 ]

@@ -3,7 +3,7 @@
     name = "{{ .git_name }}"
 [core]
 	pager = diff-so-fancy | less --tabs=4 -RFX
-    editor = code --wait
+    editor = cursor --wait
 [init]
     defaultBranch = trunk
 [interactive]
@@ -28,3 +28,7 @@
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
+
+[alias]
+	elboMail = "config --local user.email '65555513+elboWarrior@users.noreply.github.com'"
+	elboName = "config --local user.name 'elboWarrior'"

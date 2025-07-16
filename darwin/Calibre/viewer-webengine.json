@@ -1,28 +1,28 @@
 {
   "geometry-of-main_window_geometry": {
     "frame_geometry": {
-      "height": 1080,
-      "width": 1728,
-      "x": 0,
-      "y": 37
+      "height": 772,
+      "width": 852,
+      "x": 544,
+      "y": 310
     },
-    "full_screened": true,
+    "full_screened": false,
     "geometry": {
-      "height": 1080,
-      "width": 1728,
-      "x": 0,
-      "y": 37
+      "height": 744,
+      "width": 852,
+      "x": 544,
+      "y": 338
     },
     "maximized": false,
     "normal_geometry": {
       "height": 744,
-      "width": 576,
+      "width": 852,
       "x": 544,
       "y": 338
     },
     "qt": {
       "__class__": "bytearray",
-      "__value__": "AdnQywADAAAAAAAAAAAAJQAABr8AAARcAAACIAAAAVIAAARfAAAEOQAAAAAABAAABsAAAAAAAAAAJQAABr8AAARc"
+      "__value__": "AdnQywADAAAAAAIgAAABNgAABXMAAAQ5AAACIAAAAVIAAAVzAAAEOQAAAAAAAAAABsAAAAIgAAABUgAABXMAAAQ5"
     },
     "screen": {
       "depth": 24,
@@ -56,11 +56,15 @@
   },
   "main_window_state": {
     "__class__": "bytearray",
-    "__value__": "AAAA/wAAAAH9AAAAAgAAAAAAAAEOAAAC6vwCAAAAAvsAAAAQAHQAbwBjAC0AZABvAGMAawIAAACfAAAA9AAAAQAAAALq+wAAABYAcwBlAGEAcgBjAGgALQBkAG8AYwBrAAAAAAAAAALqAAAAlQD///8AAAABAAACTwAABDj8AgAAAAT7AAAAFgBsAG8AbwBrAHUAcAAtAGQAbwBjAGsAAAAAAP////8AAAB9AP////sAAAAcAGIAbwBvAGsAbQBhAHIAawBzAC0AZABvAGMAawAAAAAA/////wAAAOcA////+wAAABwAaQBuAHMAcABlAGMAdABvAHIALQBkAG8AYwBrAAAAAAAAAAQ4AAAAEwD////7AAAAHgBoAGkAZwBoAGwAaQBnAGgAdABzAC0AZABvAGMAawAAAAAA/////wAAAMkA////AAAGwAAABDgAAAAEAAAABAAAAAgAAAAI/AAAAAEAAAAAAAAAAQAAAB4AYQBjAHQAaQBvAG4AcwBfAHQAbwBvAGwAYgBhAHICAAAAAP////8AAAAAAAAAAA=="
+    "__value__": "AAAA/wAAAAH9AAAAAgAAAAAAAAEOAAAC6PwCAAAAAvsAAAAQAHQAbwBjAC0AZABvAGMAawEAAAAAAAABcQAAAIYA////+wAAABYAcwBlAGEAcgBjAGgALQBkAG8AYwBrAQAAAXcAAAFxAAAAlAD///8AAAABAAACTwAABDj8AgAAAAT7AAAAFgBsAG8AbwBrAHUAcAAtAGQAbwBjAGsAAAAAAP////8AAAB7AP////sAAAAcAGIAbwBvAGsAbQBhAHIAawBzAC0AZABvAGMAawAAAAAA/////wAAAOYA////+wAAABwAaQBuAHMAcABlAGMAdABvAHIALQBkAG8AYwBrAAAAAAAAAAQ4AAAAEgD////7AAAAHgBoAGkAZwBoAGwAaQBnAGgAdABzAC0AZABvAGMAawAAAAAA/////wAAAM8A////AAACQAAAAugAAAAEAAAABAAAAAgAAAAI/AAAAAEAAAAAAAAAAQAAAB4AYQBjAHQAaQBvAG4AcwBfAHQAbwBvAGwAYgBhAHICAAAAAP////8AAAAAAAAAAA=="
   },
   "old_prefs_migrated": true,
   "saved-search-settings": {
     "dick": {
+      "case_sensitive": false,
+      "mode": "normal"
+    },
+    "fuck": {
       "case_sensitive": false,
       "mode": "normal"
     },
@@ -74,17 +78,231 @@
     }
   },
   "session_data": {
-    "base_font_size": 15,
+    "base_font_size": 18,
     "controls_help_shown_count": 2,
-    "current_color_scheme": "*Rosé Pine",
+    "current_color_scheme": "sepia-light",
     "hide_tooltips": null,
+    "keyboard_shortcuts": {
+      "down": [
+        {
+          "altKey": false,
+          "ctrlKey": false,
+          "key": "ArrowRight",
+          "metaKey": false,
+          "shiftKey": false
+        }
+      ],
+      "left": [
+        {
+          "altKey": false,
+          "ctrlKey": false,
+          "key": "ArrowUp",
+          "metaKey": false,
+          "shiftKey": false
+        }
+      ],
+      "right": [
+        {
+          "altKey": false,
+          "ctrlKey": false,
+          "key": "ArrowDown",
+          "metaKey": false,
+          "shiftKey": false
+        }
+      ],
+      "up": [
+        {
+          "altKey": false,
+          "ctrlKey": false,
+          "key": "ArrowLeft",
+          "metaKey": false,
+          "shiftKey": false
+        }
+      ]
+    },
     "max_text_height": 800,
     "max_text_width": 1500,
     "override_book_colors": "never",
+    "paged_margin_clicks_scroll_by_screen": false,
+    "paged_pixel_scroll_threshold": 975,
+    "paged_wheel_scrolls_by_screen": false,
+    "paged_wheel_section_jumps": false,
     "read_mode": "paged",
     "standalone_font_settings": {},
     "standalone_misc_settings": {},
     "standalone_recently_opened": [
+      {
+        "authors": [
+          "jagged"
+        ],
+        "key": "/Users/camille/Documents/eBooks/Calibre/jagged/Random Superpower Quest (3753)/Random Superpower Quest - jagged.epub",
+        "pathtoebook": "/Users/camille/Documents/eBooks/Calibre/jagged/Random Superpower Quest (3753)/Random Superpower Quest - jagged.epub",
+        "timestamp": "2025-06-13T12:40:40.350Z",
+        "title": "Random Superpower Quest"
+      },
+      {
+        "authors": [
+          "killertpu"
+        ],
+        "key": "/Users/camille/Documents/eBooks/Calibre/killertpu/Being Evil (3682)/Being Evil - killertpu.epub",
+        "pathtoebook": "/Users/camille/Documents/eBooks/Calibre/killertpu/Being Evil (3682)/Being Evil - killertpu.epub",
+        "timestamp": "2025-05-29T19:27:39.663Z",
+        "title": "Being Evil"
+      },
+      {
+        "authors": [
+          "Sönke Ahrens"
+        ],
+        "key": "/Users/camille/Documents/eBooks/Calibre/Sonke Ahrens/How to Take Smart Notes_ One Simple Technique to Boost Writing, Learning and Thinking - for Stu (3718)/How to Take Smart Notes_ One Simple Techni - Sonke Ahrens.epub",
+        "pathtoebook": "/Users/camille/Documents/eBooks/Calibre/Sonke Ahrens/How to Take Smart Notes_ One Simple Technique to Boost Writing, Learning and Thinking - for Stu (3718)/How to Take Smart Notes_ One Simple Techni - Sonke Ahrens.epub",
+        "timestamp": "2025-02-20T20:52:12.753Z",
+        "title": "How to Take Smart Notes: One Simple Technique to Boost Writing, Learning and Thinking – for Students, Academics and Nonfiction Book Writers"
+      },
+      {
+        "authors": [
+          "A. R. Wise"
+        ],
+        "key": "/Users/camille/Documents/eBooks/Calibre/A. R. Wise/314 (266)/314 - A. R. Wise.epub",
+        "pathtoebook": "/Users/camille/Documents/eBooks/Calibre/A. R. Wise/314 (266)/314 - A. R. Wise.epub",
+        "timestamp": "2024-11-24T19:14:39.073Z",
+        "title": "314"
+      },
+      {
+        "authors": [
+          "Sean Douglas"
+        ],
+        "key": "/Users/camille/Documents/eBooks/Calibre/Sean Douglas/R_T_M (101)/R_T_M - Sean Douglas.epub",
+        "pathtoebook": "/Users/camille/Documents/eBooks/Calibre/Sean Douglas/R_T_M (101)/R_T_M - Sean Douglas.epub",
+        "timestamp": "2024-11-24T19:12:08.989Z",
+        "title": "R/T/M"
+      },
+      {
+        "authors": [
+          "Bryan Smith"
+        ],
+        "key": "/Users/camille/Documents/eBooks/Calibre/Bryan Smith/Depraved (228)/Depraved - Bryan Smith.epub",
+        "pathtoebook": "/Users/camille/Documents/eBooks/Calibre/Bryan Smith/Depraved (228)/Depraved - Bryan Smith.epub",
+        "timestamp": "2024-11-24T19:10:40.297Z",
+        "title": "Depraved"
+      },
+      {
+        "authors": [
+          "Wrath James White"
+        ],
+        "key": "/Users/camille/Documents/eBooks/Calibre/Wrath James White/D.O.A. Extreme Horror Anthology (225)/D.O.A. Extreme Horror Anthology - Wrath James White.epub",
+        "pathtoebook": "/Users/camille/Documents/eBooks/Calibre/Wrath James White/D.O.A. Extreme Horror Anthology (225)/D.O.A. Extreme Horror Anthology - Wrath James White.epub",
+        "timestamp": "2024-11-24T19:09:02.522Z",
+        "title": "D.O.A. Extreme Horror Anthology"
+      },
+      {
+        "authors": [
+          "Succulent Prey v2"
+        ],
+        "key": "/Users/camille/Documents/eBooks/Calibre/Wrath James White/Succulent Prey (216)/Succulent Prey - Wrath James White.epub",
+        "pathtoebook": "/Users/camille/Documents/eBooks/Calibre/Wrath James White/Succulent Prey (216)/Succulent Prey - Wrath James White.epub",
+        "timestamp": "2024-11-24T19:08:40.759Z",
+        "title": "Wrath James White"
+      },
+      {
+        "authors": [
+          "Wrath James White",
+          "Maurice Broaddus"
+        ],
+        "key": "/Users/camille/Documents/eBooks/Calibre/Wrath James White/Orgy of Souls (235)/Orgy of Souls - Wrath James White.epub",
+        "pathtoebook": "/Users/camille/Documents/eBooks/Calibre/Wrath James White/Orgy of Souls (235)/Orgy of Souls - Wrath James White.epub",
+        "timestamp": "2024-11-24T18:06:41.548Z",
+        "title": "Orgy of Souls"
+      },
+      {
+        "authors": [
+          "OstensibleMammal"
+        ],
+        "key": "/Users/camille/Documents/eBooks/Calibre/OstensibleMammal/Godclads_ The Broken Cage_ A Progression Fantasy Epic (Godclads Book 1) (3699)/Godclads_ The Broken Cage_ A Progression F - OstensibleMammal.epub",
+        "pathtoebook": "/Users/camille/Documents/eBooks/Calibre/OstensibleMammal/Godclads_ The Broken Cage_ A Progression Fantasy Epic (Godclads Book 1) (3699)/Godclads_ The Broken Cage_ A Progression F - OstensibleMammal.epub",
+        "timestamp": "2024-11-24T10:11:39.059Z",
+        "title": "Godclads: The Broken Cage: A Progression Fantasy Epic (Godclads Book 1)"
+      },
+      {
+        "authors": [
+          "OstensibleMammal"
+        ],
+        "key": "/Users/camille/Documents/eBooks/Calibre/OstensibleMammal/Godclads (3696)/Godclads - OstensibleMammal.epub",
+        "pathtoebook": "/Users/camille/Documents/eBooks/Calibre/OstensibleMammal/Godclads (3696)/Godclads - OstensibleMammal.epub",
+        "timestamp": "2024-11-24T10:11:25.768Z",
+        "title": "Godclads"
+      },
+      {
+        "authors": [
+          "Angela Ackerman, Becca Puglisi"
+        ],
+        "key": "/Users/camille/Documents/eBooks/Calibre/Angela Ackerman/The Negative Trait Thesaurus_ A Wri (2712)/The Negative Trait Thesaurus_ A - Angela Ackerman.epub",
+        "pathtoebook": "/Users/camille/Documents/eBooks/Calibre/Angela Ackerman/The Negative Trait Thesaurus_ A Wri (2712)/The Negative Trait Thesaurus_ A - Angela Ackerman.epub",
+        "timestamp": "2024-07-17T05:50:55.308Z",
+        "title": "The Negative Trait Thesaurus: A Writer's Guide to Character Flaws"
+      },
+      {
+        "authors": [
+          "Jill Chamberlain"
+        ],
+        "key": "/Users/camille/Documents/WorldBuilding/Jill_Chamberlain__Nutshell_Technique__Crack_the_Secret_of_Successful_Screenwriting_The.epub",
+        "pathtoebook": "/Users/camille/Documents/WorldBuilding/Jill_Chamberlain__Nutshell_Technique__Crack_the_Secret_of_Successful_Screenwriting_The.epub",
+        "timestamp": "2024-07-02T13:05:54.660Z",
+        "title": "The Nutshell Technique: Crack the Secret of Successful Screenwriting"
+      },
+      {
+        "authors": [
+          "Sylvar Realm"
+        ],
+        "key": "/Users/camille/Documents/eBooks/Calibre/Sylvar Realm/March of The Dead (3589)/March of The Dead - Sylvar Realm.epub",
+        "pathtoebook": "/Users/camille/Documents/eBooks/Calibre/Sylvar Realm/March of The Dead (3589)/March of The Dead - Sylvar Realm.epub",
+        "timestamp": "2024-06-24T20:26:36.381Z",
+        "title": "March of The Dead (MotD)"
+      },
+      {
+        "authors": [
+          "ThatGit"
+        ],
+        "key": "/Users/camille/Documents/eBooks/Calibre/ThatGit/Harvesting the Multiverse (3590)/Harvesting the Multiverse - ThatGit.epub",
+        "pathtoebook": "/Users/camille/Documents/eBooks/Calibre/ThatGit/Harvesting the Multiverse (3590)/Harvesting the Multiverse - ThatGit.epub",
+        "timestamp": "2024-06-18T07:07:06.605Z",
+        "title": "Harvesting the Multiverse"
+      },
+      {
+        "authors": [
+          "Sylvar Realm"
+        ],
+        "key": "/Users/camille/Documents/eBooks/Calibre/Sylvar Realm/March of The Dead (MotD) (3589)/March of The Dead (MotD) - Sylvar Realm.epub",
+        "pathtoebook": "/Users/camille/Documents/eBooks/Calibre/Sylvar Realm/March of The Dead (MotD) (3589)/March of The Dead (MotD) - Sylvar Realm.epub",
+        "timestamp": "2024-06-12T13:39:41.869Z",
+        "title": "March of The Dead (MotD)"
+      },
+      {
+        "authors": [
+          "Manasong"
+        ],
+        "key": "/Users/camille/Documents/eBooks/Calibre/Manasong/Rupegia (3535)/Rupegia - Manasong.epub",
+        "pathtoebook": "/Users/camille/Documents/eBooks/Calibre/Manasong/Rupegia (3535)/Rupegia - Manasong.epub",
+        "timestamp": "2024-06-09T14:30:46.665Z",
+        "title": "Rupegia"
+      },
+      {
+        "authors": [
+          "ThatGit"
+        ],
+        "key": "/Users/camille/Documents/eBooks/Calibre/ThatGit/What We Do To Survive - Ch68 to 132 (3584)/What We Do To Survive - Ch68 to 132 - ThatGit.epub",
+        "pathtoebook": "/Users/camille/Documents/eBooks/Calibre/ThatGit/What We Do To Survive - Ch68 to 132 (3584)/What We Do To Survive - Ch68 to 132 - ThatGit.epub",
+        "timestamp": "2024-05-25T19:40:18.764Z",
+        "title": "What We Do To Survive - Ch68 to 132"
+      },
+      {
+        "authors": [
+          "https://1stkissnovel.org/"
+        ],
+        "key": "/Users/camille/Documents/eBooks/Calibre/Guiltythree/Shadow Slave (3581)/Shadow Slave - Guiltythree.epub",
+        "pathtoebook": "/Users/camille/Documents/eBooks/Calibre/Guiltythree/Shadow Slave (3581)/Shadow Slave - Guiltythree.epub",
+        "timestamp": "2024-05-25T15:36:35.456Z",
+        "title": "Shadow Slave c1-1638"
+      },
       {
         "authors": [
           "Frostbird"
@@ -138,175 +356,6 @@
         "pathtoebook": "/Users/camille/Documents/eBooks/Calibre/Shaun/The Wheel Turns Anew - book 4 (3560)/The Wheel Turns Anew - book 4 - Shaun.epub",
         "timestamp": "2023-09-20T21:16:47.122Z",
         "title": "The Wheel Turns Anew - book 4"
-      },
-      {
-        "authors": [
-          "Shaun"
-        ],
-        "key": "/Users/camille/Documents/eBooks/Calibre/Shaun/The Wheel Turns Anew - book 1 (3559)/The Wheel Turns Anew - book 1 - Shaun.epub",
-        "pathtoebook": "/Users/camille/Documents/eBooks/Calibre/Shaun/The Wheel Turns Anew - book 1 (3559)/The Wheel Turns Anew - book 1 - Shaun.epub",
-        "timestamp": "2023-09-20T21:02:17.770Z",
-        "title": "The Wheel Turns Anew - book 1"
-      },
-      {
-        "authors": [
-          "LaufeyOfThay"
-        ],
-        "key": "/Users/camille/Documents/eBooks/Calibre/LaufeyOfThay/Thayvian Tales (3554)/Thayvian Tales - LaufeyOfThay.epub",
-        "pathtoebook": "/Users/camille/Documents/eBooks/Calibre/LaufeyOfThay/Thayvian Tales (3554)/Thayvian Tales - LaufeyOfThay.epub",
-        "timestamp": "2023-09-08T06:39:24.730Z",
-        "title": "Thayvian Tales"
-      },
-      {
-        "key": "/Users/camille/Documents/eBooks/Calibre-RPG/Unknown/Symbaroum (3598)/Symbaroum - Unknown.epub",
-        "pathtoebook": "/Users/camille/Documents/eBooks/Calibre-RPG/Unknown/Symbaroum (3598)/Symbaroum - Unknown.epub",
-        "timestamp": "2023-07-22T05:37:52.399Z",
-        "title": "Symbaroum"
-      },
-      {
-        "authors": [
-          "Daniel Harms"
-        ],
-        "key": "/Users/camille/Documents/eBooks/Calibre-RPG/Call of Chtuluh/Cthulhu Mythos Encyclopedia (3513)/Cthulhu Mythos Encyclopedia - Call of Chtuluh.epub",
-        "pathtoebook": "/Users/camille/Documents/eBooks/Calibre-RPG/Call of Chtuluh/Cthulhu Mythos Encyclopedia (3513)/Cthulhu Mythos Encyclopedia - Call of Chtuluh.epub",
-        "timestamp": "2023-07-21T16:31:30.692Z",
-        "title": "Cthulhu Mythos Encyclopedia"
-      },
-      {
-        "authors": [
-          "Manasong"
-        ],
-        "key": "/Users/camille/Library/CloudStorage/Dropbox/Calibre/Manasong/Rupegia (3535)/Rupegia - Manasong.epub",
-        "pathtoebook": "/Users/camille/Library/CloudStorage/Dropbox/Calibre/Manasong/Rupegia (3535)/Rupegia - Manasong.epub",
-        "timestamp": "2023-07-13T18:01:56.198Z",
-        "title": "Rupegia"
-      },
-      {
-        "authors": [
-          "Nanners (nanjcsy)"
-        ],
-        "key": "/Users/camille/Library/CloudStorage/Dropbox/Calibre/Nanners (nanjcsy)/Climbing The Ladder (3530)/Climbing The Ladder - Nanners (nanjcsy).epub",
-        "pathtoebook": "/Users/camille/Library/CloudStorage/Dropbox/Calibre/Nanners (nanjcsy)/Climbing The Ladder (3530)/Climbing The Ladder - Nanners (nanjcsy).epub",
-        "timestamp": "2023-05-06T18:30:27.668Z",
-        "title": "Climbing The Ladder"
-      },
-      {
-        "authors": [
-          "Nanners (nanjcsy)"
-        ],
-        "key": "/Users/camille/Library/CloudStorage/Dropbox/Calibre/Nanners/Taken Down (2884)/Taken Down - Nanners.epub",
-        "pathtoebook": "/Users/camille/Library/CloudStorage/Dropbox/Calibre/Nanners/Taken Down (2884)/Taken Down - Nanners.epub",
-        "timestamp": "2023-05-06T18:29:11.242Z",
-        "title": "Taken Down"
-      },
-      {
-        "authors": [
-          "Nanners (nanjcsy)"
-        ],
-        "key": "/Users/camille/Library/CloudStorage/Dropbox/Calibre/Nanners/Taking Over (2885)/Taking Over - Nanners.epub",
-        "pathtoebook": "/Users/camille/Library/CloudStorage/Dropbox/Calibre/Nanners/Taking Over (2885)/Taking Over - Nanners.epub",
-        "timestamp": "2023-05-06T18:28:35.093Z",
-        "title": "Taking Over"
-      },
-      {
-        "authors": [
-          "Graham McNeill"
-        ],
-        "key": "/Users/camille/Library/CloudStorage/Dropbox/Calibre/Graham McNeill/False Gods (2841)/False Gods - Graham McNeill.epub",
-        "pathtoebook": "/Users/camille/Library/CloudStorage/Dropbox/Calibre/Graham McNeill/False Gods (2841)/False Gods - Graham McNeill.epub",
-        "timestamp": "2023-03-27T11:12:24.579Z",
-        "title": "False Gods"
-      },
-      {
-        "authors": [
-          "Randy Ingermanson"
-        ],
-        "key": "/Users/camille/Library/CloudStorage/Dropbox/Calibre/Randy Ingermanson/How to Write a Novel Using the Snow (3019)/How to Write a Novel Using the - Randy Ingermanson.epub",
-        "pathtoebook": "/Users/camille/Library/CloudStorage/Dropbox/Calibre/Randy Ingermanson/How to Write a Novel Using the Snow (3019)/How to Write a Novel Using the - Randy Ingermanson.epub",
-        "timestamp": "2023-03-23T18:42:17.580Z",
-        "title": "How to Write a Novel Using the Snowflake Method"
-      },
-      {
-        "authors": [
-          "nobody103"
-        ],
-        "key": "/Users/camille/Library/CloudStorage/Dropbox/Calibre/Domagoj Kurmaic/Mother of Learning (3341)/Mother of Learning - Domagoj Kurmaic.epub",
-        "pathtoebook": "/Users/camille/Library/CloudStorage/Dropbox/Calibre/Domagoj Kurmaic/Mother of Learning (3341)/Mother of Learning - Domagoj Kurmaic.epub",
-        "timestamp": "2023-03-19T15:57:39.116Z",
-        "title": "Mother of Learning"
-      },
-      {
-        "authors": [
-          "R. F. Kuang"
-        ],
-        "key": "/Users/camille/Library/CloudStorage/Dropbox/Calibre/R. F. Kuang/The Dragon Republic (3197)/The Dragon Republic - R. F. Kuang.epub",
-        "pathtoebook": "/Users/camille/Library/CloudStorage/Dropbox/Calibre/R. F. Kuang/The Dragon Republic (3197)/The Dragon Republic - R. F. Kuang.epub",
-        "timestamp": "2023-01-14T09:37:50.220Z",
-        "title": "The Dragon Republic"
-      },
-      {
-        "authors": [
-          "Johnny Ranger McCoy"
-        ],
-        "key": "/Users/camillebaillat/Movies/Tutorials/Models/Photographing Women Models - Portrait, Swimsuit, Lingerie, Boudoir, Fine Art, & Fashion.epub",
-        "pathtoebook": "/Users/camillebaillat/Movies/Tutorials/Models/Photographing Women Models - Portrait, Swimsuit, Lingerie, Boudoir, Fine Art, & Fashion.epub",
-        "timestamp": "2022-12-05T20:04:02.505Z",
-        "title": "Photographing Women Models: Portrait, Swimsuit, Lingerie, Boudoir, Fine Art, & Fashion Photography Exalting the Venus Goddess Archetype: How to Shoot Epic ... Odyssey Mythology Photography Book 1)"
-      },
-      {
-        "authors": [
-          "Simon Walden"
-        ],
-        "key": "/Users/camillebaillat/Dropbox/Calibre/Simon Walden/600_ Nude Poses_ A Complete Reference Book for Photographers, Models and Artists_ How to Pose N (3518)/600_ Nude Poses_ A Complete Reference Book - Simon Walden.epub",
-        "pathtoebook": "/Users/camillebaillat/Dropbox/Calibre/Simon Walden/600_ Nude Poses_ A Complete Reference Book for Photographers, Models and Artists_ How to Pose N (3518)/600_ Nude Poses_ A Complete Reference Book - Simon Walden.epub",
-        "timestamp": "2022-12-05T20:02:18.540Z",
-        "title": "600+ Nude Poses: A Complete Reference Book for Photographers, Models and Artists: How to Pose Nude Models with Effective Flow-Posing to get the Best From your Model and your Shooting Time."
-      },
-      {
-        "authors": [
-          "Simon Walden"
-        ],
-        "key": "/Users/camillebaillat/Movies/Tutorials/600+ Nude Poses - A Complete Reference Book for Photographers, Models and Artists/600+ Nude Poses - A Complete Reference Book for Photographers, Models and Artists.epub",
-        "pathtoebook": "/Users/camillebaillat/Movies/Tutorials/600+ Nude Poses - A Complete Reference Book for Photographers, Models and Artists/600+ Nude Poses - A Complete Reference Book for Photographers, Models and Artists.epub",
-        "timestamp": "2022-12-05T19:25:49.497Z",
-        "title": "600+ Nude Poses: A Complete Reference Book for Photographers, Models and Artists: How to Pose Nude Models with Effective Flow-Posing to get the Best From your Model and your Shooting Time."
-      },
-      {
-        "authors": [
-          "Maureen Johnson",
-          "Maureen Johnson"
-        ],
-        "key": "/Users/camillebaillat/Movies/Tutorials/Art Models 5 - Life Nude Photos For The Visual Arts/Art Models 5 - Life Nude Photos For The Visual Arts.epub",
-        "pathtoebook": "/Users/camillebaillat/Movies/Tutorials/Art Models 5 - Life Nude Photos For The Visual Arts/Art Models 5 - Life Nude Photos For The Visual Arts.epub",
-        "timestamp": "2022-12-05T19:21:25.931Z",
-        "title": "Art Models 5: Life Nude Photos for the Visual Arts"
-      },
-      {
-        "authors": [
-          "RainTemple"
-        ],
-        "key": "/Users/camillebaillat/Dropbox/Epub Edit/Virtuoso - RainTemple/Virtuoso - RainTemple.epub",
-        "pathtoebook": "/Users/camillebaillat/Dropbox/Epub Edit/Virtuoso - RainTemple/Virtuoso - RainTemple.epub",
-        "timestamp": "2022-11-27T18:39:04.214Z",
-        "title": "Virtuoso"
-      },
-      {
-        "authors": [
-          "madamezuki"
-        ],
-        "key": "/Users/camillebaillat/Documents/eBooks/Calibre/madamezuki/Sea Change (3477)/Sea Change - madamezuki.epub",
-        "pathtoebook": "/Users/camillebaillat/Documents/eBooks/Calibre/madamezuki/Sea Change (3477)/Sea Change - madamezuki.epub",
-        "timestamp": "2022-10-19T09:03:48.491Z",
-        "title": "Sea Change"
-      },
-      {
-        "authors": [
-          "Ejsmont, Artur"
-        ],
-        "key": "/Users/camillebaillat/Downloads/vdoc.pub_web-scalability-for-startup-engineers-tips-techniques-for-scaling-your-web-application.epub",
-        "pathtoebook": "/Users/camillebaillat/Downloads/vdoc.pub_web-scalability-for-startup-engineers-tips-techniques-for-scaling-your-web-application.epub",
-        "timestamp": "2022-08-30T10:18:31.311Z",
-        "title": "Web Scalability for Startup Engineers: Tips & Techniques for Scaling Your Web Application"
       }
     ],
     "user_color_schemes": {
@@ -317,7 +366,7 @@
         "name": "Rosé Pine"
       }
     },
-    "user_stylesheet": ":root {\n  --base: #232136;\n  --surface: #2a273f;\n  --overlay: #393552;\n  --muted: #6e6a86;\n  --subtle: #908caa;\n  --text: #e0def4;\n  --love: #eb6f92;\n  --gold: #f6c177;\n  --rose: #ea9a97;\n  --pine: #3e8fb0;\n  --foam: #9ccfd8;\n  --iris: #c4a7e7;\n  --highlight-low: #2a283e;\n  --highlight-med: #44415a;\n  --highlight-high: #56526e;\n}\n\n[hidden] {\n  display: none;\n}\n\na {\n  color: var(--pine);\n}\n\na:active,\na:hover {\n  outline: 0;\n}\n\na:focus {\n  outline: thin dotted;\n}\n\na:hover {\n  color: var(--foam);\n}\n\na:visited {\n  color: var(--iris);\n}\n\nabbr[title] {\n  border-bottom: 1px dotted;\n}\n\narticle,\naside,\ndetails,\nfigcaption,\nfigure,\nfooter,\nheader,\nhgroup,\nnav,\nsection,\nsummary {\n  display: block;\n}\n\naudio,\ncanvas,\nvideo {\n  display: inline-block;\n}\n\naudio:not([controls]) {\n  display: none;\n  height: 0;\n}\n\nb,\nstrong {\n  font-weight: bold;\n}\n\nbody {\n  font-family: 'Cartograph CF';\n  background-color: var(--base);\n  color: var(--text);\n  padding: 10px;\n  word-wrap: break-word;\n  margin: 0 auto;\n  border: 1pt solid var(--highlight-high);\n  padding: 1em;\n}\n\n\nbutton,\nhtml input[type=\\\"button\\\"],\ninput[type=\\\"reset\\\"],\ninput[type=\\\"submit\\\"] {\n  -webkit-appearance: button;\n  cursor: pointer;\n}\n\nbutton,\ninput {\n  line-height: normal;\n}\n\nbutton,\ninput,\nselect,\ntextarea {\n  font-family: inherit;\n  font-size: 100%;\n  margin: 0;\n}\n\nbutton::-moz-focus-inner,\ninput::-moz-focus-inner {\n  border: 0;\n  padding: 0;\n}\n\nbutton[disabled],\ninput[disabled] {\n  cursor: default;\n}\n\ncode {\n  background-color: #073642;\n  padding: 2px;\n}\n\ncode,\nkbd,\npre,\nsamp {\n  font-family: monospace, serif;\n}\n\ndfn {\n  font-style: italic;\n}\n\nfieldset {\n  border: 1px solid #c0c0c0;\n  margin: 0 2px;\n  padding: 0.35em 0.625em 0.75em;\n}\n\nfigure {\n  margin: 0;\n}\n\nh1 {\n  font-size: 2.8em;\n}\n\nh1 {\n  font-size: 2em;\n}\n\nh1,\nh2,\nh3,\nh4,\nh5,\nh6 {\n  font-family: 'Cartograph CF';\n  text-align: center;\n  color: var(--rose);\n  font-weight: 400;\n}\n\nh2 {\n  font-size: 2.4em;\n}\n\nh3 {\n  font-size: 1.8em;\n}\n\nh4 {\n  font-size: 1.4em;\n}\n\nh5 {\n  font-size: 1.3em;\n}\n\nh6 {\n  font-size: 1.15em;\n}\n\nhtml {\n  background-color: var(--base);\n  color: var(--text);\n}\n\nimg {\n  border: 0;\n}\n\ninput[type=\\\"checkbox\\\"],\ninput[type=\\\"radio\\\"] {\n  box-sizing: border-box;\n  padding: 0;\n}\n\ninput[type=\\\"search\\\"] {\n  -webkit-appearance: textfield;\n  -moz-box-sizing: content-box;\n  -webkit-box-sizing: content-box;\n  box-sizing: content-box;\n}\n\ninput[type=\\\"search\\\"]::-webkit-search-cancel-button,\ninput[type=\\\"search\\\"]::-webkit-search-decoration {\n  -webkit-appearance: none;\n}\n\nlegend {\n  border: 0;\n  padding: 0;\n}\n\nmark {\n  background: #ff0;\n  color: #000;\n}\n\npre code {\n  background-color: #002b36;\n}\n\npre {\n  background-color: #002b36;\n  color: #839496;\n  border: 1pt solid #586e75;\n  padding: 1em;\n  box-shadow: 5pt 5pt 8pt #073642;\n}\n\npre {\n  white-space: pre-wrap;\n  word-wrap: break-word;\n}\n\npre,\ncode {\n  font-family: 'Cartograph CF', sans-serif;\n}\n\nq {\n  quotes: \\\"\\\\201C\\\" \\\"\\\\201D\\\" \\\"\\\\2018\\\" \\\"\\\\2019\\\";\n}\n\nsmall {\n  font-size: 80%;\n}\n\nsub {\n  bottom: -0.25em;\n}\n\nsub,\nsup {\n  font-size: 75%;\n  line-height: 0;\n  position: relative;\n  vertical-align: baseline;\n}\n\nsup {\n  top: -0.5em;\n}\n\nsvg:not(:root) {\n  overflow: hidden;\n}\n\ntable {\n  border-collapse: collapse;\n  border-spacing: 0;\n}\n\ntextarea {\n  overflow: auto;\n  vertical-align: top;\n}\n\n.ACTIVE {\n  -webkit-border-radius: 0.2em;\n  -moz-border-radius: 0.2em;\n  border-radius: 0.2em;\n  background-color: #268bd2;\n}\n\n.CANCELLED {\n  -webkit-border-radius: 0.2em;\n  -moz-border-radius: 0.2em;\n  border-radius: 0.2em;\n  background-color: #859900;\n}\n\n.DONE {\n  -webkit-border-radius: 0.2em;\n  -moz-border-radius: 0.2em;\n  border-radius: 0.2em;\n  background-color: #859900;\n}\n\n.HOLD {\n  -webkit-border-radius: 0.2em;\n  -moz-border-radius: 0.2em;\n  border-radius: 0.2em;\n  background-color: #d33682;\n}\n\n.NEXT {\n  -webkit-border-radius: 0.2em;\n  -moz-border-radius: 0.2em;\n  border-radius: 0.2em;\n  background-color: #268bd2;\n}\n\n.NOTE {\n  -webkit-border-radius: 0.2em;\n  -moz-border-radius: 0.2em;\n  border-radius: 0.2em;\n  background-color: #d33682;\n}\n\n.TODO {\n  -webkit-border-radius: 0.2em;\n  -moz-border-radius: 0.2em;\n  border-radius: 0.2em;\n  background-color: #2aa198;\n}\n\n.WAITING {\n  -webkit-border-radius: 0.2em;\n  -moz-border-radius: 0.2em;\n  border-radius: 0.2em;\n  background-color: #cb4b16;\n}\n\n.calibre4 {\n    font-size: 0.80em;\n}\n\n.tag {\n  -webkit-border-radius: 0.35em;\n  -moz-border-radius: 0.35em;\n  border-radius: 0.35em;\n}\n\n.tag {\n  background-color: #073642;\n  color: #d33682;\n  padding: 0 0.2em;\n}\n\n.todo,\n.next,\n.done {\n  color: #002b36;\n  background-color: #dc322f;\n  padding: 0 0.2em;\n}\n"
+    "user_stylesheet": ":root {\n  --base: #232136;\n  --surface: #2a273f;\n  --overlay: #393552;\n  --muted: #6e6a86;\n  --subtle: #908caa;\n  --text: #e0def4;\n  --love: #eb6f92;\n  --gold: #f6c177;\n  --rose: #ea9a97;\n  --pine: #3e8fb0;\n  --foam: #9ccfd8;\n  --iris: #c4a7e7;\n  --highlight-low: #2a283e;\n  --highlight-med: #44415a;\n  --highlight-high: #56526e;\n}\n\n[hidden] {\n  display: none;\n}\n\na {\n  color: var(--pine);\n}\n\na:active,\na:hover {\n  outline: 0;\n}\n\na:focus {\n  outline: thin dotted;\n}\n\na:hover {\n  color: var(--foam);\n}\n\na:visited {\n  color: var(--iris);\n}\n\nabbr[title] {\n  border-bottom: 1px dotted;\n}\n\narticle,\naside,\ndetails,\nfigcaption,\nfigure,\nfooter,\nheader,\nhgroup,\nnav,\nsection,\nsummary {\n  display: block;\n}\n\naudio,\ncanvas,\nvideo {\n  display: inline-block;\n}\n\naudio:not([controls]) {\n  display: none;\n  height: 0;\n}\n\nb,\nstrong {\n  font-weight: bold;\n}\n\nbody {\n  font-family: 'Cartograph CF';\n  background-color: var(--base);\n  color: var(--text);\n  padding: 10px;\n  word-wrap: break-word;\n  margin: 0 auto;\n  border: 1pt solid var(--highlight-high);\n  padding: 1em;\n}\n\n\nbutton,\nhtml input[type=\\\"button\\\"],\ninput[type=\\\"reset\\\"],\ninput[type=\\\"submit\\\"] {\n  -webkit-appearance: button;\n  cursor: pointer;\n}\n\nbutton,\ninput {\n  line-height: normal;\n}\n\nbutton,\ninput,\nselect,\ntextarea {\n  font-family: inherit;\n  font-size: 100%;\n  margin: 0;\n}\n\nbutton::-moz-focus-inner,\ninput::-moz-focus-inner {\n  border: 0;\n  padding: 0;\n}\n\nbutton[disabled],\ninput[disabled] {\n  cursor: default;\n}\n\ncode {\n  background-color: #073642;\n  padding: 2px;\n}\n\ncode,\nkbd,\npre,\nsamp {\n  font-family: monospace, serif;\n}\n\ndfn {\n  font-style: italic;\n}\n\nfieldset {\n  border: 1px solid #c0c0c0;\n  margin: 0 2px;\n  padding: 0.35em 0.625em 0.75em;\n}\n\nfigure {\n  margin: 0;\n}\n\nh1 {\n  font-size: 2.8em;\n}\n\nh1 {\n  font-size: 2em;\n}\n\nh1,\nh2,\nh3,\nh4,\nh5,\nh6 {\n  font-family: 'Cartograph CF';\n  text-align: center;\n  color: var(--rose);\n  font-weight: 400;\n}\n\nh2 {\n  font-size: 2.4em;\n}\n\nh3 {\n  font-size: 1.8em;\n}\n\nh4 {\n  font-size: 1.4em;\n}\n\nh5 {\n  font-size: 1.3em;\n}\n\nh6 {\n  font-size: 1.15em;\n}\n\nhtml {\n  background-color: var(--base);\n  color: var(--text);\n}\n\nimg {\n  border: 0;\n}\n\ninput[type=\\\"checkbox\\\"],\ninput[type=\\\"radio\\\"] {\n  box-sizing: border-box;\n  padding: 0;\n}\n\ninput[type=\\\"search\\\"] {\n  -webkit-appearance: textfield;\n  -moz-box-sizing: content-box;\n  -webkit-box-sizing: content-box;\n  box-sizing: content-box;\n}\n\ninput[type=\\\"search\\\"]::-webkit-search-cancel-button,\ninput[type=\\\"search\\\"]::-webkit-search-decoration {\n  -webkit-appearance: none;\n}\n\nlegend {\n  border: 0;\n  padding: 0;\n}\n\nmark {\n  background: #ff0;\n  color: #000;\n}\n\npre code {\n  background-color: #002b36;\n}\n\npre {\n  background-color: #002b36;\n  color: #839496;\n  border: 1pt solid #586e75;\n  padding: 1em;\n  box-shadow: 5pt 5pt 8pt #073642;\n}\n\npre {\n  white-space: pre-wrap;\n  word-wrap: break-word;\n}\n\npre,\ncode {\n  font-family: 'Cartograph CF', sans-serif;\n}\n\nq {\n  quotes: \\\"\\\\201C\\\" \\\"\\\\201D\\\" \\\"\\\\2018\\\" \\\"\\\\2019\\\";\n}\n\nsmall {\n  font-size: 80%;\n}\n\nsub {\n  bottom: -0.25em;\n}\n\nsub,\nsup {\n  font-size: 75%;\n  line-height: 0;\n  position: relative;\n  vertical-align: baseline;\n}\n\nsup {\n  top: -0.5em;\n}\n\nsvg:not(:root) {\n  overflow: hidden;\n}\n\ntable {\n  border-collapse: collapse;\n  border-spacing: 0;\n}\n\ntextarea {\n  overflow: auto;\n  vertical-align: top;\n}\n\n.ACTIVE {\n  -webkit-border-radius: 0.2em;\n  -moz-border-radius: 0.2em;\n  border-radius: 0.2em;\n  background-color: #268bd2;\n}\n\n.CANCELLED {\n  -webkit-border-radius: 0.2em;\n  -moz-border-radius: 0.2em;\n  border-radius: 0.2em;\n  background-color: #859900;\n}\n\n.DONE {\n  -webkit-border-radius: 0.2em;\n  -moz-border-radius: 0.2em;\n  border-radius: 0.2em;\n  background-color: #859900;\n}\n\n.HOLD {\n  -webkit-border-radius: 0.2em;\n  -moz-border-radius: 0.2em;\n  border-radius: 0.2em;\n  background-color: #d33682;\n}\n\n.NEXT {\n  -webkit-border-radius: 0.2em;\n  -moz-border-radius: 0.2em;\n  border-radius: 0.2em;\n  background-color: #268bd2;\n}\n\n.NOTE {\n  -webkit-border-radius: 0.2em;\n  -moz-border-radius: 0.2em;\n  border-radius: 0.2em;\n  background-color: #d33682;\n}\n\n.TODO {\n  -webkit-border-radius: 0.2em;\n  -moz-border-radius: 0.2em;\n  border-radius: 0.2em;\n  background-color: #2aa198;\n}\n\n.WAITING {\n  -webkit-border-radius: 0.2em;\n  -moz-border-radius: 0.2em;\n  border-radius: 0.2em;\n  background-color: #cb4b16;\n}\n\n.calibre4 {\n    font-size: 0.80em;\n}\n\n.tag {\n  -webkit-border-radius: 0.35em;\n  -moz-border-radius: 0.35em;\n  border-radius: 0.35em;\n}\n\n.tag {\n  background-color: #073642;\n  color: #d33682;\n  padding: 0 0.2em;\n}\n\n.todo,\n.next,\n.done {\n  color: #002b36;\n  background-color: #dc322f;\n  padding: 0 0.2em;\n}\n\n\n\n/* ------------------------------------------------------------------------------------------------------------------------\n\nbody {\n\t/* background: #FFFAFD; */\n\tbackground-color: rgb(245, 245, 245) !important;\n\tfont-size: 100% !important;\n\tline-height: 1.5 !important;\n\tfont-family: 'Merriweather', Georgia, 'Times New Roman', Times, serif;\n\tmargin: 35px !important;\n}\n\nheader {\n\twidth:100% !important;\n\tmargin: auto !important;\n\ttext-align:center !important;\n}\n\nsection {\n\tmax-width:36em !important;\n\tmargin:auto !important;\n\tpadding:0 1em !important;\n}\n\nh1, h2{\n\tfont-family: 'Open Sans', Helvetica, Arial, sans-serif;\n\tcolor: #27272E !important;\n}\n\nh1 span {\n\tfont-family: 'Merriweather', Georgia, 'Times New Roman', Times, serif;\n\tfont-style:italic !important;\n\tbackground-color: none !important;\n}\n\nh1 {\n\t/* font-size: 2.747em; */\n\tfont-size: 2em !important;\n\tpadding: 25px 15px 9px !important;\n\tmargin: 0px 0px 0px -15px !important;\n\tline-height:1.1 !important;\n\ttext-transform: uppercase !important;\n}\n\nh1 span:nth-of-type(1) {\n\tfont-size:0.63em !important;\n\tdisplay:block !important;\n\tmargin: 1em auto 0 auto !important;\n\ttext-transform: none !important;\n}\n\nh2 {\n\ttext-transform: uppercase !important;\n\tfont-size: 1.4em !important;\n\ttext-align: left !important;\n\tline-height:1 !important;\n\tpadding: 15px !important;\n\tbackground-color: rgb(228, 228, 228) !important;\n}\n\nh2 span {\n\tposition:relative !important;\n\ttop:-.45em !important;\n\tpadding: 0 5% !important;\n\tmargin-top:-1em !important;\n}\n\nh3 {\n\tfont-style: italic !important;\n\tfont-weight:700 !important;\n\tfont-size:1.229em !important;\n\tmargin:1em 0 .25em 0 !important;\n}\n\np {\n\tfont-size: 1em !important;\n\tmargin-bottom: 1em !important;\n}\n\npre, pre.programlisting {\n\tfont-size: 1em !important;\n\tcolor: rgb(0, 34, 168) !important;\n}\n\ncode.literal {\n\tcolor: blue !important;\n\tfont-size: 1em !important;\n}\n\n@media screen and (max-width: 25em) {\n\tbody {\n\t\tfont-size: 90% !important;\n\t}\n}\n------------------------------------------------------------------------------------------------------------------------ */"
   },
   "viewer-search-case-sensitive": false,
   "viewer-search-mode": "normal"
