@@ -4,25 +4,25 @@
       "height": 772,
       "width": 852,
       "x": 544,
-      "y": 310
+      "y": 307
     },
     "full_screened": false,
     "geometry": {
       "height": 744,
       "width": 852,
       "x": 544,
-      "y": 338
+      "y": 335
     },
     "maximized": false,
     "normal_geometry": {
       "height": 744,
       "width": 852,
       "x": 544,
-      "y": 338
+      "y": 335
     },
     "qt": {
       "__class__": "bytearray",
-      "__value__": "AdnQywADAAAAAAIgAAABNgAABXMAAAQ5AAACIAAAAVIAAAVzAAAEOQAAAAAAAAAABsAAAAIgAAABUgAABXMAAAQ5"
+      "__value__": "AdnQywADAAAAAAIgAAABMwAABXMAAAQ2AAACIAAAAU8AAAVzAAAENgAAAAAAAAAABsAAAAIgAAABTwAABXMAAAQ2"
     },
     "screen": {
       "depth": 24,
@@ -56,7 +56,7 @@
   },
   "main_window_state": {
     "__class__": "bytearray",
-    "__value__": "AAAA/wAAAAH9AAAAAgAAAAAAAAEOAAAC6PwCAAAAAvsAAAAQAHQAbwBjAC0AZABvAGMAawEAAAAAAAABcQAAAIYA////+wAAABYAcwBlAGEAcgBjAGgALQBkAG8AYwBrAQAAAXcAAAFxAAAAlAD///8AAAABAAACTwAABDj8AgAAAAT7AAAAFgBsAG8AbwBrAHUAcAAtAGQAbwBjAGsAAAAAAP////8AAAB7AP////sAAAAcAGIAbwBvAGsAbQBhAHIAawBzAC0AZABvAGMAawAAAAAA/////wAAAOYA////+wAAABwAaQBuAHMAcABlAGMAdABvAHIALQBkAG8AYwBrAAAAAAAAAAQ4AAAAEgD////7AAAAHgBoAGkAZwBoAGwAaQBnAGgAdABzAC0AZABvAGMAawAAAAAA/////wAAAM8A////AAACQAAAAugAAAAEAAAABAAAAAgAAAAI/AAAAAEAAAAAAAAAAQAAAB4AYQBjAHQAaQBvAG4AcwBfAHQAbwBvAGwAYgBhAHICAAAAAP////8AAAAAAAAAAA=="
+    "__value__": "AAAA/wAAAAH9AAAAAgAAAAAAAAEOAAAC6PwCAAAAAvsAAAAQAHQAbwBjAC0AZABvAGMAawEAAAAAAAABdAAAAIYA////+wAAABYAcwBlAGEAcgBjAGgALQBkAG8AYwBrAQAAAXoAAAFuAAAAlAD///8AAAABAAACTwAABDj8AgAAAAT7AAAAFgBsAG8AbwBrAHUAcAAtAGQAbwBjAGsAAAAAAP////8AAACXAP////sAAAAcAGIAbwBvAGsAbQBhAHIAawBzAC0AZABvAGMAawAAAAAA/////wAAAOYA////+wAAABwAaQBuAHMAcABlAGMAdABvAHIALQBkAG8AYwBrAAAAAAAAAAQ4AAAAEgD////7AAAAHgBoAGkAZwBoAGwAaQBnAGgAdABzAC0AZABvAGMAawAAAAAA/////wAAAM8A////AAACQAAAAugAAAAEAAAABAAAAAgAAAAI/AAAAAEAAAAAAAAAAQAAAB4AYQBjAHQAaQBvAG4AcwBfAHQAbwBvAGwAYgBhAHICAAAAAP////8AAAAAAAAAAA=="
   },
   "old_prefs_migrated": true,
   "saved-search-settings": {
@@ -133,229 +133,168 @@
     "standalone_recently_opened": [
       {
         "authors": [
-          "jagged"
+          "thedave"
         ],
-        "key": "/Users/camille/Documents/eBooks/Calibre/jagged/Random Superpower Quest (3753)/Random Superpower Quest - jagged.epub",
-        "pathtoebook": "/Users/camille/Documents/eBooks/Calibre/jagged/Random Superpower Quest (3753)/Random Superpower Quest - jagged.epub",
-        "timestamp": "2025-06-13T12:40:40.350Z",
-        "title": "Random Superpower Quest"
+        "key": "/Users/camille/Documents/eBooks/Calibre/thedave/A leaf of the tree (Naruto Quest) (3811)/A leaf of the tree (Naruto Quest) - thedave.epub",
+        "pathtoebook": "/Users/camille/Documents/eBooks/Calibre/thedave/A leaf of the tree (Naruto Quest) (3811)/A leaf of the tree (Naruto Quest) - thedave.epub",
+        "timestamp": "2026-01-14T08:15:16.828Z",
+        "title": "A leaf of the tree (Naruto Quest)"
+      },
+      {
+        "key": "/Users/camille/Downloads/Giant-Size X-Men (Collection) (2008-2015) GetComics.INFO/Giant-Size X-Men - 40th Anniversary (2015)/Giant-Size X-Men #1 (1975).cbz",
+        "pathtoebook": "/Users/camille/Downloads/Giant-Size X-Men (Collection) (2008-2015) GetComics.INFO/Giant-Size X-Men - 40th Anniversary (2015)/Giant-Size X-Men #1 (1975).cbz",
+        "timestamp": "2026-01-09T10:42:26.012Z",
+        "title": "Giant-Size X-Men #1 (1975)"
+      },
+      {
+        "key": "/Users/camille/Downloads/Giant-Size X-Men (Collection) (2008-2015) GetComics.INFO/Giant-Size X-Men - 40th Anniversary (2015)/Giant-Size X-Men #3 (2005).cbz",
+        "pathtoebook": "/Users/camille/Downloads/Giant-Size X-Men (Collection) (2008-2015) GetComics.INFO/Giant-Size X-Men - 40th Anniversary (2015)/Giant-Size X-Men #3 (2005).cbz",
+        "timestamp": "2026-01-09T10:29:39.517Z",
+        "title": "Giant-Size X-Men #3 (2005)"
       },
       {
         "authors": [
-          "killertpu"
+          "40th Anniversary (2015)"
         ],
-        "key": "/Users/camille/Documents/eBooks/Calibre/killertpu/Being Evil (3682)/Being Evil - killertpu.epub",
-        "pathtoebook": "/Users/camille/Documents/eBooks/Calibre/killertpu/Being Evil (3682)/Being Evil - killertpu.epub",
-        "timestamp": "2025-05-29T19:27:39.663Z",
-        "title": "Being Evil"
+        "key": "/Users/camille/Downloads/Giant-Size X-Men (Collection) (2008-2015) GetComics.INFO/Giant-Size X-Men - 40th Anniversary (2015).cbr",
+        "pathtoebook": "/Users/camille/Downloads/Giant-Size X-Men (Collection) (2008-2015) GetComics.INFO/Giant-Size X-Men - 40th Anniversary (2015).cbr",
+        "timestamp": "2026-01-09T10:23:54.497Z",
+        "title": "Giant-Size X-Men"
+      },
+      {
+        "key": "/Users/camille/Downloads/Giant-Size X-Men (Collection) (2008-2015) GetComics.INFO/Giant-Size Astonishing X-Men 01 (2008).cbr",
+        "pathtoebook": "/Users/camille/Downloads/Giant-Size X-Men (Collection) (2008-2015) GetComics.INFO/Giant-Size Astonishing X-Men 01 (2008).cbr",
+        "timestamp": "2026-01-09T10:23:42.678Z",
+        "title": "Giant-Size Astonishing X-Men 01 (2008)"
       },
       {
         "authors": [
-          "Sönke Ahrens"
+          "First Class 001 (2008)"
         ],
-        "key": "/Users/camille/Documents/eBooks/Calibre/Sonke Ahrens/How to Take Smart Notes_ One Simple Technique to Boost Writing, Learning and Thinking - for Stu (3718)/How to Take Smart Notes_ One Simple Techni - Sonke Ahrens.epub",
-        "pathtoebook": "/Users/camille/Documents/eBooks/Calibre/Sonke Ahrens/How to Take Smart Notes_ One Simple Technique to Boost Writing, Learning and Thinking - for Stu (3718)/How to Take Smart Notes_ One Simple Techni - Sonke Ahrens.epub",
-        "timestamp": "2025-02-20T20:52:12.753Z",
-        "title": "How to Take Smart Notes: One Simple Technique to Boost Writing, Learning and Thinking – for Students, Academics and Nonfiction Book Writers"
+        "key": "/Users/camille/Downloads/Giant-Size X-Men (Collection) (2008-2015) GetComics.INFO/Giant-Size X-Men - First Class 001 (2008).cbz",
+        "pathtoebook": "/Users/camille/Downloads/Giant-Size X-Men (Collection) (2008-2015) GetComics.INFO/Giant-Size X-Men - First Class 001 (2008).cbz",
+        "timestamp": "2026-01-09T10:23:26.264Z",
+        "title": "Giant-Size X-Men"
+      },
+      {
+        "key": "/Users/camille/Downloads/Giant-Size X-Men (Collection) (2008-2015) GetComics.INFO/Giant-Size X-Men 01 (1975-05).cbz",
+        "pathtoebook": "/Users/camille/Downloads/Giant-Size X-Men (Collection) (2008-2015) GetComics.INFO/Giant-Size X-Men 01 (1975-05).cbz",
+        "timestamp": "2026-01-09T10:23:08.751Z",
+        "title": "Giant-Size X-Men 01 (1975-05)"
+      },
+      {
+        "key": "/Users/camille/Downloads/Giant-Size X-Men (Collection) (2008-2015) GetComics.INFO/X-Men Forever Giant-Size 001 (2010).cbz",
+        "pathtoebook": "/Users/camille/Downloads/Giant-Size X-Men (Collection) (2008-2015) GetComics.INFO/X-Men Forever Giant-Size 001 (2010).cbz",
+        "timestamp": "2026-01-09T10:22:58.977Z",
+        "title": "X-Men Forever Giant-Size 001 (2010)"
+      },
+      {
+        "key": "/Users/camille/HomeServer/data/downloads/complete/Giant-Size X-Men 001 (2013) (Digital) (Pirat-Empire)/Giant-Size X-Men 001 (2013) (Digital) (Pirat-Empire).cbr",
+        "pathtoebook": "/Users/camille/HomeServer/data/downloads/complete/Giant-Size X-Men 001 (2013) (Digital) (Pirat-Empire)/Giant-Size X-Men 001 (2013) (Digital) (Pirat-Empire).cbr",
+        "timestamp": "2026-01-09T07:14:35.786Z",
+        "title": "Giant-Size X-Men 001 (2013) (Digital) (Pirat-Empire)"
+      },
+      {
+        "key": "/Users/camille/HomeServer/data/downloads/complete/Astonishing X-Men Giant-Size 02 (of 02) (2008) (G85-Empire)/Astonishing X-Men Giant-Size 02 (of 02) (2008) (G85-Empire).cbr",
+        "pathtoebook": "/Users/camille/HomeServer/data/downloads/complete/Astonishing X-Men Giant-Size 02 (of 02) (2008) (G85-Empire)/Astonishing X-Men Giant-Size 02 (of 02) (2008) (G85-Empire).cbr",
+        "timestamp": "2026-01-09T07:13:51.550Z",
+        "title": "Astonishing X-Men Giant-Size 02 (of 02) (2008) (G85-Empire)"
+      },
+      {
+        "key": "/Users/camille/HomeServer/data/downloads/complete/Astonishing X-Men Giant-Size 01 (of 02) (2008) (G85-Empire)/Astonishing X-Men Giant-Size 01 (of 02) (2008) (G85-Empire).cbr",
+        "pathtoebook": "/Users/camille/HomeServer/data/downloads/complete/Astonishing X-Men Giant-Size 01 (of 02) (2008) (G85-Empire)/Astonishing X-Men Giant-Size 01 (of 02) (2008) (G85-Empire).cbr",
+        "timestamp": "2026-01-09T07:13:31.337Z",
+        "title": "Astonishing X-Men Giant-Size 01 (of 02) (2008) (G85-Empire)"
+      },
+      {
+        "key": "/Users/camille/HomeServer/data/downloads/complete/Astonishing.X-Men.068.2013.Digital.G85-Empire/Astonishing X-Men 068 (2013) (Digital) (G85-Empire).cbr",
+        "pathtoebook": "/Users/camille/HomeServer/data/downloads/complete/Astonishing.X-Men.068.2013.Digital.G85-Empire/Astonishing X-Men 068 (2013) (Digital) (G85-Empire).cbr",
+        "timestamp": "2026-01-09T07:02:32.205Z",
+        "title": "Astonishing X-Men 068 (2013) (Digital) (G85-Empire)"
+      },
+      {
+        "key": "/Users/camille/HomeServer/data/downloads/complete/Astonishing.X-Men.2004-2013.054-000/Astonishing X-Men 054 (2012) (Digital) (Zone-Empire).cbr",
+        "pathtoebook": "/Users/camille/HomeServer/data/downloads/complete/Astonishing.X-Men.2004-2013.054-000/Astonishing X-Men 054 (2012) (Digital) (Zone-Empire).cbr",
+        "timestamp": "2026-01-09T07:00:54.216Z",
+        "title": "Astonishing X-Men 054 (2012) (Digital) (Zone-Empire)"
+      },
+      {
+        "key": "/Users/camille/HomeServer/data/downloads/complete/Astonishing.X-Men.2004-2013.052-000/Astonishing X-Men 052 (2012) (Digital) (Zone-Empire).cbr",
+        "pathtoebook": "/Users/camille/HomeServer/data/downloads/complete/Astonishing.X-Men.2004-2013.052-000/Astonishing X-Men 052 (2012) (Digital) (Zone-Empire).cbr",
+        "timestamp": "2026-01-09T07:00:00.798Z",
+        "title": "Astonishing X-Men 052 (2012) (Digital) (Zone-Empire)"
+      },
+      {
+        "key": "/Users/camille/HomeServer/data/downloads/complete/Astonishing X-Men 052 (2012) (Digital) (Zone-Empire)/Astonishing X-Men 052 (2012) (Digital) (Zone-Empire).cbr",
+        "pathtoebook": "/Users/camille/HomeServer/data/downloads/complete/Astonishing X-Men 052 (2012) (Digital) (Zone-Empire)/Astonishing X-Men 052 (2012) (Digital) (Zone-Empire).cbr",
+        "timestamp": "2026-01-09T06:58:48.139Z",
+        "title": "Astonishing X-Men 052 (2012) (Digital) (Zone-Empire)"
+      },
+      {
+        "key": "/Users/camille/HomeServer/data/downloads/complete/Astonishing X-Men 027 (2008) (Minutemen-SaintsAngels)/Astonishing X-Men 027 (2008) (Minutemen-SaintsAngels).cbr",
+        "pathtoebook": "/Users/camille/HomeServer/data/downloads/complete/Astonishing X-Men 027 (2008) (Minutemen-SaintsAngels)/Astonishing X-Men 027 (2008) (Minutemen-SaintsAngels).cbr",
+        "timestamp": "2026-01-08T20:01:17.690Z",
+        "title": "Astonishing X-Men 027 (2008) (Minutemen-SaintsAngels)"
+      },
+      {
+        "key": "/Users/camille/Downloads/Comics/Astonishing X-Men v3 (001 - 068) (complete)/Astonishing X-Men 003 (2004) (Megan-Empire).cbr",
+        "pathtoebook": "/Users/camille/Downloads/Comics/Astonishing X-Men v3 (001 - 068) (complete)/Astonishing X-Men 003 (2004) (Megan-Empire).cbr",
+        "timestamp": "2026-01-08T19:49:36.635Z",
+        "title": "Astonishing X-Men 003 (2004) (Megan-Empire)"
+      },
+      {
+        "key": "/Users/camille/Downloads/Comics/Astonishing X-Men v3 (001 - 068) (complete)/Astonishing X-Men 002 (2004) (Megan-Empire).cbr",
+        "pathtoebook": "/Users/camille/Downloads/Comics/Astonishing X-Men v3 (001 - 068) (complete)/Astonishing X-Men 002 (2004) (Megan-Empire).cbr",
+        "timestamp": "2026-01-08T19:49:32.105Z",
+        "title": "Astonishing X-Men 002 (2004) (Megan-Empire)"
+      },
+      {
+        "key": "/Users/camille/Downloads/Comics/Astonishing X-Men v3 (001 - 068) (complete)/Astonishing X-Men 001 (2004) (Megan-Empire).cbr",
+        "pathtoebook": "/Users/camille/Downloads/Comics/Astonishing X-Men v3 (001 - 068) (complete)/Astonishing X-Men 001 (2004) (Megan-Empire).cbr",
+        "timestamp": "2026-01-08T19:49:25.342Z",
+        "title": "Astonishing X-Men 001 (2004) (Megan-Empire)"
+      },
+      {
+        "key": "/Users/camille/HomeServer/data/downloads/complete/Astonishing X-Men by Joss Whedon John Cassaday Ultimate Collection Book 02 (2012) (Digital) (Zone-Empire)/Astonishing X-Men by Joss Whedon & John Cassaday Ultimate Collection Book 02 (2012) (Digital) (Zone-Empire).cbr",
+        "pathtoebook": "/Users/camille/HomeServer/data/downloads/complete/Astonishing X-Men by Joss Whedon John Cassaday Ultimate Collection Book 02 (2012) (Digital) (Zone-Empire)/Astonishing X-Men by Joss Whedon & John Cassaday Ultimate Collection Book 02 (2012) (Digital) (Zone-Empire).cbr",
+        "timestamp": "2026-01-08T09:30:08.542Z",
+        "title": "Astonishing X-Men by Joss Whedon & John Cassaday Ultimate Collection Book 02 (2012) (Digital) (Zone-Empire)"
+      },
+      {
+        "key": "/Users/camille/HomeServer/data/downloads/complete/Astonishing X-Men by Joss Whedon John Cassaday Ultimate Collection Book 01 (2012) (Digital) (Zone-Empire)/Astonishing X-Men by Joss Whedon & John Cassaday Ultimate Collection Book 01 (2012) (Digital) (Zone-Empire).cbr",
+        "pathtoebook": "/Users/camille/HomeServer/data/downloads/complete/Astonishing X-Men by Joss Whedon John Cassaday Ultimate Collection Book 01 (2012) (Digital) (Zone-Empire)/Astonishing X-Men by Joss Whedon & John Cassaday Ultimate Collection Book 01 (2012) (Digital) (Zone-Empire).cbr",
+        "timestamp": "2026-01-08T09:28:26.218Z",
+        "title": "Astonishing X-Men by Joss Whedon & John Cassaday Ultimate Collection Book 01 (2012) (Digital) (Zone-Empire)"
+      },
+      {
+        "key": "/Users/camille/HomeServer/data/Comics/Marvel/Astonishing X-Men (2004)/Astonishing X-Men V2004 #068 (December 2013).cbz",
+        "pathtoebook": "/Users/camille/HomeServer/data/Comics/Marvel/Astonishing X-Men (2004)/Astonishing X-Men V2004 #068 (December 2013).cbz",
+        "timestamp": "2026-01-08T07:12:38.203Z",
+        "title": "Astonishing X-Men V2004 #068 (December 2013)"
       },
       {
         "authors": [
-          "A. R. Wise"
+          "Akihito Tsukushi"
         ],
-        "key": "/Users/camille/Documents/eBooks/Calibre/A. R. Wise/314 (266)/314 - A. R. Wise.epub",
-        "pathtoebook": "/Users/camille/Documents/eBooks/Calibre/A. R. Wise/314 (266)/314 - A. R. Wise.epub",
-        "timestamp": "2024-11-24T19:14:39.073Z",
-        "title": "314"
+        "key": "/Users/camille/Documents/eBooks/Calibre-Comics/Akihito Tsukushi/Made in Abyss v01 (2018) (Digital) (LuCaZ) (3)/Made in Abyss v01 (2018) (Digital) (LuCaZ) - Akihito Tsukushi.cbz",
+        "pathtoebook": "/Users/camille/Documents/eBooks/Calibre-Comics/Akihito Tsukushi/Made in Abyss v01 (2018) (Digital) (LuCaZ) (3)/Made in Abyss v01 (2018) (Digital) (LuCaZ) - Akihito Tsukushi.cbz",
+        "timestamp": "2026-01-05T18:14:13.003Z",
+        "title": "Made in Abyss v01 (2018) (Digital) (LuCaZ)"
+      },
+      {
+        "key": "/Users/camille/Documents/eBooks/Mangas/Made in Abyss (Digital) (LuCaZ)/Made in Abyss v01 (2018) (Digital) (LuCaZ).cbz",
+        "pathtoebook": "/Users/camille/Documents/eBooks/Mangas/Made in Abyss (Digital) (LuCaZ)/Made in Abyss v01 (2018) (Digital) (LuCaZ).cbz",
+        "timestamp": "2026-01-04T19:11:55.700Z",
+        "title": "Made in Abyss v01 (2018) (Digital) (LuCaZ)"
       },
       {
         "authors": [
-          "Sean Douglas"
+          "The Complete Collection  2018   Digital   Zone-Empire  (newcomic.info)"
         ],
-        "key": "/Users/camille/Documents/eBooks/Calibre/Sean Douglas/R_T_M (101)/R_T_M - Sean Douglas.epub",
-        "pathtoebook": "/Users/camille/Documents/eBooks/Calibre/Sean Douglas/R_T_M (101)/R_T_M - Sean Douglas.epub",
-        "timestamp": "2024-11-24T19:12:08.989Z",
-        "title": "R/T/M"
-      },
-      {
-        "authors": [
-          "Bryan Smith"
-        ],
-        "key": "/Users/camille/Documents/eBooks/Calibre/Bryan Smith/Depraved (228)/Depraved - Bryan Smith.epub",
-        "pathtoebook": "/Users/camille/Documents/eBooks/Calibre/Bryan Smith/Depraved (228)/Depraved - Bryan Smith.epub",
-        "timestamp": "2024-11-24T19:10:40.297Z",
-        "title": "Depraved"
-      },
-      {
-        "authors": [
-          "Wrath James White"
-        ],
-        "key": "/Users/camille/Documents/eBooks/Calibre/Wrath James White/D.O.A. Extreme Horror Anthology (225)/D.O.A. Extreme Horror Anthology - Wrath James White.epub",
-        "pathtoebook": "/Users/camille/Documents/eBooks/Calibre/Wrath James White/D.O.A. Extreme Horror Anthology (225)/D.O.A. Extreme Horror Anthology - Wrath James White.epub",
-        "timestamp": "2024-11-24T19:09:02.522Z",
-        "title": "D.O.A. Extreme Horror Anthology"
-      },
-      {
-        "authors": [
-          "Succulent Prey v2"
-        ],
-        "key": "/Users/camille/Documents/eBooks/Calibre/Wrath James White/Succulent Prey (216)/Succulent Prey - Wrath James White.epub",
-        "pathtoebook": "/Users/camille/Documents/eBooks/Calibre/Wrath James White/Succulent Prey (216)/Succulent Prey - Wrath James White.epub",
-        "timestamp": "2024-11-24T19:08:40.759Z",
-        "title": "Wrath James White"
-      },
-      {
-        "authors": [
-          "Wrath James White",
-          "Maurice Broaddus"
-        ],
-        "key": "/Users/camille/Documents/eBooks/Calibre/Wrath James White/Orgy of Souls (235)/Orgy of Souls - Wrath James White.epub",
-        "pathtoebook": "/Users/camille/Documents/eBooks/Calibre/Wrath James White/Orgy of Souls (235)/Orgy of Souls - Wrath James White.epub",
-        "timestamp": "2024-11-24T18:06:41.548Z",
-        "title": "Orgy of Souls"
-      },
-      {
-        "authors": [
-          "OstensibleMammal"
-        ],
-        "key": "/Users/camille/Documents/eBooks/Calibre/OstensibleMammal/Godclads_ The Broken Cage_ A Progression Fantasy Epic (Godclads Book 1) (3699)/Godclads_ The Broken Cage_ A Progression F - OstensibleMammal.epub",
-        "pathtoebook": "/Users/camille/Documents/eBooks/Calibre/OstensibleMammal/Godclads_ The Broken Cage_ A Progression Fantasy Epic (Godclads Book 1) (3699)/Godclads_ The Broken Cage_ A Progression F - OstensibleMammal.epub",
-        "timestamp": "2024-11-24T10:11:39.059Z",
-        "title": "Godclads: The Broken Cage: A Progression Fantasy Epic (Godclads Book 1)"
-      },
-      {
-        "authors": [
-          "OstensibleMammal"
-        ],
-        "key": "/Users/camille/Documents/eBooks/Calibre/OstensibleMammal/Godclads (3696)/Godclads - OstensibleMammal.epub",
-        "pathtoebook": "/Users/camille/Documents/eBooks/Calibre/OstensibleMammal/Godclads (3696)/Godclads - OstensibleMammal.epub",
-        "timestamp": "2024-11-24T10:11:25.768Z",
-        "title": "Godclads"
-      },
-      {
-        "authors": [
-          "Angela Ackerman, Becca Puglisi"
-        ],
-        "key": "/Users/camille/Documents/eBooks/Calibre/Angela Ackerman/The Negative Trait Thesaurus_ A Wri (2712)/The Negative Trait Thesaurus_ A - Angela Ackerman.epub",
-        "pathtoebook": "/Users/camille/Documents/eBooks/Calibre/Angela Ackerman/The Negative Trait Thesaurus_ A Wri (2712)/The Negative Trait Thesaurus_ A - Angela Ackerman.epub",
-        "timestamp": "2024-07-17T05:50:55.308Z",
-        "title": "The Negative Trait Thesaurus: A Writer's Guide to Character Flaws"
-      },
-      {
-        "authors": [
-          "Jill Chamberlain"
-        ],
-        "key": "/Users/camille/Documents/WorldBuilding/Jill_Chamberlain__Nutshell_Technique__Crack_the_Secret_of_Successful_Screenwriting_The.epub",
-        "pathtoebook": "/Users/camille/Documents/WorldBuilding/Jill_Chamberlain__Nutshell_Technique__Crack_the_Secret_of_Successful_Screenwriting_The.epub",
-        "timestamp": "2024-07-02T13:05:54.660Z",
-        "title": "The Nutshell Technique: Crack the Secret of Successful Screenwriting"
-      },
-      {
-        "authors": [
-          "Sylvar Realm"
-        ],
-        "key": "/Users/camille/Documents/eBooks/Calibre/Sylvar Realm/March of The Dead (3589)/March of The Dead - Sylvar Realm.epub",
-        "pathtoebook": "/Users/camille/Documents/eBooks/Calibre/Sylvar Realm/March of The Dead (3589)/March of The Dead - Sylvar Realm.epub",
-        "timestamp": "2024-06-24T20:26:36.381Z",
-        "title": "March of The Dead (MotD)"
-      },
-      {
-        "authors": [
-          "ThatGit"
-        ],
-        "key": "/Users/camille/Documents/eBooks/Calibre/ThatGit/Harvesting the Multiverse (3590)/Harvesting the Multiverse - ThatGit.epub",
-        "pathtoebook": "/Users/camille/Documents/eBooks/Calibre/ThatGit/Harvesting the Multiverse (3590)/Harvesting the Multiverse - ThatGit.epub",
-        "timestamp": "2024-06-18T07:07:06.605Z",
-        "title": "Harvesting the Multiverse"
-      },
-      {
-        "authors": [
-          "Sylvar Realm"
-        ],
-        "key": "/Users/camille/Documents/eBooks/Calibre/Sylvar Realm/March of The Dead (MotD) (3589)/March of The Dead (MotD) - Sylvar Realm.epub",
-        "pathtoebook": "/Users/camille/Documents/eBooks/Calibre/Sylvar Realm/March of The Dead (MotD) (3589)/March of The Dead (MotD) - Sylvar Realm.epub",
-        "timestamp": "2024-06-12T13:39:41.869Z",
-        "title": "March of The Dead (MotD)"
-      },
-      {
-        "authors": [
-          "Manasong"
-        ],
-        "key": "/Users/camille/Documents/eBooks/Calibre/Manasong/Rupegia (3535)/Rupegia - Manasong.epub",
-        "pathtoebook": "/Users/camille/Documents/eBooks/Calibre/Manasong/Rupegia (3535)/Rupegia - Manasong.epub",
-        "timestamp": "2024-06-09T14:30:46.665Z",
-        "title": "Rupegia"
-      },
-      {
-        "authors": [
-          "ThatGit"
-        ],
-        "key": "/Users/camille/Documents/eBooks/Calibre/ThatGit/What We Do To Survive - Ch68 to 132 (3584)/What We Do To Survive - Ch68 to 132 - ThatGit.epub",
-        "pathtoebook": "/Users/camille/Documents/eBooks/Calibre/ThatGit/What We Do To Survive - Ch68 to 132 (3584)/What We Do To Survive - Ch68 to 132 - ThatGit.epub",
-        "timestamp": "2024-05-25T19:40:18.764Z",
-        "title": "What We Do To Survive - Ch68 to 132"
-      },
-      {
-        "authors": [
-          "https://1stkissnovel.org/"
-        ],
-        "key": "/Users/camille/Documents/eBooks/Calibre/Guiltythree/Shadow Slave (3581)/Shadow Slave - Guiltythree.epub",
-        "pathtoebook": "/Users/camille/Documents/eBooks/Calibre/Guiltythree/Shadow Slave (3581)/Shadow Slave - Guiltythree.epub",
-        "timestamp": "2024-05-25T15:36:35.456Z",
-        "title": "Shadow Slave c1-1638"
-      },
-      {
-        "authors": [
-          "Frostbird"
-        ],
-        "key": "/Users/camille/Documents/eBooks/Calibre/Frostbird/Realm of Monsters (3580)/Realm of Monsters - Frostbird.epub",
-        "pathtoebook": "/Users/camille/Documents/eBooks/Calibre/Frostbird/Realm of Monsters (3580)/Realm of Monsters - Frostbird.epub",
-        "timestamp": "2024-03-04T09:38:36.676Z",
-        "title": "Realm of Monsters"
-      },
-      {
-        "authors": [
-          "SciFurz"
-        ],
-        "key": "/Users/camille/Documents/eBooks/Calibre/SciFurz/A Monster Life (3285)/A Monster Life - SciFurz.epub",
-        "pathtoebook": "/Users/camille/Documents/eBooks/Calibre/SciFurz/A Monster Life (3285)/A Monster Life - SciFurz.epub",
-        "timestamp": "2023-11-27T21:50:36.842Z",
-        "title": "A Monster Life"
-      },
-      {
-        "authors": [
-          "StarFleet Carl"
-        ],
-        "key": "/Users/camille/Documents/eBooks/Calibre/StarFleet Carl/A True History - Book One (3328)/A True History - Book One - StarFleet Carl.epub",
-        "pathtoebook": "/Users/camille/Documents/eBooks/Calibre/StarFleet Carl/A True History - Book One (3328)/A True History - Book One - StarFleet Carl.epub",
-        "timestamp": "2023-10-30T09:08:57.585Z",
-        "title": "A True History - Book One"
-      },
-      {
-        "authors": [
-          "SamStone"
-        ],
-        "key": "/Users/camille/Documents/eBooks/Calibre/SamStone/Enter the Silver Flame - Year 1_ On (3037)/Enter the Silver Flame - Year 1 - SamStone.epub",
-        "pathtoebook": "/Users/camille/Documents/eBooks/Calibre/SamStone/Enter the Silver Flame - Year 1_ On (3037)/Enter the Silver Flame - Year 1 - SamStone.epub",
-        "timestamp": "2023-10-08T15:37:41.781Z",
-        "title": "Enter the Silver Flame - Year 1: On Happy Ripples and Unexpected Meetings"
-      },
-      {
-        "authors": [
-          "TheThirdAmell"
-        ],
-        "key": "/Users/camille/Documents/eBooks/Calibre/TheThirdAmell/Accursed Ones (3570)/Accursed Ones - TheThirdAmell.epub",
-        "pathtoebook": "/Users/camille/Documents/eBooks/Calibre/TheThirdAmell/Accursed Ones (3570)/Accursed Ones - TheThirdAmell.epub",
-        "timestamp": "2023-09-24T20:21:45.145Z",
-        "title": "Accursed Ones"
-      },
-      {
-        "authors": [
-          "Shaun"
-        ],
-        "key": "/Users/camille/Documents/eBooks/Calibre/Shaun/The Wheel Turns Anew - book 4 (3560)/The Wheel Turns Anew - book 4 - Shaun.epub",
-        "pathtoebook": "/Users/camille/Documents/eBooks/Calibre/Shaun/The Wheel Turns Anew - book 4 (3560)/The Wheel Turns Anew - book 4 - Shaun.epub",
-        "timestamp": "2023-09-20T21:16:47.122Z",
-        "title": "The Wheel Turns Anew - book 4"
+        "key": "/Users/camille/Documents/eBooks/Comics/New_X-Men_-_Academy_X_-_The_Complete_Collection__2018___Digital___Zone-Empire_ (newcomic.info).cbr",
+        "pathtoebook": "/Users/camille/Documents/eBooks/Comics/New_X-Men_-_Academy_X_-_The_Complete_Collection__2018___Digital___Zone-Empire_ (newcomic.info).cbr",
+        "timestamp": "2026-01-02T09:43:33.030Z",
+        "title": "New X-Men - Academy X"
       }
     ],
     "user_color_schemes": {

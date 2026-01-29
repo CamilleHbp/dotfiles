@@ -20,7 +20,6 @@
     false
   ],
   "format_map": [
-    "pdf",
     "epub",
     "fb2",
     "mobi",
@@ -30,6 +29,7 @@
     "docx",
     "djv",
     "djvu",
+    "pdf",
     "cbz",
     "htm",
     "html",

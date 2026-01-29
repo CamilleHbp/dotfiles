@@ -61,8 +61,8 @@ plugins=(
   zsh-syntax-highlighting
 )
 
-# Add FNM (node manager) to the env
-eval "$(fnm env --use-on-cd --shell zsh)"
+# Add Proto (https://moonrepo.dev/proto) to the env
+eval "$(proto activate zsh)"
 
 # Add completions to Oh-My-Zsh: see https://github.com/zsh-users/zsh-completions/issues/603
 fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
@@ -122,10 +122,14 @@ eval "$(starship init zsh)"
 export DOTNET_ROOT="$(dirname $(which dotnet))"
 
 # ---------------------------------------------------------------------------- #
-#                                   Tweego                                    #
+#                                      Go                                      #
 # ---------------------------------------------------------------------------- #
-export TWEEGO_PATH="$HOME/.tweego/storyformats"
-export PATH="$HOME/.tweego:$PATH"
+export GOROOT="$(go env GOROOT)"
+export GOPATH="$(go env GOPATH)"
+export PATH=$PATH:$GOPATH/bin
+export PATH=$PATH:$GOROOT/bin
+# export TWEEGO_PATH="$HOME/.tweego/storyformats"
+# export PATH="$HOME/.tweego:$PATH"
 
 # ------------------------------------ VIM ----------------------------------- #
 # Set default editor to VIM
@@ -137,3 +141,6 @@ export PATH="$PATH:/Users/camille/.lmstudio/bin"
 
 # Scaleway CLI autocompletion initialization
 eval "$(scw autocomplete script shell=zsh)"
+
+# Load custom functions
+fpath+=~/.zfunc; autoload -Uz compinit; compinit

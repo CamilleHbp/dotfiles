@@ -1,7 +1,12 @@
 {
+  "checkbox_enable_automatic_sync": false,
+  "checkbox_enable_scheduled_progressync": false,
   "checkbox_no_sync_if_finished": false,
+  "checkbox_percent_read_100": false,
   "checkbox_sync_if_more_recent": true,
   "column_bookmarks": "#koreader_bookmarks",
+  "column_date_book_finished": "",
+  "column_date_book_started": "",
   "column_date_sidecar_modified": "",
   "column_date_status_modified": "#date_read",
   "column_date_synced": "",
@@ -13,5 +18,10 @@
   "column_review": "#koreader_review",
   "column_sidecar": "#koreader_sidecar",
   "column_status": "#koreader_reading_status",
-  "column_status_bool": "#read"
+  "column_status_bool": "#read",
+  "progress_sync_password": "7f28f5d32795ecd1e10e7c658db465de",
+  "progress_sync_url": "https://kosync.camille.studio",
+  "progress_sync_username": "chbp",
+  "scheduleSyncHour": 4,
+  "scheduleSyncMinute": 0
 }

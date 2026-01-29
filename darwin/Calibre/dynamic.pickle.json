@@ -1,5 +1,5 @@
 {
-  "add books dialog dir": "/Users/camille/Documents/RPG",
+  "add books dialog dir": "/Users/camille/Documents/eBooks/Mangas/Made in Abyss (Digital) (LuCaZ)",
   "add books dialog dir-last-used-filter-spec-all-files": false,
   "add formats dialog": "/Users/camille/Documents/eBooks/Calibre/bogomila/Master and Commander Omakes [full] (3731)",
   "add formats dialog-last-used-filter-spec-all-files": false,
@@ -16,39 +16,66 @@
   "notified-version-updates": {
     "__class__": "set",
     "__value__": [
+      "7.25",
+      "6.11",
+      "5.41",
+      "5.38",
+      "6.16",
+      "5.39",
+      "7.0",
+      "6.3",
+      "6.2",
+      "7.26",
+      "6.1",
+      "6.9",
+      "6.0",
+      "5.43",
+      "6.22",
       "7.1",
       "6.24",
-      "8.5",
-      "6.11",
-      "5.43",
-      "7.16",
-      "7.11",
-      "5.37",
-      "7.6",
-      "6.1",
-      "6.26",
-      "6.9",
-      "6.2",
-      "7.25",
-      "5.36",
-      "6.3",
-      "7.15",
-      "6.0",
-      "7.0",
-      "6.28",
       "7.20",
-      "7.26",
-      "5.41",
-      "5.39",
-      "6.22",
-      "6.16",
-      "5.38"
+      "8.5",
+      "5.37",
+      "7.15",
+      "7.6",
+      "8.10",
+      "8.15",
+      "8.14",
+      "7.16",
+      "6.26",
+      "7.11",
+      "5.36",
+      "6.28"
     ]
   },
   "recursive book import root dir dialog": "/Users/camille/Downloads/The-Wheel-Turns-Anew-main",
   "s_r_search_mode": 0,
   "save to disk dialog": "/Users/camillebaillat/Documents/eBooks",
   "sort_history": [
+    [
+      "last_modified",
+      false
+    ],
+    [
+      "last_modified",
+      true
+    ],
+    [
+      "last_modified",
+      false
+    ],
+    [
+      "title",
+      true
+    ],
+    [
+      "last_modified",
+      false
+    ],
+    [
+      "timestamp",
+      false
+    ],
     [
       "series",
       true

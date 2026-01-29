@@ -52,10 +52,7 @@
   "[typescriptreact]": {
     "editor.defaultFormatter": "vscode.typescript-language-features"
   },
-  "ck3tiger.ck3.path": "/Users/camille/Library/Application Support/Steam/steamapps/common/Crusader Kings III",
-  "ck3tiger.ck3tiger.path": "/Users/camille/Dev/Personal/ck3-tiger/target/release",
-  "cwtools.cache.ck3": "/Users/camille/Library/Application Support/Steam/steamapps/common/Crusader Kings III/game",
-  "diffEditor.ignoreTrimWhitespace": false,
+  "diffEditor.ignoreTrimWhitespace": true,
   "editor.accessibilitySupport": "off",
   "editor.fontFamily": "'Cartograph CF', Menlo, Monaco, 'Courier New', monospace",
   "editor.tokenColorCustomizations": {
@@ -99,16 +96,13 @@
   "git.confirmSync": false,
   "git.defaultBranchName": "trunk",
   "git.openRepositoryInParentFolders": "never",
-  "github.copilot.advanced": {},
-  "github.copilot.editor.enableAutoCompletions": true,
   "github.copilot.enable": {
     "*": true,
+    "plaintext": true,
     "markdown": true,
-    "plaintext": false,
     "scminput": false
   },
   "github.gitProtocol": "ssh",
-  "gitlens.experimental.generateCommitMessagePrompt": "Now, please generate a commit message. Ensure that it includes a precise and informative subject line that succinctly summarizes the crux of the changes in under 50 characters. If necessary, follow with an explanatory body providing insight into the nature of the changes, the reasoning behind them, and any significant consequences or considerations arising from them. Conclude with any relevant issue references at the end of the message.  Make sure that the body is separated from the subject line by a blank line.  For more information, refer to the following resources:  - https://chris.beams.io/posts/git-commit/  - https://www.conventionalcommits.org/en/v1.0.0/.  Also, make sure the lengh of each line for the commit message is less than 72 characters.",
   "gitlens.plusFeatures.enabled": false,
   "javascript.updateImportsOnFileMove.enabled": "always",
   "liveServer.settings.NoBrowser": true,
@@ -124,15 +118,15 @@
   "material-icon-theme.folders.associations": {
     "packages": "Packages"
   },
-  "prettier.printWidth": 120,
   "projectManager.tags": [
-    "CK3",
-    "Nos Futurs - Clients",
-    "Nos Futurs - Internal",
-    "Nos Futurs - Templates & Libraries",
-    "Personal - Libs",
-    "Personal",
-    "Simplon"
+    "[Nos Futurs] Clients",
+    "[Nos Futurs] Internal",
+    "[Nos Futurs] Tools",
+    "[Dev]",
+    "[Dev] AI",
+    "[Dev] Games",
+    "[Dev] Learning",
+    "[Writing]"
   ],
   "python.languageServer": "Pylance",
   "redhat.telemetry.enabled": false,
@@ -164,56 +158,56 @@
     "INFO",
     "TODO",
     "WARNING",
-],
-"todo-tree.general.tagGroups": {
+  ],
+  "todo-tree.general.tagGroups": {
     "FIXME": [
-        "FIXME",
-        "FIX",
+      "FIXME",
+      "FIX",
     ],
     "INFO": [
-        "DEBUG",
-        "INFO",
+      "DEBUG",
+      "INFO",
     ],
     "WARNING": [
-        "BUG",
-        "WARNING",
+      "BUG",
+      "WARNING",
     ],
-},
-"todo-tree.highlights.defaultHighlight": {
+  },
+  "todo-tree.highlights.defaultHighlight": {
     "gutterIcon": true,
     "opacity": 50,
     "type": "text-and-comment",
-},
-"todo-tree.highlights.customHighlight": {
+  },
+  "todo-tree.highlights.customHighlight": {
     "FIXME": {
-        "background": "rgba(255, 99, 71, 0.2)", 
-        "foreground": "#cc3300",
-        "icon": "tools",
-        "iconColour": "#ff6347",
-        "gutterIcon": true
+      "background": "rgba(255, 99, 71, 0.2)",
+      "foreground": "#cc3300",
+      "icon": "tools",
+      "iconColour": "#ff6347",
+      "gutterIcon": true
     },
     "INFO": {
-        "background": "rgba(144, 238, 144, 0.2)",
-        "foreground": "#2e8b57",
-        "icon": "info",
-        "iconColour": "#90ee90",
-        "gutterIcon": true
+      "background": "rgba(144, 238, 144, 0.2)",
+      "foreground": "#2e8b57",
+      "icon": "info",
+      "iconColour": "#90ee90",
+      "gutterIcon": true
     },
     "TODO": {
-        "background": "rgba(135, 206, 250, 0.2)",
-        "foreground": "#4682b4",
-        "icon": "checklist",
-        "iconColour": "#87cefa",
-        "gutterIcon": true
+      "background": "rgba(135, 206, 250, 0.2)",
+      "foreground": "#4682b4",
+      "icon": "checklist",
+      "iconColour": "#87cefa",
+      "gutterIcon": true
     },
     "WARNING": {
-        "background": "rgba(255, 165, 0, 0.1)",
-        "foreground": "#d2691e",
-        "icon": "alert",
-        "iconColour": "#ffa500",
-        "gutterIcon": true
+      "background": "rgba(255, 165, 0, 0.1)",
+      "foreground": "#d2691e",
+      "icon": "alert",
+      "iconColour": "#ffa500",
+      "gutterIcon": true
     }
-},
+  },
   "typeChallenges.workspaceFolder": "/Users/camille/Dev/type-challenges",
   "typescript.updateImportsOnFileMove.enabled": "always",
   "vim.handleKeys": {
@@ -246,10 +240,72 @@
   "workbench.settings.applyToAllProfiles": [
     "database-client.telemetry.usesOnlineServices"
   ],
-  "yaml.schemas": {
-    // "https://raw.githubusercontent.com/argoproj/argo-workflows/main/api/jsonschema/schema.json": "/Users/camille/Dev/NosFuturs/internal/main-cluster/**/*.yaml"
-  },
   "workbench.activityBar.location": "top",
   "maximizeterminal.useAlternativeKeybinding": true,
-  "continue.enableTabAutocomplete": true
+  "settingsSync.ignoredExtensions": [],
+  "github.copilot.nextEditSuggestions.enabled": true,
+  "[dockercompose]": {
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+    "editor.autoIndent": "advanced",
+    "editor.quickSuggestions": {
+      "other": true,
+      "comments": false,
+      "strings": true
+    },
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+  "[github-actions-workflow]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+  "gitlens.ai.model": "vscode",
+  "gitlens.ai.vscode.model": "copilot:gpt-4.1",
+  "diffEditor.renderSideBySide": false,
+  "chat.tools.terminal.autoApprove": {
+    "pnpm": true,
+    "/^node -e \"import\\('@zeus-shared/db-entities/zod'\\)\\.then\\(m => console\\.log\\(Object\\.keys\\(m\\)\\.includes\\('UserCreateInputObjectZodSchema'\\), Object\\.keys\\(m\\)\\.slice\\(0,20\\)\\)\\)\"$/": {
+      "approve": true,
+      "matchCommandLine": true
+    },
+    "sed": true,
+    "kubectl -n argocd": true,
+    "kubectl auth": true,
+    "helm": true
+  },
+  "yaml.format.singleQuote": true,
+  "explorer.confirmDelete": false,
+  "python.analysis.aiHoverSummaries": true,
+  "github.copilot.chat.scopeSelection": true,
+  "github.copilot.chat.notebook.enhancedNextEditSuggestions.enabled": true,
+  "github.copilot.chat.newWorkspace.useContext7": true,
+  "github.copilot.chat.languageContext.typescript.includeDocumentation": true,
+  "github.copilot.chat.languageContext.typescript.enabled": true,
+  "github.copilot.chat.languageContext.inline.typescript.enabled": true,
+  "github.copilot.chat.languageContext.fix.typescript.enabled": true,
+  "github.copilot.chat.alternateGptPrompt.enabled": true,
+  "github.copilot.chat.codesearch.enabled": true,
+  "github.copilot.chat.generateTests.codeLens": true,
+  "chat.viewSessions.orientation": "stacked",
+  "chat.tools.urls.autoApprove": {
+    "https://sabnzbd.org/wiki/advanced/hostname-verification": true,
+    "https://sabnzbd.org/wiki/advanced": true,
+    "https://sabnzbd.org/wiki": true,
+    "https://sabnzbd.org": true,
+    "https://sabnzbd.org/wiki/advanced/hostname-verification.html": true,
+    "https://sabnzbd.org/wiki/advanced/hostname_verification": true,
+    "https://sabnzbd.org/wiki/configuration/4.5/general#security": true,
+    "https://sabnzbd.org/wiki/configuration/4.5": true,
+    "https://sabnzbd.org/wiki/configuration": true,
+    "https://developer.mozilla.org": {
+      "approveRequest": false,
+      "approveResponse": true
+    },
+    "https://github.com": {
+      "approveRequest": false,
+      "approveResponse": true
+    }
+  },
+  "rust-analyzer.workspace.discoverConfig": null,
+  "mypy-type-checker.cwd": "${nearestConfig}",
+  "chat.mcp.gallery.enabled": true
 }

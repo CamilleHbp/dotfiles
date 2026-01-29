@@ -43,7 +43,7 @@
     "Tag Mapper",
     "Count Pages"
   ],
-  "advanced search dialog current tab": 2,
+  "advanced search dialog current tab": 1,
   "advanced_search_simple_tab_focused_field": "general_box",
   "advanced_search_template_tab_program_field": "",
   "advanced_search_template_tab_test_field": "0",
@@ -70,6 +70,10 @@
       "__value__": "AAAA/wAAAAEAAAACAAABXgAAAV4B/////wEAAAABAA=="
     }
   ],
+  "book_info_dialog_splitter_state": {
+    "__class__": "bytearray",
+    "__value__": "AAAA/wAAAAEAAAACAAABXgAAAV4B/////wEAAAABAA=="
+  },
   "book_list_pin_splitter_state": {
     "__class__": "bytearray",
     "__value__": "AAAA/wAAAAEAAAACAAABAAAAAEYA/////wEAAAABAA=="
@@ -79,7 +83,7 @@
     "__class__": "bytearray",
     "__value__": "AdnQywADAAAAAADQAAAAGQAABjMAAAQqAAAA0AAAADUAAAYzAAAEKgAAAAAAAAAABwAAAADQAAAANQAABjMAAAQq"
   },
-  "bulk_metadata_window_tab": 1,
+  "bulk_metadata_window_tab": 0,
   "card_a_view books view state": {
     "column_alignment": {
       "size": "center",
@@ -258,7 +262,7 @@
   },
   "fff:personal.ini": {
     "__class__": "bytearray",
-    "__value__": "AdnQywADAAAAAAAAAAAAJgAABr8AAARcAAADJQAAAewAAAZMAAAEQQAAAAACAAAABsAAAAAAAAAAQgAABr8AAARc"
+    "__value__": "AdnQywADAAAAAAAAAAAAIAAABr8AAARcAAADJQAAAewAAAZMAAAEQQAAAAACAAAABsAAAAAAAAAAPAAABr8AAARc"
   },
   "fff:showcalcols": {
     "__class__": "bytearray",
@@ -379,30 +383,81 @@
       }
     }
   },
+  "geometry-of-book_info_dialog_geometry": {
+    "frame_geometry": {
+      "height": 1013,
+      "width": 814,
+      "x": 447,
+      "y": 45
+    },
+    "full_screened": false,
+    "geometry": {
+      "height": 985,
+      "width": 814,
+      "x": 447,
+      "y": 73
+    },
+    "maximized": false,
+    "normal_geometry": {
+      "height": 985,
+      "width": 814,
+      "x": 447,
+      "y": 73
+    },
+    "qt": {
+      "__class__": "bytearray",
+      "__value__": "AdnQywADAAAAAAG/AAAALQAABOwAAAQhAAABvwAAAEkAAATsAAAEIQAAAAAAAAAABsAAAAG/AAAASQAABOwAAAQh"
+    },
+    "screen": {
+      "depth": 24,
+      "device_pixel_ratio": 2.0,
+      "geometry_in_logical_pixels": {
+        "height": 1117,
+        "width": 1728,
+        "x": 0,
+        "y": 0
+      },
+      "index_in_screens_list": 0,
+      "manufacturer": "",
+      "model": "",
+      "name": "Built-in Retina Display",
+      "serial": "",
+      "size_in_logical_pixels": {
+        "height": 1117,
+        "width": 1728
+      },
+      "virtual_geometry": {
+        "height": 1117,
+        "width": 1728,
+        "x": 0,
+        "y": 0
+      }
+    }
+  },
   "geometry-of-bulk_metadata_window_geometry": {
     "frame_geometry": {
       "height": 892,
       "width": 1002,
-      "x": 16,
-      "y": 118
+      "x": 458,
+      "y": 132
     },
     "full_screened": false,
     "geometry": {
       "height": 864,
       "width": 1002,
-      "x": 16,
-      "y": 146
+      "x": 458,
+      "y": 160
     },
     "maximized": false,
     "normal_geometry": {
       "height": 864,
       "width": 1002,
-      "x": 16,
-      "y": 146
+      "x": 458,
+      "y": 160
     },
     "qt": {
       "__class__": "bytearray",
-      "__value__": "AdnQywADAAAAAAAQAAAAdgAAA/kAAAPxAAAAEAAAAJIAAAP5AAAD8QAAAAAAAAAABsAAAAAQAAAAkgAAA/kAAAPx"
+      "__value__": "AdnQywADAAAAAAHKAAAAhAAABbMAAAP/AAABygAAAKAAAAWzAAAD/wAAAAAAAAAABsAAAAHKAAAAoAAABbMAAAP/"
     },
     "screen": {
       "depth": 24,
@@ -432,28 +487,28 @@
   },
   "geometry-of-calibre_main_window_geometry": {
     "frame_geometry": {
-      "height": 1080,
+      "height": 1084,
       "width": 1728,
       "x": 0,
-      "y": 37
+      "y": 33
     },
     "full_screened": true,
     "geometry": {
-      "height": 1080,
+      "height": 1084,
       "width": 1728,
       "x": 0,
-      "y": 37
+      "y": 33
     },
     "maximized": false,
     "normal_geometry": {
-      "height": 1080,
+      "height": 1084,
       "width": 1728,
       "x": 0,
-      "y": 37
+      "y": 33
     },
     "qt": {
       "__class__": "bytearray",
-      "__value__": "AdnQywADAAAAAAAAAAAAJQAABr8AAARcAAAAAAAAACUAAAa/AAAEXAAAAAAABAAABsAAAAAAAAAAJQAABr8AAARc"
+      "__value__": "AdnQywADAAAAAAAAAAAAIQAABr8AAARcAAAAAAAAACEAAAa/AAAEXAAAAAAABAAABsAAAAAAAAAAIQAABr8AAARc"
     },
     "screen": {
       "depth": 24,
@@ -738,28 +793,28 @@
   },
   "geometry-of-duplicates-question-dialog-geometry": {
     "frame_geometry": {
-      "height": 406,
-      "width": 522,
+      "height": 622,
+      "width": 787,
       "x": 621,
       "y": 345
     },
     "full_screened": false,
     "geometry": {
-      "height": 378,
-      "width": 522,
+      "height": 594,
+      "width": 787,
       "x": 621,
       "y": 373
     },
     "maximized": false,
     "normal_geometry": {
-      "height": 378,
-      "width": 522,
+      "height": 594,
+      "width": 787,
       "x": 621,
       "y": 373
     },
     "qt": {
       "__class__": "bytearray",
-      "__value__": "AdnQywADAAAAAAJtAAABWQAABHYAAALuAAACbQAAAXUAAAR2AAAC7gAAAAAAAAAABsAAAAJtAAABdQAABHYAAALu"
+      "__value__": "AdnQywADAAAAAAJtAAABWQAABX8AAAPGAAACbQAAAXUAAAV/AAADxgAAAAAAAAAABsAAAAJtAAABdQAABX8AAAPG"
     },
     "screen": {
       "depth": 24,
@@ -840,28 +895,79 @@
   },
   "geometry-of-jobs_dialog_geometry": {
     "frame_geometry": {
-      "height": 570,
-      "width": 921,
+      "height": 643,
+      "width": 1056,
       "x": 547,
-      "y": 260
+      "y": 259
     },
     "full_screened": false,
     "geometry": {
-      "height": 542,
-      "width": 921,
+      "height": 615,
+      "width": 1056,
       "x": 547,
-      "y": 288
+      "y": 287
     },
     "maximized": false,
     "normal_geometry": {
-      "height": 542,
-      "width": 921,
+      "height": 615,
+      "width": 1056,
       "x": 547,
-      "y": 288
+      "y": 287
     },
     "qt": {
       "__class__": "bytearray",
-      "__value__": "AdnQywADAAAAAAIjAAABBAAABbsAAAM9AAACIwAAASAAAAW7AAADPQAAAAAAAAAABsAAAAIjAAABIAAABbsAAAM9"
+      "__value__": "AdnQywADAAAAAAIjAAABAwAABkIAAAOFAAACIwAAAR8AAAZCAAADhQAAAAAAAAAABsAAAAIjAAABHwAABkIAAAOF"
+    },
+    "screen": {
+      "depth": 24,
+      "device_pixel_ratio": 2.0,
+      "geometry_in_logical_pixels": {
+        "height": 1117,
+        "width": 1728,
+        "x": 0,
+        "y": 0
+      },
+      "index_in_screens_list": 0,
+      "manufacturer": "",
+      "model": "",
+      "name": "Built-in Retina Display",
+      "serial": "",
+      "size_in_logical_pixels": {
+        "height": 1117,
+        "width": 1728
+      },
+      "virtual_geometry": {
+        "height": 1117,
+        "width": 1728,
+        "x": 0,
+        "y": 0
+      }
+    }
+  },
+  "geometry-of-library-annotations-browser-geometry": {
+    "frame_geometry": {
+      "height": 680,
+      "width": 922,
+      "x": 502,
+      "y": 223
+    },
+    "full_screened": false,
+    "geometry": {
+      "height": 652,
+      "width": 922,
+      "x": 502,
+      "y": 251
+    },
+    "maximized": false,
+    "normal_geometry": {
+      "height": 652,
+      "width": 922,
+      "x": 502,
+      "y": 251
+    },
+    "qt": {
+      "__class__": "bytearray",
+      "__value__": "AdnQywADAAAAAAH2AAAA3wAABY8AAAOGAAAB9gAAAPsAAAWPAAADhgAAAAAAAAAABsAAAAH2AAAA+wAABY8AAAOG"
     },
     "screen": {
       "depth": 24,
@@ -1405,15 +1511,19 @@
   "grid view visible": false,
   "jobs view column layout3": {
     "__class__": "bytearray",
-    "__value__": "AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAxYAAAAFAQEBAAAAAAAAAAAAAAAAAGT/////AAAAhAAAAAAAAAAFAAABAgAAAAEAAAAAAAAAZAAAAAEAAAAAAAAAtgAAAAEAAAAAAAAAZAAAAAEAAAAAAAAAlgAAAAEAAAAAAAAD6AAAAAAAAAAAAA=="
+    "__value__": "AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA9UAAAAFAQEBAAAAAAAAAAAAAAAAAGT/////AAAAhAAAAAAAAAAFAAABwQAAAAEAAAAAAAAAZAAAAAEAAAAAAAAAtgAAAAEAAAAAAAAAZAAAAAEAAAAAAAAAlgAAAAEAAAAAAAAD6AAAAAAAAAAAAA=="
   },
   "jobs_dialog_geometry": {
     "__class__": "bytearray",
     "__value__": "AdnQywADAAAAAAI6AAABEwAABLIAAANMAAACOgAAAS8AAASyAAADTAAAAAAAAAAABwAAAAI6AAABLwAABLIAAANM"
   },
+  "library-annotations-browser-splitter-state": {
+    "__class__": "bytearray",
+    "__value__": "AAAA/wAAAAEAAAACAAABwgAAAcIA/////wEAAAABAA=="
+  },
   "library_usage_stats": {
-    "/Users/camille/Documents/eBooks/Calibre": 306,
-    "/Users/camille/Documents/eBooks/Calibre-RPG": 86
+    "/Users/camille/Documents/eBooks/Calibre": 387,
+    "/Users/camille/Documents/eBooks/Calibre-RPG": 128
   },
   "main_window_central_widget_state": {
     "layout": "wide",
@@ -1521,18 +1631,19 @@
     "__value__": "AdnQywADAAAAAAAAAAAAGQAABv8AAAQqAAAAFQAAADUAAAcUAAAERgAAAAACAAAABwAAAAAAAAAANQAABv8AAAQq"
   },
   "previous_sort_order_BooksView": {
-    "#date_read": true,
+    "#date_read": false,
     "#koreader_progress": 0,
     "#koreader_progress_int": false,
     "#koreader_reading_status": false,
     "#koreader_review": false,
     "#read": true,
     "#rpg_edition": true,
-    "#rpg_rulesystem": true,
+    "#rpg_rulesystem": false,
     "#subseries": true,
+    "#wordcount": false,
     "authors": true,
     "last_modified": false,
-    "ondevice": true,
+    "ondevice": false,
     "series": true,
     "size": false,
     "tags": true,
@@ -1584,7 +1695,7 @@
     "__class__": "bytearray",
     "__value__": "AdnQywADAAAAAAHDAAAA6wAABRQAAANeAAABwwAAAQcAAAUUAAADXgAAAAAAAAAABwAAAAHDAAABBwAABRQAAANe"
   },
-  "tag browser search box visible": true,
+  "tag browser search box visible": false,
   "tag_browser_splitter_horizontal_state": [
     true,
     200
