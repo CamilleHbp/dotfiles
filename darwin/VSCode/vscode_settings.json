@@ -2,11 +2,20 @@
   "[css]": {
     "editor.defaultFormatter": "vscode.css-language-features"
   },
+  "[dockercompose]": {
+    "editor.autoIndent": "advanced",
+    "editor.defaultFormatter": "redhat.vscode-yaml",
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2
+  },
   "[dockerfile]": {
     "editor.defaultFormatter": "ms-azuretools.vscode-docker"
   },
   "[dotenv]": {
     "editor.defaultFormatter": "IronGeek.vscode-env"
+  },
+  "[github-actions-workflow]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml"
   },
   "[html]": {
     "editor.defaultFormatter": "vscode.html-language-features",
@@ -16,14 +25,7 @@
   },
   "[javascript]": {
     "editor.codeActionsOnSave": {
-      "source.fixAll.eslint": "explicit"
-    },
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.formatOnSave": false
-  },
-  "[javascript][typescript]": {
-    "editor.codeActionsOnSave": {
-      "source.fixAll.eslint": "explicit"
+      "source.fixAll": "always"
     }
   },
   "[json]": {
@@ -35,26 +37,64 @@
   "[markdown]": {
     "editor.defaultFormatter": "yzhang.markdown-all-in-one"
   },
+  "[plaintext]": {
+    "editor.unicodeHighlight.ambiguousCharacters": false,
+    "editor.unicodeHighlight.invisibleCharacters": false
+  },
   "[python]": {
+    "editor.codeActionsOnSave": {
+      "source.fixAll": "explicit"
+    },
     "editor.defaultFormatter": "ms-python.black-formatter",
-    "editor.formatOnType": true
+    "editor.formatOnSave": true
   },
   "[scss]": {
     "editor.defaultFormatter": "vscode.css-language-features"
   },
   "[typescript]": {
     "editor.codeActionsOnSave": {
-      "source.fixAll.eslint": "explicit"
+      "source.fixAll": "explicit"
     },
-    "editor.defaultFormatter": "vscode.typescript-language-features",
-    "editor.formatOnSave": false
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[typescriptreact]": {
-    "editor.defaultFormatter": "vscode.typescript-language-features"
+    "editor.codeActionsOnSave": {
+      "source.fixAll": "explicit"
+    },
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "diffEditor.ignoreTrimWhitespace": true,
+  "chat.mcp.autostart": "newAndOutdated",
+  "chat.tools.terminal.autoApprove": {
+    "bun": true,
+    "docker compose": true,
+    "docker exec": true,
+    "docker network": true,
+    "docker run": true,
+    "uv": true
+  },
+  "chat.tools.urls.autoApprove": {
+    "https://testcontainers-python.readthedocs.io": {
+      "approveRequest": false,
+      "approveResponse": true
+    }
+  },
+  "chat.viewSessions.orientation": "stacked",
+  "csv.enabled": false,
+  "cursor.composer.agentLoopOnLints": false,
+  "cursor.cpp.disabledLanguages": [
+    "scminput"
+  ],
+  "cursor.cpp.enablePartialAccepts": true,
+  "diffEditor.experimental.showMoves": true,
+  "diffEditor.ignoreTrimWhitespace": false,
+  "diffEditor.renderSideBySide": false,
   "editor.accessibilitySupport": "off",
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "always"
+  },
   "editor.fontFamily": "'Cartograph CF', Menlo, Monaco, 'Courier New', monospace",
+  "editor.lineNumbers": "relative",
+  "editor.minimap.enabled": false,
   "editor.tokenColorCustomizations": {
     "textMateRules": [
       {
@@ -81,6 +121,9 @@
   "evenBetterToml.formatter.reorderArrays": true,
   "evenBetterToml.formatter.reorderKeys": true,
   "explorer.confirmDragAndDrop": false,
+  "extensions.experimental.affinity": {
+    "asvetliakov.vscode-neovim": 1
+  },
   "extensions.ignoreRecommendations": true,
   "files.associations": {
     "*.env*": "env",
@@ -88,7 +131,7 @@
     "*.env.production": "env",
     "*.scss": "scss",
     "*.tmpl": "shellscript",
-    ".env": "env",
+    ".env": "dotenv",
     ".env*": "dotenv",
     ".env.base": "env"
   },
@@ -96,16 +139,37 @@
   "git.confirmSync": false,
   "git.defaultBranchName": "trunk",
   "git.openRepositoryInParentFolders": "never",
+  "git.suggestSmartCommit": false,
+  "github.copilot.advanced": {},
+  "github.copilot.chat.agent.thinkingTool": true,
+  "github.copilot.chat.codesearch.enabled": true,
+  "github.copilot.chat.commitMessageGeneration.instructions": [
+    {
+      "text": "Use conventional commit message format."
+    }
+  ],
+  "github.copilot.chat.editor.temporalContext.enabled": true,
+  "github.copilot.chat.generateTests.codeLens": true,
+  "github.copilot.chat.languageContext.fix.typescript.enabled": true,
+  "github.copilot.chat.languageContext.inline.typescript.enabled": true,
+  "github.copilot.chat.languageContext.typescript.enabled": true,
+  "github.copilot.editor.enableAutoCompletions": true,
   "github.copilot.enable": {
     "*": true,
-    "plaintext": true,
     "markdown": true,
-    "scminput": false
+    "plaintext": false,
+    "scminput": false,
+    "txt": false
   },
+  "github.copilot.nextEditSuggestions.enabled": true,
+  "github.copilot.selectedCompletionModel": "",
   "github.gitProtocol": "ssh",
+  "githubPullRequests.createOnPublishBranch": "never",
+  "githubPullRequests.pullBranch": "never",
+  "gitlens.experimental.generateCommitMessagePrompt": "Now, please generate a commit message. Ensure that it includes a precise and informative subject line that succinctly summarizes the crux of the changes in under 50 characters. If necessary, follow with an explanatory body providing insight into the nature of the changes, the reasoning behind them, and any significant consequences or considerations arising from them. Conclude with any relevant issue references at the end of the message.  Make sure that the body is separated from the subject line by a blank line.  For more information, refer to the following resources:  - https://chris.beams.io/posts/git-commit/  - https://www.conventionalcommits.org/en/v1.0.0/.  Also, make sure the lengh of each line for the commit message is less than 72 characters.",
   "gitlens.plusFeatures.enabled": false,
+  "html.format.wrapLineLength": 0,
   "javascript.updateImportsOnFileMove.enabled": "always",
-  "liveServer.settings.NoBrowser": true,
   "liveServer.settings.donotShowInfoMsg": true,
   "liveServer.settings.donotVerifyTags": true,
   "markdown.extension.toc.levels": "2..6",
@@ -118,16 +182,24 @@
   "material-icon-theme.folders.associations": {
     "packages": "Packages"
   },
-  "projectManager.tags": [
-    "[Nos Futurs] Clients",
-    "[Nos Futurs] Internal",
-    "[Nos Futurs] Tools",
-    "[Dev]",
-    "[Dev] AI",
-    "[Dev] Games",
-    "[Dev] Learning",
-    "[Writing]"
+  "maximizeterminal.useAlternativeKeybinding": true,
+  "prettier.printWidth": 120,
+  "projectManager.git.baseFolders": [
+    "/home/camille/Dev"
   ],
+  "projectManager.tags": [
+    "[Pro]",
+    "[Pro] Boussole",
+    "[Pro] Nos Futurs",
+    "[Pro] Nos Futurs - Clients",
+    "[Pro] Nos Futurs - Templates & Libraries",
+    "[Dev]",
+    "[Dev] HoI4",
+    "[Dev] Games",
+    "[Dev] AI",
+    "[Perso]"
+  ],
+  "python.analysis.typeCheckingMode": "basic",
   "python.languageServer": "Pylance",
   "redhat.telemetry.enabled": false,
   "rewrap.autoWrap.enabled": true,
@@ -146,9 +218,26 @@
     "devDependencies",
     "peerDependencies"
   ],
+  "stripe.telemetry.enabled": false,
   "svg.preview.mode": "svg",
+  "sync.gist": "f362a40a836896ba0e31aae61336ca9f",
+  "sync.removeExtensions": false,
   "terminal.integrated.env.osx": {
     "CW_NEW_SESSION": "1"
+  },
+  "todo-tree.general.tagGroups": {
+    "FIXME": [
+      "FIXME",
+      "FIX"
+    ],
+    "INFO": [
+      "DEBUG",
+      "INFO"
+    ],
+    "WARNING": [
+      "BUG",
+      "WARNING"
+    ]
   },
   "todo-tree.general.tags": [
     "BUG",
@@ -157,65 +246,50 @@
     "FIXME",
     "INFO",
     "TODO",
-    "WARNING",
+    "WARNING"
   ],
-  "todo-tree.general.tagGroups": {
-    "FIXME": [
-      "FIXME",
-      "FIX",
-    ],
-    "INFO": [
-      "DEBUG",
-      "INFO",
-    ],
-    "WARNING": [
-      "BUG",
-      "WARNING",
-    ],
-  },
-  "todo-tree.highlights.defaultHighlight": {
-    "gutterIcon": true,
-    "opacity": 50,
-    "type": "text-and-comment",
-  },
   "todo-tree.highlights.customHighlight": {
     "FIXME": {
       "background": "rgba(255, 99, 71, 0.2)",
       "foreground": "#cc3300",
+      "gutterIcon": true,
       "icon": "tools",
-      "iconColour": "#ff6347",
-      "gutterIcon": true
+      "iconColour": "#ff6347"
     },
     "INFO": {
       "background": "rgba(144, 238, 144, 0.2)",
       "foreground": "#2e8b57",
+      "gutterIcon": true,
       "icon": "info",
-      "iconColour": "#90ee90",
-      "gutterIcon": true
+      "iconColour": "#90ee90"
     },
     "TODO": {
       "background": "rgba(135, 206, 250, 0.2)",
       "foreground": "#4682b4",
+      "gutterIcon": true,
       "icon": "checklist",
-      "iconColour": "#87cefa",
-      "gutterIcon": true
+      "iconColour": "#87cefa"
     },
     "WARNING": {
       "background": "rgba(255, 165, 0, 0.1)",
       "foreground": "#d2691e",
+      "gutterIcon": true,
       "icon": "alert",
-      "iconColour": "#ffa500",
-      "gutterIcon": true
+      "iconColour": "#ffa500"
     }
+  },
+  "todo-tree.highlights.defaultHighlight": {
+    "gutterIcon": true,
+    "opacity": 50,
+    "type": "text-and-comment"
   },
   "typeChallenges.workspaceFolder": "/Users/camille/Dev/type-challenges",
   "typescript.updateImportsOnFileMove.enabled": "always",
+  "vim.camelCaseMotion.enable": true,
   "vim.handleKeys": {
     "<C-b>": false
   },
   "vim.normalModeKeyBindingsNonRecursive": [
-    // FIX https://github.com/VSCodeVim/Vim/issues/8157#issuecomment-1426704638
-    // Wait for new release, else we should migrate to using vscode-neovim extension
     {
       "before": [
         "u"
@@ -234,78 +308,16 @@
     }
   ],
   "vim.smartRelativeLine": true,
-  "window.zoomLevel": 1,
+  "vim.textwidth": 120,
+  "workbench.activityBar.location": "top",
   "workbench.colorTheme": "Default Light Modern",
+  "workbench.editorAssociations": {
+    "*.hoi4": "default"
+  },
   "workbench.iconTheme": "material-icon-theme",
   "workbench.settings.applyToAllProfiles": [
     "database-client.telemetry.usesOnlineServices"
   ],
-  "workbench.activityBar.location": "top",
-  "maximizeterminal.useAlternativeKeybinding": true,
-  "settingsSync.ignoredExtensions": [],
-  "github.copilot.nextEditSuggestions.enabled": true,
-  "[dockercompose]": {
-    "editor.insertSpaces": true,
-    "editor.tabSize": 2,
-    "editor.autoIndent": "advanced",
-    "editor.quickSuggestions": {
-      "other": true,
-      "comments": false,
-      "strings": true
-    },
-    "editor.defaultFormatter": "redhat.vscode-yaml"
-  },
-  "[github-actions-workflow]": {
-    "editor.defaultFormatter": "redhat.vscode-yaml"
-  },
-  "gitlens.ai.model": "vscode",
-  "gitlens.ai.vscode.model": "copilot:gpt-4.1",
-  "diffEditor.renderSideBySide": false,
-  "chat.tools.terminal.autoApprove": {
-    "pnpm": true,
-    "/^node -e \"import\\('@zeus-shared/db-entities/zod'\\)\\.then\\(m => console\\.log\\(Object\\.keys\\(m\\)\\.includes\\('UserCreateInputObjectZodSchema'\\), Object\\.keys\\(m\\)\\.slice\\(0,20\\)\\)\\)\"$/": {
-      "approve": true,
-      "matchCommandLine": true
-    },
-    "sed": true,
-    "kubectl -n argocd": true,
-    "kubectl auth": true,
-    "helm": true
-  },
-  "yaml.format.singleQuote": true,
-  "explorer.confirmDelete": false,
-  "python.analysis.aiHoverSummaries": true,
-  "github.copilot.chat.scopeSelection": true,
-  "github.copilot.chat.notebook.enhancedNextEditSuggestions.enabled": true,
-  "github.copilot.chat.newWorkspace.useContext7": true,
-  "github.copilot.chat.languageContext.typescript.includeDocumentation": true,
-  "github.copilot.chat.languageContext.typescript.enabled": true,
-  "github.copilot.chat.languageContext.inline.typescript.enabled": true,
-  "github.copilot.chat.languageContext.fix.typescript.enabled": true,
-  "github.copilot.chat.alternateGptPrompt.enabled": true,
-  "github.copilot.chat.codesearch.enabled": true,
-  "github.copilot.chat.generateTests.codeLens": true,
-  "chat.viewSessions.orientation": "stacked",
-  "chat.tools.urls.autoApprove": {
-    "https://sabnzbd.org/wiki/advanced/hostname-verification": true,
-    "https://sabnzbd.org/wiki/advanced": true,
-    "https://sabnzbd.org/wiki": true,
-    "https://sabnzbd.org": true,
-    "https://sabnzbd.org/wiki/advanced/hostname-verification.html": true,
-    "https://sabnzbd.org/wiki/advanced/hostname_verification": true,
-    "https://sabnzbd.org/wiki/configuration/4.5/general#security": true,
-    "https://sabnzbd.org/wiki/configuration/4.5": true,
-    "https://sabnzbd.org/wiki/configuration": true,
-    "https://developer.mozilla.org": {
-      "approveRequest": false,
-      "approveResponse": true
-    },
-    "https://github.com": {
-      "approveRequest": false,
-      "approveResponse": true
-    }
-  },
-  "rust-analyzer.workspace.discoverConfig": null,
-  "mypy-type-checker.cwd": "${nearestConfig}",
-  "chat.mcp.gallery.enabled": true
+  "workbench.startupEditor": "none",
+  "yaml.schemas": {}
 }

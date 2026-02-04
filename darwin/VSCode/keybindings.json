@@ -153,9 +153,5 @@
     "key": "shift+cmd+r",
     "command": "-workbench.action.reloadWindow",
     "when": "isDevelopment"
-  },
-  {
-    "key": "cmd+i",
-    "command": "composerMode.agent"
-  },
+  }
 ]
