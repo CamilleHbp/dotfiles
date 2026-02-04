@@ -31,7 +31,11 @@ brew() {
 
         echo "----- start: Add Brewfile to chezmoi -----"
         if command -v chezmoi >/dev/null 2>&1; then
-            chezmoi add "$brewfile_path"
+            if chezmoi add "$brewfile_path" 2>&1; then
+                echo "Successfully added $brewfile_path to chezmoi"
+            else
+                echo "Error: Failed to add $brewfile_path to chezmoi" >&2
+            fi
         else
             echo "chezmoi isn't available in PATH; skipping 'chezmoi add'"
         fi

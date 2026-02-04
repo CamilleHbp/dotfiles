@@ -3,7 +3,7 @@
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
-alias app-support="cd ~/Library/Application\ Support"
+alias appsupport="cd ~/Library/Application\ Support"
 alias invoke="invokeai && source .venv/bin/activate"
 alias spotx='bash <(curl -sSL https://raw.githubusercontent.com/Nuzair46/BlockTheSpot-Mac/main/install.sh) -u'
 # alias spotx-mac='bash <(curl -sSL https://raw.githubusercontent.com/SpotX-CLI/SpotX-Mac/main/install.sh)'
@@ -11,24 +11,12 @@ alias spotx='bash <(curl -sSL https://raw.githubusercontent.com/Nuzair46/BlockTh
 alias vi=nvim
 alias vim=nvim
 
-# --------------------------------- Corepack --------------------------------- #
-alias yarn="corepack yarn"
-alias yarnpkg="corepack yarnpkg"
-alias pnpm="corepack pnpm"
-alias pnpx="corepack pnpm dlx"
-
 # --------------------------------- Projects --------------------------------- #
-alias anytype="dev && cd anytype-ts"
 alias dev='cd ~/Dev/Personal'
 alias renpy='personal && cd "Renpy Projects"'
 
 # -------------------------------- AI project -------------------------------- #
 alias ai="dev && cd ai"
-alias comfyui="ai && cd comfyui && git pull && source .venv/bin/activate && uv pip install -r requirements.txt && uv pip install --pre torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/nightly/cpu && uv run main.py"
-alias comfyui-dev="ai && cd comfyui"
-alias novelaize='dev && cd novelaize'
-alias rag="ai && cd rag"
-alias stability-matrix="app-support && cd StabilityMatrix"
 
 # ---------------------------- Nos Futurs projects --------------------------- #
 alias nf='cd ~/Dev/NosFuturs'

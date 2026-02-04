@@ -53,7 +53,6 @@ plugins=(
   git
   kubectl
   my-functions
-  rust
   vi-mode
   fzf-tab
   zsh-autosuggestions
@@ -80,11 +79,6 @@ export LANG=en_GB.UTF-8
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 # Source fuzzy completion
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-# ---------------------------------------------------------------------------- #
-#                                   Cursor                                     #
-# ---------------------------------------------------------------------------- #
-export EDITOR="/Applications/Cursor.app/Contents/MacOS/Cursor"
 
 # ---------------------------------------------------------------------------- #
 #                                Docker Desktop                                #

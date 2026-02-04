@@ -22,12 +22,8 @@ brew "python@3.13"
 brew "azure-cli"
 # Toolchain of the web
 brew "biome"
-# Command-line tool to manipulate Android App Bundles
-brew "bundletool"
 # Tuned OpenCL BLAS library
 brew "clblast"
-# Dependency manager for Cocoa projects
-brew "cocoapods"
 # Good-lookin' diffs with diff-highlight and more
 brew "diff-so-fancy"
 # Lightweight DNS forwarder and DHCP server
@@ -80,28 +76,22 @@ brew "libusb"
 brew "minio-mc"
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
+# Tiny, lightning fast, feature-packed file manager
+brew "nnn"
 # Swiss-army knife of markup format conversion
 brew "pandoc"
-# Package management made easy
-brew "pixi"
 # Pluggable multi-language version manager
 brew "proto"
-# Protocol buffers (Google's data interchange format)
-brew "protobuf"
 # Interpreted, interactive, object-oriented programming language
 brew "python@3.10"
 # Interpreted, interactive, object-oriented programming language
 brew "python@3.12"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
-# Rust toolchain installer
-brew "rustup"
 # Command-line Interface for Scaleway
 brew "scw"
 # Cross-shell prompt for astronauts
 brew "starship"
-# Plugin and runtime library for using protobuf with Swift
-brew "swift-protobuf"
 # Extraction utility for .zip compressed archives
 brew "unzip"
 # Library to create, extract, and modify Windows Imaging files
@@ -132,16 +122,14 @@ cask "anythingllm"
 cask "anytype"
 # Application uninstaller
 cask "appcleaner"
-# Text, code, and markup editor
-cask "bbedit"
-# Web browser focusing on privacy
-cask "brave-browser"
 # Open source IDE for exploring and testing APIs
 cask "bruno"
 # Bittorrent client
 cask "c0re100-qbittorrent"
 # E-books management software
 cask "calibre"
+# OpenAI's coding agent that runs in your terminal
+cask "codex"
 # Node-based image, video and audio generator
 cask "comfyui"
 # Universal database tool and SQL client
@@ -150,8 +138,6 @@ cask "dbeaver-community"
 cask "docker-desktop"
 # Online diagram software
 cask "drawio"
-# Collaborative team software
-cask "figma"
 # UI toolkit for building applications for mobile, web and desktop
 cask "flutter"
 # Screen colour temperature controller
@@ -226,8 +212,6 @@ cask "font-victor-mono-nerd-font"
 cask "font-zed-mono-nerd-font"
 # Kubernetes IDE
 cask "freelens@nightly"
-# Free and open-source image editor
-cask "gimp"
 # IRC client
 cask "halloy"
 # Free and open-source media player
@@ -254,8 +238,6 @@ cask "lulu"
 cask "macfuse"
 # Multi-platform web browser
 cask "microsoft-edge"
-# Online collaborative whiteboard platform
-cask "miro"
 # Desktop sync client for Nextcloud software products
 cask "nextcloud"
 # App to write, plan, collaborate, and get organised
@@ -280,8 +262,6 @@ cask "proton-mail"
 cask "protonvpn"
 # Instant messaging application focusing on security
 cask "signal"
-# Video game digital distribution service
-cask "steam"
 # Customise mouse buttons, wheels and cursor speed
 cask "steermouse"
 # Open-source media center
@@ -298,8 +278,6 @@ cask "tidal"
 cask "tiled"
 # To-do list
 cask "todoist-app"
-# Web browser focusing on security
-cask "tor-browser"
 # Adaptive AI IDE
 cask "trae"
 # Multimedia player
@@ -313,13 +291,13 @@ vscode "alefragnani.project-manager"
 vscode "artdiniz.quitcontrol-vscode"
 vscode "astro-build.astro-vscode"
 vscode "bierner.markdown-mermaid"
+vscode "biomejs.biome"
 vscode "bradlc.vscode-tailwindcss"
 vscode "charliermarsh.ruff"
 vscode "christian-kohler.path-intellisense"
 vscode "davidanson.vscode-markdownlint"
 vscode "editorconfig.editorconfig"
 vscode "elagil.pre-commit-helper"
-vscode "esbenp.prettier-vscode"
 vscode "fill-labs.dependi"
 vscode "foxundermoon.shell-format"
 vscode "github.copilot"
@@ -366,5 +344,3 @@ vscode "yrm.type-challenges"
 vscode "yzhang.markdown-all-in-one"
 vscode "zengxingxin.sort-js-object-keys"
 go "github.com/tmedwards/tweego"
-cargo "trunk"
-cargo "wasm-bindgen-cli"

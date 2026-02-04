@@ -1,0 +1,27 @@
+contexts:
+- name: localhost:8080
+  server: localhost:8080
+  user: localhost:8080
+- name: kubernetes
+  server: kubernetes
+  user: kubernetes
+- name: argocd.nosfuturs.dev
+  server: argocd.nosfuturs.dev
+  user: argocd.nosfuturs.dev
+current-context: argocd.nosfuturs.dev
+prompts-enabled: false
+servers:
+- grpc-web-root-path: ""
+  plain-text: true
+  server: localhost:8080
+- core: true
+  grpc-web-root-path: ""
+  server: kubernetes
+- grpc-web-root-path: ""
+  server: argocd.nosfuturs.dev
+users:
+- auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJhcmdvY2QiLCJzdWIiOiJhZG1pbjpsb2dpbiIsImV4cCI6MTcwNTU4NTQ5OSwibmJmIjoxNzA1NDk5MDk5LCJpYXQiOjE3MDU0OTkwOTksImp0aSI6Ijc0ZWIwZmM5LTkwOWMtNDhhNS1iM2Q3LWU2Yzc0MzdmMGZkOSJ9.Y_TWuuZnVvOrRAmUx3DWiU-LXW10e9CMkyZeC6sIH-U
+  name: localhost:8080
+- name: kubernetes
+- auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJhcmdvY2QiLCJzdWIiOiJhZG1pbjpsb2dpbiIsImV4cCI6MTc2OTQzNzY2OCwibmJmIjoxNzY5MzUxMjY4LCJpYXQiOjE3NjkzNTEyNjgsImp0aSI6ImNmNDZkNzQ0LWQ5NTUtNDM0Mi1iMjllLTQ1NzIyMWU1ODI0ZCJ9.lWqa5rlQUHy9c7cpu9w2eJkM6RP3k8I_5EE2c-jtKj8
+  name: argocd.nosfuturs.dev
