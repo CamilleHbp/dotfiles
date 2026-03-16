@@ -36,8 +36,6 @@ brew "ffmpeg"
 brew "fzf"
 # GitHub command-line tool
 brew "gh"
-# C/C++ and Java libraries for Unicode and globalization
-brew "icu4c@77"
 # Interpreter for PostScript and PDF
 brew "ghostscript"
 # Distributed revision control system
@@ -52,32 +50,42 @@ brew "subversion"
 brew "git-svn"
 # Audit git repos for secrets
 brew "gitleaks"
+# Library for USB device access
+brew "libusb"
+# GNU Privacy Guard (OpenPGP)
+brew "gnupg"
 # Open source programming language to build simple/reliable/efficient software
 brew "go"
 # Popular GNU data compression program
 brew "gzip"
 # Kubernetes package manager
 brew "helm"
-# Client library for huggingface.co hub
-brew "huggingface-cli"
+# C/C++ and Java libraries for Unicode and globalization
+brew "icu4c@77"
 # Tools and libraries to manipulate images in select formats
 brew "imagemagick"
 # API Support for your favorite torrent trackers
 brew "jackett", restart_service: :changed
 # Lightweight and flexible command-line JSON processor
 brew "jq"
+# Kubernetes command-line interface
+brew "kubernetes-cli"
 # Postgres C API library
 brew "libpq", link: true
 # Library for storing/retrieving passwords and other secrets
 brew "libsecret"
-# Library for USB device access
-brew "libusb"
 # Replacement for ls, cp and other commands for object storage
 brew "minio-mc"
+# NCurses Disk Usage
+brew "ncdu"
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
 # Tiny, lightning fast, feature-packed file manager
 brew "nnn"
+# Search tool like grep and The Silver Searcher
+brew "ripgrep"
+# AI coding agent, built for the terminal
+brew "opencode"
 # Swiss-army knife of markup format conversion
 brew "pandoc"
 # Pluggable multi-language version manager
@@ -86,8 +94,6 @@ brew "proto"
 brew "python@3.10"
 # Interpreted, interactive, object-oriented programming language
 brew "python@3.12"
-# Search tool like grep and The Silver Searcher
-brew "ripgrep"
 # Command-line Interface for Scaleway
 brew "scw"
 # Cross-shell prompt for astronauts
@@ -128,10 +134,16 @@ cask "bruno"
 cask "c0re100-qbittorrent"
 # E-books management software
 cask "calibre"
+# Terminal-based AI coding assistant
+cask "claude-code"
 # OpenAI's coding agent that runs in your terminal
 cask "codex"
 # Node-based image, video and audio generator
 cask "comfyui"
+# Brings the power of Copilot coding agent directly to your terminal
+cask "copilot-cli@prerelease"
+# Tool to run Windows software
+cask "crossover"
 # Universal database tool and SQL client
 cask "dbeaver-community"
 # App to build and share containerised applications and microservices
@@ -210,8 +222,8 @@ cask "font-ubuntu-nerd-font"
 cask "font-ubuntu-sans-nerd-font"
 cask "font-victor-mono-nerd-font"
 cask "font-zed-mono-nerd-font"
-# Kubernetes IDE
-cask "freelens@nightly"
+# Git client focusing on productivity
+cask "gitkraken"
 # IRC client
 cask "halloy"
 # Free and open-source media player
@@ -228,8 +240,6 @@ cask "koodo-reader"
 cask "krita"
 # Free cross-platform office suite, fresh version
 cask "libreoffice"
-# Discover, download, and run local LLMs
-cask "lm-studio"
 # An open source cross-platform alternative to AirDrop
 cask "localsend/localsend/localsend"
 # Open-source firewall to block unknown outgoing connections
@@ -238,6 +248,8 @@ cask "lulu"
 cask "macfuse"
 # Multi-platform web browser
 cask "microsoft-edge"
+# Minecraft modding platform
+cask "modrinth"
 # Desktop sync client for Nextcloud software products
 cask "nextcloud"
 # App to write, plan, collaborate, and get organised
@@ -256,18 +268,20 @@ cask "lyraphase/pcloud/pcloud-drive"
 cask "phoenix-slides"
 # YouTube player focusing on privacy
 cask "pikachuexe/freetube/pikachuexe-freetube"
+# Minecraft launcher
+cask "prismlauncher"
 # Client for Proton Mail and Proton Calendar
 cask "proton-mail"
 # VPN client focusing on security
 cask "protonvpn"
 # Instant messaging application focusing on security
 cask "signal"
+# Video game digital distribution service
+cask "steam"
 # Customise mouse buttons, wheels and cursor speed
 cask "steermouse"
 # Open-source media center
 cask "stremio@beta"
-# Native GUI tool for relational databases
-cask "tableplus"
 # Remote access and connectivity software focused on security
 cask "teamviewer"
 # Unpacks archive files
@@ -282,25 +296,24 @@ cask "todoist-app"
 cask "trae"
 # Multimedia player
 cask "vlc"
-# Mind mapping and brainstorming tool
-cask "xmind"
 # Gecko based web browser
 cask "zen"
 vscode "ajmnz.prisma-import"
 vscode "alefragnani.project-manager"
+vscode "anthropic.claude-code"
 vscode "artdiniz.quitcontrol-vscode"
 vscode "astro-build.astro-vscode"
 vscode "bierner.markdown-mermaid"
 vscode "biomejs.biome"
-vscode "bradlc.vscode-tailwindcss"
 vscode "charliermarsh.ruff"
-vscode "christian-kohler.path-intellisense"
+vscode "cweijan.dbclient-jdbc"
+vscode "cweijan.vscode-database-client2"
 vscode "davidanson.vscode-markdownlint"
+vscode "eamodio.gitlens"
 vscode "editorconfig.editorconfig"
 vscode "elagil.pre-commit-helper"
 vscode "fill-labs.dependi"
 vscode "foxundermoon.shell-format"
-vscode "github.copilot"
 vscode "github.copilot-chat"
 vscode "github.vscode-github-actions"
 vscode "github.vscode-pull-request-github"
@@ -313,6 +326,7 @@ vscode "meganrogge.template-string-converter"
 vscode "mikoz.autoflake-extension"
 vscode "mindaro-dev.file-downloader"
 vscode "ms-azuretools.vscode-docker"
+vscode "ms-edgedevtools.vscode-edge-devtools"
 vscode "ms-python.black-formatter"
 vscode "ms-python.debugpy"
 vscode "ms-python.isort"
@@ -335,7 +349,6 @@ vscode "ryuta46.multi-command"
 vscode "samueltscott.maximizeterminal"
 vscode "simonsiefke.svg-preview"
 vscode "stackbreak.comment-divider"
-vscode "tauri-apps.tauri-vscode"
 vscode "tyriar.sort-lines"
 vscode "upstash.context7-mcp"
 vscode "vscodevim.vim"

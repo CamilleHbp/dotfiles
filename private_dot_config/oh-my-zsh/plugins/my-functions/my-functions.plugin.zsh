@@ -6,29 +6,27 @@
 
 # FIXME: Remove when the fpath works. 🤷
 
-os_brew=$(which brew)
-
 # Wrapper around brew to perform additional maintenance tasks after certain actions
 # Specifically, after installing, removing, uninstalling, upgrading, or reinstalling packages, it runs `brew autoremove` and `brew cleanup`, regenerates the Brewfile, and adds it to chezmoi if available.
 function brew() {
     local brew_action=$1
     if [[ $brew_action == "install" ]] || [[ $brew_action == "remove" ]] || [[ $brew_action == "uninstall" ]] || [[ $brew_action == "upgrade" ]] || [[ $brew_action == "reinstall" ]]; then
         echo "----- start: brew $brew_action -----"
-        $os_brew "$@"
+        command brew "$@"
         echo "----- end: brew $brew_action -----"
 
         echo "----- start: brew autoremove -----"
-        $os_brew autoremove
+        command brew autoremove
         echo "----- end: brew autoremove -----"
 
         echo "----- start: brew cleanup -----"
-        $os_brew cleanup
+        command brew cleanup
         echo "----- end: brew cleanup -----"
 
         echo "----- start: Generate Brewfile -----"
         local brewfile_path
         brewfile_path=${HOMEBREW_BUNDLE_FILE:-"$HOME/.config/homebrew/Brewfile"}
-        $os_brew bundle dump --force --describe --file "$brewfile_path"
+        command brew bundle dump --force --describe --file "$brewfile_path"
         echo "----- end: Generate Brewfile -----"
 
         echo "----- start: Add Brewfile to chezmoi -----"
@@ -43,7 +41,7 @@ function brew() {
         fi
         echo "----- end: Add Brewfile to chezmoi -----"
     else
-        $os_brew "$@"
+        command brew "$@"
     fi
 }
 

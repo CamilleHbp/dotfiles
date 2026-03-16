@@ -70,13 +70,17 @@
     "docker exec": true,
     "docker network": true,
     "docker run": true,
-    "uv": true
+    "uv": true,
+    "printf": true
   },
   "chat.tools.urls.autoApprove": {
     "https://testcontainers-python.readthedocs.io": {
       "approveRequest": false,
       "approveResponse": true
-    }
+    },
+    "https://moonrepo.dev": true,
+    "https://bun.sh": true,
+    "https://base-ui.com": true
   },
   "chat.viewSessions.orientation": "stacked",
   "csv.enabled": false,
@@ -156,10 +160,10 @@
   "github.copilot.editor.enableAutoCompletions": true,
   "github.copilot.enable": {
     "*": true,
-    "markdown": true,
     "plaintext": false,
+    "markdown": true,
     "scminput": false,
-    "txt": false
+    "txt": true
   },
   "github.copilot.nextEditSuggestions.enabled": true,
   "github.copilot.selectedCompletionModel": "",
@@ -167,7 +171,6 @@
   "githubPullRequests.createOnPublishBranch": "never",
   "githubPullRequests.pullBranch": "never",
   "gitlens.experimental.generateCommitMessagePrompt": "Now, please generate a commit message. Ensure that it includes a precise and informative subject line that succinctly summarizes the crux of the changes in under 50 characters. If necessary, follow with an explanatory body providing insight into the nature of the changes, the reasoning behind them, and any significant consequences or considerations arising from them. Conclude with any relevant issue references at the end of the message.  Make sure that the body is separated from the subject line by a blank line.  For more information, refer to the following resources:  - https://chris.beams.io/posts/git-commit/  - https://www.conventionalcommits.org/en/v1.0.0/.  Also, make sure the lengh of each line for the commit message is less than 72 characters.",
-  "gitlens.plusFeatures.enabled": false,
   "html.format.wrapLineLength": 0,
   "javascript.updateImportsOnFileMove.enabled": "always",
   "liveServer.settings.donotShowInfoMsg": true,
@@ -319,5 +322,30 @@
     "database-client.telemetry.usesOnlineServices"
   ],
   "workbench.startupEditor": "none",
-  "yaml.schemas": {}
+  "yaml.schemas": {},
+  "json.schemaDownload.trustedDomains": {
+    "https://schemastore.azurewebsites.net/": true,
+    "https://raw.githubusercontent.com/": true,
+    "https://www.schemastore.org/": true,
+    "https://json.schemastore.org/": true,
+    "https://json-schema.org/": true,
+    "https://biomejs.dev": true
+  },
+  "gitlens.ai.model": "vscode",
+  "gitlens.ai.vscode.model": "copilot:gpt-4.1",
+  "telemetry.editStats.enabled": false,
+  "telemetry.feedback.enabled": false,
+  "gitlens.telemetry.enabled": false,
+  "database-client.telemetry.usesOnlineServices": false,
+  "telemetry.telemetryLevel": "off",
+  "chat.mcp.gallery.enabled": true,
+  "workbench.browser.dataStorage": "workspace",
+  "workbench.externalBrowser": "edge",
+  "workbench.browser.enableChatTools": true,
+  "chat.planAgent.defaultModel": "GPT-5.4 (copilot)",
+  "chat.agentSessionProjection.enabled": true,
+  "chat.useNestedAgentsMdFiles": true,
+  "github.copilot.chat.switchAgent.enabled": true,
+  "chat.useCustomAgentHooks": true,
+  "python.terminal.useEnvFile": true
 }
