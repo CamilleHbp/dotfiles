@@ -29,7 +29,7 @@
     }
   },
   "[json]": {
-    "editor.defaultFormatter": "vscode.json-language-features"
+    "editor.defaultFormatter": "biomejs.biome"
   },
   "[jsonc]": {
     "editor.defaultFormatter": "vscode.json-language-features"
@@ -51,18 +51,6 @@
   "[scss]": {
     "editor.defaultFormatter": "vscode.css-language-features"
   },
-  "[typescript]": {
-    "editor.codeActionsOnSave": {
-      "source.fixAll": "explicit"
-    },
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[typescriptreact]": {
-    "editor.codeActionsOnSave": {
-      "source.fixAll": "explicit"
-    },
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
   "chat.mcp.autostart": "newAndOutdated",
   "chat.tools.terminal.autoApprove": {
     "bun": true,
@@ -70,17 +58,32 @@
     "docker exec": true,
     "docker network": true,
     "docker run": true,
+    "jq": true,
+    "kubectl -n tools": true,
+    "printf": true,
     "uv": true,
-    "printf": true
+    "bunx": true
   },
   "chat.tools.urls.autoApprove": {
+    "https://code.visualstudio.com": true,
+    "https://github.com/microsoft/vscode/wiki/*": true,
     "https://testcontainers-python.readthedocs.io": {
       "approveRequest": false,
       "approveResponse": true
     },
     "https://moonrepo.dev": true,
     "https://bun.sh": true,
-    "https://base-ui.com": true
+    "https://base-ui.com": true,
+    "https://docs.github.com": {
+      "approveRequest": false,
+      "approveResponse": true
+    },
+    "https://github.com": {
+      "approveRequest": false,
+      "approveResponse": true
+    },
+    "https://bun.com": true,
+    "https://grafana.com": true
   },
   "chat.viewSessions.orientation": "stacked",
   "csv.enabled": false,
@@ -313,7 +316,7 @@
   "vim.smartRelativeLine": true,
   "vim.textwidth": 120,
   "workbench.activityBar.location": "top",
-  "workbench.colorTheme": "Default Light Modern",
+  "workbench.colorTheme": "Light Modern",
   "workbench.editorAssociations": {
     "*.hoi4": "default"
   },
@@ -347,5 +350,79 @@
   "chat.useNestedAgentsMdFiles": true,
   "github.copilot.chat.switchAgent.enabled": true,
   "chat.useCustomAgentHooks": true,
-  "python.terminal.useEnvFile": true
+  "python.terminal.useEnvFile": true,
+  "biome.configurationPath": "biome.jsonc",
+  "chat.useCustomizationsInParentRepositories": true,
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "claudeCode.selectedModel": "opus[1m]",
+  "pgsql.serverGroups": [
+    {
+      "name": "Servers",
+      "id": "AF7F40BF-A40D-4B4D-9D9E-94616E6759C2",
+      "isDefault": true
+    }
+  ],
+  "pgsql.connections": [
+    {
+      "id": "3C30C716-6895-4A2D-8A1E-CA9EB24E427D",
+      "groupId": "AF7F40BF-A40D-4B4D-9D9E-94616E6759C2",
+      "authenticationType": "SqlLogin",
+      "connectTimeout": 15,
+      "applicationName": "vscode-pgsql",
+      "clientEncoding": "utf8",
+      "sslmode": "require",
+      "sshSavePassword": true,
+      "savePassword": true,
+      "sslRootCertMode": "none",
+      "server": "boussole-db.postgres.database.azure.com",
+      "database": "boussole-app-db-2",
+      "user": "boussoleadmin",
+      "port": "5432",
+      "password": "",
+      "sshPassword": "",
+      "displayName": "boussole-db.postgres.database.azure.com, boussole-app-db-2 (boussoleadmin)",
+      "azureSubscriptionId": "5624a068-d0b0-45b1-be3e-e6aa0e14ce35",
+      "azureResourceGroup": "boussole-production",
+      "azureResourceAccountId": "2fd80240-940d-4570-83e2-9a85da2de61c.fa0a1829-de09-494b-b11b-5001bd848143",
+      "tenantId": "fa0a1829-de09-494b-b11b-5001bd848143",
+      "profileName": "boussole-production",
+      "expiresOn": 0
+    },
+    {
+      "id": "5E0B39E8-9593-46A5-8CF2-59FAA47FCC8A",
+      "groupId": "AF7F40BF-A40D-4B4D-9D9E-94616E6759C2",
+      "authenticationType": "SqlLogin",
+      "connectTimeout": 15,
+      "applicationName": "vscode-pgsql",
+      "clientEncoding": "utf8",
+      "sslmode": "require",
+      "sshSavePassword": true,
+      "savePassword": true,
+      "sslRootCertMode": "none",
+      "server": "boussole-db-preproduction.postgres.database.azure.com",
+      "database": "boussole-db-preproduction",
+      "user": "boussoleadmin",
+      "port": "5432",
+      "password": "",
+      "sshPassword": "",
+      "displayName": "boussole-db-preproduction.postgres.database.azure.com, boussole-db-preproduction (undefined)",
+      "expiresOn": 0,
+      "emptyPasswordInput": false,
+      "profileName": "boussole-preproduction",
+      "azureSubscriptionId": "5624a068-d0b0-45b1-be3e-e6aa0e14ce35",
+      "azureResourceGroup": "boussole-preproduction",
+      "azureResourceAccountId": "2fd80240-940d-4570-83e2-9a85da2de61c.fa0a1829-de09-494b-b11b-5001bd848143",
+      "tenantId": "fa0a1829-de09-494b-b11b-5001bd848143"
+    }
+  ],
+  "chat.hookFilesLocations": {
+    ".github/hooks": true,
+    ".claude/settings.local.json": true,
+    ".claude/settings.json": true,
+    "~/.copilot/hooks": true,
+    "~/.claude/settings.json": true,
+    "~/.agents/hooks": true
+  }
 }

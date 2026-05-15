@@ -46,7 +46,10 @@
   "jobs_search_history": [],
   "lrf_viewer_search_history": [],
   "main_search_history": [
+    "summoner",
+    "usurper",
     "tags:\"web-serial.fiction-live\"",
+    "tags:\"web-serial.fiction-live\" son of a witch",
     "(tags:\"fandom.asoif\" and tags:\"web-serial.fiction-live\")",
     "(tags:\"fandom.asoif\" or tags:\"web-serial.fiction-live\")",
     "tags:\"web-serial.fiction-live, fandom.asoiaf\"",
@@ -67,10 +70,7 @@
     "ErraticErrata",
     "death knight",
     "dedath knight",
-    "master and commander",
-    "master and commanders",
-    "master",
-    "tags\"web-serial.fiction-live\""
+    "master and commander"
   ],
   "main_window_geometry": {
     "__class__": "bytearray",

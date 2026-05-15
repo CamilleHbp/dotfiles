@@ -167,4 +167,39 @@ function n () {
 
 # Functions will be loaded on-demand when they are first called, rather than at shell startup
 # The -U option prevents alias expansion when loading the function, and the -z option sets the function up for Zsh-style function loading.
+# Upgrade Headroom and restart the persistent proxy service.
+function headroom_upgrade_restart() {
+  emulate -L zsh
+  set -e
+
+  local profile="${1:-default}"
+  local port="${HEADROOM_PORT:-8787}"
+  local uid plist label
+
+  uv tool install --upgrade --force 'headroom-ai[all]'
+  headroom tools install
+
+  if ! headroom install restart --profile "$profile"; then
+    local -a pids
+    local pid command
+
+    pids=("${(@f)$(lsof -tiTCP:"$port" -sTCP:LISTEN 2>/dev/null || true)}")
+    for pid in "${pids[@]}"; do
+      command=$(ps -p "$pid" -o command= 2>/dev/null || true)
+      if [[ "$command" == *"headroom.cli proxy"* ]]; then
+        kill "$pid" 2>/dev/null || true
+      fi
+    done
+
+    uid=$(id -u)
+    label="com.headroom.${profile}"
+    plist="$HOME/Library/LaunchAgents/${label}.plist"
+    launchctl bootout "gui/${uid}/${label}" >/dev/null 2>&1 || true
+    launchctl bootstrap "gui/${uid}" "$plist" 2>/dev/null || true
+    launchctl kickstart -k "gui/${uid}/${label}" 2>/dev/null || true
+  fi
+
+  headroom install status --profile "$profile"
+}
+
 autoload -Uz git_list_files pip_uninstall

@@ -27,15 +27,7 @@ Host nf-ovh
 
 Host remarkable
   User root
-  HostName 192.168.1.117
-  AddKeysToAgent yes
-  IdentitiesOnly yes
-  IdentityFile ~/.ssh/id_ed25519
-  UseKeychain yes
-
-Host remarkable-2
-  User root
-  HostName 192.168.1.84
+  HostName 192.168.1.33
   AddKeysToAgent yes
   IdentitiesOnly yes
   IdentityFile ~/.ssh/id_ed25519

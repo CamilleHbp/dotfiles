@@ -19,11 +19,13 @@
 	<key>AiMaxTokens</key>
 	<integer>400000</integer>
 	<key>AiModel</key>
-	<string>gpt-5.1</string>
+	<string>gpt-5.2</string>
 	<key>AiResponseMaxTokens</key>
 	<integer>128000</integer>
 	<key>AitermURL</key>
 	<string>https://api.openai.com/v1/responses</string>
+	<key>AllowClipboardAccess</key>
+	<true/>
 	<key>Custom Color Presets</key>
 	<dict>
 		<key>gruvbox</key>
@@ -1079,7 +1081,7 @@
 	<key>Default Bookmark Guid</key>
 	<string>21273C72-18AE-492F-BCB8-F3B33DD65EC6</string>
 	<key>Default Browser Profile Guid</key>
-	<string>7AA44014-34BB-4F73-8570-5A3B89045BCA</string>
+	<string>E4F06F2D-FF7A-4C21-8A71-BDDE988D209F</string>
 	<key>HapticFeedbackForEsc</key>
 	<false/>
 	<key>HideTab</key>

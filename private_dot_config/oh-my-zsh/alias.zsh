@@ -13,7 +13,8 @@ alias vim=nvim
 
 # --------------------------------- Projects --------------------------------- #
 alias dev='cd ~/Dev/Personal'
-alias renpy='personal && cd "Renpy Projects"'
+alias retro='dev && cd retro-music-player'
+alias fiction='dev && cd fiction-live-search'
 
 # -------------------------------- AI project -------------------------------- #
 alias ai="dev && cd ai"
@@ -23,7 +24,11 @@ alias nf='cd ~/Dev/NosFuturs'
 alias nf-clients='nf && cd ./clients'
 alias nf-internal='nf && cd ./internal'
 alias nf-templates='nf && cd ./templates'
-alias zeus='nf && cd ./clients/zeus'
+alias nf-argo='nf-internal && cd ./main-cluster-argocd'
+alias zeus='nf && cd ./clients/zeus-v4'
+alias zeus-core='zeus && cd ./zeus-core'
+alias zeus-web='zeus && cd ./zeus-web'
+alias zeus-types='zeus && cd ./zeus-types'
 
 # ------------------------------- Work projects ------------------------------ #
 alias boussole='cd ~/Dev/boussole'

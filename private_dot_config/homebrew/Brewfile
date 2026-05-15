@@ -1,12 +1,17 @@
+tap "anomalyco/tap"
 tap "auth0/auth0-cli"
+tap "dart-lang/dart"
 tap "derailed/k9s"
 tap "dotenv-org/brew"
+tap "edgee-ai/tap"
 tap "gromgit/fuse"
 tap "infisical/get-cli"
 tap "localsend/localsend"
 tap "lyraphase/pcloud"
 tap "oven-sh/bun"
 tap "pikachuexe/freetube"
+tap "runpod/runpodctl"
+tap "stripe/stripe-cli"
 tap "timescam/tap"
 # Run your GitHub Actions locally
 brew "act"
@@ -20,6 +25,8 @@ brew "aria2"
 brew "python@3.13"
 # Microsoft Azure CLI 2.0
 brew "azure-cli"
+# B2 Cloud Storage Command-Line Tools
+brew "b2-tools"
 # Toolchain of the web
 brew "biome"
 # Tuned OpenCL BLAS library
@@ -60,6 +67,8 @@ brew "go"
 brew "gzip"
 # Kubernetes package manager
 brew "helm"
+# Client library for huggingface.co hub
+brew "hf"
 # C/C++ and Java libraries for Unicode and globalization
 brew "icu4c@77"
 # Tools and libraries to manipulate images in select formats
@@ -78,14 +87,14 @@ brew "libsecret"
 brew "minio-mc"
 # NCurses Disk Usage
 brew "ncdu"
+# FTP client with an advanced user interface
+brew "ncftp"
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
 # Tiny, lightning fast, feature-packed file manager
 brew "nnn"
-# Search tool like grep and The Silver Searcher
-brew "ripgrep"
-# AI coding agent, built for the terminal
-brew "opencode"
+# Create, run, and share large language models (LLMs)
+brew "ollama"
 # Swiss-army knife of markup format conversion
 brew "pandoc"
 # Pluggable multi-language version manager
@@ -94,6 +103,12 @@ brew "proto"
 brew "python@3.10"
 # Interpreted, interactive, object-oriented programming language
 brew "python@3.12"
+# Search tool like grep and The Silver Searcher
+brew "ripgrep"
+# CLI proxy to minimize LLM token consumption
+brew "rtk"
+# Rust toolchain installer
+brew "rustup"
 # Command-line Interface for Scaleway
 brew "scw"
 # Cross-shell prompt for astronauts
@@ -104,8 +119,12 @@ brew "unzip"
 brew "wimlib"
 # UNIX shell (command interpreter)
 brew "zsh"
+# The AI coding agent built for the terminal.
+brew "anomalyco/tap/opencode"
 # Build, manage and test your Auth0 integrations from the command line
 brew "auth0/auth0-cli/auth0"
+# SDK
+brew "dart-lang/dart/dart", link: false
 # Kubernetes CLI To Manage Your Clusters In Style!
 brew "derailed/k9s/k9s"
 # Sync .env files
@@ -114,12 +133,18 @@ brew "dotenv-org/brew/dotenv-vault"
 brew "gromgit/fuse/s3fs-mac"
 # The official Infisical CLI
 brew "infisical/get-cli/infisical"
+# Stripe CLI utility
+brew "stripe/stripe-cli/stripe"
 # CLI tool to pay respects
 brew "timescam/tap/pay-respects"
 # Free video downloader
 cask "4k-video-downloader+"
+# Image editing and design software
+cask "affinity"
 # Application launcher and productivity software
 cask "alfred"
+# Android SDK component
+cask "android-platform-tools"
 # Tools for building Android applications
 cask "android-studio"
 # Private desktop AI chat application
@@ -134,8 +159,12 @@ cask "bruno"
 cask "c0re100-qbittorrent"
 # E-books management software
 cask "calibre"
-# Terminal-based AI coding assistant
-cask "claude-code"
+# Design tool
+cask "canva"
+# OpenAI's official ChatGPT desktop app
+cask "chatgpt"
+# Screen capturing tool
+cask "cleanshot"
 # OpenAI's coding agent that runs in your terminal
 cask "codex"
 # Node-based image, video and audio generator
@@ -234,12 +263,16 @@ cask "inkscape"
 cask "iterm2"
 # Download manager
 cask "jdownloader"
+# Keyboard customiser
+cask "karabiner-elements"
 # Open-source epub reader
 cask "koodo-reader"
 # Free and open-source painting and sketching program
 cask "krita"
 # Free cross-platform office suite, fresh version
 cask "libreoffice"
+# Discover, download, and run local LLMs
+cask "lm-studio"
 # An open source cross-platform alternative to AirDrop
 cask "localsend/localsend/localsend"
 # Open-source firewall to block unknown outgoing connections
@@ -282,6 +315,8 @@ cask "steam"
 cask "steermouse"
 # Open-source media center
 cask "stremio@beta"
+# Interior design application
+cask "sweet-home3d"
 # Remote access and connectivity software focused on security
 cask "teamviewer"
 # Unpacks archive files
@@ -298,35 +333,38 @@ cask "trae"
 cask "vlc"
 # Gecko based web browser
 cask "zen"
-vscode "ajmnz.prisma-import"
 vscode "alefragnani.project-manager"
-vscode "anthropic.claude-code"
 vscode "artdiniz.quitcontrol-vscode"
 vscode "astro-build.astro-vscode"
 vscode "bierner.markdown-mermaid"
 vscode "biomejs.biome"
 vscode "charliermarsh.ruff"
-vscode "cweijan.dbclient-jdbc"
 vscode "cweijan.vscode-database-client2"
+vscode "dart-code.dart-code"
+vscode "dart-code.flutter"
 vscode "davidanson.vscode-markdownlint"
 vscode "eamodio.gitlens"
 vscode "editorconfig.editorconfig"
 vscode "elagil.pre-commit-helper"
 vscode "fill-labs.dependi"
 vscode "foxundermoon.shell-format"
-vscode "github.copilot-chat"
 vscode "github.vscode-github-actions"
 vscode "github.vscode-pull-request-github"
 vscode "gruntfuggly.todo-tree"
 vscode "inferrinizzard.prettier-sql-vscode"
+vscode "jcassio-dev.prisma-summary"
 vscode "kavish.hex-to-hsl"
 vscode "mathematic.vscode-pdf"
 vscode "matt-meyers.vscode-dbml"
 vscode "meganrogge.template-string-converter"
 vscode "mikoz.autoflake-extension"
 vscode "mindaro-dev.file-downloader"
+vscode "ms-azuretools.vscode-azure-github-copilot"
+vscode "ms-azuretools.vscode-azure-mcp-server"
+vscode "ms-azuretools.vscode-azureresourcegroups"
 vscode "ms-azuretools.vscode-docker"
 vscode "ms-edgedevtools.vscode-edge-devtools"
+vscode "ms-ossdata.vscode-pgsql"
 vscode "ms-python.black-formatter"
 vscode "ms-python.debugpy"
 vscode "ms-python.isort"
@@ -342,8 +380,8 @@ vscode "naumovs.color-highlight"
 vscode "nicolas-liger.dbml-viewer"
 vscode "openai.chatgpt"
 vscode "pkief.material-icon-theme"
+vscode "prisma.prisma"
 vscode "redhat.vscode-yaml"
-vscode "repreng.csv"
 vscode "richie5um2.vscode-sort-json"
 vscode "ryuta46.multi-command"
 vscode "samueltscott.maximizeterminal"
@@ -357,3 +395,5 @@ vscode "yrm.type-challenges"
 vscode "yzhang.markdown-all-in-one"
 vscode "zengxingxin.sort-js-object-keys"
 go "github.com/tmedwards/tweego"
+cargo "trunk"
+cargo "wasm-bindgen-cli"

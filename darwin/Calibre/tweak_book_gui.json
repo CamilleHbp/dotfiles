@@ -17,28 +17,28 @@
   },
   "geometry-of-main_window_geometry": {
     "frame_geometry": {
-      "height": 1080,
+      "height": 1084,
       "width": 1728,
       "x": 0,
-      "y": 37
+      "y": 33
     },
     "full_screened": true,
     "geometry": {
+      "height": 1084,
+      "width": 1728,
+      "x": 0,
+      "y": 33
+    },
+    "maximized": false,
+    "normal_geometry": {
       "height": 1080,
       "width": 1728,
       "x": 0,
       "y": 37
     },
-    "maximized": false,
-    "normal_geometry": {
-      "height": 1051,
-      "width": 1728,
-      "x": 0,
-      "y": 66
-    },
     "qt": {
       "__class__": "bytearray",
-      "__value__": "AdnQywADAAAAAAAAAAAAJQAABr8AAARcAAAAAAAAAEIAAAa/AAAEXAAAAAAABAAABsAAAAAAAAAAJQAABr8AAARc"
+      "__value__": "AdnQywADAAAAAAAAAAAAIQAABr8AAARcAAAAAAAAACUAAAa/AAAEXAAAAAAABAAABsAAAAAAAAAAIQAABr8AAARc"
     },
     "screen": {
       "depth": 24,
@@ -170,7 +170,7 @@
   },
   "html-editor-state": {
     "__class__": "bytearray",
-    "__value__": "AAAA/wAAAAD9AAAAAAAAA18AAAO4AAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAMAAAAUAGEAYwB0AGkAbwBuAF8AYgBhAHIBAAAAAP////8AAAAAAAAAAAAAABIAdABvAG8AbABzAF8AYgBhAHIBAAAA3f////8AAAAAAAAAAAAAAB4AaAB0AG0AbABfAGYAbwByAG0AYQB0AF8AYgBhAHIBAAABv/////8AAAAAAAAAAA=="
+    "__value__": "AAAA/wAAAAD9AAAAAAAAA18AAAO8AAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAMAAAAUAGEAYwB0AGkAbwBuAF8AYgBhAHIBAAAAAP////8AAAAAAAAAAAAAABIAdABvAG8AbABzAF8AYgBhAHIBAAAA3f////8AAAAAAAAAAAAAAB4AaAB0AG0AbABfAGYAbwByAG0AYQB0AF8AYgBhAHIBAAABv/////8AAAAAAAAAAA=="
   },
   "image-editor-state": {
     "__class__": "bytearray",
@@ -182,9 +182,10 @@
   },
   "main_window_state": {
     "__class__": "bytearray",
-    "__value__": "AAAA/wAAAAD9AAAABAAAAAAAAAEAAAAD+/wCAAAABfsAAAAkAGYAaQBsAGUAcwAtAGIAcgBvAHcAcwBlAHIALQBkAG8AYwBrAQAAACcAAAP7AAAAWAD////7AAAAHgB0AG8AYwAtAHYAaQBlAHcAZQByAC0AZABvAGMAawAAAAAA/////wAAAFgA////+wAAACAAdABlAHgAdAAtAHMAZQBhAHIAYwBoAC0AZABvAGMAawAAAAAA/////wAAAHUA////+wAAACAAYwBoAGUAYwBrAHAAbwBpAG4AdABzAC0AZABvAGMAawAAAAAA/////wAAAIgA////+wAAACYAcwBhAHYAZQBkAC0AcwBlAGEAcgBjAGgAZQBzAC0AZABvAGMAawAAAAAA/////wAAAfcA////AAAAAQAAAlUAAAP7/AIAAAAC+wAAABgAcAByAGUAdgBpAGUAdwAtAGQAbwBjAGsBAAAAJwAAA/sAAABPAP////sAAAAaAGwAaQB2AGUALQBjAHMAcwAtAGQAbwBjAGsAAAAAAP////8AAABYAP///wAAAAIAAAAAAAAAAPwBAAAAAfsAAAAeAGMAaABlAGMAawAtAGIAbwBvAGsALQBkAG8AYwBrAAAAAAD/////AAAAkAD///8AAAADAAAAAAAAAAD8AQAAAAH7AAAAHABpAG4AcwBwAGUAYwB0AG8AcgAtAGQAbwBjAGsAAAAAAP////8AAAAzAP///wAAA18AAAP7AAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAMAAAAUAGcAbABvAGIAYQBsAC0AYgBhAHIBAAAAAP////8AAAAAAAAAAAAAABIAdABvAG8AbABzAC0AYgBhAHIBAAABJv////8AAAAAAAAAAAAAABYAcABsAHUAZwBpAG4AcwAtAGIAYQByAAAAAAD/////AAAAAAAAAAA="
+    "__value__": "AAAA/wAAAAD9AAAABAAAAAAAAAEAAAAD//wCAAAABfsAAAAkAGYAaQBsAGUAcwAtAGIAcgBvAHcAcwBlAHIALQBkAG8AYwBrAQAAACcAAAP/AAAAWAD////7AAAAHgB0AG8AYwAtAHYAaQBlAHcAZQByAC0AZABvAGMAawAAAAAA/////wAAAFgA////+wAAACAAdABlAHgAdAAtAHMAZQBhAHIAYwBoAC0AZABvAGMAawAAAAAA/////wAAAHUA////+wAAACAAYwBoAGUAYwBrAHAAbwBpAG4AdABzAC0AZABvAGMAawAAAAAA/////wAAAIgA////+wAAACYAcwBhAHYAZQBkAC0AcwBlAGEAcgBjAGgAZQBzAC0AZABvAGMAawAAAAAA/////wAAAfcA////AAAAAQAAAlUAAAP//AIAAAAC+wAAABgAcAByAGUAdgBpAGUAdwAtAGQAbwBjAGsBAAAAJwAAA/8AAABPAP////sAAAAaAGwAaQB2AGUALQBjAHMAcwAtAGQAbwBjAGsAAAAAAP////8AAABYAP///wAAAAIAAAAAAAAAAPwBAAAAAfsAAAAeAGMAaABlAGMAawAtAGIAbwBvAGsALQBkAG8AYwBrAAAAAAD/////AAAAkAD///8AAAADAAAAAAAAAAD8AQAAAAH7AAAAHABpAG4AcwBwAGUAYwB0AG8AcgAtAGQAbwBjAGsAAAAAAP////8AAAAzAP///wAAA18AAAP/AAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAMAAAAUAGcAbABvAGIAYQBsAC0AYgBhAHIBAAAAAP////8AAAAAAAAAAAAAABIAdABvAG8AbABzAC0AYgBhAHIBAAABJv////8AAAAAAAAAAAAAABYAcABsAHUAZwBpAG4AcwAtAGIAYQByAAAAAAD/////AAAAAAAAAAA="
   },
   "recent-books": [
+    "/Users/camille/Documents/eBooks/Calibre/palisjoe/Son of a Witch_ Season 1 (3827)/Son of a Witch_ Season 1 - palisjoe.epub",
     "/Users/camille/Documents/eBooks/Calibre/bogomila/Master and Commander Rebooted with Omakes (3732)/Master and Commander Rebooted with Omakes - bogomila.epub",
     "/Users/camille/Documents/eBooks/Calibre/OstensibleMammal/Godclads (3696)/Godclads - OstensibleMammal.epub",
     "/Users/camille/Documents/eBooks/Calibre/K. M. Weiland/Creating Character Arcs_ The Master (3053)/Creating Character Arcs_ The Ma - K. M. Weiland.epub",
@@ -193,8 +194,7 @@
     "/Users/camille/Documents/eBooks/Calibre/Hermione-G-Weasley/When Things Start to Change New (3578)/When Things Start to Change New - Hermione-G-Weasley.epub",
     "/Users/camille/Documents/eBooks/Calibre/Shaun/The Wheel Turns Anew - book 1 (3559)/The Wheel Turns Anew - book 1 - Shaun.epub",
     "/Users/camille/Documents/eBooks/Calibre-RPG/Unknown/Symbaroum (3598)/Symbaroum - Unknown.epub",
-    "/Users/camillebaillat/Dropbox/Calibre/Simon Walden/600_ Nude Poses_ A Complete Reference Book for Photographers, Models and Artists_ How to Pose N (3518)/600_ Nude Poses_ A Complete Reference Book - Simon Walden.epub",
-    "/Users/camillebaillat/Dropbox/Calibre/Gu Zhen Ren/Reverend Insanity (3399)/Reverend Insanity - Gu Zhen Ren.epub"
+    "/Users/camillebaillat/Dropbox/Calibre/Simon Walden/600_ Nude Poses_ A Complete Reference Book for Photographers, Models and Artists_ How to Pose N (3518)/600_ Nude Poses_ A Complete Reference Book - Simon Walden.epub"
   ],
   "reports-ui-state": {},
   "saved_seaches_state": {

@@ -1,7 +1,7 @@
 {"_id":"allSettingsSectionsExpandedByDefault","value":false}
-{"_id":"backendPreference","value":"invidious"}
+{"_id":"backendPreference","value":"local"}
 {"_id":"baseTheme","value":"catppuccinMocha"}
-{"_id":"bounds","value":{"x":464,"y":259,"width":800,"height":600,"maximized":false,"fullScreen":true}}
+{"_id":"bounds","value":{"x":464,"y":258,"width":800,"height":600,"maximized":false,"fullScreen":true}}
 {"_id":"checkForBlogPosts","value":false}
 {"_id":"defaultCaptionSettings","value":"{\"backgroundColor\":\"#000\",\"backgroundOpacity\":\"0.5\",\"color\":\"#FFF\",\"edgeStyle\":\"raised\",\"fontFamily\":\"proportionalSansSerif\",\"textOpacity\":\"1\",\"windowColor\":\"#000\",\"windowOpacity\":\"0\"}"}
 {"_id":"defaultInvidiousInstance","value":""}
