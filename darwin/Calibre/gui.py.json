@@ -46,9 +46,14 @@
   "jobs_search_history": [],
   "lrf_viewer_search_history": [],
   "main_search_history": [
+    "tags:\"web-serial.fiction-live\"",
+    "tags:\"web-serial.fiction-live\" diary",
+    "tags:\"web-serial.fiction-live\" ppg",
+    "tags:\"web-serial.fiction-live\" tome",
+    "the tome",
+    "the fool",
     "summoner",
     "usurper",
-    "tags:\"web-serial.fiction-live\"",
     "tags:\"web-serial.fiction-live\" son of a witch",
     "(tags:\"fandom.asoif\" and tags:\"web-serial.fiction-live\")",
     "(tags:\"fandom.asoif\" or tags:\"web-serial.fiction-live\")",
@@ -65,12 +70,7 @@
     "Torture",
     "isekai",
     "black humours",
-    "black",
-    "saxons",
-    "ErraticErrata",
-    "death knight",
-    "dedath knight",
-    "master and commander"
+    "black"
   ],
   "main_window_geometry": {
     "__class__": "bytearray",

@@ -29,8 +29,8 @@ CanvasSize/KeepAspectRatio=true
 ColorManagement/UseSystemMonitorProfile=false
 ConvertToImageColorSpaceOnImport=false
 CreateBackupFile=true
-ExportConfiguration-image/jpeg=<!DOCTYPE params>\n<params>\n <param name="baseline" type="internal">true</param>\n <param name="exif" type="internal">true</param>\n <param name="filters" type="string"><![CDATA[]]></param>\n <param name="forceSRGB" type="internal">false</param>\n <param name="iptc" type="internal">true</param>\n <param name="optimize" type="internal">true</param>\n <param name="progressive" type="internal">false</param>\n <param name="quality" type="internal">48</param>\n <param name="saveProfile" type="internal">true</param>\n <param name="smoothing" type="internal">0</param>\n <param name="storeAuthor" type="internal">false</param>\n <param name="storeMetaData" type="internal">false</param>\n <param name="subsampling" type="internal">0</param>\n <param name="transparencyFillcolor" type="color"><![CDATA[<!DOCTYPE color>\n<color>\n <RGB g="1" space="sRGB-elle-V2-g10.icc" r="1" b="1"/>\n</color>\n]]></param>\n <param name="xmp" type="internal">true</param>\n</params>\n
-ExportConfiguration-image/png=<!DOCTYPE params>\n<params>\n <param type="internal" name="alpha">true</param>\n <param type="internal" name="compression">9</param>\n <param type="internal" name="downsample">false</param>\n <param type="internal" name="forceSRGB">false</param>\n <param type="internal" name="indexed">false</param>\n <param type="internal" name="interlaced">false</param>\n <param type="internal" name="saveAsHDR">false</param>\n <param type="internal" name="saveSRGBProfile">true</param>\n <param type="internal" name="storeAuthor">false</param>\n <param type="internal" name="storeMetaData">true</param>\n <param type="color" name="transparencyFillcolor"><![CDATA[<!DOCTYPE color>\n<color>\n <RGB r="1" b="1" g="1" space="sRGB-elle-V2-g10.icc"/>\n</color>\n]]></param>\n</params>\n
+ExportConfiguration-image/jpeg=<!DOCTYPE params>\n<params>\n <param type="internal" name="baseline">true</param>\n <param type="internal" name="exif">true</param>\n <param type="string" name="filters"><![CDATA[]]></param>\n <param type="internal" name="forceSRGB">false</param>\n <param type="internal" name="iptc">true</param>\n <param type="internal" name="optimize">true</param>\n <param type="internal" name="progressive">false</param>\n <param type="internal" name="quality">48</param>\n <param type="internal" name="saveProfile">true</param>\n <param type="internal" name="smoothing">0</param>\n <param type="internal" name="storeAuthor">false</param>\n <param type="internal" name="storeMetaData">false</param>\n <param type="internal" name="subsampling">0</param>\n <param type="color" name="transparencyFillcolor"><![CDATA[<!DOCTYPE color>\n<color>\n <RGB space="sRGB-elle-V2-g10.icc" r="1" b="1" g="1"/>\n</color>\n]]></param>\n <param type="internal" name="xmp">true</param>\n</params>\n
+ExportConfiguration-image/png=<!DOCTYPE params>\n<params>\n <param type="internal" name="alpha">true</param>\n <param type="internal" name="compression">9</param>\n <param type="internal" name="downsample">false</param>\n <param type="internal" name="forceSRGB">false</param>\n <param type="internal" name="indexed">false</param>\n <param type="internal" name="interlaced">false</param>\n <param type="internal" name="saveAsHDR">false</param>\n <param type="internal" name="saveSRGBProfile">true</param>\n <param type="internal" name="storeAuthor">false</param>\n <param type="internal" name="storeMetaData">true</param>\n <param type="color" name="transparencyFillcolor"><![CDATA[<!DOCTYPE color>\n<color>\n <RGB r="1" b="1" space="sRGB-elle-V2-g10.icc" g="1"/>\n</color>\n]]></param>\n</params>\n
 ExportConfiguration-image/webp=<!DOCTYPE params>\n<params>\n <param type="internal" name="alpha_compression">1</param>\n <param type="internal" name="alpha_filtering">1</param>\n <param type="internal" name="alpha_quality">100</param>\n <param type="internal" name="autofilter">false</param>\n <param type="internal" name="dithering">true</param>\n <param type="internal" name="emulate_jpeg_size">false</param>\n <param type="internal" name="exact">false</param>\n <param type="internal" name="exif">true</param>\n <param type="internal" name="filter_sharpness">0</param>\n <param type="internal" name="filter_strength">60</param>\n <param type="internal" name="filter_type">1</param>\n <param type="string" name="filters"><![CDATA[]]></param>\n <param type="internal" name="haveAnimation">true</param>\n <param type="internal" name="lossless">true</param>\n <param type="internal" name="low_memory">false</param>\n <param type="internal" name="method">6</param>\n <param type="internal" name="near_lossless">100</param>\n <param type="internal" name="partition_limit">0</param>\n <param type="internal" name="partitions">0</param>\n <param type="internal" name="pass">1</param>\n <param type="internal" name="preprocessing">0</param>\n <param type="internal" name="preset">0</param>\n <param type="internal" name="qmax">100</param>\n <param type="internal" name="qmin">0</param>\n <param type="internal" name="quality">100</param>\n <param type="internal" name="segments">4</param>\n <param type="internal" name="show_compressed">false</param>\n <param type="internal" name="sns_strength">50</param>\n <param type="internal" name="storeMetaData">false</param>\n <param type="internal" name="target_PSNR">0</param>\n <param type="internal" name="target_size">0</param>\n <param type="internal" name="thread_level">true</param>\n <param type="internal" name="use_sharp_yuv">false</param>\n <param type="internal" name="xmp">true</param>\n</params>\n
 FilterSelector/LastUsedFilter=hsvadjustment
 GamutMasks.viewMode=0
@@ -48,9 +48,9 @@ Krita/Ocio/OcioConfigPath=
 Krita/Ocio/OcioLockColorVisualRepresentation=false
 Krita/Ocio/OcioLutPath=
 Krita/Ocio/UseOcio=false
-LastBackGroundColor=<!DOCTYPE LastBackGroundColor>\n<LastBackGroundColor>\n <RGB g="0.929411768913269" space="sRGB-elle-V2-srgbtrc.icc" r="1" b="0.925490200519562"/>\n</LastBackGroundColor>\n
-LastColorHistory=<!DOCTYPE LastColorHistory>\n<colors>\n <RGB g="0.00653086137026548" space="sRGB-elle-V2-g10.icc" r="0.822812259197235" b="0.00439459830522537"/>\n <RGB g="0.0745098069310188" space="sRGB-elle-V2-srgbtrc.icc" r="0.917647063732147" b="0.0549019612371922"/>\n <RGB g="0.74117648601532" space="sRGB-elle-V2-g10.icc" r="0.917647063732147" b="0.211764708161354"/>\n</colors>\n
-LastForeGroundColor=<!DOCTYPE LastForeGroundColor>\n<LastForeGroundColor>\n <RGB g="0.00653086137026548" space="sRGB-elle-V2-g10.icc" r="0.822812259197235" b="0.00439459830522537"/>\n</LastForeGroundColor>\n
+LastBackGroundColor=<!DOCTYPE LastBackGroundColor>\n<LastBackGroundColor>\n <RGB r="1" b="0.925490200519562" space="sRGB-elle-V2-srgbtrc.icc" g="0.929411768913269"/>\n</LastBackGroundColor>\n
+LastColorHistory=<!DOCTYPE LastColorHistory>\n<colors>\n <RGB r="0.822812259197235" b="0.00439459830522537" space="sRGB-elle-V2-g10.icc" g="0.00653086137026548"/>\n <RGB r="0.917647063732147" b="0.0549019612371922" space="sRGB-elle-V2-srgbtrc.icc" g="0.0745098069310188"/>\n <RGB r="0.917647063732147" b="0.211764708161354" space="sRGB-elle-V2-g10.icc" g="0.74117648601532"/>\n</colors>\n
+LastForeGroundColor=<!DOCTYPE LastForeGroundColor>\n<LastForeGroundColor>\n <RGB r="0.822812259197235" b="0.00439459830522537" space="sRGB-elle-V2-g10.icc" g="0.00653086137026548"/>\n</LastForeGroundColor>\n
 LastPreset=c) Pencil-1 Hard
 LastPreset_-1=e) Marker Chisel Smooth
 LineSmoothingDelayDistance=50
@@ -161,9 +161,9 @@ hideScrollbarsFullScreen=true
 hideStatusbarFullScreen=true
 hideTitleBarFullscreen=true
 hideToolbarFullscreen=true
-imageHeightDef=1080
+imageHeightDef=1044
 imageResolutionDef=300
-imageWidthDef=1920
+imageWidthDef=1636
 imagesizedlg_imsizeunit=px
 imagesizedlg_printSizeSeparatly=false
 imagesizedlg_ratioLock=false
@@ -292,7 +292,7 @@ zoomMarginSize=0
 [File Dialogs]
 DontUseNativeFileDialog=false
 OpenDocument=/Users/camille/Documents/Forêts Agir 48/20260621 - Tables Rondes 21 juin/Affiche et Flyer
-SaveAs=/Users/camille/Documents/Forêts Agir 48/20260621 - Tables Rondes 21 juin/TransferNow-20260427uJxrruWf
+SaveAs=/Users/camille/Pictures
 
 [GradientChooser]
 global/itemSize=medium
@@ -701,6 +701,7 @@ File18[$e]=$HOME/Documents/Forêts Agir 48/20260621 - Tables Rondes 21 juin/Aff
 File19[$e]=$HOME/Documents/Forêts Agir 48/20260621 - Tables Rondes 21 juin/Affiche et Flyer/forets_agir_poster_feedback_applied.jpg
 File2[$e]=$HOME/Pictures/20221229 - Proko - Gestures 2mn.jpeg
 File20[$e]=$HOME/Documents/Forêts Agir 48/20260621 - Tables Rondes 21 juin/Affiche et Flyer/wetransfer_untitled-transfer_2026-05-04_1442/affiche design 3 alternatif.jpg
+File21[$e]=$HOME/Dev/Personal/questforge/questforge-web/images/home/hero-jewel.png
 File3[$e]=$HOME/Pictures/IMG_3327.jpg
 File4[$e]=$HOME/Pictures/Photos Koji/Camille Baillat-36_YSCORPORATE.jpg
 File5[$e]=$HOME/Pictures/Photos Koji/Camille Baillat-36_YSCORPORATE.kra
@@ -721,6 +722,7 @@ Name18=forets_agir_poster_modified.jpg
 Name19=forets_agir_poster_feedback_applied.jpg
 Name2=20221229 - Proko - Gestures 2mn.jpeg
 Name20=affiche design 3 alternatif.jpg
+Name21=hero-jewel.png
 Name3=IMG_3327.jpg
 Name4=Camille Baillat-36_YSCORPORATE.jpg
 Name5=Camille Baillat-36_YSCORPORATE.kra

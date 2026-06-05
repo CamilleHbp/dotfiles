@@ -432,7 +432,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/Library/Fonts/Arial Unicode.ttf||23278008:1775463057.0": {
+    "/Library/Fonts/Arial Unicode.ttf||23278008:1777577597.0": {
       "family_name": "Arial Unicode MS",
       "font-family": "Arial Unicode MS",
       "font-stretch": "normal",
@@ -612,7 +612,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Apple Braille Outline 6 Dot.ttf||266008:1775463057.0": {
+    "/System/Library/Fonts/Apple Braille Outline 6 Dot.ttf||266008:1777577597.0": {
       "family_name": "Apple Braille",
       "font-family": "Apple Braille",
       "font-stretch": "normal",
@@ -648,7 +648,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Apple Braille Outline 8 Dot.ttf||283076:1775463057.0": {
+    "/System/Library/Fonts/Apple Braille Outline 8 Dot.ttf||283076:1777577597.0": {
       "family_name": "Apple Braille",
       "font-family": "Apple Braille",
       "font-stretch": "normal",
@@ -684,7 +684,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Apple Braille Pinpoint 6 Dot.ttf||185180:1775463057.0": {
+    "/System/Library/Fonts/Apple Braille Pinpoint 6 Dot.ttf||185180:1777577597.0": {
       "family_name": "Apple Braille",
       "font-family": "Apple Braille",
       "font-stretch": "normal",
@@ -720,7 +720,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Apple Braille Pinpoint 8 Dot.ttf||191768:1775463057.0": {
+    "/System/Library/Fonts/Apple Braille Pinpoint 8 Dot.ttf||191768:1777577597.0": {
       "family_name": "Apple Braille",
       "font-family": "Apple Braille",
       "font-stretch": "normal",
@@ -756,7 +756,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Apple Braille.ttf||138012:1775463057.0": {
+    "/System/Library/Fonts/Apple Braille.ttf||138012:1777577597.0": {
       "family_name": "Apple Braille",
       "font-family": "Apple Braille",
       "font-stretch": "normal",
@@ -792,7 +792,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Apple Symbols.ttf||897936:1775463057.0": {
+    "/System/Library/Fonts/Apple Symbols.ttf||897936:1777577597.0": {
       "family_name": "Apple Symbols",
       "font-family": "Apple Symbols",
       "font-stretch": "normal",
@@ -828,7 +828,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Geneva.ttf||736764:1775463057.0": {
+    "/System/Library/Fonts/Geneva.ttf||736764:1777577597.0": {
       "family_name": "Geneva",
       "font-family": "Geneva",
       "font-stretch": "normal",
@@ -864,7 +864,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Keyboard.ttf||58088:1775463057.0": {
+    "/System/Library/Fonts/Keyboard.ttf||58088:1777577597.0": {
       "family_name": ".Keyboard",
       "font-family": ".Keyboard",
       "font-stretch": "normal",
@@ -900,8 +900,8 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/LastResort.otf||2532:1775463057.0": {},
-    "/System/Library/Fonts/Monaco.ttf||534216:1775463057.0": {
+    "/System/Library/Fonts/LastResort.otf||2532:1777577597.0": {},
+    "/System/Library/Fonts/Monaco.ttf||534216:1777577597.0": {
       "family_name": "Monaco",
       "font-family": "Monaco",
       "font-stretch": "normal",
@@ -937,7 +937,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/NewYork.ttf||737036:1775463057.0": {
+    "/System/Library/Fonts/NewYork.ttf||737036:1777577597.0": {
       "family_name": ".New York",
       "font-family": ".New York",
       "font-stretch": "normal",
@@ -973,7 +973,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/NewYorkItalic.ttf||523020:1775463057.0": {
+    "/System/Library/Fonts/NewYorkItalic.ttf||523020:1777577597.0": {
       "family_name": ".New York",
       "font-family": ".New York",
       "font-stretch": "normal",
@@ -1009,7 +1009,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/SFArabic.ttf||722504:1775463057.0": {
+    "/System/Library/Fonts/SFArabic.ttf||722504:1777577597.0": {
       "family_name": ".SF Arabic",
       "font-family": ".SF Arabic",
       "font-stretch": "normal",
@@ -1045,7 +1045,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/SFArabicRounded.ttf||786120:1775463057.0": {
+    "/System/Library/Fonts/SFArabicRounded.ttf||786120:1777577597.0": {
       "family_name": ".SF Arabic Rounded",
       "font-family": ".SF Arabic Rounded",
       "font-stretch": "normal",
@@ -1081,7 +1081,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/SFArmenian.ttf||89192:1775463057.0": {
+    "/System/Library/Fonts/SFArmenian.ttf||89192:1777577597.0": {
       "family_name": ".SF Armenian",
       "font-family": ".SF Armenian",
       "font-stretch": "normal",
@@ -1117,7 +1117,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/SFArmenianRounded.ttf||65056:1775463057.0": {
+    "/System/Library/Fonts/SFArmenianRounded.ttf||65056:1777577597.0": {
       "family_name": ".SF Armenian Rounded",
       "font-family": ".SF Armenian Rounded",
       "font-stretch": "ultra-condensed",
@@ -1153,7 +1153,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/SFCamera.ttf||123040:1775463057.0": {
+    "/System/Library/Fonts/SFCamera.ttf||123040:1777577597.0": {
       "family_name": ".SF Camera",
       "font-family": ".SF Camera",
       "font-stretch": "normal",
@@ -1189,7 +1189,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/SFCompact.ttf||1890660:1775463057.0": {
+    "/System/Library/Fonts/SFCompact.ttf||1890660:1777577597.0": {
       "family_name": ".SF Compact",
       "font-family": ".SF Compact",
       "font-stretch": "normal",
@@ -1225,7 +1225,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/SFCompactItalic.ttf||1022580:1775463057.0": {
+    "/System/Library/Fonts/SFCompactItalic.ttf||1022580:1777577597.0": {
       "family_name": ".SF Compact",
       "font-family": ".SF Compact",
       "font-stretch": "normal",
@@ -1261,7 +1261,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/SFCompactRounded.ttf||1086336:1775463057.0": {
+    "/System/Library/Fonts/SFCompactRounded.ttf||1086336:1777577597.0": {
       "family_name": ".SF Compact Rounded",
       "font-family": ".SF Compact Rounded",
       "font-stretch": "normal",
@@ -1297,7 +1297,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/SFGeorgian.ttf||96976:1775463057.0": {
+    "/System/Library/Fonts/SFGeorgian.ttf||96976:1777577597.0": {
       "family_name": ".SF Georgian",
       "font-family": ".SF Georgian",
       "font-stretch": "ultra-condensed",
@@ -1333,7 +1333,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/SFGeorgianRounded.ttf||64016:1775463057.0": {
+    "/System/Library/Fonts/SFGeorgianRounded.ttf||64016:1777577597.0": {
       "family_name": ".SF Georgian Rounded",
       "font-family": ".SF Georgian Rounded",
       "font-stretch": "ultra-condensed",
@@ -1369,7 +1369,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/SFHebrew.ttf||64604:1775463057.0": {
+    "/System/Library/Fonts/SFHebrew.ttf||64604:1777577597.0": {
       "family_name": ".SF Hebrew",
       "font-family": ".SF Hebrew",
       "font-stretch": "normal",
@@ -1405,7 +1405,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/SFHebrewRounded.ttf||57444:1775463057.0": {
+    "/System/Library/Fonts/SFHebrewRounded.ttf||57444:1777577597.0": {
       "family_name": ".SF Hebrew Rounded",
       "font-family": ".SF Hebrew Rounded",
       "font-stretch": "normal",
@@ -1441,7 +1441,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/SFNS.ttf||7909644:1775463057.0": {
+    "/System/Library/Fonts/SFNS.ttf||7909644:1777577597.0": {
       "family_name": "System Font",
       "font-family": "System Font",
       "font-stretch": "normal",
@@ -1477,7 +1477,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/SFNSItalic.ttf||1060364:1775463057.0": {
+    "/System/Library/Fonts/SFNSItalic.ttf||1060364:1777577597.0": {
       "family_name": "System Font",
       "font-family": "System Font",
       "font-stretch": "normal",
@@ -1513,7 +1513,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/SFNSMono.ttf||223892:1775463057.0": {
+    "/System/Library/Fonts/SFNSMono.ttf||223892:1777577597.0": {
       "family_name": ".SF NS Mono",
       "font-family": ".SF NS Mono",
       "font-stretch": "normal",
@@ -1549,7 +1549,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/SFNSMonoItalic.ttf||200956:1775463057.0": {
+    "/System/Library/Fonts/SFNSMonoItalic.ttf||200956:1777577597.0": {
       "family_name": ".SF NS Mono",
       "font-family": ".SF NS Mono",
       "font-stretch": "normal",
@@ -1585,7 +1585,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/SFNSRounded.ttf||1787592:1775463057.0": {
+    "/System/Library/Fonts/SFNSRounded.ttf||1787592:1777577597.0": {
       "family_name": ".SF NS Rounded",
       "font-family": ".SF NS Rounded",
       "font-stretch": "normal",
@@ -1621,7 +1621,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/Academy Engraved LET Fonts.ttf||109152:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/Academy Engraved LET Fonts.ttf||109152:1777577597.0": {
       "family_name": "Academy Engraved LET",
       "font-family": "Academy Engraved LET",
       "font-stretch": "normal",
@@ -1657,7 +1657,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/Andale Mono.ttf||109700:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/Andale Mono.ttf||109700:1777577597.0": {
       "family_name": "Andale Mono",
       "font-family": "Andale Mono",
       "font-stretch": "normal",
@@ -1693,7 +1693,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/Apple Chancery.ttf||336652:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/Apple Chancery.ttf||336652:1777577597.0": {
       "family_name": "Apple Chancery",
       "font-family": "Apple Chancery",
       "font-stretch": "normal",
@@ -1729,9 +1729,9 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/AppleGothic.ttf||15255648:1775463057.0": {},
-    "/System/Library/Fonts/Supplemental/AppleMyungjo.ttf||18760352:1775463057.0": {},
-    "/System/Library/Fonts/Supplemental/Arial Black.ttf||122556:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/AppleGothic.ttf||15255648:1777577597.0": {},
+    "/System/Library/Fonts/Supplemental/AppleMyungjo.ttf||18760352:1777577597.0": {},
+    "/System/Library/Fonts/Supplemental/Arial Black.ttf||122556:1777577597.0": {
       "family_name": "Arial Black",
       "font-family": "Arial Black",
       "font-stretch": "normal",
@@ -1767,7 +1767,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/Arial Bold Italic.ttf||558672:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/Arial Bold Italic.ttf||558672:1777577597.0": {
       "family_name": "Arial",
       "font-family": "Arial",
       "font-stretch": "normal",
@@ -1803,7 +1803,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/Arial Bold.ttf||750984:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/Arial Bold.ttf||750984:1777577597.0": {
       "family_name": "Arial",
       "font-family": "Arial",
       "font-stretch": "normal",
@@ -1839,7 +1839,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/Arial Italic.ttf||553284:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/Arial Italic.ttf||553284:1777577597.0": {
       "family_name": "Arial",
       "font-family": "Arial",
       "font-stretch": "normal",
@@ -1875,7 +1875,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/Arial Narrow Bold Italic.ttf||183932:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/Arial Narrow Bold Italic.ttf||183932:1777577597.0": {
       "family_name": "Arial Narrow",
       "font-family": "Arial Narrow",
       "font-stretch": "condensed",
@@ -1911,7 +1911,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/Arial Narrow Bold.ttf||184420:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/Arial Narrow Bold.ttf||184420:1777577597.0": {
       "family_name": "Arial Narrow",
       "font-family": "Arial Narrow",
       "font-stretch": "condensed",
@@ -1947,7 +1947,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/Arial Narrow Italic.ttf||184944:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/Arial Narrow Italic.ttf||184944:1777577597.0": {
       "family_name": "Arial Narrow",
       "font-family": "Arial Narrow",
       "font-stretch": "condensed",
@@ -1983,7 +1983,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/Arial Narrow.ttf||179492:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/Arial Narrow.ttf||179492:1777577597.0": {
       "family_name": "Arial Narrow",
       "font-family": "Arial Narrow",
       "font-stretch": "condensed",
@@ -2019,7 +2019,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/Arial Rounded Bold.ttf||49296:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/Arial Rounded Bold.ttf||49296:1777577597.0": {
       "family_name": "Arial Rounded MT Bold",
       "font-family": "Arial Rounded MT Bold",
       "font-stretch": "normal",
@@ -2055,7 +2055,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/Arial Unicode.ttf||23278008:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/Arial Unicode.ttf||23278008:1777577597.0": {
       "family_name": "Arial Unicode MS",
       "font-family": "Arial Unicode MS",
       "font-stretch": "normal",
@@ -2091,7 +2091,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/Arial.ttf||773236:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/Arial.ttf||773236:1777577597.0": {
       "family_name": "Arial",
       "font-family": "Arial",
       "font-stretch": "normal",
@@ -2127,7 +2127,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/Ayuthaya.ttf||307268:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/Ayuthaya.ttf||307268:1777577597.0": {
       "family_name": "Ayuthaya",
       "font-family": "Ayuthaya",
       "font-stretch": "normal",
@@ -2163,7 +2163,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/BigCaslon.ttf||223700:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/BigCaslon.ttf||223700:1777577597.0": {
       "family_name": "Big Caslon",
       "font-family": "Big Caslon",
       "font-stretch": "normal",
@@ -2199,7 +2199,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/Bodoni 72 Smallcaps Book.ttf||83128:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/Bodoni 72 Smallcaps Book.ttf||83128:1777577597.0": {
       "family_name": "Bodoni 72 Smallcaps",
       "font-family": "Bodoni 72 Smallcaps",
       "font-stretch": "normal",
@@ -2235,7 +2235,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/Bodoni Ornaments.ttf||73972:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/Bodoni Ornaments.ttf||73972:1777577597.0": {
       "family_name": "Bodoni Ornaments",
       "font-family": "Bodoni Ornaments",
       "font-stretch": "normal",
@@ -2271,7 +2271,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/Bradley Hand Bold.ttf||596736:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/Bradley Hand Bold.ttf||596736:1777577597.0": {
       "family_name": "Bradley Hand",
       "font-family": "Bradley Hand",
       "font-stretch": "normal",
@@ -2307,7 +2307,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/Brush Script.ttf||222640:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/Brush Script.ttf||222640:1777577597.0": {
       "family_name": "Brush Script MT",
       "font-family": "Brush Script MT",
       "font-stretch": "normal",
@@ -2343,7 +2343,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/Chalkduster.ttf||486880:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/Chalkduster.ttf||486880:1777577597.0": {
       "family_name": "Chalkduster",
       "font-family": "Chalkduster",
       "font-stretch": "normal",
@@ -2379,7 +2379,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/Comic Sans MS Bold.ttf||120120:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/Comic Sans MS Bold.ttf||120120:1777577597.0": {
       "family_name": "Comic Sans MS",
       "font-family": "Comic Sans MS",
       "font-stretch": "normal",
@@ -2415,7 +2415,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/Comic Sans MS.ttf||135484:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/Comic Sans MS.ttf||135484:1777577597.0": {
       "family_name": "Comic Sans MS",
       "font-family": "Comic Sans MS",
       "font-stretch": "normal",
@@ -2451,7 +2451,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/Courier New Bold Italic.ttf||506640:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/Courier New Bold Italic.ttf||506640:1777577597.0": {
       "family_name": "Courier New",
       "font-family": "Courier New",
       "font-stretch": "normal",
@@ -2487,7 +2487,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/Courier New Bold.ttf||691796:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/Courier New Bold.ttf||691796:1777577597.0": {
       "family_name": "Courier New",
       "font-family": "Courier New",
       "font-stretch": "normal",
@@ -2523,7 +2523,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/Courier New Italic.ttf||589900:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/Courier New Italic.ttf||589900:1777577597.0": {
       "family_name": "Courier New",
       "font-family": "Courier New",
       "font-stretch": "normal",
@@ -2559,7 +2559,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/Courier New.ttf||684624:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/Courier New.ttf||684624:1777577597.0": {
       "family_name": "Courier New",
       "font-family": "Courier New",
       "font-stretch": "normal",
@@ -2595,7 +2595,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/DIN Alternate Bold.ttf||152012:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/DIN Alternate Bold.ttf||152012:1777577597.0": {
       "family_name": "DIN Alternate",
       "font-family": "DIN Alternate",
       "font-stretch": "normal",
@@ -2631,7 +2631,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/DIN Condensed Bold.ttf||212040:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/DIN Condensed Bold.ttf||212040:1777577597.0": {
       "family_name": "DIN Condensed",
       "font-family": "DIN Condensed",
       "font-stretch": "condensed",
@@ -2667,7 +2667,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/Diwan Thuluth.ttf||1319880:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/Diwan Thuluth.ttf||1319880:1777577597.0": {
       "family_name": "Diwan Thuluth",
       "font-family": "Diwan Thuluth",
       "font-stretch": "normal",
@@ -2703,7 +2703,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/Farisi.ttf||281512:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/Farisi.ttf||281512:1777577597.0": {
       "family_name": "Farisi",
       "font-family": "Farisi",
       "font-stretch": "normal",
@@ -2739,7 +2739,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/Georgia Bold Italic.ttf||385768:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/Georgia Bold Italic.ttf||385768:1777577597.0": {
       "family_name": "Georgia",
       "font-family": "Georgia",
       "font-stretch": "normal",
@@ -2775,7 +2775,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/Georgia Bold.ttf||363800:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/Georgia Bold.ttf||363800:1777577597.0": {
       "family_name": "Georgia",
       "font-family": "Georgia",
       "font-stretch": "normal",
@@ -2811,7 +2811,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/Georgia Italic.ttf||400624:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/Georgia Italic.ttf||400624:1777577597.0": {
       "family_name": "Georgia",
       "font-family": "Georgia",
       "font-stretch": "normal",
@@ -2847,7 +2847,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/Georgia.ttf||379588:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/Georgia.ttf||379588:1777577597.0": {
       "family_name": "Georgia",
       "font-family": "Georgia",
       "font-stretch": "normal",
@@ -2883,7 +2883,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/Gurmukhi.ttf||65480:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/Gurmukhi.ttf||65480:1777577597.0": {
       "family_name": "Gurmukhi MT",
       "font-family": "Gurmukhi MT",
       "font-stretch": "normal",
@@ -2919,7 +2919,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/Herculanum.ttf||111468:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/Herculanum.ttf||111468:1777577597.0": {
       "family_name": "Herculanum",
       "font-family": "Herculanum",
       "font-stretch": "normal",
@@ -2955,7 +2955,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/Hoefler Text Ornaments.ttf||43380:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/Hoefler Text Ornaments.ttf||43380:1777577597.0": {
       "family_name": "Hoefler Text Ornaments",
       "font-family": "Hoefler Text Ornaments",
       "font-stretch": "normal",
@@ -2991,7 +2991,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/Impact.ttf||138488:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/Impact.ttf||138488:1777577597.0": {
       "family_name": "Impact",
       "font-family": "Impact",
       "font-stretch": "condensed",
@@ -3027,7 +3027,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/KefaIII.ttf||528520:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/KefaIII.ttf||528520:1777577597.0": {
       "family_name": "Kefa III",
       "font-family": "Kefa III",
       "font-stretch": "normal",
@@ -3063,7 +3063,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/Khmer Sangam MN.ttf||188048:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/Khmer Sangam MN.ttf||188048:1777577597.0": {
       "family_name": "Khmer Sangam MN",
       "font-family": "Khmer Sangam MN",
       "font-stretch": "normal",
@@ -3099,7 +3099,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/Kokonor.ttf||1081532:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/Kokonor.ttf||1081532:1777577597.0": {
       "family_name": "Kokonor",
       "font-family": "Kokonor",
       "font-stretch": "normal",
@@ -3135,7 +3135,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/Krungthep.ttf||190152:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/Krungthep.ttf||190152:1777577597.0": {
       "family_name": "Krungthep",
       "font-family": "Krungthep",
       "font-stretch": "normal",
@@ -3171,7 +3171,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/Lao Sangam MN.ttf||58092:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/Lao Sangam MN.ttf||58092:1777577597.0": {
       "family_name": "Lao Sangam MN",
       "font-family": "Lao Sangam MN",
       "font-stretch": "normal",
@@ -3207,7 +3207,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/Luminari.ttf||558352:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/Luminari.ttf||558352:1777577597.0": {
       "family_name": "Luminari",
       "font-family": "Luminari",
       "font-stretch": "normal",
@@ -3243,7 +3243,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/Microsoft Sans Serif.ttf||652248:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/Microsoft Sans Serif.ttf||652248:1777577597.0": {
       "family_name": "Microsoft Sans Serif",
       "font-family": "Microsoft Sans Serif",
       "font-stretch": "normal",
@@ -3279,7 +3279,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/Mishafi Gold.ttf||649384:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/Mishafi Gold.ttf||649384:1777577597.0": {
       "family_name": "Mishafi Gold",
       "font-family": "Mishafi Gold",
       "font-stretch": "normal",
@@ -3315,7 +3315,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/Mishafi.ttf||1426864:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/Mishafi.ttf||1426864:1777577597.0": {
       "family_name": "Mishafi",
       "font-family": "Mishafi",
       "font-stretch": "normal",
@@ -3351,7 +3351,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/NISC18030.ttf||7110352:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/NISC18030.ttf||7110352:1777577597.0": {
       "family_name": "GB18030 Bitmap",
       "font-family": "GB18030 Bitmap",
       "font-stretch": "normal",
@@ -3387,7 +3387,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/NotoSansAdlam-Regular.ttf||61236:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/NotoSansAdlam-Regular.ttf||61236:1777577597.0": {
       "family_name": "Noto Sans Adlam",
       "font-family": "Noto Sans Adlam",
       "font-stretch": "normal",
@@ -3423,7 +3423,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/NotoSansAvestan-Regular.ttf||12888:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/NotoSansAvestan-Regular.ttf||12888:1777577597.0": {
       "family_name": "Noto Sans Avestan",
       "font-family": "Noto Sans Avestan",
       "font-stretch": "normal",
@@ -3459,7 +3459,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/NotoSansBamum-Regular.ttf||148664:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/NotoSansBamum-Regular.ttf||148664:1777577597.0": {
       "family_name": "Noto Sans Bamum",
       "font-family": "Noto Sans Bamum",
       "font-stretch": "normal",
@@ -3495,7 +3495,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/NotoSansBassaVah-Regular.ttf||7740:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/NotoSansBassaVah-Regular.ttf||7740:1777577597.0": {
       "family_name": "Noto Sans Bassa Vah",
       "font-family": "Noto Sans Bassa Vah",
       "font-stretch": "normal",
@@ -3531,7 +3531,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/NotoSansBatak-Regular.ttf||22084:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/NotoSansBatak-Regular.ttf||22084:1777577597.0": {
       "family_name": "Noto Sans Batak",
       "font-family": "Noto Sans Batak",
       "font-stretch": "normal",
@@ -3567,7 +3567,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/NotoSansBhaiksuki-Regular.ttf||220044:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/NotoSansBhaiksuki-Regular.ttf||220044:1777577597.0": {
       "family_name": "Noto Sans Bhaiksuki",
       "font-family": "Noto Sans Bhaiksuki",
       "font-stretch": "normal",
@@ -3603,7 +3603,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/NotoSansBrahmi-Regular.ttf||39428:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/NotoSansBrahmi-Regular.ttf||39428:1777577597.0": {
       "family_name": "Noto Sans Brahmi",
       "font-family": "Noto Sans Brahmi",
       "font-stretch": "normal",
@@ -3639,7 +3639,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/NotoSansBuginese-Regular.ttf||7236:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/NotoSansBuginese-Regular.ttf||7236:1777577597.0": {
       "family_name": "Noto Sans Buginese",
       "font-family": "Noto Sans Buginese",
       "font-stretch": "normal",
@@ -3675,7 +3675,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/NotoSansBuhid-Regular.ttf||5612:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/NotoSansBuhid-Regular.ttf||5612:1777577597.0": {
       "family_name": "Noto Sans Buhid",
       "font-family": "Noto Sans Buhid",
       "font-stretch": "normal",
@@ -3711,7 +3711,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/NotoSansCanadianAboriginal-Regular.otf||41468:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/NotoSansCanadianAboriginal-Regular.otf||41468:1777577597.0": {
       "family_name": "Noto Sans CanAborig",
       "font-family": "Noto Sans CanAborig",
       "font-stretch": "normal",
@@ -3747,7 +3747,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/NotoSansCarian-Regular.ttf||6688:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/NotoSansCarian-Regular.ttf||6688:1777577597.0": {
       "family_name": "Noto Sans Carian",
       "font-family": "Noto Sans Carian",
       "font-stretch": "normal",
@@ -3783,7 +3783,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/NotoSansCaucasianAlbanian-Regular.ttf||26828:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/NotoSansCaucasianAlbanian-Regular.ttf||26828:1777577597.0": {
       "family_name": "Noto Sans CaucAlban",
       "font-family": "Noto Sans CaucAlban",
       "font-stretch": "normal",
@@ -3819,7 +3819,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/NotoSansChakma-Regular.ttf||41592:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/NotoSansChakma-Regular.ttf||41592:1777577597.0": {
       "family_name": "Noto Sans Chakma",
       "font-family": "Noto Sans Chakma",
       "font-stretch": "normal",
@@ -3855,7 +3855,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/NotoSansCham-Regular.ttf||30208:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/NotoSansCham-Regular.ttf||30208:1777577597.0": {
       "family_name": "Noto Sans Cham",
       "font-family": "Noto Sans Cham",
       "font-stretch": "normal",
@@ -3891,7 +3891,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/NotoSansCoptic-Regular.ttf||28084:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/NotoSansCoptic-Regular.ttf||28084:1777577597.0": {
       "family_name": "Noto Sans Coptic",
       "font-family": "Noto Sans Coptic",
       "font-stretch": "normal",
@@ -3927,7 +3927,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/NotoSansCuneiform-Regular.ttf||820316:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/NotoSansCuneiform-Regular.ttf||820316:1777577597.0": {
       "family_name": "Noto Sans Cuneiform",
       "font-family": "Noto Sans Cuneiform",
       "font-stretch": "normal",
@@ -3963,7 +3963,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/NotoSansCypriot-Regular.ttf||8332:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/NotoSansCypriot-Regular.ttf||8332:1777577597.0": {
       "family_name": "Noto Sans Cypriot",
       "font-family": "Noto Sans Cypriot",
       "font-stretch": "normal",
@@ -3999,7 +3999,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/NotoSansDuployan-Regular.ttf||18724:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/NotoSansDuployan-Regular.ttf||18724:1777577597.0": {
       "family_name": "Noto Sans Duployan",
       "font-family": "Noto Sans Duployan",
       "font-stretch": "normal",
@@ -4035,7 +4035,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/NotoSansEgyptianHieroglyphs-Regular.ttf||585444:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/NotoSansEgyptianHieroglyphs-Regular.ttf||585444:1777577597.0": {
       "family_name": "Noto Sans EgyptHiero",
       "font-family": "Noto Sans EgyptHiero",
       "font-stretch": "normal",
@@ -4071,7 +4071,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/NotoSansElbasan-Regular.ttf||11172:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/NotoSansElbasan-Regular.ttf||11172:1777577597.0": {
       "family_name": "Noto Sans Elbasan",
       "font-family": "Noto Sans Elbasan",
       "font-stretch": "normal",
@@ -4107,7 +4107,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/NotoSansGlagolitic-Regular.ttf||23264:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/NotoSansGlagolitic-Regular.ttf||23264:1777577597.0": {
       "family_name": "Noto Sans Glagolitic",
       "font-family": "Noto Sans Glagolitic",
       "font-stretch": "normal",
@@ -4143,7 +4143,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/NotoSansGothic-Regular.ttf||6152:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/NotoSansGothic-Regular.ttf||6152:1777577597.0": {
       "family_name": "Noto Sans Gothic",
       "font-family": "Noto Sans Gothic",
       "font-stretch": "normal",
@@ -4179,7 +4179,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/NotoSansGunjalaGondi-Regular.otf||32372:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/NotoSansGunjalaGondi-Regular.otf||32372:1777577597.0": {
       "family_name": "Noto Sans Gunjala Gondi",
       "font-family": "Noto Sans Gunjala Gondi",
       "font-stretch": "normal",
@@ -4215,7 +4215,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/NotoSansHanifiRohingya-Regular.ttf||19400:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/NotoSansHanifiRohingya-Regular.ttf||19400:1777577597.0": {
       "family_name": "Noto Sans HanifiRohg",
       "font-family": "Noto Sans HanifiRohg",
       "font-stretch": "normal",
@@ -4251,7 +4251,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/NotoSansHanunoo-Regular.ttf||7896:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/NotoSansHanunoo-Regular.ttf||7896:1777577597.0": {
       "family_name": "Noto Sans Hanunoo",
       "font-family": "Noto Sans Hanunoo",
       "font-stretch": "normal",
@@ -4287,7 +4287,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/NotoSansHatran-Regular.ttf||5020:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/NotoSansHatran-Regular.ttf||5020:1777577597.0": {
       "family_name": "Noto Sans Hatran",
       "font-family": "Noto Sans Hatran",
       "font-stretch": "normal",
@@ -4323,7 +4323,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/NotoSansImperialAramaic-Regular.ttf||6500:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/NotoSansImperialAramaic-Regular.ttf||6500:1777577597.0": {
       "family_name": "Noto Sans ImpAramaic",
       "font-family": "Noto Sans ImpAramaic",
       "font-stretch": "normal",
@@ -4359,7 +4359,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/NotoSansInscriptionalPahlavi-Regular.ttf||6032:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/NotoSansInscriptionalPahlavi-Regular.ttf||6032:1777577597.0": {
       "family_name": "Noto Sans InsPahlavi",
       "font-family": "Noto Sans InsPahlavi",
       "font-stretch": "normal",
@@ -4395,7 +4395,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/NotoSansInscriptionalParthian-Regular.ttf||7792:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/NotoSansInscriptionalParthian-Regular.ttf||7792:1777577597.0": {
       "family_name": "Noto Sans InsParthi",
       "font-family": "Noto Sans InsParthi",
       "font-stretch": "normal",
@@ -4431,7 +4431,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/NotoSansJavanese-Regular.otf||86944:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/NotoSansJavanese-Regular.otf||86944:1777577597.0": {
       "family_name": "Noto Sans Javanese",
       "font-family": "Noto Sans Javanese",
       "font-stretch": "normal",
@@ -4467,7 +4467,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/NotoSansKaithi-Regular.ttf||62716:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/NotoSansKaithi-Regular.ttf||62716:1777577597.0": {
       "family_name": "Noto Sans Kaithi",
       "font-family": "Noto Sans Kaithi",
       "font-stretch": "normal",
@@ -4503,7 +4503,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/NotoSansKayahLi-Regular.ttf||9464:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/NotoSansKayahLi-Regular.ttf||9464:1777577597.0": {
       "family_name": "Noto Sans Kayah Li",
       "font-family": "Noto Sans Kayah Li",
       "font-stretch": "normal",
@@ -4539,7 +4539,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/NotoSansKharoshthi-Regular.ttf||25388:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/NotoSansKharoshthi-Regular.ttf||25388:1777577597.0": {
       "family_name": "Noto Sans Kharoshthi",
       "font-family": "Noto Sans Kharoshthi",
       "font-stretch": "normal",
@@ -4575,7 +4575,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/NotoSansKhojki-Regular.ttf||42632:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/NotoSansKhojki-Regular.ttf||42632:1777577597.0": {
       "family_name": "Noto Sans Khojki",
       "font-family": "Noto Sans Khojki",
       "font-stretch": "normal",
@@ -4611,7 +4611,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/NotoSansKhudawadi-Regular.ttf||19032:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/NotoSansKhudawadi-Regular.ttf||19032:1777577597.0": {
       "family_name": "Noto Sans Khudawadi",
       "font-family": "Noto Sans Khudawadi",
       "font-stretch": "normal",
@@ -4647,7 +4647,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/NotoSansLepcha-Regular.ttf||24500:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/NotoSansLepcha-Regular.ttf||24500:1777577597.0": {
       "family_name": "Noto Sans Lepcha",
       "font-family": "Noto Sans Lepcha",
       "font-stretch": "normal",
@@ -4683,7 +4683,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/NotoSansLimbu-Regular.ttf||12912:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/NotoSansLimbu-Regular.ttf||12912:1777577597.0": {
       "family_name": "Noto Sans Limbu",
       "font-family": "Noto Sans Limbu",
       "font-stretch": "normal",
@@ -4719,7 +4719,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/NotoSansLinearA-Regular.ttf||58140:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/NotoSansLinearA-Regular.ttf||58140:1777577597.0": {
       "family_name": "Noto Sans Linear A",
       "font-family": "Noto Sans Linear A",
       "font-stretch": "normal",
@@ -4755,7 +4755,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/NotoSansLinearB-Regular.ttf||64828:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/NotoSansLinearB-Regular.ttf||64828:1777577597.0": {
       "family_name": "Noto Sans Linear B",
       "font-family": "Noto Sans Linear B",
       "font-stretch": "normal",
@@ -4791,7 +4791,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/NotoSansLisu-Regular.ttf||6516:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/NotoSansLisu-Regular.ttf||6516:1777577597.0": {
       "family_name": "Noto Sans Lisu",
       "font-family": "Noto Sans Lisu",
       "font-stretch": "normal",
@@ -4827,7 +4827,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/NotoSansLycian-Regular.ttf||4556:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/NotoSansLycian-Regular.ttf||4556:1777577597.0": {
       "family_name": "Noto Sans Lycian",
       "font-family": "Noto Sans Lycian",
       "font-stretch": "normal",
@@ -4863,7 +4863,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/NotoSansLydian-Regular.ttf||4592:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/NotoSansLydian-Regular.ttf||4592:1777577597.0": {
       "family_name": "Noto Sans Lydian",
       "font-family": "Noto Sans Lydian",
       "font-stretch": "normal",
@@ -4899,7 +4899,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/NotoSansMahajani-Regular.ttf||14144:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/NotoSansMahajani-Regular.ttf||14144:1777577597.0": {
       "family_name": "Noto Sans Mahajani",
       "font-family": "Noto Sans Mahajani",
       "font-stretch": "normal",
@@ -4935,7 +4935,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/NotoSansMandaic-Regular.ttf||18908:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/NotoSansMandaic-Regular.ttf||18908:1777577597.0": {
       "family_name": "Noto Sans Mandaic",
       "font-family": "Noto Sans Mandaic",
       "font-stretch": "normal",
@@ -4971,7 +4971,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/NotoSansManichaean-Regular.ttf||31448:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/NotoSansManichaean-Regular.ttf||31448:1777577597.0": {
       "family_name": "Noto Sans Manichaean",
       "font-family": "Noto Sans Manichaean",
       "font-stretch": "normal",
@@ -5007,7 +5007,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/NotoSansMarchen-Regular.ttf||125956:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/NotoSansMarchen-Regular.ttf||125956:1777577597.0": {
       "family_name": "Noto Sans Marchen",
       "font-family": "Noto Sans Marchen",
       "font-stretch": "normal",
@@ -5043,7 +5043,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/NotoSansMasaramGondi-Regular.otf||23052:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/NotoSansMasaramGondi-Regular.otf||23052:1777577597.0": {
       "family_name": "Noto Sans Masaram Gondi",
       "font-family": "Noto Sans Masaram Gondi",
       "font-stretch": "normal",
@@ -5079,7 +5079,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/NotoSansMeeteiMayek-Regular.ttf||16044:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/NotoSansMeeteiMayek-Regular.ttf||16044:1777577597.0": {
       "family_name": "Noto Sans MeeteiMayek",
       "font-family": "Noto Sans MeeteiMayek",
       "font-stretch": "normal",
@@ -5115,7 +5115,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/NotoSansMendeKikakui-Regular.ttf||35360:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/NotoSansMendeKikakui-Regular.ttf||35360:1777577597.0": {
       "family_name": "Noto Sans Mende Kikakui",
       "font-family": "Noto Sans Mende Kikakui",
       "font-stretch": "normal",
@@ -5151,7 +5151,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/NotoSansMeroitic-Regular.ttf||33644:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/NotoSansMeroitic-Regular.ttf||33644:1777577597.0": {
       "family_name": "Noto Sans Meroitic",
       "font-family": "Noto Sans Meroitic",
       "font-stretch": "normal",
@@ -5187,7 +5187,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/NotoSansMiao-Regular.ttf||36236:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/NotoSansMiao-Regular.ttf||36236:1777577597.0": {
       "family_name": "Noto Sans Miao",
       "font-family": "Noto Sans Miao",
       "font-stretch": "normal",
@@ -5223,7 +5223,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/NotoSansModi-Regular.ttf||42688:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/NotoSansModi-Regular.ttf||42688:1777577597.0": {
       "family_name": "Noto Sans Modi",
       "font-family": "Noto Sans Modi",
       "font-stretch": "normal",
@@ -5259,7 +5259,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/NotoSansMongolian-Regular.ttf||253932:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/NotoSansMongolian-Regular.ttf||253932:1777577597.0": {
       "family_name": "Noto Sans Mongolian",
       "font-family": "Noto Sans Mongolian",
       "font-stretch": "normal",
@@ -5295,7 +5295,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/NotoSansMro-Regular.ttf||6904:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/NotoSansMro-Regular.ttf||6904:1777577597.0": {
       "family_name": "Noto Sans Mro",
       "font-family": "Noto Sans Mro",
       "font-stretch": "normal",
@@ -5331,7 +5331,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/NotoSansMultani-Regular.ttf||9856:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/NotoSansMultani-Regular.ttf||9856:1777577597.0": {
       "family_name": "Noto Sans Multani",
       "font-family": "Noto Sans Multani",
       "font-stretch": "normal",
@@ -5367,7 +5367,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/NotoSansNKo-Regular.ttf||24608:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/NotoSansNKo-Regular.ttf||24608:1777577597.0": {
       "family_name": "Noto Sans NKo",
       "font-family": "Noto Sans NKo",
       "font-stretch": "normal",
@@ -5403,7 +5403,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/NotoSansNabataean-Regular.ttf||8400:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/NotoSansNabataean-Regular.ttf||8400:1777577597.0": {
       "family_name": "Noto Sans Nabataean",
       "font-family": "Noto Sans Nabataean",
       "font-stretch": "normal",
@@ -5439,7 +5439,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/NotoSansNagMundari-Regular.ttf||17152:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/NotoSansNagMundari-Regular.ttf||17152:1777577597.0": {
       "family_name": "Noto Sans Nag Mundari",
       "font-family": "Noto Sans Nag Mundari",
       "font-stretch": "normal",
@@ -5475,7 +5475,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/NotoSansNewTaiLue-Regular.ttf||17000:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/NotoSansNewTaiLue-Regular.ttf||17000:1777577597.0": {
       "family_name": "Noto Sans NewTaiLue",
       "font-family": "Noto Sans NewTaiLue",
       "font-stretch": "normal",
@@ -5511,7 +5511,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/NotoSansNewa-Regular.ttf||149024:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/NotoSansNewa-Regular.ttf||149024:1777577597.0": {
       "family_name": "Noto Sans Newa",
       "font-family": "Noto Sans Newa",
       "font-stretch": "normal",
@@ -5547,7 +5547,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/NotoSansOlChiki-Regular.ttf||8860:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/NotoSansOlChiki-Regular.ttf||8860:1777577597.0": {
       "family_name": "Noto Sans Ol Chiki",
       "font-family": "Noto Sans Ol Chiki",
       "font-stretch": "normal",
@@ -5583,7 +5583,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/NotoSansOldHungarian-Regular.ttf||54020:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/NotoSansOldHungarian-Regular.ttf||54020:1777577597.0": {
       "family_name": "Noto Sans OldHung",
       "font-family": "Noto Sans OldHung",
       "font-stretch": "normal",
@@ -5619,7 +5619,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/NotoSansOldItalic-Regular.ttf||7524:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/NotoSansOldItalic-Regular.ttf||7524:1777577597.0": {
       "family_name": "Noto Sans Old Italic",
       "font-family": "Noto Sans Old Italic",
       "font-stretch": "normal",
@@ -5655,7 +5655,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/NotoSansOldNorthArabian-Regular.ttf||7284:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/NotoSansOldNorthArabian-Regular.ttf||7284:1777577597.0": {
       "family_name": "Noto Sans OldNorArab",
       "font-family": "Noto Sans OldNorArab",
       "font-stretch": "normal",
@@ -5691,7 +5691,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/NotoSansOldPermic-Regular.ttf||9984:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/NotoSansOldPermic-Regular.ttf||9984:1777577597.0": {
       "family_name": "Noto Sans Old Permic",
       "font-family": "Noto Sans Old Permic",
       "font-stretch": "normal",
@@ -5727,7 +5727,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/NotoSansOldPersian-Regular.ttf||13180:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/NotoSansOldPersian-Regular.ttf||13180:1777577597.0": {
       "family_name": "Noto Sans OldPersian",
       "font-family": "Noto Sans OldPersian",
       "font-stretch": "normal",
@@ -5763,7 +5763,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/NotoSansOldSouthArabian-Regular.ttf||5232:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/NotoSansOldSouthArabian-Regular.ttf||5232:1777577597.0": {
       "family_name": "Noto Sans OldSouArab",
       "font-family": "Noto Sans OldSouArab",
       "font-stretch": "normal",
@@ -5799,7 +5799,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/NotoSansOldTurkic-Regular.ttf||8372:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/NotoSansOldTurkic-Regular.ttf||8372:1777577597.0": {
       "family_name": "Noto Sans Old Turkic",
       "font-family": "Noto Sans Old Turkic",
       "font-stretch": "normal",
@@ -5835,7 +5835,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/NotoSansOsage-Regular.ttf||12512:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/NotoSansOsage-Regular.ttf||12512:1777577597.0": {
       "family_name": "Noto Sans Osage",
       "font-family": "Noto Sans Osage",
       "font-stretch": "normal",
@@ -5871,7 +5871,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/NotoSansOsmanya-Regular.ttf||8604:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/NotoSansOsmanya-Regular.ttf||8604:1777577597.0": {
       "family_name": "Noto Sans Osmanya",
       "font-family": "Noto Sans Osmanya",
       "font-stretch": "normal",
@@ -5907,7 +5907,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/NotoSansPahawhHmong-Regular.ttf||18272:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/NotoSansPahawhHmong-Regular.ttf||18272:1777577597.0": {
       "family_name": "Noto Sans Pahawh Hmong",
       "font-family": "Noto Sans Pahawh Hmong",
       "font-stretch": "normal",
@@ -5943,7 +5943,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/NotoSansPalmyrene-Regular.ttf||15684:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/NotoSansPalmyrene-Regular.ttf||15684:1777577597.0": {
       "family_name": "Noto Sans Palmyrene",
       "font-family": "Noto Sans Palmyrene",
       "font-stretch": "normal",
@@ -5979,7 +5979,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/NotoSansPauCinHau-Regular.ttf||9816:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/NotoSansPauCinHau-Regular.ttf||9816:1777577597.0": {
       "family_name": "Noto Sans PauCinHau",
       "font-family": "Noto Sans PauCinHau",
       "font-stretch": "normal",
@@ -6015,7 +6015,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/NotoSansPhagsPa-Regular.ttf||34176:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/NotoSansPhagsPa-Regular.ttf||34176:1777577597.0": {
       "family_name": "Noto Sans PhagsPa",
       "font-family": "Noto Sans PhagsPa",
       "font-stretch": "normal",
@@ -6051,7 +6051,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/NotoSansPhoenician-Regular.ttf||6252:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/NotoSansPhoenician-Regular.ttf||6252:1777577597.0": {
       "family_name": "Noto Sans Phoenician",
       "font-family": "Noto Sans Phoenician",
       "font-stretch": "normal",
@@ -6087,7 +6087,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/NotoSansPsalterPahlavi-Regular.ttf||21676:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/NotoSansPsalterPahlavi-Regular.ttf||21676:1777577597.0": {
       "family_name": "Noto Sans PsaPahlavi",
       "font-family": "Noto Sans PsaPahlavi",
       "font-stretch": "normal",
@@ -6123,7 +6123,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/NotoSansRejang-Regular.ttf||7620:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/NotoSansRejang-Regular.ttf||7620:1777577597.0": {
       "family_name": "Noto Sans Rejang",
       "font-family": "Noto Sans Rejang",
       "font-stretch": "normal",
@@ -6159,7 +6159,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/NotoSansSamaritan-Regular.ttf||11164:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/NotoSansSamaritan-Regular.ttf||11164:1777577597.0": {
       "family_name": "Noto Sans Samaritan",
       "font-family": "Noto Sans Samaritan",
       "font-stretch": "normal",
@@ -6195,7 +6195,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/NotoSansSaurashtra-Regular.ttf||19792:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/NotoSansSaurashtra-Regular.ttf||19792:1777577597.0": {
       "family_name": "Noto Sans Saurashtra",
       "font-family": "Noto Sans Saurashtra",
       "font-stretch": "normal",
@@ -6231,7 +6231,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/NotoSansSharada-Regular.ttf||44108:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/NotoSansSharada-Regular.ttf||44108:1777577597.0": {
       "family_name": "Noto Sans Sharada",
       "font-family": "Noto Sans Sharada",
       "font-stretch": "normal",
@@ -6267,7 +6267,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/NotoSansSiddham-Regular.otf||94408:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/NotoSansSiddham-Regular.otf||94408:1777577597.0": {
       "family_name": "Noto Sans Siddham",
       "font-family": "Noto Sans Siddham",
       "font-stretch": "normal",
@@ -6303,7 +6303,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/NotoSansSoraSompeng-Regular.ttf||8108:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/NotoSansSoraSompeng-Regular.ttf||8108:1777577597.0": {
       "family_name": "Noto Sans SoraSomp",
       "font-family": "Noto Sans SoraSomp",
       "font-stretch": "normal",
@@ -6339,7 +6339,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/NotoSansSundanese-Regular.ttf||11512:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/NotoSansSundanese-Regular.ttf||11512:1777577597.0": {
       "family_name": "Noto Sans Sundanese",
       "font-family": "Noto Sans Sundanese",
       "font-stretch": "normal",
@@ -6375,7 +6375,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/NotoSansSylotiNagri-Regular.ttf||16576:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/NotoSansSylotiNagri-Regular.ttf||16576:1777577597.0": {
       "family_name": "Noto Sans Syloti Nagri",
       "font-family": "Noto Sans Syloti Nagri",
       "font-stretch": "normal",
@@ -6411,7 +6411,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/NotoSansSyriac-Regular.ttf||115268:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/NotoSansSyriac-Regular.ttf||115268:1777577597.0": {
       "family_name": "Noto Sans Syriac",
       "font-family": "Noto Sans Syriac",
       "font-stretch": "normal",
@@ -6447,7 +6447,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/NotoSansTagalog-Regular.ttf||7012:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/NotoSansTagalog-Regular.ttf||7012:1777577597.0": {
       "family_name": "Noto Sans Tagalog",
       "font-family": "Noto Sans Tagalog",
       "font-stretch": "normal",
@@ -6483,7 +6483,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/NotoSansTagbanwa-Regular.ttf||6648:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/NotoSansTagbanwa-Regular.ttf||6648:1777577597.0": {
       "family_name": "Noto Sans Tagbanwa",
       "font-family": "Noto Sans Tagbanwa",
       "font-stretch": "normal",
@@ -6519,7 +6519,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/NotoSansTaiLe-Regular.ttf||12072:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/NotoSansTaiLe-Regular.ttf||12072:1777577597.0": {
       "family_name": "Noto Sans Tai Le",
       "font-family": "Noto Sans Tai Le",
       "font-stretch": "normal",
@@ -6555,7 +6555,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/NotoSansTaiTham-Regular.ttf||51040:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/NotoSansTaiTham-Regular.ttf||51040:1777577597.0": {
       "family_name": "Noto Sans Tai Tham",
       "font-family": "Noto Sans Tai Tham",
       "font-stretch": "normal",
@@ -6591,7 +6591,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/NotoSansTaiViet-Regular.ttf||18220:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/NotoSansTaiViet-Regular.ttf||18220:1777577597.0": {
       "family_name": "Noto Sans Tai Viet",
       "font-family": "Noto Sans Tai Viet",
       "font-stretch": "normal",
@@ -6627,7 +6627,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/NotoSansTakri-Regular.ttf||16652:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/NotoSansTakri-Regular.ttf||16652:1777577597.0": {
       "family_name": "Noto Sans Takri",
       "font-family": "Noto Sans Takri",
       "font-stretch": "normal",
@@ -6663,7 +6663,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/NotoSansThaana-Regular.ttf||18792:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/NotoSansThaana-Regular.ttf||18792:1777577597.0": {
       "family_name": "Noto Sans Thaana",
       "font-family": "Noto Sans Thaana",
       "font-stretch": "normal",
@@ -6699,7 +6699,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/NotoSansTifinagh-Regular.otf||24956:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/NotoSansTifinagh-Regular.otf||24956:1777577597.0": {
       "family_name": "Noto Sans Tifinagh",
       "font-family": "Noto Sans Tifinagh",
       "font-stretch": "normal",
@@ -6735,7 +6735,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/NotoSansTirhuta-Regular.ttf||69944:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/NotoSansTirhuta-Regular.ttf||69944:1777577597.0": {
       "family_name": "Noto Sans Tirhuta",
       "font-family": "Noto Sans Tirhuta",
       "font-stretch": "normal",
@@ -6771,7 +6771,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/NotoSansUgaritic-Regular.ttf||7656:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/NotoSansUgaritic-Regular.ttf||7656:1777577597.0": {
       "family_name": "Noto Sans Ugaritic",
       "font-family": "Noto Sans Ugaritic",
       "font-stretch": "normal",
@@ -6807,7 +6807,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/NotoSansVai-Regular.ttf||57764:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/NotoSansVai-Regular.ttf||57764:1777577597.0": {
       "family_name": "Noto Sans Vai",
       "font-family": "Noto Sans Vai",
       "font-stretch": "normal",
@@ -6843,7 +6843,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/NotoSansWancho-Regular.ttf||17992:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/NotoSansWancho-Regular.ttf||17992:1777577597.0": {
       "family_name": "Noto Sans Wancho",
       "font-family": "Noto Sans Wancho",
       "font-stretch": "normal",
@@ -6879,7 +6879,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/NotoSansWarangCiti-Regular.ttf||25304:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/NotoSansWarangCiti-Regular.ttf||25304:1777577597.0": {
       "family_name": "Noto Sans WarangCiti",
       "font-family": "Noto Sans WarangCiti",
       "font-stretch": "normal",
@@ -6915,7 +6915,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/NotoSansYi-Regular.ttf||134064:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/NotoSansYi-Regular.ttf||134064:1777577597.0": {
       "family_name": "Noto Sans Yi",
       "font-family": "Noto Sans Yi",
       "font-stretch": "normal",
@@ -6951,7 +6951,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/NotoSerifAhom-Regular.ttf||19512:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/NotoSerifAhom-Regular.ttf||19512:1777577597.0": {
       "family_name": "Noto Serif Ahom",
       "font-family": "Noto Serif Ahom",
       "font-stretch": "normal",
@@ -6987,7 +6987,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/NotoSerifBalinese-Regular.ttf||51264:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/NotoSerifBalinese-Regular.ttf||51264:1777577597.0": {
       "family_name": "Noto Serif Balinese",
       "font-family": "Noto Serif Balinese",
       "font-stretch": "normal",
@@ -7023,7 +7023,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/NotoSerifNyiakengPuachueHmong-Regular.ttf||14888:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/NotoSerifNyiakengPuachueHmong-Regular.ttf||14888:1777577597.0": {
       "family_name": "Noto Serif Hmong Nyiakeng",
       "font-family": "Noto Serif Hmong Nyiakeng",
       "font-stretch": "normal",
@@ -7059,7 +7059,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/NotoSerifYezidi-Regular.otf||8664:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/NotoSerifYezidi-Regular.otf||8664:1777577597.0": {
       "family_name": "Noto Serif Yezidi",
       "font-family": "Noto Serif Yezidi",
       "font-stretch": "normal",
@@ -7095,7 +7095,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/PartyLET-plain.ttf||213112:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/PartyLET-plain.ttf||213112:1777577597.0": {
       "family_name": "Party LET",
       "font-family": "Party LET",
       "font-stretch": "normal",
@@ -7131,7 +7131,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/PlantagenetCherokee.ttf||75012:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/PlantagenetCherokee.ttf||75012:1777577597.0": {
       "family_name": "Plantagenet Cherokee",
       "font-family": "Plantagenet Cherokee",
       "font-stretch": "normal",
@@ -7167,7 +7167,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/STIXGeneral.otf||369156:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/STIXGeneral.otf||369156:1777577597.0": {
       "family_name": "STIXGeneral",
       "font-family": "STIXGeneral",
       "font-stretch": "normal",
@@ -7203,7 +7203,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/STIXGeneralBol.otf||186612:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/STIXGeneralBol.otf||186612:1777577597.0": {
       "family_name": "STIXGeneral",
       "font-family": "STIXGeneral",
       "font-stretch": "normal",
@@ -7239,7 +7239,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/STIXGeneralBolIta.otf||143764:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/STIXGeneralBolIta.otf||143764:1777577597.0": {
       "family_name": "STIXGeneral",
       "font-family": "STIXGeneral",
       "font-stretch": "normal",
@@ -7275,7 +7275,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/STIXGeneralItalic.otf||141844:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/STIXGeneralItalic.otf||141844:1777577597.0": {
       "family_name": "STIXGeneral",
       "font-family": "STIXGeneral",
       "font-stretch": "normal",
@@ -7311,7 +7311,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/STIXIntDBol.otf||16992:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/STIXIntDBol.otf||16992:1777577597.0": {
       "family_name": "STIXIntegralsD",
       "font-family": "STIXIntegralsD",
       "font-stretch": "normal",
@@ -7347,7 +7347,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/STIXIntDReg.otf||17500:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/STIXIntDReg.otf||17500:1777577597.0": {
       "family_name": "STIXIntegralsD",
       "font-family": "STIXIntegralsD",
       "font-stretch": "normal",
@@ -7383,7 +7383,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/STIXIntSmBol.otf||16608:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/STIXIntSmBol.otf||16608:1777577597.0": {
       "family_name": "STIXIntegralsSm",
       "font-family": "STIXIntegralsSm",
       "font-stretch": "normal",
@@ -7419,7 +7419,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/STIXIntSmReg.otf||17416:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/STIXIntSmReg.otf||17416:1777577597.0": {
       "family_name": "STIXIntegralsSm",
       "font-family": "STIXIntegralsSm",
       "font-stretch": "normal",
@@ -7455,7 +7455,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/STIXIntUpBol.otf||16576:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/STIXIntUpBol.otf||16576:1777577597.0": {
       "family_name": "STIXIntegralsUp",
       "font-family": "STIXIntegralsUp",
       "font-stretch": "normal",
@@ -7491,7 +7491,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/STIXIntUpDBol.otf||16932:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/STIXIntUpDBol.otf||16932:1777577597.0": {
       "family_name": "STIXIntegralsUpD",
       "font-family": "STIXIntegralsUpD",
       "font-stretch": "normal",
@@ -7527,7 +7527,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/STIXIntUpDReg.otf||16964:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/STIXIntUpDReg.otf||16964:1777577597.0": {
       "family_name": "STIXIntegralsUpD",
       "font-family": "STIXIntegralsUpD",
       "font-stretch": "normal",
@@ -7563,7 +7563,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/STIXIntUpReg.otf||16856:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/STIXIntUpReg.otf||16856:1777577597.0": {
       "family_name": "STIXIntegralsUp",
       "font-family": "STIXIntegralsUp",
       "font-stretch": "normal",
@@ -7599,7 +7599,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/STIXIntUpSmBol.otf||16916:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/STIXIntUpSmBol.otf||16916:1777577597.0": {
       "family_name": "STIXIntegralsUpSm",
       "font-family": "STIXIntegralsUpSm",
       "font-stretch": "normal",
@@ -7635,7 +7635,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/STIXIntUpSmReg.otf||17184:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/STIXIntUpSmReg.otf||17184:1777577597.0": {
       "family_name": "STIXIntegralsUpSm",
       "font-family": "STIXIntegralsUpSm",
       "font-stretch": "normal",
@@ -7671,7 +7671,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/STIXNonUni.otf||54556:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/STIXNonUni.otf||54556:1777577597.0": {
       "family_name": "STIXNonUnicode",
       "font-family": "STIXNonUnicode",
       "font-stretch": "normal",
@@ -7707,7 +7707,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/STIXNonUniBol.otf||25508:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/STIXNonUniBol.otf||25508:1777577597.0": {
       "family_name": "STIXNonUnicode",
       "font-family": "STIXNonUnicode",
       "font-stretch": "normal",
@@ -7743,7 +7743,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/STIXNonUniBolIta.otf||41188:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/STIXNonUniBolIta.otf||41188:1777577597.0": {
       "family_name": "STIXNonUnicode",
       "font-family": "STIXNonUnicode",
       "font-stretch": "normal",
@@ -7779,7 +7779,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/STIXNonUniIta.otf||46268:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/STIXNonUniIta.otf||46268:1777577597.0": {
       "family_name": "STIXNonUnicode",
       "font-family": "STIXNonUnicode",
       "font-stretch": "normal",
@@ -7815,7 +7815,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/STIXSizFiveSymReg.otf||13464:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/STIXSizFiveSymReg.otf||13464:1777577597.0": {
       "family_name": "STIXSizeFiveSym",
       "font-family": "STIXSizeFiveSym",
       "font-stretch": "normal",
@@ -7851,7 +7851,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/STIXSizFourSymBol.otf||12628:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/STIXSizFourSymBol.otf||12628:1777577597.0": {
       "family_name": "STIXSizeFourSym",
       "font-family": "STIXSizeFourSym",
       "font-stretch": "normal",
@@ -7887,7 +7887,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/STIXSizFourSymReg.otf||15656:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/STIXSizFourSymReg.otf||15656:1777577597.0": {
       "family_name": "STIXSizeFourSym",
       "font-family": "STIXSizeFourSym",
       "font-stretch": "normal",
@@ -7923,7 +7923,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/STIXSizOneSymBol.otf||12924:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/STIXSizOneSymBol.otf||12924:1777577597.0": {
       "family_name": "STIXSizeOneSym",
       "font-family": "STIXSizeOneSym",
       "font-stretch": "normal",
@@ -7959,7 +7959,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/STIXSizOneSymReg.otf||19004:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/STIXSizOneSymReg.otf||19004:1777577597.0": {
       "family_name": "STIXSizeOneSym",
       "font-family": "STIXSizeOneSym",
       "font-stretch": "normal",
@@ -7995,7 +7995,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/STIXSizThreeSymBol.otf||12636:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/STIXSizThreeSymBol.otf||12636:1777577597.0": {
       "family_name": "STIXSizeThreeSym",
       "font-family": "STIXSizeThreeSym",
       "font-stretch": "normal",
@@ -8031,7 +8031,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/STIXSizThreeSymReg.otf||15648:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/STIXSizThreeSymReg.otf||15648:1777577597.0": {
       "family_name": "STIXSizeThreeSym",
       "font-family": "STIXSizeThreeSym",
       "font-stretch": "normal",
@@ -8067,7 +8067,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/STIXSizTwoSymBol.otf||12576:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/STIXSizTwoSymBol.otf||12576:1777577597.0": {
       "family_name": "STIXSizeTwoSym",
       "font-family": "STIXSizeTwoSym",
       "font-stretch": "normal",
@@ -8103,7 +8103,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/STIXSizTwoSymReg.otf||15620:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/STIXSizTwoSymReg.otf||15620:1777577597.0": {
       "family_name": "STIXSizeTwoSym",
       "font-family": "STIXSizeTwoSym",
       "font-stretch": "normal",
@@ -8139,7 +8139,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/STIXTwoMath.otf||838652:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/STIXTwoMath.otf||838652:1777577597.0": {
       "family_name": "STIX Two Math",
       "font-family": "STIX Two Math",
       "font-stretch": "normal",
@@ -8175,7 +8175,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/STIXTwoText-Italic.ttf||454368:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/STIXTwoText-Italic.ttf||454368:1777577597.0": {
       "family_name": "STIX Two Text",
       "font-family": "STIX Two Text",
       "font-stretch": "normal",
@@ -8211,7 +8211,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/STIXTwoText.ttf||418956:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/STIXTwoText.ttf||418956:1777577597.0": {
       "family_name": "STIX Two Text",
       "font-family": "STIX Two Text",
       "font-stretch": "normal",
@@ -8247,7 +8247,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/STIXVar.otf||21776:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/STIXVar.otf||21776:1777577597.0": {
       "family_name": "STIXVariants",
       "font-family": "STIXVariants",
       "font-stretch": "normal",
@@ -8283,7 +8283,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/STIXVarBol.otf||14808:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/STIXVarBol.otf||14808:1777577597.0": {
       "family_name": "STIXVariants",
       "font-family": "STIXVariants",
       "font-stretch": "normal",
@@ -8319,7 +8319,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/Sathu.ttf||417676:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/Sathu.ttf||417676:1777577597.0": {
       "family_name": "Sathu",
       "font-family": "Sathu",
       "font-stretch": "normal",
@@ -8355,7 +8355,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/Silom.ttf||291508:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/Silom.ttf||291508:1777577597.0": {
       "family_name": "Silom",
       "font-family": "Silom",
       "font-stretch": "normal",
@@ -8391,7 +8391,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/Skia.ttf||489984:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/Skia.ttf||489984:1777577597.0": {
       "family_name": "Skia",
       "font-family": "Skia",
       "font-stretch": "normal",
@@ -8427,7 +8427,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/Tahoma Bold.ttf||626928:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/Tahoma Bold.ttf||626928:1777577597.0": {
       "family_name": "Tahoma",
       "font-family": "Tahoma",
       "font-stretch": "normal",
@@ -8463,7 +8463,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/Tahoma.ttf||681120:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/Tahoma.ttf||681120:1777577597.0": {
       "family_name": "Tahoma",
       "font-family": "Tahoma",
       "font-stretch": "normal",
@@ -8499,7 +8499,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/Times New Roman Bold Italic.ttf||620008:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/Times New Roman Bold Italic.ttf||620008:1777577597.0": {
       "family_name": "Times New Roman",
       "font-family": "Times New Roman",
       "font-stretch": "normal",
@@ -8535,7 +8535,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/Times New Roman Bold.ttf||832472:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/Times New Roman Bold.ttf||832472:1777577597.0": {
       "family_name": "Times New Roman",
       "font-family": "Times New Roman",
       "font-stretch": "normal",
@@ -8571,7 +8571,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/Times New Roman Italic.ttf||660268:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/Times New Roman Italic.ttf||660268:1777577597.0": {
       "family_name": "Times New Roman",
       "font-family": "Times New Roman",
       "font-stretch": "normal",
@@ -8607,7 +8607,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/Times New Roman.ttf||824920:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/Times New Roman.ttf||824920:1777577597.0": {
       "family_name": "Times New Roman",
       "font-family": "Times New Roman",
       "font-stretch": "normal",
@@ -8643,7 +8643,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/Trattatello.ttf||932624:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/Trattatello.ttf||932624:1777577597.0": {
       "family_name": "Trattatello",
       "font-family": "Trattatello",
       "font-stretch": "normal",
@@ -8679,7 +8679,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/Trebuchet MS Bold Italic.ttf||137008:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/Trebuchet MS Bold Italic.ttf||137008:1777577597.0": {
       "family_name": "Trebuchet MS",
       "font-family": "Trebuchet MS",
       "font-stretch": "normal",
@@ -8715,7 +8715,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/Trebuchet MS Bold.ttf||129360:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/Trebuchet MS Bold.ttf||129360:1777577597.0": {
       "family_name": "Trebuchet MS",
       "font-family": "Trebuchet MS",
       "font-stretch": "normal",
@@ -8751,7 +8751,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/Trebuchet MS Italic.ttf||144820:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/Trebuchet MS Italic.ttf||144820:1777577597.0": {
       "family_name": "Trebuchet MS",
       "font-family": "Trebuchet MS",
       "font-stretch": "normal",
@@ -8787,7 +8787,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/Trebuchet MS.ttf||138848:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/Trebuchet MS.ttf||138848:1777577597.0": {
       "family_name": "Trebuchet MS",
       "font-family": "Trebuchet MS",
       "font-stretch": "normal",
@@ -8823,7 +8823,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/Verdana Bold Italic.ttf||173132:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/Verdana Bold Italic.ttf||173132:1777577597.0": {
       "family_name": "Verdana",
       "font-family": "Verdana",
       "font-stretch": "normal",
@@ -8859,7 +8859,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/Verdana Bold.ttf||153260:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/Verdana Bold.ttf||153260:1777577597.0": {
       "family_name": "Verdana",
       "font-family": "Verdana",
       "font-stretch": "normal",
@@ -8895,7 +8895,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/Verdana Italic.ttf||174612:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/Verdana Italic.ttf||174612:1777577597.0": {
       "family_name": "Verdana",
       "font-family": "Verdana",
       "font-stretch": "normal",
@@ -8931,7 +8931,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/Verdana.ttf||186188:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/Verdana.ttf||186188:1777577597.0": {
       "family_name": "Verdana",
       "font-family": "Verdana",
       "font-stretch": "normal",
@@ -8967,7 +8967,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/Webdings.ttf||124308:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/Webdings.ttf||124308:1777577597.0": {
       "family_name": "Webdings",
       "font-family": "Webdings",
       "font-stretch": "normal",
@@ -9003,7 +9003,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/Wingdings 2.ttf||68768:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/Wingdings 2.ttf||68768:1777577597.0": {
       "family_name": "Wingdings 2",
       "font-family": "Wingdings 2",
       "font-stretch": "normal",
@@ -9039,7 +9039,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/Wingdings 3.ttf||38308:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/Wingdings 3.ttf||38308:1777577597.0": {
       "family_name": "Wingdings 3",
       "font-family": "Wingdings 3",
       "font-stretch": "normal",
@@ -9075,7 +9075,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/Wingdings.ttf||86384:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/Wingdings.ttf||86384:1777577597.0": {
       "family_name": "Wingdings",
       "font-family": "Wingdings",
       "font-stretch": "normal",
@@ -9111,7 +9111,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Supplemental/Zapfino.ttf||403308:1775463057.0": {
+    "/System/Library/Fonts/Supplemental/Zapfino.ttf||403308:1777577597.0": {
       "family_name": "Zapfino",
       "font-family": "Zapfino",
       "font-stretch": "normal",
@@ -9147,7 +9147,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/Symbol.ttf||80016:1775463057.0": {
+    "/System/Library/Fonts/Symbol.ttf||80016:1777577597.0": {
       "family_name": "Symbol",
       "font-family": "Symbol",
       "font-stretch": "normal",
@@ -9183,7 +9183,7 @@
       "wws_family_name": null,
       "wws_subfamily_name": null
     },
-    "/System/Library/Fonts/ZapfDingbats.ttf||156088:1775463057.0": {
+    "/System/Library/Fonts/ZapfDingbats.ttf||156088:1777577597.0": {
       "family_name": "Zapf Dingbats",
       "font-family": "Zapf Dingbats",
       "font-stretch": "normal",

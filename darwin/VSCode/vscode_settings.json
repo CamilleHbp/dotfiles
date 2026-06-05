@@ -424,5 +424,6 @@
     "~/.copilot/hooks": true,
     "~/.claude/settings.json": true,
     "~/.agents/hooks": true
-  }
+  },
+  "chat.useClaudeHooks": true
 }

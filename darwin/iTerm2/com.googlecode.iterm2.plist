@@ -1081,7 +1081,7 @@
 	<key>Default Bookmark Guid</key>
 	<string>21273C72-18AE-492F-BCB8-F3B33DD65EC6</string>
 	<key>Default Browser Profile Guid</key>
-	<string>E4F06F2D-FF7A-4C21-8A71-BDDE988D209F</string>
+	<string>3A8ED418-1AA0-4DCE-8D40-2CDC74DCB57B</string>
 	<key>HapticFeedbackForEsc</key>
 	<false/>
 	<key>HideTab</key>
@@ -1620,6 +1620,8 @@
 	<false/>
 	<key>OpenNoWindowsAtStartup</key>
 	<true/>
+	<key>PasteTabToStringTabStopSize</key>
+	<integer>4</integer>
 	<key>PointerActions</key>
 	<dict>
 		<key>Button,1,1,,</key>

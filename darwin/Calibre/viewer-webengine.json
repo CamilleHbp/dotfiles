@@ -133,6 +133,15 @@
     "standalone_recently_opened": [
       {
         "authors": [
+          "noeridge"
+        ],
+        "key": "/Users/camille/Documents/eBooks/Calibre/noeridge/Diary of the Demonic Usurper (3825)/Diary of the Demonic Usurper - noeridge.epub",
+        "pathtoebook": "/Users/camille/Documents/eBooks/Calibre/noeridge/Diary of the Demonic Usurper (3825)/Diary of the Demonic Usurper - noeridge.epub",
+        "timestamp": "2026-05-26T15:36:09.227Z",
+        "title": "Diary of the Demonic Usurper"
+      },
+      {
+        "authors": [
           "archaingel"
         ],
         "key": "/Users/camille/Documents/eBooks/Calibre/archaingel/Abyssal Admiral Quest_ Love Conquers All_ (3833)/Abyssal Admiral Quest_ Love Conquers All_ - archaingel.epub",
@@ -298,12 +307,6 @@
         "pathtoebook": "/Users/camille/Downloads/Comics/Astonishing X-Men v3 (001 - 068) (complete)/Astonishing X-Men 002 (2004) (Megan-Empire).cbr",
         "timestamp": "2026-01-08T19:49:32.105Z",
         "title": "Astonishing X-Men 002 (2004) (Megan-Empire)"
-      },
-      {
-        "key": "/Users/camille/Downloads/Comics/Astonishing X-Men v3 (001 - 068) (complete)/Astonishing X-Men 001 (2004) (Megan-Empire).cbr",
-        "pathtoebook": "/Users/camille/Downloads/Comics/Astonishing X-Men v3 (001 - 068) (complete)/Astonishing X-Men 001 (2004) (Megan-Empire).cbr",
-        "timestamp": "2026-01-08T19:49:25.342Z",
-        "title": "Astonishing X-Men 001 (2004) (Megan-Empire)"
       }
     ],
     "user_color_schemes": {

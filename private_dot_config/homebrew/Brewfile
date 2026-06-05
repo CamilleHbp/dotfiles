@@ -15,12 +15,12 @@ tap "stripe/stripe-cli"
 tap "timescam/tap"
 # Run your GitHub Actions locally
 brew "act"
-# General-purpose data compression with high compression ratio
-brew "xz"
 # GitOps Continuous Delivery for Kubernetes
 brew "argocd"
 # Download with resuming and segmented downloading
 brew "aria2"
+# General-purpose data compression with high compression ratio
+brew "xz"
 # Interpreted, interactive, object-oriented programming language
 brew "python@3.13"
 # Microsoft Azure CLI 2.0
@@ -147,6 +147,8 @@ cask "alfred"
 cask "android-platform-tools"
 # Tools for building Android applications
 cask "android-studio"
+# Allows connection to a computer remotely
+cask "anydesk"
 # Private desktop AI chat application
 cask "anythingllm"
 # Local-first and end-to-end encrypted notes app
@@ -163,10 +165,16 @@ cask "calibre"
 cask "canva"
 # OpenAI's official ChatGPT desktop app
 cask "chatgpt"
+# Anthropic's official Claude AI desktop app
+cask "claude"
 # Screen capturing tool
 cask "cleanshot"
 # OpenAI's coding agent that runs in your terminal
 cask "codex"
+# OpenAI's Codex desktop app for managing coding agents
+cask "codex-app"
+# Menu bar usage monitor for Codex and Claude
+cask "codexbar"
 # Node-based image, video and audio generator
 cask "comfyui"
 # Brings the power of Copilot coding agent directly to your terminal
@@ -177,6 +185,10 @@ cask "crossover"
 cask "dbeaver-community"
 # App to build and share containerised applications and microservices
 cask "docker-desktop"
+# Developer platform
+cask "dotnet-sdk"
+# Developer platform
+cask "dotnet-sdk@8"
 # Online diagram software
 cask "drawio"
 # UI toolkit for building applications for mobile, web and desktop
@@ -283,6 +295,8 @@ cask "macfuse"
 cask "microsoft-edge"
 # Minecraft modding platform
 cask "modrinth"
+# AI platform with local and online models
+cask "mstystudio"
 # Desktop sync client for Nextcloud software products
 cask "nextcloud"
 # App to write, plan, collaborate, and get organised
@@ -297,8 +311,6 @@ cask "orion"
 cask "path-finder"
 # Client for the pCloud virtual cloud storage service
 cask "lyraphase/pcloud/pcloud-drive"
-# Full-screen slideshow program
-cask "phoenix-slides"
 # YouTube player focusing on privacy
 cask "pikachuexe/freetube/pikachuexe-freetube"
 # Minecraft launcher
@@ -327,6 +339,8 @@ cask "tidal"
 cask "tiled"
 # To-do list
 cask "todoist-app"
+# Markdown knowledgebase manager
+cask "tolaria"
 # Adaptive AI IDE
 cask "trae"
 # Multimedia player
@@ -338,6 +352,7 @@ vscode "artdiniz.quitcontrol-vscode"
 vscode "astro-build.astro-vscode"
 vscode "bierner.markdown-mermaid"
 vscode "biomejs.biome"
+vscode "bokuweb.vscode-ripgrep"
 vscode "charliermarsh.ruff"
 vscode "cweijan.vscode-database-client2"
 vscode "dart-code.dart-code"
@@ -351,6 +366,7 @@ vscode "foxundermoon.shell-format"
 vscode "github.vscode-github-actions"
 vscode "github.vscode-pull-request-github"
 vscode "gruntfuggly.todo-tree"
+vscode "highagency.pencildev"
 vscode "inferrinizzard.prettier-sql-vscode"
 vscode "jcassio-dev.prisma-summary"
 vscode "kavish.hex-to-hsl"
@@ -395,5 +411,4 @@ vscode "yrm.type-challenges"
 vscode "yzhang.markdown-all-in-one"
 vscode "zengxingxin.sort-js-object-keys"
 go "github.com/tmedwards/tweego"
-cargo "trunk"
-cargo "wasm-bindgen-cli"
+npm "corepack"
