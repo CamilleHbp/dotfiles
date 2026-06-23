@@ -133,6 +133,24 @@
     "standalone_recently_opened": [
       {
         "authors": [
+          "Mike Shackle"
+        ],
+        "key": "/Users/camille/Documents/eBooks/Calibre/Mike Shackle/We Are the Dead (3878)/We Are the Dead - Mike Shackle.epub",
+        "pathtoebook": "/Users/camille/Documents/eBooks/Calibre/Mike Shackle/We Are the Dead (3878)/We Are the Dead - Mike Shackle.epub",
+        "timestamp": "2026-06-20T12:07:46.376Z",
+        "title": "We Are the Dead"
+      },
+      {
+        "authors": [
+          "Pierce Grey"
+        ],
+        "key": "/Users/camille/Documents/eBooks/Calibre/Pierce Grey/The First Great Game (3845)/The First Great Game - Pierce Grey.epub",
+        "pathtoebook": "/Users/camille/Documents/eBooks/Calibre/Pierce Grey/The First Great Game (3845)/The First Great Game - Pierce Grey.epub",
+        "timestamp": "2026-06-19T06:07:42.540Z",
+        "title": "The First Great Game: A LitRPG/Harem sci-fantasy series"
+      },
+      {
+        "authors": [
           "noeridge"
         ],
         "key": "/Users/camille/Documents/eBooks/Calibre/noeridge/Diary of the Demonic Usurper (3825)/Diary of the Demonic Usurper - noeridge.epub",
@@ -295,18 +313,6 @@
         "pathtoebook": "/Users/camille/HomeServer/data/downloads/complete/Astonishing X-Men 027 (2008) (Minutemen-SaintsAngels)/Astonishing X-Men 027 (2008) (Minutemen-SaintsAngels).cbr",
         "timestamp": "2026-01-08T20:01:17.690Z",
         "title": "Astonishing X-Men 027 (2008) (Minutemen-SaintsAngels)"
-      },
-      {
-        "key": "/Users/camille/Downloads/Comics/Astonishing X-Men v3 (001 - 068) (complete)/Astonishing X-Men 003 (2004) (Megan-Empire).cbr",
-        "pathtoebook": "/Users/camille/Downloads/Comics/Astonishing X-Men v3 (001 - 068) (complete)/Astonishing X-Men 003 (2004) (Megan-Empire).cbr",
-        "timestamp": "2026-01-08T19:49:36.635Z",
-        "title": "Astonishing X-Men 003 (2004) (Megan-Empire)"
-      },
-      {
-        "key": "/Users/camille/Downloads/Comics/Astonishing X-Men v3 (001 - 068) (complete)/Astonishing X-Men 002 (2004) (Megan-Empire).cbr",
-        "pathtoebook": "/Users/camille/Downloads/Comics/Astonishing X-Men v3 (001 - 068) (complete)/Astonishing X-Men 002 (2004) (Megan-Empire).cbr",
-        "timestamp": "2026-01-08T19:49:32.105Z",
-        "title": "Astonishing X-Men 002 (2004) (Megan-Empire)"
       }
     ],
     "user_color_schemes": {
