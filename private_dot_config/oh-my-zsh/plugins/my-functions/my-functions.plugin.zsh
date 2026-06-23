@@ -178,7 +178,8 @@ function headroom_upgrade_restart() {
   local port="${HEADROOM_PORT:-8787}"
   local repo="${HEADROOM_REPO:-/Users/camille/Dev/Personal/headroom}"
   local extras="${HEADROOM_EXTRAS:-proxy}"
-  local health_timeout="${HEADROOM_HEALTH_TIMEOUT:-30}"
+  local health_timeout="${HEADROOM_HEALTH_TIMEOUT:-90}"
+  local health_retry_timeout="${HEADROOM_HEALTH_RETRY_TIMEOUT:-120}"
   local health_url="${HEADROOM_HEALTH_URL:-http://127.0.0.1:${port}/readyz}"
   local log_file="${HEADROOM_WORKSPACE_DIR:-$HOME/.headroom}/deploy/${profile}/runner.log"
   local uid plist label
@@ -194,6 +195,10 @@ function headroom_upgrade_restart() {
   print "==> Installing Headroom tool binaries"
   headroom tools install || return $?
 
+  uid=$(id -u)
+  label="com.headroom.${profile}"
+  plist="$HOME/Library/LaunchAgents/${label}.plist"
+
   print "==> Restarting Headroom deployment '$profile'"
   if ! headroom install restart --profile "$profile"; then
     local -a pids
@@ -207,25 +212,55 @@ function headroom_upgrade_restart() {
       fi
     done
 
-    uid=$(id -u)
-    label="com.headroom.${profile}"
-    plist="$HOME/Library/LaunchAgents/${label}.plist"
     if [[ ! -f "$plist" ]]; then
       print -u2 "LaunchAgent not found: $plist"
       print -u2 "Try: headroom install apply --preset persistent-service --profile $profile"
       return 1
     fi
-    launchctl bootout "gui/${uid}/${label}" >/dev/null 2>&1 || true
-    launchctl bootstrap "gui/${uid}" "$plist"
-    launchctl kickstart -k "gui/${uid}/${label}" 2>/dev/null || true
+    _headroom_reload_launchagent "$uid" "$label" "$plist" || return $?
+  fi
+
+  # Some launchctl paths return success while the service is not actually loaded yet.
+  if ! _headroom_launchagent_loaded "$uid" "$label"; then
+    if [[ ! -f "$plist" ]]; then
+      print -u2 "LaunchAgent not found: $plist"
+      print -u2 "Try: headroom install apply --preset persistent-service --profile $profile"
+      return 1
+    fi
+    print "==> LaunchAgent not loaded; reloading ${label}"
+    _headroom_reload_launchagent "$uid" "$label" "$plist" || return $?
   fi
 
   print "==> Active Headroom version"
   headroom --version || return $?
-  _headroom_wait_healthy "$health_url" "$health_timeout" "$log_file" || return $?
+  if ! _headroom_wait_healthy "$health_url" "$health_timeout" "$log_file"; then
+    print "==> Initial health wait timed out; forcing one kickstart and retrying"
+    launchctl kickstart -k "gui/${uid}/${label}" >/dev/null 2>&1 || true
+    _headroom_wait_healthy "$health_url" "$health_retry_timeout" "$log_file" || return $?
+  fi
 
   print "==> Deployment status"
   headroom install status --profile "$profile"
+}
+
+function _headroom_launchagent_loaded() {
+  emulate -L zsh
+
+  local uid="$1"
+  local label="$2"
+  launchctl print "gui/${uid}/${label}" >/dev/null 2>&1
+}
+
+function _headroom_reload_launchagent() {
+  emulate -L zsh
+
+  local uid="$1"
+  local label="$2"
+  local plist="$3"
+
+  launchctl bootout "gui/${uid}/${label}" >/dev/null 2>&1 || true
+  launchctl bootstrap "gui/${uid}" "$plist" || return $?
+  launchctl kickstart -k "gui/${uid}/${label}" >/dev/null 2>&1 || true
 }
 
 # Stop and remove a persistent Headroom deployment without reinstalling anything.

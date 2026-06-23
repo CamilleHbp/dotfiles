@@ -15,6 +15,9 @@ alias vim=nvim
 alias dev='cd ~/Dev/Personal'
 alias retro='dev && cd retro-music-player'
 alias fiction='dev && cd fiction-live-search'
+alias questforge='dev && cd questforge'
+alias questforge-core='questforge && cd ./questforge-core'
+alias questforge-web='questforge && cd ./questforge-web'
 
 # -------------------------------- AI project -------------------------------- #
 alias ai="dev && cd ai"
