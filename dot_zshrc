@@ -140,6 +140,7 @@ eval "$(scw autocomplete script shell=zsh)"
 fpath+=~/.zfunc; autoload -Uz compinit; compinit
 
 # --------------------------------- Headroom --------------------------------- #
+
 # >>> headroom persistent env >>>
 export HEADROOM_PORT="8787"
 export HEADROOM_HOST="127.0.0.1"
