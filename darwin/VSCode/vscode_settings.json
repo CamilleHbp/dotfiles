@@ -425,5 +425,13 @@
     "~/.claude/settings.json": true,
     "~/.agents/hooks": true
   },
-  "chat.useClaudeHooks": true
+  "chat.useClaudeHooks": true,
+  "yaml.disableSchemaDetection": [
+    "**/.github/workflows/*.yml",
+    "**/.github/workflows/*.yaml",
+    "**/.gitea/workflows/*.yml",
+    "**/.gitea/workflows/*.yaml",
+    "**/.forgejo/workflows/*.yml",
+    "**/.forgejo/workflows/*.yaml"
+  ]
 }
