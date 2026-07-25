@@ -17,9 +17,9 @@
 	<key>AIVectorStore</key>
 	<integer>0</integer>
 	<key>AiMaxTokens</key>
-	<integer>400000</integer>
+	<integer>1050000</integer>
 	<key>AiModel</key>
-	<string>gpt-5.2</string>
+	<string>gpt-5.5</string>
 	<key>AiResponseMaxTokens</key>
 	<integer>128000</integer>
 	<key>AitermURL</key>
@@ -1081,7 +1081,7 @@
 	<key>Default Bookmark Guid</key>
 	<string>21273C72-18AE-492F-BCB8-F3B33DD65EC6</string>
 	<key>Default Browser Profile Guid</key>
-	<string>0F87BB73-4A6F-4E42-90AE-D0E980F110FD</string>
+	<string>B1F604AD-2C27-4ACC-8473-5536A8101B6B</string>
 	<key>HapticFeedbackForEsc</key>
 	<false/>
 	<key>HideTab</key>
@@ -1451,16 +1451,6 @@
 					<string>`</string>
 					<key>keyCode</key>
 					<integer>50</integer>
-					<key>modifiers</key>
-					<integer>1048576</integer>
-				</dict>
-				<dict>
-					<key>characters</key>
-					<string></string>
-					<key>charactersIgnoringModifiers</key>
-					<string></string>
-					<key>keyCode</key>
-					<integer>53</integer>
 					<key>modifiers</key>
 					<integer>1048576</integer>
 				</dict>
