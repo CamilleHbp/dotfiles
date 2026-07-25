@@ -133,6 +133,15 @@
     "standalone_recently_opened": [
       {
         "authors": [
+          "Pierce Grey"
+        ],
+        "key": "/Users/camille/Documents/eBooks/Calibre/Pierce Grey/The First Great Game - Book Seven (3856)/The First Great Game - Book Seven - Pierce Grey.epub",
+        "pathtoebook": "/Users/camille/Documents/eBooks/Calibre/Pierce Grey/The First Great Game - Book Seven (3856)/The First Great Game - Book Seven - Pierce Grey.epub",
+        "timestamp": "2026-06-29T13:30:23.199Z",
+        "title": "The First Great Game (Book seven) - A LitRPG/Harem sci-fantasy series"
+      },
+      {
+        "authors": [
           "Mike Shackle"
         ],
         "key": "/Users/camille/Documents/eBooks/Calibre/Mike Shackle/We Are the Dead (3878)/We Are the Dead - Mike Shackle.epub",
@@ -307,12 +316,6 @@
         "pathtoebook": "/Users/camille/HomeServer/data/downloads/complete/Astonishing X-Men 052 (2012) (Digital) (Zone-Empire)/Astonishing X-Men 052 (2012) (Digital) (Zone-Empire).cbr",
         "timestamp": "2026-01-09T06:58:48.139Z",
         "title": "Astonishing X-Men 052 (2012) (Digital) (Zone-Empire)"
-      },
-      {
-        "key": "/Users/camille/HomeServer/data/downloads/complete/Astonishing X-Men 027 (2008) (Minutemen-SaintsAngels)/Astonishing X-Men 027 (2008) (Minutemen-SaintsAngels).cbr",
-        "pathtoebook": "/Users/camille/HomeServer/data/downloads/complete/Astonishing X-Men 027 (2008) (Minutemen-SaintsAngels)/Astonishing X-Men 027 (2008) (Minutemen-SaintsAngels).cbr",
-        "timestamp": "2026-01-08T20:01:17.690Z",
-        "title": "Astonishing X-Men 027 (2008) (Minutemen-SaintsAngels)"
       }
     ],
     "user_color_schemes": {
