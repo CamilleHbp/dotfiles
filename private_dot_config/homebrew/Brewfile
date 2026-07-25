@@ -7,7 +7,6 @@ tap "dotenv-org/brew", trusted: true
 tap "edgee-ai/tap", trusted: true
 tap "gromgit/fuse", trusted: true
 tap "infisical/get-cli", trusted: true
-tap "localsend/localsend", trusted: true
 tap "lyraphase/pcloud", trusted: true
 tap "oven-sh/bun", trusted: true
 tap "pikachuexe/freetube", trusted: true
@@ -16,14 +15,14 @@ tap "stripe/stripe-cli", trusted: true
 tap "timescam/tap", trusted: true
 # Run your GitHub Actions locally
 brew "act"
+# Mozilla CA certificate store
+brew "ca-certificates"
 # GitOps Continuous Delivery for Kubernetes
 brew "argocd"
 # Download with resuming and segmented downloading
 brew "aria2"
 # General-purpose data compression with high compression ratio
 brew "xz"
-# Interpreted, interactive, object-oriented programming language
-brew "python@3.13"
 # Microsoft Azure CLI 2.0
 brew "azure-cli"
 # B2 Cloud Storage Command-Line Tools
@@ -32,6 +31,8 @@ brew "b2-tools"
 brew "biome"
 # Tuned OpenCL BLAS library
 brew "clblast"
+# Get a file from an HTTP, HTTPS or FTP server
+brew "curl"
 # Good-lookin' diffs with diff-highlight and more
 brew "diff-so-fancy"
 # Lightweight DNS forwarder and DHCP server
@@ -42,12 +43,16 @@ brew "exercism"
 brew "ffmpeg"
 # Command-line fuzzy finder written in Go
 brew "fzf"
+# GNU compiler collection
+brew "gcc"
 # GitHub command-line tool
 brew "gh"
 # Interpreter for PostScript and PDF
 brew "ghostscript"
 # Distributed revision control system
 brew "git"
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.13"
 # Quickly rewrite git repository history
 brew "git-filter-repo"
 # Git extension for versioning large files
@@ -71,6 +76,8 @@ brew "helm"
 # Client library for huggingface.co hub
 brew "hf"
 # C/C++ and Java libraries for Unicode and globalization
+brew "icu4c@76"
+# C/C++ and Java libraries for Unicode and globalization
 brew "icu4c@77"
 # Tools and libraries to manipulate images in select formats
 brew "imagemagick"
@@ -84,6 +91,8 @@ brew "kubernetes-cli"
 brew "libpq", link: true
 # Library for storing/retrieving passwords and other secrets
 brew "libsecret"
+# GNOME XML library
+brew "libxml2"
 # Replacement for ls, cp and other commands for object storage
 brew "minio-mc"
 # NCurses Disk Usage
@@ -108,6 +117,10 @@ brew "python@3.12"
 brew "ripgrep"
 # CLI proxy to minimize LLM token consumption
 brew "rtk"
+# Tool for downloading RTMP streaming media
+brew "rtmpdump"
+# Safe, concurrent, practical language
+brew "rust"
 # Rust toolchain installer
 brew "rustup"
 # Command-line Interface for Scaleway
@@ -146,8 +159,6 @@ cask "affinity"
 cask "alfred"
 # Android SDK component
 cask "android-platform-tools"
-# Tools for building Android applications
-cask "android-studio"
 # Allows connection to a computer remotely
 cask "anydesk"
 # Private desktop AI chat application
@@ -156,6 +167,8 @@ cask "anythingllm"
 cask "anytype"
 # Application uninstaller
 cask "appcleaner"
+# Web browser focusing on privacy
+cask "brave-browser"
 # Bittorrent client
 cask "c0re100-qbittorrent"
 # E-books management software
@@ -190,6 +203,8 @@ cask "dotnet-sdk"
 cask "dotnet-sdk@8"
 # Online diagram software
 cask "drawio"
+# Collaborative team software
+cask "figma"
 # UI toolkit for building applications for mobile, web and desktop
 cask "flutter"
 # Screen colour temperature controller
@@ -276,16 +291,14 @@ cask "iterm2"
 cask "jdownloader"
 # Keyboard customiser
 cask "karabiner-elements"
-# Open-source epub reader
-cask "koodo-reader"
 # Free and open-source painting and sketching program
 cask "krita"
 # Free cross-platform office suite, fresh version
 cask "libreoffice"
 # Discover, download, and run local LLMs
 cask "lm-studio"
-# An open source cross-platform alternative to AirDrop
-cask "localsend/localsend/localsend"
+# Open-source cross-platform alternative to AirDrop
+cask "localsend"
 # Open-source firewall to block unknown outgoing connections
 cask "lulu"
 # File system integration
@@ -322,6 +335,8 @@ cask "protonvpn"
 cask "signal"
 # Video game digital distribution service
 cask "steam"
+# Command-line client for Steam
+cask "steamcmd"
 # Customise mouse buttons, wheels and cursor speed
 cask "steermouse"
 # Open-source media center
@@ -340,6 +355,8 @@ cask "tiled"
 cask "todoist-app"
 # Markdown knowledgebase manager
 cask "tolaria"
+# Web browser focusing on security
+cask "tor-browser"
 # Adaptive AI IDE
 cask "trae"
 # Multimedia player
@@ -410,4 +427,10 @@ vscode "yrm.type-challenges"
 vscode "yzhang.markdown-all-in-one"
 vscode "zengxingxin.sort-js-object-keys"
 go "github.com/tmedwards/tweego"
+cargo "ck3-tiger"
+cargo "steamguard-cli"
+cargo "trunk"
+cargo "wasm-bindgen-cli"
 npm "corepack"
+npm "ctx7"
+npm "figma-ds-cli"

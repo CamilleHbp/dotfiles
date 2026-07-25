@@ -20,7 +20,7 @@ function brew() {
         echo "----- end: brew autoremove -----"
 
         echo "----- start: brew cleanup -----"
-        command brew cleanup
+        command brew cleanup --prune=all
         echo "----- end: brew cleanup -----"
 
         echo "----- start: Generate Brewfile -----"
