@@ -8,11 +8,41 @@
 
 # Wrapper around brew to perform additional maintenance tasks after certain actions
 # Specifically, after installing, removing, uninstalling, upgrading, or reinstalling packages, it runs `brew autoremove` and `brew cleanup`, regenerates the Brewfile, and adds it to chezmoi if available.
+source "${0:A:h}/qbittorrent-upgrade.zsh"
+
 function brew() {
     local brew_action=$1
+    if [[ $brew_action == upgrade ]]; then
+        local option
+        for option in "${@:2}"; do
+            case "$option" in
+                --dry-run|-n|-h|--help) command brew "$@"; return $? ;;
+            esac
+        done
+    fi
     if [[ $brew_action == "install" ]] || [[ $brew_action == "remove" ]] || [[ $brew_action == "uninstall" ]] || [[ $brew_action == "upgrade" ]] || [[ $brew_action == "reinstall" ]]; then
         echo "----- start: brew $brew_action -----"
-        command brew "$@"
+        if [[ $brew_action == upgrade ]]; then
+            local arg wants_qbit=0 has_target=0 skip_qbit=0
+            for arg in "${@:2}"; do
+                case "$arg" in
+                    --dry-run|-n|--formula|--formulae|-h|--help) skip_qbit=1 ;;
+                    c0re100-qbittorrent|camille/local-qbittorrent/c0re100-qbittorrent) wants_qbit=1; has_target=1 ;;
+                    -*) ;;
+                    *) has_target=1 ;;
+                esac
+            done
+            if (( !skip_qbit && (wants_qbit || !has_target) )); then
+                _brew_upgrade_qbittorrent || return $?
+                local -a brew_args=("$@")
+                local i
+                for (( i=2; i<=${#brew_args}; i++ )); do
+                    [[ ${brew_args[i]} == c0re100-qbittorrent ]] && brew_args[i]=camille/local-qbittorrent/c0re100-qbittorrent
+                done
+                set -- "${brew_args[@]}"
+            fi
+        fi
+        command brew "$@" || return $?
         echo "----- end: brew $brew_action -----"
 
         echo "----- start: brew autoremove -----"

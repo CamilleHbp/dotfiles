@@ -1,6 +1,7 @@
 tap "alexsjones/llmfit", "https://github.com/AlexsJones/homebrew-llmfit"
 tap "anomalyco/tap"
 tap "auth0/auth0-cli", trusted: true
+tap "camille/local-qbittorrent"
 tap "dart-lang/dart", trusted: true
 tap "derailed/k9s", trusted: true
 tap "dotenv-org/brew", trusted: true
@@ -188,7 +189,7 @@ cask "appcleaner"
 # Web browser focusing on privacy
 cask "brave-browser"
 # Bittorrent client
-cask "c0re100-qbittorrent"
+cask "camille/local-qbittorrent/c0re100-qbittorrent", trusted: true
 # E-books management software
 cask "calibre"
 # Design tool
