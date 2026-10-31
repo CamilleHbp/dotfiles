@@ -1,5 +1,5 @@
 {"_id":"allSettingsSectionsExpandedByDefault","value":false}
-{"_id":"autoplayPlaylists","value":false}
+{"_id":"autoplayPlaylists","value":true}
 {"_id":"autoplayVideos","value":false}
 {"_id":"backendPreference","value":"local"}
 {"_id":"baseTheme","value":"catppuccinMocha"}

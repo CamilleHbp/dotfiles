@@ -334,8 +334,6 @@
     "https://json-schema.org/": true,
     "https://biomejs.dev": true
   },
-  "gitlens.ai.model": "vscode",
-  "gitlens.ai.vscode.model": "copilot:gpt-4.1",
   "telemetry.editStats.enabled": false,
   "telemetry.feedback.enabled": false,
   "gitlens.telemetry.enabled": false,

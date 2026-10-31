@@ -46,6 +46,12 @@
   "jobs_search_history": [],
   "lrf_viewer_search_history": [],
   "main_search_history": [
+    "tags:\"web-serial.fiction-live\"",
+    "mandalorian",
+    "fire and blood",
+    "a song of ice",
+    "asoif",
+    "a song of ice and fire",
     "series:'Realm of the Elderlings'",
     "series:\"Realm of the Elderlings\"",
     "hobb",
@@ -56,7 +62,6 @@
     "the perfect run",
     "a journey",
     "black and red",
-    "tags:\"web-serial.fiction-live\"",
     "tags:\"web-serial.fiction-live\" diary",
     "tags:\"web-serial.fiction-live\" ppg",
     "tags:\"web-serial.fiction-live\" tome",
@@ -65,12 +70,7 @@
     "summoner",
     "usurper",
     "tags:\"web-serial.fiction-live\" son of a witch",
-    "(tags:\"fandom.asoif\" and tags:\"web-serial.fiction-live\")",
-    "(tags:\"fandom.asoif\" or tags:\"web-serial.fiction-live\")",
-    "tags:\"web-serial.fiction-live, fandom.asoiaf\"",
-    "tags:\"web-serial\"",
-    "pipux",
-    "tags:\"web-serial.fiction-live\" blackened"
+    "(tags:\"fandom.asoif\" and tags:\"web-serial.fiction-live\")"
   ],
   "main_window_geometry": {
     "__class__": "bytearray",

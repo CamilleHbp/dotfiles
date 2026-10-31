@@ -1,5 +1,6 @@
 {
   "add_formats_to_existing": false,
+  "add_new_book_tags_when_importing_books": false,
   "case_sensitive": false,
   "check_for_dupes_on_ctl": false,
   "database_path": "/Users/camillebaillat/library1.db",

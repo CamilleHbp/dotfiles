@@ -7,14 +7,20 @@ tap "dotenv-org/brew", trusted: true
 tap "edgee-ai/tap", trusted: true
 tap "gromgit/fuse", trusted: true
 tap "infisical/get-cli", trusted: true
+tap "jetbrains/utils", "https://github.com/JetBrains/homebrew-utils"
 tap "lyraphase/pcloud", trusted: true
+tap "nailuogg/recoll", "https://github.com/nailuoGG/homebrew-recoll", trusted: { casks: ["recoll"] }
+tap "openclaw/tap"
 tap "oven-sh/bun", trusted: true
 tap "pikachuexe/freetube", trusted: true
 tap "runpod/runpodctl", trusted: true
+tap "steipete/tap"
 tap "stripe/stripe-cli", trusted: true
 tap "timescam/tap", trusted: true
 # Run your GitHub Actions locally
 brew "act"
+# Simple, modern, secure file encryption
+brew "age"
 # Mozilla CA certificate store
 brew "ca-certificates"
 # GitOps Continuous Delivery for Kubernetes
@@ -36,9 +42,11 @@ brew "curl"
 # Good-lookin' diffs with diff-highlight and more
 brew "diff-so-fancy"
 # Lightweight DNS forwarder and DHCP server
-brew "dnsmasq", restart_service: :changed
+brew "dnsmasq"
 # Command-line tool to interact with exercism.io
 brew "exercism"
+# Simple, fast and user-friendly alternative to find
+brew "fd"
 # Play, record, convert, and stream select audio and video codecs
 brew "ffmpeg"
 # Command-line fuzzy finder written in Go
@@ -47,6 +55,8 @@ brew "fzf"
 brew "gcc"
 # GitHub command-line tool
 brew "gh"
+# Multi-platform software reverse engineering framework
+brew "ghidra"
 # Interpreter for PostScript and PDF
 brew "ghostscript"
 # Distributed revision control system
@@ -75,10 +85,6 @@ brew "gzip"
 brew "helm"
 # Client library for huggingface.co hub
 brew "hf"
-# C/C++ and Java libraries for Unicode and globalization
-brew "icu4c@76"
-# C/C++ and Java libraries for Unicode and globalization
-brew "icu4c@77"
 # Tools and libraries to manipulate images in select formats
 brew "imagemagick"
 # API Support for your favorite torrent trackers
@@ -95,6 +101,8 @@ brew "libsecret"
 brew "libxml2"
 # Replacement for ls, cp and other commands for object storage
 brew "minio-mc"
+# Cross platform, open source .NET development framework
+brew "mono"
 # NCurses Disk Usage
 brew "ncdu"
 # FTP client with an advanced user interface
@@ -103,16 +111,22 @@ brew "ncftp"
 brew "neovim"
 # Tiny, lightning fast, feature-packed file manager
 brew "nnn"
-# Create, run, and share large language models (LLMs)
-brew "ollama"
+# PNG file optimizer
+brew "optipng"
 # Swiss-army knife of markup format conversion
 brew "pandoc"
+# AI agent toolkit
+brew "pi-coding-agent"
+# MCP server for Playwright
+brew "playwright-mcp"
 # Pluggable multi-language version manager
 brew "proto"
 # Interpreted, interactive, object-oriented programming language
-brew "python@3.10"
-# Interpreted, interactive, object-oriented programming language
 brew "python@3.12"
+# Cross-platform application and UI framework
+brew "qtbase"
+# Classes for displaying the contents of SVG files
+brew "qtsvg"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
 # CLI proxy to minimize LLM token consumption
@@ -121,14 +135,16 @@ brew "rtk"
 brew "rtmpdump"
 # Safe, concurrent, practical language
 brew "rust"
-# Rust toolchain installer
-brew "rustup"
 # Command-line Interface for Scaleway
 brew "scw"
+# 7-Zip is a file archiver with a high compression ratio
+brew "sevenzip"
 # Cross-shell prompt for astronauts
 brew "starship"
 # Command-line tool for Stripe
 brew "stripe-cli"
+# Command-line unarchiving tools supporting multiple formats
+brew "unar"
 # Extraction utility for .zip compressed archives
 brew "unzip"
 # Library to create, extract, and modify Windows Imaging files
@@ -143,26 +159,28 @@ brew "anomalyco/tap/opencode", trusted: true
 brew "auth0/auth0-cli/auth0"
 # Kubernetes CLI To Manage Your Clusters In Style!
 brew "derailed/k9s/k9s"
-# Sync .env files
-brew "dotenv-org/brew/dotenv-vault"
+# Read-write NTFS driver for FUSE
+brew "gromgit/fuse/ntfs-3g-mac", trusted: true
 # FUSE-based file system backed by Amazon S3
 brew "gromgit/fuse/s3fs-mac"
 # The official Infisical CLI
 brew "infisical/get-cli/infisical"
+# Official Language Server Protocol for the Kotlin language
+brew "jetbrains/utils/kotlin-lsp", trusted: true
+# Lightning-fast macOS screenshots & AI vision analysis
+brew "openclaw/tap/peekaboo", trusted: true
+# Menu bar usage and status CLI
+brew "steipete/tap/codexbar", trusted: true
 # CLI tool to pay respects
 brew "timescam/tap/pay-respects"
 # Free video downloader
 cask "4k-video-downloader+"
-# Image editing and design software
-cask "affinity"
-# Application launcher and productivity software
-cask "alfred"
+# Command-line tools for building and debugging Android apps
+cask "android-commandlinetools"
 # Android SDK component
 cask "android-platform-tools"
 # Allows connection to a computer remotely
 cask "anydesk"
-# Private desktop AI chat application
-cask "anythingllm"
 # Local-first and end-to-end encrypted notes app
 cask "anytype"
 # Application uninstaller
@@ -177,24 +195,14 @@ cask "calibre"
 cask "canva"
 # OpenAI's official ChatGPT desktop app
 cask "chatgpt"
-# Anthropic's official Claude AI desktop app
-cask "claude"
 # Screen capturing tool
 cask "cleanshot"
-# OpenAI's coding agent that runs in your terminal
-cask "codex"
-# OpenAI's Codex desktop app for managing coding agents
-cask "codex-app"
 # Menu bar usage monitor for Codex and Claude
-cask "codexbar"
-# Node-based image, video and audio generator
-cask "comfy"
+cask "steipete/tap/codexbar", trusted: true
 # Brings the power of Copilot coding agent directly to your terminal
 cask "copilot-cli@prerelease"
 # Tool to run Windows software
 cask "crossover"
-# Universal database tool and SQL client
-cask "dbeaver-community"
 # App to build and share containerised applications and microservices
 cask "docker-desktop"
 # Developer platform
@@ -203,82 +211,18 @@ cask "dotnet-sdk"
 cask "dotnet-sdk@8"
 # Online diagram software
 cask "drawio"
-# Collaborative team software
-cask "figma"
+# Waterfall-style image viewer
+cask "flowvision"
 # UI toolkit for building applications for mobile, web and desktop
 cask "flutter"
-# Screen colour temperature controller
-cask "flux-app"
-cask "font-0xproto-nerd-font"
-cask "font-3270-nerd-font"
-cask "font-agave-nerd-font"
-cask "font-anonymice-nerd-font"
-cask "font-arimo-nerd-font"
-cask "font-aurulent-sans-mono-nerd-font"
-cask "font-bigblue-terminal-nerd-font"
-cask "font-bitstream-vera-sans-mono-nerd-font"
-cask "font-blex-mono-nerd-font"
-cask "font-caskaydia-cove-nerd-font"
-cask "font-caskaydia-mono-nerd-font"
-cask "font-code-new-roman-nerd-font"
-cask "font-comic-shanns-mono-nerd-font"
-cask "font-commit-mono-nerd-font"
-cask "font-cousine-nerd-font"
-cask "font-d2coding-nerd-font"
-cask "font-daddy-time-mono-nerd-font"
-cask "font-dejavu-sans-mono-nerd-font"
-cask "font-droid-sans-mono-nerd-font"
-cask "font-envy-code-r-nerd-font"
-cask "font-fantasque-sans-mono-nerd-font"
 cask "font-fira-code-nerd-font"
-cask "font-fira-mono-nerd-font"
-cask "font-geist-mono-nerd-font"
-cask "font-go-mono-nerd-font"
-cask "font-gohufont-nerd-font"
 cask "font-hack-nerd-font"
-cask "font-hasklug-nerd-font"
-cask "font-heavy-data-nerd-font"
-cask "font-hurmit-nerd-font"
-cask "font-im-writing-nerd-font"
-cask "font-inconsolata-go-nerd-font"
-cask "font-inconsolata-lgc-nerd-font"
-cask "font-inconsolata-nerd-font"
-cask "font-intone-mono-nerd-font"
-cask "font-iosevka-nerd-font"
-cask "font-iosevka-term-nerd-font"
-cask "font-iosevka-term-slab-nerd-font"
 cask "font-jetbrains-mono-nerd-font"
-cask "font-lekton-nerd-font"
-cask "font-liberation-nerd-font"
-cask "font-lilex-nerd-font"
-cask "font-m+-nerd-font"
-cask "font-martian-mono-nerd-font"
 cask "font-meslo-lg-nerd-font"
-cask "font-monaspice-nerd-font"
-cask "font-monocraft-nerd-font"
-cask "font-monofur-nerd-font"
-cask "font-monoid-nerd-font"
-cask "font-mononoki-nerd-font"
-cask "font-noto-nerd-font"
-cask "font-opendyslexic-nerd-font"
-cask "font-overpass-nerd-font"
-cask "font-profont-nerd-font"
-cask "font-proggy-clean-tt-nerd-font"
-cask "font-recursive-mono-nerd-font"
-cask "font-roboto-mono-nerd-font"
-cask "font-sauce-code-pro-nerd-font"
-cask "font-shure-tech-mono-nerd-font"
-cask "font-space-mono-nerd-font"
 cask "font-symbols-only-nerd-font"
-cask "font-terminess-ttf-nerd-font"
-cask "font-tinos-nerd-font"
-cask "font-ubuntu-mono-nerd-font"
-cask "font-ubuntu-nerd-font"
-cask "font-ubuntu-sans-nerd-font"
-cask "font-victor-mono-nerd-font"
 cask "font-zed-mono-nerd-font"
-# Git client focusing on productivity
-cask "gitkraken"
+# Game client
+cask "gog-galaxy"
 # IRC client
 cask "halloy"
 # Free and open-source media player
@@ -295,70 +239,52 @@ cask "karabiner-elements"
 cask "krita"
 # Free cross-platform office suite, fresh version
 cask "libreoffice"
-# Discover, download, and run local LLMs
-cask "lm-studio"
 # Open-source cross-platform alternative to AirDrop
 cask "localsend"
 # Open-source firewall to block unknown outgoing connections
 cask "lulu"
 # File system integration
 cask "macfuse"
-# Multi-platform web browser
-cask "microsoft-edge"
-# Minecraft modding platform
-cask "modrinth"
-# AI platform with local and online models
-cask "mstystudio"
+# Minimal markdown editor
+cask "markviewer"
+# Re-mounts write-protected NTFS volumes
+cask "mounty"
 # Desktop sync client for Nextcloud software products
 cask "nextcloud"
-# App to write, plan, collaborate, and get organised
-cask "notion"
 # Simple application that will prevent iTunes or Apple Music from launching
 cask "notunes"
 # Knowledge base that works on top of a local folder of plain text Markdown files
 cask "obsidian"
-# WebKit based web browser
-cask "orion"
 # File manager
 cask "path-finder"
 # Client for the pCloud virtual cloud storage service
 cask "lyraphase/pcloud/pcloud-drive"
 # YouTube player focusing on privacy
 cask "pikachuexe/freetube/pikachuexe-freetube"
-# Minecraft launcher
-cask "prismlauncher"
 # Client for Proton Mail and Proton Calendar
 cask "proton-mail"
 # VPN client focusing on security
 cask "protonvpn"
+# Imaging utility to install operating systems to a microSD card
+cask "raspberry-pi-imager"
+# Desktop app for managing mods on reMarkable tablets
+cask "remanager"
 # Instant messaging application focusing on security
 cask "signal"
 # Video game digital distribution service
 cask "steam"
 # Command-line client for Steam
 cask "steamcmd"
-# Customise mouse buttons, wheels and cursor speed
-cask "steermouse"
 # Open-source media center
 cask "stremio@beta"
-# Interior design application
-cask "sweet-home3d"
 # Remote access and connectivity software focused on security
 cask "teamviewer"
 # Unpacks archive files
 cask "the-unarchiver"
 # Music streaming service with high fidelity sound and hi-def video quality
 cask "tidal"
-# Flexible level editor
-cask "tiled"
-# To-do list
-cask "todoist-app"
-# Markdown knowledgebase manager
-cask "tolaria"
 # Web browser focusing on security
 cask "tor-browser"
-# Adaptive AI IDE
-cask "trae"
 # Multimedia player
 cask "vlc"
 # Gecko based web browser
@@ -382,7 +308,6 @@ vscode "foxundermoon.shell-format"
 vscode "github.vscode-github-actions"
 vscode "github.vscode-pull-request-github"
 vscode "gruntfuggly.todo-tree"
-vscode "highagency.pencildev"
 vscode "inferrinizzard.prettier-sql-vscode"
 vscode "jcassio-dev.prisma-summary"
 vscode "kavish.hex-to-hsl"
@@ -411,6 +336,7 @@ vscode "mvllow.rose-pine"
 vscode "naumovs.color-highlight"
 vscode "nicolas-liger.dbml-viewer"
 vscode "openai.chatgpt"
+vscode "openai.codex-audio"
 vscode "pkief.material-icon-theme"
 vscode "prisma.prisma"
 vscode "redhat.vscode-yaml"
@@ -426,11 +352,9 @@ vscode "xshrim.txt-syntax"
 vscode "yrm.type-challenges"
 vscode "yzhang.markdown-all-in-one"
 vscode "zengxingxin.sort-js-object-keys"
+go "golang.org/x/tools/gopls"
 go "github.com/tmedwards/tweego"
 cargo "ck3-tiger"
 cargo "steamguard-cli"
 cargo "trunk"
 cargo "wasm-bindgen-cli"
-npm "corepack"
-npm "ctx7"
-npm "figma-ds-cli"
